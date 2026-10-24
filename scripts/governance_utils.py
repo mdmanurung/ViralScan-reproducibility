@@ -66,6 +66,9 @@ def package_fallback(repo_root: Path, value: str) -> Path:
     package = os.environ.get("VIRALSCAN_PKG")
     if package and (Path(package) / value).exists():
         return Path(package)
+    # the package dropped its top-level schemas/ copy (split batch 4a); the one copy is src/viralscan/schemas
+    if package and str(value).startswith("schemas/") and (Path(package) / "src" / "viralscan" / value).exists():
+        return Path(package) / "src" / "viralscan"
     return Path(repo_root)
 
 
