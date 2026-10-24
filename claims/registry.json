@@ -25,7 +25,7 @@
         {
           "artifact_id": "test-multimap-boundaries",
           "path": "tests/test_multimap.py",
-          "sha256": "a7498e00a938f8e4867258fd93a8b19353213d19f05bb527e8d2e189c6dc97f8"
+          "sha256": "c5fad3c0e2d04ee80b7f2170dddc69759e64c208d333689aac8aff43dbc3a327"
         },
         {
           "artifact_id": "test-multimapping-properties",
@@ -33,7 +33,7 @@
           "sha256": "7be15165b9d1981528321a2473c362e43ba5e51eeaeb38a03ab310390b445e03"
         }
       ],
-      "git_sha": "83fa689d0fcc9ec3a02ecdbaf27da298139ca5a0",
+      "git_sha": "ebd381384368404150d7c72c5b5298741360597e",
       "input_hashes": [
         {
           "id": "test-multimapping",
@@ -41,7 +41,7 @@
         },
         {
           "id": "test-multimap-boundaries",
-          "sha256": "a7498e00a938f8e4867258fd93a8b19353213d19f05bb527e8d2e189c6dc97f8"
+          "sha256": "c5fad3c0e2d04ee80b7f2170dddc69759e64c208d333689aac8aff43dbc3a327"
         },
         {
           "id": "test-multimapping-properties",
