@@ -1,0 +1,37 @@
+## Next action
+## How to use this tracker
+## Critical path
+## WP0 — Governance and legacy freeze
+## WP1 — Core software contracts
+## WP2 — Install, lock, and artifact parity
+## WP3 — Preregister scientific validation
+## WP4 — Freeze production references
+## WP4D — Gene-programme inference, layer 2 (new 2026-09-26)
+## WP4G — Anellovirus detection you can trust (new 2026-09-27)
+## WP4H — Comprehensive human-virus catalogue (new 2026-09-27)
+## WP4I — Complete latent/lytic state calling (new 2026-09-27)
+## WP4J — SFL tonsil TTV and HPV screen (new 2026-09-27)
+## WP4L — Audit 2026-10 findings (new 2026-10-11)
+## WP5 — Build and validate the truth panel
+## WP6 — Run public positives and comparators
+## WP7 — Score, audit, and freeze results
+## WP8 — Regenerate documentation and claim evidence
+## WP9 — Regenerate and review the manuscript
+## Gate dashboard
+## External inputs and authority
+## Stop rules
+## Evidence log
+## VR pilot — read cleanup and transcript reconstruction (2026-10-14)
+## Reviewed roadmap implementation — 2026-10-20
+## Kraken2 taxonomic discovery (DISC, new 2026-10-21)
+
+--- dropped (package-only) ---
+## Software backlog reconciliation (2026-10-09)
+## Verified baseline
+## WP4C — Detection sensitivity and negative-result claims (new 2026-09-26)
+## WP4E — Named HPV ORFs for the oncogene-versus-capsid contrast (new 2026-09-26)
+## WP4F — Real gene structure for the Anelloviridae panel (new 2026-09-26)
+## WP4K — Catalogue↔index reconciliation and targeted reference adds (new 2026-09-27)
+## WP10 — Publish and test `3.0.0rc1`
+## WP11 — Publish stable `3.0.0` and submit
+## WP12 — Observe and maintain

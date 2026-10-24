@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use these analyses, please cite the ViralScan package and this repository."
+title: "ViralScan-reproducibility"
+type: software
+authors:
+  - family-names: Manurung
+    given-names: Mikhael D.
+repository-code: "https://github.com/mdmanurung/ViralScan-reproducibility"
+license: MIT

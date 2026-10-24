@@ -1,0 +1,15 @@
+# run outputs and caches
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.snakemake/
+.venv/
+.ipynb_checkpoints/
+Rplots.pdf
+# local compatibility links are listed in .git/info/exclude by setup_links.sh (never committed)
+# large run outputs stay on disk and are linked from links/
+analysis/*/outputs/
+analysis/*/work/
+analysis/*/.runtime/
+analysis/translated_search/config.local.yaml

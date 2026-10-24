@@ -1,0 +1,31 @@
+{
+  "tracka_root": "/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackA_round1",
+  "truth_labels": "../trackA_report_2026-10-18/independent_truth_labels.json",
+  "cell_annotations": "cell_types.tsv",
+  "output_root": "outputs/2026-10-19-v1",
+  "python": "/exports/archive/hg-funcgenom-research/mdmanurung/conda/envs/viralscan_test_full/bin/python",
+  "rscript": "/exports/archive/hg-funcgenom-research/mdmanurung/conda/envs/R4_51/bin/Rscript",
+  "r_libraries": [".runtime/library", "/exports/para-lipg-hpc/mdmanurung/R/4.5"],
+  "methods": ["gbcd", "ebcd", "divas"],
+  "ranks": [10, 20, 30],
+  "seeds": [1, 2, 3, 4, 5],
+  "n_genes": 3000,
+  "max_cells_per_library": 400,
+  "max_cells_per_study": 1000,
+  "min_detected_cells": 10,
+  "min_class_cells": 10,
+  "min_biological_units": 3,
+  "bootstrap_replicates": 1000,
+  "divas_nsim": 400,
+  "classifier_C": [0.01, 0.1, 1, 10],
+  "signature_cosine": 0.7,
+  "fdr": 0.05,
+  "maxiter": 500,
+  "targets": {
+    "hsv1": ["Human herpesvirus 1"],
+    "hhv6b": ["Human herpesvirus 6b"],
+    "ebv": ["Epstein-Barr virus", "Human gammaherpesvirus 4 type 2"],
+    "hpv16": ["Human papillomavirus 16"],
+    "hnscc_gse164690": ["Human papillomavirus 16"]
+  }
+}

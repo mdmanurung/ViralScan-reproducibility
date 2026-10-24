@@ -18,6 +18,7 @@ try:
         json_schema_errors,
         load_json,
         relative_path_error,
+        package_fallback,
         repository_file_error,
         sha256_file,
     )
@@ -28,6 +29,7 @@ except ModuleNotFoundError:  # Direct ``python scripts/...`` execution.
         json_schema_errors,
         load_json,
         relative_path_error,
+        package_fallback,
         repository_file_error,
         sha256_file,
     )
@@ -131,7 +133,7 @@ def validate_inventory_rows(
         if path_problem:
             errors.append(f"row {index} path {path_value!r}: {path_problem}")
             continue
-        artifact_path = repo_root / path_value
+        artifact_path = package_fallback(repo_root, path_value) / path_value
         file_problem = repository_file_error(repo_root, path_value)
         if file_problem == "file not found":
             errors.append(f"row {index}: missing artifact {path_value}")

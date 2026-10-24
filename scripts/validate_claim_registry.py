@@ -19,6 +19,7 @@ try:
         json_schema_errors,
         load_json,
         relative_path_error,
+        package_fallback,
         repository_file_error,
         sha256_file,
     )
@@ -29,6 +30,7 @@ except ModuleNotFoundError:  # Direct ``python scripts/...`` execution.
         json_schema_errors,
         load_json,
         relative_path_error,
+        package_fallback,
         repository_file_error,
         sha256_file,
     )
@@ -127,7 +129,7 @@ def validate_registry_document(document: Any, repo_root: Path, schema_path: Path
             if problem:
                 errors.append(f"claim {claim_id!r} artifact {path_value!r}: {problem}")
                 continue
-            artifact_path = repo_root / path_value
+            artifact_path = package_fallback(repo_root, path_value) / path_value
             file_problem = repository_file_error(repo_root, path_value)
             if file_problem == "file not found":
                 errors.append(f"claim {claim_id!r}: missing artifact {path_value}")
@@ -168,7 +170,7 @@ def coverage_errors(
         if problem:
             errors.append(f"claim-bearing path {path_value!r}: {problem}")
             continue
-        path = repo_root / relative
+        path = package_fallback(repo_root, relative) / relative
         if not path.is_file():
             errors.append(f"claim-bearing file not found: {path_value}")
             continue
@@ -385,7 +387,7 @@ def _private_claim_leakage_errors(
 
     errors: list[str] = []
     for relative in public_docs:
-        path = repo_root / relative
+        path = package_fallback(repo_root, relative) / relative
         try:
             text = path.read_text(encoding="utf-8")
         except (OSError, UnicodeDecodeError):
