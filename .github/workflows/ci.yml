@@ -1,0 +1,100 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    name: Governance gates
+    runs-on: ubuntu-latest
+    env:
+      VIRALSCAN_PKG: ${{ github.workspace }}/pkg
+      # The governance scripts import `scripts.*` (repo root must be importable).
+      PYTHONPATH: ${{ github.workspace }}
+    steps:
+      # Full history: the ledger append-only check compares against origin/main and fails
+      # closed when the comparison revision is unreadable.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          fetch-depth: 0
+
+      - name: Read the pinned package commit
+        id: pin
+        run: echo "sha=$(head -1 provenance/PACKAGE_BASE_SHA)" >> "$GITHUB_OUTPUT"
+
+      # The package at the commit this repo's ledgers were frozen against (see CLAUDE.md).
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          repository: mdmanurung/ViralScan
+          ref: ${{ steps.pin.outputs.sha }}
+          path: pkg
+          fetch-depth: 0
+
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pytest responses jsonschema "setuptools>=77" numpy pandas scipy scikit-learn anndata scanpy matplotlib plotly jinja2 pyyaml "requests>=2.28"
+
+      # Ledger and test commits that live only in the package history resolve through its object store.
+      - name: Link the package checkout
+        run: |
+          ./setup_links.sh
+
+      # Draft gate only. Do NOT add --phase training here: the training gate is supposed to
+      # fail while preregistration blockers are open.
+      - name: v3 protocol draft gate
+        run: python scripts/validate_v3_protocol.py
+
+      # The amendment ledger's hash chain is computed by whoever edits the file, so it detects an
+      # inconsistent edit but not a coherent rewrite. This is the external anchor: it compares against
+      # pushed history. On a push to main, origin/main IS the pushed head, so compare the push against
+      # the head it replaced instead. A force-pushed `before` that is unreachable fails closed.
+      - name: deviation ledger is append-only
+        env:
+          LEDGER_BASE: ${{ github.event_name == 'push' && github.event.before || 'origin/main' }}
+        run: python scripts/check_ledger_append_only.py --revision "$LEDGER_BASE"
+
+      - name: Claim registry and artifact inventory
+        run: |
+          python scripts/validate_claim_registry.py
+          python scripts/validate_artifact_inventory.py
+
+  tests:
+    name: pytest (pinned package)
+    runs-on: ubuntu-latest
+    env:
+      VIRALSCAN_PKG: ${{ github.workspace }}/pkg
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          fetch-depth: 0
+      - name: Read the pinned package commit
+        id: pin
+        run: echo "sha=$(head -1 provenance/PACKAGE_BASE_SHA)" >> "$GITHUB_OUTPUT"
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          repository: mdmanurung/ViralScan
+          ref: ${{ steps.pin.outputs.sha }}
+          path: pkg
+          fetch-depth: 0
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7.0.0
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pytest responses jsonschema "setuptools>=77" numpy pandas scipy scikit-learn anndata scanpy matplotlib plotly jinja2 pyyaml "requests>=2.28"
+      - run: ./setup_links.sh
+      - name: Run tests
+        run: python -m pytest tests -q -p no:cacheprovider
