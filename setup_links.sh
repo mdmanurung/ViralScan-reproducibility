@@ -12,7 +12,7 @@ link() { # link <target> <path-in-repro>; skips a path that already exists as a 
 link "$VIRALSCAN_PKG/src" src
 link "$VIRALSCAN_PKG/.github" .github
 for f in "$VIRALSCAN_PKG"/docs/*; do link "$f" "docs/$(basename "$f")"; done
-for f in "$VIRALSCAN_PKG"/src/viralscan/schemas/v3/*; do link "$f" "schemas/v3/$(basename "$f")"; done
+for f in "$VIRALSCAN_PKG"/src/viralscan/schemas/v3/*.json; do link "$f" "schemas/v3/$(basename "$f")"; done
 link "$VIRALSCAN_PKG/config/public_ship_scope.json" config/public_ship_scope.json
 [ -d "$VIRALSCAN_PKG/extras/vendor_sources" ] && link "$VIRALSCAN_PKG/extras/vendor_sources" extras/vendor_sources
 # analysis/panel_expansion moved into the package (curation/panel after the split)
