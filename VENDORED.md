@@ -7,3 +7,5 @@ Copied from ViralScan at `4da467487fcd2e58253c5d774d5a866254f295a3` so moved scr
 - `extras/build_virus_catalog.py`
 
 `scripts/governance_utils.py` is modified here: `package_fallback()` (two-root governance, split decision D39) resolves package-owned artifacts via `VIRALSCAN_PKG`; `scripts/validate_claim_registry.py` and `scripts/validate_artifact_inventory.py` use it.
+
+`scripts/governance_utils.py` `package_fallback()` also maps `schemas/...` to `src/viralscan/schemas/...` in the package checkout (the package dropped its top-level `schemas/` in split batch 4a; pin moved to ebd3813).
