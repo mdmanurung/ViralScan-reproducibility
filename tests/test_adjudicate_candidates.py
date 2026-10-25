@@ -13,6 +13,8 @@ from pathlib import Path
 
 import pytest
 
+from scripts.governance_utils import package_path
+
 from viralscan.virus_identity import GeneIdentity, VirusIdentityTable
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -165,7 +167,7 @@ def test_name_mismatch_off_the_taxid_map_still_fails_closed(tmp_path):
 
 def test_taxid_map_agrees_with_the_catalogues():
     """The map covers exactly the viruses of gene_programs.tsv, with taxids that exist in virus_catalog.tsv."""
-    data = ROOT / "src" / "viralscan" / "data"
+    data = package_path("src/viralscan/data")
     with (data / "gene_programs.tsv").open(newline="") as fh:
         names = {r["virus"] for r in csv.DictReader(fh, delimiter="\t")}
     with (data / "virus_catalog.tsv").open(newline="") as fh:

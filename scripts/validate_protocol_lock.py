@@ -27,16 +27,17 @@ from pathlib import Path
 from typing import Any
 
 try:
-    from scripts.governance_utils import json_schema_errors, load_json, sha256_file
+    from scripts.governance_utils import json_schema_errors, load_json, package_path, sha256_file
 except ModuleNotFoundError:  # Direct ``python scripts/...`` execution.
     from governance_utils import (  # type: ignore[no-redef]
         json_schema_errors,
         load_json,
+        package_path,
         sha256_file,
     )
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_SCHEMA = REPO_ROOT / "schemas" / "v3" / "protocol_lock.schema.json"
+DEFAULT_SCHEMA = package_path("schemas/v3/protocol_lock.schema.json")
 
 EXIT_VALID, EXIT_INVALID, EXIT_USAGE, EXIT_INCOMPLETE = 0, 1, 2, 3
 

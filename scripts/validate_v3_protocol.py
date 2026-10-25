@@ -15,9 +15,14 @@ import yaml
 from jsonschema import Draft202012Validator, FormatChecker
 from jsonschema.exceptions import SchemaError
 
+try:
+    from scripts.governance_utils import package_path
+except ModuleNotFoundError:  # Direct ``python scripts/...`` execution.
+    from governance_utils import package_path  # type: ignore[no-redef]
+
 REPO_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_PROTOCOL = REPO_ROOT / "analysis" / "v3_validation" / "protocol.yaml"
-DEFAULT_SCHEMA = REPO_ROOT / "schemas" / "v3" / "validation_protocol.schema.json"
+DEFAULT_SCHEMA = package_path("schemas/v3/validation_protocol.schema.json")
 DEFAULT_LEDGER = REPO_ROOT / "analysis" / "v3_validation" / "deviations.yaml"
 
 # Minimum distinct viral-abundance levels per chemistry. SCI-05 round 1 (F2)

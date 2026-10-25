@@ -72,6 +72,11 @@ def package_fallback(repo_root: Path, value: str) -> Path:
     return Path(repo_root)
 
 
+def package_path(value: str) -> Path:
+    """Absolute path of package-owned *value* (e.g. ``schemas/v3/x.json``) in the pinned package checkout (env VIRALSCAN_PKG)."""
+    return package_fallback(Path(__file__).resolve().parents[1], value) / value
+
+
 def repository_file_error(repo_root: Path, value: str) -> str:
     """Return an error unless *value* names a regular, in-tree, non-symlink file."""
     problem = relative_path_error(value)

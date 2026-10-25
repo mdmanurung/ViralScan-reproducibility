@@ -19,6 +19,7 @@ try:
         load_json,
         relative_path_error,
         package_fallback,
+        package_path,
         repository_file_error,
         sha256_file,
     )
@@ -30,13 +31,14 @@ except ModuleNotFoundError:  # Direct ``python scripts/...`` execution.
         load_json,
         relative_path_error,
         package_fallback,
+        package_path,
         repository_file_error,
         sha256_file,
     )
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_INVENTORY = REPO_ROOT / "analysis" / "v3_artifact_inventory.tsv"
-DEFAULT_SCHEMA = REPO_ROOT / "schemas" / "v3" / "artifact_inventory.schema.json"
+DEFAULT_SCHEMA = package_path("schemas/v3/artifact_inventory.schema.json")
 DEFAULT_REGISTRY = REPO_ROOT / "claims" / "registry.json"
 
 INVENTORY_COLUMNS = [
@@ -237,9 +239,7 @@ def validate_inventory_file(
     inventory_path = _resolve_default(
         inventory_path, repo_root, "analysis/v3_artifact_inventory.tsv"
     )
-    schema_path = _resolve_default(
-        schema_path, repo_root, "schemas/v3/artifact_inventory.schema.json"
-    )
+    schema_path = schema_path or package_path("schemas/v3/artifact_inventory.schema.json")
     registry_path = _resolve_default(registry_path, repo_root, "claims/registry.json")
     if git_root is None:
         configured_git_root = os.environ.get("VIRALSCAN_GIT_ROOT")

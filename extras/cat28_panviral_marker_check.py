@@ -29,21 +29,23 @@ from __future__ import annotations
 
 import argparse
 import csv
+import os
 import sys
 from collections import Counter
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
+PKG = Path(os.environ.get("VIRALSCAN_PKG", REPO_ROOT))  # package-owned inputs/outputs live in the pinned package checkout
 DEFAULT_PANVIRAL = (
-    REPO_ROOT
+    PKG
     / "extras"
     / "vendor_sources"
     / "panviral"
     / "reference"
     / "pan_virus_annotation_plain.tsv"
 )
-DEFAULT_CATALOGUE = REPO_ROOT / "src" / "viralscan" / "data" / "gene_programs.tsv"
-DEFAULT_OUT = REPO_ROOT / "analysis" / "panel_expansion" / "cat28_panviral_marker_check.tsv"
+DEFAULT_CATALOGUE = PKG / "src" / "viralscan" / "data" / "gene_programs.tsv"
+DEFAULT_OUT = PKG / "curation" / "panel" / "cat28_panviral_marker_check.tsv"
 
 PANVIRAL_COLUMNS = ("EC", "Gene", "Nuccore", "Virus")
 

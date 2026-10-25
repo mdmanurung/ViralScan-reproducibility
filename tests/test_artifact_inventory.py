@@ -4,6 +4,7 @@ import json
 import subprocess
 from pathlib import Path
 
+from scripts.governance_utils import package_path
 from scripts.validate_artifact_inventory import (
     INVENTORY_COLUMNS,
     validate_inventory_file,
@@ -11,7 +12,7 @@ from scripts.validate_artifact_inventory import (
 )
 
 ROOT = Path(__file__).resolve().parents[1]
-SCHEMA = ROOT / "schemas" / "v3" / "artifact_inventory.schema.json"
+SCHEMA = package_path("schemas/v3/artifact_inventory.schema.json")
 
 
 def _row(

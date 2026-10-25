@@ -3,6 +3,7 @@ import hashlib
 import json
 from pathlib import Path
 
+from scripts.governance_utils import package_path
 from scripts.validate_artifact_inventory import INVENTORY_COLUMNS
 from scripts.validate_claim_registry import (
     coverage_errors,
@@ -11,7 +12,7 @@ from scripts.validate_claim_registry import (
 )
 
 ROOT = Path(__file__).resolve().parents[1]
-SCHEMA = ROOT / "schemas" / "v3" / "claim_registry.schema.json"
+SCHEMA = package_path("schemas/v3/claim_registry.schema.json")
 
 
 def _claim(artifact: Path) -> dict:
