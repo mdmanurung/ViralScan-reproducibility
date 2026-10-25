@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 # Run the multimap profiling analysis.
 # Usage: bash analysis/multimap_profiling/scripts/run.sh
-# Must be run from the repo root: /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan
+# Run from the repo root with VIRALSCAN_PKG pointing at the package checkout (source env.sh)
 
 set -euo pipefail
 
 PYTHON=/exports/archive/hg-funcgenom-research/mdmanurung/conda/envs/viralscan_bench/bin/python
-REPO=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan
+REPO="${VIRALSCAN_PKG:?set VIRALSCAN_PKG (source env.sh)}"
 
 echo "[run.sh] Working directory: $(pwd)"
 echo "[run.sh] Python: $PYTHON"

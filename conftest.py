@@ -2,7 +2,7 @@
 import os
 import sys
 
-_pkg = os.environ.get("VIRALSCAN_PKG", "/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan")
+_pkg = os.environ.get("VIRALSCAN_PKG", "/exports/para-lipg-hpc/mdmanurung/ViralScan-pin2")
 for _p in (os.path.join(_pkg, "src"), _pkg):
     if _p not in sys.path:
         sys.path.insert(0, _p)

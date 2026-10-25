@@ -3,7 +3,8 @@
 # Links are per entry (docs/, schemas/, config/ exist in both repos) and are recorded in .git/info/exclude, never in .gitignore.
 set -euo pipefail
 cd "$(dirname "$0")"
-: "${VIRALSCAN_PKG:=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan}"
+: "${VIRALSCAN_PKG:=/exports/para-lipg-hpc/mdmanurung/ViralScan-pin2}"
+: "${VIRALSCAN_DATA:=/exports/para-lipg-hpc/mdmanurung/ViralScan-data}"   # large run data lives here, not in the package checkout
 made=()
 link() { # link <target> <path-in-repro>; skips a path that already exists as a real file/dir
   if [ -e "$2" ] && [ ! -L "$2" ]; then return 0; fi
@@ -20,7 +21,7 @@ if [ -d "$VIRALSCAN_PKG/curation/panel" ]; then link "$VIRALSCAN_PKG/curation/pa
 elif [ -d "$VIRALSCAN_PKG/analysis/panel_expansion" ]; then link "$VIRALSCAN_PKG/analysis/panel_expansion" analysis/panel_expansion; fi
 mkdir -p links
 for d in benchmark_runs references starsolo_p22_6 starsolo_p22_6b ebv_latest_ref_2026-09-27 viral_panel_max_2026-09-28 cost01 logs sources; do
-  [ -e "$VIRALSCAN_PKG/$d" ] && link "$VIRALSCAN_PKG/$d" "links/$d"
+  [ -e "$VIRALSCAN_DATA/$d" ] && link "$VIRALSCAN_DATA/$d" "links/$d"
 done
 # old package commit ids recorded in ledgers/tests must resolve here: borrow the package object store (local only)
 if [ -d "$VIRALSCAN_PKG/.git/objects" ]; then

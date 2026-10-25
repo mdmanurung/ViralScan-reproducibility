@@ -81,7 +81,7 @@ T2G_FILE   = Path(
 )
 ADATA_FILE = KB / "counts_unfiltered" / "adata.h5ad"
 
-REPO_ROOT            = Path("/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan")
+REPO_ROOT            = Path(os.environ.get("VIRALSCAN_PKG", "/exports/para-lipg-hpc/mdmanurung/ViralScan-pin2"))
 REGISTER_VALUE_PATH  = Path(
     "/home/mdmanurung/.claude/plugins/marketplaces/mycelium/skills/core/scripts"
 )
