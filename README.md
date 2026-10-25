@@ -19,7 +19,7 @@ These analyses were run against ViralScan commit `ebd381384368404150d7c72c5b5298
 ```bash
 export VIRALSCAN_PKG=/path/to/ViralScan      # a checkout of that commit
 source env.sh                                # PYTHONPATH for the package
-./setup_links.sh                             # local links (src, docs, schemas, .github, big run dirs); never committed
+./setup_links.sh                             # local links to the big run dirs (links/*); never committed. Package files are found through VIRALSCAN_PKG, not linked
 pytest tests -q                              # the moved tests (research-marked ones need -m research)
 ```
 `pip install` of the package can fail on some clusters (a transitive build error); `PYTHONPATH` works.
