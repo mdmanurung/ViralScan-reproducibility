@@ -5,6 +5,7 @@ from pathlib import Path
 
 import pytest
 
+from scripts.governance_utils import package_path
 from scripts.validate_v3_protocol import (
     DEFAULT_LEDGER,
     calibration_sha256,
@@ -841,7 +842,7 @@ def test_schema_rejects_deleting_the_partitions_contract(protocol: dict, schema:
 
 
 def test_packaged_schema_matches_the_canonical_schema() -> None:
-    packaged = ROOT / "src" / "viralscan" / "schemas" / "v3" / "validation_protocol.schema.json"
+    packaged = package_path("src/viralscan/schemas/v3/validation_protocol.schema.json")
     assert packaged.read_text(encoding="utf-8") == SCHEMA_PATH.read_text(encoding="utf-8")
 
 

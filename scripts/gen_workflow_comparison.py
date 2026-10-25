@@ -20,9 +20,14 @@ from typing import Any
 
 import yaml
 
+try:
+    from scripts.governance_utils import package_path
+except ModuleNotFoundError:  # Direct ``python scripts/...`` execution.
+    from governance_utils import package_path  # type: ignore[no-redef]
+
 ROOT = Path(__file__).resolve().parents[1]
 PROTOCOL = ROOT / "analysis" / "v3_validation" / "protocol.yaml"
-DOC = ROOT / "docs" / "workflow_comparison.md"
+DOC = package_path("docs/workflow_comparison.md")  # static page in the package repo; --check flags drift
 
 #: Five workflow families = the protocol's workflow tools grouped by strategy.
 #: The 2.2.0 arms are a predecessor comparison (``predecessor_comparison_layer``), not a strategy.

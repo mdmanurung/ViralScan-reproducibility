@@ -8,6 +8,8 @@ from pathlib import Path
 
 import pytest
 
+from scripts.governance_utils import package_path
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "extras"))
 
@@ -112,13 +114,13 @@ def test_committed_report_covers_every_catalogue_marker() -> None:
     """Staleness guard: the tracked report has one valid row per catalogue row."""
     report = list(
         csv.DictReader(
-            (REPO_ROOT / "analysis" / "panel_expansion" / "cat28_panviral_marker_check.tsv").open(),
+            package_path("curation/panel/cat28_panviral_marker_check.tsv").open(),
             delimiter="\t",
         )
     )
     catalogue = list(
         csv.DictReader(
-            (REPO_ROOT / "src" / "viralscan" / "data" / "gene_programs.tsv").open(),
+            package_path("src/viralscan/data/gene_programs.tsv").open(),
             delimiter="\t",
         )
     )

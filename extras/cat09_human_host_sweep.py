@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import os
 import re
 import sys
 import threading
@@ -30,7 +31,7 @@ import requests  # noqa: E402
 from viralscan.scripts import ncbi_fetch  # noqa: E402
 from viralscan.scripts.ncbi_fetch import NCBIFetchError, genbank_cache_path  # noqa: E402
 
-CATALOGUE = REPO_ROOT / "src" / "viralscan" / "data" / "virus_catalog.tsv"
+CATALOGUE = Path(os.environ.get("VIRALSCAN_PKG", REPO_ROOT)) / "src" / "viralscan" / "data" / "virus_catalog.tsv"
 OUT = REPO_ROOT / "analysis" / "cat09_sweep"
 HUMAN_TAXID = "9606"
 PHAGE_RE = re.compile(

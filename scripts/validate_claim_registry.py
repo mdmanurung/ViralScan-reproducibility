@@ -20,6 +20,7 @@ try:
         load_json,
         relative_path_error,
         package_fallback,
+        package_path,
         repository_file_error,
         sha256_file,
     )
@@ -31,14 +32,15 @@ except ModuleNotFoundError:  # Direct ``python scripts/...`` execution.
         load_json,
         relative_path_error,
         package_fallback,
+        package_path,
         repository_file_error,
         sha256_file,
     )
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_REGISTRY = REPO_ROOT / "claims" / "registry.json"
-DEFAULT_SCHEMA = REPO_ROOT / "schemas" / "v3" / "claim_registry.schema.json"
-DEFAULT_SCOPE = REPO_ROOT / "config" / "public_ship_scope.json"
+DEFAULT_SCHEMA = package_path("schemas/v3/claim_registry.schema.json")
+DEFAULT_SCOPE = package_path("config/public_ship_scope.json")
 DEFAULT_INVENTORY = REPO_ROOT / "analysis" / "v3_artifact_inventory.tsv"
 
 MARKER = re.compile(
@@ -416,8 +418,8 @@ def validate_registry_file(
     coverage: bool = False,
 ) -> list[str]:
     registry_path = registry_path or repo_root / "claims/registry.json"
-    schema_path = schema_path or repo_root / "schemas/v3/claim_registry.schema.json"
-    scope_path = scope_path or repo_root / "config/public_ship_scope.json"
+    schema_path = schema_path or package_fallback(repo_root, "schemas/v3/claim_registry.schema.json") / "schemas/v3/claim_registry.schema.json"
+    scope_path = scope_path or package_path("config/public_ship_scope.json")
     inventory_path = inventory_path or repo_root / "analysis/v3_artifact_inventory.tsv"
     if git_root is None:
         configured_git_root = os.environ.get("VIRALSCAN_GIT_ROOT")
@@ -462,7 +464,7 @@ def main() -> int:
     )
     args = parser.parse_args()
     if args.report_unmarked:
-        scope = args.scope or args.repo_root / "config/public_ship_scope.json"
+        scope = args.scope or package_path("config/public_ship_scope.json")
         for relative in _load_scope_files(scope)[0]:
             try:
                 text = (args.repo_root / relative).read_text(encoding="utf-8")

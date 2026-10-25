@@ -12,6 +12,8 @@ from types import SimpleNamespace
 
 import pytest
 
+from scripts.governance_utils import package_path
+
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 import generate_truth_panel as gt  # noqa: E402
@@ -192,7 +194,7 @@ def test_the_digest_is_recomputed_and_the_ledger_bound_even_when_pending(protoco
 
 def test_both_schema_copies_agree_on_the_downgrade_and_frozen_at_rules():
     one = (ROOT / "schemas/v3/validation_protocol.schema.json").read_bytes()
-    two = (ROOT / "src/viralscan/schemas/v3/validation_protocol.schema.json").read_bytes()
+    two = package_path("src/viralscan/schemas/v3/validation_protocol.schema.json").read_bytes()
     assert one == two
     schema = json.loads(one)
     assert schema["$defs"]["frozenInputs"]["properties"]["status"] == {"const": "frozen"}

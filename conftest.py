@@ -2,8 +2,8 @@
 import os
 import sys
 
-_pkg = os.environ.get("VIRALSCAN_PKG", "/exports/para-lipg-hpc/mdmanurung/ViralScan-pin2")
-for _p in (os.path.join(_pkg, "src"), _pkg):
-    if _p not in sys.path:
-        sys.path.insert(0, _p)
-os.environ["PYTHONPATH"] = os.pathsep.join([os.path.join(_pkg, "src"), _pkg, os.environ.get("PYTHONPATH", "")])  # subprocess-based tests
+_pkg = os.environ.setdefault("VIRALSCAN_PKG", "/exports/para-lipg-hpc/mdmanurung/ViralScan-pin2")  # governance_utils.package_path reads it too
+# only src: the package root also has a scripts/ dir, which would shadow this repo's scripts/ namespace package
+if os.path.join(_pkg, "src") not in sys.path:
+    sys.path.insert(0, os.path.join(_pkg, "src"))
+os.environ["PYTHONPATH"] = os.pathsep.join([os.path.join(_pkg, "src"), os.environ.get("PYTHONPATH", "")])  # subprocess-based tests
