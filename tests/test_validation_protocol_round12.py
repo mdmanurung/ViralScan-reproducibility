@@ -23,7 +23,7 @@ from scripts.validate_v3_protocol import (
 
 ROOT = Path(__file__).resolve().parents[1]
 PROTOCOL_PATH = ROOT / "analysis" / "v3_validation" / "protocol.yaml"
-SCHEMA_PATH = package_path("schemas/v3/validation_protocol.schema.json")
+SCHEMA_PATH = ROOT / "schemas" / "v3" / "validation_protocol.schema.json"
 PACKAGED_SCHEMA = package_path("src/viralscan/schemas/v3/validation_protocol.schema.json")
 V03 = "influenza_gse336913"
 

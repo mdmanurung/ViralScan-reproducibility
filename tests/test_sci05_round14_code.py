@@ -193,7 +193,7 @@ def test_the_digest_is_recomputed_and_the_ledger_bound_even_when_pending(protoco
 
 
 def test_both_schema_copies_agree_on_the_downgrade_and_frozen_at_rules():
-    one = package_path("schemas/v3/validation_protocol.schema.json").read_bytes()
+    one = (ROOT / "schemas/v3/validation_protocol.schema.json").read_bytes()
     two = package_path("src/viralscan/schemas/v3/validation_protocol.schema.json").read_bytes()
     assert one == two
     schema = json.loads(one)
