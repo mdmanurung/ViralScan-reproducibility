@@ -1,7 +1,7 @@
 """Paired original/new preprocessing fits; expected scientific differences, immutable input."""
 import hashlib,json,os,shutil,subprocess,sys
 from pathlib import Path
-P=Path(__file__).resolve().parent;W=Path('/tmp/viralscan-shifted-log-fit');C=Path('/tmp/viralscan-shifted-log-candidate');B=Path('/exports/archive/hg-funcgenom-research/mdmanurung/vs_work/main')
+P=Path(__file__).resolve().parent;W=Path('/tmp/viralscan-shifted-log-fit');C=Path('/tmp/viralscan-shifted-log-candidate');B=Path('/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/vs_work/main')
 def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
 if len(sys.argv)>1:
  sys.path.insert(0,sys.argv[1]);from viralscan.scripts import hostresponse as hr

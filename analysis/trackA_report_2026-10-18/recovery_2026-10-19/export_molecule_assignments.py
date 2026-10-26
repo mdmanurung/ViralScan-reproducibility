@@ -15,7 +15,7 @@ import h5py
 import numpy as np
 from anndata.io import read_elem
 
-PIN = Path("/exports/archive/hg-funcgenom-research/mdmanurung/vs_pinned/97a64f6")
+PIN = Path("/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/pinned_snapshots/vs_pinned/97a64f6")
 sys.path.insert(0, str(PIN / "src"))
 from viralscan.scripts import multimap as mm  # noqa: E402
 
