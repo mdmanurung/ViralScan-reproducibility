@@ -17,13 +17,13 @@ per-file git history (`provenance/package_commit_map.tsv` maps old package commi
 These analyses were run against ViralScan commit `ebd381384368404150d7c72c5b5298741360597e` (see `provenance/PACKAGE_BASE_SHA`; update it when you re-pin).
 
 ```bash
-export VIRALSCAN_PKG=/path/to/ViralScan      # a checkout of that commit
-source env.sh                                # PYTHONPATH for the package
-./setup_links.sh                             # local links to the big run dirs (links/*); never committed. Package files are found through VIRALSCAN_PKG, not linked
+git -C /path/to/ViralScan worktree add --detach pkg "$(head -1 provenance/PACKAGE_BASE_SHA)"   # the pinned package checkout, at ./pkg
+echo /path/to/ViralScan/.git/objects >> .git/objects/info/alternates                          # ledger commits that live only in the package history
+source env.sh                                # VIRALSCAN_PKG=pkg, VIRALSCAN_DATA=data, VIRALSCAN_CACHE=data/references/gtf, PYTHONPATH
 pytest tests -q                              # the moved tests (research-marked ones need -m research)
 ```
 `pip install` of the package can fail on some clusters (a transitive build error); `PYTHONPATH` works.
-Large run directories (hundreds of GB) are not in git; `setup_links.sh` links them under `links/` when present.
+Bulk data (hundreds of GB to TB: FASTQ/BAM, GTFs, kraken2 databases, references, run outputs) lives in `data/` and is not in git; see `data/README.md` for the layout and where each kind of file is.
 
 ## Notes
 - `VENDORED.md` lists frozen copies of package files that these scripts import.

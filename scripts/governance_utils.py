@@ -63,7 +63,7 @@ def relative_path_error(value: Any) -> str:
 def package_fallback(repo_root: Path, value: str) -> Path:
     """Root that holds *value*: the pinned package checkout (env VIRALSCAN_PKG) when it has the file (package-owned artifacts win,
     e.g. README.md and environment.yml exist in both repos), else this repo. Two-root governance, split decision D39."""
-    package = os.environ.get("VIRALSCAN_PKG")
+    package = os.environ.get("VIRALSCAN_PKG") or (str(Path(repo_root) / "pkg") if (Path(repo_root) / "pkg").is_dir() else None)
     if package and (Path(package) / value).exists():
         return Path(package)
     # the package dropped its top-level schemas/ copy (split batch 4a); the one copy is src/viralscan/schemas

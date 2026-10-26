@@ -7,8 +7,14 @@ __pycache__/
 .venv/
 .ipynb_checkpoints/
 Rplots.pdf
-# local compatibility links are listed in .git/info/exclude by setup_links.sh (never committed)
-# large run outputs stay on disk and are linked from links/
+# bulk data lives in data/ (fastq/bam, references, kraken2, run outputs); only the manifests and metadata are tracked
+/data/runs/
+/data/inputs/
+/data/references/
+/data/backups/
+/data/pinned_snapshots/
+# the pinned package checkout (git worktree at provenance/PACKAGE_BASE_SHA)
+/pkg/
 analysis/*/outputs/
 analysis/*/work/
 analysis/*/.runtime/
