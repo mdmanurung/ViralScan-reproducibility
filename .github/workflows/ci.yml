@@ -46,9 +46,9 @@ jobs:
           python -m pip install pytest responses jsonschema "setuptools>=77" numpy pandas scipy scikit-learn anndata scanpy matplotlib plotly jinja2 pyyaml "requests>=2.28"
 
       # Ledger and test commits that live only in the package history resolve through its object store.
-      - name: Link the package checkout
+      - name: Borrow the package object store
         run: |
-          ./setup_links.sh
+          echo "$VIRALSCAN_PKG/.git/objects" >> .git/objects/info/alternates
 
       # Draft gate only. Do NOT add --phase training here: the training gate is supposed to
       # fail while preregistration blockers are open.
@@ -95,6 +95,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           python -m pip install pytest responses jsonschema "setuptools>=77" numpy pandas scipy scikit-learn anndata scanpy matplotlib plotly jinja2 pyyaml "requests>=2.28"
-      - run: ./setup_links.sh
+      - name: Borrow the package object store
+        run: echo "$VIRALSCAN_PKG/.git/objects" >> .git/objects/info/alternates
       - name: Run tests
         run: python -m pytest tests -q -p no:cacheprovider

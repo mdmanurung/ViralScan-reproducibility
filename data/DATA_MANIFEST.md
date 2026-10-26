@@ -1,5 +1,7 @@
 # Data Manifest
 
+Layout and where each kind of data lives: see `data/README.md`. Paths below that start with a bare `benchmark_inputs/` now live under `data/inputs/benchmark_inputs/`.
+
 <!-- Add entries below using the appropriate manifest entry template. -->
 
 ### reference_strategy_fastqs

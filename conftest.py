@@ -2,7 +2,9 @@
 import os
 import sys
 
-_pkg = os.environ.setdefault("VIRALSCAN_PKG", "/exports/para-lipg-hpc/mdmanurung/ViralScan-pin2")  # governance_utils.package_path reads it too
+_here = os.path.dirname(os.path.abspath(__file__))
+_pkg = os.environ.setdefault("VIRALSCAN_PKG", os.path.join(_here, "pkg"))  # governance_utils.package_path reads it too
+os.environ.setdefault("VIRALSCAN_CACHE", os.path.join(_here, "data", "references", "gtf"))
 # only src: the package root also has a scripts/ dir, which would shadow this repo's scripts/ namespace package
 if os.path.join(_pkg, "src") not in sys.path:
     sys.path.insert(0, os.path.join(_pkg, "src"))
