@@ -44,7 +44,7 @@ n=$(( ($(wc -l < "$W/files.txt") + 2) / 3 )); split -l "$n" -d "$W/files.txt" "$
 for c in "$W"/chunk_??; do
   b=$(basename "$c")
   # shellcheck disable=SC2046
-  PATH=$E/bin:$PATH PYTHONPATH=src timeout 900 python -m pytest $(cat "$c") -q -p no:cacheprovider \
+  PATH=$E/bin:$PATH PYTHONPATH=src timeout ${CHUNK_TIMEOUT:-1800} python -m pytest $(cat "$c") -q -p no:cacheprovider \
     --continue-on-collection-errors --junitxml="$W/$b.xml" > "$W/$b.log" 2>&1 || true
   echo "$b: $(tail -1 "$W/$b.log")"
 done
