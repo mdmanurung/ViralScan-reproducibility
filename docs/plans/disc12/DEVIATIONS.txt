@@ -1,0 +1,12 @@
+pilot 25872786_83 (row 83) ran without --memory-mapping (run.sbatch.pilot); protocol section 3 says memory-mapped. Classifications unaffected (fingerprint excludes memory_mapping, discovery.py:1918); its RSS/time receipt is not comparable. All other rows run with --memory-mapping (run.sbatch, 2026-10-24).
+metrics script (protocol section 4: "committed before any run") did not exist when the pilot (2026-10-23) and arrays 25873325/25873326 (2026-10-24) started. It is being written blind to result values (branch codex/disc12-metrics) and committed before any out/ values are read.
+
+2026-10-27 (DISC-17, metrics pass on the published outputs; user ratified the five docstring ambiguities and the truth derivation with "do all above"):
+- Truth (--truth LIB=TSV, per-cell UNIQUE molecules of the panel virus) was derived from the primary runs' existing
+  kb-python/counts_unfiltered/adata_multimap.h5ad `counts_unique` layer (equal to the `unique` rows of
+  molecule_assignments.tsv.gz by the package contract), summed over the panel virus's genes from the same run's
+  multimap_evidence.tsv, restricted to the manifest's called_cells.tsv(combined_off). No new compute. The PLAN claim that
+  only `viralscan rerun-multimap --multimap-molecule-assignments` could produce it was wrong: that verb has no such flag and
+  the primary runs predate log/multimap.done. Script and provenance: docs/plans/disc12/truth/ (scripts/disc12_truth_from_counts_unique.py).
+- Panel taxids: SRR12682296=10376, GSM6416022=32604, GSM3511335=10298, LUM-SJ-x213-g=2697049 (NCBI species).
+- Outputs: metrics_2026-10-27/{metrics.tsv,offcell.tsv,decisions.json} (copy under docs/plans/disc12/metrics_2026-10-27/).
