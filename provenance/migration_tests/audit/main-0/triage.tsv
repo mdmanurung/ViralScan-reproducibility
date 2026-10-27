@@ -1,0 +1,553 @@
+file	where	item	class	reason
+PLAN.md	1113-1259	Software backlog reconciliation (2026-10-09)	package	Software-only backlog: QA, PKG, SENS-CORR, EVID, CHEM, REL, REF/PANEL/CAT, HR host-response, MECH, VAL tooling, all code/tests/packaging.
+PLAN.md	L1183	"DSR-02/DOSSIER-01..03/VERDICT-01/SENS-07/DLIST-02/ANDET-07/TONSIL-02/CAT-19/DEF-07/CAT-14/15/16 (survey row) (exception in ""Software backlog reconciliation (2026-10"")"	both	Mixes kept src features (VERDICT-01, DLIST-02, CAT-14/15/16/19) with DSR-02/DOSSIER/SENS-07 dossier scripts whose tests move (tests_move_set); copy to both.
+PLAN.md	1260-1273	How to use this tracker	both	Generic tracker usage rules and status legend; apply to either repo's PLAN.md.
+PLAN.md	1274-1295	Critical path	both	Work-package table spans software (WP1-2, 10) and validation/manuscript (WP3-9, 11); copy to both.
+PLAN.md	1296-1312	Verified baseline	package	BASE-01/02/04/05 are software correctness and gate results.
+PLAN.md	L1302	"BASE-03 (exception in ""Verified baseline"")"	experiment	Retained EBV input run with BUS record counts; analysis/v3_ebv_baseline evidence.
+PLAN.md	1313-1401	WP0 - Governance and legacy freeze	experiment	Legacy-result freeze, artifact inventory, claim graph and GOV-06 fresh-control v2 vs v3 cluster diagnostic are claim/evidence governance.
+PLAN.md	L1320	"GOV-02 (exception in ""WP0 - Governance and legacy freeze"")"	package	Ship-scope data-governance check (check_data_governance.py, config/public_ship_scope.json) stays with the package.
+PLAN.md	L1325	"GOV-04 (exception in ""WP0 - Governance and legacy freeze"")"	package	Public ship-scope allowlist and removal of institutional defaults in shipped scripts.
+PLAN.md	L1327	"GOV-05 (exception in ""WP0 - Governance and legacy freeze"")"	both	Claim registry/validator scripts (scripts/validate_claim_registry.py, check_g3_diff.py) referenced by kept scripts, but registry content is manuscript claim evidence.
+PLAN.md	1402-1414	WP1 - Core software contracts (intro + SW-26)	package	SW-26 kb ref tmp workspace fix, package code.
+PLAN.md	1415-1523	WP1A - Schemas, assignments, and reruns	package	SW-01..05 schemas, molecule-assignment evidence, rerun-multimap; software contracts.
+PLAN.md	1524-1762	WP1B - Workflow safety and architecture	package	SW-06..SW-22 CLI, Snakemake, host filter, cell calling safety; cluster job IDs appear only as evidence inside package fixes.
+PLAN.md	1763-2546	WP1D - Mechanism consolidation	package	MECH-A..F, SW-23/24, CAT-41/42, ANELLO-PRIOR are src changes (virus identity, catalogue, masks, run config) with embedded cluster evidence.
+PLAN.md	L1988	"EXPL-R2.10 (exception in ""WP1D - Mechanism consolidation"")"	experiment	Exploratory reruns on current reference.
+PLAN.md	L2020	"EXPL-TTMDV (exception in ""WP1D - Mechanism consolidation"")"	experiment	Exploratory TTMDV analysis with pre-registered reading, cluster gate jobs, F-020 artefact result.
+PLAN.md	L2075	"EXPL-HPV16 (exception in ""WP1D - Mechanism consolidation"")"	experiment	HPV16 positive control on public GSE189670 with read-level validation.
+PLAN.md	2547-2855	WP1E - Grill decisions for 3.0	package	Q1-Q41 decision table and DEF-01..09 implementation rows are software defaults/chemistry/cell-calling/release/env work.
+PLAN.md	L2590	"DEF-00 (exception in ""WP1E - Grill decisions for 3.0"")"	experiment	Amends analysis/v3_validation/protocol.yaml (validation protocol).
+PLAN.md	L2643	"COST-01 (exception in ""WP1E - Grill decisions for 3.0"")"	experiment	Measured core-h/RAM on full-depth cluster jobs (F-024).
+PLAN.md	L2810	"DEF-07 (exception in ""WP1E - Grill decisions for 3.0"")"	experiment	CAT-30 retraction notice beside covid results and claims/registry.json retraction.
+PLAN.md	L2842	"CMP-06 (exception in ""WP1E - Grill decisions for 3.0"")"	experiment	Same-input comparison against evonk ViralScan 2.2.0 (WP6B benchmark).
+PLAN.md	2856-2901	WP1C - Simplification pass (ponytail audit)	package	SIMP-01..03 dead-code, helper dedup and dependency cleanup in src; the out-of-scope note about extras/build_anello_table.py is package-side too.
+.living/learnings.md		L7 2026-07-07 Anellovirus detection = mismatch-tolerant STAR host-filter	both	Artifact finding (read-origin test) plus the host-filter design it motivated in the package.
+.living/learnings.md		L36 2026-07-06 HHV-6B benchmark in manuscript	experiment	Manuscript inclusion of a reference-strategy benchmark row.
+.living/learnings.md		L60 2026-07-06 Publication-readiness review; first PyPI release v2.5.0	both	Manuscript readiness verdict plus package release/PR #6 cleanup.
+.living/learnings.md		L91 2026-07-06 F-005 CLOSED, TTV host-homology artifact	experiment	Read-origin experiment result and manuscript citation rule.
+.living/learnings.md		L120 2026-07-03 Publication-readiness assessment, two tracks	experiment	Manuscript/readiness assessment (docs/PUBLICATION_READINESS moves to repro).
+.living/learnings.md		L153 2026-07-03 v2.5 Scientific-Hardening Tier 1	package	Shipped package features and tests.
+.living/learnings.md		L181 2026-07-02 Feature-completeness gap analysis	package	Gap analysis of the software's capabilities.
+.living/learnings.md		L194 2026-07-02 Release-readiness pass v2.4.0	package	Release/packaging phases.
+.living/learnings.md		L212 2026-07-02 Follow-up battery: GO program, MT-ND4L mito artifact	experiment	EBV host-response analysis results.
+.living/learnings.md		L222 2026-07-02 Reference-strategy Selectivity Index blocked	experiment	Benchmark completeness (4/12 rows), SLURM re-run.
+.living/learnings.md		L232 2026-07-02 Intermediate-attractor hypothesis not supported	experiment	Analysis result on host state.
+.living/learnings.md		L242 2026-07-01 CPM cross-check corroborates EBV signal	experiment	Analysis result.
+.living/learnings.md		L252 2026-07-01 Depth-matched re-analysis, AUC ~0.72	experiment	Analysis result.
+.living/learnings.md		L262 2026-07-01 Depth-confounder check overturns EBV headline	experiment	Analysis result and F-001 status.
+.living/learnings.md		L274 2026-07-01 Ideation session: specificity gap	experiment	Research ideation about the EBV analysis.
+.living/learnings.md		L284 2026-07-01 HVG feature-selection leakage fix	both	Code fix in hostresponse (package) plus re-run metrics (experiment).
+.living/learnings.md		L296 2026-07-01 Comprehensive report built; scitexlintr unavailable	experiment	Report production for an analysis.
+.living/learnings.md		L310 2026-07-01 Add MCC by extending code and re-running	both	Adds matthews_corrcoef to src hostresponse.py and re-runs the analysis.
+.living/learnings.md		L324 2026-07-01 Register (not re-run) EBV host-response analysis	experiment	Analysis registration under analysis/.
+.living/learnings.md		L340 2026-07-01 Register reference set in place	experiment	Benchmark reference set provenance (reference_manifest/audit move).
+.living/learnings.md		L356 2026-07-01 Minimal mycelium scaffold; PLAN.md authoritative	package	Repo process/layout convention.
+.living/learnings.md		L372 2026-07-02 Fix host-GTF/cDNA-FASTA seqname mismatch at source	package	Reference-building code fix.
+.living/learnings.md		L408 2026-07-03 Cell-calling: both denominators; external cells preferred	package	Cell-calling behaviour of the software.
+.living/learnings.md		L448 2026-07-03 Reconciled publication-readiness plan; corrected AUROC	experiment	Manuscript plan reconciliation (docs/superpowers plans move).
+.living/learnings.md		L476 2026-07-04 Multimap speedup, vectorised EM	package	Performance change in src.
+.living/learnings.md		L495 2026-07-05 Default multimap-method host-conservative	package	CLI default.
+.living/learnings.md		L524 2026-07-06 hostresponse close-out: depth-adj AUC	package	hostresponse module output definition.
+.living/learnings.md		L550 2026-07-06 SH2.3 detection-level warning; SH2.4 deferred	package	Detection feature design.
+.living/learnings.md		L583 2026-07-06 TTV held out of manuscript	experiment	Manuscript claim hold pending read-origin test.
+.living/learnings.md		L595 2026-07-06 Read-origin test decoupled via pre-built combined index	experiment	Cluster diagnostic job design.
+.living/learnings.md		L607 2026-07-15 EVE analysis 4-phase design	experiment	Analysis design for anellovirus homology.
+.living/learnings.md		L635 2026-07-15 SLURM partition 'all' for multi-CPU jobs	experiment	Cluster operations.
+.living/learnings.md		L647 2026-07-15 aifi-scrna-pipeline skill pack installed	package	Convention pack referenced by CLAUDE.md.
+.living/learnings.md		L657 2026-07-15 T5 reproducibility fix: commit script	experiment	Provenance of an experiment result (F-005 coverage).
+.living/learnings.md		L679 2026-07-15 T6 EBV B-cell enrichment negative result	experiment	Analysis result.
+.living/learnings.md		L703 2026-07-17 EVE conclusion: anellovirus closed as artifact	experiment	Analysis conclusion.
+.living/learnings.md		L722 2026-07-17 Publication-readiness delta review	both	Engineering review of software plus journal readiness.
+.living/learnings.md		L748 2026-07-17 Pub-readiness fixes executed	package	Hygiene changes in shipped package (abs paths removed).
+.living/learnings.md		L773 2026-07-20 8-vignette suite	package	Published docs/vignettes (stay in package).
+.living/learnings.md		L798 2026-07-20 Non-breaking curation via symlink view	package	Repo layout/curation tooling (scripts/build_curation_view; being replaced by curation/panel).
+.living/learnings.md		L816 2026-07-21 Viral-read positional profiling vs Nature method	package	Capability assessment of viralscan evidence.
+.living/learnings.md		L839 2026-07-21 Roadmap + read-start feature plan	package	Software roadmap (docs/ROADMAP.md itself is on the repro move list).
+.living/learnings.md		L856 2026-07-21 Sequenced implementation plan	package	Software build order.
+.living/learnings.md		L872 2026-07-21 Roadmap execution increment 1	package	Shipped code.
+.living/learnings.md		L895 2026-07-21 Roadmap execution increment 2	package	Shipped code.
+.living/learnings.md		L915 2026-07-21 Roadmap execution increment 3	package	Shipped code.
+.living/learnings.md		L933 2026-07-21 Release note + version bump 2.7.0	package	Release.
+.living/learnings.md		L950 2026-07-21 PR #7 CI green	package	CI.
+.living/learnings.md		L977 2026-07-21 CI round 2	package	CI.
+.living/learnings.md		L1007 2026-07-21 PR #7 merged	package	Release/merge record.
+.living/learnings.md		L1021 2026-07-26 GOV-06 deferred to SCI-03; highmem tier	experiment	v3 protocol governance and fresh-control campaign.
+.living/learnings.md		L1058 2026-07-27 SCI-03 design freeze	experiment	Preregistration protocol.
+.living/learnings.md		L1104 2026-07-27 SCI-04 freeze row set	experiment	Preregistration protocol.
+.living/learnings.md		L1133 2026-07-27 Reverted SCI-03/SCI-04 freezes	experiment	Protocol governance.
+.living/learnings.md		L1172 2026-07-27 Two rails: reject reviewer fix / git	experiment	Protocol validator governance.
+.living/learnings.md		L1219 2026-07-27 'Better than original' needs ground truth	experiment	Benchmark design v2.2.0 vs v3.
+.living/learnings.md		L1250 2026-07-27 Frozen params live in configuration	both	Code rule in src plus protocol.yaml seed contract.
+.living/learnings.md		L1270 2026-07-27 Frozen-input identity re-derived at use	both	verify_frozen_fastq / audit_fastq_pair (experiment tooling) with a general code rule.
+.living/learnings.md		L1286 2026-07-28 Two lists may share a name	both	constants.SIBLING_VIRUS_PAIRS in src vs protocol.yaml list.
+.living/learnings.md		L1303 2026-07-28 SW-02 schema that constrains nothing refused	package	Schema enforcement in src.
+.living/learnings.md		L1325 2026-07-28 Write boundaries raise, validate-run reports	package	CLI/schema behaviour.
+.living/learnings.md		L1339 2026-07-28 Re-deriving invariant from disk	package	validate-run code.
+.living/learnings.md		L1356 2026-07-28 Clear only patterns a rule owns	package	Snakefile staleness fix (SW-04).
+.living/learnings.md		L1377 2026-07-28 Provenance rewritten per sample (superseded)	package	Run-manifest layout in src.
+.living/learnings.md		L1403 2026-09-26 Retiring SESSION_RESUME.md	both	Dev-process handoff file (carried to repro) plus package WP4E/F rows.
+.living/learnings.md		L1438 2026-09-27 SFL tonsil correction; screening from BAM	experiment	Public-dataset analysis.
+.living/learnings.md		L1472 2026-09-29 3.0 default-selection design (user grill)	both	Package defaults, preregistered via the validation protocol.
+.living/learnings.md		L1477 2026-09-30 CMP-06 compares implementations on one reference	experiment	v2.2.0 vs v3 comparison design.
+.living/learnings.md		L1481 2026-09-30 DEF-03 contradiction rule	package	Build-manifest check in src.
+.living/learnings.md		L1487 2026-09-30 --strand opt-in	package	CLI option.
+.living/learnings.md		L1492 2026-09-30 Parallel implementers with file ownership	package	Package implementation process.
+.living/learnings.md		L1496 2026-09-30 EVE risk from identity table	package	Identity-table logic in src.
+.living/learnings.md		L1501 2026-09-30 NC_000898.1 row panel=legacy	package	Catalogue data.
+.living/learnings.md		L1506 2026-09-30 Self-named t2g rows resolve by legacy prefix	package	MECH-A code.
+.living/learnings.md		L1512 2026-10-01 emptyDrops for every reported number (SW-23)	package	Cell-calling behaviour (knee warning).
+.living/learnings.md		L1518 2026-10-01 Legacy prefix names adopt catalogue row (MECH-A2)	package	MECH-A2 code.
+.living/learnings.md		L1524 2026-10-03 cat42b becomes current viral panel (CAT-42)	both	Panel/reference definition (package) with gate evidence and benchmark references (experiment).
+.living/learnings.md		L1536 2026-10-03 PROG-07 numbers re-based on cat42b	experiment	Which figures may be cited.
+.living/learnings.md		L1544 2026-10-03 Anellovirus eve_risk cleared; artifact_risk column	package	viral_summary column and catalogue.
+.living/learnings.md		L1560 2026-10-03 CAT-09 sweep	package	Catalogue content.
+.living/learnings.md		L1574 2026-10-03 PROG-08 KSHV latency set	package	Gene-program data.
+.living/learnings.md		L1582 2026-10-03 PROG-17 layer 2 scores called cells only	package	Detection code.
+.living/learnings.md		L1590 2026-10-03 DEF-02 chemistry detection	package	kb count behaviour.
+.living/learnings.md		L1599 2026-10-03 ANDET-09 STARsolo anellovirus branch	package	Pipeline scope decision.
+.living/learnings.md		L1612 2026-10-04 Artefact measures flag, never filter	package	Output-column semantics; cited by read_filter.py.
+.living/learnings.md		L1620 2026-10-04 Package before experiments; user owns installs/push/CI	package	Working rule for package completion.
+.living/learnings.md		L1633 2026-10-05 Truth-panel background: real PBMC	both	Generator (package, D8) and validation design.
+.living/learnings.md		L1645 2026-10-05 Truth-panel abundance units/depth	both	Generator (package) and validation protocol.
+.living/learnings.md		L1651 2026-10-05 Truth-panel siblings/leakage/blinding	both	Generator (package) and validation protocol.
+.living/learnings.md		L1659 2026-10-05 DEF-00 written; host_virus_homology	both	Defaults-selection protocol plus package option.
+.living/learnings.md		L1667 2026-10-05 defaults_selection grids: measure cost first	both	Protocol grids and package parameter sets.
+.living/learnings.md		L1679 2026-10-05 star_alignment grid (DEV-022)	both	Package STAR_FILTER_ARGS exposure plus protocol deviation.
+.living/learnings.md		L1688 2026-10-05 DEF-01 read filter opt-in	package	CLI default and read_filter module.
+.living/learnings.md		L1696 2026-10-05 DEF-01 artefact level (DEV-024)	package	read_filter semantics.
+.living/learnings.md		L1703 2026-10-06 D18/D19 per-cell twin exclusion (DEV-025)	experiment	Validation scoring rule.
+.living/learnings.md		L1714 2026-10-06 Same standard arm set on every dataset	experiment	Public-dataset campaign rule.
+.living/learnings.md		L1727 2026-10-06 check-chemistry bulk detection	package	New CLI command.
+.living/learnings.md		L1734 2026-10-06 DSR round 1 mechanics	experiment	SLURM campaign.
+.living/learnings.md		L1741 2026-10-06 Evidence code pinned separately (DSR-14)	experiment	Campaign pinning.
+.living/learnings.md		L1747 2026-10-06 Twostep cells on STARsolo host matrix (DSR-15)	both	Campaign decision implemented via package host-filter cell calling.
+.living/learnings.md		L1754 2026-10-06 Every arm scored over same called cells (DSR-16)	experiment	Scoring rule.
+.living/learnings.md		L1761 2026-10-06 Cell Ranger cells for SFL tonsil x223	experiment	Dataset-specific.
+.living/learnings.md		L1766 2026-10-06 Evidence/redetect resources generous	experiment	Cluster resources.
+.living/learnings.md		L1771 2026-10-06 LSCHWCP-inspired features clean-room	package	src/viralscan/sensitivity.py provenance.
+.living/learnings.md		L1777 2026-10-07 One frozen emptyDrops call per sample (CELLS-01)	experiment	Analysis-campaign rule.
+.living/learnings.md		L1783 2026-10-08 WP1b k-mer sharing grouping (PANEL-01)	package	panel_kmer_sharing script stays.
+.living/learnings.md		L1789 2026-10-08 kmer_twin_of exclusion under 5%	package	Panel curation.
+.living/learnings.md		L1795 2026-10-09 No-CDS records modelled as single-exon GTFs	package	model_nocds_gtfs, panel data.
+.living/learnings.md		L1801 2026-10-09 AB303562 index_exclusions row	package	Panel builder.
+.living/learnings.md		L1807 2026-10-11 Keep gene_programs.tsv stale	package	Shipped data.
+.living/learnings.md		L1810 2026-10-11 Audit 2026-10 as WP4L / AUD-01..13	both	Audit of code (package) with findings under analysis/audit_2026-10.
+.living/learnings.md		L1813 2026-10-11 AUD-09 credentials out of manifest	package	Code fix.
+.living/learnings.md		L1816 2026-10-11 AUD-20 from codex/aud-h	package	Code fix.
+.living/learnings.md		L1820 2026-10-12 Audit-fix branch wrap-up	package	Package merge.
+.living/learnings.md		L1824 2026-10-12 Grill: software scope, 21 decisions	both	Package scope plus exploratory-run rules.
+.living/learnings.md		L1831 2026-10-12 CAT-29 HSV-1 LAT re-cut	package	Shipped GTF/panel.
+.living/learnings.md		L1836 2026-10-12 Drop Python 3.9	package	Packaging and CLAUDE.md style rule.
+.living/learnings.md		L1841 2026-10-12 Grill 3: Track A and B	experiment	Track A/B study design.
+.living/learnings.md		L1846 2026-10-12 Grill 2: Q1-Q18	experiment	Datasets, claims, hold-out.
+.living/learnings.md		L1854 2026-10-13 Q45-Q52	experiment	Study-repo process (PRE-01).
+.living/learnings.md		L1861 2026-10-13 SCI-05 round 12 protocol (Q79, Q80; DEV-027)	experiment	Protocol deviations.
+.living/learnings.md		L1867 2026-10-13 Grill 4: Q53-Q70	experiment	Track B gates, calibration.
+.living/learnings.md		L1876 2026-10-13 Q77-Q83	experiment	WP5 D-list, SCI-05 follow-up.
+.living/learnings.md		L1885 2026-10-13 Q85-Q87 (PR #46)	experiment	Hold-out quarantine, protocol.
+.living/learnings.md		L1892 2026-10-13 Q96, Q104 TIER-01	both	Package tier code built to protocol grid.
+.living/learnings.md		L1898 2026-10-13 Q83 user choices (DEV-028); real-data rule	experiment	Protocol pending sections.
+.living/learnings.md		L1905 2026-10-14 Q123-Q133 LOCK-01 / LOCK01-PRE	both	Package prerequisites (viral_loci) plus lock resolutions.
+.living/learnings.md		L1920 2026-10-13 Q118-Q122 SCI-05 round 13 (DEV-030)	experiment	Protocol.
+.living/learnings.md		L1930 2026-10-14 SCI-05 round 14 fixes (DEV-031)	experiment	Protocol fixes.
+.living/learnings.md		L1938 2026-10-14 UMI-deduplicated counts, Q137 flags	package	Counting behaviour.
+.living/learnings.md		L1944 2026-10-14 Q140-Q148 tier measures	both	Package tier-measure branch plus G3 sign-off process.
+.living/learnings.md		L1957 2026-10-14 SCI-05 round 15 fixes (DEV-032)	both	Protocol deviation plus E8 reporting code.
+.living/learnings.md		L1963 2026-10-14 Q155 combined PalmDB reference	experiment	Arm-P reference for translated search.
+.living/learnings.md		L1967 2026-10-14 Q153 host-only cell calling	both	emptydrops code plus study-wide rule.
+.living/learnings.md		L1972 2026-10-14 Q154 cell-calling review fixes	both	emptydrops.R seed fix plus protocol seed.
+.living/learnings.md		L1976 2026-10-18 Wave-1 perf commits as separate branch	package	Perf code.
+.living/learnings.md		L1983 2026-10-18 Wave-1 rebase; oracle re-pin	package	tests/fixtures oracle.
+.living/learnings.md		L2003 2026-10-18 Wave-2 perf gates	package	Perf code.
+.living/learnings.md		L2013 2026-10-18 Wave-2 B18 fused reducer	package	Perf code.
+.living/learnings.md		L2021 2026-10-18 Wave-2 completion C00-wave2	package	Perf qualification.
+.living/learnings.md		L2029 2026-10-21 Discovery Kraken2 defaults	package	viralscan discover.
+.living/learnings.md		L2036 2026-10-21 Discovery per-UMI rule	package	viralscan discover.
+.living/learnings.md		L2042 2026-10-21 Discovery polyA/T trim	package	viralscan discover.
+.living/learnings.md		L2048 2026-10-21 Discovery candidates observation state	package	viralscan discover.
+.living/learnings.md		L2053 2026-10-21 Discovery fingerprint and resume	package	viralscan discover.
+.living/learnings.md		L2057 2026-10-21 STAR-02 star_hostvirus hardening	package	STAR code.
+.living/learnings.md		L2063 2026-10-21 STAR-03 star-index layout	package	star-index command.
+.living/learnings.md		L2068 2026-10-21 star_confirm columns are labels (STAR-04)	package	Output semantics.
+.living/learnings.md		L2073 2026-10-21 STAR docs placement	package	docs/output_reference, cli_reference.
+.living/learnings.md		L2078 2026-10-21 star_confirm per virus in summarise_by_virus	package	STAR-04 code.
+PLAN.md	2902-3096	WP2 — Install, lock, and artifact parity (incl. WP2A/2B/2C)	package	Packaging, lockfiles, containers, release workflow, supply chain and Actions pins; all CI/release/packaging work. REL-04/05 cite analysis/release_checks evidence but are about the shipped wheel/sdist.
+PLAN.md	3097-3425	WP3 — Preregister scientific validation	experiment	Validation protocol freeze, partitions, calibration, workflow matrix, independent protocol review rounds (SCI-01..05, R13P, Q83): preregistered study design and manuscript-claim governance (analysis/v3_validation). No row is about the CLI/software itself. SCI ids appear as strings in package src schema and in tests/scripts that validate protocol.yaml; those are identifier strings, not PLAN.md reads, and the validator scripts/tests are on the repro move list.
+PLAN.md	3426-3431	WP4 — Freeze production references (header)	package	Section objective text only; references are a package concern (the shipped panel, builder and gates) even though calibration rows below are experiment.
+PLAN.md	3432-3514	WP4A — Profiles and provenance	package	Reference profiles, accession lists, masking, build-ref manifests, reproducibility comparison tooling, panel archive/DOI (src build_reference, data_fetch, data/*.tsv).
+PLAN.md	3515-3803	WP4B — Full-genome competition and anellovirus	package	TIER-01/TIER-02 (src evidence_tiers.py, tier_measures.py) and REF-13 (gtf_normalise.py, SENS-01/02, panel_integrity) are package software. The cluster builds, public-data gates and calibration/holdout rows are experiment.
+PLAN.md	L3517	"REF-06 (exception in ""WP4B — Full-genome competition and anell"")"	experiment	cat42b to cat42d D-list swap: SLURM jobs, public-dataset regressions (HPV16/EBV/HSV-1/covid), gate results
+PLAN.md	L3591	"REF-07 (exception in ""WP4B — Full-genome competition and anell"")"	both	Host-homology table, minimap2 findings and F-023 are experiment (scripts/ref07_* move), but the tail documents package build_receipt/resource accounting in build_reference.py
+PLAN.md	L3667	"REF-08 (exception in ""WP4B — Full-genome competition and anell"")"	experiment	Threshold calibration on preregistered training controls; frozen thresholds.json
+PLAN.md	L3669	"REF-09 (exception in ""WP4B — Full-genome competition and anell"")"	experiment	Holdout proof with planted human-homology reads (tier code itself is TIER-01)
+PLAN.md	L3727	"REF-10 (exception in ""WP4B — Full-genome competition and anell"")"	experiment	Needs an orthogonally confirmed positive sample for sensitivity claims; the screening_only code behaviour is already shipped
+PLAN.md	3804-3840	WP4B2 — Host-filtering design and reporting	package	HOST-01..03 are host_filter.py parameters, audit columns and pct_infected_comparable (software, docs/cli_reference.md).
+PLAN.md	L3828	"HOST-04 (exception in ""WP4B2 — Host-filtering design and report"")"	both	Package part: docs/cli_reference.md host-control documentation. Experiment part: measured three-way covid comparison and retraction of the BENCHMARK_COMPARISON.md claim (that file goes to repro)
+PLAN.md	L3837	"HOST-05 (exception in ""WP4B2 — Host-filtering design and report"")"	experiment	Open measurement of sensitivity cost; blocks MS-02/CMP-01..03 and D15/D16 endpoints
+.living/decisions.md		2026-07-06 cDNA-only host reference false-positive viral signal 	experiment	STAR read-origin test on a specific sample/job; analysis finding
+.living/decisions.md		2026-07-06 samtools view exits 1 on duplicate BAM header entry 	experiment	gotcha in a benchmark/read-origin BAM workflow, not package code
+.living/decisions.md		2026-07-06 covid_viralscan/results/ gitignored 	experiment	covid_viralscan dataset results, moves with experiments
+.living/decisions.md		2026-07-06 summarize_survey.py --cellranger-outs skipped 	experiment	survey summary script (summarize_* moves to repro)
+.living/decisions.md		2026-07-01 64 GB references/ untracked but not gitignored 	both	data-dir hazard (experiment) but motivates the package pre-commit size hook
+.living/decisions.md		2026-07-02 Controlling for composite covariate containing tested feature is circular 	experiment	statistical analysis lesson
+.living/decisions.md		2026-07-02 Mitochondrial genes need %mito control 	experiment	analysis lesson
+.living/decisions.md		2026-07-01 Raw-count positivity thresholds confound with depth 	experiment	analysis/statistics lesson on datasets
+.living/decisions.md		2026-07-01 HVG selection before CV split leaks 	experiment	ML/analysis leakage lesson
+.living/decisions.md		2026-07-01 ACTIVE_CONVENTIONS.yaml malformed after install_convention.py 	package	repo tooling (mycelium convention packs) gotcha, stays with CLAUDE.md/.living layer
+.living/decisions.md		2026-07-02 kb ref / kallisto index FASTA-vs-GTF contracts 	package	kb ref behaviour that the package build-ref/reference code must respect
+.living/decisions.md		2026-07-02 bustools correct needs uncompressed whitelist 	package	kb/bustools pipeline gotcha in the Snakefile/CLI
+.living/decisions.md		2026-07-02 Two panel dirs, bulk scan defaulted to incomplete one 	package	panel/reference directory defaults in package/scripts
+.living/decisions.md		2026-07-02 Wrong 10x whitelist yields all-empty matrix 	package	CLI/pipeline whitelist validation gotcha
+.living/decisions.md		2026-07-03 Verify agent-authored plans against HEAD 	both	general dev-process lesson spanning package and experiment plans
+.living/decisions.md		2026-07-03 reference-strategy 2x2 benchmark: root causes of 8 failed rows 	experiment	benchmark failure analysis
+.living/decisions.md		2026-07-03 Scratch cleanup deleted kallisto index; kallisto version gotcha 	both	cluster scratch incident (experiment) plus kallisto index version compatibility (package)
+.living/decisions.md		2026-07-04 Verify-by-artifact inverted reference-strategy benchmark 	experiment	benchmark verification lesson
+.living/decisions.md		2026-07-04 conda activate python shadowing in SLURM 	experiment	cluster/SLURM environment gotcha
+.living/decisions.md		2026-07-04 ViralScan >> STARsolo headline was GTF-annotation artifact 	experiment	benchmark claim correction
+.living/decisions.md		2026-07-15 Coverage breadth is the decisive per-run quality gate 	experiment	analysis QC lesson on runs
+.living/decisions.md		2026-07-15 Undocumented remediation jobs produce unreproducible results 	experiment	cluster ops/provenance lesson
+.living/decisions.md		2026-07-15 Internal impossible-detection controls calibrate noise floor 	experiment	validation methodology on datasets
+.living/decisions.md		2026-07-04 Multimap main-pass speedup: EC-precompute wins, CSR gather backfires 	package	perf of multimap.py
+.living/decisions.md		2026-07-05 Scalar CSR lookups dominate build_multimap_layers 	package	multimap.py profiling
+.living/decisions.md		2026-07-04 Multimap profiler-guided direct CSR access ~3x 	package	multimap.py perf
+.living/decisions.md		2026-07-06 Archive and HPC ViralScan paths same inode 	experiment	cluster filesystem gotcha
+.living/decisions.md		2026-07-06 diag_viral_read_origin.sh pre-built combined index 	experiment	SLURM diagnostic script
+.living/decisions.md		2026-07-05 mycelium Stop-hook only checks mtimes 	package	repo dev-tooling hook behaviour (CLAUDE.md layer)
+.living/decisions.md		2026-07-06 Synthetic depth-proxy test: use 'not robust' 	experiment	validation wording/analysis
+.living/decisions.md		2026-07-06 Per-cell EM regresses HHV-6A/6B disambiguation 	both	algorithm behaviour in package EM code, found via benchmark data
+.living/decisions.md		2026-07-07 quant redo reuses cached outputs; re-run detection tail 	package	Snakemake/CLI caching behaviour
+.living/decisions.md		2026-07-15 (untitled) medium partition restrictmedium QOS MaxCPUsPU=4 	experiment	SLURM cluster usage
+.living/decisions.md		2026-07-15 (untitled) Anellovirus loci are EVEs not TEs 	experiment	biological analysis conclusion
+.living/decisions.md		2026-07-15 (untitled) install skill pack manually when install_convention.py missing 	package	repo tooling/convention packs
+.living/decisions.md		2026-07-15 (untitled) CellTypist enrichment of host-filtered anello reads, EVE artifact 	experiment	covid PBMC analysis
+.living/decisions.md		2026-07-17 (untitled) EVE accession screen job 25237061 	experiment	SLURM job analysis result
+.living/decisions.md		2026-07-17 (untitled) undeclared anndata dependency in pyproject 	package	packaging/CI dependency gotcha
+.living/decisions.md		Tutorials must be verified against executed code AND live CLI parser 	package	docs/vignettes correctness
+.living/decisions.md		Reorganize sprawling repo with gitignored symlink view 	package	curation view (becomes curation/panel, D10) repo layout lesson
+.living/decisions.md		Committed profiling artifacts go stale 	package	perf profiling of package code
+.living/decisions.md		Collapsing linear-in-weight records exact speedup; measure duplication on real data 	package	algorithmic perf in package code
+.living/decisions.md		A 'monitor to terminal state' instruction is a claim to verify 	both	agent/cluster operations process lesson
+.living/decisions.md		Verify a pinned DOI resolves 	experiment	manuscript/citation governance
+.living/decisions.md		A schema shipped in two places will drift 	package	schemas/v3 duplicated in src and top level; relates to validator defaults
+.living/decisions.md		An integrity rail is only as good as its coverage list 	experiment	v3 governance/artifact inventory validators (move to repro)
+.living/decisions.md		Securing a layer moves the attack one layer down 	experiment	governance review lesson
+.living/decisions.md		Adversarial attention goes where you point it 	experiment	review process for v3 governance
+.living/decisions.md		Fixing by addition leaves the contradiction 	experiment	protocol/claims editing lesson
+.living/decisions.md		One claim spread across three fields corrected three times 	experiment	claims registry lesson
+.living/decisions.md		Fix the reason a defect class recurs 	experiment	governance review lesson
+.living/decisions.md		A frozen constant no call site passes is decorative 	both	protocol (repro) vs code side (package) contract
+.living/decisions.md		Enforcement rail binding only final state lets draft drift 	experiment	governance rails/ledger
+.living/decisions.md		Two rules writing one file with mode w is a race 	package	Snakefile DAG bug
+.living/decisions.md		A test that has never failed has not been tested 	package	test-writing practice
+.living/decisions.md		I shipped a regression from an unverified agent finding 	package	code change/testing process lesson
+.living/decisions.md		2026-09-27 Case-insensitive marker match inflated EBV latent headline 2.5x 	experiment	analysis headline correction
+.living/decisions.md		2026-09-27 Unmapped 5' scRNA reads are TSO/homopolymer junk 	both	data finding that informs the package read_filter
+.living/decisions.md		2026-09-27 Self-vs-self positive control cannot catch strand bug 	package	k-mer metric test design
+.living/decisions.md		2026-09-27 Dereplication thresholds set sensitivity ceiling 	both	reference panel build (package) measured on benchmarks
+.living/decisions.md		2026-09-29 Snakemake unconsumed extra output never triggers rerun 	package	Snakemake gotcha
+.living/decisions.md		2026-09-30 Agent worktrees can start from stale base 	package	git/dev workflow
+.living/decisions.md		2026-09-30 Worktree test runs miss untracked data 	package	test-environment gotcha
+.living/decisions.md		2026-09-30 Structural guards miss third-party index builds 	package	index-measurement guard in code
+.living/decisions.md		2026-09-30 Snakemake ignores missing intermediate input 	package	Snakemake gotcha
+.living/decisions.md		2026-09-30 Self-named t2g rows are viral records 	package	t2g handling in reference build
+.living/decisions.md		2026-09-30 ENA serves only R2 for many 10x runs 	experiment	public data download
+.living/decisions.md		2026-10-01 Panel rebuild renames gene IDs; old GTF mismatch 	both	shipped panel behaviour affecting stored experiment run GTFs
+.living/decisions.md		2026-10-01 Anellovirus gene models stop at ORF ends 	package	shipped anello GTF models (src data)
+.living/decisions.md		2026-10-03 Appending R to PATH loses to conda Rscript 	experiment	cluster env gotcha
+.living/decisions.md		2026-10-03 Low-complexity N-mask can raise kallisto k-mer count 	package	reference-build behaviour
+.living/decisions.md		2026-10-03 Worktree agents can start from default branch 	package	git/dev workflow
+.living/decisions.md		2026-10-03 Stop hook sha256s every untracked file 	package	repo hook tooling
+.living/decisions.md		2026-10-03 Test env and three-field inventory re-pin 	both	test env (package) plus governance inventory pins (repro)
+.living/decisions.md		2026-10-03 Stop hook charges read-only session for concurrent edits 	package	repo hook tooling
+.living/decisions.md		2026-10-03 A published contigs FASTA can be ORF1 only 	experiment	public reference data finding
+.living/decisions.md		2026-10-03 STARsolo discards homopolymer UMIs 	experiment	STARsolo comparator behaviour
+.living/decisions.md		2026-10-03 kb uses its own bundled kallisto; foreign index spins forever 	package	kb runtime behaviour
+.living/decisions.md		2026-10-03 Snakemake preamble makes __future__ import a SyntaxError 	package	Snakemake script module gotcha (also in CLAUDE.md Style)
+.living/decisions.md		2026-10-03 Pipeline cdna.fa is host+viral, cannot seed negative control 	experiment	validation control design
+.living/decisions.md		2026-10-04 NM=0 without aligned fraction is not evidence 	experiment	read-origin analysis lesson
+.living/decisions.md		2026-10-04 3'-biased chemistry makes artefact and signal alike 	experiment	analysis lesson
+.living/decisions.md		2026-10-04 SAM stores SEQ reverse-complemented 	experiment	read-side measures in analysis scripts
+.living/decisions.md		2026-10-04 Empty diagnostic column is not measured, never clean 	experiment	analysis diagnostics reporting
+.living/decisions.md		2026-10-04 Tests reading git-ignored data fail on clean checkout 	package	test hygiene
+.living/decisions.md		2026-10-05 Frozen protocol can contradict itself 	experiment	v3 validation protocol
+.living/decisions.md		2026-10-05 Deterministic generators leak blinding 	both	truth-panel generator stays in package, blinding protocol in repro
+.living/decisions.md		2026-10-05 Genome D-list removes host-derived viral background 	experiment	analysis result
+.living/decisions.md		2026-10-05 Align small panel, stream big genome 	experiment	benchmark/analysis method
+.living/decisions.md		2026-10-05 Amending v3 protocol touches five pinned layers 	experiment	governance
+.living/decisions.md		2026-10-05 Governance re-pin touching claims/registry.json needs second re-pin 	experiment	governance
+.living/decisions.md		2026-10-05 Switching to stale local main deletes gitignored bundled GTFs 	package	bundled GTF data in src/viralscan/data / git workflow
+.living/decisions.md		2026-10-05 SLURM downloads in repo tree block Stop hook 	experiment	cluster ops
+.living/decisions.md		2026-10-06 kb count is a third of a combined full-depth run 	experiment	run cost/benchmark
+.living/decisions.md		2026-10-06 em-cell dense theta OOMs at full depth 	both	em-cell code in package; sized by benchmark grid
+.living/decisions.md		2026-10-06 Stop hook flagged prompt.MD on question-only session 	package	repo hook tooling
+.living/decisions.md		2026-10-06 Old overlapping-window capture formula overstated recall 	both	fragment_capture code (package) and SENS-CAL claims (repro)
+.living/decisions.md		2026-10-08 viral_ref_final/build/viral.fa not in checkout; synthetic-test pitfall 	package	test fixtures
+.living/decisions.md		2026-10-09 build_bundled_panel_ref reconciliation offline 	package	script stays in package
+.living/decisions.md		2026-10-11 Overlap-group transitive closure chains through short exons 	package	panel/GTF overlap logic
+.living/decisions.md		2026-10-11 Exon overlap is not pseudoalignment ambiguity 	package	multimap/overlap-group logic
+.living/decisions.md		2026-10-11 Check interrupted agent worktrees before PLAN row 	package	PLAN.md workflow
+.living/decisions.md		2026-10-11 Stop hook re-blocks while background agents active 	package	repo hook tooling
+.living/decisions.md		2026-10-12 anndata 0.13 layers iteration; BooleanOptionalAction help <3.11 	package	Python/test compatibility
+.living/decisions.md		2026-10-18 Perf wave 1 (B24/B23/B04/B06) combined gate; pins follow source 	package	perf changes in package code
+.living/decisions.md		2026-10-18 A tracker existing in three checkouts is not a tracker 	package	PLAN.md workflow
+.living/decisions.md		2026-10-18 Pattern pkill on shared account kills other sessions 	experiment	cluster ops
+.living/decisions.md		2026-10-18 Rebase fuses two features into crash; exactness grid coverage 	package	code/test lesson
+.living/decisions.md		2026-10-18 CI mypy passes locally, fails in CI (numpy stubs) 	package	CI/lint gotcha
+.living/decisions.md		2026-10-18 Perf wave 2: unused eager read; splitlines not newline iterator 	package	perf code
+.living/decisions.md		2026-10-18 Perf wave 2 B18: fused reducer wash; tracemalloc invents regressions 	package	perf code
+.living/decisions.md		2026-10-18 Perf wave 2 C00: two checkouts cannot be byte-compared 	package	perf exactness testing
+PLAN.md	7074-7095	WP7 — Score, audit, and freeze results	experiment	RES-01..05 and G5 score/freeze truth-panel and public-data results bundle (analysis/v3_results_bundle).
+PLAN.md	7096-7100	WP8 — header	both	Section intro; docs (package) plus claim evidence (experiment).
+PLAN.md	7101-7177	WP8A — User documentation	package	DOC-01..05: README/CLI/output docs, Sphinx, quickstart execution; all package docs. DOC-05 notes reference docs/quickstart.md, tests/data/evidence_tiny.
+PLAN.md	7178-7282	WP8B — Vignettes and claims (incl. G6a gate text)	package	DOC-06/07 are shipped vignettes and CI notebooks (docs/vignettes stay). DOC-09/10 are claim-registry/claims governance which D7 moves to repro. DOC-08 spans both.
+PLAN.md	L7223	"DOC-08 (exception in ""WP8B — Vignettes and claims (incl. G6a g"")"	both	docs/workflow_comparison.md and its test stay-able, but gen_workflow_comparison.py and protocol.yaml workflow_matrix move to repro (SPLIT_TRACKER s5.2)
+PLAN.md	L7240	"DOC-09 (exception in ""WP8B — Vignettes and claims (incl. G6a g"")"	experiment	claim-registry validator/coverage; claims/ moves to repro (D7)
+PLAN.md	L7249	"DOC-10 (exception in ""WP8B — Vignettes and claims (incl. G6a g"")"	experiment	validated_v3 artifact claim resolution; claims/registry.json and inventory move (D7)
+PLAN.md	7283-7309	WP9 — Regenerate and review the manuscript	experiment	MS-01..05 and G6: manuscript generated from frozen results bundle; manuscript_draft.md moves to repro.
+PLAN.md	7310-7331	WP10 — Publish and test 3.0.0rc1	package	Release candidate packaging, OCI/SIF, TestPyPI, external testers, G7.
+PLAN.md	7332-7354	WP11 — Publish stable 3.0.0 and submit	package	Stable release, Bioconda, CFF; STB-01/05 touch scientific bundles/manuscript.
+PLAN.md	L7337	"STB-01 (exception in ""WP11 — Publish stable 3.0.0 and submit"")"	experiment	freezes truth-panel/comparator/manuscript bundles
+PLAN.md	L7339	"STB-02 (exception in ""WP11 — Publish stable 3.0.0 and submit"")"	both	software DOI (package) and benchmark/archive DOI (repro)
+PLAN.md	L7347	"STB-05 (exception in ""WP11 — Publish stable 3.0.0 and submit"")"	both	archives software AND benchmark artifacts, then submits manuscript
+PLAN.md	7355-7384	WP12 — Observe and maintain	package	Release policy, reference maintenance, post-release monitoring.
+PLAN.md	L7382	"OPS-05 (exception in ""WP12 — Observe and maintain"")"	experiment	scheduled independent truth-panel refreshes
+PLAN.md	7385-7399	Gate dashboard	both	G0-G2, G6a, G7, G8 are package gates; G3-G6 (preregistration, references/science, manuscript) are experiment gates. One table, copy to both (D13).
+PLAN.md	7400-7412	External inputs and authority	both	Mix: REL-15/RC-02/RC-04/REF-11 package; MS-04, STB-02, REF-10 experiment/both.
+PLAN.md	7413-7421	Stop rules	both	Counting/ambiguity rules bind the software; tagging/claim rules bind release and manuscript.
+PLAN.md	7422-7828	Evidence log	experiment	Dated per-item evidence lines; most are validation/governance/Track A runs. Software, release and shipped-panel entries differ. Per D15/D13 an entry-level split is optional; if split, package gets the exceptions.
+PLAN.md	L7432	"BASE-04 (exception in ""Evidence log"")"	package	integration test tests/integration/test_exact_lineage.py
+PLAN.md	L7435	"BASE-05 (exception in ""Evidence log"")"	package	full non-network suite count
+PLAN.md	L7437	"SW-01 (exception in ""Evidence log"")"	package	wheel/sdist schemas
+PLAN.md	L7440	"REL-04 (exception in ""Evidence log"")"	package	isolated wheel/sdist build
+PLAN.md	L7443	"DOC-01 (exception in ""Evidence log"")"	package	DOC-01..04 public docs (also touches tracked manuscript)
+PLAN.md	L7591	"GOV-04 (exception in ""Evidence log"")"	package	config/public_ship_scope.json stays in package
+PLAN.md	L7530	"REF-11 (exception in ""Evidence log"")"	both	Zenodo panel archive pin: package data release plus validation protocol
+PLAN.md	L7605	"G0 (exception in ""Evidence log"")"	both	default suite reconciliation; governance gate spans both
+PLAN.md	L7548	"review-2026-07-27 (exception in ""Evidence log"")"	package	six-agent code review of codex/viralscan-v3 vs main
+PLAN.md	L7615	"housekeeping-2026-09-27 (exception in ""Evidence log"")"	package	WP4B2-WP4F squash into 3379b7c
+PLAN.md	L7655	"SIMP-01 (exception in ""Evidence log"")"	package	dead code removed from src
+PLAN.md	L7661	"SIMP-02 (exception in ""Evidence log"")"	package	src helpers collapsed
+PLAN.md	L7681	"SIMP-03 (exception in ""Evidence log"")"	package	dependencies pyfiglet/seaborn removed
+PLAN.md	L7709	"WP1C-followup (exception in ""Evidence log"")"	package	CI mypy regression follow-up
+PLAN.md	L7729	"WP1C-final-gate (exception in ""Evidence log"")"	package	WP1C final gate at ff86c3d
+PLAN.md	L7737	"CAT-11 (exception in ""Evidence log"")"	both	script measure_kmer_capture moves, but capture metric informs shipped panel docs; correction at 7760 same
+PLAN.md	L7747	"CAT-02/CAT-03 (exception in ""Evidence log"")"	package	seed catalogue and catalogue-driven naming (src virus_catalog)
+PLAN.md	L7754	"CAT-09 (exception in ""Evidence log"")"	package	16 viruses added to shipped panel
+PLAN.md	L7781	"CAT-12 (exception in ""Evidence log"")"	both	anellovirus panel sensitivity provenance: shipped panel plus validation claim
+PLAN.md	L7820	"CLI-17 (exception in ""Evidence log"")"	package	multimap options CLI (stray row after the log)
+PLAN.md	7829-7875	VR pilot — read cleanup and transcript reconstruction (2026-10-14)	experiment	Exploratory pilot on real EBV/HPV16 subsets, analysis/viral_read_cleanup prototype; no package defaults changed.
+PLAN.md	L7852	"AUD3-07 (exception in ""VR pilot — read cleanup and transcript r"")"	package	counting-contract docs and pinning tests for em-global
+PLAN.md	L7865	"PERF-B16 (exception in ""VR pilot — read cleanup and transcript r"")"	package	SAM handoff in src (memory benefit), accepted against d056986; performance evidence is borderline both
+PLAN.md	7876-7883	Reviewed roadmap implementation — 2026-10-20 (header)	package	Candidate-review, coverage plots, denominator fixes in src; protocol untouched.
+PLAN.md	7884-7926	Acceptance ledger	package	A1-G2 acceptance rows map to unit tests (PASS). G1/G2 assert protocol draft and claims unchanged (software-side guard).
+PLAN.md	7927-7953	Validation and qualification	package	Test counts, ruff/mypy, Sphinx, coverage benchmark on synthetic fixtures.
+PLAN.md	7954-7972	Resolved specification discrepancies	package	Spec decisions for GTF/coverage/collision null.
+PLAN.md	7973-8168	Kraken2 taxonomic discovery (DISC)	package	viralscan discover: src/viralscan/discovery.py, tests, docs/discovery.md.
+PLAN.md	L8046	"DISC-CMP (exception in ""Kraken2 taxonomic discovery (DISC)"")"	experiment	analysis/discovery_mg2sc_comparison comparison vs mg2sc/Cellsnake
+PLAN.md	L8118	"DISC-R10 (exception in ""Kraken2 taxonomic discovery (DISC)"")"	experiment	EBV SRR12682296 Slurm array run on PlusPF-16
+PLAN.md	L8142	"DISC-12 (exception in ""Kraken2 taxonomic discovery (DISC)"")"	experiment	frozen benchmark protocol linked to HOST-05/SW-07
+PLAN.md	3841-3949	WP4C — Detection sensitivity and negative-result claims	package	Sensitivity/LOD/positive-control code (sensitivity.py, detection.py, runconfig). Soft keep_refs (comments only, no test reads PLAN.md for them): SENS-CORR-01 and SENS-CORR-02 are cited from src/viralscan/runconfig.py:202, src/viralscan/sensitivity.py:187, src/viralscan/scripts/detection.py:1271 and :1304, tests/test_sensitivity.py:179 and :626, tests/test_positive_control.py:94 and :206, and tests/_exact_control.py:1. No hard test dependency on this section.
+PLAN.md	L3877	"SENS-05 (exception in ""WP4C — Detection sensitivity and negativ"")"	experiment	Calibration by molecule-level downsampling of the bundled EBV LCL run; a measurement, not software.
+PLAN.md	L3883	"SENS-06 (exception in ""WP4C — Detection sensitivity and negativ"")"	both	Closing it needs either a spike-in recipe in docs/vignettes (package) or VAL-01 generator and probit LOD95 (experiment).
+PLAN.md	L3943	"SENS-CAL-01 (exception in ""WP4C — Detection sensitivity and negativ"")"	experiment	Empirical capture calibration with kb count on a real panel plus host index; feeds VAL-RA. Cited only from a comment at scripts/sens07_planted_sensitivity.py:40 (moves) and tests/test_val_ra_guard.py:4 (a docstring/comment).
+PLAN.md	L3955	"VAL-RA-DECISION-01 (exception in ""WP4C — Detection sensitivity and negativ"")"	experiment	Held-out partition policy for the v3 validation protocol; a governance decision. Cited only from scripts/sens07_planted_sensitivity.py:31 (moves).
+PLAN.md	3950-4075	WP4D — Gene-programme inference, layer 2	package	gene_programs.py, gene_programs.tsv, the Snakemake rule and CLI. Tests and docs cite PROG-08 (tests/test_gene_programs.py:70 and :586, docs/output_reference.md:636) and PROG-07 (src/viralscan/gene_programs.py:32, :57 and :142, docs/output_reference.md:541 and :545) only as comments or prose. A bare PROG-07 reference in package docs would dangle if the row moved, so keep a one-line pointer.
+PLAN.md	L3996	"PROG-07 (exception in ""WP4D — Gene-programme inference, layer 2"")"	both	The row is a measured result on the EBV LCL run (experiment evidence), but the package cites it from gene_programs.py:32 and docs/output_reference.md:541,545. Copy it to both repos.
+PLAN.md	4076-4215	WP4E — Named HPV ORFs for the oncogene-versus-capsid contrast	package	hpv_genes.tsv, build_hpv_reference, the ncbi_fetch GenBank fix and --emit-reference. src/viralscan/hpv_genes.py:48 tells readers to check PLAN.md before quoting a per-type number, so HPV-10 and HPV-11 must stay reachable from the package (HPV-10 is a docs limit closed in the package; HPV-11 is the open measurement).
+PLAN.md	L4201	"HPV-11 (exception in ""WP4E — Named HPV ORFs for the oncogene-v"")"	experiment	Rebuild the real index and measure HPV cross-mapping; it is the same measurement as CAT-08 leave-one-out. Keep a pointer in the package because src/viralscan/hpv_genes.py:48 refers to PLAN.md.
+PLAN.md	4216-4435	WP4F — Real gene structure for the Anelloviridae panel (incl. ### Root cause and ### Measured CDS coverage)	package	ncbi_fetch.py GenBank caching, anellovirus_genes.tsv and extras/build_anellovirus_genes.py. The two ### subsections are code root-cause analysis and panel CDS census, which belong to the shipped-panel design and are package. ANELLO-12 is cited at scripts/fix_thin_gtfs.py:7 (a comment).
+PLAN.md	L4391	"ANELLO-12 (exception in ""WP4F — Real gene structure for the Anell"")"	both	Records the fix (package) and the limit that genotype-level load is not defensible (a claim limit for the manuscript). Cited from scripts/fix_thin_gtfs.py:7.
+PLAN.md	L4412	"ANELLO-13 (exception in ""WP4F — Real gene structure for the Anell"")"	experiment	Rebuild the reference and re-run the COVID scRNA-seq sample to measure the 99.8 percent single-bucket artefact.
+PLAN.md	4436-4677	WP4G — Anellovirus detection you can trust	package	anello_align / STARsolo branch, claim_scope, evidence replay and virus_identity code; the default-quantification-reference decision. The code cites ANDET-01..05 and ANDET-09 widely, always as comments or docstrings (for example src/viralscan/virus_grouping.py:331, src/viralscan/scripts/detection.py:917 and :1889, src/viralscan/anello_align.py:652, src/viralscan/Snakefile:98 and :344, src/viralscan/runconfig.py:213 and :221, tests/test_snakefile_dag.py:436). A bare id with no row would dangle in those comments, so the package keeps its own copy of the package rows.
+PLAN.md	L4578	"ANDET-07 (exception in ""WP4G — Anellovirus detection you can tru"")"	both	Default-reference switch is a package change, but it is gated on ANDET-08 LOD95 evidence and a protocol.yaml DEV deviation record (experiment/governance).
+PLAN.md	L4583	"ANDET-08 (exception in ""WP4G — Anellovirus detection you can tru"")"	experiment	Genus-level LOD95 by planting held-out genomes into a pinned PBMC background (VAL-04, probit fit); a validation study.
+PLAN.md	L4608	"ANDET-09e (exception in ""WP4G — Anellovirus detection you can tru"")"	experiment	Acceptance run with SLURM jobs 25696086, 25696105 and 25696114 on the x213 sample and 8 Modha genomes.
+PLAN.md	L4645	"ANDET-09f (exception in ""WP4G — Anellovirus detection you can tru"")"	experiment	Filter-threshold sweep against the held-out plant on viral_ref_cat42b/runs_anello_plant; a benchmark.
+PLAN.md	4678-4776	WP4H — Comprehensive human-virus catalogue (main section, CAT-01..CAT-08)	package	Catalogue, build-ref GTF handling and manifest, gene naming: all shipped data and CLI. Soft refs: CAT-01 at src/viralscan/scripts/build_reference.py:1930, :2295, :2318 and :2325 and tests/test_virus_catalog.py:120; CAT-03 at src/viralscan/virus_catalog.py:3 and tests/test_virus_catalog.py:1; CAT-06 at src/viralscan/scripts/analysis.py:100 and :122, src/viralscan/virus_identity.py:470 and :562, tests/test_build_manifest.py:91, and tests/integration/test_tiny_end_to_end.py:25. CAT-05 (duplicate row) is covered in the CAT-05 entry in the external-asset subsection below.
+PLAN.md	L4773	"CAT-08 (exception in ""WP4H — Comprehensive human-virus catalog"")"	experiment	Leave-one-out confusability measurement per family; also the valid HPV-11 test.
+PLAN.md	4777-5155	WP4H expansion — breadth and measured diversity	package	Reference-panel breadth, size gate, PANEL-01 promotion pipeline, gate software (reference_gates). Bulk is package; CAT-12 (greedy isolate counts against a measured bar) is experiment, as its own text says. Soft refs: PANEL-01 at tests/test_panel_candidates.py:1, tests/test_panel_promote.py:1, tests/test_panel_pool.py:1, tests/test_panel_kmer_sharing.py:1, scripts/panel_candidates.py:2, scripts/panel_promote.py:2, scripts/panel_pool.py:2, scripts/panel_kmer_sharing.py:2, scripts/model_nocds_gtfs.py:2, docs/panel_integrity.md:83 (scripts/panel_census.py:2 moves). Also CAT-09 at tests/test_virus_catalog.py:180, CAT-11 at scripts/measure_kmer_capture.py:4 (moves), CAT-13 at scripts/check_dist_size.py:2 and :10, CAT-14/15/16 at src/viralscan/reference_gates.py:13-16, :128, :169, :213, :227, :242, :274, :316, :368 and tests/test_reference_gates_catalogue.py:1. CAT-19 (a [~] row in the 4934-5155 range, line 5237 is in the next subsection) is also cited by reference_gates.py:12 and :37.
+PLAN.md	L4905	"CAT-12 (exception in ""WP4H expansion — breadth and measured di"")"	experiment	Its own text says 'an experiment, deferred under the package plan'; measured leave-one-out capture baseline.
+PLAN.md	L5119	"CAT-15 (exception in ""WP4H expansion — breadth and measured di"")"	both	The gate software (reference_gates programmes) is package; the EBV LCL SRR12682296 re-run reproducing PROG-07 numbers is an experiment.
+PLAN.md	5156-5352	WP4H expansion correction and additions	package	Low-complexity masking (CAT-17), kb-count multimapping policy and reference_gates (CAT-19), and reference-content decisions (CAT-18, CAT-20, CAT-21 ship NC_045512.2 only, CAT-22). Soft refs: CAT-17 at scripts/build_bundled_panel_ref.py:89, :104, :145 and :385, tests/test_build_reference.py:40, tests/integration/test_anellovirus_chain.py:47; CAT-19 at src/viralscan/reference_gates.py:12 and :37, tests/test_cat19_tonsil02_contracts.py:16, tests/test_reference_gates_inspect.py:1, scripts/build_bundled_panel_ref.py:443; CAT-20 at scripts/plant_anello_10x.py:218 (moves).
+PLAN.md	L5317	"CAT-23 (exception in ""WP4H expansion correction and additions"")"	experiment	Serratus reactivation panel as an acceptance criterion, a benchmark comparison.
+PLAN.md	L5340	"CAT-24 (exception in ""WP4H expansion correction and additions"")"	both	Expected-negative arithmetic is reporting policy for package output, but its evidence is the measured EBV LCL result and anellovirus screening_only claim scope (manuscript).
+PLAN.md	5353-5528	WP4H external-asset adoption and adversarial corrections	package	CAT-05 duplicate guard, CAT-25 pinned environment.yml, CAT-27/28/29 gene nomenclature and HSV-1 LAT recut (shipped panel). Two rows are experiment/claim work. CAT-05 is cited by tests/test_index_reconciliation.py:621,627,640 and tests/test_anellovirus_reference.py:106,146 as comments or messages only; tests/test_index_reconciliation.py:645-648 reads PLAN.md for CAT-31 (line 876, outside this range), not for any row in 3841-5528. CAT-30 is quoted by docs/notices/CAT-30_retraction_DRAFT.md, which itself moves to repro.
+PLAN.md	L5433	"CAT-26 (exception in ""WP4H external-asset adoption and adversa"")"	experiment	Freeze the current reference so the EBV and HIV control arms stay comparable; reference-hash and arm management.
+PLAN.md	L5511	"CAT-30 (exception in ""WP4H external-asset adoption and adversa"")"	experiment	Retract the covid Alphatorquevirus claim in published covid_viralscan results; manuscript and claim evidence.
+PLAN.md	5529-5731	WP4I — Complete latent/lytic state calling	package	gene_programs / catalogue software (PROG-10..14, 17, 19); src, tests and shipped gene_programs.tsv stay. Only real-data measurement/validation rows are experiment.
+PLAN.md	L5700	"PROG-15 (exception in ""WP4I — Complete latent/lytic state calli"")"	experiment	measure EBV LCL reads outside annotated exons and strandedness before any code
+PLAN.md	L5711	"PROG-18 (exception in ""WP4I — Complete latent/lytic state calli"")"	experiment	validate KSHV latent call on a public PEL/KS dataset
+PLAN.md	L5729	"PROG-16 (exception in ""WP4I — Complete latent/lytic state calli"")"	experiment	lytic acceptance test on public GSE190558 / SRR8315713 runs
+PLAN.md	5732-5857	WP4J — SFL tonsil TTV and HPV screen	experiment	analysis of one specific library (SFL tonsil CITE-seq; BAM screen, minimap2, donor attribution, F-010 results). TONSIL-02 is the package-side native 5' support.
+PLAN.md	L5835	"TONSIL-02 (exception in ""WP4J — SFL tonsil TTV and HPV screen"")"	package	--strand/-w/-x support in viralscan itself; contracts pinned by tests/test_cat19_tonsil02_contracts.py (the pilot-measurement bullets and DSR-12 cross-ref are experiment narrative inside the row)
+PLAN.md	5858-6048	WP4K — Catalogue↔index reconciliation and targeted reference adds	package	reconciliation guard, EBV type 2, HPV expansion, GTF cache stamp, thin-GTF fixes, kallisto inspect gate, taxonomy rollup: src/scripts/data that stay. CAT-35 is a research note feeding package design, kept with the section.
+PLAN.md	6049-6140	WP4L — Audit 2026-10 findings	package	software fixes to src (detection, gene_programs, umap, hostresponse, run_safety, reference_strategy) with tests that stay. AUD-12 mixes package design with experiment-side design.
+PLAN.md	L6085	"AUD-12 (exception in ""WP4L — Audit 2026-10 findings"")"	both	M-01 strand fix and M-02/M-05 are package; M-03/M-04 ambient-control and real-data sens/spec design notes are experiment
+PLAN.md	6141-6152	WP4M — Longitudinal compiler (Track B, discovery study M7)	package	generic package-side tool scripts/longitudinal_compile.py; its test tests/test_longitudinal_compile.py is not in tests_move_set, so keep together. Caveat: scripts/longitudinal_compile.py is not in the script keep list of tracker 5.1; decide its home consistently with the test (move both or keep both). Spec lives in the separate discovery repo.
+PLAN.md	6153-6157	WP5 — Build and validate the truth panel (header)	package	truth-panel simulator stays as regression infra (D8)
+PLAN.md	6158-6249	WP5A — Generator	package	VAL-01/02/03/05 are generator code and tests (scripts/generate_truth_panel.py, tests) that stay per D8
+PLAN.md	L6236	"VAL-04 (exception in ""WP5A — Generator"")"	experiment	checksum-pinned public 10x PBMC presumed-negative control; public-data input, not software
+PLAN.md	6250-6321	WP5B — Scorer and tiny gate	package	VAL-06/07 scorer (v3_score, v3_partition, v3_lod) and tiny golden test stay (D8/D9)
+PLAN.md	L6285	"VAL-08 (exception in ""WP5B — Scorer and tiny gate"")"	both	local golden test (tests/integration/test_truth_panel_exact.py, scripts/val08_golden.py) is package; cluster golden receipt is experiment
+PLAN.md	L6305	"VAL-09 (exception in ""WP5B — Scorer and tiny gate"")"	both	generator/scorer version and golden hashes pinned in package tests; seed/protocol freeze is v3 governance (D7/D9)
+PLAN.md	L6315	"VAL-10 (exception in ""WP5B — Scorer and tiny gate"")"	experiment	full training/holdout panel cluster runs
+PLAN.md	6322-6327	WP6 — Run public positives and comparators (header)	experiment	public-data reruns and cross-tool comparators
+PLAN.md	6328-6339	WP6A — Public v3 reruns	experiment	RUN-01..05 public dataset reruns (HHV-6B, EBV, HSV-1, KSHV); no staying code reads them
+PLAN.md	6340-6428	WP6B — Harmonized workflow matrix	experiment	CMP-00..06 comparator runs vs STARsolo, Venus, Viral-Track, ViralScan 2.2.0; benchmark, not package code (CMP-06 included)
+PLAN.md	6429-7073	WP6C — Dataset run plan	experiment	per-dataset SLURM campaigns (DSR rounds, dossiers, evidence cards, SENS-07, discovery study). Rows that record shipped package code/features, with tests that stay, are exceptions. Package rows are interleaved with experiment rows, so a row-level split is needed.
+PLAN.md	L6445	"CHEM-01 (exception in ""WP6C — Dataset run plan"")"	package	check-chemistry, chemistry_check.py, --require-chemistry-sanity
+PLAN.md	L6460	"CHEM-02 (exception in ""WP6C — Dataset run plan"")"	package	tchem second-opinion integration, src/viralscan/tchem.py
+PLAN.md	L6529	"DSR-08 (exception in ""WP6C — Dataset run plan"")"	package	software identity stamped into run_manifest.json
+PLAN.md	L6559	"LOCK-02 (exception in ""WP6C — Dataset run plan"")"	package	generic schema + validator (Track B software only); tests/test_protocol_lock.py
+PLAN.md	L6574	"CAL-13 (exception in ""WP6C — Dataset run plan"")"	package	generic decoy-layer tool; tests/test_cal13_decoys.py
+PLAN.md	L6622	"DSR-14 (exception in ""WP6C — Dataset run plan"")"	package	evidence.py coverage_depth_points samtools fix (OOM job history is cluster narrative)
+PLAN.md	L6630	"DSR-15 (exception in ""WP6C — Dataset run plan"")"	package	cellcalling/detection/emptydrops twostep fix; round-1 numbers are experiment evidence
+PLAN.md	L6682	"DSR-17 (exception in ""WP6C — Dataset run plan"")"	package	evidence replay EC numbering fix
+PLAN.md	L6695	"ALIGN-PLOT-01 (exception in ""WP6C — Dataset run plan"")"	package	src/viralscan/competitive_plot.py, tests/test_competitive_plot.py
+PLAN.md	L6709	"VERDICT-01 (exception in ""WP6C — Dataset run plan"")"	both	molecule_verdict.py and its test are package; dsr02_verdicts/calibration are experiment
+PLAN.md	L6755	"CELLS-02 (exception in ""WP6C — Dataset run plan"")"	package	cellcalling._host_only_emptydrops, tests/test_cellcalling.py:266
+PLAN.md	L6789	"AUD3-09a (exception in ""WP6C — Dataset run plan"")"	package	input-robustness fixes in src, tests/test_aud3_09a_input_robustness.py
+PLAN.md	L6801	"CELLS-05 (exception in ""WP6C — Dataset run plan"")"	package	review fixes for PR #64 in cell-calling code
+PLAN.md	L6855	"ADJ-01 (exception in ""WP6C — Dataset run plan"")"	package	generic adjudicator scripts/adjudicate_candidates.py; tests/test_adjudicate_candidates.py stays (same home question as WP4M)
+PLAN.md	L6890	"LOCK01-PRE (exception in ""WP6C — Dataset run plan"")"	package	package prerequisites for LOCK-01 on branch codex/lock01-prereqs
+PLAN.md	L6990	"READS-01 (exception in ""WP6C — Dataset run plan"")"	package	viralscan.reads public API
+PLAN.md	L7008	"TSO-01 (exception in ""WP6C — Dataset run plan"")"	package	--read-filter tso-trim, scripts/read_filter.py, tests/test_read_filter.py (part b dsr_common_cells moves)
+PLAN.md	L7019	"DLIST-02 (exception in ""WP6C — Dataset run plan"")"	package	--host-capture rule, host_capture.py, tests/test_host_capture.py, tests/test_snakefile_dag.py:489
+PLAN.md	L7043	"EMC-01 (exception in ""WP6C — Dataset run plan"")"	package	multimapping sparse em-cell theta; tests/test_multimapping_properties.py:224 (cluster re-measure is experiment)
+PLAN.md	21-96	Next action: STAR host+virus, REVIEW-A..F, DISC, F027 (2026-10-21..23)	package	STAR-02/03/04, COVMAP, REVIEW and DISC rows are CLI and src features. The row text also cites analysis/star_confirm_acceptance and EBV validation runs.
+PLAN.md	L25	"F027-01 (exception in ""Next action: STAR host+virus, REVIEW-A.."")"	both	Finding F-027 (HHV-6B flank reads, GSM6416022, Lareau comparison) is a Track A result. It also drives a package reference-index decision. D15 keeps findings whole in both repos.
+PLAN.md	L59	"STAR-ACCEPT-01 (exception in ""Next action: STAR host+virus, REVIEW-A.."")"	experiment	Real-library acceptance on EBV GSM4796271 and R01_SOC4, Slurm jobs 25860995, 25861544 and 25864228, under analysis/star_confirm_acceptance.
+PLAN.md	97-131	COVMAP-01, VIG-RUN-01, PATHS-01, RESTREE-01, ANDET-09-STAR139	package	Coverage-map code, quickstart vignette run and the STAR exit-139 retry in star_run are package changes. The Track A hsv1 libraries are only the place the bug was found.
+PLAN.md	L119	"PATHS-01 (exception in ""COVMAP-01, VIG-RUN-01, PATHS-01, RESTREE"")"	both	Strips institutional paths from package docs and scripts. Its open scope covers .living, analysis and results, which are repro-side. D2 accepts /exports paths in the repro.
+PLAN.md	L120	"RESTREE-01 (exception in ""COVMAP-01, VIG-RUN-01, PATHS-01, RESTREE"")"	both	.gitignore rules for analysis/trackA_report, computational_bottlenecks and HANDOFF files, plus scripts/check_tracked_file_sizes.py and its test. It concerns research-tree hygiene, but the gitignore and the size check live in the package top level.
+PLAN.md	132-267	INV-REPIN-01, DOCS-*, CLI-UNIFY, OUT-LAYOUT, CLI-ORIG, SCAUTOQC-01	package	Docs site, CLI grammar, output layout and scautoqc are package software, docs and CI.
+PLAN.md	L133	"INV-REPIN-01 (exception in ""INV-REPIN-01, DOCS-*, CLI-UNIFY, OUT-LAY"")"	experiment	Re-pins rows of analysis/v3_artifact_inventory.tsv, which D7 moves to the repro. The row is governance bookkeeping.
+PLAN.md	268-312	PERF-PLAN-02 .. PERF-DOC-01 (performance, first and second wave)	both	Byte-identical performance code lands in src (B05/B07/B20, B23, B24, B04, B06, B25, B18). The exactness and benchmark evidence lives in analysis/computational_bottlenecks_2026-10-17. audit/triage.tsv already classes PERF-EXEC-01 as both.
+PLAN.md	L269	"PERF-PLAN-02 (exception in ""PERF-PLAN-02 .. PERF-DOC-01 (performance"")"	experiment	Plan doc docs/plans/2026-10-17-remaining-performance-candidates.md is in docs_move_set.
+PLAN.md	L307	"PERF-DOC-01 (exception in ""PERF-PLAN-02 .. PERF-DOC-01 (performance"")"	experiment	Reconciles the same plan doc and the C00 receipts. It changes no code.
+PLAN.md	313-390	AUD3 audit-fix integration rows, SE-01, host-only cell calling, UMI/Q137	package	AUD3-01a..08, DOC-API-01, EVID-UMI-01, EVID-Q137 and EVID-Q137-COVERAGE change detection, evidence, reference build and docs code.
+PLAN.md	L336	"SE-01 (exception in ""AUD3 audit-fix integration rows, SE-01, "")"	experiment	Super-expressor summary run on Track A libraries after arm N. It is a script plus run setup under viralscan_work/trackA_round1.
+PLAN.md	L379	"AUD3-GOV (exception in ""AUD3 audit-fix integration rows, SE-01, "")"	experiment	Governance re-pin of v3_artifact_inventory rows.
+PLAN.md	L382	"AUD3-G3-EVIDENCE (exception in ""AUD3 audit-fix integration rows, SE-01, "")"	experiment	Re-run of trackA_round1 and dsr_round2 evidence before G3 tier measure S.
+PLAN.md	391-465	Translated protein search arm P (AA-01..AA-07)	experiment	Exploratory arm under analysis/translated_search: PalmDB reference, kallisto --aa runs on public libraries, hit confirmation. The user parked it behind Track A. No keep_refs found.
+PLAN.md	466-495	SCI-05 review rounds, tier measures, LOCK-01, protocol and grill-4/3 notes (2026-10-12..14)	experiment	Pre-registration, protocol/deviation ledger, G3 sign-off procedure and Track A/B grill decisions.
+PLAN.md	L467	"TIER-02 paragraph (2026-10-14 tier-cutoff measures) (exception in ""SCI-05 review rounds, tier measures, LOC"")"	both	src/viralscan/tier_measures.py is package code. The training blocker is a G3 matter.
+PLAN.md	L473	"LOCK01-PRE paragraph (2026-10-14) (exception in ""SCI-05 review rounds, tier measures, LOC"")"	both	viral_loci.py and two multimap_evidence columns are package code. The LOCK-01 study-repo rows are experiment.
+PLAN.md	L476	"SCI-05 round 13 code side (2026-10-13) (exception in ""SCI-05 review rounds, tier measures, LOC"")"	both	Code fixes in scripts and src. The review itself is validation governance.
+PLAN.md	L478	"planter strand fix (2026-10-14, Q117) (exception in ""SCI-05 review rounds, tier measures, LOC"")"	package	plant_anello_10x stays in the package as truth-panel infra (D8).
+PLAN.md	L480	"TIER-01 paragraph (2026-10-13, evidence-tiers) (exception in ""SCI-05 review rounds, tier measures, LOC"")"	both	src/viralscan/evidence_tiers.py is package code. The calibration freeze is experiment.
+PLAN.md	L486	"multimap CLI Q71-Q76 (CLI-17, 2026-10-13) (exception in ""SCI-05 review rounds, tier measures, LOC"")"	package	CLI and multimapping default.
+PLAN.md	L488	"SCI-05 round 12 code-honouring (2026-10-13) (exception in ""SCI-05 review rounds, tier measures, LOC"")"	both	Code-honouring fixes in tests and scripts. The review is governance.
+PLAN.md	496-610	PERF-B13..PERF-EXEC-04, NORM-SHIFT-01, PERF-EXEC-03	both	Package performance code (B13, B16, B21, B28, resource budget) with exactness and benchmark evidence in analysis/computational_bottlenecks. Same reasoning as the first PERF block.
+PLAN.md	L542	"NORM-SHIFT-01 (exception in ""PERF-B13..PERF-EXEC-04, NORM-SHIFT-01, P"")"	package	Shifted-log normalization in umap.py and hostresponse.py is a src preprocessing change with tests and docs. The analysis/normalization_shifted_log_2026-10-19 receipts are not needed to read the row.
+PLAN.md	611-615	Grill sessions 1-2 decisions (2026-10-12)	experiment	Exploratory-run dataset policy, G5b, held-out sets and Track A/B ordering.
+PLAN.md	616-619	ci-green and audit-fixes backlog resume (2026-10-11/12)	package	CI fixes (py3.9 zip strict, anndata layers), audit-fix integration and packaging backlog.
+PLAN.md	620-684	Waves 2-4 and W3-01..W3-11 (2026-10-09..10)	package	Counting contract, W3-01..11, PANEL-01 role plumbing, SW and MECH rows, SENS-CORR, EVID-COMP. All are src, tests and CLI.
+PLAN.md	685-716	Dossier, TSO and DSR round 1 notes; science track Phase B (2026-10-05..07)	experiment	DSR-13 round 1 campaign, DOSSIER, evidence regeneration and VAL-01/DEF-00/COST-01/SCI-05 protocol work.
+PLAN.md	L690	"TSO-01 paragraph (2026-10-07) (exception in ""Dossier, TSO and DSR round 1 notes; scie"")"	both	TSO handling is package code. The paragraph is mostly DSR redetect Slurm jobs.
+PLAN.md	717-776	Package completion plan M0-M4 (2026-10-04)	package	G1 gate, REL-16, lint, triage fixes, M4 schema items and DEF-09. It sets the package-first directive. Its experiment steps are deferred.
+PLAN.md	777-818	Anellovirus ANDET-09 work log (2026-10-03..04)	experiment	Census, body-census and covid TTV artefact analysis and the filter sweep plan.
+PLAN.md	L789	"reagent leak fix (2026-10-04 evening) (exception in ""Anellovirus ANDET-09 work log (2026-10-0"")"	both	reagent_fraction and r1_tso_fraction are package measures found through experiment census data.
+PLAN.md	L803	"ANDET-09 closed (2026-10-04 latest) (exception in ""Anellovirus ANDET-09 work log (2026-10-0"")"	both	STARsolo anellovirus branch (shipped off, package code) plus the covid artefact finding and review.
+PLAN.md	L815	"ANDET-09 started (2026-10-03 night) (exception in ""Anellovirus ANDET-09 work log (2026-10-0"")"	package	Describes building the alignment branch.
+PLAN.md	819-853	DEF-02 chemistry, CAT-42, finish-pass, SW-13 (2026-09-29..10-03)	package	Chemistry module, CAT-42 panel swap, W1 implementer plan, barcode-correction fix.
+PLAN.md	L843	"CAT-42 rebuild running (2026-10-01) (exception in ""DEF-02 chemistry, CAT-42, finish-pass, S"")"	both	Slurm job ids 25691642, 25691838 and 25691839 and covid/EBV checks. The artifact is the shipped panel.
+PLAN.md	L850	"SW-13 barcode correction (2026-09-29) (exception in ""DEF-02 chemistry, CAT-42, finish-pass, S"")"	both	Package bug fix. 'Rerun any result that needs absolute numbers' is an instruction for experiment results.
+PLAN.md	854-897	Mechanism review ranking, max panel, final reference 2,343 genomes	package	MECH-A/B, WP1E, CAT-31..40 and the shipped panel (F-016, F-017). CAT-30 at line 894 is a pointer to the retraction row.
+PLAN.md	898-997	F-015 catalogue vs index, CAT-17 panel expansion, WP4H design	package	Reference panel and catalogue curation (CAT-17..35, CAT-05 duplicate gate, CAT-20 gating). Shipped data and build guard.
+PLAN.md	L934	"CAT-30 (exception in ""F-015 catalogue vs index, CAT-17 panel e"")"	experiment	Retraction of the published Alphatorquevirus number in covid_viralscan/results. docs/notices/CAT-30_retraction_DRAFT.md moves to the repro.
+PLAN.md	998-1008	WP4J SFL tonsil TTV/HPV screen (2026-09-27)	experiment	Public-data screen of 24 tonsil donors, plant recovery and the x223/x225 data notes.
+PLAN.md	1009-1070	WP4I/G/H order, WP4F ANELLO, WP4E HPV, WP4D PROG/SENS/HOST	package	Gene-programme, HPV ORF and anellovirus gene-structure data builders and detection sensitivity code (src/viralscan/data/*, sensitivity.py).
+PLAN.md	1071-1094	Governance follow-up and G0 archive-build evidence (2026-09-26)	both	Artifact inventory rows and claim graph validators move to the repro (D7). The ship-scope allowlist and the wheel/sdist membership check (GOV-04/05) stay in the package. This follows audit/triage.tsv on WP0, which treats GOV-02 and GOV-04 as package.
+PLAN.md	1095-1112	Do now (superseded 2026-10-04)	package	G0 wheel/sdist build commands and the G1 integration-marker failures (conda executable, snakemake --quiet dry run). It is release and CI work.
+.living/findings/FINDINGS_REGISTRY.md			both	Index of F-001..; mixes package bugs (F-018, strand default, dead output) and experiment results. Keep a copy in package (cited by src emptydrops.R:6 via F-005 and by tests nothing else); repro needs full copy for dsr05_dossier F-ids. Keep rows for all IDs in both.
+.living/findings/anellovirus-capture-ceiling-is-set-by-cdhit-dereplication.md			experiment	Anellovirus capture benchmark result.
+.living/findings/anellovirus-detection-audit-commensal-prior.md			experiment	Detection audit on public data; carries F-005/F-010/F-019/F-021/F-022 (dsr05 dossier IDs) so must exist in repro.
+.living/findings/capture-metric-measured-forward-strand-only.md			experiment	Benchmark metric caveat (F-020 strand-specific capture).
+.living/findings/catalogue-is-not-the-index-ebv-type2-and-hpv-gaps.md			both	Panel/catalogue vs index gaps: package panel curation (CAT-31 catalogued_not_indexed) plus EBV/HPV experiment evidence. Keep in package, copy to repro.
+.living/findings/covid-anellovirus-signal-is-polyg-reads.md			experiment	COVID PBMC run analysis; carries F-005/F-019. CAT-30 retraction draft cites it.
+.living/findings/covid-viralscan-no-sars2-anellovirus-dominant.md			experiment	COVID dataset result; carries F-005/F-019.
+.living/findings/dead-summary-output-destroyed-by-later-rule.md			package	Snakefile rule-output bug; pure software defect.
+.living/findings/dropseq-kb-allowlist-prefilter.md			both	F-018: kb allowlist prefilter behaviour is package code, but F-018 is a dsr05 dossier ID, so repro needs a copy.
+.living/findings/ebv-type2-sibling-dilution-equal-split.md			experiment	EBV type-2 multimap dilution measured on benchmark data.
+.living/findings/evidence-replay-used-primary-ec-numbering.md			both	F-028: bug in the evidence replay (package verb) found in an experiment; dossier ID needed in repro.
+.living/findings/final-reference-panel-2343-genomes.md			both	F-016: shipped reference panel decision (package) plus benchmark evidence; PLAN.md WP4K/CAT-31.. rows point at it. Keep in package, copy to repro.
+.living/findings/fiveprime-strand-default-loses-reads.md			both	Package --strand default defect (F-019/F-021/F-022) established by experiment; dossier IDs.
+.living/findings/frozen-seed-never-reached-emptydrops.md			package	emptydrops seed plumbing bug in src.
+.living/findings/hhv6a-residual-in-hhv6b-sample-is-6b.md			experiment	HHV-6 sample analysis; carries F-025/F-026.
+.living/findings/hhv6b-call-in-ebv-sample-is-telomere-repeat.md			experiment	HHV-6B call in EBV sample; carries F-025.
+.living/findings/hhv6b-flank-reads-missed-by-cds-only-index.md			experiment	Benchmark finding on index sensitivity (HHV-6B hold).
+.living/findings/host-transcriptome-encodes-viral-infection-state.md			experiment	F-001 host-response classifier analysis.
+.living/findings/host-virus-homology-is-low-complexity.md			experiment	Homology analysis (REF-07); cites F-005/F-019/F-021.
+.living/findings/hpv16-positive-control-and-polya-anellovirus-sink.md			experiment	Positive-control run result; cited by CAT-30 draft.
+.living/findings/hsv1-lat-exon-recut.md			both	GTF recut of HSV-1 LAT (src/viralscan/data annotation change) discovered via experiment.
+.living/findings/kmer-capture-independence-model-overstates-detection.md			experiment	Detection-model validation result.
+.living/findings/legacy-multimap-bypasses-umi-deduplication.md			package	Defect in multimap.py UMI dedup; software correctness.
+.living/findings/low-complexity-is-a-kmer-property-not-n-masking.md			experiment	Analysis finding; carries F-005/F-010.
+.living/findings/per-sample-run-cost.md			experiment	SLURM cost measurements (COST-01).
+.living/findings/raw-count-thresholds-confound-with-sequencing-depth.md			experiment	Statistical analysis of benchmark thresholds.
+.living/findings/reference_strategy_2x2.md			experiment	Reference-strategy benchmark; manuscript evidence; carries F-005.
+.living/findings/sfl-tonsil-no-ttv-or-hpv-host-subtracted.md			experiment	Public/SFL tonsil dataset analysis; carries F-005/F-010.
+.living/findings/twostep-hpv77-call-is-host-reads-star-missed.md			experiment	STARsolo comparator analysis; F-028 ID.
+.living/findings/unsupervised-feature-selection-leakage-is-often-negligible.md			experiment	Host-response classifier methodology finding.
+.living/findings/viralscan-panel-doi-unregistered.md			package	Release/citation metadata for the shipped panel (REF-11 distribution).
+.living/INDEX.md			both	Knowledge map; CLAUDE.md:172 tells agents to read it. Split into two per-repo indexes; keep a trimmed package one.
+.living/conventions.md			package	Repo conventions (scRNA depth/mito rules) apply to code and analyses; small; keep in package (copy ok).
+.living/conventions/			package	Convention packs; CLAUDE.md lines 122-132 link to .living/conventions/*/analysis-conventions.md.
+.living/decisions.md			both	181 KB append-only decision log; split by topic (D3). scripts/check_g3_diff.py:46 lists .living/decisions.md as a G3-governed file and src read_filter.py:28 + tests/_frozen_oracles/frozen_read_filter_d056986.py:28 cite it with dates 2026-10-04/05. Package copy must keep those entries.
+.living/learnings.md			both	156 KB; split by topic. scripts/git-hooks/pre-commit:4 cites it (package CI script).
+.living/HANDOFF_2026-09-29.md			experiment	Handoff for panel/final-reference (WP4K) session; superseded; process record. Points at PLAN.md and F-016.
+.living/HANDOFF_2026-09-30.md			experiment	Stale session handoff, superseded by later ones.
+.living/HANDOFF_2026-10-01.md			experiment	Stale session handoff; branch work log.
+.living/HANDOFF_2026-10-03.md			experiment	Stale finish-pass handoff (CAT-42, GOV-06 etc.); mixed but already marked closed.
+.living/last-session.md			experiment	Auto-written 2026-07-15 session summary (EVE analysis job); mycelium hook scratch, stale.
+.living/log/ (85 files incl. LOG_REGISTRY.md)			experiment	Mycelium hook session logs 2026-07-01..2026-10-14; sample of 10 are auto-generated 'Session Log / Session started' stubs, no package code refs (grep of src/tests/docs/scripts/CLAUDE.md for log names found none). LOG_REGISTRY.md is the index of them; move together. Package may keep an empty log/ for the hook.
+.living/outputs/reviews/ (4 review files)			experiment	Scientific reviews of covid-viralscan findings, EBV host-response, v3 tripwires; analysis review output.
+.living/archive/			experiment	Does not exist in the rehearsal checkout (untracked in working tree only); tracker step 3.4 carry list sends it to repro.
+HANDOFF*.md and SESSION_RESUME.md (top level)			experiment	None exist at origin/main 6527e94 (untracked in the working tree only; carry list step 3.4 moves them to repro). Only mention: docs/plans/2026-10-13-protocol-pending-sections-draft.md:36 names them in prose; no code refs.
+migration_plan/			delete	Does not exist in the rehearsal checkout; nothing to triage. (docs/migration.md is a separate, user-facing doc and stays.)
+CONTEXT.md			package	Domain glossary (Run Config, Run Context, Viral Accession); tracker 5.1 keeps it.
+PROGRESS.md			experiment	Implementation log of 2026-05 sessions; tracker 5.2 sends it to repro. No code refs found (grep clean in src/tests/docs/scripts/CLAUDE.md).
+CHANGELOG.md			package	Release notes for the software; Keep a Changelog; tracker keeps it.
+docs/plans/2026-07-22-viralscan-v3-correctness-and-publication.md			both	Locked v3 rationale; CLAUDE.md:30 points at it, but content is validation/publication strategy. Tracker moves plans/**; keep a pointer or copy because CLAUDE.md references it. Excluded from docs build (plans/**).
+docs/plans/2026-07-22-viralscan-v3-tasks.md			experiment	Task-list redirect for the v3 validation plan. Excluded from docs build.
+docs/plans/2026-08-08-viralscan-v3-stable-g8.md			experiment	G8 frozen execution plan (validation run). Excluded from docs build.
+docs/plans/2026-08-08-viralscan-v3-stable-g8-tasks.md			experiment	G8 checklist; mentions CONTEXT.md:11 only. Excluded from docs build.
+docs/plans/2026-09-27-viral-reference-panel-expansion.md			package	Panel design (shipped reference); src cites section 5.1. Excluded from docs build; if tracker moves plans/** wholesale, repoint the comments.
+docs/plans/2026-10-04-anello-remaining-work.md			experiment	Anellovirus analysis plan.
+docs/plans/2026-10-04-package-completion-plan.md			package	Package completion plan (software before experiments).
+docs/plans/2026-10-05-dataset-run-plan.md			experiment	Dataset run plan for unanalysed datasets.
+docs/plans/2026-10-05-def00-protocol-amendment.md			experiment	Validation protocol amendment draft.
+docs/plans/2026-10-05-val01-generator-design.md			both	Truth-panel generator design; generator scripts stay in package (D8) but the doc is validation protocol.
+docs/plans/2026-10-07-dsr-dossier-spec.md			experiment	DSR dossier spec; dsr scripts move.
+docs/plans/2026-10-13-protocol-pending-sections-draft.md			experiment	G3 sign-off protocol drafts.
+docs/plans/2026-10-14-viral-read-cleanup-and-transcript-reconstruction.md			package	Proposal for read_filter/transcript features in src (read_filter.py:28 refers to same 10-04/05 decisions); tests/test_viral_read_cleanup_pilot is moved but feature is package.
+docs/plans/2026-10-17-performance-triage-byte-identical-outputs.md			package	Software performance work with byte-identical output contract.
+docs/plans/2026-10-17-remaining-performance-candidates.md			package	Software performance candidates.
+docs/plans/2026-10-19-legacy-worker-qualification.md			package	Legacy worker (CLI option) qualification; software behaviour.
+docs/plans/2026-10-19-performance-qualification.md			both	Performance code qualification plus SLURM gates/measurements.
+docs/plans/2026-10-19-performance-resource-policy.md			package	--cores = total CPU budget policy (CLI contract).
+docs/plans/2026-10-19-performance-whole-run-proposal.md			experiment	G02 whole-run benchmark proposal pending approval (cluster run).
+docs/plans/2026-10-20-cpu-budget-qualification-status.md			both	Status of CPU-budget code qualification via cluster runs.
+docs/plans/2026-10-20-documentation-revision-plan.md			package	Plan to revise package docs.
+docs/plans/2026-10-21-kraken2-discovery-plan.md			package	Design/contracts for viralscan discover; cited in module docstring.
+docs/plans/ambient-and-barcode-swapping-controls.md			package	Design note AUD-12/M-03 for ambient screen in detection.py.
+docs/plans/competitive-host-virus-reference.md			package	Design note AUD-17/M-05 for host+virus reference build.
+docs/plans/dsr_round2_GUARD.md			experiment	DSR round comparability guard for agents.
+docs/plans/dsr_round2b_sens07_GUARD.md			experiment	DSR round 2b guard; copied by SLURM script.
+docs/plans/dsr_round2c_sens07_GUARD.md			experiment	DSR round 2c guard; read by test.
+docs/plans/real-data-sensitivity-specificity.md			both	Design note AUD-12/M-04 for truth tiers; v3_score.py (stays) uses its vocabulary.
+docs/reviews/			delete	Directory does not exist at 6527e94.
+docs/handoffs/2026-07-24-legacy-v2-v3-execution.md			experiment	Legacy v2 vs v3 diagnostic execution handoff. Excluded from docs build (handoffs/**).
+docs/handoffs/2026-07-25-legacy-v2-v3-results.md			experiment	Legacy v2/v3 results handoff.
+docs/handoffs/2026-08-08-viralscan-v3-stable-g8-executor.md			experiment	G8 executor handoff.
+docs/handoffs/handoff-CFtSVg.md			experiment	2026-07-22 pause handoff (benchmark/cluster pause). Referenced as read-first in review-clear-execute-tasks.md:5 (both move).
+docs/superpowers/plans/2026-07-03-publication-readiness-99.md			experiment	Publication-readiness execution plan (manuscript/benchmarks). Excluded from docs build (superpowers/**).
+docs/superpowers/plans/2026-07-03-publication-readiness-99-reconciled.md			experiment	Reconciled version of the same plan.
+docs/manuscript_draft.md			experiment	Manuscript; excluded from docs build. Referenced only by superpowers plans (moving).
+docs/ROADMAP.md			experiment	Pre-v3 roadmap; excluded from docs build and MANIFEST.in:60 (exclude lines become moot after move).
+docs/IMPLEMENTATION_PLAN.md			experiment	Pre-v3 build-order plan for ROADMAP items; excluded from docs build.
+docs/PUBLICATION_READINESS.md			experiment	2026-07-03 publication readiness ledger; excluded from docs build (PUBLICATION_READINESS*.md).
+docs/PUBLICATION_READINESS_2026-07-17.md			experiment	Dated publication readiness snapshot; excluded from docs build.
+docs/PUBLICATION_READINESS_EXECUTION.md			experiment	Execution log for publication readiness; excluded from docs build.

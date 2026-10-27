@@ -1,0 +1,56 @@
+== pre-delete tips (recoverable from bundle)
+origin/codex/anello-star139 3bbeb8c
+origin/codex/cpu-budget 0408639
+origin/codex/docs-pages 88952f7
+origin/codex/docs-pertpy 3201bd1
+origin/codex/fix-inventory-pins b12144e
+origin/codex/output-layout 5ca1867
+origin/codex/ref11-panel-archive 588015e
+origin/codex/repin-output-reference dc95685
+origin/backup/pre-split-2026-10-25 ccf1b14
+origin/codex/shared-root-snapshot-2026-10-19 728cc76
+origin/codex/scautoqc-wip 92dd88e
+codex/cli-unify-wip e7d83fe
+== remote
+To github.com:mdmanurung/ViralScan.git
+ - [deleted]         backup/pre-split-2026-10-25
+ - [deleted]         codex/anello-star139
+ - [deleted]         codex/cpu-budget
+ - [deleted]         codex/docs-pages
+ - [deleted]         codex/docs-pertpy
+ - [deleted]         codex/fix-inventory-pins
+ - [deleted]         codex/output-layout
+ - [deleted]         codex/ref11-panel-archive
+ - [deleted]         codex/repin-output-reference
+ - [deleted]         codex/scautoqc-wip
+ - [deleted]         codex/shared-root-snapshot-2026-10-19
+== local refs that also exist locally for the remote set
+codex/output-layout
+backup/pre-split-2026-10-25
+codex/shared-root-snapshot-2026-10-19
+codex/scautoqc-wip
+== local -D
+Deleted branch codex/cli-unify-wip (was e7d83fe).
+Deleted branch codex/output-layout (was c01f1c0).
+Deleted branch backup/pre-split-2026-10-25 (was ccf1b14).
+Deleted branch codex/shared-root-snapshot-2026-10-19 (was 728cc76).
+Deleted branch codex/scautoqc-wip (was 92dd88e).
+== remaining remote:
+  origin/codex/disc12-hosthomolog
+  origin/codex/g3-signing-r2
+  origin/main
+== remaining local unmerged:
+codex/cli-unify-02-layout
+codex/disc12-hosthomolog
+codex/disc12-metrics
+codex/drop-py39
+codex/g3-signing-r2
+codex/pr79-rebase
+codex/release-image-refresh
+codex/scautoqc
+codex/shared-root-notes
+codex/spikein-detection-limit
+codex/spq-coverage-map
+codex/star-hostvirus-align
+tmp/wave2-base
+tmp/wave2-base-2026-10-22

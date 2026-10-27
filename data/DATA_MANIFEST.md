@@ -52,3 +52,13 @@ gitignored, with machine-readable provenance in `reference_manifest.json` and
 per-artifact SHA256/feature-count audit in `reference_audit.tsv` (both committed).
 Rebuild commands are stored verbatim under `build_commands` in the manifest. This
 dataset is the shared input for `results/reference_strategy_benchmark.tsv`.
+
+### backups and envs (two-folder migration close-out, 2026-10-27)
+
+| path | size | sha256 |
+|---|---|---|
+| `data/backups/branch-bundles/ViralScan.2026-10-27.bundle` | 17M | 4ffd914ee9a5c792d5102e63f780389bddcba1c7dae9200df0eeb0f48dd31a65 |
+| `data/backups/branch-bundles/ViralScan-reproducibility.2026-10-27.bundle` | 11M | ebca3c64d31d5756b38dbb924a47db7eb51501cd2fa62c2957b0e5adb8f8e244 |
+| `data/envs/viralscan_env_pinned.explicit.txt` | 96K | 385ea0f4c104dbeaf182c3112f3473282f3a19890c4ba808a521974157493ee6 |
+| `data/backups/viralscan-split/` | 3.4G, 48560 entries | tracker/tests/audit copied to `provenance/migration_tests/` |
+| `data/backups/stage5-script-backups/`, `stage7-record-backups/` | 12M, 2.1M | pre-rewrite script/table copies |

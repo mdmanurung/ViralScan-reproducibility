@@ -1,0 +1,15 @@
+== class counts
+repro         454
+package       435
+TRIAGE        187
+REVIEW        32
+UNCLASSIFIED  17
+delete        14
+
+== package-staying files that reference moved things: 91 (see stay_refs_moved.tsv)
+{'.github': 4, '.gitignore': 1, '.pre-commit-config.yaml': 1, 'CHANGELOG.md': 1, 'CLAUDE.md': 1, 'CONTEXT.md': 1, 'MANIFEST.in': 1, 'README.md': 1, 'analysis': 2, 'config': 2, 'docs': 31, 'extras': 2, 'pyproject.toml': 1, 'scripts': 6, 'src': 36}
+== repro files that import/call kept scripts: 22 (see repro_refs_kept.tsv)
+
+== UNCLASSIFIED / REVIEW / TRIAGE samples
+UNCLASSIFIED ['ENVIRONMENTS_INSTALLATIONS.md', 'MAINTAINER_CHECKLIST.md', 'Singularity.pixi.def', 'environment.coverage.yml', 'environment.discovery.yml', 'environment.tools.lock.txt', 'pixi.toml', 'scripts/adjudicate_candidates.py', 'scripts/cal13_decoys.py', 'scripts/check_g3_diff.py', 'scripts/check_tracked_file_sizes.py', 'scripts/combine_palmdb_reference.py', 'scripts/explore_ledger.py', 'scripts/longitudinal_compile.py', 'scripts/make_panel_archive.py', 'scripts/subset_fastq_pair.py', 'scripts/super_expressors.py']
+REVIEW ['tests/_frozen_oracles/frozen_genbank_gtf_d056986.py', 'tests/_frozen_oracles/frozen_gene_programs_5e551c9.py', 'tests/data/adjudication_lock_TEST_ONLY.json', 'tests/data/ebv_nc_007605_eber_excerpt.gtf', 'tests/data/evidence_tiny/R1.fastq', 'tests/data/evidence_tiny/R2.fastq', 'tests/data/evidence_tiny/called_cells.txt', 'tests/data/evidence_tiny/combined.gtf', 'tests/data/evidence_tiny/host.fasta', 'tests/data/evidence_tiny/reference.fasta', 'tests/data/evidence_tiny/t2g.txt', 'tests/data/evidence_tiny/transcripts.fasta', 'tests/data/evidence_tiny/viral.fasta', 'tests/data/evidence_tiny/viral.gtf', 'tests/data/viral_loci_TEST_ONLY.gtf', 'tests/integration/test_tiny_end_to_end.py', 'tests/test_adjudicate_candidates.py', 'tests/test_ambient_screen.py', 'tests/test_analysis.py', 'tests/test_cellcalling.py', 'tests/test_count_library.py', 'tests/test_covid_annotate_eve.py', 'tests/test_gene_programs.py', 'tests/test_host_homology_loci.py', 'tests/test_identity_backfill.py', 'tests/test_index_reconciliation.py', 'tests/test_performance_exactness.py', 'tests/test_run_complete_marker.py', 'tests/test_snakefile_dag.py', 'tests/test_spikein_grid.py', 'tests/test_tracked_file_sizes.py', 'tests/test_viral_read_cleanup_pilot.py']

@@ -1,0 +1,825 @@
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/armp_masked_pilot/scripts/build_index.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/armp_masked_pilot/scripts/build_index.sbatch
+@@ -7 +7 @@
+-#SBATCH --output=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/armp_masked_pilot/logs/index_%j.log
++#SBATCH --output=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/armp_masked_pilot/logs/index_%j.log
+@@ -9 +9 @@
+-W=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/armp_masked_pilot
++W=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/armp_masked_pilot
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/armp_masked_pilot/scripts/compare.py
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/armp_masked_pilot/scripts/compare.py
+@@ -2 +2 @@
+-M='/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work'
++M='/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work'
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/armp_masked_pilot/scripts/count.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/armp_masked_pilot/scripts/count.sbatch
+@@ -8 +8 @@
+-#SBATCH --output=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/armp_masked_pilot/logs/count_%A_%a.log
++#SBATCH --output=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/armp_masked_pilot/logs/count_%A_%a.log
+@@ -10 +10 @@
+-W=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/armp_masked_pilot
++W=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/armp_masked_pilot
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/armp_masked_pilot/scripts/summ.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/armp_masked_pilot/scripts/summ.sbatch
+@@ -7 +7 @@
+-#SBATCH --output=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/armp_masked_pilot/logs/summ_%j.log
++#SBATCH --output=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/armp_masked_pilot/logs/summ_%j.log
+@@ -10,3 +10,3 @@
+-W=$M/viralscan_work/armp_masked_pilot; R=$M/viralscan_work/trackA_round1
+-P=$M/vs_pinned/97a64f6/analysis/translated_search
+-REF=$M/ViralScan/analysis/translated_search/work/palmdb_plus_annotated_2026-10-14/reference_final
++W=$M/ViralScan-reproducibility/data/runs/work/armp_masked_pilot; R=$M/ViralScan-reproducibility/data/runs/work/trackA_round1
++P=$M/ViralScan-reproducibility/data/pinned_snapshots/vs_pinned/97a64f6/analysis/translated_search
++REF=$M/ViralScan-reproducibility/data/runs/old_checkout_analysis/translated_search/work/palmdb_plus_annotated_2026-10-14/reference_final
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/chem_probe_2026-10-16/chem_probe.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/chem_probe_2026-10-16/chem_probe.sbatch
+@@ -9 +9 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/chem_probe_2026-10-16/logs/%x_%A_%a.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/chem_probe_2026-10-16/logs/%x_%A_%a.log
+@@ -12,4 +12,4 @@
+-P=$M/viralscan_work/chem_probe_2026-10-16
+-CODE=$M/vs_pinned/97a64f6
+-REF=$M/viral_ref_cat42d/build
+-WL=$M/viralscan_work/onlists/10x/10x_multiome_gex_whitelist.txt.gz
++P=$M/ViralScan-reproducibility/data/runs/work/chem_probe_2026-10-16
++CODE=$M/ViralScan-reproducibility/data/pinned_snapshots/vs_pinned/97a64f6
++REF=$M/ViralScan-reproducibility/data/references/panel_builds/viral_ref_cat42d/build
++WL=$M/ViralScan-reproducibility/data/runs/work/onlists/10x/10x_multiome_gex_whitelist.txt.gz
+@@ -18 +18 @@
+-I=$M/viralscan_work/trackA_round1/inputs/$S
++I=$M/ViralScan-reproducibility/data/runs/work/trackA_round1/inputs/$S
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/disc12_freeze_2026-10-23/hash.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/disc12_freeze_2026-10-23/hash.sbatch
+@@ -7 +7 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/disc12_freeze_2026-10-23/slurm_%j.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/disc12_freeze_2026-10-23/slurm_%j.log
+@@ -9 +9 @@
+-cd /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/disc12_freeze_2026-10-23
++cd /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/disc12_freeze_2026-10-23
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/disc12_run_2026-10-23/run.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/disc12_run_2026-10-23/run.sbatch
+@@ -7 +7 @@
+-#SBATCH --output=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/disc12_run_2026-10-23/slurm/%x_%A_%a.out
++#SBATCH --output=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/disc12_run_2026-10-23/slurm/%x_%A_%a.out
+@@ -10 +10 @@
+-B=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/disc12_run_2026-10-23
++B=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/disc12_run_2026-10-23
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/bin/build_downloads.py
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/bin/build_downloads.py
+@@ -2 +2 @@
+-W='/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/discovery'
++W='/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery'
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/bin/index.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/bin/index.sbatch
+@@ -6 +6 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/discovery/logs/%x_%A_%a.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/logs/%x_%A_%a.log
+@@ -8 +8 @@
+-W=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/discovery
++W=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/bin/make_dataset_readmes.py
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/bin/make_dataset_readmes.py
+@@ -5 +5 @@
+-    python3 -I /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/discovery/bin/make_dataset_readmes.py [folder ...]
++    python3 -I /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/bin/make_dataset_readmes.py [folder ...]
+@@ -22 +22 @@
+-W = Path('/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/discovery')
++W = Path('/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery')
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/bin/mk_tasks.py
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/bin/mk_tasks.py
+@@ -19 +19 @@
+-with open('/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/discovery/status/tasks.tsv','w') as o:
++with open('/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/status/tasks.tsv','w') as o:
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/bin/mk_tasks2.py
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/bin/mk_tasks2.py
+@@ -3 +3 @@
+-W='/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/discovery'
++W='/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery'
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/bin/poll.sh
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/bin/poll.sh
+@@ -2 +2 @@
+-W=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/discovery
++W=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/bin/ref.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/bin/ref.sbatch
+@@ -6 +6 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/discovery/logs/%x_%A_%a.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/logs/%x_%A_%a.log
+@@ -8 +8 @@
+-W=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/discovery
++W=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/bin/submit2.sh
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/bin/submit2.sh
+@@ -5 +5 @@
+-cd /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/discovery
++cd /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/bin/v01.sh
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/bin/v01.sh
+@@ -2 +2 @@
+-W=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/discovery
++W=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/bin/watch.sh
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/bin/watch.sh
+@@ -3 +3 @@
+-W=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/discovery
++W=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/bin/watch2.sh
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/bin/watch2.sh
+@@ -3 +3 @@
+-W=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/discovery
++W=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/bin/worker.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/bin/worker.sbatch
+@@ -6 +6 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/discovery/logs/%x_%A_%a.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/logs/%x_%A_%a.log
+@@ -9 +9 @@
+-W=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/discovery
++W=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/bin/worker2.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/bin/worker2.sbatch
+@@ -6 +6 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/discovery/logs/%x_%A_%a.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/logs/%x_%A_%a.log
+@@ -9 +9 @@
+-W=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/discovery
++W=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery_ebv_2026-10-21/disc05/reconcile.py
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery_ebv_2026-10-21/disc05/reconcile.py
+@@ -8,2 +8,2 @@
+-HF = "/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/dsr_round1/runs/ebv/twostep/SRR12682296/SRR12682296/host_filtered"
+-DISC = "/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/discovery_ebv_2026-10-21/pluspf16_0.0_2/.partial/barcodes.tsv.gz"
++HF = "/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/dsr_round1/runs/ebv/twostep/SRR12682296/SRR12682296/host_filtered"
++DISC = "/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery_ebv_2026-10-21/pluspf16_0.0_2/.partial/barcodes.tsv.gz"
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery_ebv_2026-10-21/disc05/reconcile.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery_ebv_2026-10-21/disc05/reconcile.sbatch
+@@ -7 +7 @@
+-#SBATCH --output=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/discovery_ebv_2026-10-21/disc05/slurm-%j.out
++#SBATCH --output=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery_ebv_2026-10-21/disc05/slurm-%j.out
+@@ -9 +9 @@
+-D=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/discovery_ebv_2026-10-21/disc05
++D=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery_ebv_2026-10-21/disc05
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery_ebv_2026-10-21/human_realign/realign.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery_ebv_2026-10-21/human_realign/realign.sbatch
+@@ -7 +7 @@
+-#SBATCH --output=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/discovery_ebv_2026-10-21/human_realign/slurm-%j.out
++#SBATCH --output=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery_ebv_2026-10-21/human_realign/slurm-%j.out
+@@ -11 +11 @@
+-cd /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/discovery_ebv_2026-10-21/human_realign
++cd /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery_ebv_2026-10-21/human_realign
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery_ebv_2026-10-21/r10/r10.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery_ebv_2026-10-21/r10/r10.sbatch
+@@ -8 +8 @@
+-#SBATCH --output=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/discovery_ebv_2026-10-21/r10/slurm-%A_%a.out
++#SBATCH --output=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery_ebv_2026-10-21/r10/slurm-%A_%a.out
+@@ -11,2 +11,2 @@
+-B=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/discovery_ebv_2026-10-21/r10
+-RUN=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/dsr_round1/redetect_test/ebv_twostep
++B=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery_ebv_2026-10-21/r10
++RUN=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/dsr_round1/redetect_test/ebv_twostep
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery_ebv_2026-10-21/r10/summarize.py
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery_ebv_2026-10-21/r10/summarize.py
+@@ -15 +15 @@
+-    "/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/dsr_round1/redetect_test/"
++    "/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/dsr_round1/redetect_test/"
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery_ebv_2026-10-21/run_discover.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery_ebv_2026-10-21/run_discover.sbatch
+@@ -7 +7 @@
+-#SBATCH --output=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/discovery_ebv_2026-10-21/slurm-%j.out
++#SBATCH --output=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery_ebv_2026-10-21/slurm-%j.out
+@@ -20 +20 @@
+-  --run-dir /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/dsr_round1/redetect_test/ebv_twostep \
++  --run-dir /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/dsr_round1/redetect_test/ebv_twostep \
+@@ -22 +22 @@
+-  -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/discovery_ebv_2026-10-21/pluspf16_0.0_2 \
++  -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery_ebv_2026-10-21/pluspf16_0.0_2 \
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/dsr_round1/status/A2_driver.sh
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/dsr_round1/status/A2_driver.sh
+@@ -3 +3 @@
+-R=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/dsr_round1
++R=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/dsr_round1
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/dsr_round2/evidence/_slurm/slurm_anello_evidence.sh
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/dsr_round2/evidence/_slurm/slurm_anello_evidence.sh
+@@ -11 +11 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/dsr_round2/evidence/_slurm/dsr02_anello_%A_%a.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/dsr_round2/evidence/_slurm/dsr02_anello_%A_%a.log
+@@ -13 +13 @@
+-R2=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/dsr_round2
++R2=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/dsr_round2
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/emc01_remeasure/audit.py
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/emc01_remeasure/audit.py
+@@ -8 +8 @@
+-SRC = "/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/dsr_round2/runs/covid/combined_off/LUM-SJ-x213-g/LUM-SJ-x213-g"
++SRC = "/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/dsr_round2/runs/covid/combined_off/LUM-SJ-x213-g/LUM-SJ-x213-g"
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/emc01_remeasure/job.sh
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/emc01_remeasure/job.sh
+@@ -7,3 +7,3 @@
+-CODE=$M/vs_pinned/88f02a1   # detached worktree of origin/main 88f02a1
+-SRC=$M/viralscan_work/dsr_round2/runs/covid/combined_off/LUM-SJ-x213-g
+-W=$M/viralscan_work/emc01_remeasure
++CODE=$M/ViralScan-reproducibility/data/pinned_snapshots/vs_pinned/88f02a1   # detached worktree of origin/main 88f02a1
++SRC=$M/ViralScan-reproducibility/data/runs/work/dsr_round2/runs/covid/combined_off/LUM-SJ-x213-g
++W=$M/ViralScan-reproducibility/data/runs/work/emc01_remeasure
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/f005_readorigin/f005_readorigin.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/f005_readorigin/f005_readorigin.sbatch
+@@ -7,2 +7,2 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/f005_readorigin/logs/%x_%j.out
+-#SBATCH -e /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/f005_readorigin/logs/%x_%j.err
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/f005_readorigin/logs/%x_%j.out
++#SBATCH -e /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/f005_readorigin/logs/%x_%j.err
+@@ -12 +12 @@
+-W=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/f005_readorigin
++W=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/f005_readorigin
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/f005_readorigin/tonsil_x223/f005_tonsil.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/f005_readorigin/tonsil_x223/f005_tonsil.sbatch
+@@ -7,2 +7,2 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/f005_readorigin/tonsil_x223/logs/%x_%j.out
+-#SBATCH -e /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/f005_readorigin/tonsil_x223/logs/%x_%j.err
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/f005_readorigin/tonsil_x223/logs/%x_%j.out
++#SBATCH -e /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/f005_readorigin/tonsil_x223/logs/%x_%j.err
+@@ -12 +12 @@
+-W=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/f005_readorigin/tonsil_x223
++W=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/f005_readorigin/tonsil_x223
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/hpv16_gse189670/dl.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/hpv16_gse189670/dl.sbatch
+@@ -7 +7 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/hpv16_gse189670/logs/%x_%A_%a.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/hpv16_gse189670/logs/%x_%A_%a.log
+@@ -10 +10 @@
+-D=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/hpv16_gse189670
++D=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/hpv16_gse189670
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/hpv16_gse189670/ed.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/hpv16_gse189670/ed.sbatch
+@@ -7 +7 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/hpv16_gse189670/logs/%x_%A_%a.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/hpv16_gse189670/logs/%x_%A_%a.log
+@@ -9 +9 @@
+-D=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/hpv16_gse189670
++D=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/hpv16_gse189670
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/hpv16_gse189670/quant.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/hpv16_gse189670/quant.sbatch
+@@ -8 +8 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/hpv16_gse189670/logs/%x_%A_%a.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/hpv16_gse189670/logs/%x_%A_%a.log
+@@ -13 +13 @@
+-D=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/hpv16_gse189670
++D=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/hpv16_gse189670
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/hpv16_gse189670/readcheck/readcheck.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/hpv16_gse189670/readcheck/readcheck.sbatch
+@@ -8 +8 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/hpv16_gse189670/readcheck/logs/%x_%A_%a.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/hpv16_gse189670/readcheck/logs/%x_%A_%a.log
+@@ -10,2 +10,2 @@
+-W=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/hpv16_gse189670/readcheck
+-D=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/hpv16_gse189670
++W=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/hpv16_gse189670/readcheck
++D=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/hpv16_gse189670
+@@ -13 +13 @@
+-MMI=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/f005_readorigin/competitive.mmi
++MMI=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/f005_readorigin/competitive.mmi
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/hpv16_gse189670/readcheck/summarise.py
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/hpv16_gse189670/readcheck/summarise.py
+@@ -7 +7 @@
+-W = "/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/hpv16_gse189670/readcheck"
++W = "/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/hpv16_gse189670/readcheck"
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/layout_tools/common.py
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/layout_tools/common.py
+@@ -20 +20 @@
+-WORK = M / 'viralscan_work'
++WORK = M / 'ViralScan-reproducibility/data/runs/work'
+@@ -23 +23 @@
+-PIN = M / 'vs_pinned/97a64f6'              # READ ONLY pinned viralscan code used by the round
++PIN = M / 'ViralScan-reproducibility/data/pinned_snapshots/vs_pinned/97a64f6'              # READ ONLY pinned viralscan code used by the round
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/layout_tools/study_gse158275.py
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/layout_tools/study_gse158275.py
+@@ -314 +314 @@
+-ext = C.M / 'ViralScan/benchmark_inputs/reference_strategy/SRR12682296'
++ext = C.M / 'ViralScan-reproducibility/data/inputs/benchmark_inputs/reference_strategy/SRR12682296'
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/layout_tools/test_resume.py
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/layout_tools/test_resume.py
+@@ -10 +10 @@
+-TOOLS = Path('/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/layout_tools')
++TOOLS = Path('/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/layout_tools')
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/parity_mechA/evidence_diff.py
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/parity_mechA/evidence_diff.py
+@@ -8 +8 @@
+-W = "/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/parity_mechA"
++W = "/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/parity_mechA"
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/parity_mechA/layer_diff.py
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/parity_mechA/layer_diff.py
+@@ -9 +9 @@
+-W = "/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/parity_mechA"
++W = "/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/parity_mechA"
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/parity_mechA/parity_4a.sh
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/parity_mechA/parity_4a.sh
+@@ -6 +6 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/parity_mechA/logs/%x_%j.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/parity_mechA/logs/%x_%j.log
+@@ -9,2 +9,2 @@
+-export PATH=$EF:$PATH PYTHONPATH=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/parity_mechA/src_4a/src MPLBACKEND=Agg
+-$EF/python /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/parity_mechA/parity_driver.py /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/parity_mechA/covid/final4a/LUM-SJ-x213-g/ --analysis
++export PATH=$EF:$PATH PYTHONPATH=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/parity_mechA/src_4a/src MPLBACKEND=Agg
++$EF/python /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/parity_mechA/parity_driver.py /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/parity_mechA/covid/final4a/LUM-SJ-x213-g/ --analysis
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/parity_mechA/parity_a2.sh
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/parity_mechA/parity_a2.sh
+@@ -6 +6 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/parity_mechA/logs/%x_%j.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/parity_mechA/logs/%x_%j.log
+@@ -9,2 +9,2 @@
+-export PATH=$EF:$PATH PYTHONPATH=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/parity_mechA/src_a2/src MPLBACKEND=Agg
+-$EF/python /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/parity_mechA/parity_driver.py /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/parity_mechA/covid/a2/LUM-SJ-x213-g/ --analysis
++export PATH=$EF:$PATH PYTHONPATH=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/parity_mechA/src_a2/src MPLBACKEND=Agg
++$EF/python /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/parity_mechA/parity_driver.py /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/parity_mechA/covid/a2/LUM-SJ-x213-g/ --analysis
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/parity_mechA/parity_diff.py
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/parity_mechA/parity_diff.py
+@@ -12 +12 @@
+-W = "/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/parity_mechA"
++W = "/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/parity_mechA"
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/parity_mechA/parity_final.sh
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/parity_mechA/parity_final.sh
+@@ -6 +6 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/parity_mechA/logs/%x_%j.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/parity_mechA/logs/%x_%j.log
+@@ -9 +9 @@
+-/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/benchmark_runs/legacy_v2_v3/env_full/bin/python /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/parity_mechA/parity_driver.py /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/parity_mechA/hhv6b/final/SRR20710641/ --analysis
++/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/benchmark_runs/legacy_v2_v3/env_full/bin/python /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/parity_mechA/parity_driver.py /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/parity_mechA/hhv6b/final/SRR20710641/ --analysis
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/parity_mechA/parity_job.sh
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/parity_mechA/parity_job.sh
+@@ -7 +7 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/parity_mechA/logs/%x_%A_%a.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/parity_mechA/logs/%x_%A_%a.log
+@@ -9 +9 @@
+-W=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/parity_mechA
++W=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/parity_mechA
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/parity_mechA/parity_job2.sh
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/parity_mechA/parity_job2.sh
+@@ -7 +7 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/parity_mechA/logs/%x_%A_%a.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/parity_mechA/logs/%x_%A_%a.log
+@@ -9 +9 @@
+-W=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/parity_mechA
++W=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/parity_mechA
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/q143_interim_evidence/evidence_array.sh
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/q143_interim_evidence/evidence_array.sh
+@@ -6 +6 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/q143_interim_evidence/evidence/%x_%A_%a.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/q143_interim_evidence/evidence/%x_%A_%a.log
+@@ -9 +9 @@
+-N=$M/viralscan_work/q143_interim_evidence
++N=$M/ViralScan-reproducibility/data/runs/work/q143_interim_evidence
+@@ -12,4 +12,4 @@
+-export PATH=$M/conda/envs/viralscan_test_full/bin:$PATH PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=$M/vs_pinned/e7c1b08/src MPLBACKEND=Agg
+-echo "code $(git -C $M/vs_pinned/e7c1b08 rev-parse HEAD) slug=$slug virus=$virus"
+-python $M/vs_pinned/e7c1b08/scripts/dsr02_validate_call.py --run-dir $M/viralscan_work/dsr_round2/runs/$rd --virus "$virus" --out $N/evidence/q143_$slug \
+-  --panel-fasta $M/viral_ref_cat42d/build/viral.fa --host-fasta /exports/archive/hg-funcgenom-research/evonk/old/intern/human_reference/refdata-gex-GRCh38-2024-A/fasta/genome.fa --cores 4
++export PATH=$M/conda/envs/viralscan_test_full/bin:$PATH PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=$M/ViralScan-reproducibility/data/pinned_snapshots/vs_pinned/e7c1b08/src MPLBACKEND=Agg
++echo "code $(git -C $M/ViralScan-reproducibility/data/pinned_snapshots/vs_pinned/e7c1b08 rev-parse HEAD) slug=$slug virus=$virus"
++python $M/ViralScan-reproducibility/data/pinned_snapshots/vs_pinned/e7c1b08/scripts/dsr02_validate_call.py --run-dir $M/ViralScan-reproducibility/data/runs/work/dsr_round2/runs/$rd --virus "$virus" --out $N/evidence/q143_$slug \
++  --panel-fasta $M/ViralScan-reproducibility/data/references/panel_builds/viral_ref_cat42d/build/viral.fa --host-fasta /exports/archive/hg-funcgenom-research/evonk/old/intern/human_reference/refdata-gex-GRCh38-2024-A/fasta/genome.fa --cores 4
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/quickstart_vignette_2026-10-22/run.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/quickstart_vignette_2026-10-22/run.sbatch
+@@ -7 +7 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/quickstart_vignette_2026-10-22/slurm_%j.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/quickstart_vignette_2026-10-22/slurm_%j.log
+@@ -9,2 +9,2 @@
+-cd /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/quickstart_vignette_2026-10-22
+-export PATH=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/quickstart_vignette_2026-10-22/bin:/exports/archive/hg-funcgenom-research/mdmanurung/conda/envs/viralscan_test_full/bin:$PATH
++cd /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/quickstart_vignette_2026-10-22
++export PATH=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/quickstart_vignette_2026-10-22/bin:/exports/archive/hg-funcgenom-research/mdmanurung/conda/envs/viralscan_test_full/bin:$PATH
+@@ -12 +12 @@
+-export VS_WORKDIR=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/quickstart_vignette_2026-10-22/work VS_INDEX=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/references/panel_builds/viral_ref_cat42d/build/panel.idx VS_T2G=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/references/panel_builds/viral_ref_cat42d/build/panel.t2g VS_GTF=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/references/panel_builds/viral_ref_cat42d/build/viral_panel.gtf
++export VS_WORKDIR=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/quickstart_vignette_2026-10-22/work VS_INDEX=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/references/panel_builds/viral_ref_cat42d/build/panel.idx VS_T2G=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/references/panel_builds/viral_ref_cat42d/build/panel.t2g VS_GTF=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/references/panel_builds/viral_ref_cat42d/build/viral_panel.gtf
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/results/datasets/GSE158275/study/download/download.sh
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/results/datasets/GSE158275/study/download/download.sh
+@@ -2 +2 @@
+-# GSE158275 (PRJNA664714) re-download commands. Source: AUTO:redl block of /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/discovery/fastq/trackA_GSE158275/README.md (section 3), copied 2026-10-15.
++# GSE158275 (PRJNA664714) re-download commands. Source: AUTO:redl block of /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/fastq/trackA_GSE158275/README.md (section 3), copied 2026-10-15.
+@@ -13 +13 @@
+-# Store root `W=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/discovery`. Task ids for this folder: `231-232`.
++# Store root `W=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery`. Task ids for this folder: `231-232`.
+@@ -18 +18 @@
+-W=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/discovery; B=/exports/archive/hg-funcgenom-research/mdmanurung/conda/envs/vs_dl/bin
++W=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery; B=/exports/archive/hg-funcgenom-research/mdmanurung/conda/envs/vs_dl/bin
+@@ -33 +33 @@
+-# cd /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/discovery
++# cd /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery
+@@ -40 +40 @@
+-# cd /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/discovery && sha256sum -c --ignore-missing checksums/trackA_GSE158275.sha256
++# cd /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery && sha256sum -c --ignore-missing checksums/trackA_GSE158275.sha256
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/sfl_tonsil/chem_check.sh
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/sfl_tonsil/chem_check.sh
+@@ -6 +6 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/sfl_tonsil/logs/%x_%j.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/sfl_tonsil/logs/%x_%j.log
+@@ -11 +11 @@
+-P=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/sfl_tonsil/pilot
++P=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/sfl_tonsil/pilot
+@@ -14 +14 @@
+-  -w /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/sfl_tonsil/ref/cellranger_raw_whitelist.txt -x 10xv3 -c 4 --json $P/check_chemistry.json
++  -w /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/sfl_tonsil/ref/cellranger_raw_whitelist.txt -x 10xv3 -c 4 --json $P/check_chemistry.json
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/star_hostvirus/align.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/star_hostvirus/align.sbatch
+@@ -8 +8 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/star_hostvirus/logs/%x_%j.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/star_hostvirus/logs/%x_%j.log
+@@ -12,2 +12,2 @@
+-O=$M/viralscan_work/star_hostvirus
+-T=$M/viralscan_work/trackA_round1
++O=$M/ViralScan-reproducibility/data/runs/work/star_hostvirus
++T=$M/ViralScan-reproducibility/data/runs/work/trackA_round1
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/star_hostvirus/align_raw.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/star_hostvirus/align_raw.sbatch
+@@ -8 +8 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/star_hostvirus/logs/%x_%j.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/star_hostvirus/logs/%x_%j.log
+@@ -12,2 +12,2 @@
+-O=$M/viralscan_work/star_hostvirus
+-T=$M/viralscan_work/trackA_round1
++O=$M/ViralScan-reproducibility/data/runs/work/star_hostvirus
++T=$M/ViralScan-reproducibility/data/runs/work/trackA_round1
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/star_hostvirus/build_index.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/star_hostvirus/build_index.sbatch
+@@ -7 +7 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/star_hostvirus/logs/%x_%j.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/star_hostvirus/logs/%x_%j.log
+@@ -10 +10 @@
+-O=$M/viralscan_work/star_hostvirus
++O=$M/ViralScan-reproducibility/data/runs/work/star_hostvirus
+@@ -17 +17 @@
+-  --viral-fasta "$M/viral_ref_cat42d/build/viral.fa" --viral-gtf "$M/viral_ref_cat42d/build/viral_panel.gtf" \
++  --viral-fasta "$M/ViralScan-reproducibility/data/references/panel_builds/viral_ref_cat42d/build/viral.fa" --viral-gtf "$M/ViralScan-reproducibility/data/references/panel_builds/viral_ref_cat42d/build/viral_panel.gtf" \
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/star_hostvirus/covmap.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/star_hostvirus/covmap.sbatch
+@@ -7 +7 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/star_hostvirus/logs/%x_%j.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/star_hostvirus/logs/%x_%j.log
+@@ -10 +10 @@
+-export PYTHONPATH=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/star_hostvirus/code_cov
++export PYTHONPATH=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/star_hostvirus/code_cov
+@@ -14,2 +14,2 @@
+-    {"raw": "/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/star_hostvirus/GSM6416022/Aligned.sortedByCoord.out.bam"},
+-    "/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/star_hostvirus/covmap_hhv6b",
++    {"raw": "/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/star_hostvirus/GSM6416022/Aligned.sortedByCoord.out.bam"},
++    "/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/star_hostvirus/covmap_hhv6b",
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/star_hostvirus/flank_audit/run.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/star_hostvirus/flank_audit/run.sbatch
+@@ -7 +7 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/star_hostvirus/flank_audit/%x_%j.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/star_hostvirus/flank_audit/%x_%j.log
+@@ -9 +9 @@
+-/exports/archive/hg-funcgenom-research/mdmanurung/conda/envs/viralscan_test_full/bin/python -I /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/star_hostvirus/flank_audit/flank_audit.py /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/star_hostvirus/GSM6416022/Aligned.sortedByCoord.out.bam /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/star_hostvirus/ref/hostvirus.gtf /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/star_hostvirus/flank_audit/GSM6416022_classes.tsv
++/exports/archive/hg-funcgenom-research/mdmanurung/conda/envs/viralscan_test_full/bin/python -I /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/star_hostvirus/flank_audit/flank_audit.py /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/star_hostvirus/GSM6416022/Aligned.sortedByCoord.out.bam /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/star_hostvirus/ref/hostvirus.gtf /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/star_hostvirus/flank_audit/GSM6416022_classes.tsv
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/star_hostvirus/flank_audit/run_GSM4796271.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/star_hostvirus/flank_audit/run_GSM4796271.sbatch
+@@ -7 +7 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/star_hostvirus/flank_audit/%x_%j.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/star_hostvirus/flank_audit/%x_%j.log
+@@ -9 +9 @@
+-/exports/archive/hg-funcgenom-research/mdmanurung/conda/envs/viralscan_test_full/bin/python -I /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/star_hostvirus/flank_audit/flank_audit.py /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/star_hostvirus/GSM4796271/Aligned.sortedByCoord.out.bam /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/star_hostvirus/ref/hostvirus.gtf /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/star_hostvirus/flank_audit/GSM4796271_classes.tsv forward
++/exports/archive/hg-funcgenom-research/mdmanurung/conda/envs/viralscan_test_full/bin/python -I /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/star_hostvirus/flank_audit/flank_audit.py /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/star_hostvirus/GSM4796271/Aligned.sortedByCoord.out.bam /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/star_hostvirus/ref/hostvirus.gtf /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/star_hostvirus/flank_audit/GSM4796271_classes.tsv forward
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/star_hostvirus/logs/peak125_job.sh
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/star_hostvirus/logs/peak125_job.sh
+@@ -7 +7 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/star_hostvirus/logs/peak125_job.%j.out
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/star_hostvirus/logs/peak125_job.%j.out
+@@ -9 +9 @@
+-W=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work
++W=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/star_hostvirus/stats.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/star_hostvirus/stats.sbatch
+@@ -7 +7 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/star_hostvirus/logs/%x_%j.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/star_hostvirus/logs/%x_%j.log
+@@ -10 +10 @@
+-O=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/star_hostvirus
++O=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/star_hostvirus
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/replay_hhv6b_GSM6416031_submit.sh
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/replay_hhv6b_GSM6416031_submit.sh
+@@ -2 +2 @@
+-R=$M/viralscan_work/trackA_round1
++R=$M/ViralScan-reproducibility/data/runs/work/trackA_round1
+@@ -7 +7 @@
+-R=$M/viralscan_work/trackA_round1
++R=$M/ViralScan-reproducibility/data/runs/work/trackA_round1
+@@ -17 +17 @@
+-"$BT" count -o "$O/counts_unfiltered/cells_x_genes" -g "$M/viral_ref_cat42d/build/panel.t2g" -e "$K/matrix.ec" -t "$K/transcripts.txt" --genecounts --umi-gene "$O/output.unfiltered.bus"
++"$BT" count -o "$O/counts_unfiltered/cells_x_genes" -g "$M/ViralScan-reproducibility/data/references/panel_builds/viral_ref_cat42d/build/panel.t2g" -e "$K/matrix.ec" -t "$K/transcripts.txt" --genecounts --umi-gene "$O/output.unfiltered.bus"
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/build_provenance.py
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/build_provenance.py
+@@ -41 +41 @@
+-OLD_ROOT = "/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/"
++OLD_ROOT = "/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/"
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/star_segfault_diag_2026-10-20/run.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/star_segfault_diag_2026-10-20/run.sbatch
+@@ -10 +10 @@
+-#SBATCH --output=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackA_round1/star_segfault_diag_2026-10-20/logs/%x_%A_%a.log
++#SBATCH --output=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/star_segfault_diag_2026-10-20/logs/%x_%A_%a.log
+@@ -13 +13 @@
+-R=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackA_round1
++R=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/scripts/arm1_count.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/scripts/arm1_count.sbatch
+@@ -8 +8 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackB_explore_2026-10/logs/%x_%j.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/logs/%x_%j.log
+@@ -11 +11 @@
+-M=/exports/archive/hg-funcgenom-research/mdmanurung; X=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackB_explore_2026-10
++M=/exports/archive/hg-funcgenom-research/mdmanurung; X=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10
+@@ -13 +13 @@
+-if [ $IDX = old ]; then I=$M/viral_ref_cat42d/build/panel.idx; T=$M/viral_ref_cat42d/build/panel.t2g; else I=$X/ref_flank_v2/panel_flank.idx; T=$X/ref_flank_v2/panel_flank.t2g; fi
++if [ $IDX = old ]; then I=$M/ViralScan-reproducibility/data/references/panel_builds/viral_ref_cat42d/build/panel.idx; T=$M/ViralScan-reproducibility/data/references/panel_builds/viral_ref_cat42d/build/panel.t2g; else I=$X/ref_flank_v2/panel_flank.idx; T=$X/ref_flank_v2/panel_flank.t2g; fi
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/scripts/arm2_star.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/scripts/arm2_star.sbatch
+@@ -8 +8 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackB_explore_2026-10/logs/%x_%j.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/logs/%x_%j.log
+@@ -11 +11 @@
+-M=/exports/archive/hg-funcgenom-research/mdmanurung; S=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/star_hostvirus; X=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackB_explore_2026-10
++M=/exports/archive/hg-funcgenom-research/mdmanurung; S=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/star_hostvirus; X=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/scripts/build_flank_fast.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/scripts/build_flank_fast.sbatch
+@@ -7 +7 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackB_explore_2026-10/logs/%x_%j.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/logs/%x_%j.log
+@@ -10 +10 @@
+-B=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/references/panel_builds/viral_ref_cat42d/build; O=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackB_explore_2026-10/ref_flank_fast; cd $O
++B=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/references/panel_builds/viral_ref_cat42d/build; O=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/ref_flank_fast; cd $O
+@@ -12 +12 @@
+-kb ref -i viral_tmp.idx -g viral_flank.t2g -f1 viral_flank_cdna.fa --overwrite /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/references/panel_builds/viral_ref_cat42d/build/viral.fa /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackB_explore_2026-10/ref_flank/viral_panel_flank.gtf
++kb ref -i viral_tmp.idx -g viral_flank.t2g -f1 viral_flank_cdna.fa --overwrite /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/references/panel_builds/viral_ref_cat42d/build/viral.fa /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/ref_flank/viral_panel_flank.gtf
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/scripts/build_flank_fast_index.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/scripts/build_flank_fast_index.sbatch
+@@ -7 +7 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackB_explore_2026-10/logs/%x_%j.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/logs/%x_%j.log
+@@ -10 +10 @@
+-O=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackB_explore_2026-10/ref_flank_fast; cd $O
++O=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/ref_flank_fast; cd $O
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/scripts/build_flank_index.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/scripts/build_flank_index.sbatch
+@@ -7 +7 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackB_explore_2026-10/logs/%x_%j.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/logs/%x_%j.log
+@@ -11 +11 @@
+-cd /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackB_explore_2026-10/ref_flank
++cd /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/ref_flank
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/scripts/build_flank_v2.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/scripts/build_flank_v2.sbatch
+@@ -7 +7 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackB_explore_2026-10/logs/%x_%j.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/logs/%x_%j.log
+@@ -10 +10 @@
+-O=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackB_explore_2026-10/ref_flank_v2; cd $O
++O=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/ref_flank_v2; cd $O
+@@ -13 +13 @@
+-cp /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackB_explore_2026-10/ref_flank_fast/host_cdna_part.fa .
++cp /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/ref_flank_fast/host_cdna_part.fa .
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/scripts/concat_r01.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/scripts/concat_r01.sbatch
+@@ -6 +6 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackB_explore_2026-10/logs/%x_%j.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/logs/%x_%j.log
+@@ -8 +8 @@
+-cd /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackB_explore_2026-10/inputs
++cd /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/inputs
+@@ -10,4 +10,4 @@
+-cat /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/discovery/fastq/pilot/SRR22313879/SRR22313879_3.fastq.gz /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/discovery/fastq/pilot/SRR22313880/SRR22313880_3.fastq.gz > R01_SOC4/R01_SOC4_R1.fastq.gz
+-cat /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/discovery/fastq/pilot/SRR22313879/SRR22313879_4.fastq.gz /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/discovery/fastq/pilot/SRR22313880/SRR22313880_4.fastq.gz > R01_SOC4/R01_SOC4_R2.fastq.gz
+-cat /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/discovery/fastq/R01/SRR22313881/SRR22313881_2.fastq.gz /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/discovery/fastq/R01/SRR22313882/SRR22313882_2.fastq.gz > R01_STUDY4/R01_STUDY4_R1.fastq.gz
+-cat /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/discovery/fastq/R01/SRR22313881/SRR22313881_3.fastq.gz /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/discovery/fastq/R01/SRR22313882/SRR22313882_3.fastq.gz > R01_STUDY4/R01_STUDY4_R2.fastq.gz
++cat /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/fastq/pilot/SRR22313879/SRR22313879_3.fastq.gz /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/fastq/pilot/SRR22313880/SRR22313880_3.fastq.gz > R01_SOC4/R01_SOC4_R1.fastq.gz
++cat /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/fastq/pilot/SRR22313879/SRR22313879_4.fastq.gz /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/fastq/pilot/SRR22313880/SRR22313880_4.fastq.gz > R01_SOC4/R01_SOC4_R2.fastq.gz
++cat /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/fastq/R01/SRR22313881/SRR22313881_2.fastq.gz /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/fastq/R01/SRR22313882/SRR22313882_2.fastq.gz > R01_STUDY4/R01_STUDY4_R1.fastq.gz
++cat /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/fastq/R01/SRR22313881/SRR22313881_3.fastq.gz /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/fastq/R01/SRR22313882/SRR22313882_3.fastq.gz > R01_STUDY4/R01_STUDY4_R2.fastq.gz
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/scripts/strand_preflight.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/scripts/strand_preflight.sbatch
+@@ -8 +8 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackB_explore_2026-10/logs/%x_%j.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/logs/%x_%j.log
+@@ -12,2 +12,2 @@
+-B=$M/viralscan_work/trackB_explore_2026-10
+-S=$M/viralscan_work/star_hostvirus
++B=$M/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10
++S=$M/ViralScan-reproducibility/data/runs/work/star_hostvirus
+@@ -25 +25 @@
+-O=sys.argv[1]; S="/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/star_hostvirus/ref/hostvirus.gtf"
++O=sys.argv[1]; S="/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/star_hostvirus/ref/hostvirus.gtf"
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/scripts/validate_flank.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/scripts/validate_flank.sbatch
+@@ -7 +7 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackB_explore_2026-10/logs/%x_%j.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/logs/%x_%j.log
+@@ -10 +10 @@
+-V=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackB_explore_2026-10/validate; cd $V
++V=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/validate; cd $V
+@@ -12 +12 @@
+-OLD=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/references/panel_builds/viral_ref_cat42d/build; NEW=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackB_explore_2026-10/ref_flank
++OLD=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/references/panel_builds/viral_ref_cat42d/build; NEW=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/ref_flank
+@@ -15 +15 @@
+-  $KAL bus -i $I -o sens_$n -x 10xv2 -t 8 --rf-stranded /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackB_explore_2026-10/validate_inputs/R1.fq /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackB_explore_2026-10/validate_inputs/R2.fq 2>&1 | grep -E 'processed' | tee sens_$n.txt; done
++  $KAL bus -i $I -o sens_$n -x 10xv2 -t 8 --rf-stranded /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/validate_inputs/R1.fq /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/validate_inputs/R2.fq 2>&1 | grep -E 'processed' | tee sens_$n.txt; done
+@@ -17 +17 @@
+-[ -d cal08 ] || { mkdir cal08; tar -xf /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/discovery/fastq/CAL08/sc5p_v2_hs_PBMC_1k/sc5p_v2_hs_PBMC_1k_fastqs.tar -C cal08 --wildcards '*5gex_S1_L001_R[12]_001.fastq.gz'; }
++[ -d cal08 ] || { mkdir cal08; tar -xf /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/fastq/CAL08/sc5p_v2_hs_PBMC_1k/sc5p_v2_hs_PBMC_1k_fastqs.tar -C cal08 --wildcards '*5gex_S1_L001_R[12]_001.fastq.gz'; }
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/scripts/validate_flank_fast.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/scripts/validate_flank_fast.sbatch
+@@ -7 +7 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackB_explore_2026-10/logs/%x_%j.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/logs/%x_%j.log
+@@ -10 +10 @@
+-V=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackB_explore_2026-10/validate_fast; cd $V
++V=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/validate_fast; cd $V
+@@ -12 +12 @@
+-OLD=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/references/panel_builds/viral_ref_cat42d/build; NEW=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackB_explore_2026-10/ref_flank_fast
++OLD=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/references/panel_builds/viral_ref_cat42d/build; NEW=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/ref_flank_fast
+@@ -15 +15 @@
+-  $KAL bus -i $I -o sens_$n -x 10xv2 -t 8 --rf-stranded /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackB_explore_2026-10/validate_inputs/R1.fq /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackB_explore_2026-10/validate_inputs/R2.fq 2>&1 | grep -E 'processed' | tee sens_$n.txt; done
++  $KAL bus -i $I -o sens_$n -x 10xv2 -t 8 --rf-stranded /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/validate_inputs/R1.fq /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/validate_inputs/R2.fq 2>&1 | grep -E 'processed' | tee sens_$n.txt; done
+@@ -17 +17 @@
+-[ -d cal08 ] || { mkdir cal08; tar -xf /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/discovery/fastq/CAL08/sc5p_v2_hs_PBMC_1k/sc5p_v2_hs_PBMC_1k_fastqs.tar -C cal08 --wildcards '*5gex_S1_L001_R[12]_001.fastq.gz'; }
++[ -d cal08 ] || { mkdir cal08; tar -xf /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/fastq/CAL08/sc5p_v2_hs_PBMC_1k/sc5p_v2_hs_PBMC_1k_fastqs.tar -C cal08 --wildcards '*5gex_S1_L001_R[12]_001.fastq.gz'; }
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/scripts/validate_flank_v2.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/scripts/validate_flank_v2.sbatch
+@@ -7 +7 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackB_explore_2026-10/logs/%x_%j.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/logs/%x_%j.log
+@@ -10 +10 @@
+-V=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackB_explore_2026-10/validate_v2; cd $V
++V=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/validate_v2; cd $V
+@@ -12 +12 @@
+-OLD=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/references/panel_builds/viral_ref_cat42d/build; NEW=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackB_explore_2026-10/ref_flank_v2
++OLD=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/references/panel_builds/viral_ref_cat42d/build; NEW=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/ref_flank_v2
+@@ -15 +15 @@
+-  $KAL bus -i $I -o sens_$n -x 10xv2 -t 8 --rf-stranded /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackB_explore_2026-10/validate_inputs/R1.fq /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackB_explore_2026-10/validate_inputs/R2.fq 2>&1 | grep -E 'processed' | tee sens_$n.txt; done
++  $KAL bus -i $I -o sens_$n -x 10xv2 -t 8 --rf-stranded /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/validate_inputs/R1.fq /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/validate_inputs/R2.fq 2>&1 | grep -E 'processed' | tee sens_$n.txt; done
+@@ -17 +17 @@
+-[ -d cal08 ] || { mkdir cal08; tar -xf /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/discovery/fastq/CAL08/sc5p_v2_hs_PBMC_1k/sc5p_v2_hs_PBMC_1k_fastqs.tar -C cal08 --wildcards '*5gex_S1_L001_R[12]_001.fastq.gz'; }
++[ -d cal08 ] || { mkdir cal08; tar -xf /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/fastq/CAL08/sc5p_v2_hs_PBMC_1k/sc5p_v2_hs_PBMC_1k_fastqs.tar -C cal08 --wildcards '*5gex_S1_L001_R[12]_001.fastq.gz'; }
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/scripts/viral_umis.py
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/scripts/viral_umis.py
+@@ -3 +3 @@
+-X = "/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackB_explore_2026-10"
++X = "/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10"
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackC_iav/chem_probe_pilot.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackC_iav/chem_probe_pilot.sbatch
+@@ -9 +9 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackC_iav/logs/%x_%A_%a.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackC_iav/logs/%x_%A_%a.log
+@@ -12,3 +12,3 @@
+-P=$M/viralscan_work/trackC_iav
+-CODE=$M/vs_pinned/97a64f6
+-REF=$M/viral_ref_cat42d/build
++P=$M/ViralScan-reproducibility/data/runs/work/trackC_iav
++CODE=$M/ViralScan-reproducibility/data/pinned_snapshots/vs_pinned/97a64f6
++REF=$M/ViralScan-reproducibility/data/references/panel_builds/viral_ref_cat42d/build
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackC_iav/pilot_download.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackC_iav/pilot_download.sbatch
+@@ -8 +8 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackC_iav/logs/%x_%A_%a.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackC_iav/logs/%x_%A_%a.log
+@@ -10 +10 @@
+-C=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackC_iav
++C=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackC_iav
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackC_iav/refs/build_cal09.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackC_iav/refs/build_cal09.sbatch
+@@ -9 +9 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackC_iav/refs/logs/%x_%j.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackC_iav/refs/logs/%x_%j.log
+@@ -11 +11 @@
+-R=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackC_iav/refs
++R=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackC_iav/refs
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackC_iav/refs/build_src/scripts/slurm_strand_test.sh
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackC_iav/refs/build_src/scripts/slurm_strand_test.sh
+@@ -29 +29 @@
+-OUT=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/strand_test/$NAME
++OUT=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/strand_test/$NAME
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackC_iav/refs/gate_hpv16.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackC_iav/refs/gate_hpv16.sbatch
+@@ -8 +8 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackC_iav/refs/logs/%x_%j.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackC_iav/refs/logs/%x_%j.log
+@@ -12,2 +12,2 @@
+-REF=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackC_iav/refs/cat42d_cal09/build
+-D=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/hpv16_gse189670
++REF=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackC_iav/refs/cat42d_cal09/build
++D=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/hpv16_gse189670
+@@ -27 +27 @@
+-python3 /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackC_iav/refs/compare_gate.py \
++python3 /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackC_iav/refs/compare_gate.py \
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackC_iav/zenodo_inputs.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackC_iav/zenodo_inputs.sbatch
+@@ -8 +8 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackC_iav/logs/%x_%j.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackC_iav/logs/%x_%j.log
+@@ -10 +10 @@
+-C=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackC_iav
++C=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackC_iav
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackC_iav/zenodo_seurat_meta.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackC_iav/zenodo_seurat_meta.sbatch
+@@ -10 +10 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackC_iav/logs/%x_%j.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackC_iav/logs/%x_%j.log
+@@ -12 +12 @@
+-C=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackC_iav
++C=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackC_iav
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/ttmdv_readcheck/readcheck.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/ttmdv_readcheck/readcheck.sbatch
+@@ -10,2 +10,2 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/ttmdv_readcheck/logs/%x_%A_%a.out
+-#SBATCH -e /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/ttmdv_readcheck/logs/%x_%A_%a.err
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/ttmdv_readcheck/logs/%x_%A_%a.out
++#SBATCH -e /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/ttmdv_readcheck/logs/%x_%A_%a.err
+@@ -13 +13 @@
+-BASE=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/ttmdv_readcheck
++BASE=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/ttmdv_readcheck
+@@ -20 +20 @@
+-MMI=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/f005_readorigin/competitive.mmi
++MMI=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/f005_readorigin/competitive.mmi
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/ttmdv_readcheck/summarise.py
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/ttmdv_readcheck/summarise.py
+@@ -22 +22 @@
+-BASE = Path("/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/ttmdv_readcheck")
++BASE = Path("/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/ttmdv_readcheck")

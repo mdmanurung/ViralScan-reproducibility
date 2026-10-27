@@ -1,0 +1,188 @@
+area	id	referenced_by
+Software backlog reconciliation (2026-10-09)	DLIST-02	src/viralscan/runconfig.py:224; src/viralscan/Snakefile:361; src/viralscan/defaults.py:117; src/viralscan/evidence.py:604; src/viralscan/scripts/host_capture.py:1; tests/test_host_capture.py:1; tests/test_snakefile_dag.py:489
+Software backlog reconciliation (2026-10-09)	VERDICT-01	src/viralscan/molecule_verdict.py:1; src/viralscan/scripts/evidence_run.py:617; tests/test_molecule_verdict.py:1; tests/_frozen_oracles/frozen_molecule_verdict_faf5667.py:1
+Software backlog reconciliation (2026-10-09)	CAT-14/CAT-15/CAT-16/CAT-19/CAT-40	src/viralscan/reference_gates.py:1,12-16; tests/test_reference_gates_catalogue.py:1; tests/test_reference_gates_inspect.py:1; tests/test_cat19_tonsil02_contracts.py:1
+Software backlog reconciliation (2026-10-09)	TONSIL-02	tests/test_cat19_tonsil02_contracts.py:1
+WP0 - Governance and legacy freeze	GOV-02 / public_ship_scope	scripts/check_data_governance.py and config/public_ship_scope.json (kept)
+WP0 - Governance and legacy freeze	analysis/v3_artifact_inventory.tsv (GOV-03)	scripts/validate_artifact_inventory.py:36,236; scripts/validate_claim_registry.py:40,419; scripts/check_g3_diff.py:43 (scripts stay; paths would dangle if inventory moves)
+WP0 - Governance and legacy freeze	GOV-06	tests/test_fresh_control_gov06.py:1 (in tests_move_set, moves with the row)
+WP1D - Mechanism consolidation	ANELLO-PRIOR	src/viralscan/anello_align.py:10,73; src/viralscan/virus_grouping.py:236; src/viralscan/defaults.py:115; src/viralscan/constants.py:418,427,428; src/viralscan/cli/parsers.py:1525; tests/test_mech_a_consumers.py:97
+WP1D - Mechanism consolidation	SW-23	tests/test_protocol_code_honouring.py:128
+WP1E - Grill decisions for 3.0	DEF-00	tests/test_validation_protocol.py:489,729,1700 and tests/test_protocol_code_honouring.py:128 (comments only; test_validation_protocol is in tests_move_set)
+WP1E - Grill decisions for 3.0	DEF-07	docs/conf.py:56 (comment only); docs/notices/CAT-30_retraction_DRAFT.md:3 (moves)
+WP1E - Grill decisions for 3.0	DEF-08/REL-03	environment.explicit.txt and tests/test_snakefile_dag.py (package; row stays)
+.living/learnings.md	L356 2026-07-01	CLAUDE.md:160-172 (Mycelium living-repo section) and CLAUDE.md:122-132 (.living/conventions)
+.living/learnings.md	L647 2026-07-15	CLAUDE.md:133-134 (aifi-scrna-pipeline pack)
+.living/learnings.md	L1133 2026-07-27	docs/plans/2026-10-13-protocol-pending-sections-draft.md:45 cites .living/decisions.md:1165 (line number; inside this entry). Doc is plan material, so it should travel with the repro copy; decisions.md is kept whole by D15.
+.living/learnings.md	L1612 2026-10-04	src/viralscan/scripts/read_filter.py:28 and tests/_frozen_oracles/frozen_read_filter_d056986.py:28 cite '.living/decisions.md, 2026-10-04 and 2026-10-05'
+.living/learnings.md	L1688 2026-10-05	src/viralscan/scripts/read_filter.py:28 and tests/_frozen_oracles/frozen_read_filter_d056986.py:28 (cite decisions.md 2026-10-04 and 2026-10-05)
+.living/learnings.md	L1696 2026-10-05	src/viralscan/scripts/read_filter.py:28 and tests/_frozen_oracles/frozen_read_filter_d056986.py:28 (cite decisions.md 2026-10-05)
+WP2 — Install, lock, and artifact parity (incl. WP2A/2B/2C)	REL-15	docs/release_policy.md:4,14; docs/conf.py:89
+WP2 — Install, lock, and artifact parity (incl. WP2A/2B/2C)	REL-16	src/viralscan/validation.py:49,82; src/viralscan/menu.py:1511; src/viralscan/scripts/evidence_run.py:181; src/viralscan/reference_gates.py:73; tests/test_validation.py:424,454; tests/integration/test_tiny_end_to_end.py:112 (comment/docstring pointers only)
+WP2 — Install, lock, and artifact parity (incl. WP2A/2B/2C)	REL-03	tests/test_validation_protocol.py:928,1578,1582 (protocol blocker resolution_task string, not a PLAN.md read)
+WP3 — Preregister scientific validation	SCI-02	src/viralscan/schemas/v3/validation_protocol.schema.json:661 (const resolution_task)
+WP3 — Preregister scientific validation	SCI-04	src/viralscan/schemas/v3/validation_protocol.schema.json:856 (const text)
+WP3 — Preregister scientific validation	SCI-05	tests/test_sci05_round13_code.py:1, tests/test_sci05_round14_code.py:1, tests/test_sci05_round15_code.py:1,223, tests/test_protocol_code_honouring.py:1 (docstrings only)
+WP4A — Profiles and provenance	MASK-01	src/viralscan/scripts/build_reference.py:161,2120; tests/test_build_reference.py:989
+WP4A — Profiles and provenance	REF-03	src/viralscan/scripts/build_reference.py:1898,2175; tests/test_build_reference.py:1065
+WP4A — Profiles and provenance	REF-02	tests/test_build_reference.py:394
+WP4A — Profiles and provenance	REF-04	tests/test_compare_reference_reproducibility.py:1
+WP4A — Profiles and provenance	REF-11	tests/integration/test_tiny_end_to_end.py:24,126
+WP4B — Full-genome competition and anellovirus	TIER-01	src/viralscan/evidence_tiers.py:1,20; tests/test_evidence_tiers.py:1; tests/test_adjudicate_candidates.py:324; docs/output_reference.md:890
+WP4B — Full-genome competition and anellovirus	TIER-02	src/viralscan/evidence_tiers.py:22; src/viralscan/tier_measures.py:1; tests/test_tier_measures.py:1
+WP4B — Full-genome competition and anellovirus	REF-13	src/viralscan/gtf_normalise.py:1; docs/panel_integrity.md:27,90; tests/test_gtf_normalise.py:1; tests/test_package_starsolo_duplicates.py:1; tests/test_panel_integrity_contract.py:263; tests/test_anellovirus_reference.py:751
+WP4B — Full-genome competition and anellovirus	REF-06	docs/output_reference.md:40; docs/faq.md:154
+WP4B — Full-genome competition and anellovirus	REF-07	src/viralscan/scripts/build_reference.py:680,941; tests/test_cli.py:461
+WP4B — Full-genome competition and anellovirus	REF-08	src/viralscan/scripts/build_reference.py:312; src/viralscan/kmer_sharing.py:8; docs/output_reference.md:952; docs/panel_integrity.md:139; tests/test_reference_near_duplicate.py:4,62
+WP4B — Full-genome competition and anellovirus	REF-09	tests/test_evidence_tiers.py:297
+WP4B — Full-genome competition and anellovirus	REF-10	src/viralscan/virus_grouping.py:61; src/viralscan/scripts/detection.py:1947; docs/output_reference.md:1008; tests/test_mech_a_consumers.py:133
+.living/decisions.md	2026-07-01 64 GB references/ untracked but not gitignored	scripts/git-hooks/pre-commit:4
+.living/decisions.md	2026-07-03 Scratch cleanup deleted kallisto index; kallisto version gotcha	docs/plans/2026-10-04-anello-remaining-work.md:61 mentions a related learning (kb bundled kallisto, not this one)
+.living/decisions.md	A schema shipped in two places will drift	schemas/v3 vs src/viralscan/schemas/v3 pin test
+.living/decisions.md	2026-10-03 kb uses its own bundled kallisto; foreign index spins forever	docs/plans/2026-10-04-anello-remaining-work.md:61
+.living/decisions.md	2026-10-03 Snakemake preamble makes __future__ import a SyntaxError	CLAUDE.md Style section; tests/test_snakemake_script_modules.py
+WP8B — Vignettes and claims (incl. G6a gate text)	DOC-06	docs/vignettes/VIGNETTES_PLAN.md:13 (moves with the 41-path docs set; prose only)
+WP8B — Vignettes and claims (incl. G6a gate text)	DOC-01	tests/test_docs_consistency.py:56 (comment header only)
+WP8B — Vignettes and claims (incl. G6a gate text)	DOC-03	tests/test_docs_consistency.py:56 (comment header only)
+WP8B — Vignettes and claims (incl. G6a gate text)	DOC-08	scripts/gen_workflow_comparison.py:2 and tests/test_workflow_comparison.py:1 (both move to repro; comment only)
+WP8B — Vignettes and claims (incl. G6a gate text)	DOC-10	scripts/gen_workflow_comparison.py:9 (moves; comment only)
+WP12 — Observe and maintain	OPS-01	docs/release_policy.md:3,136 (prose)
+WP12 — Observe and maintain	OPS-02	docs/reference_maintenance.md:3,107 (prose)
+WP12 — Observe and maintain	OPS-05	docs/reference_maintenance.md:28 (prose; row would move)
+External inputs and authority	REL-15	docs/release_policy.md:4,14 and scripts/make_panel_archive.py:104 (prose/comment)
+External inputs and authority	REF-11	scripts/make_panel_archive.py:2; tests/integration/test_tiny_end_to_end.py:24,126 (comments)
+Evidence log	SCI-02	src/viralscan/schemas/v3/validation_protocol.schema.json:661; tests/test_validation_protocol.py:321,521 (comment/description strings)
+Evidence log	SCI-03	scripts/validate_v3_protocol.py:93,99; tests/test_validation_protocol.py:791 (comments)
+Evidence log	SCI-04	src/viralscan/schemas/v3/validation_protocol.schema.json:856; tests/test_sci05_round15_code.py:223; tests/test_validation_protocol.py:339 (strings)
+Evidence log	GOV-06	tests/test_fresh_control_gov06.py:1 (moves with tests)
+Evidence log	PROG-07	src/viralscan/gene_programs.py:32,57,142 (comments citing the row; soft)
+Evidence log	CAT-03	src/viralscan/virus_catalog.py:3; tests/test_virus_catalog.py:1
+Evidence log	CAT-09	tests/test_virus_catalog.py:180
+Evidence log	CAT-11	scripts/measure_kmer_capture.py:4; tests/test_measure_kmer_capture.py:1 (both move)
+Evidence log	REF-01	scripts/measure_kmer_capture.py:4,321
+Evidence log	SIMP-03	tests/test_detection.py:241
+Evidence log	DEV-028	scripts/v3_score.py:642 (stays: truth-panel script; comment)
+VR pilot — read cleanup and transcript reconstruction (2026-10-14)	AUD3-07	src/viralscan/defaults.py:21; tests/test_em_global_residue_pinning.py:1
+Kraken2 taxonomic discovery (DISC)	DISC-01	src/viralscan/validation.py:37
+Kraken2 taxonomic discovery (DISC)	DISC-02	src/viralscan/discovery.py:8; tests/test_discovery.py:1
+Kraken2 taxonomic discovery (DISC)	DISC-03	src/viralscan/discovery.py:9
+Kraken2 taxonomic discovery (DISC)	DISC-04	src/viralscan/discovery.py:45,617
+Kraken2 taxonomic discovery (DISC)	DISC-05	src/viralscan/discovery.py:723
+Kraken2 taxonomic discovery (DISC)	DISC-06/07/08/09	src/viralscan/discovery.py:9-11,650,1721
+Kraken2 taxonomic discovery (DISC)	DISC-10	tests/test_discovery_integration.py:1
+Kraken2 taxonomic discovery (DISC)	DISC-11	src/viralscan/cli/parsers.py:719; src/viralscan/discovery.py:1653,1659
+Kraken2 taxonomic discovery (DISC)	DISC-13	src/viralscan/discovery.py:1107,1192,1315
+WP4D — Gene-programme inference, layer 2	PROG-07	src/viralscan/gene_programs.py:32; src/viralscan/gene_programs.py:57; src/viralscan/gene_programs.py:142; docs/output_reference.md:541; docs/output_reference.md:545
+WP4D — Gene-programme inference, layer 2	PROG-08	tests/test_gene_programs.py:70; tests/test_gene_programs.py:586; docs/output_reference.md:636
+WP4E — Named HPV ORFs for the oncogene-versus-capsid contrast	HPV-10	src/viralscan/hpv_genes.py:48 (points to PLAN.md for the per-type L1 caveat)
+WP4F — Real gene structure for the Anelloviridae panel (incl. ### Root cause and ### Measured CDS coverage)	ANELLO-12	scripts/fix_thin_gtfs.py:7
+WP4G — Anellovirus detection you can trust	ANDET-01	src/viralscan/anello_align.py:652; src/viralscan/scripts/detection.py:917; src/viralscan/reference_gates.py:322; tests/test_anello_detection_merge.py:143; tests/test_cellcalling.py:785; docs/output_reference.md:286
+WP4G — Anellovirus detection you can trust	ANDET-02	src/viralscan/virus_grouping.py:331; src/viralscan/scripts/detection.py:1889; tests/test_host_homology_loci.py:161; tests/test_mech_a_consumers.py:374; docs/output_reference.md:293
+WP4G — Anellovirus detection you can trust	ANDET-03	src/viralscan/virus_grouping.py:238; tests/test_mech_a_consumers.py:133
+WP4G — Anellovirus detection you can trust	ANDET-04	src/viralscan/Snakefile:344; src/viralscan/runconfig.py:221; src/viralscan/defaults.py:114; tests/test_snakefile_dag.py:436; docs/output_reference.md:1120
+WP4G — Anellovirus detection you can trust	ANDET-05	src/viralscan/virus_identity.py:54; src/viralscan/virus_catalog.py:139; tests/test_virus_catalog.py:135; tests/test_virus_rollup.py:78; docs/output_reference.md:845
+WP4G — Anellovirus detection you can trust	ANDET-09	src/viralscan/Snakefile:98; src/viralscan/runconfig.py:213; src/viralscan/defaults.py:97; src/viralscan/cli/parsers.py:1482; src/viralscan/scripts/detection.py:1779; tests/test_snakemake_script_modules.py:10
+WP4H — Comprehensive human-virus catalogue (main section, CAT-01..CAT-08)	CAT-01	src/viralscan/scripts/build_reference.py:1930; src/viralscan/scripts/build_reference.py:2295; src/viralscan/scripts/build_reference.py:2318; src/viralscan/scripts/build_reference.py:2325; tests/test_virus_catalog.py:120
+WP4H — Comprehensive human-virus catalogue (main section, CAT-01..CAT-08)	CAT-03	src/viralscan/virus_catalog.py:3; tests/test_virus_catalog.py:1
+WP4H — Comprehensive human-virus catalogue (main section, CAT-01..CAT-08)	CAT-06	src/viralscan/scripts/analysis.py:100; src/viralscan/scripts/analysis.py:122; src/viralscan/virus_identity.py:470; tests/test_build_manifest.py:91; tests/integration/test_tiny_end_to_end.py:25; tests/test_analysis.py:446
+WP4H expansion — breadth and measured diversity	PANEL-01	tests/test_panel_candidates.py:1; tests/test_panel_promote.py:1; tests/test_panel_pool.py:1; tests/test_panel_kmer_sharing.py:1; scripts/panel_candidates.py:2; scripts/panel_promote.py:2; scripts/panel_pool.py:2; scripts/panel_kmer_sharing.py:2; scripts/model_nocds_gtfs.py:2; docs/panel_integrity.md:83
+WP4H expansion — breadth and measured diversity	CAT-13	scripts/check_dist_size.py:2; scripts/check_dist_size.py:10
+WP4H expansion — breadth and measured diversity	CAT-14	src/viralscan/reference_gates.py:13; src/viralscan/reference_gates.py:128; tests/test_reference_gates_catalogue.py:1
+WP4H expansion — breadth and measured diversity	CAT-15	src/viralscan/reference_gates.py:15; src/viralscan/reference_gates.py:227; tests/test_reference_gates_catalogue.py:133
+WP4H expansion — breadth and measured diversity	CAT-16	src/viralscan/reference_gates.py:16; src/viralscan/reference_gates.py:274; scripts/build_bundled_panel_ref.py:451; tests/test_reference_gates_catalogue.py:170
+WP4H expansion correction and additions	CAT-17	scripts/build_bundled_panel_ref.py:89; scripts/build_bundled_panel_ref.py:104; scripts/build_bundled_panel_ref.py:145; scripts/build_bundled_panel_ref.py:385; tests/test_build_reference.py:40; tests/integration/test_anellovirus_chain.py:47
+WP4H expansion correction and additions	CAT-19	src/viralscan/reference_gates.py:12; src/viralscan/reference_gates.py:37; tests/test_cat19_tonsil02_contracts.py:16; tests/test_reference_gates_inspect.py:1; scripts/build_bundled_panel_ref.py:443
+WP4H external-asset adoption and adversarial corrections	CAT-05	tests/test_index_reconciliation.py:621; tests/test_index_reconciliation.py:627; tests/test_index_reconciliation.py:640; tests/test_anellovirus_reference.py:106; tests/test_anellovirus_reference.py:146; scripts/build_bundled_panel_ref.py:690; src/viralscan/data/index_exclusions.tsv:39; src/viralscan/data/anellovirus_accessions.tsv:26
+WP4H external-asset adoption and adversarial corrections	CAT-28	scripts/slurm_kbref_full_panel_v2.sh:6 (moves); tests/test_cat28_panviral_marker_check.py:1 (moves)
+WP4H external-asset adoption and adversarial corrections	CAT-29	tests/test_gene_programs_capturability.py:43
+WP4I — Complete latent/lytic state calling	PROG-11	comment/docstring only: tests/test_gene_programs.py:301,1152; docs/output_reference.md:545
+WP4I — Complete latent/lytic state calling	PROG-12	comment only: src/viralscan/defaults.py:121; src/viralscan/gene_programs.py:104,444,537,541; tests/test_gene_programs.py:1083,1219,1234
+WP4I — Complete latent/lytic state calling	PROG-13	comment only: src/viralscan/repeat_merges.py:1; scripts/apply_repeat_gene_merges.py:2; scripts/build_bundled_panel_ref.py:946,950; tests/test_repeat_merges.py:1,22
+WP4I — Complete latent/lytic state calling	PROG-14	comment only: src/viralscan/gene_programs.py:552,657; docs/output_reference.md:648; tests/test_gene_programs_unresolved.py:1; tests/test_gene_programs_audit4.py:4
+WP4I — Complete latent/lytic state calling	PROG-17	comment only: src/viralscan/scripts/cellcalling.py:684,701,732; src/viralscan/scripts/detection.py:2226; src/viralscan/scripts/gene_programs.py:312; docs/output_reference.md:142,545,647; tests/test_cellcalling.py:738
+WP4I — Complete latent/lytic state calling	PROG-19	comment only: src/viralscan/gene_programs.py:669; tests/test_gene_programs.py:1193
+WP4J — SFL tonsil TTV and HPV screen	TONSIL-02	docstring only: tests/test_cat19_tonsil02_contracts.py:1
+WP4K — Catalogue↔index reconciliation and targeted reference adds	CAT-31	HARD: tests/test_index_reconciliation.py:645-648 reads PLAN.md and asserts it contains 'catalogued_not_indexed.tsv' (in this range at PLAN.md:5872,5885,5907; also earlier in file ~462,5044+). Soft: src/viralscan/constants.py:166; src/viralscan/scripts/build_reference.py:25,985,1359; src/viralscan/data/index_exclusions.tsv:7; scripts/build_bundled_panel_ref.py:30,508,839
+WP4K — Catalogue↔index reconciliation and targeted reference adds	CAT-32	comment only: src/viralscan/data/index_exclusions.tsv:26
+WP4K — Catalogue↔index reconciliation and targeted reference adds	CAT-33	comment only: src/viralscan/data/index_exclusions.tsv:27
+WP4K — Catalogue↔index reconciliation and targeted reference adds	CAT-37	comment only: src/viralscan/scripts/ncbi_fetch.py:621; tests/test_ncbi_fetch.py:608
+WP4K — Catalogue↔index reconciliation and targeted reference adds	CAT-38	comment only: scripts/fix_thin_gtfs.py:2; tests/test_thin_gtf_scripts.py:1
+WP4K — Catalogue↔index reconciliation and targeted reference adds	CAT-39	comment only: scripts/model_hpv_cds_gtfs.py:2
+WP4K — Catalogue↔index reconciliation and targeted reference adds	CAT-40	comment only: src/viralscan/reference_gates.py:1,12,37,97,114,385; src/viralscan/scripts/build_reference.py:1730; docs/panel_integrity.md:67; tests/test_reference_gates_inspect.py:1
+WP4K — Catalogue↔index reconciliation and targeted reference adds	TAXO-01	comment only: src/viralscan/constants.py:410; src/viralscan/multimapping.py:69,965; src/viralscan/virus_catalog.py:104; src/viralscan/scripts/detection.py:703,1884,1933,2300; src/viralscan/scripts/multimap.py:418; docs/output_reference.md:243,842; tests/test_virus_rollup.py:1
+WP4L — Audit 2026-10 findings	AUD-06	comment only: src/viralscan/defaults.py:40; src/viralscan/enrichment.py:113; src/viralscan/menu.py:1134; src/viralscan/run_safety.py:222; src/viralscan/scripts/detection.py:508,621,937,1923; src/viralscan/scripts/umap.py:75; tests/test_infected_rule_and_gate.py:1,4; tests/test_cellcalling.py:1055; tests/test_run_safety.py:276
+WP4L — Audit 2026-10 findings	AUD-07	comment only: src/viralscan/defaults.py:44; src/viralscan/scripts/detection.py:506,621,942,1004,1923,2266; src/viralscan/run_safety.py:222; tests/test_infected_rule_and_gate.py:1,4
+WP4L — Audit 2026-10 findings	AUD-08	comment only: src/viralscan/Snakefile:335; tests/test_snakefile_dag.py:475; tests/test_gene_programs.py:1067
+WP4L — Audit 2026-10 findings	AUD-04	comment only: src/viralscan/scripts/hostresponse.py:3060; tests/test_hostresponse.py:461,575
+WP4L — Audit 2026-10 findings	AUD-09	comment only: src/viralscan/run_safety.py:191; tests/test_ncbi_fetch.py:883; tests/test_hr_entrypoint_contract.py:85
+WP4L — Audit 2026-10 findings	AUD-13	comment only: src/viralscan/gtf_normalise.py:8; src/viralscan/virus_identity.py:583; tests/test_build_manifest.py:290; tests/test_gene_programs_staleness.py:1
+WP4L — Audit 2026-10 findings	AUD-17	comment only: src/viralscan/gene_programs.py:125,219,699; src/viralscan/scripts/gene_programs.py:207; tests/test_gene_programs_capturability.py:1
+WP4L — Audit 2026-10 findings	AUD-19	comment only: src/viralscan/gene_programs.py:112,202,225; tests/test_gene_programs_audit4.py:1
+WP4L — Audit 2026-10 findings	AUD-20	comment only: src/viralscan/reference_strategy.py:62,405,479,1016,1107,1269; src/viralscan/scripts/evidence_run.py:312; tests/test_reference_audit.py:250,280; tests/test_constants.py:27
+WP4L — Audit 2026-10 findings	AUD-21	comment only: src/viralscan/scripts/umap.py:58; tests/test_detection.py:315,410,419
+WP4L — Audit 2026-10 findings	AUD3-02-OPEN	comment only: docs/faq.md:124; tests/test_umap.py:422
+WP4L — Audit 2026-10 findings	AUD3-02	comment only: src/viralscan/scripts/umap.py:149,362; tests/test_umap.py:335
+WP4M — Longitudinal compiler (Track B, discovery study M7)	LONG-01	docstring only: tests/test_longitudinal_compile.py:1; scripts/longitudinal_compile.py
+WP4M — Longitudinal compiler (Track B, discovery study M7)	LONG-02	docstring only: tests/test_longitudinal_compile.py:1
+WP5A — Generator	VAL-01	comment only: scripts/generate_truth_panel.py:2,1365; scripts/ref07_host_homology_table.py:2,16,23; scripts/v3_partition.py:2; tests/test_generate_truth_panel.py:1; tests/test_read_filter.py:29,116
+WP5A — Generator	VAL-02	comment only: tests/test_val_generator_audit.py:1
+WP5A — Generator	VAL-03	comment only: scripts/ref07_host_homology_table.py:6; tests/test_val_generator_audit.py:128
+WP5B — Scorer and tiny gate	VAL-06	docstring only: scripts/v3_score.py:2; scripts/v3_partition.py:2; scripts/v3_lod.py:2; tests/test_v3_scorer.py:1; tests/test_v3_lod.py:1
+WP5B — Scorer and tiny gate	VAL-07	docstring only: scripts/v3_score.py:5; tests/test_v3_scorer.py:1
+WP5B — Scorer and tiny gate	VAL-08	comment only: scripts/v3_score.py:374; scripts/val08_golden.py:2,6; tests/test_val08_golden.py:1; tests/integration/test_truth_panel_exact.py:1,308; tests/test_protocol_code_honouring.py:207
+WP5B — Scorer and tiny gate	VAL-09	comment/schema description: src/viralscan/schemas/v3/validation_protocol.schema.json:1032
+WP6C — Dataset run plan	CHEM-01	comment only: src/viralscan/chemistry_check.py:5; src/viralscan/cli/parsers.py:1071; tests/test_chemistry_check.py:1
+WP6C — Dataset run plan	CHEM-02	comment only: src/viralscan/tchem.py:1; src/viralscan/menu.py:911; src/viralscan/cli/parsers.py:104; tests/test_tchem.py:1
+WP6C — Dataset run plan	CELLS-02	comment only: src/viralscan/scripts/cellcalling.py:532; docs/output_reference.md:42,45; tests/test_cellcalling.py:266
+WP6C — Dataset run plan	DLIST-02	comment only: src/viralscan/defaults.py:117; src/viralscan/evidence.py:604; src/viralscan/runconfig.py:224; src/viralscan/scripts/host_capture.py:1; src/viralscan/Snakefile:361; tests/test_snakefile_dag.py:489; tests/test_host_capture.py:1
+WP6C — Dataset run plan	EMC-01	comment only: src/viralscan/defaults.py:19; src/viralscan/multimapping.py:797; tests/test_multimapping_properties.py:224,228
+WP6C — Dataset run plan	VERDICT-01	docstring only: src/viralscan/molecule_verdict.py:1; src/viralscan/scripts/evidence_run.py:617; tests/test_molecule_verdict.py:1
+WP6C — Dataset run plan	ALIGN-PLOT-01	docstring only: src/viralscan/competitive_plot.py:1; tests/test_competitive_plot.py:1
+WP6C — Dataset run plan	ADJ-01	docstring only: tests/test_adjudicate_candidates.py:1; tests/test_protocol_lock.py:15
+WP6C — Dataset run plan	LOCK-02	docstring only: tests/test_protocol_lock.py:1
+WP6C — Dataset run plan	DISC-01	comment only: src/viralscan/validation.py:37
+WP6C — Dataset run plan	DSR-16	docstring only (row id reused: 6535 and 6640): tests/test_dsr_round2b_sens07.py:1; tests/test_dsr_round_compare.py:1; tests/test_dsr_round_env.py:1; tests/test_explore_ledger.py:1 (these tests are not in tests_move_set although the dsr_* scripts move; resolve in tests triage)
+WP6C — Dataset run plan	SENS-07	comment only: scripts/plant_anello_10x.py:383; tests/test_dsr_round2b_sens07.py:1
+WP6C — Dataset run plan	DSR-02	comment only: tests/test_evidence.py:36
+SCI-05 review rounds, tier measures, LOCK-01, protocol and grill-4/3 notes (2026-10-12..14)	SCI-05 (and DEV-027..DEV-032)	docstring-only refs, no assertion on PLAN.md: tests/test_protocol_code_honouring.py:1, tests/test_sci05_round14_code.py:1, tests/test_sci05_round15_code.py:1, tests/test_validation_protocol_round13.py:1, tests/test_validation_protocol_round12.py:1, tests/test_generate_truth_panel_m04.py:215, scripts/v3_score.py:642 (DEV-028)
+SCI-05 review rounds, tier measures, LOCK-01, protocol and grill-4/3 notes (2026-10-12..14)	DSR-16	docstring-only: tests/test_dsr_round_env.py:1, tests/test_dsr_round_compare.py:1, tests/test_dsr_round2b_sens07.py:1
+SCI-05 review rounds, tier measures, LOCK-01, protocol and grill-4/3 notes (2026-10-12..14)	LOCK-01	src/viralscan/viral_loci.py:1 (docstring); LOCK01-PRE stays because the paragraph is both
+SCI-05 review rounds, tier measures, LOCK-01, protocol and grill-4/3 notes (2026-10-12..14)	TIER-01 / TIER-02	src/viralscan/evidence_tiers.py:1,20,22 and src/viralscan/tier_measures.py:1 (docstrings); paragraphs are both
+Waves 2-4 and W3-01..W3-11 (2026-10-09..10)	MECH-C (W3-10, line 649)	CLAUDE.md:103 ('PLAN `MECH-C`'). The row stays in the package, so nothing breaks.
+F-015 catalogue vs index, CAT-17 panel expansion, WP4H design	CAT-31 / catalogued_not_indexed.tsv (line 908)	tests/test_index_reconciliation.py:645-648 (reads PLAN.md and asserts it contains 'catalogued_not_indexed.tsv'; also the comment on :645). Source mentions: src/viralscan/scripts/build_reference.py:23,985,989,1241 and src/viralscan/constants.py:166. Other occurrences of the filename in PLAN.md are at 5044, 5057, 5079 and 5872+, outside this range.
+WP4I/G/H order, WP4F ANELLO, WP4E HPV, WP4D PROG/SENS/HOST	HPV-11 / PLAN.md pointer (line 1047)	src/viralscan/hpv_genes.py:48 ('See the note column and PLAN.md before quoting a per-type number'). A docstring only. The row stays in the package.
+files	.living/findings/FINDINGS_REGISTRY.md	src/viralscan/scripts/emptydrops.R:6 cites F-005 (ID only, no file path); scripts/dsr05_dossier.py:439-442 globs .living/findings/*.md for F-005,F-010,F-018,F-019,F-021,F-022,F-025,F-026,F-028 (script moves to repro, so repro needs the ID-bearing files); docs/notices/CAT-30_retraction_DRAFT.md:11,45 quotes FINDINGS_REGISTRY.md:11 and :20 (draft moves to repro)
+files	.living/findings/anellovirus-detection-audit-commensal-prior.md	scripts/dsr05_dossier.py:439-442 (ID carrier for F-005,F-010,F-019,F-021,F-022)
+files	.living/findings/covid-anellovirus-signal-is-polyg-reads.md	scripts/dsr05_dossier.py:439-442 (F-005,F-019); docs/notices/CAT-30_retraction_DRAFT.md:11,43 (moves)
+files	.living/findings/covid-viralscan-no-sars2-anellovirus-dominant.md	scripts/dsr05_dossier.py:439-442; docs/notices/CAT-30_retraction_DRAFT.md:24,43
+files	.living/findings/dropseq-kb-allowlist-prefilter.md	scripts/dsr05_dossier.py:439-442 (F-018)
+files	.living/findings/evidence-replay-used-primary-ec-numbering.md	scripts/dsr05_dossier.py:439-442 (F-028)
+files	.living/findings/fiveprime-strand-default-loses-reads.md	scripts/dsr05_dossier.py:439-442 (F-019,F-021,F-022)
+files	.living/findings/hhv6a-residual-in-hhv6b-sample-is-6b.md	scripts/dsr05_dossier.py:439-442 (F-025,F-026)
+files	.living/findings/hhv6b-call-in-ebv-sample-is-telomere-repeat.md	scripts/dsr05_dossier.py:439-442 (F-025)
+files	.living/findings/hpv16-positive-control-and-polya-anellovirus-sink.md	docs/notices/CAT-30_retraction_DRAFT.md:8,47 (moves)
+files	.living/findings/low-complexity-is-a-kmer-property-not-n-masking.md	scripts/dsr05_dossier.py:439-442 (F-005,F-010)
+files	.living/findings/sfl-tonsil-no-ttv-or-hpv-host-subtracted.md	scripts/dsr05_dossier.py:439-442
+files	.living/findings/twostep-hpv77-call-is-host-reads-star-missed.md	scripts/dsr05_dossier.py:439-442 (F-028)
+files	.living/INDEX.md	CLAUDE.md:172
+files	.living/conventions.md	CLAUDE.md:120-134 (convention packs under .living/conventions/)
+files	.living/conventions/	CLAUDE.md:122,124,126,128,130,132
+files	.living/decisions.md	src/viralscan/scripts/read_filter.py:28; tests/_frozen_oracles/frozen_read_filter_d056986.py:28; scripts/check_g3_diff.py:46 (script is dsr/sci05 side, tests/test_sci05_round15_code.py:305 uses g3 on PLAN.md)
+files	.living/learnings.md	scripts/git-hooks/pre-commit:4
+files	CONTEXT.md	src/viralscan/virus_grouping.py:24; src/viralscan/runconfig.py:11; src/viralscan/run_context.py:10; src/viralscan/kb_outputs.py:6
+files	CHANGELOG.md	MANIFEST.in:541-style include (docs/changelog.md in docs build); docs/changelog.md
+files	docs/plans/2026-07-22-viralscan-v3-correctness-and-publication.md	CLAUDE.md (The locked v3 rationale lives in docs/plans/2026-07-22-...)
+files	docs/plans/2026-09-27-viral-reference-panel-expansion.md	src/viralscan/scripts/ncbi_fetch.py:526; tests/_frozen_oracles/frozen_genbank_gtf_d056986.py:59
+files	docs/plans/2026-10-05-val01-generator-design.md	scripts/v3_partition.py:6
+files	docs/plans/2026-10-21-kraken2-discovery-plan.md	src/viralscan/discovery.py:3
+files	docs/plans/ambient-and-barcode-swapping-controls.md	src/viralscan/scripts/detection.py:699; tests/test_ambient_screen.py:3
+files	docs/plans/dsr_round2b_sens07_GUARD.md	scripts/slurm_dsr_round2b_sens07_array.sh:17,27 (script moves)
+files	docs/plans/dsr_round2c_sens07_GUARD.md	tests/test_dsr_round2b_sens07.py:187 (test moves; tracker tests_move_set)
+files	docs/plans/real-data-sensitivity-specificity.md	scripts/v3_score.py:40
+files	docs/handoffs/handoff-CFtSVg.md	docs/review-clear-execute-tasks.md:5
+files	docs/manuscript_draft.md	none in src/tests/docs(non-plan)/scripts/CLAUDE.md
+files	docs/ROADMAP.md	MANIFEST.in:60; docs/IMPLEMENTATION_PLAN.md:3; docs/conf.py:63
+files	docs/IMPLEMENTATION_PLAN.md	MANIFEST.in:61; docs/conf.py:62
+files	docs/PUBLICATION_READINESS.md	docs/conf.py:61
+files	docs/PUBLICATION_READINESS_2026-07-17.md	docs/conf.py:61
+files	docs/PUBLICATION_READINESS_EXECUTION.md	docs/conf.py:61

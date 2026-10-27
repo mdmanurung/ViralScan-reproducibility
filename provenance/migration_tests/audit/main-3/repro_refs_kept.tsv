@@ -1,0 +1,22 @@
+scripts/validate_protocol_lock.py	governance_utils
+docs/plans/competitive-host-virus-reference.md	generate_truth_panel
+analysis/translated_search/README.md	prepare_viral_proteins
+scripts/sens07_planted_sensitivity.py	plant_anello_10x
+scripts/build_genome_panel_ref.sh	build_bundled_panel_ref
+tests/test_sci05_round15_code.py	v3_lod; v3_score
+analysis/viral_read_cleanup/pilot.py	plant_anello_10x
+docs/plans/2026-08-08-viralscan-v3-stable-g8.md	check_ship_scope
+tests/test_protocol_code_honouring.py	generate_truth_panel; v3_lod; v3_score
+tests/test_sci05_round14_code.py	generate_truth_panel; v3_lod; v3_score
+scripts/validate_artifact_inventory.py	governance_utils
+tests/test_sci05_round13_code.py	generate_truth_panel; v3_lod; v3_partition; v3_score
+tests/test_sens07_planted_sensitivity.py	plant_anello_10x
+docs/plans/2026-10-05-val01-generator-design.md	generate_truth_panel; plant_anello_10x; v3_partition
+docs/plans/real-data-sensitivity-specificity.md	generate_truth_panel; plant_anello_10x; v3_score
+scripts/validate_claim_registry.py	governance_utils
+docs/plans/2026-09-27-viral-reference-panel-expansion.md	build_bundled_panel_ref
+docs/plans/2026-10-17-remaining-performance-candidates.md	check_data_governance
+analysis/reference_strategy_benchmark/COMPLETION_PLAN.md	build_bundled_panel_ref
+docs/plans/2026-10-13-protocol-pending-sections-draft.md	v3_score
+docs/plans/2026-08-08-viralscan-v3-stable-g8-tasks.md	check_data_governance; check_ship_scope
+docs/plans/ambient-and-barcode-swapping-controls.md	generate_truth_panel; swap_check

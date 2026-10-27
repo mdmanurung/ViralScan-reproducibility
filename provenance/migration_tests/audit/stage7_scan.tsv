@@ -1,0 +1,157 @@
+file	n_hits	first_old_paths
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/analysis/spikein_detection_limit/grid.py	5	ViralScan/ebv_latest_ref_2026-09-27; viral_ref_cat42d; viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/analysis/spikein_detection_limit/grid.sbatch	1	vs_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/analysis/spikein_detection_limit/hosthomolog.sbatch	1	vs_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/analysis/spikein_detection_limit/smoke.sbatch	5	ViralScan/ebv_latest_ref_2026-09-27; viral_ref_cat42d; viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/analysis/star_confirm_acceptance/accept_ebv.py	3	viral_ref_cat42d; viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/analysis/star_confirm_acceptance/accept_ebv.sbatch	3	viralscan_work; vs_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/analysis/star_confirm_acceptance/accept_r01.sbatch	3	viralscan_work; vs_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/analysis/star_confirm_acceptance/fallback139.sbatch	4	viralscan_work; vs_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/analysis/trackA_report_2026-10-18/recovery_2026-10-19/build_provenance.py	5	ViralScan/analysis; viral_ref_cat42d; viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/analysis/trackA_report_2026-10-18/recovery_2026-10-19/export_molecule_assignments.py	1	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/analysis/trackA_report_2026-10-18/recovery_2026-10-19/reconcile_tables.py	1	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/analysis/trackA_report_2026-10-18/recovery_2026-10-19/retry_plants.py	1	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/analysis/trackA_report_2026-10-18/recovery_2026-10-19/run_v3_controls.py	1	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/analysis/trackA_report_2026-10-18/recovery_2026-10-19/source_snapshot/run_v3_controls.py	1	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/analysis/trackA_report_2026-10-18/recovery_2026-10-19/trackA_anello_plant.py	4	viral_ref_cat42b; viral_ref_cat42d; viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/armp_masked_pilot/scripts/build_index.sbatch	2	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/armp_masked_pilot/scripts/compare.py	1	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/armp_masked_pilot/scripts/count.sbatch	2	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/armp_masked_pilot/scripts/summ.sbatch	5	ViralScan/analysis; viralscan_work; vs_pinned
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/chem_probe_2026-10-16/chem_probe.sbatch	6	viral_ref_cat42d; viralscan_work; vs_pinned
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/disc12_freeze_2026-10-23/hash.sbatch	2	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/disc12_run_2026-10-23/run.sbatch	2	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/bin/build_downloads.py	1	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/bin/index.sbatch	2	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/bin/make_dataset_readmes.py	2	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/bin/mk_tasks.py	1	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/bin/mk_tasks2.py	1	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/bin/poll.sh	1	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/bin/ref.sbatch	2	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/bin/submit2.sh	1	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/bin/v01.sh	1	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/bin/watch.sh	1	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/bin/watch2.sh	1	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/bin/worker.sbatch	2	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery/bin/worker2.sbatch	2	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery_ebv_2026-10-21/disc05/reconcile.py	2	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery_ebv_2026-10-21/disc05/reconcile.sbatch	2	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery_ebv_2026-10-21/human_realign/realign.sbatch	2	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery_ebv_2026-10-21/r10/r10.sbatch	3	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery_ebv_2026-10-21/r10/summarize.py	1	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/discovery_ebv_2026-10-21/run_discover.sbatch	3	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/dsr_round1/status/A2_driver.sh	1	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/dsr_round2/evidence/_slurm/slurm_anello_evidence.sh	2	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/emc01_remeasure/audit.py	1	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/emc01_remeasure/job.sh	3	viralscan_work; vs_pinned
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/f005_readorigin/f005_readorigin.sbatch	3	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/f005_readorigin/tonsil_x223/f005_tonsil.sbatch	3	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/hpv16_gse189670/dl.sbatch	2	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/hpv16_gse189670/ed.sbatch	2	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/hpv16_gse189670/quant.sbatch	2	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/hpv16_gse189670/readcheck/readcheck.sbatch	4	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/hpv16_gse189670/readcheck/summarise.py	1	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/layout_tools/common.py	2	viralscan_work; vs_pinned
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/layout_tools/study_gse158275.py	1	ViralScan/benchmark_inputs
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/layout_tools/test_resume.py	1	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/parity_mechA/evidence_diff.py	1	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/parity_mechA/layer_diff.py	1	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/parity_mechA/parity_4a.sh	4	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/parity_mechA/parity_a2.sh	4	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/parity_mechA/parity_diff.py	1	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/parity_mechA/parity_final.sh	3	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/parity_mechA/parity_job.sh	2	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/parity_mechA/parity_job2.sh	2	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/parity_mechA/src_4a/src/viralscan/scripts/kmer3.py	3	ViralScan/src/viralscan/data; viralscan_showcase
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/parity_mechA/src_a2/src/viralscan/scripts/kmer3.py	3	ViralScan/src/viralscan/data; viralscan_showcase
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/q143_interim_evidence/evidence_array.sh	7	viral_ref_cat42d; viralscan_work; vs_pinned
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/quickstart_vignette_2026-10-22/run.sbatch	4	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/results/datasets/GSE158275/study/download/download.sh	5	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/sfl_tonsil/chem_check.sh	3	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/star_hostvirus/align.sbatch	3	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/star_hostvirus/align_raw.sbatch	3	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/star_hostvirus/build_index.sbatch	4	viral_ref_cat42d; viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/star_hostvirus/covmap.sbatch	4	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/star_hostvirus/flank_audit/run.sbatch	5	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/star_hostvirus/flank_audit/run_GSM4796271.sbatch	5	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/star_hostvirus/logs/peak125_job.sh	2	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/star_hostvirus/stats.sbatch	2	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/chem_pilot_2026-10-18/run_pilot_v2.py	1	vs_pinned
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/chem_pilot_2026-10-18/tchem_tonsil_all.py	2	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/provenance/reference/cat42d/build.sbatch	4	viral_ref_cat42b; viral_ref_cat42d; vs_pinned
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/replay_hhv6b_GSM6416031_submit.sh	3	viral_ref_cat42d; viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/advance_trackA.py	6	viral_ref_cat42d; viralscan_work; vs_pinned
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/append_manifest.py	1	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/armP_wave.sh	1	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/backups/evidence-resume-2026-10-15/build_provenance.py	5	ViralScan/analysis; viral_ref_cat42d; viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/backups/evidence-resume-2026-10-15/sibling_specific_reads.py	2	viral_ref_cat42d; viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/backups/finish-recovery-2026-10-19/build_provenance.py	5	ViralScan/analysis; viral_ref_cat42d; viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/backups/finish-recovery-2026-10-19/trackA_anello_plant.py	4	viral_ref_cat42b; viral_ref_cat42d; viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/build_manifest.py	5	ViralScan/benchmark_inputs; viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/build_provenance.py	5	ViralScan/analysis; viral_ref_cat42d; viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/build_scclr.sh	1	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/build_tonsil_libs.py	3	ViralScan/benchmark_inputs; viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/deletion_window.sh	1	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/freeze_and_submit_variants.py	3	viral_ref_cat42d; viralscan_work; vs_pinned
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/hash_fastq_content.sh	1	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/hash_hhv6b_bus_stage_2026-10-22.sbatch	2	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/make_armp.py	2	ViralScan/analysis; viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/make_evidence_calls.sh	2	viralscan_work; vs_pinned
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/restore_damaged_fastq.sbatch	3	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/retry_evidence_row178.sh	5	viral_ref_cat42d; viralscan_work; vs_pinned
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/seed_advance_state.py	1	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_anello_align.sh	2	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_anello_classify.sh	2	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_anello_compref.sh	4	viral_ref_cat42d; viralscan_work; vs_pinned
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_anello_plant.sh	2	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_anello_poscontrol.sh	2	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_dsr_chem_array.sh	4	viral_ref_cat42d; viralscan_work; vs_pinned
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_em_rerun.sh	3	viralscan_work; vs_pinned
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_finish_evidence.sh	2	viralscan_work; vs_pinned
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_finish_provenance.sh	1	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_finish_summaries.sh	1	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_hostresponse.sh	3	viralscan_work; vs_pinned
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_hostresponse_knn.sh	2	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_trackA_armP.sh	2	ViralScan/analysis; viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_trackA_armP_confirm.sh	2	ViralScan/analysis; viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_trackA_armP_confirm_groups.sh	3	ViralScan/analysis; viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_trackA_concat.sh	2	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_trackA_variant.sh	2	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_validate_run.sh	3	viralscan_work; vs_pinned
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/spotcheck_redownload.sbatch	3	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/submit_arm.sh	3	viral_ref_cat42d; viralscan_work; vs_pinned
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/summarize_trackA_armP.py	3	ViralScan/analysis; viralscan_work; vs_pinned
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/trackA_anello_plant.py	4	viral_ref_cat42b; viral_ref_cat42d; viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/trackA_hostresponse_knn.py	2	viralscan_work; vs_pinned
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/trackA_hostresponse_xlib.py	2	viralscan_work; vs_pinned
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/unblock_wave1.sh	4	viral_ref_cat42d; viralscan_work; vs_pinned
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/star_segfault_diag_2026-10-20/run.sbatch	2	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/superseded/provenance_before_finish_2026-10-19/reference/cat42d/build.sbatch	4	viral_ref_cat42b; viral_ref_cat42d; vs_pinned
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/scripts/arm1_count.sbatch	4	viral_ref_cat42d; viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/scripts/arm2_star.sbatch	3	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/scripts/build_flank_fast.sbatch	3	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/scripts/build_flank_fast_index.sbatch	2	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/scripts/build_flank_index.sbatch	2	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/scripts/build_flank_v2.sbatch	3	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/scripts/concat_r01.sbatch	10	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/scripts/strand_preflight.sbatch	4	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/scripts/validate_flank.sbatch	6	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/scripts/validate_flank_fast.sbatch	6	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/scripts/validate_flank_v2.sbatch	6	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackB_explore_2026-10/scripts/viral_umis.py	1	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackC_iav/chem_probe_pilot.sbatch	4	viral_ref_cat42d; viralscan_work; vs_pinned
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackC_iav/pilot_download.sbatch	2	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackC_iav/refs/build_cal09.sbatch	2	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackC_iav/refs/build_src/scripts/slurm_strand_test.sh	1	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackC_iav/refs/gate_hpv16.sbatch	4	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackC_iav/zenodo_inputs.sbatch	2	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackC_iav/zenodo_seurat_meta.sbatch	2	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/ttmdv_readcheck/readcheck.sbatch	4	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/ttmdv_readcheck/summarise.py	1	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/scripts/slurm_cat42d_virus_only_dlist2_index.sh	4	viral_ref_cat42d; viral_ref_cat42d_dlist2
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/scripts/slurm_dsr02_evidence_array.sh	2	viral_ref_cat42d; vs_pinned
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/scripts/slurm_dsr_chem_array.sh	3	viral_ref_cat42d; viralscan_work; vs_pinned
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/scripts/slurm_dsr_collect.sh	1	viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/scripts/slurm_dsr_rerun_array.sh	4	ViralScan/ebv_latest_ref_2026-09-27; viral_ref_cat42d; viralscan_work
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/scripts/slurm_dsr_round2b_sens07_array.sh	4	viral_ref_cat42d; viralscan_work; vs_pinned
+/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/scripts/slurm_dsr_twostep_redetect.sh	1	viralscan_work

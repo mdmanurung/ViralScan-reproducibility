@@ -1,0 +1,11 @@
+# Hand fixes the tail regex cannot make (relative parents[n] paths that moved with stage 6). Both targets verified on disk 2026-10-26.
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_finish_evidence.sh
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_finish_evidence.sh
+@@ -18 +18 @@
+-r=Path.cwd();code=r.parents[1]/'vs_pinned/97a64f6/scripts/dsr02_verdicts.py'
++r=Path.cwd();code=r.parents[2]/'pinned_snapshots/vs_pinned/97a64f6/scripts/dsr02_verdicts.py'  # r = data/runs/work/trackA_round1
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/sibling_specific_reads.py
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/sibling_specific_reads.py
+@@ -29 +29 @@
+-PANEL = R.parents[1] / 'viral_ref_cat42d/build/viral.fa'
++PANEL = R.parents[2] / 'references/panel_builds/viral_ref_cat42d/build/viral.fa'  # R = data/runs/work/trackA_round1

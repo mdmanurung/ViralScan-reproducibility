@@ -1,0 +1,623 @@
+{
+ "breaks": [
+  [
+   "break_build",
+   "MANIFEST.in",
+   false,
+   "16 include lines name files that move or are deleted: claims/registry.json (repro), analysis/v3_artifact_inventory.tsv (repro), scripts/validate_artifact_inventory.py, scripts/validate_claim_registry.py, scripts/validate_v3_protocol.py (all repro), and 11 top-level schemas/v3/*.schema.json/h5ad_cont",
+   "Delete exactly these lines: 12 'include claims/registry.json'; 13 'include analysis/v3_artifact_inventory.tsv'; 32-42 the eleven 'include schemas/v3/...' lines; 46 'include scripts/validate_artifact_inventory.py'; 47 'include scripts/validate_claim_registry.py'; 48 'include scripts/validate_v3_protocol.py'. Keep 43-45 (check_data_governance.py, check_ship_scope.py, governance_utils.py). Verify wit"
+  ],
+  [
+   "break_build",
+   "config/public_ship_scope.json",
+   false,
+   "sdist.members lists analysis/v3_artifact_inventory.tsv, claims/registry.json, schemas/v3/*.schema.json (11 files) and scripts/validate_{artifact_inventory,claim_registry,v3_protocol}.py; all repro or delete. MANIFEST.in lines 14-15, 32-42 and 46-48 include the same paths. check_ship_scope.validate_r",
+   "Remove those members (claims/registry.json, analysis/v3_artifact_inventory.tsv, 11 schemas/v3/*, validate_* scripts that move) from sdist.members and the matching include lines in MANIFEST.in. Do not repoint the schema members (check_ship_scope.py:92-93 rejects duplicates). Keep src/viralscan/schemas/v3."
+  ],
+  [
+   "break_ci",
+   ".github/workflows/ci.yml",
+   false,
+   "Lint job steps 'v3 protocol draft gate' (line 61: python scripts/validate_v3_protocol.py) and 'deviation ledger is append-only' (line 75: python scripts/check_ledger_append_only.py --revision ...) call two scripts classed repro. After the split both exit 2 (file not found) and the lint job goes red ",
+   "Delete ci.yml lines 55-75 inclusive (the blank line after check_versions, both comment blocks, both steps, the env LEDGER_BASE). The lint job then ends at 'run: python scripts/check_versions.py' (line 54) and a blank line precedes 'test:'. Optional, cosmetic: reword the comment at lines 21-23 (ledger append-only needs full history; fetch-depth: 0 can stay) and line 89 (the ledger tests move; keep "
+  ],
+  [
+   "break_ci",
+   "scripts/check_data_governance.py",
+   false,
+   "Script is unchanged and stays, but scope_text_files() reads every sdist/docker/wheel source from public_ship_scope.json. With the stale 16 sdist entries it reports 16 'allowlisted text file is missing' problems and exits 1, so the ci.yml lint step 'Data-governance ship-scope check' (ci.yml:48) fails",
+   "No edit here; fixed by the public_ship_scope.json edit. check_ship_scope.py, check_dist_size.py (reads only dist/), governance_utils.py need no change."
+  ],
+  [
+   "break_docs",
+   "docs/panel_integrity.md",
+   false,
+   "Published page (in toctree, not excluded). Lines 5,15,50,84,85,94 point readers and commands at analysis/panel_expansion/gtf_corpus_manifest.tsv, hpv_modelled_cds_qc.tsv, promotions_pending_records.tsv, ref13_normaliser_qc.tsv. The line-15 command `scripts/write_gtf_manifest.py --check analysis/pane",
+   "Rewrite analysis/panel_expansion/ to curation/panel/ (D10, files 5,15,50,84,85,94). Also the REF-13 section (line 92) names scripts/ref13_normaliser_qc.py, which moves to repro: say it lives in the reproducibility repo, or drop the script mention and keep only the curation/panel/ref13_normaliser_qc.tsv result."
+  ],
+  [
+   "break_docs",
+   "docs/reference_maintenance.md",
+   false,
+   "Line 102 instructs `python scripts/compare_reference_reproducibility.py A.json B.json`; that script is class repro (manifest line 635) and moves out, so the documented command no longer exists in the package. Build unaffected.",
+   "Reword to point to the ViralScan-reproducibility repo, or keep scripts/compare_reference_reproducibility.py (+tests/test_compare_reference_reproducibility.py) in the package, which is the lazier fix for a documented user-facing command."
+  ],
+  [
+   "break_docs",
+   "docs/vignettes/README.md",
+   false,
+   "Line 48 links https://github.com/mdmanurung/ViralScan/blob/main/docs/vignettes/VIGNETTES_PLAN.md. docs/conf.py exclude_patterns lists vignettes/VIGNETTES_PLAN.md and the tracker section 5.2 puts it in the 41-path docs move set, but main-0 file_manifest still classes it package. README.md is in the t",
+   "Resolve the class conflict: either keep VIGNETTES_PLAN.md in the package (remove from docs_move_set) or change README.md:48 to the repro URL."
+  ],
+  [
+   "break_docs",
+   "docs/workflow_comparison.md",
+   false,
+   "Published page in toctree (index.md:90). Line 3 comment cites scripts/gen_workflow_comparison.py and analysis/v3_validation/protocol.yaml (both leave, HTML comment only, invisible); line 9 is a visible link https://github.com/mdmanurung/ViralScan/blob/main/claims/registry.json, which 404s once claim",
+   "Repoint line 9 to the ViralScan-reproducibility repo's claims/registry.json (or drop the link), update line 3 comment to the repro path, and per tracker section 6 override DOC in gen_workflow_comparison to $VIRALSCAN_PKG/docs/workflow_comparison.md."
+  ],
+  [
+   "break_runtime",
+   "analysis/audit_2026-10/repro_A/a18_co_transcribed_closure.py",
+   false,
+   "Seven repro_A scripts (a07, a08, a09, a10, a16, a17, a18) do `sys.path.insert(0,\"extras\")` (CWD-relative) followed by `import build_gene_programs as G`. build_gene_programs.py stays in the package extras/. They also appear in no repro_refs_kept.tsv row. They run only if CWD is a package checkout. El",
+   "Archival one-off probes; document 'run with CWD=$VIRALSCAN_PKG and PYTHONPATH=$VIRALSCAN_PKG/src' in repro README, or vendor extras/build_gene_programs.py. No fix needed for the viralscan imports as long as the pinned package is installed; flag the private-name ones as version-pinned only."
+  ],
+  [
+   "break_runtime",
+   "extras/cat09_human_host_sweep.py",
+   false,
+   "Line 28 `from build_virus_catalog import catalog_row` works only because extras/ is the script directory. build_virus_catalog is kept in the package extras/. Line 25-27 REPO_ROOT = parents[1] and CATALOGUE = REPO_ROOT/'src'/'viralscan'/'data'/'virus_catalog.tsv' (data resolved from the repro root, w",
+   "Vendor build_virus_catalog.py into repro extras/ (only catalog_row is needed), and resolve the data files with importlib.resources.files('viralscan')/'data' or $VIRALSCAN_PKG/src/viralscan/data. Do not rely on sys.path to the package extras/, since that extras/ also gets build_gene_programs and others."
+  ],
+  [
+   "break_runtime",
+   "scripts/build_bundled_panel_ref.py",
+   false,
+   "--gtf-manifest defaults to _find_repo_root()/analysis/panel_expansion/gtf_corpus_manifest.tsv (:317). After the move that path is gone and _check_gtf_manifest (:576-609) fails the build, because write_gtf_manifest --check cannot open it. test_panel_integrity_contract passes --gtf-manifest explicitly",
+   "Change :317 to 'curation' / 'panel' / 'gtf_corpus_manifest.tsv' (D10), and reword or drop the bulk_viral_summarize.py sentence at :988-990."
+  ],
+  [
+   "break_runtime",
+   "scripts/make_panel_archive.py",
+   false,
+   "UNCLASSIFIED in the manifest and absent from section 6 and the lists in 5.1. --corpus-manifest defaults to REPO/'analysis'/'panel_expansion'/'gtf_corpus_manifest.tsv' (:149); check_corpus runs it before building (:155) unless --no-corpus-check, so a default run fails after the move. Module docstring",
+   "Classify it as package. Change the default to REPO/'curation'/'panel'/'gtf_corpus_manifest.tsv' and the docstring."
+  ],
+  [
+   "break_runtime",
+   "scripts/model_hpv_cds_gtfs.py",
+   false,
+   "--qc defaults to root/'analysis'/'panel_expansion'/'hpv_modelled_cds_qc.tsv' (:225). The parent directory will not exist, so a default run fails when writing the QC file. This is only a partial \u00a76 item: \u00a76 names :225 but D10 lists it as repointed with no confirmation.",
+   "Use root/'curation'/'panel'/'hpv_modelled_cds_qc.tsv'."
+  ],
+  [
+   "break_runtime",
+   "scripts/panel_candidates.py",
+   false,
+   "main() (:250) builds root = parents[1]/'analysis'/'panel_expansion'. Every default (--evonk, --curated, --census, --kmer-sharing, --kmer-partners, --out) resolves into it, so a no-flag run fails after the move. The docstring usage lines :4-8 repeat the old path, and :21 cites scripts/panel_census.py",
+   "root = parents[1]/'curation'/'panel'; update docstring lines 4-8; reword :21 to say census.tsv comes from the repro repo's panel_census."
+  ],
+  [
+   "break_runtime",
+   "scripts/panel_kmer_sharing.py",
+   false,
+   "main() :200 uses root = parents[1]/'analysis'/'panel_expansion' for --candidates and --out defaults (docstring :4,6). It fails after the move if run with the defaults.",
+   "root = parents[1]/'curation'/'panel'; update docstring."
+  ],
+  [
+   "break_runtime",
+   "scripts/panel_pool.py",
+   false,
+   "main() :86 uses root = parents[1]/'analysis'/'panel_expansion' for the --candidates and --out defaults; docstring :4-5 repeat it. A default run fails on a missing candidates.tsv.",
+   "root = parents[1]/'curation'/'panel'; update docstring."
+  ],
+  [
+   "break_runtime",
+   "scripts/slurm_dsr_rerun_array.sh",
+   true,
+   "Repro Slurm scripts call scripts/explore_ledger.py via $CODE/scripts/explore_ledger.py (slurm_dsr_rerun_array.sh:33-34; slurm_dsr_round2b_sens07_array.sh:72-73). explore_ledger.py is UNCLASSIFIED in the manifest, and tests/test_explore_ledger.py is class package. If it stays in the package, $CODE mu",
+   "Classify explore_ledger.py (follows its test: package; or move both if the ledger is governance-only). For the Slurm scripts, use ${VIRALSCAN_PKG:?}/scripts/... for kept tools and ${VIRALSCAN_REPRO}/scripts for moved ones; do not rely on step-5 symlinks. bulk_viral_scan.sh:79 is a message only (cosmetic)."
+  ],
+  [
+   "break_runtime",
+   "scripts/validate_protocol_lock.py",
+   false,
+   "The repro-class validators validate_protocol_lock.py (:30-38), validate_claim_registry.py (:16-40) and validate_artifact_inventory.py (:15-38) import `scripts.governance_utils` (kept) with a try/except fallback to top-level `governance_utils`. Their DEFAULT_SCHEMA values are REPO_ROOT/'schemas'/'v3'",
+   "Vendor governance_utils.py into repro scripts/ (as \u00a76 says) and add validate_protocol_lock to the same row. Default DEFAULT_SCHEMA to `os.environ['VIRALSCAN_PKG']/src/viralscan/schemas/v3` (or importlib.resources.files('viralscan')/'schemas'/'v3' from the pinned install, which needs no env var). Rewrite the test_protocol_lock schema assertion to that."
+  ],
+  [
+   "break_test",
+   "config/public_ship_scope.json",
+   false,
+   "sdist.members lists 16 entries that no longer exist in the package repo: analysis/v3_artifact_inventory.tsv, claims/registry.json, scripts/validate_artifact_inventory.py, scripts/validate_claim_registry.py, scripts/validate_v3_protocol.py, and 11 schemas/v3/* (artifact_inventory.schema.json, claim_r",
+   "Remove those 16 strings from sdist.members and keep the JSON valid (watch the trailing comma). Python one-liner: d=json.load(open(p)); drop={'analysis/v3_artifact_inventory.tsv','claims/registry.json','scripts/validate_artifact_inventory.py','scripts/validate_claim_registry.py','scripts/validate_v3_protocol.py'}|{m for m in d['sdist']['members'] if m.startswith('schemas/v3/')}; d['sdist']['members"
+  ],
+  [
+   "break_test",
+   "scripts/adjudicate_candidates.py",
+   false,
+   "Line 109 `cards = _load('dsr03_evidence_cards')` execs scripts/dsr03_evidence_cards.py (repro, moves) at module import time; _load (:101-106) is spec_from_file_location on REPO/scripts/<name>.py, which asserts spec is not None and raises FileNotFoundError on a missing file. The manifest marks the sc",
+   "Move adjudicate_candidates.py, test_adjudicate_candidates.py and (REVIEW) test_protocol_lock.py/validate_protocol_lock.py together to repro; otherwise the dsr03 dependency must be vendored. Classify the pair explicitly."
+  ],
+  [
+   "break_test",
+   "scripts/generate_truth_panel.py",
+   false,
+   "KEPT truth-panel scripts import a MOVING script: generate_truth_panel.py:65 `from validate_v3_protocol import require_execution_allowed` (module level), and v3_score.py:29-35 imports `load_yaml, require_protocol_run_config` from validate_v3_protocol in both try/except branches. validate_v3_protocol ",
+   "Keep a copy (or the minimal subset: load_yaml, require_protocol_run_config, require_execution_allowed and what they need) of validate_v3_protocol.py in the package, and add it to the keep-list alongside the truth-panel scripts. Moving the guard into the repro would leave the kept generator without its protocol gate, so a vendored duplicate is the safe route. The repro keeps the full validator, and"
+  ],
+  [
+   "break_test",
+   "scripts/sens07_planted_sensitivity.py",
+   false,
+   "Line 69-71: sys.path.insert(parent dir) and `import plant_anello_10x as planter`. Also inserts parents[1]/'src', which is absent in the repro, so viralscan must come from the pinned install. tests/test_sens07_planted_sensitivity.py:23-25 inserts scripts/ and imports plant_anello_10x, and also does `",
+   "Vendor plant_anello_10x.py into repro scripts/ (as \u00a76 states), copy tests/_exact_control.py and an empty tests/__init__.py. Install viralscan from the pinned git sha so the sys.path 'src' insertion is a no-op."
+  ],
+  [
+   "break_test",
+   "scripts/subset_fastq_pair.py",
+   false,
+   "Line 13 `from audit_fastq_pair import ...` (repro, moves). The script is UNCLASSIFIED but its test test_subset_fastq_pair is already in tests_move_set (moved because of audit_fastq_pair), so the script must move with it. If it stayed, it would fail at import.",
+   "Classify subset_fastq_pair.py as repro (matches audit/tests_move_set.txt)."
+  ],
+  [
+   "break_test",
+   "scripts/v3_score.py",
+   false,
+   "Lines 29-36 import load_yaml and require_protocol_run_config from validate_v3_protocol (class repro, moves). The import is unconditional: it tries `scripts.validate_v3_protocol` and falls back to the bare name, and the module is gone either way, so `import v3_score` raises ModuleNotFoundError. The s",
+   "Section 6 and D9 do not list this dependency. Pick one: (a) keep a package copy of validate_v3_protocol.py, or the subset load_yaml, UniqueKeyLoader, require_execution_allowed and require_protocol_run_config, in scripts/ and repoint DEFAULT_PROTOCOL to tests/data/truth_panel/protocol.yaml, DEFAULT_SCHEMA to src/viralscan/schemas/v3, DEFAULT_LEDGER to a package fixture; or (b) vendor the same into "
+  ],
+  [
+   "break_test",
+   "scripts/val08_golden.py",
+   false,
+   "Lines 40-41 import generate_truth_panel and v3_score, both broken by the validate_v3_protocol import (see those findings). test_val08_golden (stays) fails at import until fixed. No direct reference to a moved file.",
+   "No change of its own; resolved by the v3_score / generate_truth_panel fix."
+  ],
+  [
+   "break_test",
+   "tests/test_bus_correction_audit.py",
+   false,
+   "The byte-identity tests read top-level schemas/v3 against src/viralscan/schemas/v3. Sim failures: test_bus_correction_audit.py::test_schema_copies_identical, test_validation.py::test_packaged_v3_schemas_match_public_contracts (:218), test_positive_control_receipt.py::test_shipped_schema_copies_are_i",
+   "Delete the three byte-identity tests; change test_multimapping_counting_contract.py:248 to (\"src/viralscan/schemas/v3\",)."
+  ],
+  [
+   "break_test",
+   "tests/test_cat28_panviral_marker_check.py",
+   false,
+   "Manifest class is `package` (reason 'no moved refs'), but audit/tests_move_set.txt:5 lists it and extras/cat28_panviral_marker_check.py (the module under test) is repro. If it stays it fails at import; its line 115 also reads analysis/panel_expansion/cat28_panviral_marker_check.tsv.",
+   "Reclass to repro in file_manifest.tsv; the cat28 TSV under curation/panel/ is then only data."
+  ],
+  [
+   "break_test",
+   "tests/test_confirm_hits.py",
+   false,
+   "Line 10 does sys.path.insert(0, parents[1]/'analysis'/'translated_search') then `import confirm_hits`. analysis/translated_search/* is all repro. The sim fails at collection with ModuleNotFoundError: confirm_hits. The manifest classes the test as package ('no moved refs'), and it is not in tests_mov",
+   "Move tests/test_confirm_hits.py to repro with analysis/translated_search (reclassify to repro)."
+  ],
+  [
+   "break_test",
+   "tests/test_docs_consistency.py",
+   false,
+   "Line 87 reads Path('BENCHMARK_COMPARISON.md') relative to cwd. The file is classed repro, so test_covid_alphatorquevirus_counts_removed fails with FileNotFoundError in the sim. The tracker's section 8 says the file stays, but section 5.2 and the manifest move it.",
+   "Change line 87 to `for path in GUARDED:` (drop the `+ [Path(\"BENCHMARK_COMPARISON.md\")]`)."
+  ],
+  [
+   "break_test",
+   "tests/test_evidence_tiers.py",
+   false,
+   "Manifest class is package ('no moved refs'), but line 16 is `PROTOCOL = ROOT/'analysis'/'v3_validation'/'protocol.yaml'`, read by the module-scope `protocol` fixture. In the sim all 35 tests error at setup with FileNotFoundError. It was missed because the path is built with / operators, not as a lit",
+   "Repoint line 16 to ROOT/'tests'/'data'/'truth_panel'/'protocol.yaml' (the D9 copy), or move the test to repro with the protocol."
+  ],
+  [
+   "break_test",
+   "tests/test_protocol_code_honouring.py",
+   false,
+   "test_m4_every_protocol_producer_calls_the_gate_or_is_exempt globs `SCRIPTS = ROOT/'scripts'` for producers and asserts `{generate_truth_panel.py, v3_score.py} <= gated` and `set(EXEMPT) <= set(seen)` (val08_golden.py is in EXEMPT). EXEMPT also lists check_g3_diff.py, which is UNCLASSIFIED. If genera",
+   "Vendor the full set (generate_truth_panel, v3_score, v3_lod, val08_golden, plus check_g3_diff.py once classified) into repro scripts/, or point SCRIPTS at $VIRALSCAN_PKG/scripts and glob both dirs. The glob must fail if the kept files are missing."
+  ],
+  [
+   "break_test",
+   "tests/test_sci05_round13_code.py",
+   false,
+   "Moving tests import the staying truth-panel scripts via `sys.path.insert(0, ROOT/'scripts')` (ROOT = parents[1]). Affected: test_sci05_round13_code (generate_truth_panel, v3_partition, v3_score, v3_lod), test_sci05_round14_code (generate_truth_panel, v3_lod, v3_score), test_sci05_round15_code (v3_lo",
+   "Vendor v3_lod, v3_score, v3_partition, generate_truth_panel, plant_anello_10x and (in the package) validate_v3_protocol into repro scripts/. For the round13 tests, also copy tests/test_generate_truth_panel.py, test_generate_truth_panel_m04.py and tests/_truth_panel_real.py (copy, never move) plus an empty tests/__init__.py. Alternatively make repro conftest.py put $VIRALSCAN_PKG/scripts and $VIRAL"
+  ],
+  [
+   "break_test",
+   "tests/test_sci05_round15_code.py",
+   false,
+   "Line 14 `import check_g3_diff as g3`. check_g3_diff.py is UNCLASSIFIED in the manifest (not in the keep-list or the repro pattern). Its tests at :295-306 exercise it and name scripts/v3_lod.py and schemas/v3/validation_protocol.schema.json as protocol-signing files. The schemas/v3 path is deleted as",
+   "Classify check_g3_diff.py as repro, since it is protocol-signing governance. Update the schemas/v3 literals to src/viralscan/schemas/v3 (or keep them as arbitrary path strings if file_violations only does string matching; check this)."
+  ],
+  [
+   "break_test",
+   "tests/test_translated_search_tools.py",
+   false,
+   "Line 13 inserts analysis/translated_search on sys.path, then imports check_barcodes, make_configs and summarize_translated, all repro. Collection error ModuleNotFoundError: check_barcodes. Classed package and absent from tests_move_set. tests/test_count_library.py has the same pattern (FileNotFoundE",
+   "Move test_translated_search_tools.py, test_count_library.py, test_adjudicate_candidates.py, test_covid_annotate_eve.py and test_viral_read_cleanup_pilot.py to repro; update tests_move_set.txt."
+  ],
+  [
+   "break_test",
+   "tests/test_validation_protocol.py",
+   false,
+   "Moving tests reference package-owned tests/ fixtures and other package files via the repro root. test_validation_protocol(+_round12): `ROOT/'schemas'/'v3'/...` and `ROOT/'src'/'viralscan'/'schemas'/'v3'/...` (schemas deleted/ src absent), `ROOT/.github/workflows/ci.yml` (:1064; reduced ci.yml, round",
+   "Resolve schemas through `importlib.resources.files('viralscan')/'schemas'/'v3'` in repro tests, drop the top-level-vs-packaged equality test (round14:194-195 and validation_protocol:768-770), and assert against a vendored/pinned ci.yml copy or drop the ci.yml checks. Make sure config/dsr_round2*_sens07.template.tsv and docs/plans/dsr_round2c_sens07_GUARD.md move with the tests."
+  ]
+ ],
+ "decisions": [
+  {
+   "path": "(git ls-files --others --exclude-standard)",
+   "destination": "ignore",
+   "reason": "Clean checkout: git status is empty and ls -A equals the tracked top-levels plus .git, so there are no untracked files or dirs here. new_vs_eebcaeb.txt has 176 lines with no '??' entries (format is path<TAB>class). Untracked dirs only exist in the dev checkout; the carry list in tracker 5.2 and 5.3 covers them. consequence: none."
+  },
+  {
+   "path": ".aws .agents .codex .mycelium count_audit.tsv",
+   "destination": "ignore",
+   "reason": "Tool/cache names listed in tracker 5.3 that are NOT in .gitignore (.gitignore does cover .snakemake, .mypy_cache, .ruff_cache, .pytest_cache, .venv, .vendor_mypy, .pip-cache, .claude, .specify, .pybiomart.sqlite, /Rplots.pdf, /HANDOFF*.md, /SESSION_RESUME.md, benchmark_runs, references, starsolo_p22_6*, .tmp, logs, /biomni_bundle, build/, .coverage). Not tracked, so nothing breaks; add the missing ones in 4d. consequence: none. (/viralscan_lshwcp_spec also not ignored.)",
+   "needs_user": false
+  },
+  {
+   "path": "scripts/explore_ledger.py",
+   "destination": "package",
+   "reason": "Imported by staying tests/test_explore_ledger.py (from scripts import explore_ledger); manifest class UNCLASSIFIED. If moved, that test fails. Moving slurm_dsr_*_array.sh and protocol docs that call it need VIRALSCAN_PKG. consequence: break_test."
+  },
+  {
+   "path": "scripts/cal13_decoys.py",
+   "destination": "package",
+   "reason": "Loaded by path from staying tests/test_cal13_decoys.py:17; UNCLASSIFIED in manifest. Moving breaks the test. consequence: break_test."
+  },
+  {
+   "path": "scripts/adjudicate_candidates.py",
+   "destination": "package",
+   "reason": "Loaded by tests/test_adjudicate_candidates.py:20 (class REVIEW, not in tests_move_set) and its keys are checked by tests/test_protocol_lock.py:15; also referenced by docs/output_reference.md and src schemas. Keep with tests/data/adjudication_lock_TEST_ONLY.json. consequence: break_test."
+  },
+  {
+   "path": "scripts/combine_palmdb_reference.py",
+   "destination": "package",
+   "reason": "Loaded by staying tests/test_combine_palmdb_reference.py:6. analysis/translated_search/README.md (moves) refers to it, so repro needs VIRALSCAN_PKG. consequence: break_test."
+  },
+  {
+   "path": "scripts/longitudinal_compile.py",
+   "destination": "package",
+   "reason": "Loaded by staying tests/test_longitudinal_compile.py:11; CHANGELOG documents it. consequence: break_test."
+  },
+  {
+   "path": "scripts/super_expressors.py",
+   "destination": "package",
+   "reason": "Loaded by staying tests/test_super_expressors.py:7; docs/output_reference.md references it. consequence: break_test."
+  },
+  {
+   "path": "scripts/check_tracked_file_sizes.py",
+   "destination": "package",
+   "reason": "Run by .pre-commit-config.yaml:30 and exercised by tests/test_tracked_file_sizes.py:6 (builds its own tmp git repo, so it is independent of moved dirs); config/large_file_allowlist.txt is package. consequence: break_test and pre-commit break if moved."
+  },
+  {
+   "path": "scripts/make_panel_archive.py",
+   "destination": "package",
+   "reason": "REF-11 Zenodo panel archive builder; no test, only PLAN refs. It checks analysis/panel_expansion/gtf_corpus_manifest.tsv, which becomes curation/panel/, so the default must be repointed (runtime of this script only). Panel/data builder, belongs with build_bundled_panel_ref. consequence: cosmetic now, break_runtime of the script after D10 unless repointed.",
+   "needs_user": false
+  },
+  {
+   "path": "scripts/check_g3_diff.py",
+   "destination": "repro",
+   "reason": "Only importers are tests/test_sci05_round15_code.py:14 and tests/test_protocol_code_honouring.py:204, both already in the repro move set (protocol governance, G3 sign-off). Nothing staying uses it. consequence: none."
+  },
+  {
+   "path": "scripts/subset_fastq_pair.py",
+   "destination": "repro",
+   "reason": "Only referenced by tests/test_subset_fastq_pair.py, which is in tests_move_set. consequence: none."
+  },
+  {
+   "path": "tests/test_count_library.py",
+   "destination": "repro",
+   "reason": "Reads analysis/translated_search/count_library.py (SCRIPT, line 6), which moves; classed REVIEW and MISSING from tests_move_set.txt. If left in the package it fails or is skipped. Add to the move set (with its analysis/ script). consequence: break_test.",
+   "needs_user": false
+  },
+  {
+   "path": "tests/test_viral_read_cleanup_pilot.py",
+   "destination": "repro",
+   "reason": "Loads analysis/viral_read_cleanup/pilot.py (moves) and needs tests/_fastq.py (copy, not move). Already in tests_move_set. consequence: break_test if left."
+  },
+  {
+   "path": "tests/test_performance_exactness.py",
+   "destination": "package",
+   "reason": "REVIEW class: uses tests/fixtures/performance_original.py via runpy (new file, package) and viralscan imports only. No moved path. consequence: none."
+  },
+  {
+   "path": "tests/test_tracked_file_sizes.py",
+   "destination": "package",
+   "reason": "REVIEW: only strings 'analysis/big.tsv' in a tmp git repo; depends on scripts/check_tracked_file_sizes.py (package). consequence: none."
+  },
+  {
+   "path": "tests/data/adjudication_lock_TEST_ONLY.json",
+   "destination": "package",
+   "reason": "Used by staying tests/test_adjudicate_candidates.py:25. consequence: break_test if moved."
+  },
+  {
+   "path": "tests/data/viral_loci_TEST_ONLY.gtf",
+   "destination": "package",
+   "reason": "Used by staying tests/test_viral_loci.py:13. consequence: break_test if moved."
+  },
+  {
+   "path": "tests/_frozen_oracles/frozen_genbank_gtf_d056986.py",
+   "destination": "package",
+   "reason": "REVIEW: frozen oracles are loaded by path from staying test_perf_wave1_* tests; no analysis/ refs found. Includes frozen_gene_programs_5e551c9.py. consequence: break_test if moved."
+  },
+  {
+   "path": "tests/test_perf_wave1_b23.py tests/test_perf_wave1_b24.py",
+   "destination": "package",
+   "reason": "Mention scripts/gene_programs.py and scripts/build_reference.py only in docstrings; they load verbatim copies from tests/_frozen_oracles. consequence: cosmetic."
+  },
+  {
+   "path": "tests/test_dsr_host_shutoff_diagnostic.py tests/test_dsr_round2b_sens07.py tests/test_dsr_round_compare.py tests/test_dsr_round_env.py tests/test_sci05_round13_code.py tests/test_sci05_round14_code.py tests/test_sci05_round15_code.py tests/test_protocol_code_honouring.py",
+   "destination": "repro",
+   "reason": "New-vs-eebcaeb tests that load scripts/dsr_*, slurm_dsr_*, validate_v3_protocol or check_g3_diff, all moving. These are NOT in audit/tests_move_set.txt (42 paths), so the move list is incomplete and they would fail in the package. Verify each is in the regenerated manifest as repro and add to tests_move_set. consequence: break_test.",
+   "needs_user": false
+  },
+  {
+   "path": "MAINTAINER_CHECKLIST.md",
+   "destination": "package",
+   "reason": "UNCLASSIFIED; PLAN REL-24 maintainer doc for release, no inbound references from tests/CI/docs. Keep at top level (release-governance, package); user-fill document. consequence: none.",
+   "needs_user": true
+  },
+  {
+   "path": "Singularity.pixi.def pixi.toml",
+   "destination": "package",
+   "reason": "UNCLASSIFIED; docs/installation.md:79,95-99 documents both (published docs). Singularity.pixi.def COPYs pixi.toml. Not in MANIFEST.in or public_ship_scope.json, so build unaffected, but moving breaks docs links. Add to tracker 5.1 keep-list. consequence: break_docs if moved."
+  },
+  {
+   "path": "environment.coverage.yml",
+   "destination": "package",
+   "reason": "UNCLASSIFIED; MANIFEST.in:6 includes it, src/viralscan/validation.py:39 and docs/cli_reference.md:616 name it, and doctor --profile coverage depends on it. Moving breaks sdist. consequence: break_build."
+  },
+  {
+   "path": "environment.discovery.yml",
+   "destination": "package",
+   "reason": "UNCLASSIFIED; docs/discovery.md:32 and the CHANGELOG instruct conda env create -f environment.discovery.yml; src doctor --profile discovery. consequence: break_docs if moved. Check whether MANIFEST.in/public_ship_scope.json should list it (MANIFEST.in does not currently include it)."
+  },
+  {
+   "path": "schemas/v3/protocol_lock.schema.json",
+   "destination": "delete",
+   "reason": "Top-level schemas/ is a duplicate of src/viralscan/schemas/v3; confirm the src copy has protocol_lock.schema.json too (new file on main) and that the three moved validators and scripts/adjudicate_candidates/tests/test_protocol_lock do not default to the top-level path. consequence: break_test if src copy is missing.",
+   "needs_user": false
+  },
+  {
+   "path": ".living/findings/hhv6b-flank-reads-missed-by-cds-only-index.md .living/log/2026-10-14-002-translated-proteins.md",
+   "destination": "both",
+   "reason": "TRIAGE; D15 says .living findings/log are kept whole in the package and copied whole to the repro. Check the finding ID against the dsr05_dossier F-ID list. consequence: none."
+  },
+  {
+   "path": ".github/workflows/docs.yml .github/workflows/lock-audit.yml",
+   "destination": "package",
+   "reason": "Read both: docs.yml builds Sphinx to docs/_build/html; lock-audit.yml imports scripts.audit_locks (stays). No references to analysis/, claims/, results/, audits/. consequence: none."
+  },
+  {
+   "path": "config/dsr_round2b_sens07.template.tsv config/dsr_round2c_sens07.template.tsv config/track_b_denylist.txt",
+   "destination": "repro",
+   "reason": "Manifest class package (config/ keep) but these are DSR round templates consumed by scripts/slurm_dsr_round2*_sens07_array.sh and dsr scripts that move. check_ship_scope/check_data_governance may glob config/, so verify before moving. consequence: break_build or break_test only if config/public_ship_scope.json or a staying test enumerates them.",
+   "needs_user": true
+  },
+  {
+   "path": "docs/api_reference.md docs/assess_evidence.md docs/discovery.md docs/inspect_results.md docs/project_info.md docs/reference_help.md src/viralscan/** new modules",
+   "destination": "package",
+   "reason": "New published docs and src modules; src does not import outside src (tracker 4). consequence: none."
+  },
+  {
+   "path": "tests/_frozen_oracles/frozen_genbank_gtf_d056986.py",
+   "destination": "package",
+   "reason": "Oracle loaded by staying tests/test_perf_remaining_b28.py. The docs/plans/2026-09-27-viral-reference-panel-expansion.md hit is docstring text only (consequence cosmetic). It imports viralscan.scripts.ncbi_fetch, which is in the package. The whole _frozen_oracles dir stays (8 files, each used by a test_perf_* test)."
+  },
+  {
+   "path": "tests/_frozen_oracles/frozen_gene_programs_5e551c9.py",
+   "destination": "package",
+   "reason": "Oracle for staying tests/test_perf_wave1_b23.py. The results/ strings are docstring text and a run-output path relative to config.output, not repo-root files (cosmetic/none)."
+  },
+  {
+   "path": "tests/data/adjudication_lock_TEST_ONLY.json",
+   "destination": "repro",
+   "reason": "Only tests/test_adjudicate_candidates.py reads it (LOCK = ROOT/tests/data/...). That test loads scripts/adjudicate_candidates.py, which is UNCLASSIFIED and not in the section 5.1 keep-list, so it follows the script to repro. If the script is kept in the package, keep the fixture there. Neither the 42-file nor the 14-file move list includes it, so copy it with the test. Nothing in the 42 mover tests uses it."
+  },
+  {
+   "path": "tests/test_adjudicate_candidates.py",
+   "destination": "repro",
+   "reason": "It loads ROOT/scripts/adjudicate_candidates.py (UNCLASSIFIED; not in the section 5.1 keep-list) and reads src/viralscan/data (pkg root). The results/ hits are synthetic tmp trees (none). If the script stays in the package, this test stays. Consequence if the script moves and the test stays: break_test (import fails at collection). src/viralscan/evidence_tiers.py:53 and docs/output_reference.md:910 only name the script in text (cosmetic). Needs-user: script destination."
+  },
+  {
+   "path": "tests/data/ebv_nc_007605_eber_excerpt.gtf",
+   "destination": "package",
+   "reason": "Used only by staying tests/test_ncbi_fetch.py:350 (Path(__file__).parent/data). Not used by any mover. Keep."
+  },
+  {
+   "path": "tests/data/viral_loci_TEST_ONLY.gtf",
+   "destination": "package",
+   "reason": "Used only by staying tests/test_viral_loci.py:13. Keep."
+  },
+  {
+   "path": "tests/data/evidence_tiny/R1.fastq",
+   "destination": "package",
+   "reason": "Used by tests/integration/test_tiny_end_to_end.py, test_host_filter_star.py, test_exact_lineage.py and test_anello_align_star.py (all stay; CI runs `pytest -m \"integration and not network\"`). Its sha256 is pinned in scripts/check_data_governance.py:37 and asserted in test_data_governance.py (package). No mover test reads it."
+  },
+  {
+   "path": "tests/data/evidence_tiny/R2.fastq",
+   "destination": "package",
+   "reason": "Same as R1.fastq: integration tests, check_data_governance.py:38 sha256 pin, test_data_governance.py. Keep."
+  },
+  {
+   "path": "tests/data/evidence_tiny/called_cells.txt",
+   "destination": "package",
+   "reason": "Fixture directory of the staying integration tests (test_tiny_end_to_end etc.). No mover uses it."
+  },
+  {
+   "path": "tests/data/evidence_tiny/combined.gtf",
+   "destination": "package",
+   "reason": "Fixture directory of the staying integration tests. No mover uses it."
+  },
+  {
+   "path": "tests/data/evidence_tiny/host.fasta",
+   "destination": "package",
+   "reason": "Fixture directory of the staying integration tests (host-filter STAR tests). No mover uses it."
+  },
+  {
+   "path": "tests/data/evidence_tiny/reference.fasta",
+   "destination": "package",
+   "reason": "Fixture directory of the staying integration tests. No mover uses it."
+  },
+  {
+   "path": "tests/data/evidence_tiny/t2g.txt",
+   "destination": "package",
+   "reason": "Fixture directory of the staying integration tests. No mover uses it."
+  },
+  {
+   "path": "tests/data/evidence_tiny/transcripts.fasta",
+   "destination": "package",
+   "reason": "Used by test_tiny_end_to_end.py:114 (kallisto index). Keep."
+  },
+  {
+   "path": "tests/data/evidence_tiny/viral.fasta",
+   "destination": "package",
+   "reason": "Fixture directory of the staying integration tests. No mover uses it."
+  },
+  {
+   "path": "tests/data/evidence_tiny/viral.gtf",
+   "destination": "package",
+   "reason": "Fixture directory of the staying integration tests. No mover uses it."
+  },
+  {
+   "path": "tests/integration/test_tiny_end_to_end.py",
+   "destination": "package",
+   "reason": "Runs the real viralscan entry point on tests/data/evidence_tiny. The results/ paths are run-output files in a tmp sample dir (none). It needs no moved path."
+  },
+  {
+   "path": "tests/test_ambient_screen.py",
+   "destination": "package",
+   "reason": "Tests viralscan.scripts.detection. The docs/plans/ambient-and-barcode-swapping-controls.md hit is docstring text only (cosmetic, and that plan may move). The results/ path is a tmp output."
+  },
+  {
+   "path": "tests/test_analysis.py",
+   "destination": "package",
+   "reason": "Tests src viralscan.scripts.analysis. The audits/2026-05-08-full-pipeline.md hit at :256 is a docstring 'Regression for:' (cosmetic; audits/ moves, so repoint the comment per section 6). results/ is a tmp output."
+  },
+  {
+   "path": "tests/test_cellcalling.py",
+   "destination": "package",
+   "reason": "Pure src tests (cellcalling, detection). The results/ hits are tmp run dirs, not repo-root. None."
+  },
+  {
+   "path": "tests/test_count_library.py",
+   "destination": "repro",
+   "reason": "Loads REPO/analysis/translated_search/count_library.py by path (SCRIPT = parents[1]/analysis/translated_search/count_library.py). That dir goes to repro, so the test fails at collection (break_test) if it stays. It is NOT in audit/tests_move_set.txt and must be added. Together with test_confirm_hits.py and test_translated_search_tools.py (both classed package but both sys.path.insert analysis/translated_search)."
+  },
+  {
+   "path": "tests/test_covid_annotate_eve.py",
+   "destination": "repro",
+   "reason": "Loads covid_viralscan/scripts/annotate_eve.py by path (the covid_viralscan dir goes to repro). It is in the 42-file move set. It needs no fixtures or helpers."
+  },
+  {
+   "path": "tests/test_gene_programs.py",
+   "destination": "package",
+   "reason": "Reads only src/viralscan/data/*.gtf, extras/ (build_gene_programs, kept) and src/viralscan/Snakefile via REPO_ROOT. The results/ strings are tmp outputs. No moved path."
+  },
+  {
+   "path": "tests/test_host_homology_loci.py",
+   "destination": "package",
+   "reason": "Tests build_reference/detection with tmp_path outputs. results/ and reference_manifest.json are written into tmp_path, not repo-root files (none)."
+  },
+  {
+   "path": "tests/test_identity_backfill.py",
+   "destination": "package",
+   "reason": "Tmp run-dir test; results/ hits are tmp paths (none)."
+  },
+  {
+   "path": "tests/test_index_reconciliation.py",
+   "destination": "package",
+   "reason": "Reads REPO_ROOT/PLAN.md:647 and asserts the filename catalogued_not_indexed.tsv appears in it. PLAN.md stays, but the CAT-31 row must survive the PLAN.md split (section 6), otherwise break_test. It also needs scripts/build_bundled_panel_ref.py and src data (both stay). Needs fixing on PLAN.md triage, not on moving."
+  },
+  {
+   "path": "tests/test_performance_exactness.py",
+   "destination": "package",
+   "reason": "Uses tests/fixtures/performance_original.py (package) plus tmp results/ output. No moved path."
+  },
+  {
+   "path": "tests/test_run_complete_marker.py",
+   "destination": "package",
+   "reason": "Tmp sample dirs; results/ is a tmp path (none)."
+  },
+  {
+   "path": "tests/test_snakefile_dag.py",
+   "destination": "package",
+   "reason": "Reads src/viralscan/Snakefile and src/viralscan/scripts only. CI also runs it standalone (ci.yml:156), so it must stay. results/ strings are comments or rule outputs (none)."
+  },
+  {
+   "path": "tests/test_tracked_file_sizes.py",
+   "destination": "repro",
+   "reason": "test_repo_has_no_oversized_tracked_research_files runs scripts/check_tracked_file_sizes.py (UNCLASSIFIED) against the real repo. The script and the pre-commit hook (.pre-commit-config.yaml:30-33, files ^(analysis|results|config/large_file_allowlist)) guard dirs that leave the package. Recommend moving the script, test and hook to repro. If they stay, the 'research files' test passes trivially but the hook is dead. Needs-user: script destination. Leaving the test but moving the script is break_test."
+  },
+  {
+   "path": "tests/test_viral_read_cleanup_pilot.py",
+   "destination": "repro",
+   "reason": "Loads analysis/viral_read_cleanup/pilot.py by path (moves). It is in the 42-file move set. It also imports tests._fastq.write_fastq and viralscan.scripts.read_filter. Copy tests/_fastq.py and an empty tests/__init__.py to repro (section 6). It needs the cutadapt dependency in the repro env."
+  },
+  {
+   "path": "ENVIRONMENTS_INSTALLATIONS.md",
+   "destination": "delete",
+   "reason": "21-line empty template (blank Manager, Python version and Created fields). The only referrers are PLAN.md and .living text. No code, test, CI, MANIFEST.in or ship-scope hit (git grep), so removal is break_none. It is an optional Mycelium scaffold. Nothing needs it."
+  },
+  {
+   "path": "environment.tools.lock.txt",
+   "destination": "package",
+   "reason": "Hand-written external-tool sha256 manifest for the release gate env (kb 0.30.2, kallisto, STAR, ...). git grep finds no consumer in src, tests, scripts, .github, MANIFEST.in or config. It is cited only in PLAN.md and .living rows (REL-03/CAT-25) and in docs/plans prose. It describes the package toolchain, so keep it beside environment.yml/explicit.txt. It is not in section 5.1's top-level list, so add it, or it silently disappears. It is not shipped (not in MANIFEST.in). Consequence none; PLAN.md rows would dangle if it were dropped."
+  },
+  {
+   "path": "tests/test_cat28_panviral_marker_check.py",
+   "destination": "repro",
+   "reason": "Manifest says package, but 42-set moves it. It does sys.path.insert(REPO_ROOT/'extras') for cat28_panviral_marker_check (repro), reads analysis/panel_expansion/cat28_*.tsv (becomes curation/panel) and src/viralscan/data/gene_programs.tsv (package). Needs VIRALSCAN_PKG for src and curation/panel; break_test if left in the package."
+  },
+  {
+   "path": "tests/test_confirm_hits.py",
+   "destination": "repro",
+   "reason": "Manifest class package but not in the move set. sys.path.insert(parents[1]/'analysis'/'translated_search') then imports confirm_hits. The dir moves, so collection fails (break_test). Add to the mover list."
+  },
+  {
+   "path": "tests/test_translated_search_tools.py",
+   "destination": "repro",
+   "reason": "Same as test_confirm_hits: sys.path.insert(analysis/translated_search) at :13, which moves. Add to the mover list."
+  },
+  {
+   "path": "tests/test_evidence_tiers.py",
+   "destination": "package",
+   "reason": "Stays (tests src evidence_tiers) but PROTOCOL = ROOT/analysis/v3_validation/protocol.yaml:16 is read by the protocol fixture; analysis/ moves, so every test errors (break_test). It is not in the section 6/D9 repoint list. Repoint to the D9 copy tests/data/truth_panel/protocol.yaml. Needs fixing."
+  },
+  {
+   "path": "tests/test_docs_consistency.py",
+   "destination": "package",
+   "reason": "Needs fixing: test_covid_alphatorquevirus_counts_removed:87 reads Path('BENCHMARK_COMPARISON.md'), which moves to repro, so it raises FileNotFoundError (break_test). Drop that element. All other docs it reads (faq, reference_panel, migration, installation, quickstart, cli/output_reference, api, index) are in docs_stay_set."
+  },
+  {
+   "path": "tests/test_bus_correction_audit.py",
+   "destination": "package",
+   "reason": "Needs fixing: the :75-80 byte-identity check reads root/schemas/v3 (deleted duplicate), so break_test. Delete the check per section 8. test_validation.py:216-221 (schemas/v3 at :218), test_positive_control_receipt.py:265-270 and test_multimapping_counting_contract.py:248-249 have the same issue (the latter should be repointed to src/viralscan/schemas/v3)."
+  },
+  {
+   "path": "tests/test_cal13_decoys.py",
+   "destination": "repro",
+   "reason": "Loads scripts/cal13_decoys.py (UNCLASSIFIED, not in the 5.1 keep-list). Manifest says package with 'no moved refs' only because the script is unclassified. Not in the 42-set. If the script goes to repro, the test must move with it (break_test otherwise). The same applies to test_super_expressors.py, test_combine_palmdb_reference.py, test_longitudinal_compile.py and test_explore_ledger.py. These scripts are not shipped, and docs/output_reference.md:1357 only mentions super_expressors.py in prose (cosmetic). Needs-user: confirm the script destinations."
+  },
+  {
+   "path": "tests/test_sci05_round13_code.py",
+   "destination": "repro",
+   "reason": "Manifest-repro, but absent from the 42-set (14 such tests: test_detection_audit_s2, dsr_host_shutoff_diagnostic, dsr_round2b_sens07, dsr_round_compare, dsr_round_env, hostresponse_auto_cv, infected_rule_and_gate, protocol_code_honouring, protocol_lock, sci05_round13/14/15, validation_protocol_round12/13). This one imports tests._truth_panel_real.write_background, tests.test_generate_truth_panel.salt_file and tests.test_generate_truth_panel_m04.D1_ARGS, which are staying tests. Copy _truth_panel_real.py and those two test modules (or their helpers), or move helpers to a shared module. Both = copy, do not move."
+  },
+  {
+   "path": "tests/test_validation_protocol_round12.py",
+   "destination": "repro",
+   "reason": "One of the 14 new movers. It reads ROOT/src/viralscan/schemas/v3 (:26) and .github/workflows/ci.yml (:376) from the package, so it needs VIRALSCAN_PKG or break_test in repro. test_sci05_round14_code.py:195 also reads src/viralscan/schemas/v3, and test_dsr_round2b_sens07.py:187 reads docs/plans/dsr_round2c_sens07_GUARD.md (moves, fine)."
+  },
+  {
+   "path": "tests/_exact_control.py",
+   "destination": "both",
+   "reason": "Stays: used by staying tests (grep: test_performance_exactness etc.). Also imported by mover test_sens07_planted_sensitivity.py:19 (from tests._exact_control import ...). Copy, never move (section 6). tests/_fastq.py (imported by the viral_read_cleanup mover) and an empty tests/__init__.py go to repro the same way."
+  }
+ ]
+}

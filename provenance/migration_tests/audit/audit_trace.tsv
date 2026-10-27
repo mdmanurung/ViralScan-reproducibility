@@ -1,0 +1,85 @@
+id	plan_ref	plan_item	verdict	findings	evidence	required_action	owner
+TR-01	§3 D1	filter-repo per-file history	APPROVED_WITH_AMENDMENT	AUD-35	commit-map exists; test_ledger_git_sha.py:69,78 hardcodes 62d2bcc	Translate test literals and deviations.yaml:562 with commit-map	agent
+TR-02	§3 D2	public push as-is plus history token scan	APPROVED	none	D2:74; tools/gitleaks installed (0e)	None	user/agent
+TR-03	§3 D3	dev-process split by topic	APPROVED_WITH_AMENDMENT	AUD-33	dsr05_dossier.py:439-442 reads .living/findings	Keep the cited finding IDs with the dossier or fail loudly	agent
+TR-04	§3 D4	lean package top level	APPROVED_WITH_AMENDMENT	AUD-52; AUD-43	skillpacks/README.md:1-24; CLAUDE.md:176-180; docs/figures referrers move	Add skillpacks/; decide docs/figures	user
+TR-05	§3 D5	TB dirs stay; repro gets links	APPROVED_WITH_AMENDMENT	AUD-26; AUD-28	freeze_legacy_v2_v3_provenance.py:318-331; slurm scripts :24/:133, :10/:22-23	Explicit package/repro roots or links-aware scripts	agent
+TR-06	§3 D6	land/park open PRs first	BLOCKED_PREREQ	AUD-04	gh pr list: #105 OPEN, #103 DRAFT; #88/#93-99 gone	Re-run gh pr list; decide #103/#105 with user	user
+TR-07	§3 D7	governance to repro	APPROVED_WITH_AMENDMENT	AUD-18	claims/registry.json:15,22,230,74; analysis/v3_artifact_inventory.tsv:2,5,7,14,15	Two-root validation or split registry/inventory	user/agent
+TR-08	§3 D8	truth-panel simulator stays	APPROVED_WITH_AMENDMENT	AUD-48	analysis/truth_panel/README.md:3-11 links PLAN.md and v3_validation	Keep package copy or rewrite links	agent
+TR-09	§3 D9	copy protocol.yaml to tests/data/truth_panel/	APPROVED_WITH_AMENDMENT	AUD-51	tests/data/truth_panel absent; scripts/v3_score.py:26; generate_truth_panel.py:226	Create fixture and repoint v3_score.PROTOCOL before 4a	agent
+TR-10	§3 D10	panel_expansion to curation/panel	APPROVED_WITH_AMENDMENT	AUD-21; AUD-46; AUD-53	panel_census.py:93-96; panel_candidates.py:252-256; .gitignore:100-101	Remove ignore, delete view, repoint panel_census/README	user/agent
+TR-11	§5.1	package top-level keeps	APPROVED_WITH_AMENDMENT	AUD-52; AUD-43	skillpacks unmentioned; docs/figures orphaned	Add skillpacks/; resolve docs/figures	user
+TR-12	§5.1	scripts keep list	APPROVED_WITH_AMENDMENT	AUD-36	prepare_legacy_v2_v3_slurm.py imported by test_legacy_v2_v3_slurm.py:12; ttv_public_datasets.json unlisted	Add both explicitly to move list	agent
+TR-13	§5.1	extras keep builders and vendor_sources	APPROVED_WITH_AMENDMENT	AUD-25	extras/vendor_sources tracked vs ignored/untracked; fetch_vendored.py:29-30	Move provenance with data or copy fetcher/manifest	agent
+TR-14	§5.1	root files	APPROVED_WITH_AMENDMENT	AUD-45	reference_* move vs delete; ENVIRONMENTS_INSTALLATIONS.md and environment.tools.lock.txt undecided	Move reference_*; decide the two environment files	user
+TR-15	§5.1	published docs keep	APPROVED_WITH_AMENDMENT	AUD-39; AUD-40	docs/conf.py:44-64; MANIFEST.in:45-60; vignettes stay	Use the 41-file move set; keep the 9 published vignette files; vignettes/VIGNETTES_PLAN.md moves	agent
+TR-16	§5.2	analysis/ move (except panel_expansion)	APPROVED_WITH_AMENDMENT	AUD-51; AUD-48; AUD-28; AUD-33	protocol fixture absent; truth_panel README; freeze legacy; dsr05 findings	Apply D9 first; resolve the four dependencies	agent
+TR-17	§5.2	results/ move	APPROVED	none	No staying test/script reads repo results/	None	agent
+TR-18	§5.2	covid_viralscan/ move	APPROVED	none	test_covid_annotate_eve.py:9 moves with it	None	agent
+TR-19	§5.2	benchmark_inputs/ move	APPROVED	none	Only reference_strategy example paths in src	None	agent
+TR-20	§5.2	claims/ move	APPROVED_WITH_AMENDMENT	AUD-18	registry mixes package and repro paths	Two-root fix	user/agent
+TR-21	§5.2	data/ manifests move	APPROVED	none	No staying consumer	None	agent
+TR-22	§5.2	audits/ move	APPROVED_WITH_AMENDMENT	AUD-34	ncbi_fetch.py:602,861; test_detection.py:13,77,86,130; test_analysis.py:256; test_createconfig.py:371; test_pipeline_counts.py:16,146; test_multimap.py:13	Update comments or keep the audit file	agent
+TR-23	§5.2	todo/ move	APPROVED	none	Referenced only by moving draft docs	None	agent
+TR-24	§5.2	docs/plans and draft docs move	REJECTED	AUD-39; AUD-40	41 excluded docs, not 50; 11 unnamed; 9 published vignettes stay, VIGNETTES_PLAN moves	Replace with the explicit 41-file list	agent
+TR-25	§5.2	experiment scripts move	APPROVED_WITH_AMENDMENT	AUD-05; AUD-36; AUD-25	33 slurm not 37; two unlisted scripts; vendor split	Enumerate 33 + 2 explicit paths	agent
+TR-26	§5.2	extras cat09/cat28 move	APPROVED_WITH_AMENDMENT	AUD-24; AUD-29	cat28 :37-46; cat09 :27-28 imports kept build_virus_catalog	VIRALSCAN_PKG defaults; vendor build_virus_catalog	agent
+TR-27	§5.2	tests move (~45)	REJECTED	AUD-07; AUD-08; AUD-09; AUD-10; AUD-11; AUD-15	40 candidates; 4 misclassified; 3 omitted; manifest stale	Move 42 after corrections; regenerate manifest	agent
+TR-28	§5.2	reference_*/ref/BENCHMARK/PROGRESS move	APPROVED	none	No staying code reads repo-root copies	Move; do not delete	agent
+TR-29	§5.2	new repro files	APPROVED_WITH_AMENDMENT	AUD-55	carry list omits 41 docs/33 slurm/ttv/prepare_legacy/vendor data	Build moved_paths.txt from explicit paths	agent
+TR-30	§5.2	delete build_curation_view + manifest	APPROVED_WITH_AMENDMENT	AUD-46; AUD-53	66 symlinks + 9 generated files; /curation/ ignored	Delete view after ignore fix; before D10	agent
+TR-31	§5.3	TB dirs stay on disk	APPROVED_WITH_AMENDMENT	AUD-28	15 dirs exist; freeze legacy needs repo-root benchmark_runs	Fix script roots; sizes not re-measured	agent
+TR-32	§5.3	untracked tool/cache gitignore	APPROVED_WITH_AMENDMENT	AUD-47	Rplots.pdf, count_audit.tsv, .aws, .agents, .codex, biomni_bundle, viralscan_lshwcp_spec missing	Add entries in 4d	agent
+TR-33	§6 row 1	governance_utils imports	APPROVED	none	validate_claim_registry.py:16; validate_artifact_inventory.py:15; check_data_governance.py:15-16; check_ship_scope.py:17	None	agent
+TR-34	§6 row 2	sens07 imports truth-panel scripts	APPROVED_WITH_AMENDMENT	AUD-30	sens07_planted_sensitivity.py:56-58; test :21-23	Vendor plant_anello_10x.py into repro scripts/	agent
+TR-35	§6 row 3	generate_truth_panel/v3_score protocol	APPROVED_WITH_AMENDMENT	AUD-51	v3_score.py:26; generate_truth_panel.py:226	Create tests/data/truth_panel/protocol.yaml first	agent
+TR-36	§6 row 4	panel_promote/pool/candidates read panel_expansion	APPROVED_WITH_AMENDMENT	AUD-21; AUD-37	panel_census.py:93-96; panel_candidates.py:252-256; panel_promote has no default	Add panel_census/model_hpv_cds/panel_kmer rows	agent
+TR-37	§6 row 5	gen_workflow_comparison reads v3_validation + claims	APPROVED_WITH_AMENDMENT	AUD-22; AUD-37	DOC :24; --check :151-156; only URL :122	Override DOC; fix stale strings	agent
+TR-38	§6 row 6	test_index_reconciliation reads PLAN.md	APPROVED	none	tests/test_index_reconciliation.py:647; PLAN.md CAT-31	Keep CAT-31 row	agent
+TR-39	§6 row 7	ledger git show + append-only	APPROVED_WITH_AMENDMENT	AUD-35	test_ledger_git_sha.py:69,78; deviations.yaml:562	Translate SHA in same batch	agent
+TR-40	§6 row 8	validation_protocol reads ci.yml + analysis	APPROVED_WITH_AMENDMENT	AUD-41; AUD-17	test :28,:768-770,:1064; ci.yml:55-68	Repoint schema; adjust ci assertion	agent
+TR-41	§6 row 9	release_static reads Dockerfile + Singularity	APPROVED	none	Both stay	None	agent
+TR-42	§6 row 10	prepare_viral_proteins untracked	REJECTED	AUD-37	Tracked at HEAD since 703c4f3	Remove the stale row	agent
+TR-43	§6 row 11	moved tests using tests/data	APPROVED_WITH_AMENDMENT	AUD-37	No conftest, but no current mover reads tests/data	Keep rule as future-proofing	agent
+TR-44	§6 row 12 (missing)	two-root claims/inventory	REJECTED	AUD-18; AUD-19; AUD-20	registry/inventory mix package and repro paths; one repo_root	Add two-root row and validator support	user/agent
+TR-45	§7 0a	Codex idle	APPROVED	none	User confirmed; re-check each tree touch	Re-check before each step	agent
+TR-46	§7 0b	land/close PRs	BLOCKED_PREREQ	AUD-04	#105 OPEN, #103 DRAFT; #88/#93-99 gone	Re-run gh pr list; user decision	user
+TR-47	§7 0c	commit WIP as two commits	APPROVED	AUD-01	703c4f3 + eebcaeb; §4 not updated	Update §4 before baseline	agent
+TR-48	§7 0d	backup then git prune	BLOCKED_USER	AUD-02	tmp_obj 15 GB / 428 files, not 12.2 GB	User OK; re-measure	user
+TR-49	§7 0e	scratch build + gitleaks	APPROVED	none	env/bin/python build 1.6.1; tools/gitleaks 8.30.1	None	agent
+TR-50	§7 1a	consequence audit static + rehearsal	APPROVED	none	CONSEQUENCES.md; 8 agents + skeptic	Parts superseded by this audit	agent
+TR-51	§7 1b	per-batch rehearsal harness	APPROVED	none	audit/rehearse.sh pending; required by R4	Build harness before 4a	agent
+TR-52	§7 1	regression baseline	BLOCKED_PREREQ	AUD-04	§9 needs 0b/0c done	Wait for 0b	agent
+TR-53	§7 2	dev-file triage	APPROVED_WITH_AMENDMENT	AUD-52; AUD-33; AUD-56	skillpacks unmentioned; dsr05 findings; CAT-31	Include skillpacks; preserve findings and CAT-31	agent
+TR-54	§7 3	build repro with filter-repo	BLOCKED_PREREQ	AUD-04; AUD-55	Needs 0b/1; carry list incomplete	Build explicit moved_paths.txt	agent
+TR-55	§7 4a	package PR governance/analysis out	APPROVED_WITH_AMENDMENT	AUD-17; AUD-18; AUD-19; AUD-20; AUD-21; AUD-46; AUD-51	Order: ignore fix, delete view, protocol copy, removals, JSON/MANIFEST, validator repoints	Apply all amendments	agent
+TR-56	§7 4b	package PR scripts/tests out	APPROVED_WITH_AMENDMENT	AUD-07; AUD-08; AUD-09; AUD-10	FASTQ family, starsolo, gene_programs	Move 4 FASTQ files; move starsolo; keep gene_programs	agent
+TR-57	§7 4c	package PR dev files per triage	APPROVED_WITH_AMENDMENT	AUD-44; AUD-52	PLAN.md:15; CLAUDE.md:52; skillpacks	Repoint links; add skillpacks	agent
+TR-58	§7 4d	package PR clutter + doc relinks	APPROVED_WITH_AMENDMENT	AUD-41; AUD-42; AUD-43; AUD-45; AUD-46; AUD-47	release_policy:54; 5 false positives; docs/figures; reference_*; ignore	Replace the 4d list with the audit's corrected list	agent
+TR-59	§7 5	symlink back top-level dirs	APPROVED_WITH_AMENDMENT	AUD-56	Only top-level dirs; moved individual scripts not restored	Fix script roots; do not rely on symlinks	agent
+TR-60	§7 6	final verification	APPROVED	none	§14 checks are adequate	None	agent
+TR-61	§8	governance/release tests	APPROVED_WITH_AMENDMENT	AUD-15; AUD-35; AUD-20	ship_scope/tracked_tree/data_governance stay; artifact/claim/ledger/validation/workflow move; two-root	Resolve explicitly	agent
+TR-62	§8	validation/DSR tests	APPROVED	none	All 8 DSR + sens07 depend on moving scripts	None	agent
+TR-63	§8	fresh/legacy tests	APPROVED_WITH_AMENDMENT	AUD-07; AUD-08; AUD-36	Add FASTQ family; add prepare_legacy script	Apply	agent
+TR-64	§8	other research tests	REJECTED	AUD-10; AUD-16	gene_programs_staleness depends on kept extras; count 40 not ~45	Keep gene_programs; count 42 after corrections	agent
+TR-65	§8	stay truth-panel tests	APPROVED_WITH_AMENDMENT	AUD-51	D9 fixture absent; v3_score:26 old	Create fixture and repoint	agent
+TR-66	§8	stay panel builder tests	REJECTED	AUD-09; AUD-07; AUD-08	package_starsolo_duplicates loads moving script; FASTQ tests import moving scripts	Move all three tests	agent
+TR-67	§8	schema reader tests	APPROVED_WITH_AMENDMENT	AUD-11; AUD-12; AUD-13	positive_control_receipt:265-270; multimapping:248-249; docs_consistency:86; validation:216-221	Delete/repoint per audit	agent
+TR-68	§9.1	pytest default 3 chunks	APPROVED	none	3810/3981 collect confirmed	Run foreground 3 chunks	agent
+TR-69	§9.2	build wheel/sdist + checks	APPROVED	none	env/bin/python build exists; check_ship_scope/check_dist_size stay	None	agent
+TR-70	§9.3	CLI help hashes	APPROVED	none	PYTHONPATH=src python -m viralscan	None	agent
+TR-71	§9.4	sphinx -W + nbmake 6	APPROVED	none	ci.yml:167-173; docs/vignettes stay	None	agent
+TR-72	§9.5	E2E evidence_tiny	APPROVED	none	tests/data/evidence_tiny stays	None	agent
+TR-73	§9.6	move inventory	APPROVED_WITH_AMENDMENT	AUD-15; AUD-55	file_manifest incomplete; carry list incomplete	Build explicit inventory	agent
+TR-74	§9 pass criteria	baseline diff rules	APPROVED	none	§9:177	None	agent
+TR-75	§12 4a	governance + analysis out	APPROVED_WITH_AMENDMENT	AUD-17; AUD-18; AUD-21; AUD-46; AUD-51	validators; two-root; panel_census; ignore; protocol	Apply	agent
+TR-76	§12 4b	scripts/tests out	APPROVED_WITH_AMENDMENT	AUD-07; AUD-08; AUD-09; AUD-10	FASTQ family; starsolo; gene_programs	Apply	agent
+TR-77	§12 4c	dev files	APPROVED_WITH_AMENDMENT	AUD-44; AUD-52	PLAN/CLAUDE links; skillpacks	Apply	agent
+TR-78	§12 4d	clutter + relinks	APPROVED_WITH_AMENDMENT	AUD-41; AUD-42; AUD-43; AUD-45; AUD-46; AUD-47	misses and false positives	Apply corrected list	agent
+TR-79	§13	symlink back	APPROVED_WITH_AMENDMENT	AUD-56	top-level only	Fix script roots	agent
+TR-80	§14	final verification	APPROVED	none	GitHub tree/sha/CI checks	None	agent
+TR-81	§15 Q1	merge #88 + #93-99	REJECTED	AUD-04	PRs gone; #103/#105 open	Re-ask user about #103/#105	user
+TR-82	§15 Q2	commit WIP two commits	APPROVED	none	0c done 703c4f3 + eebcaeb	None	user
+TR-83	§15 Q3-Q4	build env + token scanner	APPROVED	none	0e done	None	user
+TR-84	§16	change log	APPROVED_WITH_AMENDMENT	none	This audit entry added	Keep appending	agent

@@ -1,0 +1,387 @@
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/advance_trackA.py
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/advance_trackA.py
+@@ -24 +24 @@
+-R = M / 'viralscan_work/trackA_round1'
++R = M / 'ViralScan-reproducibility/data/runs/work/trackA_round1'
+@@ -106,2 +106,2 @@
+-                   f'ROUND_DIR={R}', f'CODE_DIR={M}/vs_pinned/97a64f6', f'CODE={M}/vs_pinned/97a64f6',
+-                   f'REF_BUILD={M}/viral_ref_cat42d/build', f'CALLS={R}/evidence/calls.tsv', *extra]
++                   f'ROUND_DIR={R}', f'CODE_DIR={M}/ViralScan-reproducibility/data/pinned_snapshots/vs_pinned/97a64f6', f'CODE={M}/ViralScan-reproducibility/data/pinned_snapshots/vs_pinned/97a64f6',
++                   f'REF_BUILD={M}/ViralScan-reproducibility/data/references/panel_builds/viral_ref_cat42d/build', f'CALLS={R}/evidence/calls.tsv', *extra]
+@@ -145 +145 @@
+-        arrays('off_' + grp, ids, M / 'vs_pinned/97a64f6/scripts/slurm_dsr_rerun_array.sh', mem, hours,
++        arrays('off_' + grp, ids, M / 'ViralScan-reproducibility/data/pinned_snapshots/vs_pinned/97a64f6/scripts/slurm_dsr_rerun_array.sh', mem, hours,
+@@ -167 +167 @@
+-    arrays('evidence', [i for i, c in enumerate(rows(R / 'evidence/calls.tsv')) if c['dataset'] not in SKIP_DS], M / 'vs_pinned/97a64f6/scripts/slurm_dsr02_evidence_array.sh', '48G', 24, 8)
++    arrays('evidence', [i for i, c in enumerate(rows(R / 'evidence/calls.tsv')) if c['dataset'] not in SKIP_DS], M / 'ViralScan-reproducibility/data/pinned_snapshots/vs_pinned/97a64f6/scripts/slurm_dsr02_evidence_array.sh', '48G', 24, 8)
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/append_manifest.py
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/append_manifest.py
+@@ -6 +6 @@
+-R = '/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackA_round1'
++R = '/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1'
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/armP_wave.sh
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/armP_wave.sh
+@@ -4 +4 @@
+-R=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackA_round1
++R=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/build_manifest.py
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/build_manifest.py
+@@ -6,2 +6,2 @@
+-D = f'{M}/viralscan_work/discovery'
+-R = f'{M}/viralscan_work/trackA_round1'
++D = f'{M}/ViralScan-reproducibility/data/runs/work/discovery'
++R = f'{M}/ViralScan-reproducibility/data/runs/work/trackA_round1'
+@@ -12,2 +12,2 @@
+-LOCAL = [f'{M}/ViralScan/benchmark_inputs/reference_strategy', f'{M}/ViralScan/benchmark_inputs/dsr_2026-10-05/*',
+-         f'{M}/viralscan_work/hpv16_gse189670/fastq']
++LOCAL = [f'{M}/ViralScan-reproducibility/data/inputs/benchmark_inputs/reference_strategy', f'{M}/ViralScan-reproducibility/data/inputs/benchmark_inputs/dsr_2026-10-05/*',
++         f'{M}/ViralScan-reproducibility/data/runs/work/hpv16_gse189670/fastq']
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/build_provenance.py
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/build_provenance.py
+@@ -28,2 +28,2 @@
+-R = f"{M}/viralscan_work/trackA_round1"
+-D = f"{M}/viralscan_work/discovery"
++R = f"{M}/ViralScan-reproducibility/data/runs/work/trackA_round1"
++D = f"{M}/ViralScan-reproducibility/data/runs/work/discovery"
+@@ -31 +31 @@
+-REF = f"{M}/viral_ref_cat42d"
++REF = f"{M}/ViralScan-reproducibility/data/references/panel_builds/viral_ref_cat42d"
+@@ -167 +167 @@
+-T = f"{M}/ViralScan/analysis/translated_search/work/arm_p_confirm_2026-10-14"
++T = f"{M}/ViralScan-reproducibility/data/runs/old_checkout_analysis/translated_search/work/arm_p_confirm_2026-10-14"
+@@ -201 +201 @@
+-                    "pinned_checkout": f"{M}/vs_pinned/97a64f6"},
++                    "pinned_checkout": f"{M}/ViralScan-reproducibility/data/pinned_snapshots/vs_pinned/97a64f6"},
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/build_scclr.sh
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/build_scclr.sh
+@@ -7 +7 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackA_round1/logs/%x_%j.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/logs/%x_%j.log
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/build_tonsil_libs.py
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/build_tonsil_libs.py
+@@ -16,2 +16,2 @@
+-D = f'{M}/viralscan_work/discovery'
+-R = f'{M}/viralscan_work/trackA_round1'
++D = f'{M}/ViralScan-reproducibility/data/runs/work/discovery'
++R = f'{M}/ViralScan-reproducibility/data/runs/work/trackA_round1'
+@@ -19 +19 @@
+-LOCAL = [f'{M}/ViralScan/benchmark_inputs/dsr_2026-10-05/E-MTAB-13687']   # local copies (no .done; md5.txt marks completion)
++LOCAL = [f'{M}/ViralScan-reproducibility/data/inputs/benchmark_inputs/dsr_2026-10-05/E-MTAB-13687']   # local copies (no .done; md5.txt marks completion)
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/deletion_window.sh
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/deletion_window.sh
+@@ -10 +10 @@
+-R=$M/viralscan_work/trackA_round1
++R=$M/ViralScan-reproducibility/data/runs/work/trackA_round1
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/freeze_and_submit_variants.py
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/freeze_and_submit_variants.py
+@@ -30,3 +30,3 @@
+-R = M / "viralscan_work/trackA_round1"
+-CODE = M / "vs_pinned/97a64f6"
+-REF_BUILD = M / "viral_ref_cat42d/build"
++R = M / "ViralScan-reproducibility/data/runs/work/trackA_round1"
++CODE = M / "ViralScan-reproducibility/data/pinned_snapshots/vs_pinned/97a64f6"
++REF_BUILD = M / "ViralScan-reproducibility/data/references/panel_builds/viral_ref_cat42d/build"
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/hash_fastq_content.sh
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/hash_fastq_content.sh
+@@ -6 +6 @@
+-R=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackA_round1
++R=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/hash_hhv6b_bus_stage_2026-10-22.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/hash_hhv6b_bus_stage_2026-10-22.sbatch
+@@ -7 +7 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackA_round1/logs/%x_%j.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/logs/%x_%j.log
+@@ -12 +12 @@
+-R=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackA_round1
++R=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/make_armp.py
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/make_armp.py
+@@ -6,2 +6,2 @@
+-R = f'{M}/mdmanurung/viralscan_work/trackA_round1'
+-T = f'{M}/mdmanurung/ViralScan/analysis/translated_search/work'
++R = f'{M}/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1'
++T = f'{M}/mdmanurung/ViralScan-reproducibility/data/runs/old_checkout_analysis/translated_search/work'
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/make_evidence_calls.sh
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/make_evidence_calls.sh
+@@ -6 +6 @@
+-M=/exports/archive/hg-funcgenom-research/mdmanurung; R=$M/viralscan_work/trackA_round1; CODE=$M/vs_pinned/97a64f6
++M=/exports/archive/hg-funcgenom-research/mdmanurung; R=$M/ViralScan-reproducibility/data/runs/work/trackA_round1; CODE=$M/ViralScan-reproducibility/data/pinned_snapshots/vs_pinned/97a64f6
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/restore_damaged_fastq.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/restore_damaged_fastq.sbatch
+@@ -14 +14 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackA_round1/logs/%x_%j.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/logs/%x_%j.log
+@@ -18,2 +18,2 @@
+-R=$M/viralscan_work/trackA_round1
+-W=$M/viralscan_work/discovery
++R=$M/ViralScan-reproducibility/data/runs/work/trackA_round1
++W=$M/ViralScan-reproducibility/data/runs/work/discovery
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/retry_evidence_row178.sh
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/retry_evidence_row178.sh
+@@ -7 +7 @@
+-R=$M/viralscan_work/trackA_round1
++R=$M/ViralScan-reproducibility/data/runs/work/trackA_round1
+@@ -9 +9 @@
+-ENV="ALL,OFFSET=0,TASK_OFFSET=125,TRACKA_SCRIPT=$M/vs_pinned/97a64f6/scripts/slurm_dsr02_evidence_array.sh,ROUND_DIR=$R,CODE_DIR=$M/vs_pinned/97a64f6,CODE=$M/vs_pinned/97a64f6,REF_BUILD=$M/viral_ref_cat42d/build,CALLS=$R/evidence/calls.tsv"
++ENV="ALL,OFFSET=0,TASK_OFFSET=125,TRACKA_SCRIPT=$M/ViralScan-reproducibility/data/pinned_snapshots/vs_pinned/97a64f6/scripts/slurm_dsr02_evidence_array.sh,ROUND_DIR=$R,CODE_DIR=$M/ViralScan-reproducibility/data/pinned_snapshots/vs_pinned/97a64f6,CODE=$M/ViralScan-reproducibility/data/pinned_snapshots/vs_pinned/97a64f6,REF_BUILD=$M/ViralScan-reproducibility/data/references/panel_builds/viral_ref_cat42d/build,CALLS=$R/evidence/calls.tsv"
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/seed_advance_state.py
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/seed_advance_state.py
+@@ -15 +15 @@
+-R = Path('/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackA_round1')
++R = Path('/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1')
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_anello_align.sh
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_anello_align.sh
+@@ -8 +8 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackA_round1/logs/%x_%j.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/logs/%x_%j.log
+@@ -12 +12 @@
+-python $M/viralscan_work/trackA_round1/scripts/trackA_anello_align.py "$@"
++python $M/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/trackA_anello_align.py "$@"
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_anello_classify.sh
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_anello_classify.sh
+@@ -8 +8 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackA_round1/logs/%x_%j.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/logs/%x_%j.log
+@@ -12 +12 @@
+-python $M/viralscan_work/trackA_round1/scripts/trackA_anello_classify.py "$@"
++python $M/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/trackA_anello_classify.py "$@"
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_anello_compref.sh
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_anello_compref.sh
+@@ -8 +8 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackA_round1/logs/%x_%j.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/logs/%x_%j.log
+@@ -11,2 +11,2 @@
+-R=$M/viralscan_work/trackA_round1
+-export PATH=$M/conda/envs/viralscan_test_full/bin:$PATH PYTHONPATH=$M/vs_pinned/97a64f6/src
++R=$M/ViralScan-reproducibility/data/runs/work/trackA_round1
++export PATH=$M/conda/envs/viralscan_test_full/bin:$PATH PYTHONPATH=$M/ViralScan-reproducibility/data/pinned_snapshots/vs_pinned/97a64f6/src
+@@ -18 +18 @@
+-      "$M/viral_ref_cat42d/build/viral.fa", "$O/competitive_host_target.fasta"))
++      "$M/ViralScan-reproducibility/data/references/panel_builds/viral_ref_cat42d/build/viral.fa", "$O/competitive_host_target.fasta"))
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_anello_plant.sh
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_anello_plant.sh
+@@ -8 +8 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackA_round1/logs/%x_%j.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/logs/%x_%j.log
+@@ -12 +12 @@
+-python $M/viralscan_work/trackA_round1/scripts/trackA_anello_plant.py "$@"
++python $M/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/trackA_anello_plant.py "$@"
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_anello_poscontrol.sh
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_anello_poscontrol.sh
+@@ -7 +7 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackA_round1/logs/%x_%j.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/logs/%x_%j.log
+@@ -11 +11 @@
+-python $M/viralscan_work/trackA_round1/scripts/trackA_anello_poscontrol.py 8
++python $M/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/trackA_anello_poscontrol.py 8
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_dsr_chem_array.sh
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_dsr_chem_array.sh
+@@ -14 +14 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/dsr_round1/logs/%x_%A_%a.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/dsr_round1/logs/%x_%A_%a.log
+@@ -18,3 +18,3 @@
+-R=${ROUND_DIR:-$M/viralscan_work/dsr_round1}
+-CODE=${CODE_DIR:-$M/vs_pinned/bbf1821}
+-REF=${REF_BUILD:-$M/viral_ref_cat42d/build}
++R=${ROUND_DIR:-$M/ViralScan-reproducibility/data/runs/work/dsr_round1}
++CODE=${CODE_DIR:-$M/ViralScan-reproducibility/data/pinned_snapshots/vs_pinned/bbf1821}
++REF=${REF_BUILD:-$M/ViralScan-reproducibility/data/references/panel_builds/viral_ref_cat42d/build}
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_em_rerun.sh
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_em_rerun.sh
+@@ -9 +9 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackA_round1/logs/%x_%j.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/logs/%x_%j.log
+@@ -13 +13 @@
+-R=$M/viralscan_work/trackA_round1
++R=$M/ViralScan-reproducibility/data/runs/work/trackA_round1
+@@ -15 +15 @@
+-export PYTHONPATH=$M/vs_pinned/97a64f6/src
++export PYTHONPATH=$M/ViralScan-reproducibility/data/pinned_snapshots/vs_pinned/97a64f6/src
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_finish_evidence.sh
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_finish_evidence.sh
+@@ -8 +8 @@
+-R=$M/viralscan_work/trackA_round1
++R=$M/ViralScan-reproducibility/data/runs/work/trackA_round1
+@@ -34 +34 @@
+-python "$M/vs_pinned/97a64f6/scripts/dsr02_calibration.py" evidence evidence/approved_consistency_labels.tsv \
++python "$M/ViralScan-reproducibility/data/pinned_snapshots/vs_pinned/97a64f6/scripts/dsr02_calibration.py" evidence evidence/approved_consistency_labels.tsv \
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_finish_provenance.sh
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_finish_provenance.sh
+@@ -8 +8 @@
+-R=$M/viralscan_work/trackA_round1
++R=$M/ViralScan-reproducibility/data/runs/work/trackA_round1
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_finish_summaries.sh
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_finish_summaries.sh
+@@ -8 +8 @@
+-R=$M/viralscan_work/trackA_round1
++R=$M/ViralScan-reproducibility/data/runs/work/trackA_round1
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_hostresponse.sh
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_hostresponse.sh
+@@ -9 +9 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackA_round1/logs/%x_%j.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/logs/%x_%j.log
+@@ -13,2 +13,2 @@
+-R=$M/viralscan_work/trackA_round1
+-export PATH=$M/conda/envs/viralscan_test_full/bin:$PATH PYTHONPATH=$M/vs_pinned/97a64f6/src MPLBACKEND=Agg
++R=$M/ViralScan-reproducibility/data/runs/work/trackA_round1
++export PATH=$M/conda/envs/viralscan_test_full/bin:$PATH PYTHONPATH=$M/ViralScan-reproducibility/data/pinned_snapshots/vs_pinned/97a64f6/src MPLBACKEND=Agg
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_hostresponse_knn.sh
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_hostresponse_knn.sh
+@@ -8 +8 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackA_round1/logs/%x_%j.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/logs/%x_%j.log
+@@ -13 +13 @@
+-python $M/viralscan_work/trackA_round1/scripts/trackA_hostresponse_knn.py "$DS" "$LIB"
++python $M/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/trackA_hostresponse_knn.py "$DS" "$LIB"
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_trackA_armP.sh
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_trackA_armP.sh
+@@ -6,2 +6,2 @@
+-R=$M/viralscan_work/trackA_round1
+-W=$M/ViralScan/analysis/translated_search/work/palmdb_plus_annotated_2026-10-14
++R=$M/ViralScan-reproducibility/data/runs/work/trackA_round1
++W=$M/ViralScan-reproducibility/data/runs/old_checkout_analysis/translated_search/work/palmdb_plus_annotated_2026-10-14
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_trackA_armP_confirm.sh
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_trackA_armP_confirm.sh
+@@ -7,2 +7,2 @@
+-R=$M/viralscan_work/trackA_round1
+-T=$M/ViralScan/analysis/translated_search/work/arm_p_confirm_2026-10-14
++R=$M/ViralScan-reproducibility/data/runs/work/trackA_round1
++T=$M/ViralScan-reproducibility/data/runs/old_checkout_analysis/translated_search/work/arm_p_confirm_2026-10-14
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_trackA_armP_confirm_groups.sh
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_trackA_armP_confirm_groups.sh
+@@ -8 +8 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackA_round1/logs/%x_%j.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/logs/%x_%j.log
+@@ -12,2 +12,2 @@
+-R=$M/viralscan_work/trackA_round1
+-T=$M/ViralScan/analysis/translated_search/work/arm_p_confirm_2026-10-14
++R=$M/ViralScan-reproducibility/data/runs/work/trackA_round1
++T=$M/ViralScan-reproducibility/data/runs/old_checkout_analysis/translated_search/work/arm_p_confirm_2026-10-14
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_trackA_concat.sh
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_trackA_concat.sh
+@@ -10 +10 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackA_round1/logs/%x_%A_%a.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/logs/%x_%A_%a.log
+@@ -12 +12 @@
+-R=/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackA_round1
++R=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_trackA_variant.sh
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_trackA_variant.sh
+@@ -23 +23 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackA_round1/logs/%x_%A_%a.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/logs/%x_%A_%a.log
+@@ -28 +28 @@
+-ROUND1=$M/viralscan_work/dsr_round1
++ROUND1=$M/ViralScan-reproducibility/data/runs/work/dsr_round1
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_validate_run.sh
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/slurm_validate_run.sh
+@@ -8 +8 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackA_round1/logs/%x_%A_%a.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/logs/%x_%A_%a.log
+@@ -11,2 +11,2 @@
+-R=$M/viralscan_work/trackA_round1
+-export PATH=$M/conda/envs/viralscan_test_full/bin:$PATH PYTHONPATH=$M/vs_pinned/97a64f6/src
++R=$M/ViralScan-reproducibility/data/runs/work/trackA_round1
++export PATH=$M/conda/envs/viralscan_test_full/bin:$PATH PYTHONPATH=$M/ViralScan-reproducibility/data/pinned_snapshots/vs_pinned/97a64f6/src
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/spotcheck_redownload.sbatch
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/spotcheck_redownload.sbatch
+@@ -12 +12 @@
+-#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackA_round1/logs/%x_%j.log
++#SBATCH -o /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/logs/%x_%j.log
+@@ -16,2 +16,2 @@
+-R=$M/viralscan_work/trackA_round1
+-W=$M/viralscan_work/discovery
++R=$M/ViralScan-reproducibility/data/runs/work/trackA_round1
++W=$M/ViralScan-reproducibility/data/runs/work/discovery
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/submit_arm.sh
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/submit_arm.sh
+@@ -6 +6 @@
+-R=$M/viralscan_work/trackA_round1; CODE=$M/vs_pinned/97a64f6
++R=$M/ViralScan-reproducibility/data/runs/work/trackA_round1; CODE=$M/ViralScan-reproducibility/data/pinned_snapshots/vs_pinned/97a64f6
+@@ -12 +12 @@
+-      --export=ALL,ARM=$ARM,ROUND_DIR=$R,CODE_DIR=$CODE,REF_BUILD=$M/viral_ref_cat42d/build)
++      --export=ALL,ARM=$ARM,ROUND_DIR=$R,CODE_DIR=$CODE,REF_BUILD=$M/ViralScan-reproducibility/data/references/panel_builds/viral_ref_cat42d/build)
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/summarize_trackA_armP.py
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/summarize_trackA_armP.py
+@@ -7,3 +7,3 @@
+-R = f'{M}/viralscan_work/trackA_round1'
+-P = f'{M}/vs_pinned/97a64f6/analysis/translated_search'
+-REF = f'{M}/ViralScan/analysis/translated_search/work/palmdb_plus_annotated_2026-10-14/reference_final'
++R = f'{M}/ViralScan-reproducibility/data/runs/work/trackA_round1'
++P = f'{M}/ViralScan-reproducibility/data/pinned_snapshots/vs_pinned/97a64f6/analysis/translated_search'
++REF = f'{M}/ViralScan-reproducibility/data/runs/old_checkout_analysis/translated_search/work/palmdb_plus_annotated_2026-10-14/reference_final'
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/trackA_anello_plant.py
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/trackA_anello_plant.py
+@@ -18,2 +18,2 @@
+-R = f"{M}/viralscan_work/trackA_round1"
+-sys.path.insert(0, f"{M}/vs_pinned/97a64f6/scripts")
++R = f"{M}/ViralScan-reproducibility/data/runs/work/trackA_round1"
++sys.path.insert(0, f"{M}/ViralScan-reproducibility/data/pinned_snapshots/vs_pinned/97a64f6/scripts")
+@@ -22 +22 @@
+-PLANT = f"{M}/viral_ref_cat42b/runs_anello_plant"
++PLANT = f"{M}/ViralScan-reproducibility/data/references/panel_builds/viral_ref_cat42b/runs_anello_plant"
+@@ -26 +26 @@
+-GTF = f"{M}/viral_ref_cat42d/build/viral_panel.gtf"
++GTF = f"{M}/ViralScan-reproducibility/data/references/panel_builds/viral_ref_cat42d/build/viral_panel.gtf"
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/trackA_hostresponse_knn.py
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/trackA_hostresponse_knn.py
+@@ -30,2 +30,2 @@
+-R = f"{M}/viralscan_work/trackA_round1"
+-sys.path.insert(0, f"{M}/vs_pinned/97a64f6/src")
++R = f"{M}/ViralScan-reproducibility/data/runs/work/trackA_round1"
++sys.path.insert(0, f"{M}/ViralScan-reproducibility/data/pinned_snapshots/vs_pinned/97a64f6/src")
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/trackA_hostresponse_xlib.py
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/trackA_hostresponse_xlib.py
+@@ -26,2 +26,2 @@
+-R = f"{M}/viralscan_work/trackA_round1"
+-sys.path.insert(0, f"{M}/vs_pinned/97a64f6/src")
++R = f"{M}/ViralScan-reproducibility/data/runs/work/trackA_round1"
++sys.path.insert(0, f"{M}/ViralScan-reproducibility/data/pinned_snapshots/vs_pinned/97a64f6/src")
+
+--- a/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/unblock_wave1.sh
++++ b/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/work/trackA_round1/scripts/unblock_wave1.sh
+@@ -7 +7 @@
+-R=$M/viralscan_work/trackA_round1
++R=$M/ViralScan-reproducibility/data/runs/work/trackA_round1
+@@ -33 +33 @@
+-ENV="ALL,OFFSET=0,TASK_OFFSET=0,TRACKA_SCRIPT=$R/scripts/slurm_trackA_variant.sh,ROUND_DIR=$R,CODE_DIR=$M/vs_pinned/97a64f6,CODE=$M/vs_pinned/97a64f6,REF_BUILD=$M/viral_ref_cat42d/build,CALLS=$R/evidence/calls.tsv,ARM=twostep"
++ENV="ALL,OFFSET=0,TASK_OFFSET=0,TRACKA_SCRIPT=$R/scripts/slurm_trackA_variant.sh,ROUND_DIR=$R,CODE_DIR=$M/ViralScan-reproducibility/data/pinned_snapshots/vs_pinned/97a64f6,CODE=$M/ViralScan-reproducibility/data/pinned_snapshots/vs_pinned/97a64f6,REF_BUILD=$M/ViralScan-reproducibility/data/references/panel_builds/viral_ref_cat42d/build,CALLS=$R/evidence/calls.tsv,ARM=twostep"

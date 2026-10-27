@@ -1,0 +1,697 @@
+{
+ "breaks": [
+  [
+   "break_build",
+   ".gitignore",
+   false,
+   "Lines 99-101 (comment plus /curation/) ignore the whole top-level curation dir (git check-ignore curation/panel/x says ignored). D10 puts tracked files in curation/panel/; git mv of tracked files works but new files there need add -f. Currently not ignored and",
+   "Remove .gitignore lines 99-101 (the 'Generated symlink curation view' comment and '/curation/'). Append: .aws/, .agents/, .codex/, .mycelium/, tmp/, sources/, biomni_bundle/, viralscan_lshwcp_spec/, Rplots.pdf. Do not add moved dir names here; R2 symlinks go in .git/info/exclude only."
+  ],
+  [
+   "break_build",
+   "MANIFEST.in",
+   false,
+   "Include lines for claims/registry.json, analysis/v3_artifact_inventory.tsv, 11 schemas/v3/* files and scripts/validate_artifact_inventory.py, validate_claim_registry.py, validate_v3_protocol.py name files that will not exist. setuptools only warns, so the sdis",
+   "Delete from MANIFEST.in: 'include claims/registry.json'; 'include analysis/v3_artifact_inventory.tsv'; the eleven 'include schemas/v3/...' lines; 'include scripts/validate_artifact_inventory.py'; 'include scripts/validate_claim_registry.py'; 'include scripts/validate_v3_protocol.py'. Keep the check_"
+  ],
+  [
+   "break_build",
+   "config/public_ship_scope.json",
+   false,
+   "Cross-area note, outside my brief but found while reading. The sdist member list at lines 100-101 and 135-137 names analysis/v3_artifact_inventory.tsv, claims/registry.json, scripts/validate_artifact_inventory.py, scripts/validate_claim_registry.py and scripts",
+   "Remove those members from the scope JSON and the matching MANIFEST.in includes. Drop the two CI steps, or move them to the repro repo's CI. Repoint the schemas/v3/ members to src/viralscan/schemas/v3."
+  ],
+  [
+   "break_ci",
+   ".github/workflows/ci.yml",
+   false,
+   "Lint job step 'v3 protocol draft gate' runs scripts/validate_v3_protocol.py (line 61) and step 'deviation ledger is append-only' runs scripts/check_ledger_append_only.py --revision origin/main (line 68); both scripts are class repro, so both steps fail file-no",
+   "Delete ci.yml lines 55-68 inclusive (blank 55, comments+step 'v3 protocol draft gate' 56-61, blank 62, comments+step 'deviation ledger is append-only' 63-68), leaving one blank line before 'test:'. Cosmetic: lint-job checkout comment lines 21-23 and fetch-depth 0 (24-25) exist only for the ledger ch"
+  ],
+  [
+   "break_ci",
+   "scripts/validate_claim_registry.py",
+   false,
+   "Lines 15-30 (same in validate_artifact_inventory.py): try `from scripts.governance_utils import ...`, except ModuleNotFoundError `from governance_utils import ...`. governance_utils.py stays in the package. Both validators move; without governance_utils the re",
+   "Vendor governance_utils.py into repro scripts/ (no code change). Add a drift check against the package copy at the pinned sha, because check_data_governance and check_ship_scope in the package keep using the original."
+  ],
+  [
+   "break_docs",
+   "docs/workflow_comparison.md",
+   false,
+   "Published page (in reference_help.md toctree) links https://github.com/mdmanurung/ViralScan/blob/main/claims/registry.json (line 9). claims/ moves to repro, so that link 404s on the package repo. Header comment line 3 names scripts/gen_workflow_comparison.py a",
+   "Repoint link to the repro repo URL (\u2026/ViralScan-reproducibility/blob/main/claims/registry.json) and reword header comment to say generated in the reproducibility repo."
+  ],
+  [
+   "break_runtime",
+   "analysis/audit_2026-10/repro_A/a01_normalise_all.py",
+   null,
+   "24 repro code files read src/viralscan/data paths directly, including `src/viralscan/data/*.gtf` globs (a01-a05, a08, a10, a15, a18, a19 and others), Epstein_Barr_virus_NC_007605.gtf, Human_herpesvirus_8_NC_009333.gtf, repeat_gene_merges.tsv, gene_programs.tsv",
+   "Repro README must state the requirement: a package checkout with local data at the pinned sha, referenced by an env var (e.g. VIRALSCAN_PKG) or by a gitignored links/viralscan symlink (R2), with `pip install -e` or PYTHONPATH=$VIRALSCAN_PKG/src. Rewrite the hardcoded `src/viralscan/data` strings to "
+  ],
+  [
+   "break_runtime",
+   "analysis/audit_2026-10/repro_A/a07_overlap_threshold.py",
+   false,
+   "Seven audit repro scripts (a07, a08, a09, a10, a16, a17, a18) do `sys.path.insert(0,\"extras\")` then `import build_gene_programs as G`. The path is relative to cwd, so they need to run from the repo root with extras/build_gene_programs.py (kept). That file is a",
+   "Vendor build_gene_programs.py into repro extras/ (frozen at the audited sha) so the relative path keeps working, or sys.path-insert $PKG_CHECKOUT/extras. Because they are historical audit evidence, vendoring a frozen copy is more faithful than tracking package HEAD."
+  ],
+  [
+   "break_runtime",
+   "extras/cat09_human_host_sweep.py",
+   false,
+   "Line 28: `from build_virus_catalog import catalog_row` with no sys.path manipulation. It works today only because extras/ is the script's own directory. build_virus_catalog.py stays in the package extras/, so after the move the import fails. REPO_ROOT=parents[",
+   "Vendor extras/build_virus_catalog.py into repro extras/ at the pinned sha, or sys.path-insert the package checkout's extras/. Point CATALOGUE at the package checkout or at the installed viralscan.data resource. virus_catalog.tsv is in ship scope, so the installed copy works."
+  ],
+  [
+   "break_runtime",
+   "scripts/anello_body_census.py",
+   true,
+   "Private internals imported from src/viralscan: anello_body_census.py:42 `viralscan.anello_align._revcomp`; dsr02_validate_call.py:43 `viralscan.evidence._is_low_complexity`; hostresponse_ebv_matched.py:17 `viralscan.scripts.hostresponse._safe_name`; analysis/r",
+   "Pin the repro environment to a package sha, which makes this stable, and record the list as 'private-API consumers' in the repro README. For active code (anello_body_census, dsr02_validate_call, hostresponse_ebv_matched, harmonize_2x2) prefer a local 2-line copy of the helper (_revcomp, _safe_name, "
+  ],
+  [
+   "break_runtime",
+   "scripts/build_bundled_panel_ref.py",
+   false,
+   "Line 317 sets the --gtf-manifest default to _find_repo_root() / 'analysis' / 'panel_expansion' / 'gtf_corpus_manifest.tsv'. main() runs write_gtf_manifest --check on it before any fetch and fails closed. After the split the file is at curation/panel/, so a def",
+   "Change the default to _find_repo_root() / 'curation' / 'panel' / 'gtf_corpus_manifest.tsv'. Also drop the stale pointer to moved scripts/bulk_viral_summarize.py at lines 961-963 (message text only, cosmetic)."
+  ],
+  [
+   "break_runtime",
+   "scripts/build_genome_panel_ref.sh",
+   true,
+   "Line 59: `PYTHONPATH=\"$REPO/src\" python \"$REPO/scripts/build_bundled_panel_ref.py\"`. build_bundled_panel_ref.py stays (panel/data builder). Also the NCBI_EMAIL default is hard-coded. With REPO resolved to the repro root, neither src/ nor scripts/build_bundled_",
+   "Introduce `PKG=${VIRALSCAN_PKG:?}` and call `python \"$PKG/scripts/build_bundled_panel_ref.py\"` with PYTHONPATH=$PKG/src. A vendored copy is not advised: the builder imports viralscan internals and fetches from NCBI, so it should track one package sha."
+  ],
+  [
+   "break_runtime",
+   "scripts/dsr02_validate_call.py",
+   true,
+   "Scripts load siblings by path: dsr02_calibration, dsr02_validate_call (:41-77), dsr03_evidence_cards (:42-64), dsr05_dossier (:205), dsr06_reference_cells (:53) use `importlib.util.spec_from_file_location(name, REPO/'scripts'/f'{name}.py')` and `sys.path.inser",
+   "No code change is required if repro installs the package (`pip install -e $VIRALSCAN_PKG`, or PYTHONPATH=$VIRALSCAN_PKG/src exported by a repro env.sh). Alternative: replace `REPO/'src'` with `os.environ.get('VIRALSCAN_PKG')`. Without either, ImportError of viralscan at first use. The slurm_*.sh scr"
+  ],
+  [
+   "break_runtime",
+   "scripts/model_hpv_cds_gtfs.py",
+   false,
+   "Line 225 sets the --qc default to root / 'analysis' / 'panel_expansion' / 'hpv_modelled_cds_qc.tsv'. A non-dry run writes the QC TSV into a directory that is gone, and a --dry-run only prints. test_thin_gtf_scripts.py does not use the default.",
+   "Change the default to root / 'curation' / 'panel' / 'hpv_modelled_cds_qc.tsv'."
+  ],
+  [
+   "break_runtime",
+   "scripts/panel_candidates.py",
+   false,
+   "Line 252 sets root to analysis/panel_expansion for --evonk, --curated, --census, --kmer-sharing, --kmer-partners and --out. test_panel_candidates.py:100 calls pc.main() with explicit paths, so tests pass. Lines 4-8 hold the usage text. Line 21 mentions scripts",
+   "Set root to curation/panel and update usage lines 4-8. Reword line 21 to say census.tsv is produced by the repro repo's panel_census."
+  ],
+  [
+   "break_runtime",
+   "scripts/panel_kmer_sharing.py",
+   false,
+   "Line 272 sets root to analysis/panel_expansion for --candidates and --out. The usage text at lines 4-6 shows the same path. test_panel_kmer_sharing.py does not exercise the defaults.",
+   "Set root to curation/panel and update the usage text."
+  ],
+  [
+   "break_runtime",
+   "scripts/panel_pool.py",
+   false,
+   "Line 86 sets root = parents[1] / 'analysis' / 'panel_expansion', the default for --candidates and --out. test_panel_pool.py never touches the default, so it passes. At runtime it reads a missing candidates.tsv and writes pool_vhdb.tsv into a directory that no ",
+   "Set root to parents[1] / 'curation' / 'panel' and update the usage text at lines 4-5."
+  ],
+  [
+   "break_test",
+   "scripts/sens07_planted_sensitivity.py",
+   false,
+   "Lines 56-58: sys.path.insert(0, scripts dir) then `import plant_anello_10x as planter` (kept, D8). Also inserts <repo>/src on path. Once moved, the sibling plant_anello_10x.py is no longer next to it, so ModuleNotFoundError at import; tests/test_sens07_planted",
+   "Preferred: vendor a pinned copy of plant_anello_10x.py into repro scripts/ (it is a plain script, not a package module; making it a module is larger than needed). Alternative: make repro scripts add `$VIRALSCAN_PKG_CHECKOUT/scripts` to sys.path via env var, with the package checkout at the pinned sh"
+  ],
+  [
+   "break_test",
+   "scripts/v3_score.py",
+   false,
+   "Line 26 is PROTOCOL = parents[1] / 'analysis' / 'v3_validation' / 'protocol.yaml', and required_columns() and read_truth_manifest() use it as their default. generate_truth_panel.load_protocol() reads score.PROTOCOL (generate_truth_panel.py:226). Staying tests ",
+   "In the same commit as the D9 copy, change line 26 to parents[1] / 'tests' / 'data' / 'truth_panel' / 'protocol.yaml'. Optionally allow a VIRALSCAN_PROTOCOL env override so the repro repo can point at its governance copy. Update the docstring and comment at v3_score.py:5 and :503, and generate_truth_"
+  ],
+  [
+   "break_test",
+   "tests/data/evidence_tiny/",
+   false,
+   "The 11 files are classed REVIEW. tests/integration/test_exact_lineage.py:31, test_host_filter_star.py:17, test_anello_align_star.py:22 and tests/test_ncbi_fetch.py:350 (via tests/data/ebv_nc_007605_eber_excerpt.gtf) read them. scripts/check_data_governance.py:",
+   "Resolve REVIEW to package (stay). Also copy tests/data/truth_panel/protocol.yaml in (D9)."
+  ],
+  [
+   "break_test",
+   "tests/test_bus_correction_audit.py",
+   false,
+   "test_schema_copies_identical (l.74-80) reads root/'schemas'/'v3/count_audit.schema.json'; deleted. (Listed by tracker.)",
+   "Remove the test."
+  ],
+  [
+   "break_test",
+   "tests/test_cat28_panviral_marker_check.py",
+   false,
+   "Manifest class is package ('no moved refs') but l.11-14 does sys.path.insert(REPO_ROOT/'extras') and 'import cat28_panviral_marker_check', which is extras/cat28_panviral_marker_check.py, classed repro. Collection ImportError for the whole file in the package r",
+   "Reclassify this test as repro and move it with extras/cat28_panviral_marker_check.py (and carry the cat28 tsv or keep the pinned copy in curation/panel/ and point at it). Alternatively keep the extras script in the package."
+  ],
+  [
+   "break_test",
+   "tests/test_claim_registry.py",
+   false,
+   "Repro tests read the top-level schemas/v3 directory, which the plan deletes as a duplicate: test_claim_registry.py:14, test_artifact_inventory.py:14, test_validation_protocol.py:28 (SCHEMA_PATH = ROOT/schemas/v3/validation_protocol.schema.json). test_validatio",
+   "Repoint ROOT/schemas/v3 to the installed schema directory (Path(viralscan.__file__).parent/'schemas'/'v3') or to $PKG_CHECKOUT/src/viralscan/schemas/v3. Rewrite the :769 'packaged copy equals top-level copy' assertion as 'installed schema equals the repro-side copy' or drop it. Do not copy schemas/ "
+  ],
+  [
+   "break_test",
+   "tests/test_covid_annotate_eve.py",
+   false,
+   "Classed REVIEW. l.9-14 builds Path(__file__).parents[1]/'covid_viralscan/scripts/annotate_eve.py' (a single string literal with the slash, so a quoted-dir grep misses it) and runs spec.loader.exec_module at import time. covid_viralscan/ moves to repro, so the ",
+   "Classify as repro and move it with covid_viralscan/."
+  ],
+  [
+   "break_test",
+   "tests/test_multimapping_counting_contract.py",
+   false,
+   "test_run_manifest_schema_accepts_every_cli_multimap_method (l.247-250) builds root=Path(__file__).parents[1] and loops over rel in ('schemas/v3','src/viralscan/schemas/v3'), reading root/rel/run_manifest.schema.json. After top-level schemas/ is deleted the fir",
+   "Drop 'schemas/v3' from the tuple so it checks only src/viralscan/schemas/v3."
+  ],
+  [
+   "break_test",
+   "tests/test_positive_control_receipt.py",
+   false,
+   "test_shipped_schema_copies_are_identical (lines 266-270) reads root/'schemas/v3'/name for positive_control_receipt/report schemas and compares bytes with src/viralscan/schemas/v3. File is class package and stays; top-level schemas/ is deleted so read_bytes rai",
+   "Delete test_shipped_schema_copies_are_identical (lines 266-270); add this file to tracker section 8 list of tests reading top-level schemas/v3."
+  ],
+  [
+   "break_test",
+   "tests/test_sens07_planted_sensitivity.py",
+   false,
+   "Line 17: `from tests._exact_control import ACCESSION, write_exact_control`. tests/_exact_control.py is class package (stays), and tests/__init__.py also stays, so repro has no `tests` package. Collection fails. This is the only repro test importing a tests hel",
+   "Copy tests/_exact_control.py plus an empty tests/__init__.py into the repro repo (small helper), or inline it in the test. Add to the move list as 'copy, not move'."
+  ],
+  [
+   "break_test",
+   "tests/test_ship_scope.py",
+   false,
+   "Line 155 asserts validate_repository_scope(ROOT) == [] on the real repo and fails as soon as claims/, schemas/, analysis/v3_artifact_inventory.tsv or scripts/validate_*.py disappear while the scope json lists them. test_ship_scope_tracked_tree.py (src/viralsca",
+   "No test edit; edit public_ship_scope.json and MANIFEST.in in the same commit as the removals."
+  ],
+  [
+   "break_test",
+   "tests/test_validation.py",
+   false,
+   "test_packaged_v3_schemas_match_public_contracts (l.217-222) reads parents[1]/'schemas'/'v3'/name for every REQUIRED_V3_SCHEMAS member; the dir is deleted. (Listed by tracker.)",
+   "Remove the test, or point it at src/viralscan/schemas/v3 only (then it is a tautology, so remove)."
+  ],
+  [
+   "break_test",
+   "tests/test_validation_protocol.py",
+   false,
+   "Beyond schemas/ and ledger paths, line 1064 reads .github/workflows/ci.yml; ROOT/analysis/v3_validation/* moves along (fine). tests/test_ledger_git_sha.py and test_ledger_append_only.py use git history (`git show 62d2bcc:...`), which needs the repro's filter-r",
+   "Already covered by SPLIT_TRACKER s6 for ci.yml and SHAs. Add: test_workflow_comparison.py must read docs/workflow_comparison.md from $VIRALSCAN_PKG (or drop that assertion), since docs/ stays in the package."
+  ]
+ ],
+ "decisions": [
+  {
+   "path": "tests/integration/test_tiny_end_to_end.py",
+   "destination": "package",
+   "reason": "Runs the viralscan CLI end to end over tests/data/evidence_tiny (FIXTURE at :68). The 'results/' hits at :77-80 and :277 are Run-output filenames, not repo paths. Consequence none."
+  },
+  {
+   "path": "tests/test_ambient_screen.py",
+   "destination": "package",
+   "reason": "The docs/plans/ambient-and-barcode-swapping-controls.md hit (line 3) is a docstring only. Consequence cosmetic: a dangling pointer when docs/plans moves."
+  },
+  {
+   "path": "tests/test_analysis.py",
+   "destination": "package",
+   "reason": "The 'results/virus_identity.tsv' hit is a docstring about Run output. Reads only src/viralscan/data and tmp caches. Consequence none."
+  },
+  {
+   "path": "tests/test_cellcalling.py",
+   "destination": "package",
+   "reason": "The 'results/called_cells.tsv' hit is a comment about Run output. Consequence none."
+  },
+  {
+   "path": "tests/test_covid_annotate_eve.py",
+   "destination": "repro",
+   "reason": "Loads covid_viralscan/scripts/annotate_eve.py via parents[1] (:9). The script moves with covid_viralscan/, so this must move or it fails with FileNotFoundError. pyproject.toml:104 lists covid_viralscan (verify it is an exclude/ruff entry and clean it after the move)."
+  },
+  {
+   "path": "tests/test_gene_programs.py",
+   "destination": "package",
+   "reason": "REPO_ROOT is used for src/viralscan/data/*.gtf, extras/ (builders that stay) and the Snakefile. 'results/viral_summary.tsv' is docstring text. Consequence none."
+  },
+  {
+   "path": "tests/test_host_homology_loci.py",
+   "destination": "package",
+   "reason": "The 'results/host_homology_loci.tsv' hit is a docstring; the test reads docs/output_reference.md (stays). Consequence none."
+  },
+  {
+   "path": "tests/test_identity_backfill.py",
+   "destination": "package",
+   "reason": "The 'results/virus_identity.tsv' hit is a docstring about backfilling Run output. Consequence none."
+  },
+  {
+   "path": "tests/test_index_reconciliation.py",
+   "destination": "package",
+   "reason": "Reads scripts/build_bundled_panel_ref.py (stays) and PLAN.md at :647 for RECONCILIATION_REPORT_NAME ('catalogued_not_indexed.tsv'). Stays only if the CAT-31 PLAN.md row keeps that string. Consequence break_test if the triage drops it (assertion fails, not skipped)."
+  },
+  {
+   "path": "tests/test_run_complete_marker.py",
+   "destination": "package",
+   "reason": "The 'sample/results/viral_summary.tsv' hit at :42 is a Run-output artifact path inside a tmp marker. Consequence none."
+  },
+  {
+   "path": "tests/test_snakefile_dag.py",
+   "destination": "package",
+   "reason": "The 'results/viral_summary.tsv' hit at :480 is a comment about DAG outputs. Consequence none."
+  },
+  {
+   "path": "tests/data/evidence_tiny/R1.fastq",
+   "destination": "package",
+   "reason": "Used by tests/integration/test_tiny_end_to_end.py, test_anello_align_star.py, test_exact_lineage.py, test_host_filter_star.py and tests/test_data_governance.py (stay in package). The sha256 is hardcoded in scripts/check_data_governance.py:37 and pinned in analysis/v3_artifact_inventory.tsv, so the content must not change. No repro test reads it; no copy needed."
+  },
+  {
+   "path": "tests/data/evidence_tiny/R2.fastq",
+   "destination": "package",
+   "reason": "Same users as R1.fastq; sha256 hardcoded at check_data_governance.py:38."
+  },
+  {
+   "path": "tests/data/evidence_tiny/called_cells.txt",
+   "destination": "package",
+   "reason": "Part of the evidence_tiny fixture dir used by the package integration tests; no repro user."
+  },
+  {
+   "path": "tests/data/evidence_tiny/combined.gtf",
+   "destination": "package",
+   "reason": "Part of the evidence_tiny fixture dir used by the package integration tests; no repro user."
+  },
+  {
+   "path": "tests/data/evidence_tiny/host.fasta",
+   "destination": "package",
+   "reason": "Used by package integration tests; pinned in analysis/v3_artifact_inventory.tsv. Content must stay byte-identical."
+  },
+  {
+   "path": "tests/data/evidence_tiny/reference.fasta",
+   "destination": "package",
+   "reason": "Part of the evidence_tiny fixture dir used by the package integration tests; no repro user."
+  },
+  {
+   "path": "tests/data/evidence_tiny/t2g.txt",
+   "destination": "package",
+   "reason": "Used by package integration tests; pinned in the inventory."
+  },
+  {
+   "path": "tests/data/evidence_tiny/transcripts.fasta",
+   "destination": "package",
+   "reason": "Used by package integration tests; pinned in the inventory."
+  },
+  {
+   "path": "tests/data/evidence_tiny/viral.fasta",
+   "destination": "package",
+   "reason": "Used by package integration tests; pinned in the inventory."
+  },
+  {
+   "path": "tests/data/evidence_tiny/viral.gtf",
+   "destination": "package",
+   "reason": "Used by package integration tests; pinned in the inventory."
+  },
+  {
+   "path": "tests/data/ebv_nc_007605_eber_excerpt.gtf",
+   "destination": "package",
+   "reason": "Used only by tests/test_ncbi_fetch.py:350 (stays). No repro test reads it."
+  },
+  {
+   "path": "ENVIRONMENTS_INSTALLATIONS.md",
+   "destination": "repro",
+   "reason": "No code, test, CI, doc or MANIFEST.in reference (only unrelated .living log mentions). Personal env note, not package content. Suggest repro or delete; the user must confirm. Consequence none if moved."
+  },
+  {
+   "path": "environment.tools.lock.txt",
+   "destination": "repro",
+   "reason": "Hand-written external-tool sha manifest for the gate env (REL-03/CAT-25), no generator in the repo. Referenced only in PLAN.md rows (2477-2483, 4597). Not read by tests, CI, MANIFEST.in or ship scope. Moving it makes those PLAN rows stale (cosmetic). Needs user confirmation."
+  },
+  {
+   "path": "tests/test_cat28_panviral_marker_check.py",
+   "destination": "repro",
+   "reason": "Classed package, but it imports extras/cat28_panviral_marker_check.py (moves to repro per tracker 5.2) and reads analysis/panel_expansion/cat28_panviral_marker_check.tsv (:115), which is renamed to curation/panel/ in the package. Stays in the package it fails with ImportError; moved to repro it needs a copy of the tsv or the staleness test dropped. needs_user: the extras file is a defaulted ambiguous item."
+  },
+  {
+   "path": "tests/test_docs_consistency.py",
+   "destination": "both",
+   "reason": "Classed package; stays, but :86 reads BENCHMARK_COMPARISON.md at the repo root, which moves to repro. The test then fails with FileNotFoundError (break_test). Fix: drop that path from the loop at :86 in the package. The BENCHMARK_COMPARISON claim-staleness check can be re-added in repro."
+  },
+  {
+   "path": "tests/test_validation.py",
+   "destination": "package",
+   "reason": "Needs fixing. :218 reads top-level schemas/v3 (deleted as a duplicate). Repoint to src/viralscan/schemas/v3. Same-bytes assertion becomes trivial. Otherwise break_test."
+  },
+  {
+   "path": "tests/test_bus_correction_audit.py",
+   "destination": "package",
+   "reason": "Needs fixing. test_schema_copies_identical (:78) compares top-level schemas/ with src/. After deletion it fails; delete that test, since the duplicate is gone."
+  },
+  {
+   "path": "tests/test_ship_scope.py",
+   "destination": "package",
+   "reason": "Needs fixing (config, not the test). :155 asserts validate_repository_scope(ROOT)==[]. config/public_ship_scope.json sdist.members and MANIFEST.in:11-12,27-43 list analysis/v3_artifact_inventory.tsv, claims/registry.json, schemas/v3/*, and scripts/validate_{artifact_inventory,claim_registry,v3_protocol}.py. Once those are moved or deleted this is break_test, break_build and break_ci. Clean scope JSON and MANIFEST.in in the same PR."
+  },
+  {
+   "path": "tests/test_artifact_inventory.py",
+   "destination": "repro",
+   "reason": "Tests the moving validator, and reads top-level schemas/v3/artifact_inventory.schema.json (:14). Repro needs a copy of the schemas or must read them from the pinned package."
+  },
+  {
+   "path": "tests/test_claim_registry.py",
+   "destination": "repro",
+   "reason": "Same as test_artifact_inventory: it reads schemas/v3/claim_registry.schema.json (:14). Repro needs a schema copy."
+  },
+  {
+   "path": "tests/test_validation_protocol.py",
+   "destination": "repro",
+   "reason": "Reads analysis/v3_validation/*, schemas/v3/validation_protocol.schema.json (:28) and .github/workflows/ci.yml (:1064). Repro needs the schema copy and the ci.yml assertion handled."
+  },
+  {
+   "path": "tests/test_index_reconciliation.py::PLAN.md",
+   "destination": "both",
+   "reason": "Package PLAN.md must keep a row containing 'catalogued_not_indexed.tsv' (CAT-31, PLAN.md:430-442), or test_reconciliation_report_filename_matches_plan fails. Already noted in tracker section 6; confirmed here."
+  },
+  {
+   "path": "src/viralscan/scautoqc.py",
+   "destination": "package",
+   "reason": "Untracked but imported by modified tracked src (menu.py, Snakefile, runconfig.py, run_safety.py, cli/parsers.py, scripts/umap.py) and docs. Must be committed or break_runtime for any fresh clone/CI."
+  },
+  {
+   "path": "src/viralscan/scripts/scautoqc.py",
+   "destination": "package",
+   "reason": "Untracked Snakemake script module referenced by modified Snakefile and tests/test_scautoqc.py. Commit with src/viralscan/scautoqc.py. break_runtime if absent."
+  },
+  {
+   "path": "tests/test_scautoqc.py",
+   "destination": "package",
+   "reason": "Tests only viralscan.scautoqc (package code); importorskip sctk. Commit with the module."
+  },
+  {
+   "path": "tests/test_performance_exactness.py",
+   "destination": "package",
+   "reason": "Imports only viralscan modules plus tests/fixtures/performance_original.py. Pure package regression test; commit."
+  },
+  {
+   "path": "tests/fixtures/",
+   "destination": "package",
+   "reason": "Contains only performance_original.py (72K, frozen oracle) loaded by runpy in tests/test_performance_exactness.py via Path(__file__).parent/fixtures. Not gitignored; without it that test errors at import (break_test). Commit."
+  },
+  {
+   "path": "scripts/prepare_viral_proteins.py",
+   "destination": "package",
+   "reason": "Tracked tests/test_prepare_viral_proteins.py loads it by path (SCRIPT = parents[1]/scripts/...); it imports only viralscan (run_safety, ncbi_fetch) and Bio. Tracker section 6 and 5.1 already say commit in step 0. Would be break_test otherwise."
+  },
+  {
+   "path": "tests/test_prepare_viral_proteins.py",
+   "destination": "package",
+   "reason": "Pairs with scripts/prepare_viral_proteins.py (kept in package per 5.1). Commit."
+  },
+  {
+   "path": "scripts/subset_fastq_pair.py",
+   "destination": "repro",
+   "reason": "Only consumer is tests/test_subset_fastq_pair.py, which does 'from audit_fastq_pair import ...'. audit_fastq_pair is classified repro in file_manifest.tsv, so if this test stays in the package it breaks (break_test). Simplest consistent choice: move script + test to repro together with audit_fastq_pair. Alternative: keep audit_fastq_pair in package. Needs a user decision; either way commit to a branch first, never leave untracked.",
+   "needs_user": true
+  },
+  {
+   "path": "tests/test_subset_fastq_pair.py",
+   "destination": "repro",
+   "reason": "Hard-depends on repro script audit_fastq_pair plus scripts/subset_fastq_pair.py (sys.path insert of scripts/). Moves with them, or audit_fastq_pair stays; see scripts/subset_fastq_pair.py.",
+   "needs_user": true
+  },
+  {
+   "path": "tests/test_viral_read_cleanup_pilot.py",
+   "destination": "repro",
+   "reason": "Loads analysis/viral_read_cleanup/pilot.py by file path (spec_from_file_location). That dir is untracked and goes to repro, so this test would fail at collection if left in package (break_test). Move with the analysis dir; also depends on package tests/_fastq.py and viralscan.scripts.read_filter, so repro needs a helper copy of _fastq.py or the pinned package on PYTHONPATH."
+  },
+  {
+   "path": "tests/test_tracka_host_programs.py",
+   "destination": "repro",
+   "reason": "research-marked; sys.path-imports pilot, tracka_analysis, tracka_data, setup_runtime from analysis/trackA_host_programs (untracked, repro). Collection fails in package after the move (break_test). Move with the analysis dir."
+  },
+  {
+   "path": "analysis/viral_read_cleanup/",
+   "destination": "repro",
+   "reason": "304K untracked. Needed by tests/test_viral_read_cleanup_pilot.py; a fresh clone would lose it. Carry list. Small, commit to repro."
+  },
+  {
+   "path": "analysis/trackA_host_programs/",
+   "destination": "repro",
+   "reason": "6.5G untracked, not gitignored. Code files (pilot.py, tracka_*.py, setup_runtime.py) are required by tests/test_tracka_host_programs.py and would be lost by a fresh clone. Commit code and small outputs to repro; link large outputs from links/ (D5). Needs a code vs bulk split and a user check.",
+   "needs_user": true
+  },
+  {
+   "path": "analysis/translated_search/",
+   "destination": "repro",
+   "reason": "15G untracked, not gitignored. No tracked test, script or doc references it (grep clean). Provenance-bearing experiment, so would be lost by a fresh clone. Code and READMEs go to repro; bulk outputs stay on disk and are linked from links/ (D5). Needs a split decision.",
+   "needs_user": true
+  },
+  {
+   "path": "analysis/trackA_report_2026-10-18/",
+   "destination": "repro",
+   "reason": "3.6G untracked, no tracked referrers. Experiment report. Carry (small files) and link the bulk from links/. Needs a split decision.",
+   "needs_user": true
+  },
+  {
+   "path": "analysis/computational_bottlenecks_2026-10-17/",
+   "destination": "repro",
+   "reason": "Untracked; only referenced by untracked docs/plans performance docs. Has ignored kb-python/ subdirs. Experiment output; move to repro."
+  },
+  {
+   "path": "analysis/normalization_shifted_log_2026-10-19/",
+   "destination": "repro",
+   "reason": "1.7M untracked, no tracked referrers. Experiment (PR #93 shifted-log); carry to repro."
+  },
+  {
+   "path": "docs/assess_evidence.md",
+   "destination": "package",
+   "reason": "Untracked user doc listed in modified docs/index.md toctree and cross-linked from faq/quickstart/output_reference. docs build (nitpicky) breaks without it (break_docs). Commit."
+  },
+  {
+   "path": "docs/inspect_results.md",
+   "destination": "package",
+   "reason": "Same as assess_evidence.md: toctree and links from tracked docs. break_docs if left untracked. Commit."
+  },
+  {
+   "path": "docs/project_info.md",
+   "destination": "package",
+   "reason": "Referenced from docs/index.md and faq.md. Commit or docs build breaks."
+  },
+  {
+   "path": "docs/reference_help.md",
+   "destination": "package",
+   "reason": "Referenced by docs/index.md and by tracked tests/test_build_manifest.py. Commit (break_docs and break_test otherwise)."
+  },
+  {
+   "path": "docs/reviews/",
+   "destination": "repro",
+   "reason": "4 internal review markdowns, 424K. docs/conf.py exclude_patterns has reviews/** and the modified MANIFEST.in has prune docs/reviews, so removing the dir is harmless (prune of a missing dir is only a warning at most). No tracked referrer. Dev-process docs: repro."
+  },
+  {
+   "path": "docs/plans/2026-10-14-viral-read-cleanup-and-transcript-reconstruction.md",
+   "destination": "repro",
+   "reason": "Untracked plan; docs/plans/** excluded from docs and sdist; no tracked referrers. Moves with the other docs/plans (5.2)."
+  },
+  {
+   "path": "docs/plans/2026-10-17-performance-triage-byte-identical-outputs.md",
+   "destination": "repro",
+   "reason": "Same as other untracked docs/plans files. Only refers to untracked analysis dir."
+  },
+  {
+   "path": "docs/plans/2026-10-17-remaining-performance-candidates.md",
+   "destination": "repro",
+   "reason": "Same as above."
+  },
+  {
+   "path": "docs/plans/2026-10-20-documentation-revision-plan.md",
+   "destination": "repro",
+   "reason": "Plan for PR #88 docs revision; excluded from the docs build. Move to repro, but keep until #88 lands because the plan names the new docs pages."
+  },
+  {
+   "path": "extras/vendor_sources/anello/",
+   "destination": "repro",
+   "reason": "Untracked residue of re-fetchable vendored data (shell scripts, R, expected_output; 9M). Listed in VENDOR_MANIFEST.tsv with sha256, so fetch_vendored.py can rebuild it. Used only by extras/cat28_panviral_marker_check.py (repro). No test or src use. Note tracker 5.1 lists vendor_sources/ as kept in the package, so decide. Safest: leave as untracked cache in package checkout, document re-fetch. Not needed for package build (extras excluded by MANIFEST/pyproject).",
+   "needs_user": true
+  },
+  {
+   "path": "extras/vendor_sources/hsv/",
+   "destination": "repro",
+   "reason": "Same as vendor_sources/anello: re-fetchable via VENDOR_MANIFEST.tsv and fetch_vendored.py; no tracked consumer."
+  },
+  {
+   "path": "extras/vendor_sources/upstream_starsolo/",
+   "destination": "repro",
+   "reason": "Same as vendor_sources/anello; 7.9M re-fetchable via fetch_vendored.py; no tracked consumer."
+  },
+  {
+   "path": "extras/vendor_sources/virtus3/",
+   "destination": "repro",
+   "reason": "Same as vendor_sources/anello; 352K re-fetchable, no tracked consumer. The gitignored panviral/ sibling is the same case but not shown as untracked."
+  },
+  {
+   "path": "migration_plan/",
+   "destination": "repro",
+   "reason": "608K, 12 files, untracked; .gitignore only ignores manifests/ and runlogs/ inside it, rest is plain untracked. pyproject ruff exclude names it (harmless once gone, ruff ignores missing paths). No test, src or CI use. Earlier migration notes: repro."
+  },
+  {
+   "path": "sources/",
+   "destination": "repro",
+   "reason": "1.7M viral_panel source data. Untracked, not ignored; pyproject ruff exclude names it, and tracked analysis/dsr_round1/dossier_spec.tsv and some PDFs mention the path (experiment side). Not read by src or tests. Carry to repro (symlink back per R2 if the experiment scripts still need the path)."
+  },
+  {
+   "path": "biomni_bundle/",
+   "destination": "repro",
+   "reason": "6.0M, untracked, no referrers. External review bundle: repro, or delete once the user confirms the Biomni review is done.",
+   "needs_user": true
+  },
+  {
+   "path": "viralscan_lshwcp_spec/",
+   "destination": "repro",
+   "reason": "840K untracked, no referrers in tracked files. Spec/experiment dir; carry to repro (listed in 5.3). Not in .gitignore, so a fresh clone loses it."
+  },
+  {
+   "path": "viralscan-analysis",
+   "destination": "ignore",
+   "reason": "Symlink to /exports/para-lipg-hpc/mdmanurung/viralscan-analysis/ (Snakefile, README, reference_2026-10-14*, validation json). Untracked, not in .gitignore. Never commit a symlink (R2): add to .git/info/exclude. Target dir should be recorded in the repro links/ manifest."
+  },
+  {
+   "path": "curation/",
+   "destination": "delete",
+   "reason": "Matches .gitignore line 101 (/curation/). Generated symlink view with .curation-generated marker, from scripts/build_curation_view.py which is classed delete. D10 reuses curation/panel/ for a different purpose, so remove the old view with 'build_curation_view.py --clean' (it refuses without the marker; marker is present), after user approval. Only symlinks, no data lost.",
+   "needs_user": true
+  },
+  {
+   "path": "tmp/",
+   "destination": "repro",
+   "reason": "139M: codex-umi-coverage, reviewed-roadmap-2026-10-20, trackA-evidence-resume dirs and one 407MB file tmpr5t0vage (Oct 9, mode 0600, looks like an orphaned Python tempfile). Not in .gitignore. Tracked Dockerfile/release.yml hits are /tmp only. Scratch: leave on disk and link, add 'tmp/' to .gitignore, and do not commit. Deleting needs user ok.",
+   "needs_user": true
+  },
+  {
+   "path": "Rplots.pdf",
+   "destination": "delete",
+   "reason": "Stray R graphics-device output at repo root, no referrers. Safe to delete after user approval; otherwise add to .gitignore."
+  },
+  {
+   "path": "count_audit.tsv",
+   "destination": "ignore",
+   "reason": "Listed as TRACKED in git ls-files (top-level count_audit.tsv); it is not untracked. Tracked docs/src/tests mention count_audit.tsv only as a per-run output filename under config.output (multimap.py:469-474, test_tiny_end_to_end.py:74), so the root copy is not read. Classify it with the manifest as repro/delete; no consequence for package runtime or tests."
+  },
+  {
+   "path": "HANDOFF.md",
+   "destination": "repro",
+   "reason": "Untracked session handoff at repo root, not in the 5.1 package top-level list. Not referenced by src, tests or CI. Also, .living/HANDOFF_*.md are tracked, so these follow the same pattern. HANDOFF.md is the live handoff for the active run (merge PRs #91-#99), so keep it until that completes."
+  },
+  {
+   "path": "HANDOFF_audit_fixes_2026-10-15.md",
+   "destination": "repro",
+   "reason": "Untracked handoff; no referrers. 5.2 lists HANDOFF*.md as repro. Would be lost by a fresh clone."
+  },
+  {
+   "path": "HANDOFF_def02_2026-10-03.md",
+   "destination": "repro",
+   "reason": "Untracked handoff; no referrers; carry."
+  },
+  {
+   "path": "HANDOFF_pending_approvals_2026-10-19.md",
+   "destination": "repro",
+   "reason": "Untracked handoff; carry."
+  },
+  {
+   "path": "HANDOFF_prev_2026-10-19_perf-and-queues.md",
+   "destination": "repro",
+   "reason": "Untracked handoff; carry."
+  },
+  {
+   "path": "HANDOFF_prev_2026-10-20_cli-unify-before-review.md",
+   "destination": "repro",
+   "reason": "Untracked handoff; carry."
+  },
+  {
+   "path": "HANDOFF_prev_2026-10-20_reviewed-roadmap.md",
+   "destination": "repro",
+   "reason": "Untracked handoff; carry."
+  },
+  {
+   "path": "HANDOFF_prev_2026-10-20_trackA-anello.md",
+   "destination": "repro",
+   "reason": "Untracked handoff; carry."
+  },
+  {
+   "path": "HANDOFF_prev_2026-10-21_trackA-extensions.md",
+   "destination": "repro",
+   "reason": "Untracked handoff; carry."
+  },
+  {
+   "path": "HANDOFF_prev_2026-10-22.md",
+   "destination": "repro",
+   "reason": "Untracked handoff; carry. Cited by the current HANDOFF.md as 'Previous handoff'."
+  },
+  {
+   "path": "HANDOFF_scautoqc_2026-10-19.md",
+   "destination": "repro",
+   "reason": "Untracked handoff for scautoqc work; carry."
+  },
+  {
+   "path": "HANDOFF_trackA_2026-10-19.md",
+   "destination": "repro",
+   "reason": "Untracked handoff; carry."
+  },
+  {
+   "path": "HANDOFF_trackA_2026-10-20.md",
+   "destination": "repro",
+   "reason": "Untracked handoff; carry."
+  },
+  {
+   "path": "SESSION_RESUME.md",
+   "destination": "repro",
+   "reason": "Untracked session note at root; no referrers. Carry, or delete after user ok.",
+   "needs_user": true
+  },
+  {
+   "path": ".living/archive/",
+   "destination": "repro",
+   "reason": "208M untracked: 2026-10-18-performance-landing (tarballs, git bundle, receipts, RECOVERY.md) and worktree_patches_2026-10-13. These are the only copies of recovery bundles, so deleting loses data. Not read by src or tests. .living in package is 'package entries only' (D3). Link from links/ because the tarballs are large (not for git commit); keep on disk.",
+   "needs_user": true
+  },
+  {
+   "path": ".living/findings/kraken2-discovery-ebv-r10.md",
+   "destination": "repro",
+   "reason": "Experiment finding, untracked, no tracked test reads it. The modified .living/INDEX.md references it (one hit), so commit INDEX.md and the finding on the same side."
+  },
+  {
+   "path": ".living/findings/trackA-recovery-2026-10-19.md",
+   "destination": "repro",
+   "reason": "Experiment-side finding; carry. Check whether modified .living/INDEX.md also links it."
+  },
+  {
+   "path": ".living/log/ (22 untracked session logs 2026-10-14-001 to 2026-10-21-001)",
+   "destination": "both",
+   "reason": "Modified tracked .living/log/LOG_REGISTRY.md adds 17 rows linking to these files. Registry linking to missing files is a dangling link only; no tracked test or src reads .living/log (dsr05_dossier reads only .living/findings). Per D3, logs are split by topic: commit them with the registry on the side that keeps each topic, and keep package-topic ones in the package."
+  },
+  {
+   "path": ".mycelium/",
+   "destination": "ignore",
+   "reason": "Tool state dir. .claude/ is in .gitignore but .mycelium/ is NOT; status shows '?? .mycelium/' (4.9M; subpaths last-session.md, locks/, run/ and similar are already ignored via mycelium's own rules, the rest is not). It is in pyproject ruff exclude only. Add '.mycelium/' (and optionally .agents/.aws/.codex) to .gitignore or .git/info/exclude to prevent accidental commits. Hook-written state; do not delete."
+  },
+  {
+   "path": ".agents, .aws, .codex",
+   "destination": "ignore",
+   "reason": "Three empty dirs (mtime Oct 19), not in .gitignore but invisible to git while empty. If Codex or tools repopulate them they would show as untracked; add to .git/info/exclude. .codex may be live for the Codex extension, so do not remove."
+  },
+  {
+   "path": ".claude .mypy_cache .pip-cache .pybiomart.sqlite .pytest_cache .ruff_cache .snakemake .specify .tmp .vendor_mypy .venv .coverage build",
+   "destination": "ignore",
+   "reason": "All verified with git check-ignore: covered by .gitignore. Tool and cache dirs. Note .specify/ is ignored but holds speckit config that skills read; leave."
+  },
+  {
+   "path": "logs benchmark_runs references starsolo_p22_6 starsolo_p22_6b ebv_latest_ref_2026-09-27 viral_panel_max_2026-09-28 hhv6a_in_hhv6b_2026-10-05 hhv6b_in_ebv_2026-10-05 cost01",
+   "destination": "ignore",
+   "reason": "All verified ignored (via .gitignore or .git/info/exclude). Large run/reference dirs stay on disk and are symlinked from repro links/ (D5). Sizes skipped. Provenance rule: never delete (user memory on keeping count matrices); logs/ contains SLURM logs referenced by scripts and publication_checklist.sh."
+  }
+ ]
+}
