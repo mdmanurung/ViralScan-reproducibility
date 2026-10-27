@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """Build rehearsal/<batch>/results.tsv from junit xml and diff against rehearsal/baseline/results.tsv."""
-import glob, sys, pathlib, xml.etree.ElementTree as ET
+import glob, os, sys, pathlib, xml.etree.ElementTree as ET
 
-SPLIT = pathlib.Path("/exports/para-lipg-hpc/mdmanurung/viralscan-split")
+SPLIT = pathlib.Path("/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/backups/viralscan-split")
+REH = pathlib.Path(os.environ.get("REH_ROOT", SPLIT / "rehearsal"))
 batch = sys.argv[1]
-W = SPLIT / "rehearsal" / batch
+W = REH / batch
 
 def status(tc):
     for k, name in (("failure", "FAILED"), ("error", "ERROR"), ("skipped", "SKIPPED")):
@@ -23,7 +24,7 @@ if batch == "baseline":
     sys.exit(0)
 
 import os
-base_p = SPLIT / "rehearsal" / os.environ.get("BASELINE", "baseline") / "results.tsv"
+base_p = REH / os.environ.get("BASELINE", "baseline") / "results.tsv"
 if not base_p.exists():
     print("no baseline results; run: rehearse.sh baseline"); sys.exit(2)
 base = dict(l.rstrip("\n").split("\t") for l in base_p.read_text().splitlines())
