@@ -1,0 +1,23 @@
+taxid	name	rank	groups_called	groups_offcell	n_cells	reads	distinct_minimizers	minimizer_per_read	host_relation	db_has_9606	state	low_minimizer_diversity	offcell_dominant	host_lineage	viral_only_db
+10298	Human alphaherpesvirus 1	S1	1250612	1062475	5352	5445920	31432	0.005772	other	0	observation	0	0	0	1
+1969841	Proteus phage VB_PmiS-Isfahan	S1	3420	26959	2327	40179	206	0.005127	other	0	observation	0	1	0	1
+10294	Simplexvirus	G	8740	8054	1828	50361	33915	0.6734	other	0	observation	0	0	0	1
+10325	Macacine alphaherpesvirus 1	S1	2645	2561	1168	21886	209	0.009549	other	0	observation	0	0	0	1
+67082	BeAn 58058 virus	S	1099	1412	915	4405	85	0.0193	other	0	observation	0	1	0	1
+166122	Human endogenous retrovirus K113	S1	241	305	229	1088	376	0.3456	other	0	observation	0	1	0	1
+332937	Chimpanzee herpesvirus strain 105640	S2	206	262	196	2345	699	0.2981	other	0	observation	0	1	0	1
+2731360	Heunggongvirae	K	38	14	36	1	40129	4.013e+04	other	0	observation	0	0	0	1
+10295	Bovine alphaherpesvirus 2	S1	19	13	19	122	29	0.2377	other	0	observation	0	0	0	1
+35243	Ateline alphaherpesvirus 1	S1	11	9	11	43	39	0.907	other	0	observation	0	0	0	1
+481315	Leporid alphaherpesvirus 4	S1	5	6	5	22	24	1.091	other	0	observation	0	1	0	1
+10293	Alphaherpesvirinae	F1	6	4	6	3	34165	1.139e+04	other	0	observation	0	0	0	1
+2169863	Papiine betaherpesvirus 3	S1	1	5	1	10	43	4.3	other	0	observation	0	1	0	1
+10319	Varicellovirus	G	1	1	1	5	132	26.4	other	0	observation	0	0	0	1
+10353	Saimiriine alphaherpesvirus 1	S1	0	2	0	6	25	4.167	other	0	observation	0	1	0	1
+2905673	parainfluenza virus 5	S1	0	2	0	2	14	7	other	0	observation	1	1	0	1
+10317	Cercopithecine alphaherpesvirus 2	S1	0	1	0	15	34	2.267	other	0	observation	0	1	0	1
+10345	Suid alphaherpesvirus 1	S1	1	0	1	5	18	3.6	other	0	observation	1	0	0	1
+340907	Papiine alphaherpesvirus 2	S1	1	0	1	15	36	2.4	other	0	observation	0	0	0	1
+1434720	Beluga whale alphaherpesvirus 1	S2	0	1	0	2	17	8.5	other	0	observation	1	1	0	1
+1663208	Ostreococcus lucimarinus virus 2	S	0	1	0	1	4	4	other	0	observation	1	1	0	1
+2886930	Escherichia phage phiX174	S1	0	1	0	1	8	8	other	0	observation	1	1	0	1

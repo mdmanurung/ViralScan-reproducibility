@@ -1,0 +1,39 @@
+taxid	name	rank	groups_called	groups_offcell	n_cells	reads	distinct_minimizers	minimizer_per_read	host_relation	db_has_9606	state	low_minimizer_diversity	offcell_dominant	host_lineage	viral_only_db
+1969841	Proteus phage VB_PmiS-Isfahan	S1	17640	14364	10418	54245	240	0.004424	other	0	observation	0	0	0	1
+67082	BeAn 58058 virus	S	14929	2171	9650	26706	87	0.003258	other	0	observation	0	0	0	1
+166122	Human endogenous retrovirus K113	S1	11689	1598	7865	28859	896	0.03105	other	0	observation	0	0	0	1
+3052441	Orthobunyavirus simbuense	S	952	373	851	2351	4	0.001701	other	0	observation	1	0	0	1
+159150	Shamonda virus	S1	621	327	586	2563	7	0.002731	other	0	observation	1	0	0	1
+2169863	Papiine betaherpesvirus 3	S1	594	84	580	1116	65	0.05824	other	0	observation	0	0	0	1
+153135	Gammaretrovirus	G	40	2	40	53	95	1.792	other	0	observation	0	0	0	1
+2786405	ssRNA phage SRR5466369_2	S1	5	22	5	123	70	0.5691	other	0	observation	0	1	0	1
+2786389	ssRNA phage SRR5466337_3	S1	2	8	2	40	36	0.9	other	0	observation	0	1	0	1
+2731360	Heunggongvirae	K	2	3	2	7	19308	2758	other	0	observation	0	1	0	1
+11807	Harvey murine sarcoma virus	S1	4	0	4	6	8	1.333	other	0	observation	1	0	0	1
+11855	Mason-Pfizer monkey virus	S1	2	1	2	4	7	1.75	other	0	observation	1	0	0	1
+2731619	Caudoviricetes	C	0	3	0	18	17682	982.3	other	0	observation	0	1	0	1
+11780	Snyder-Theilen feline sarcoma virus	S1	2	0	2	2	11	5.5	other	0	observation	1	0	0	1
+11788	Abelson murine leukemia virus	S	2	0	2	3	14	4.667	other	0	observation	1	0	0	1
+56947	Choristoneura fumiferana granulovirus	S1	1	1	1	9	20	2.222	other	0	observation	0	0	0	1
+2107708	Pandoravirus neocaledonia	S	2	0	2	2	199	99.5	other	0	observation	0	0	0	1
+2716351	Escherichia phage 500465-1	S1	1	1	1	16	40	2.5	other	0	observation	0	0	0	1
+2842523	Bronfenbrennervirinae	C2	0	2	0	26	199	7.654	other	0	observation	0	1	0	1
+2886930	Escherichia phage phiX174	S1	1	1	1	12	88	7.333	other	0	observation	0	0	0	1
+10260	Avipoxvirus	G	0	1	0	1	97	97	other	0	observation	0	1	0	1
+10280	Molluscum contagiosum virus subtype 1	S2	1	0	1	1	16	16	other	0	observation	1	0	0	1
+11095	Orthopestivirus	G	1	0	1	3	49	16.33	other	0	observation	0	0	0	1
+11099	Bovine viral diarrhea virus 1	S2	1	0	1	1	1	1	other	0	observation	1	0	0	1
+12657	Equid gammaherpesvirus 2	S1	1	0	1	1	17	17	other	0	observation	1	0	0	1
+1308897	Staphylococcus phage StauST398-5	S1	0	1	0	1	17	17	other	0	observation	1	1	0	1
+1678078	Mollivirus sibericum	S	1	0	1	2	59	29.5	other	0	observation	0	0	0	1
+1911928	Vequintavirinae	C2	0	1	0	2	183	91.5	other	0	observation	0	1	0	1
+1955558	Noumeavirus	S	1	0	1	1	65	65	other	0	observation	0	0	0	1
+1965490	Staphylococcus phage IME1361_01	S1	0	1	0	4	30	7.5	other	0	observation	0	1	0	1
+2060949	Staphylococcus phage phiSa2wa_st22	S1	0	1	0	1	2	2	other	0	observation	1	1	0	1
+2107707	Pandoravirus macleodensis	S	0	1	0	1	217	217	other	0	observation	0	1	0	1
+2419760	Escherichia phage vB_Eco_mar001J1	S1	0	1	0	1	3	3	other	0	observation	1	1	0	1
+2732007	Nucleocytoviricota	P	1	0	1	1	3853	3853	other	0	observation	0	0	0	1
+2993860	Staphylococcus phage phiETA	S1	0	1	0	1	15	15	other	0	observation	1	1	0	1
+3044761	Megavirus	G	1	0	1	2	162	81	other	0	observation	0	0	0	1
+3126011	Synechococcus phage S-MbCM6	S1	1	0	1	2	14	7	other	0	observation	1	0	0	1
+3424297	Caudoviricetes incertae sedis	C1	0	1	0	5	12358	2472	other	0	observation	0	1	0	1

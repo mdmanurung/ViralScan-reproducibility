@@ -1,0 +1,36 @@
+taxid	name	rank	groups_called	groups_offcell	n_cells	reads	distinct_minimizers	minimizer_per_read	host_relation	db_has_9606	state	low_minimizer_diversity	offcell_dominant	host_lineage	viral_only_db
+1969841	Proteus phage VB_PmiS-Isfahan	S1	12693	4220	4092	66041	239	0.003619	other	0	observation	0	0	0	1
+67082	BeAn 58058 virus	S	2515	628	1963	5594	114	0.02038	other	0	observation	0	0	0	1
+159150	Shamonda virus	S1	1494	850	976	4602	10	0.002173	other	0	observation	1	0	0	1
+35269	Woodchuck hepatitis virus	S1	1132	396	910	5283	137	0.02593	other	0	observation	0	0	0	1
+153135	Gammaretrovirus	G	15	1331	15	1441	1738	1.206	other	0	observation	0	1	0	1
+11676	Human immunodeficiency virus 1	S1	429	167	406	2181	465	0.2132	other	0	observation	0	0	0	1
+166122	Human endogenous retrovirus K113	S1	383	82	363	995	479	0.4814	other	0	observation	0	0	0	1
+590745	Mus musculus mobilized endogenous polytropic provirus	S	1	80	1	91	479	5.264	other	0	observation	0	1	0	1
+2732514	Revtraviricetes	C	61	18	57	8	3130	391.2	other	0	observation	0	0	0	1
+353769	unclassified Gammaretrovirus	G1	1	43	1	48	697	14.52	other	0	observation	0	1	0	1
+11819	Spleen focus-forming virus	S	0	42	0	43	64	1.488	other	0	observation	0	1	0	1
+2786389	ssRNA phage SRR5466337_3	S1	26	11	1	91	36	0.3956	other	0	observation	0	0	0	1
+32604	Human betaherpesvirus 6B	S1	0	15	0	17	361	21.24	other	0	observation	0	1	0	1
+2169863	Papiine betaherpesvirus 3	S1	12	2	12	32	49	1.531	other	0	observation	0	0	0	1
+44561	Murine type C retrovirus	S3	1	10	1	13	119	9.154	other	0	observation	0	1	0	1
+11780	Snyder-Theilen feline sarcoma virus	S1	7	2	7	14	46	3.286	other	0	observation	0	0	0	1
+11757	Mouse mammary tumor virus	S1	0	8	0	9	123	13.67	other	0	observation	0	1	0	1
+2786405	ssRNA phage SRR5466369_2	S1	2	5	1	33	85	2.576	other	0	observation	0	1	0	1
+482822	Escherichia phage DE3	S2	4	2	1	12	185	15.42	other	0	observation	0	0	0	1
+11878	Avian sarcoma virus CT10	S1	4	1	4	8	6	0.75	other	0	observation	1	0	0	1
+11095	Orthopestivirus	G	3	0	3	6	53	8.833	other	0	observation	0	0	0	1
+11777	Feline sarcoma virus (STRAIN HARDY-ZUCKERMAN 4)	S2	2	1	1	3	14	4.667	other	0	observation	1	0	0	1
+11788	Abelson murine leukemia virus	S	1	2	1	3	24	8	other	0	observation	0	1	0	1
+11807	Harvey murine sarcoma virus	S1	0	3	0	3	30	10	other	0	observation	0	1	0	1
+1038068	PreXMRV-1	S2	1	2	1	3	55	18.33	other	0	observation	0	1	0	1
+40272	Roseolovirus	G	0	2	0	2	558	279	other	0	observation	0	1	0	1
+1414655	Pepper chlorotic spot virus	S1	0	2	0	2	7	3.5	other	0	observation	1	1	0	1
+10682	Enterobacteria phage P7	S1	0	1	0	3	60	20	other	0	observation	0	1	0	1
+11855	Mason-Pfizer monkey virus	S1	1	0	1	4	9	2.25	other	0	observation	1	0	0	1
+11970	Woolly monkey sarcoma virus	S1	0	1	0	1	10	10	other	0	observation	1	1	0	1
+1246677	Norovirus GV	S2	0	1	0	1	4	4	other	0	observation	1	1	0	1
+1891767	Betapolyomavirus macacae	S	0	1	0	1	8	8	other	0	observation	1	1	0	1
+2731619	Caudoviricetes	C	1	0	1	2	17175	8588	other	0	observation	0	0	0	1
+2886930	Escherichia phage phiX174	S1	0	1	0	244	1605	6.578	other	0	observation	0	1	0	1
+3052441	Orthobunyavirus simbuense	S	0	1	0	5	5	1	other	0	observation	1	1	0	1

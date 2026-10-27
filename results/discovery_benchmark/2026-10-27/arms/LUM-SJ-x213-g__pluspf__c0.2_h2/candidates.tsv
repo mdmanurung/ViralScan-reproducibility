@@ -1,0 +1,60 @@
+taxid	name	rank	groups_called	groups_offcell	n_cells	reads	distinct_minimizers	minimizer_per_read	host_relation	db_has_9606	state	low_minimizer_diversity	offcell_dominant	host_lineage	viral_only_db
+9606	Homo sapiens	S	5418892	1740764	30160	8657128	4946519	0.5714	host	1	observation	0	0	1	0
+2759	Eukaryota	D	99598	13565	21531	205726	4974940	24.18	host_ancestor	1	observation	0	0	1	0
+33154	Opisthokonta	D1	8505	2398	6549	13638	4957650	363.5	host_ancestor	1	observation	0	0	1	0
+2	Bacteria	D	22	165	22	713	103840	145.6	other	1	observation	0	1	0	0
+1716	Corynebacterium	G	6	35	6	103	830	8.058	other	1	observation	0	1	0	0
+572419	Mycoplasma amphoriforme A39	S1	21	9	1	63	148	2.349	other	1	observation	0	0	0	0
+468	Moraxellaceae	F	7	12	6	45	1317	29.27	other	1	observation	0	1	0	0
+1912216	Cutibacterium	G	4	14	4	48	181	3.771	other	1	observation	0	1	0	0
+1760	Actinomycetes	C	1	12	1	60	17703	295.1	other	1	observation	0	1	0	0
+1224	Pseudomonadota	P	1	11	1	34	34382	1011	other	1	observation	0	1	0	0
+1279	Staphylococcus	G	2	8	1	15	810	54	other	1	observation	0	1	0	0
+57493	Kocuria	G	0	10	0	36	94	2.611	other	1	observation	0	1	0	0
+28216	Betaproteobacteria	C	1	7	1	11	5941	540.1	other	1	observation	0	1	0	0
+1747	Cutibacterium acnes	S	0	7	0	18	106	5.889	other	1	observation	0	1	0	0
+544448	Mycoplasmatota	P	1	6	1	19	1040	54.74	other	1	observation	0	1	0	0
+3379134	Pseudomonadati	K	0	6	0	19	57082	3004	other	1	observation	0	1	0	0
+1236	Gammaproteobacteria	C	2	2	2	22	18470	839.5	other	1	observation	0	0	0	0
+28211	Alphaproteobacteria	C	0	4	0	10	9598	959.8	other	1	observation	0	1	0	0
+55193	Malassezia	G	1	3	1	5	129	25.8	other	1	observation	0	1	0	0
+201174	Actinomycetota	P	1	3	1	9	18078	2009	other	1	observation	0	1	0	0
+1783272	Bacillati	K	0	4	0	8	43901	5488	other	1	observation	0	1	0	0
+76775	Malassezia restricta	S	1	2	1	9	90	10	other	1	observation	0	1	0	0
+80840	Burkholderiales	O	2	1	2	20	4856	242.8	other	1	observation	0	0	0	0
+2895353	Telluria group	F1	0	3	0	10	328	32.8	other	1	observation	0	1	0	0
+475	Moraxella	G	0	2	0	5	130	26	other	1	observation	0	1	0	0
+1385	Caryophanales	O	0	2	0	3	11458	3819	other	1	observation	0	1	0	0
+2093	Mycoplasma	G	1	1	1	7	324	46.29	other	1	observation	0	0	0	0
+29393	Dolosigranulum	G	1	1	1	5	58	11.6	other	1	observation	0	0	0	0
+31957	Propionibacteriaceae	F	0	2	0	11	350	31.82	other	1	observation	0	1	0	0
+32008	Burkholderia	G	0	2	0	13	684	52.62	other	1	observation	0	1	0	0
+87882	Burkholderia cepacia complex	G1	0	2	0	5	351	70.2	other	1	observation	0	1	0	0
+452284	Ustilaginomycotina	P1	2	0	1	2	243	121.5	other	1	observation	0	0	0	0
+488447	Burkholderia contaminans	S	0	2	0	13	112	8.615	other	1	observation	0	1	0	0
+286	Pseudomonas	G	0	1	0	1	3242	3242	other	1	observation	0	1	0	0
+356	Hyphomicrobiales	O	0	1	0	1	4558	4558	other	1	observation	0	1	0	0
+976	Bacteroidota	P	0	1	0	1	14078	1.408e+04	other	1	observation	0	1	0	0
+1260	Finegoldia magna	S	0	1	0	2	45	22.5	other	1	observation	0	1	0	0
+1268	Micrococcaceae	F	0	1	0	5	1075	215	other	1	observation	0	1	0	0
+1282	Staphylococcus epidermidis	S	0	1	0	3	55	18.33	other	1	observation	0	1	0	0
+1762	Mycobacteriaceae	F	0	1	0	1	976	976	other	1	observation	0	1	0	0
+34072	Variovorax	G	0	1	0	3	345	115	other	1	observation	0	1	0	0
+53335	Pantoea	G	1	0	1	3	501	167	other	1	observation	0	0	0	0
+71999	Kocuria palustris	S	0	1	0	1	7	7	other	1	observation	1	1	0	0
+80864	Comamonadaceae	F	0	1	0	1	1180	1180	other	1	observation	0	1	0	0
+84566	Sphingobacteriaceae	F	0	1	0	8	1430	178.8	other	1	observation	0	1	0	0
+90964	Staphylococcaceae	F	0	1	0	1	1044	1044	other	1	observation	0	1	0	0
+91061	Bacilli	C	0	1	0	3	14836	4945	other	1	observation	0	1	0	0
+91347	Enterobacterales	O	1	0	1	7	4617	659.6	other	1	observation	0	0	0	0
+119045	Methylobacteriaceae	F	0	1	0	3	403	134.3	other	1	observation	0	1	0	0
+149698	Massilia	G	0	1	0	1	166	166	other	1	observation	0	1	0	0
+186828	Carnobacteriaceae	F	0	1	0	1	262	262	other	1	observation	0	1	0	0
+204455	Rhodobacterales	O	0	1	0	6	1408	234.7	other	1	observation	0	1	0	0
+204457	Sphingomonadales	O	0	1	0	3	1414	471.3	other	1	observation	0	1	0	0
+249058	Gordonia otitidis	S	0	1	0	1	8	8	other	1	observation	1	1	0	0
+420245	Leishmania braziliensis MHOM/BR/75/M2904	S1	0	1	0	1	138	138	other	1	observation	0	1	0	0
+451864	Dikarya	K1	0	1	0	5	10089	2018	other	1	observation	0	1	0	0
+1903409	Erwiniaceae	F	1	0	1	1	802	802	other	1	observation	0	0	0	0
+2685937	Virgibacillus kimchii	S	1	0	1	1	15	15	other	1	observation	1	0	0	0
+2984843	Methylobacterium flocculans	S	1	0	1	6	71	11.83	other	1	observation	0	0	0	0

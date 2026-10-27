@@ -1,0 +1,111 @@
+{
+  "bustools": {
+    "path": "/exports/archive/hg-funcgenom-research/mdmanurung/conda/envs/viralscan_test_full/lib/python3.11/site-packages/kb_python/bins/linux/bustools/bustools",
+    "sha256": "019e38e92fe249f6cf35b174e9c41aad81152c273e0627e2627d6235489e2f39",
+    "version": "0.45.1"
+  },
+  "called_cells_barcode_space": "kb",
+  "called_cells_path": "/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackA_round1/runs/hsv1/combined_off/GSM3511329/GSM3511329/results/called_cells.tsv",
+  "called_cells_sha256": "21ab2cb24fbc644d9531ed9e647d13039990a7efd558d2b812cf1336a79baf65",
+  "db_identity": {
+    "md5_manifest": null,
+    "sha256": {
+      "hash.k2d": "1bd239b207e1d0f679f910cf323c9b6894fdb85c80f0358fa144aca25a7bdfa7",
+      "opts.k2d": "b7ecfc6e365325b71a3514049bc80faeaf2549463ab93ff07cdbc112bd5a8c75",
+      "taxo.k2d": "681162e42813064ebe74d55950cf53da33157d28db3ef4e4ad378af007384d24"
+    }
+  },
+  "discovery_fingerprint": "681e5371c3620a5f18c922d57d01462cd0f58b3af52a0dfb42d31548b92f60f5",
+  "fingerprint_inputs": {
+    "bustools_sha256": "019e38e92fe249f6cf35b174e9c41aad81152c273e0627e2627d6235489e2f39",
+    "called_cells_barcode_space": "kb",
+    "called_cells_sha256": "21ab2cb24fbc644d9531ed9e647d13039990a7efd558d2b812cf1336a79baf65",
+    "db_sha256": {
+      "hash.k2d": "1bd239b207e1d0f679f910cf323c9b6894fdb85c80f0358fa144aca25a7bdfa7",
+      "opts.k2d": "b7ecfc6e365325b71a3514049bc80faeaf2549463ab93ff07cdbc112bd5a8c75",
+      "taxo.k2d": "681162e42813064ebe74d55950cf53da33157d28db3ef4e4ad378af007384d24"
+    },
+    "input_source": {
+      "sha256": {
+        "r1": "cae4122e9579d67fc116fb12355a1841042c2a4892d5711b006c4250fdf82a6d",
+        "r2": "f9ac3ec0e5d5a26e4ef31c8d4d643f0dfbfe17c2be573be5a3212e29b12adb72"
+      },
+      "source": "primary_host_filtered",
+      "star_args": {
+        "alignIntronMin": "20",
+        "alignSJDBoverhangMin": "8",
+        "alignSJoverhangMin": "8",
+        "outFilterMatchNminOverLread": "0.9",
+        "outFilterMismatchNmax": "4",
+        "outFilterMismatchNoverReadLmax": "0.05",
+        "outFilterMultimapNmax": "20",
+        "outFilterType": "Normal",
+        "outSAMattributes": "None",
+        "outSAMprimaryFlag": "OneBestScore"
+      },
+      "star_param_set": "pinned"
+    },
+    "kraken2": {
+      "confidence": 0.05,
+      "minimum_hit_groups": 4,
+      "version": "Kraken version 2.17.2"
+    },
+    "onlist_sha256": null,
+    "polya_trim": {
+      "min_polya_run": 15,
+      "min_polyt_run": 15
+    },
+    "primary_run_fingerprint": "96b4053c9b1497ca4d7cda41a7e849684e6bd8e427eb559716451c634c0c65ad",
+    "technology": "dropseq",
+    "viralscan_version": "3.0.0rc1"
+  },
+  "host_subtract": null,
+  "input_source": {
+    "sha256": {
+      "r1": "cae4122e9579d67fc116fb12355a1841042c2a4892d5711b006c4250fdf82a6d",
+      "r2": "f9ac3ec0e5d5a26e4ef31c8d4d643f0dfbfe17c2be573be5a3212e29b12adb72"
+    },
+    "source": "primary_host_filtered",
+    "star_args": {
+      "alignIntronMin": "20",
+      "alignSJDBoverhangMin": "8",
+      "alignSJoverhangMin": "8",
+      "outFilterMatchNminOverLread": "0.9",
+      "outFilterMismatchNmax": "4",
+      "outFilterMismatchNoverReadLmax": "0.05",
+      "outFilterMultimapNmax": "20",
+      "outFilterType": "Normal",
+      "outSAMattributes": "None",
+      "outSAMprimaryFlag": "OneBestScore"
+    },
+    "star_param_set": "pinned"
+  },
+  "kraken2": {
+    "confidence": 0.05,
+    "memory_mapping": true,
+    "minimum_hit_groups": 4,
+    "version": "Kraken version 2.17.2"
+  },
+  "onlist": null,
+  "onlist_sha256": null,
+  "polya_trim": {
+    "min_polya_run": 15,
+    "min_polyt_run": 15
+  },
+  "primary_run_fingerprint": "96b4053c9b1497ca4d7cda41a7e849684e6bd8e427eb559716451c634c0c65ad",
+  "resolved_input": {
+    "kb_input_check": "same_path",
+    "n_fragments": 40859687,
+    "primary_verified": false,
+    "r1": "/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackA_round1/runs/hsv1/twostep/GSM3511329/GSM3511329/host_filtered/R1.fastq.gz",
+    "r2": "/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackA_round1/runs/hsv1/twostep/GSM3511329/GSM3511329/host_filtered/R2.fastq.gz"
+  },
+  "schema_version": 1,
+  "taxonomy_sha256": "ccef34781a02a15a63e6565264509f7fbd377f18f84d3edd9305265c5b73f9a9",
+  "technology": "dropseq",
+  "viralscan": {
+    "build_sha256": "434c7df78cedda6c17ec0f34dfcc0921d0da457df6692803e3a5b5e42480b82c",
+    "kind": "installed",
+    "version": "3.0.0rc1"
+  }
+}

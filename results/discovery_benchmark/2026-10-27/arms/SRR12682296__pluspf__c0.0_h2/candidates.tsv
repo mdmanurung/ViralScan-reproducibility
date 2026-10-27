@@ -1,0 +1,1907 @@
+taxid	name	rank	groups_called	groups_offcell	n_cells	reads	distinct_minimizers	minimizer_per_read	host_relation	db_has_9606	state	low_minimizer_diversity	offcell_dominant	host_lineage	viral_only_db
+9606	Homo sapiens	S	2797020	295876	2720	3712623	1526528	0.4112	host	1	observation	0	0	1	0
+10376	human gammaherpesvirus 4	S1	669922	87180	2545	1203327	5237	0.004352	other	1	observation	0	0	0	0
+2759	Eukaryota	D	28398	1750	2306	41543	1531054	36.85	host_ancestor	1	observation	0	0	1	0
+10375	Lymphocryptovirus	G	3163	409	488	7458	5722	0.7672	other	1	observation	0	0	0	0
+1396	Bacillus cereus	S	1004	156	719	1321	27	0.02044	other	1	observation	0	0	0	0
+1969841	Proteus phage VB_PmiS-Isfahan	S1	986	103	685	1254	1	0.0007974	other	1	observation	1	0	0	0
+12509	Human herpesvirus 4 type 2	S2	314	94	181	445	83	0.1865	other	1	observation	0	0	0	0
+2	Bacteria	D	189	213	166	992	26382	26.59	other	1	observation	0	1	0	0
+33154	Opisthokonta	D1	347	46	312	417	1529731	3668	host_ancestor	1	observation	0	0	1	0
+139	Borreliella burgdorferi	S	286	32	248	377	9	0.02387	other	1	observation	1	0	0	0
+78331	Mycobacterium canetti	S	74	121	66	365	16	0.04384	other	1	observation	1	1	0	0
+2912242	Xanthomonas indica	S	154	5	146	168	2	0.0119	other	1	observation	1	0	0	0
+573	Klebsiella pneumoniae	S	138	11	130	214	27	0.1262	other	1	observation	0	0	0	0
+1365647	Xanthomonas euvesicatoria pv. alfalfae CFBP 3836	S2	39	88	35	237	2	0.008439	other	1	observation	1	1	0	0
+2714952	Roseateles sp. DAIF2	S	87	5	85	117	5	0.04274	other	1	observation	1	0	0	0
+492670	Bacillus velezensis	S	67	10	66	90	4	0.04444	other	1	observation	1	0	0	0
+1236	Gammaproteobacteria	C	50	6	50	66	4534	68.7	other	1	observation	0	0	0	0
+2593676	unclassified Streptomyces	G1	47	7	47	67	1176	17.55	other	1	observation	0	0	0	0
+929439	Leishmania mexicana MHOM/GT/2001/U1103	S1	38	7	37	49	22	0.449	other	1	observation	0	0	0	0
+1404	Priestia megaterium	S	39	3	38	55	25	0.4545	other	1	observation	0	0	0	0
+3406626	Actinokineospora sp. G85	S	34	5	30	57	5	0.08772	other	1	observation	1	0	0	0
+1883	Streptomyces	G	33	4	33	42	2368	56.38	other	1	observation	0	0	0	0
+505249	Malaciobacter marinus	S	27	1	25	28	2	0.07143	other	1	observation	1	0	0	0
+1280	Staphylococcus aureus	S	26	1	26	31	49	1.581	other	1	observation	0	0	0	0
+286	Pseudomonas	G	21	3	20	27	850	31.48	other	1	observation	0	0	0	0
+3047875	Neobacillus sp. SuZ13	S	18	3	17	22	4	0.1818	other	1	observation	1	0	0	0
+2013	Nocardiopsis	G	14	5	14	19	51	2.684	other	1	observation	0	0	0	0
+121627	Talaromyces rugulosus	S	16	3	16	26	23	0.8846	other	1	observation	0	0	0	0
+423349	Mucilaginibacter	G	16	2	16	18	104	5.778	other	1	observation	0	0	0	0
+1294262	Sulfuracidifex tepidarius	S	16	2	16	18	3	0.1667	other	1	observation	1	0	0	0
+1942464	Cellulophaga sp. HaHaR_3_176	S	15	3	15	22	3	0.1364	other	1	observation	1	0	0	0
+61645	Enterobacter asburiae	S	17	0	16	27	4	0.1481	other	1	observation	1	0	0	0
+284811	Eremothecium gossypii ATCC 10895	S1	16	1	16	17	8	0.4706	other	1	observation	1	0	0	0
+136849	Pseudomonas syringae group	G1	15	1	15	16	30	1.875	other	1	observation	0	0	0	0
+1224	Pseudomonadota	P	15	0	15	15	8941	596.1	other	1	observation	0	0	0	0
+1760	Actinomycetes	C	15	0	15	18	6255	347.5	other	1	observation	0	0	0	0
+28128	Prevotella corporis	S	12	2	12	15	1	0.06667	other	1	observation	1	0	0	0
+1578925	Pyricularia pennisetigena	S	12	2	11	15	20	1.333	other	1	observation	0	0	0	0
+985665	Paenibacillus terrae HPL-003	S1	13	0	13	20	2	0.1	other	1	observation	1	0	0	0
+5851	Plasmodium knowlesi strain H	S1	12	0	12	12	24	2	other	1	observation	0	0	0	0
+644281	Methanocaldococcus sp. FS406-22	S	11	1	11	12	5	0.4167	other	1	observation	1	0	0	0
+1061	Rhodobacter capsulatus	S	8	3	8	12	7	0.5833	other	1	observation	1	0	0	0
+451864	Dikarya	K1	8	3	8	11	1742	158.4	other	1	observation	0	0	0	0
+1936003	Anaerohalosphaera lusitana	S	11	0	11	19	3	0.1579	other	1	observation	1	0	0	0
+1426	Parageobacillus thermoglucosidasius	S	8	2	6	11	3	0.2727	other	1	observation	1	0	0	0
+1716	Corynebacterium	G	7	3	7	15	156	10.4	other	1	observation	0	0	0	0
+45455	Macacine gammaherpesvirus 4	S1	9	1	9	16	27	1.688	other	1	observation	0	0	0	0
+588596	Rhizophagus irregularis	S	10	0	10	11	129	11.73	other	1	observation	0	0	0	0
+1796606	Cupriavidus nantongensis	S	10	0	10	12	1	0.08333	other	1	observation	1	0	0	0
+2341050	macacine gammaherpesvirus 13	S1	8	2	8	17	32	1.882	other	1	observation	0	0	0	0
+2560569	macacine gammaherpesvirus 10	S1	8	2	8	19	26	1.368	other	1	observation	0	0	0	0
+3379134	Pseudomonadati	K	9	1	9	11	13861	1260	other	1	observation	0	0	0	0
+237	Flavobacterium	G	6	3	6	9	431	47.89	other	1	observation	0	0	0	0
+1386	Bacillus	G	8	1	8	9	390	43.33	other	1	observation	0	0	0	0
+5679	Leishmania panamensis	S	9	0	9	11	12	1.091	other	1	observation	1	0	0	0
+267128	Sphingopyxis granuli	S	7	2	7	13	5	0.3846	other	1	observation	1	0	0	0
+2732249	Gemmatimonas groenlandica	S	9	0	9	12	2	0.1667	other	1	observation	1	0	0	0
+3391839	Erwinia sp. LJJL01	S	8	1	8	11	2	0.1818	other	1	observation	1	0	0	0
+3692333	Streptomyces sp. Y309	S	9	0	9	9	6	0.6667	other	1	observation	1	0	0	0
+1491	Clostridium botulinum	S	6	2	6	8	39	4.875	other	1	observation	0	0	0	0
+4779	Bremia lactucae	S	7	1	7	10	20	2	other	1	observation	0	0	0	0
+506591	Leisingera caerulea	S	6	2	6	8	3	0.375	other	1	observation	1	0	0	0
+2516557	Aquirufa nivalisilvae	S	8	0	8	8	3	0.375	other	1	observation	1	0	0	0
+2866162	Actomonas aquatica	S	7	1	7	8	4	0.5	other	1	observation	1	0	0	0
+469	Acinetobacter	G	6	1	6	7	225	32.14	other	1	observation	0	0	0	0
+562	Escherichia coli	S	2	5	2	8	38	4.75	other	1	observation	0	1	0	0
+654	Aeromonas veronii	S	7	0	7	7	12	1.714	other	1	observation	1	0	0	0
+28118	Odoribacter splanchnicus	S	7	0	7	7	4	0.5714	other	1	observation	1	0	0	0
+101201	Trichoderma asperellum	S	5	2	5	9	20	2.222	other	1	observation	0	0	0	0
+181762	Psilocybe cubensis	S	7	0	7	8	30	3.75	other	1	observation	0	0	0	0
+207745	Variovorax sp. WDL1	S	4	3	4	10	3	0.3	other	1	observation	1	0	0	0
+931537	Nocardia grenadensis	S	7	0	7	7	2	0.2857	other	1	observation	1	0	0	0
+2828862	Arthrobacter sp. Helios	S	5	2	5	7	2	0.2857	other	1	observation	1	0	0	0
+3039386	Rugamonas sp. DEMB1	S	6	1	6	16	4	0.25	other	1	observation	1	0	0	0
+1279	Staphylococcus	G	4	2	4	7	235	33.57	other	1	observation	0	0	0	0
+1678	Bifidobacterium	G	6	0	6	7	50	7.143	other	1	observation	0	0	0	0
+40410	Cryptococcus deneoformans	S	4	2	4	6	9	1.5	other	1	observation	1	0	0	0
+196821	unclassified Pseudomonas	G1	6	0	6	7	291	41.57	other	1	observation	0	0	0	0
+208348	Puccinia triticina	S	5	1	5	7	51	7.286	other	1	observation	0	0	0	0
+283734	Staphylococcus pseudintermedius	S	3	3	1	6	7	1.167	other	1	observation	1	0	0	0
+347515	Leishmania major strain Friedlin	S1	6	0	6	10	29	2.9	other	1	observation	0	0	0	0
+412133	Trichomonas vaginalis G3	S1	5	1	5	7	74	10.57	other	1	observation	0	0	0	0
+716545	saccharomyceta	P1	5	1	5	6	1288	214.7	other	1	observation	0	0	0	0
+1114873	Flavobacterium tructae	S	4	2	4	7	3	0.4286	other	1	observation	1	0	0	0
+1812935	Enterobacter roggenkampii	S	6	0	6	6	4	0.6667	other	1	observation	1	0	0	0
+2109915	Simplicispira suum	S	4	2	4	6	3	0.5	other	1	observation	1	0	0	0
+2249475	Mundinia	G1	5	1	5	6	69	11.5	other	1	observation	0	0	0	0
+2249476	Leishmania orientalis	S	6	0	6	7	17	2.429	other	1	observation	1	0	0	0
+2674991	Cohnella candida	S	5	1	5	7	1	0.1429	other	1	observation	1	0	0	0
+2782659	Bradyrhizobium sp. 191	S	6	0	6	6	1	0.1667	other	1	observation	1	0	0	0
+2919917	Peteryoungia algae	S	6	0	6	8	2	0.25	other	1	observation	1	0	0	0
+3034020	Halomontanus rarus	S	5	1	5	10	6	0.6	other	1	observation	1	0	0	0
+3034676	Rhodopseudomonas sp. BAL398	S	4	2	4	6	2	0.3333	other	1	observation	1	0	0	0
+1350	Enterococcus	G	3	2	3	6	129	21.5	other	1	observation	0	0	0	0
+1824	Nocardia asteroides	S	5	0	5	5	7	1.4	other	1	observation	1	0	0	0
+4896	Schizosaccharomyces pombe	S	5	0	5	5	14	2.8	other	1	observation	1	0	0	0
+4952	Yarrowia lipolytica	S	5	0	5	7	8	1.143	other	1	observation	1	0	0	0
+28211	Alphaproteobacteria	C	5	0	5	5	2746	549.2	other	1	observation	0	0	0	0
+29176	Neospora caninum	S	5	0	5	6	34	5.667	other	1	observation	0	0	0	0
+29382	Staphylococcus cohnii	S	5	0	5	5	5	1	other	1	observation	1	0	0	0
+34073	Variovorax paradoxus	S	3	2	3	5	19	3.8	other	1	observation	1	0	0	0
+54757	Plasmodium vinckei vinckei	S1	4	1	4	5	27	5.4	other	1	observation	0	0	0	0
+85471	Plasmodium relictum	S	4	1	4	5	29	5.8	other	1	observation	0	0	0	0
+148305	Pyricularia grisea	S	4	1	4	5	18	3.6	other	1	observation	1	0	0	0
+238834	Clostridium estertheticum	S	4	1	4	5	31	6.2	other	1	observation	0	0	0	0
+443226	Coccidioides posadasii str. Silveira	S1	5	0	5	6	17	2.833	other	1	observation	1	0	0	0
+456999	Rhizoctonia solani	S	4	1	4	6	21	3.5	other	1	observation	0	0	0	0
+657419	Tistrella bauzanensis	S	5	0	5	5	6	1.2	other	1	observation	1	0	0	0
+1380566	Pochonia chlamydosporia 170	S1	4	1	4	5	21	4.2	other	1	observation	0	0	0	0
+1795815	Streptomyces sp. enrichment culture	S	5	0	5	7	51	7.286	other	1	observation	0	0	0	0
+2231603	Akanthomyces muscarius	S	5	0	5	6	26	4.333	other	1	observation	0	0	0	0
+2283160	Psychrobacillus glaciei	S	5	0	5	5	1	0.2	other	1	observation	1	0	0	0
+2775404	Mesorhizobium onobrychidis	S	5	0	5	6	2	0.3333	other	1	observation	1	0	0	0
+2975981	Micromonospora sp. NBC_00898	S	5	0	4	23	3	0.1304	other	1	observation	1	0	0	0
+3068640	Geothrix sp. PMB-07	S	5	0	5	5	3	0.6	other	1	observation	1	0	0	0
+3158075	Penicillium psychrofluorescens	S	5	0	5	6	11	1.833	other	1	observation	1	0	0	0
+3350403	Clostridium caseinilyticum	S	5	0	5	5	8	1.6	other	1	observation	1	0	0	0
+39	Archangiaceae	F	4	0	4	4	68	17	other	1	observation	0	0	0	0
+43	Cystobacter fuscus	S	3	1	3	5	19	3.8	other	1	observation	1	0	0	0
+303	Pseudomonas putida	S	4	0	4	4	22	5.5	other	1	observation	0	0	0	0
+543	Enterobacteriaceae	F	4	0	4	7	504	72	other	1	observation	0	0	0	0
+662	Vibrio	G	3	1	3	4	261	65.25	other	1	observation	0	0	0	0
+848	Fusobacterium	G	3	1	3	4	132	33	other	1	observation	0	0	0	0
+976	Bacteroidota	P	4	0	4	4	2860	715	other	1	observation	0	0	0	0
+1920	Streptomyces nigrescens	S	4	0	4	4	2	0.5	other	1	observation	1	0	0	0
+2014	Nocardiopsis dassonvillei	S	3	1	3	4	9	2.25	other	1	observation	1	0	0	0
+28037	Streptococcus mitis	S	4	0	4	4	6	1.5	other	1	observation	1	0	0	0
+34406	Colletotrichum destructivum	S	1	3	1	4	15	3.75	other	1	observation	1	1	0	0
+39643	Sorangium	G	4	0	4	5	139	27.8	other	1	observation	0	0	0	0
+44249	Paenibacillus	G	3	1	3	4	417	104.2	other	1	observation	0	0	0	0
+123214	Persephonella marina EX-H1	S1	4	0	4	5	2	0.4	other	1	observation	1	0	0	0
+332648	Botrytis cinerea B05.10	S1	4	0	4	4	24	6	other	1	observation	0	0	0	0
+418103	Plasmodium	G1	4	0	4	4	112	28	other	1	observation	0	0	0	0
+438033	Ruminococcus gauvreauii	S	4	0	4	4	3	0.75	other	1	observation	1	0	0	0
+452529	Streptomyces scopuliridis	S	3	1	2	4	3	0.75	other	1	observation	1	0	0	0
+651740	Pseudomonas cedrina	S	4	0	4	4	2	0.5	other	1	observation	1	0	0	0
+716546	leotiomyceta	P3	4	0	4	4	922	230.5	other	1	observation	0	0	0	0
+1028729	Fusarium pseudograminearum CS3096	S1	1	3	1	5	6	1.2	other	1	observation	1	1	0	0
+1133968	Babesia microti strain RI	S1	4	0	4	7	6	0.8571	other	1	observation	1	0	0	0
+1355374	Aliarcobacter lanthieri	S	4	0	4	4	10	2.5	other	1	observation	1	0	0	0
+1462615	Halarcobacter ebronensis	S	4	0	4	4	7	1.75	other	1	observation	1	0	0	0
+1537568	Desulfovibrio biadhensis	S	4	0	4	4	5	1.25	other	1	observation	1	0	0	0
+1643513	Treponema sp. OMZ 857	S	3	1	3	4	2	0.5	other	1	observation	1	0	0	0
+1804997	Micropepsis pineolensis	S	4	0	4	4	2	0.5	other	1	observation	1	0	0	0
+1872431	Algiphilus sp.	S	4	0	4	4	4	1	other	1	observation	1	0	0	0
+1879049	Acinetobacter sp. WCHAc010034	S	4	0	4	5	3	0.6	other	1	observation	1	0	0	0
+1982626	Faecalibacillus intestinalis	S	4	0	4	4	7	1.75	other	1	observation	1	0	0	0
+2175864	Streptomyces sp. NHF165	S	3	1	3	4	6	1.5	other	1	observation	1	0	0	0
+2419772	Apilactobacillus bombintestini	S	3	1	3	4	2	0.5	other	1	observation	1	0	0	0
+2761500	Porcisia hertigi	S	4	0	4	5	26	5.2	other	1	observation	0	0	0	0
+2798861	Acinetobacter sp. CS-2	S	3	1	3	4	1	0.25	other	1	observation	1	0	0	0
+3047871	Neobacillus sp. DY30	S	2	2	2	4	4	1	other	1	observation	1	0	0	0
+3078805	Parvularcula sp. LCG005	S	4	0	4	4	2	0.5	other	1	observation	1	0	0	0
+3101277	Candidatus Poriferisodalis sp.	S	4	0	4	4	10	2.5	other	1	observation	1	0	0	0
+3117746	Metabacillus sediminis	S	4	0	4	5	2	0.4	other	1	observation	1	0	0	0
+3344666	Moraxella veridica	S	3	1	3	4	2	0.5	other	1	observation	1	0	0	0
+3465274	Streptomyces sp. GL_141	S	3	1	3	7	3	0.4286	other	1	observation	1	0	0	0
+48	Archangium gephyra	S	3	0	3	3	11	3.667	other	1	observation	1	0	0	0
+191	Azospirillum	G	3	0	3	3	58	19.33	other	1	observation	0	0	0	0
+246	Chryseobacterium balustinum	S	3	0	3	3	6	2	other	1	observation	1	0	0	0
+384	Rhizobium leguminosarum	S	3	0	3	3	17	5.667	other	1	observation	1	0	0	0
+586	Providencia	G	3	0	3	4	50	12.5	other	1	observation	0	0	0	0
+587	Providencia rettgeri	S	3	0	3	3	10	3.333	other	1	observation	1	0	0	0
+613	Serratia	G	3	0	3	4	88	22	other	1	observation	0	0	0	0
+642	Aeromonas	G	3	0	3	5	81	16.2	other	1	observation	0	0	0	0
+1239	Bacillota	P	2	1	2	4	4684	1171	other	1	observation	0	0	0	0
+1485	Clostridium	G	3	0	3	5	514	102.8	other	1	observation	0	0	0	0
+1496	Clostridioides difficile	S	3	0	3	3	20	6.667	other	1	observation	0	0	0	0
+1505	Paraclostridium sordellii	S	1	2	1	3	13	4.333	other	1	observation	1	1	0	0
+1763	Mycobacterium	G	3	0	3	3	142	47.33	other	1	observation	0	0	0	0
+1873	Micromonospora	G	3	0	3	5	244	48.8	other	1	observation	0	0	0	0
+1888	Streptomyces albus	S	3	0	3	3	9	3	other	1	observation	1	0	0	0
+5144	Podospora	G	3	0	3	3	40	13.33	other	1	observation	0	0	0	0
+5147	Sordaria macrospora	S	3	0	3	3	14	4.667	other	1	observation	1	0	0	0
+5499	Fulvia fulva	S	3	0	3	3	17	5.667	other	1	observation	1	0	0	0
+5506	Fusarium	G	1	2	1	3	139	46.33	other	1	observation	0	1	0	0
+5855	Plasmodium vivax	S	3	0	3	3	23	7.667	other	1	observation	0	0	0	0
+5861	Plasmodium yoelii	S	2	1	2	3	20	6.667	other	1	observation	0	0	0	0
+13502	Brettanomyces nanus	S	2	1	2	3	5	1.667	other	1	observation	1	0	0	0
+28131	Prevotella intermedia	S	3	0	3	3	6	2	other	1	observation	1	0	0	0
+28152	Yersinia kristensenii	S	2	1	2	3	1	0.3333	other	1	observation	1	0	0	0
+31271	Plasmodium chabaudi chabaudi	S1	1	2	1	3	33	11	other	1	observation	0	1	0	0
+36050	Fusarium poae	S	3	0	3	3	22	7.333	other	1	observation	0	0	0	0
+37616	Viannia	G1	1	2	1	3	33	11	other	1	observation	0	1	0	0
+40323	Stenotrophomonas	G	3	0	3	4	95	23.75	other	1	observation	0	0	0	0
+42260	Zygotorulaspora mrakii	S	2	1	2	3	11	3.667	other	1	observation	1	0	0	0
+42684	Streptomyces collinus	S	2	1	2	3	6	2	other	1	observation	1	0	0	0
+43265	Cordyceps javanica	S	3	0	3	4	15	3.75	other	1	observation	1	0	0	0
+47478	Deinococcus sp.	S	3	0	3	3	6	2	other	1	observation	1	0	0	0
+49546	Flavobacteriaceae	F	2	1	2	3	1268	422.7	other	1	observation	0	0	0	0
+58343	Streptomyces canus	S	3	0	3	5	21	4.2	other	1	observation	0	0	0	0
+58346	Streptomyces platensis	S	3	0	3	3	7	2.333	other	1	observation	1	0	0	0
+80865	Delftia	G	3	0	3	4	23	5.75	other	1	observation	0	0	0	0
+84135	Gemella sanguinis	S	3	0	3	3	3	1	other	1	observation	1	0	0	0
+91347	Enterobacterales	O	2	1	2	4	1074	268.5	other	1	observation	0	0	0	0
+119219	Cupriavidus metallidurans	S	2	1	2	3	7	2.333	other	1	observation	1	0	0	0
+122277	Pectobacterium	G	2	1	2	3	30	10	other	1	observation	0	0	0	0
+135719	Sphingobium amiense	S	3	0	3	6	1	0.1667	other	1	observation	1	0	0	0
+146819	Streptomyces europaeiscabiei	S	3	0	3	3	10	3.333	other	1	observation	1	0	0	0
+182096	Aspergillus chevalieri	S	3	0	3	3	11	3.667	other	1	observation	1	0	0	0
+185978	unclassified Paenibacillus	G1	3	0	3	3	207	69	other	1	observation	0	0	0	0
+186801	Clostridia	C	2	1	2	3	1408	469.3	other	1	observation	0	0	0	0
+196159	unclassified Sphingomonas	G1	1	2	1	3	66	22	other	1	observation	0	1	0	0
+196869	unclassified Flavobacterium	G1	3	0	3	3	168	56	other	1	observation	0	0	0	0
+204669	Candidatus Koribacter versatilis Ellin345	S1	3	0	3	3	2	0.6667	other	1	observation	1	0	0	0
+221822	Phaeobacter inhibens	S	3	0	3	3	3	1	other	1	observation	1	0	0	0
+223967	Methylorubrum populi	S	3	0	3	3	8	2.667	other	1	observation	1	0	0	0
+237561	Candida albicans SC5314	S1	3	0	3	4	11	2.75	other	1	observation	1	0	0	0
+256325	Psychrobacter maritimus	S	3	0	3	3	1	0.3333	other	1	observation	1	0	0	0
+311180	Alloyangia pacifica	S	3	0	3	3	2	0.6667	other	1	observation	1	0	0	0
+348837	Spironucleus salmonicida	S	3	0	3	3	12	4	other	1	observation	1	0	0	0
+418010	Methanosarcina subterranea	S	2	1	2	3	4	1.333	other	1	observation	1	0	0	0
+544433	uncultured Ilyobacter sp.	S	2	1	2	3	10	3.333	other	1	observation	1	0	0	0
+556484	Phaeodactylum tricornutum CCAP 1055/1	S1	1	2	1	3	10	3.333	other	1	observation	1	1	0	0
+561879	Bacillus safensis	S	3	0	3	3	4	1.333	other	1	observation	1	0	0	0
+564305	Kwoniella shivajii	S	3	0	3	4	12	3	other	1	observation	1	0	0	0
+573737	Pandoraea oxalativorans	S	3	0	3	3	2	0.6667	other	1	observation	1	0	0	0
+578455	Thermothielavioides terrestris NRRL 8126	S1	3	0	3	6	28	4.667	other	1	observation	0	0	0	0
+644223	Komagataella phaffii GS115	S1	3	0	3	3	8	2.667	other	1	observation	1	0	0	0
+1071380	Henningerozyma blattae CBS 6284	S1	3	0	3	3	15	5	other	1	observation	1	0	0	0
+1080349	Saccharomyces eubayanus	S	3	0	3	3	12	4	other	1	observation	1	0	0	0
+1159556	Ustilaginoidea virens	S	2	1	2	3	20	6.667	other	1	observation	0	0	0	0
+1197325	Mycoplasma wenyonii str. Massachusetts	S1	1	2	1	5	21	4.2	other	1	observation	0	1	0	0
+1241982	Chryseobacterium nakagawai	S	2	1	2	3	3	1	other	1	observation	1	0	0	0
+1295534	Kwoniella dendrophila CBS 6074	S1	2	1	2	3	13	4.333	other	1	observation	1	0	0	0
+1296121	Kwoniella dejecticola CBS 10117	S1	2	1	2	3	16	5.333	other	1	observation	1	0	0	0
+1313172	Ilumatobacter coccineus YM16-304	S1	3	0	3	3	2	0.6667	other	1	observation	1	0	0	0
+1328300	Fusarium keratoplasticum	S	3	0	3	3	9	3	other	1	observation	1	0	0	0
+1379910	Rufibacter radiotolerans	S	3	0	3	3	1	0.3333	other	1	observation	1	0	0	0
+1458985	Moorena producens PAL-8-15-08-1	S1	3	0	3	4	4	1	other	1	observation	1	0	0	0
+1573823	uncultured Draconibacterium sp.	S	2	1	2	3	8	2.667	other	1	observation	1	0	0	0
+1635327	Zophobihabitans entericus	S	3	0	3	3	3	1	other	1	observation	1	0	0	0
+1651941	Kwoniella newhampshirensis	S	3	0	3	4	10	2.5	other	1	observation	1	0	0	0
+1679002	Candidatus Methylopumilus	G	2	1	2	3	12	4	other	1	observation	1	0	0	0
+1775926	Lodderomyces beijingensis	S	3	0	3	4	16	4	other	1	observation	1	0	0	0
+1822464	Paraburkholderia	G	3	0	3	4	105	26.25	other	1	observation	0	0	0	0
+1928857	Flavobacterium ovatum	S	3	0	3	3	4	1.333	other	1	observation	1	0	0	0
+1979344	Flavobacterium sp. MDT1-60	S	2	1	2	3	6	2	other	1	observation	1	0	0	0
+2034170	Trichoderma breve	S	3	0	3	3	23	7.667	other	1	observation	0	0	0	0
+2065378	Breoghania sp.	S	3	0	3	3	6	2	other	1	observation	1	0	0	0
+2099387	Tolypothrix sp. PCC 7910	S	3	0	3	3	5	1.667	other	1	observation	1	0	0	0
+2173853	Streptococcus chenjunshii	S	3	0	3	5	3	0.6	other	1	observation	1	0	0	0
+2584466	Mesorhizobium sp. 8	S	3	0	3	5	1	0.2	other	1	observation	1	0	0	0
+2593645	unclassified Chryseobacterium	G1	3	0	3	4	100	25	other	1	observation	0	0	0	0
+2617991	unclassified Magnetospirillum	G1	3	0	3	7	2	0.2857	other	1	observation	1	0	0	0
+2628915	unclassified Pedobacter	G1	2	1	2	3	66	22	other	1	observation	0	0	0	0
+2675272	unclassified Neobacillus	G1	3	0	3	3	54	18	other	1	observation	0	0	0	0
+2737050	Deinococcus taeanensis	S	3	0	3	3	3	1	other	1	observation	1	0	0	0
+2802991	Leishmania sp. Namibia	S	3	0	3	3	13	4.333	other	1	observation	1	0	0	0
+2803181	Leishmania sp. Ghana 2012 LV757	S	3	0	3	3	8	2.667	other	1	observation	1	0	0	0
+2903836	Streptomyces sp. NBC_01356	S	3	0	3	3	1	0.3333	other	1	observation	1	0	0	0
+2903867	Streptomyces sp. NBC_01439	S	3	0	3	3	2	0.6667	other	1	observation	1	0	0	0
+2930219	Clostridium sp. BJN0001	S	3	0	3	4	4	1	other	1	observation	1	0	0	0
+2976003	Nonomuraea sp. NBC_01738	S	3	0	3	3	9	3	other	1	observation	1	0	0	0
+3039116	Anaerocolumna sp. AGMB13025	S	3	0	3	3	3	1	other	1	observation	1	0	0	0
+3071081	Pseudoalteromonas sp. HL-AS1	S	3	0	3	3	1	0.3333	other	1	observation	1	0	0	0
+3404122	Plantactinospora sp. WMMC1484	S	3	0	3	4	6	1.5	other	1	observation	1	0	0	0
+3465510	Rhizobium sp. KDH_Rht_773_N	S	2	1	2	4	4	1	other	1	observation	1	0	0	0
+3701233	Neobacillus sp. plas4	S	2	1	2	3	3	1	other	1	observation	1	0	0	0
+165	Treponema saccharophilum	S	2	0	2	2	2	1	other	1	observation	1	0	0	0
+171	Leptospira	G	0	2	0	2	32	16	other	1	observation	0	1	0	0
+194	Campylobacter	G	2	0	2	2	123	61.5	other	1	observation	0	0	0	0
+222	Achromobacter	G	2	0	2	2	74	37	other	1	observation	0	0	0	0
+256	Myroides odoratus	S	2	0	2	2	5	2.5	other	1	observation	1	0	0	0
+317	Pseudomonas syringae	S	2	0	2	2	6	3	other	1	observation	1	0	0	0
+374	Bradyrhizobium	G	2	0	2	2	194	97	other	1	observation	0	0	0	0
+379	Rhizobium	G	2	0	2	2	126	63	other	1	observation	0	0	0	0
+470	Acinetobacter baumannii	S	2	0	2	3	17	5.667	other	1	observation	1	0	0	0
+823	Parabacteroides distasonis	S	0	2	0	2	4	2	other	1	observation	1	1	0	0
+851	Fusobacterium nucleatum	S	2	0	2	2	11	5.5	other	1	observation	1	0	0	0
+859	Fusobacterium necrophorum	S	2	0	2	2	5	2.5	other	1	observation	1	0	0	0
+986	Flavobacterium johnsoniae	S	1	1	1	2	10	5	other	1	observation	1	0	0	0
+1301	Streptococcus	G	2	0	2	2	161	80.5	other	1	observation	0	0	0	0
+1302	Streptococcus gordonii	S	1	1	1	2	8	4	other	1	observation	1	0	0	0
+1360	Lactococcus lactis subsp. lactis	S1	2	0	2	2	3	1.5	other	1	observation	1	0	0	0
+1363	Lactococcus garvieae	S	2	0	2	2	8	4	other	1	observation	1	0	0	0
+1428	Bacillus thuringiensis	S	2	0	2	5	19	3.8	other	1	observation	1	0	0	0
+1520	Clostridium beijerinckii	S	2	0	2	2	22	11	other	1	observation	0	0	0	0
+1580	Levilactobacillus brevis	S	1	1	1	2	6	3	other	1	observation	1	0	0	0
+1823	Nocardia otitidiscaviarum	S	2	0	2	2	4	2	other	1	observation	1	0	0	0
+1835	Saccharopolyspora	G	2	0	2	2	24	12	other	1	observation	0	0	0	0
+1847	Pseudonocardia	G	1	1	1	2	59	29.5	other	1	observation	0	0	0	0
+1907	Streptomyces glaucescens	S	2	0	2	2	3	1.5	other	1	observation	1	0	0	0
+1933	Streptoalloteichus tenebrarius	S	2	0	2	2	7	3.5	other	1	observation	1	0	0	0
+2210	Methanosarcina thermophila	S	2	0	2	2	3	1.5	other	1	observation	1	0	0	0
+2756	Brochothrix thermosphacta	S	2	0	2	2	4	2	other	1	observation	1	0	0	0
+4751	Fungi	K	2	0	2	2	1888	944	other	1	observation	0	0	0	0
+4890	Ascomycota	P	2	0	2	2	1316	658	other	1	observation	0	0	0	0
+5507	Fusarium oxysporum	S	1	1	1	2	24	12	other	1	observation	0	0	0	0
+5658	Leishmania	G	2	0	2	2	208	104	other	1	observation	0	0	0	0
+5663	Leishmania enriettii	S	2	0	2	3	15	5	other	1	observation	1	0	0	0
+5691	Trypanosoma brucei	S	1	1	1	2	29	14.5	other	1	observation	0	0	0	0
+5823	Plasmodium berghei ANKA	S1	1	1	1	3	16	5.333	other	1	observation	1	0	0	0
+5866	Babesia bigemina	S	0	2	0	2	9	4.5	other	1	observation	1	1	0	0
+27288	Naumovozyma castellii	S	2	0	2	3	10	3.333	other	1	observation	1	0	0	0
+28031	Lysinibacillus fusiformis	S	2	0	2	2	12	6	other	1	observation	1	0	0	0
+28095	Burkholderia gladioli	S	2	0	2	3	9	3	other	1	observation	1	0	0	0
+28198	Aliarcobacter cryaerophilus	S	2	0	2	2	19	9.5	other	1	observation	1	0	0	0
+28214	Sphingomonas sp.	S	2	0	2	2	7	3.5	other	1	observation	1	0	0	0
+29449	Rhizobium etli	S	2	0	2	2	8	4	other	1	observation	1	0	0	0
+33033	Parvimonas micra	S	2	0	2	2	5	2.5	other	1	observation	1	0	0	0
+33886	Rathayibacter	G	2	0	2	2	28	14	other	1	observation	0	0	0	0
+35754	Dactylosporangium aurantiacum	S	1	1	1	2	8	4	other	1	observation	1	0	0	0
+36035	Saccharomycodes ludwigii	S	1	1	1	2	15	7.5	other	1	observation	1	0	0	0
+36745	Clostridium saccharoperbutylacetonicum	S	1	1	1	2	14	7	other	1	observation	1	0	0	0
+36845	Clostridium intestinale	S	2	0	2	2	5	2.5	other	1	observation	1	0	0	0
+37927	Sinomonas atrocyanea	S	2	0	2	2	3	1.5	other	1	observation	1	0	0	0
+38293	Photobacterium damselae	S	2	0	2	2	13	6.5	other	1	observation	1	0	0	0
+44008	Enterococcus cecorum	S	1	1	1	2	3	1.5	other	1	observation	1	0	0	0
+45151	Pyrenophora tritici-repentis	S	2	0	2	2	10	5	other	1	observation	1	0	0	0
+47251	Leptolyngbya	G	2	0	2	2	13	6.5	other	1	observation	1	0	0	0
+47871	Micromonospora peucetia	S	2	0	2	2	1	0.5	other	1	observation	1	0	0	0
+47917	Serratia fonticola	S	2	0	2	2	7	3.5	other	1	observation	1	0	0	0
+48073	Microbulbifer	G	2	0	2	2	46	23	other	1	observation	0	0	0	0
+48095	Alternaria dauci	S	2	0	2	5	13	2.6	other	1	observation	1	0	0	0
+48736	Ralstonia	G	1	1	1	2	29	14.5	other	1	observation	0	0	0	0
+53246	Pseudoalteromonas	G	1	1	1	2	94	47	other	1	observation	0	0	0	0
+55080	Brevibacillus	G	2	0	2	2	55	27.5	other	1	observation	0	0	0	0
+56956	Thermus brockianus	S	2	0	2	2	2	1	other	1	observation	1	0	0	0
+63577	Trichoderma atroviride	S	2	0	2	2	14	7	other	1	observation	1	0	0	0
+66883	Streptomyces cyaneofuscatus	S	1	1	1	2	8	4	other	1	observation	1	0	0	0
+67367	Streptomyces tanashiensis	S	2	0	2	2	5	2.5	other	1	observation	1	0	0	0
+73044	Streptomyces seoulensis	S	2	0	2	2	4	2	other	1	observation	1	0	0	0
+76859	Fusobacterium animalis	S	1	1	1	2	10	5	other	1	observation	1	0	0	0
+82633	Cupriavidus pauculus	S	1	1	1	2	10	5	other	1	observation	1	0	0	0
+83455	Myxococcus stipitatus	S	1	1	1	3	15	5	other	1	observation	1	0	0	0
+84022	Andreesenella acetica	S	2	0	2	2	6	3	other	1	observation	1	0	0	0
+84531	Lysobacter antibioticus	S	1	1	1	2	4	2	other	1	observation	1	0	0	0
+85006	Micrococcales	O	2	0	2	2	1046	523	other	1	observation	0	0	0	0
+86664	Priestia flexa	S	2	0	2	2	5	2.5	other	1	observation	1	0	0	0
+91061	Bacilli	C	2	0	2	2	2948	1474	other	1	observation	0	0	0	0
+92172	Vibrio aerogenes	S	2	0	2	2	2	1	other	1	observation	1	0	0	0
+94132	Ramlibacter tataouinensis	S	2	0	2	2	4	2	other	1	observation	1	0	0	0
+96472	Thiothrix winogradskyi	S	2	0	2	2	3	1.5	other	1	observation	1	0	0	0
+106332	Papiine gammaherpesvirus 1	S1	1	1	1	3	7	2.333	other	1	observation	1	0	0	0
+106589	Cupriavidus	G	2	0	2	2	99	49.5	other	1	observation	0	0	0	0
+107401	Tenacibaculum maritimum	S	2	0	2	2	4	2	other	1	observation	1	0	0	0
+120107	Sphingobium cloacae	S	2	0	2	2	2	1	other	1	observation	1	0	0	0
+122368	Cercospora beticola	S	2	0	2	2	14	7	other	1	observation	1	0	0	0
+128785	Pseudoxanthomonas mexicana	S	2	0	2	2	4	2	other	1	observation	1	0	0	0
+160798	Marinitoga	G	2	0	2	2	10	5	other	1	observation	1	0	0	0
+168172	Puccinia striiformis f. sp. tritici	S1	2	0	2	2	36	18	other	1	observation	0	0	0	0
+177437	Desulforapulum autotrophicum HRM2	S1	2	0	2	2	3	1.5	other	1	observation	1	0	0	0
+185431	Trypanosoma brucei brucei TREU927	S2	1	1	1	2	14	7	other	1	observation	1	0	0	0
+188913	Cetobacterium somerae	S	2	0	2	2	10	5	other	1	observation	1	0	0	0
+196816	unclassified Acinetobacter	G1	2	0	2	2	46	23	other	1	observation	0	0	0	0
+197222	Paraglaciecola mesophila	S	2	0	2	2	5	2.5	other	1	observation	1	0	0	0
+208602	Nocardia puris	S	2	0	2	3	5	1.667	other	1	observation	1	0	0	0
+232080	Fusarium solani species complex	G1	2	0	2	4	31	7.75	other	1	observation	0	0	0	0
+235986	Actinacidiphila glaucinigra	S	2	0	2	2	8	4	other	1	observation	1	0	0	0
+242507	Pyricularia oryzae 70-15	S1	2	0	2	2	18	9	other	1	observation	1	0	0	0
+252967	Thiospirochaeta perfilievii	S	2	0	2	2	4	2	other	1	observation	1	0	0	0
+270918	Salegentibacter mishustinae	S	1	1	1	2	1	0.5	other	1	observation	1	0	0	0
+279356	Aquimarina muelleri	S	2	0	2	2	5	2.5	other	1	observation	1	0	0	0
+280036	Sporisorium graminicola	S	2	0	2	2	10	5	other	1	observation	1	0	0	0
+296543	Thalassiosira pseudonana CCMP1335	S1	2	0	2	2	16	8	other	1	observation	1	0	0	0
+310300	Bacteroides pyogenes	S	2	0	2	2	5	2.5	other	1	observation	1	0	0	0
+329726	Acaryochloris marina MBIC11017	S1	1	1	1	2	2	1	other	1	observation	1	0	0	0
+336722	Zymoseptoria tritici IPO323	S1	2	0	2	3	15	5	other	1	observation	1	0	0	0
+343874	Empedobacter falsenii	S	1	1	1	2	5	2.5	other	1	observation	1	0	0	0
+348826	Natronorubrum aibiense	S	2	0	2	2	2	1	other	1	observation	1	0	0	0
+356302	Chitinimonas koreensis	S	1	1	1	2	2	1	other	1	observation	1	0	0	0
+386415	Clostridium novyi NT	S1	1	1	1	2	6	3	other	1	observation	1	0	0	0
+395598	Pseudomonas reinekei	S	1	1	1	2	1	0.5	other	1	observation	1	0	0	0
+404432	Salinicola	G	2	0	2	2	9	4.5	other	1	observation	1	0	0	0
+459526	Flavobacterium anhuiense	S	2	0	2	2	16	8	other	1	observation	1	0	0	0
+481446	Phaeobacter italicus	S	2	0	2	2	2	1	other	1	observation	1	0	0	0
+508771	Toxoplasma gondii ME49	S1	2	0	2	3	39	13	other	1	observation	0	0	0	0
+515350	Micromonospora endophytica	S	2	0	2	3	2	0.6667	other	1	observation	1	0	0	0
+521045	Kosmotoga olearia TBF 19.5.1	S1	2	0	2	2	1	0.5	other	1	observation	1	0	0	0
+590652	Mycobacterium paraseoulense	S	1	1	1	3	1	0.3333	other	1	observation	1	0	0	0
+631220	Desulfovibrio sp. G11	S	2	0	2	2	1	0.5	other	1	observation	1	0	0	0
+652787	Mucilaginibacter mallensis	S	0	2	0	2	6	3	other	1	observation	1	1	0	0
+662858	Sphingobacterium bambusae	S	2	0	2	2	3	1.5	other	1	observation	1	0	0	0
+688270	Cellulophaga algicola DSM 14237	S1	2	0	2	2	2	1	other	1	observation	1	0	0	0
+796027	Sugiyamaella lignohabitans	S	1	1	1	2	15	7.5	other	1	observation	1	0	0	0
+859144	Cytobacillus gottheilii	S	1	1	1	2	5	2.5	other	1	observation	1	0	0	0
+879969	Macellibacteroides fermentans	S	2	0	2	2	2	1	other	1	observation	1	0	0	0
+946334	Actinoplanes sp. OR16	S	2	0	2	2	6	3	other	1	observation	1	0	0	0
+1006576	Defluviitoga tunisiensis	S	2	0	2	2	3	1.5	other	1	observation	1	0	0	0
+1028801	Neorhizobium galegae bv. officinalis bv. officinalis str. HAMBI 1141	S2	2	0	2	2	3	1.5	other	1	observation	1	0	0	0
+1042953	Haloparvum alkalitolerans	S	2	0	2	3	2	0.6667	other	1	observation	1	0	0	0
+1072256	Corynebacterium uterequi	S	2	0	2	6	1	0.1667	other	1	observation	1	0	0	0
+1122961	Picrophilus oshimae DSM 9789	S1	2	0	2	2	3	1.5	other	1	observation	1	0	0	0
+1149133	Metapseudomonas furukawaii	S	1	1	1	4	5	1.25	other	1	observation	1	0	0	0
+1156395	Dissulfuribacter thermophilus	S	2	0	2	3	4	1.333	other	1	observation	1	0	0	0
+1176649	Agrobacterium fabrum	S	2	0	2	2	4	2	other	1	observation	1	0	0	0
+1178016	Encephalitozoon romaleae SJ-2008	S1	2	0	2	3	2	0.6667	other	1	observation	1	0	0	0
+1198295	Halopenitus salinus	S	2	0	2	2	3	1.5	other	1	observation	1	0	0	0
+1202712	Ureibacillus chungkukjangi	S	2	0	2	2	4	2	other	1	observation	1	0	0	0
+1218801	Kordia antarctica	S	1	1	1	2	4	2	other	1	observation	1	0	0	0
+1279085	Fusarium fujikuroi IMI 58289	S1	2	0	2	2	11	5.5	other	1	observation	1	0	0	0
+1288971	[Clostridium] ultunense Esp	S1	2	0	2	2	2	1	other	1	observation	1	0	0	0
+1295612	Mucilaginibacter yixingensis	S	2	0	2	2	4	2	other	1	observation	1	0	0	0
+1296100	Kwoniella bestiolae CBS 10118	S1	2	0	2	2	10	5	other	1	observation	1	0	0	0
+1296122	Kwoniella mangroviensis CBS 8507	S1	2	0	2	2	14	7	other	1	observation	1	0	0	0
+1312072	Polaribacter sp. SA4-12	S	2	0	2	2	4	2	other	1	observation	1	0	0	0
+1380675	Haloimpatiens lingqiaonensis	S	2	0	2	2	5	2.5	other	1	observation	1	0	0	0
+1401995	Clavibacter californiensis	S	2	0	2	2	2	1	other	1	observation	1	0	0	0
+1446794	Frondihabitans sp. 762G35	S	2	0	2	2	1	0.5	other	1	observation	1	0	0	0
+1492898	Flavisolibacter tropicus	S	2	0	2	2	3	1.5	other	1	observation	1	0	0	0
+1505597	Blochmannia endosymbiont of Camponotus (Colobopsis) obliquus	S	2	0	2	2	1	0.5	other	1	observation	1	0	0	0
+1532350	Metallosphaera tengchongensis	S	2	0	2	2	3	1.5	other	1	observation	1	0	0	0
+1555112	Limnochorda pilosa	S	2	0	2	2	2	1	other	1	observation	1	0	0	0
+1616117	Streptomyces formicae	S	2	0	2	2	5	2.5	other	1	observation	1	0	0	0
+1621989	Candidatus Desulfofervidus auxilii	S	1	1	1	2	3	1.5	other	1	observation	1	0	0	0
+1643336	Mesobacillus maritimus	S	2	0	2	2	10	5	other	1	observation	1	0	0	0
+1653831	Blattabacterium cuenoti	S	2	0	2	2	29	14.5	other	1	observation	0	0	0	0
+1727145	Anaerocolumna chitinilytica	S	2	0	2	2	5	2.5	other	1	observation	1	0	0	0
+1737571	Niallia oryzisoli	S	2	0	2	2	3	1.5	other	1	observation	1	0	0	0
+1742359	Cytobacillus dafuensis	S	1	1	1	2	3	1.5	other	1	observation	1	0	0	0
+1783272	Bacillati	K	2	0	2	2	11897	5948	other	1	observation	0	0	0	0
+1806370	Pleomorphochaeta caudata	S	2	0	2	2	3	1.5	other	1	observation	1	0	0	0
+1841249	Streptomyces sp. RTd22	S	2	0	2	2	3	1.5	other	1	observation	1	0	0	0
+1859122	Cryptococcus decagattii	S	2	0	2	2	5	2.5	other	1	observation	1	0	0	0
+1867719	Phyllobacterium zundukense	S	2	0	2	2	5	2.5	other	1	observation	1	0	0	0
+1867846	Legionella clemsonensis	S	2	0	2	2	2	1	other	1	observation	1	0	0	0
+1874361	Idiomarina sp.	S	2	0	2	2	2	1	other	1	observation	1	0	0	0
+1908341	Polaribacter litorisediminis	S	1	1	1	2	5	2.5	other	1	observation	1	0	0	0
+2017685	Arthrobacter sp. PM3	S	2	0	2	2	3	1.5	other	1	observation	1	0	0	0
+2029983	Chitinophaga caeni	S	1	1	1	3	3	1	other	1	observation	1	0	0	0
+2172099	Saccharobesus litoralis	S	2	0	2	2	3	1.5	other	1	observation	1	0	0	0
+2267891	Campylobacter novaezeelandiae	S	2	0	2	2	4	2	other	1	observation	1	0	0	0
+2487359	Cyanobium sp. ULC084	S	1	1	1	6	1	0.1667	other	1	observation	1	0	0	0
+2499145	Rhodococcus sp. X156	S	2	0	2	2	1	0.5	other	1	observation	1	0	0	0
+2500547	Apibacter raozihei	S	2	0	2	2	7	3.5	other	1	observation	1	0	0	0
+2527978	Gimesia panareensis	S	2	0	2	4	4	1	other	1	observation	1	0	0	0
+2528020	Poriferisphaera corsica	S	2	0	2	2	1	0.5	other	1	observation	1	0	0	0
+2560057	Terasakiella sp. SH-1	S	2	0	2	2	3	1.5	other	1	observation	1	0	0	0
+2576904	Nostoc sp. TCL26-01	S	2	0	2	2	1	0.5	other	1	observation	1	0	0	0
+2591009	Denitrobaculum tricleocarpae	S	2	0	2	3	5	1.667	other	1	observation	1	0	0	0
+2592652	Agromyces intestinalis	S	1	1	1	2	1	0.5	other	1	observation	1	0	0	0
+2605747	Pedobacter aquae	S	2	0	2	2	5	2.5	other	1	observation	1	0	0	0
+2617518	unclassified Micromonospora	G1	2	0	2	3	105	35	other	1	observation	0	0	0	0
+2619833	unclassified Microbulbifer	G1	2	0	2	2	32	16	other	1	observation	0	0	0	0
+2621164	unclassified Sorangium	G1	2	0	2	2	106	53	other	1	observation	0	0	0	0
+2631981	unclassified Plantactinospora	G1	1	1	1	2	23	11.5	other	1	observation	0	0	0	0
+2637901	unclassified Spiroplasma	G1	2	0	2	2	38	19	other	1	observation	0	0	0	0
+2649220	unclassified Sedimentibacter	G1	2	0	2	2	19	9.5	other	1	observation	1	0	0	0
+2651284	Pradoshia sp. D12	S	2	0	2	2	4	2	other	1	observation	1	0	0	0
+2692234	Streptomyces sp. GS7	S	2	0	2	2	4	2	other	1	observation	1	0	0	0
+2719313	Enterocloster	G	2	0	2	2	6	3	other	1	observation	1	0	0	0
+2743000	Salicibibacter cibarius	S	2	0	2	2	3	1.5	other	1	observation	1	0	0	0
+2762325	Nakamurella sp. PAMC28650	S	1	1	1	3	3	1	other	1	observation	1	0	0	0
+2795738	Sphingobacterium sp. UDSM-2020	S	1	1	1	2	7	3.5	other	1	observation	1	0	0	0
+2815343	Nitrogeniibacter aestuarii	S	2	0	2	3	1	0.3333	other	1	observation	1	0	0	0
+2818390	Sporosarcina sp. Te-1	S	2	0	2	2	3	1.5	other	1	observation	1	0	0	0
+2833628	Streptomyces sp. MST-110588	S	2	0	2	2	6	3	other	1	observation	1	0	0	0
+2864212	Shewanella acanthi	S	1	1	1	2	2	1	other	1	observation	1	0	0	0
+2878255	Cyanobacterium sp. DS4	S	1	1	1	2	1	0.5	other	1	observation	1	0	0	0
+2879617	Arthrobacter sp. FW305-BF8	S	2	0	2	4	1	0.25	other	1	observation	1	0	0	0
+2894082	Spirosoma sp. KNUC1025	S	1	1	1	2	5	2.5	other	1	observation	1	0	0	0
+2898796	Nocardioides sp. cx-173	S	2	0	2	2	2	1	other	1	observation	1	0	0	0
+2903783	Streptomyces sp. NBC_01224	S	2	0	2	2	1	0.5	other	1	observation	1	0	0	0
+2903828	Streptomyces sp. NBC_01335	S	2	0	2	2	4	2	other	1	observation	1	0	0	0
+2929492	Faecalibacterium sp. I3-3-33	S	2	0	2	2	1	0.5	other	1	observation	1	0	0	0
+2929800	Chryseobacterium suipulveris	S	2	0	2	2	2	1	other	1	observation	1	0	0	0
+2937856	Cupriavidus sp. JZ107	S	2	0	2	2	2	1	other	1	observation	1	0	0	0
+2949739	Helicobacter colisuis	S	1	1	1	2	2	1	other	1	observation	1	0	0	0
+2954101	Pseudomonas beijingensis	S	2	0	2	2	1	0.5	other	1	observation	1	0	0	0
+2954547	Psychrobacillus sp. FSL W7-1457	S	2	0	2	2	3	1.5	other	1	observation	1	0	0	0
+2961895	Bartonella harrusi	S	2	0	2	2	1	0.5	other	1	observation	1	0	0	0
+2965074	Pseudomonas serbica	S	2	0	2	2	6	3	other	1	observation	1	0	0	0
+2975783	Streptomyces sp. NBC_00582	S	2	0	2	2	4	2	other	1	observation	1	0	0	0
+2975847	Streptomyces sp. NBC_00841	S	2	0	2	2	2	1	other	1	observation	1	0	0	0
+2975961	Embleya sp. NBC_00896	S	2	0	2	2	4	2	other	1	observation	1	0	0	0
+2995141	Agrococcus sp. SL85	S	2	0	2	2	2	1	other	1	observation	1	0	0	0
+3014998	Prochlorococcus marinus str. MIT 0919	S1	2	0	2	3	5	1.667	other	1	observation	1	0	0	0
+3018314	Tenacibaculum pacificus	S	2	0	2	2	5	2.5	other	1	observation	1	0	0	0
+3034674	cyanobacterium endosymbiont of Epithemia clementina EcSB	S	1	1	1	2	2	1	other	1	observation	1	0	0	0
+3037457	Lactococcus sp. bn62	S	2	0	2	2	1	0.5	other	1	observation	1	0	0	0
+3047478	Achromobacter seleniivolatilans	S	2	0	2	2	4	2	other	1	observation	1	0	0	0
+3059076	Marivirga arenosa	S	2	0	2	3	6	2	other	1	observation	1	0	0	0
+3064531	Paracoccus actinidiae	S	2	0	2	2	3	1.5	other	1	observation	1	0	0	0
+3071408	Alterisphingorhabdus coralli	S	1	1	1	2	2	1	other	1	observation	1	0	0	0
+3093875	Olleya sp. R77988	S	2	0	2	2	9	4.5	other	1	observation	1	0	0	0
+3101350	Candidatus Palauibacter sp.	S	2	0	2	2	8	4	other	1	observation	1	0	0	0
+3115295	Paraperibacillus marinus	S	2	0	2	2	3	1.5	other	1	observation	1	0	0	0
+3115646	Myxococcus faecalis	S	2	0	2	2	7	3.5	other	1	observation	1	0	0	0
+3132284	Lysinibacillus canaveralius	S	2	0	2	2	4	2	other	1	observation	1	0	0	0
+3239953	Microbispora sp. CA-135349	S	2	0	2	2	6	3	other	1	observation	1	0	0	0
+3243332	Zavarzinia sp. CC-PAN008	S	2	0	2	2	1	0.5	other	1	observation	1	0	0	0
+3401630	Luteococcus sp. OSA5	S	1	1	1	2	2	1	other	1	observation	1	0	0	0
+3402687	Mucilaginibacter sp. NFX135	S	1	1	1	2	7	3.5	other	1	observation	1	0	0	0
+3412034	Methanobacterium sp. MBAC-LM	S	1	1	1	2	4	2	other	1	observation	1	0	0	0
+3423417	Geodermatophilus sp. URMC 65	S	2	0	2	2	2	1	other	1	observation	1	0	0	0
+3447453	Actinoplanes sp. HUAS TT8	S	2	0	2	2	6	3	other	1	observation	1	0	0	0
+3447507	Streptomyces sp. HUAS TT7	S	1	1	1	2	5	2.5	other	1	observation	1	0	0	0
+3448659	Plantactinospora sp. DSM 117369	S	2	0	2	3	2	0.6667	other	1	observation	1	0	0	0
+3465234	Brevundimonas sp. KH_025	S	2	0	2	2	3	1.5	other	1	observation	1	0	0	0
+3465259	Pseudomonas sp. KH_017	S	2	0	2	2	1	0.5	other	1	observation	1	0	0	0
+3469795	Cerasibacillus sp. JNUCC 74	S	1	1	1	2	3	1.5	other	1	observation	1	0	0	0
+3477717	Actinomycetospora sp. ABD4_176	S	2	0	2	2	2	1	other	1	observation	1	0	0	0
+9	Buchnera aphidicola	S	0	1	0	1	47	47	other	1	observation	0	1	0	0
+22	Shewanella	G	1	0	1	1	103	103	other	1	observation	0	0	0	0
+32	Myxococcus	G	1	0	1	1	54	54	other	1	observation	0	0	0	0
+47	Archangium	G	1	0	1	1	35	35	other	1	observation	0	0	0	0
+52	Chondromyces crocatus	S	1	0	1	1	7	7	other	1	observation	1	0	0	0
+56	Sorangium cellulosum	S	1	0	1	1	12	12	other	1	observation	1	0	0	0
+75	Caulobacter	G	1	0	1	1	41	41	other	1	observation	0	0	0	0
+122	Gimesia maris	S	1	0	1	2	2	1	other	1	observation	1	0	0	0
+157	Treponema	G	1	0	1	1	46	46	other	1	observation	0	0	0	0
+158	Treponema denticola	S	1	0	1	1	8	8	other	1	observation	1	0	0	0
+159	Brachyspira hyodysenteriae	S	1	0	1	1	7	7	other	1	observation	1	0	0	0
+162	Treponema phagedenis	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+201	Campylobacter lari	S	1	0	1	2	13	6.5	other	1	observation	1	0	0	0
+226	Alteromonas	G	1	0	1	1	36	36	other	1	observation	0	0	0	0
+247	Empedobacter brevis	S	0	1	0	1	5	5	other	1	observation	1	1	0	0
+258	Sphingobacterium spiritivorum	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+265	Paracoccus	G	1	0	1	1	47	47	other	1	observation	0	0	0	0
+287	Pseudomonas aeruginosa	S	1	0	1	1	21	21	other	1	observation	0	0	0	0
+294	Pseudomonas fluorescens	S	0	1	0	1	8	8	other	1	observation	1	1	0	0
+353	Azotobacter chroococcum	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+356	Hyphomicrobiales	O	1	0	1	2	1226	613	other	1	observation	0	0	0	0
+357	Agrobacterium	G	1	0	1	1	49	49	other	1	observation	0	0	0	0
+399	Neorhizobium galegae	S	1	0	1	1	9	9	other	1	observation	1	0	0	0
+408	Methylorubrum extorquens	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+416	Methylomonas	G	1	0	1	1	28	28	other	1	observation	0	0	0	0
+446	Legionella pneumophila	S	1	0	1	1	7	7	other	1	observation	1	0	0	0
+452	Legionella spiritensis	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+471	Acinetobacter calcoaceticus	S	0	1	0	1	2	2	other	1	observation	1	1	0	0
+482	Neisseria	G	1	0	1	1	40	40	other	1	observation	0	0	0	0
+517	Bordetella	G	0	1	0	1	28	28	other	1	observation	0	1	0	0
+536	Chromobacterium violaceum	S	0	1	0	1	1	1	other	1	observation	1	1	0	0
+544	Citrobacter	G	0	1	0	1	44	44	other	1	observation	0	1	0	0
+548	Klebsiella aerogenes	S	1	0	1	1	7	7	other	1	observation	1	0	0	0
+550	Enterobacter cloacae	S	1	0	1	1	9	9	other	1	observation	1	0	0	0
+570	Klebsiella	G	1	0	1	1	107	107	other	1	observation	0	0	0	0
+582	Morganella morganii	S	1	0	1	1	9	9	other	1	observation	1	0	0	0
+583	Proteus	G	1	0	1	1	39	39	other	1	observation	0	0	0	0
+584	Proteus mirabilis	S	1	0	1	1	14	14	other	1	observation	1	0	0	0
+635	Edwardsiella	G	1	0	1	1	13	13	other	1	observation	1	0	0	0
+636	Edwardsiella tarda	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+670	Vibrio parahaemolyticus	S	1	0	1	1	14	14	other	1	observation	1	0	0	0
+673	Grimontia hollisae	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+687	Vibrio gazogenes	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+712	Pasteurellaceae	F	1	0	1	1	100	100	other	1	observation	0	0	0	0
+714	Aggregatibacter actinomycetemcomitans	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+727	Haemophilus influenzae	S	1	0	1	1	7	7	other	1	observation	1	0	0	0
+732	Aggregatibacter aphrophilus	S	0	1	0	1	1	1	other	1	observation	1	1	0	0
+738	Glaesserella parasuis	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+817	Bacteroides fragilis	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+827	Campylobacter ureolyticus	S	0	1	0	2	2	1	other	1	observation	1	1	0	0
+944	Ehrlichia canis	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+963	Herbaspirillum	G	1	0	1	1	28	28	other	1	observation	0	0	0	0
+996	Flavobacterium columnare	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+1046	Chromatiaceae	F	1	0	1	1	27	27	other	1	observation	0	0	0	0
+1073	Rhodopseudomonas	G	1	0	1	1	13	13	other	1	observation	1	0	0	0
+1076	Rhodopseudomonas palustris	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+1125	Microcystis	G	1	0	1	2	13	6.5	other	1	observation	1	0	0	0
+1162	Nostocaceae	F	1	0	1	1	95	95	other	1	observation	0	0	0	0
+1268	Micrococcaceae	F	0	1	0	1	310	310	other	1	observation	0	1	0	0
+1274	Dermacoccus nishinomiyaensis	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1284	Staphylococcus hyicus	S	0	1	0	1	3	3	other	1	observation	1	1	0	0
+1290	Staphylococcus hominis	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+1300	Streptococcaceae	F	1	0	1	1	216	216	other	1	observation	0	0	0	0
+1303	Streptococcus oralis	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+1304	Streptococcus salivarius	S	0	1	0	1	3	3	other	1	observation	1	1	0	0
+1305	Streptococcus sanguinis	S	0	1	0	1	7	7	other	1	observation	1	1	0	0
+1307	Streptococcus suis	S	1	0	1	1	9	9	other	1	observation	1	0	0	0
+1314	Streptococcus pyogenes	S	1	0	1	1	8	8	other	1	observation	1	0	0	0
+1335	Streptococcus equinus	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+1351	Enterococcus faecalis	S	1	0	1	1	10	10	other	1	observation	1	0	0	0
+1357	Lactococcus	G	1	0	1	1	43	43	other	1	observation	0	0	0	0
+1358	Lactococcus lactis	S	0	1	0	1	11	11	other	1	observation	1	1	0	0
+1379	Gemella haemolysans	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+1390	Bacillus amyloliquefaciens	S	0	1	0	1	1	1	other	1	observation	1	1	0	0
+1421	Lysinibacillus sphaericus	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+1440	Bacillus thuringiensis serovar alesti	S1	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1450	Alicyclobacillus acidoterrestris	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+1472	Paenibacillus pabuli	S	0	1	0	1	1	1	other	1	observation	1	1	0	0
+1478	Peribacillus simplex	S	1	0	1	1	7	7	other	1	observation	1	0	0	0
+1482	Virgibacillus halodenitrificans	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+1490	Paraclostridium bifermentans	S	1	0	1	1	11	11	other	1	observation	1	0	0	0
+1494	Clostridium cochlearium	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+1498	Hathewaya histolytica	S	0	1	0	1	6	6	other	1	observation	1	1	0	0
+1501	Clostridium pasteurianum	S	1	0	1	1	9	9	other	1	observation	1	0	0	0
+1502	Clostridium perfringens	S	1	0	1	2	35	17.5	other	1	observation	0	0	0	0
+1506	Clostridium sp.	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+1510	Thermoclostridium stercorarium	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+1513	Clostridium tetani	S	0	1	0	1	7	7	other	1	observation	1	1	0	0
+1517	Thermoanaerobacterium thermosaccharolyticum	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+1519	Clostridium tyrobutyricum	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+1529	Clostridium cadaveris	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+1534	Clostridium kluyveri	S	1	0	1	1	8	8	other	1	observation	1	0	0	0
+1547	Thomasclavelia ramosa	S	1	0	1	1	9	9	other	1	observation	1	0	0	0
+1548	Clostridium scatologenes	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+1569	Sporosarcina	G	1	0	1	2	42	21	other	1	observation	0	0	0	0
+1578	Lactobacillus	G	0	1	0	1	67	67	other	1	observation	0	1	0	0
+1587	Lactobacillus helveticus	S	1	0	1	2	3	1.5	other	1	observation	1	0	0	0
+1590	Lactiplantibacillus plantarum	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+1606	Ligilactobacillus aviarius	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1624	Ligilactobacillus salivarius	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+1637	Listeria	G	1	0	1	1	23	23	other	1	observation	0	0	0	0
+1659	Actinomyces israelii	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+1663	Arthrobacter	G	1	0	1	1	140	140	other	1	observation	0	0	0	0
+1689	Bifidobacterium dentium	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+1762	Mycobacteriaceae	F	1	0	1	1	325	325	other	1	observation	0	0	0	0
+1781	Mycobacterium marinum	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1836	Saccharopolyspora erythraea	S	0	1	0	1	3	3	other	1	observation	1	1	0	0
+1839	Nocardioides	G	1	0	1	1	125	125	other	1	observation	0	0	0	0
+1892	Streptomyces anulatus	S	1	0	1	1	14	14	other	1	observation	1	0	0	0
+1969	Streptomyces chartreusis	S	1	0	1	1	7	7	other	1	observation	1	0	0	0
+1993	Actinomadura madurae	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+2045	Pimelobacter simplex	S	1	0	1	1	9	9	other	1	observation	1	0	0	0
+2053	Gordonia	G	1	0	1	1	57	57	other	1	observation	0	0	0	0
+2055	Gordonia terrae	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+2061	Tsukamurella paurometabola	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2070	Pseudonocardiaceae	F	1	0	1	1	389	389	other	1	observation	0	0	0	0
+2106	Mycoplasma corogypsi	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2115	Mycoplasmopsis fermentans	S	0	1	0	1	2	2	other	1	observation	1	1	0	0
+2129	Ureaplasma	G	1	0	1	1	5	5	other	1	observation	1	0	0	0
+2133	Spiroplasma citri	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2143	Spiroplasma gladiatoris	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2181	Methanothermus sociabilis	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+2207	Methanosarcina	G	1	0	1	1	50	50	other	1	observation	0	0	0	0
+2208	Methanosarcina barkeri	S	1	0	1	1	9	9	other	1	observation	1	0	0	0
+2235	Halobacteriales	O	1	0	1	1	333	333	other	1	observation	0	0	0	0
+2238	Haloarcula marismortui	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2263	Thermococcus	G	1	0	1	1	39	39	other	1	observation	0	0	0	0
+2325	Thermoanaerobacter kivui	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2745	Halomonas	G	1	0	1	1	67	67	other	1	observation	0	0	0	0
+2750	Carnobacterium mobile	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+4891	Saccharomycetes	C	1	0	1	1	186	186	other	1	observation	0	0	0	0
+5007	Brettanomyces bruxellensis	S	1	0	1	1	8	8	other	1	observation	1	0	0	0
+5128	Fusarium sambucinum	S	1	0	1	1	14	14	other	1	observation	1	0	0	0
+5454	Ascochyta rabiei	S	1	0	1	1	19	19	other	1	observation	1	0	0	0
+5741	Giardia duodenalis	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+5761	Naegleria	G	1	0	1	2	2	1	other	1	observation	1	0	0	0
+5824	Plasmodium brasilianum	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+5854	Plasmodium reichenowi	S	1	0	1	2	10	5	other	1	observation	1	0	0	0
+5858	Plasmodium malariae	S	1	0	1	1	9	9	other	1	observation	1	0	0	0
+12916	Acidovorax	G	1	0	1	1	50	50	other	1	observation	0	0	0	0
+13689	Sphingomonas paucimobilis	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+27291	Saccharomyces paradoxus	S	0	1	0	1	8	8	other	1	observation	1	1	0	0
+28084	Legionella cherrii	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+28090	Acinetobacter lwoffii	S	1	0	1	1	7	7	other	1	observation	1	0	0	0
+28099	Agrobacterium rubi	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+28111	Bacteroides eggerthii	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+28124	Porphyromonas endodontalis	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+28132	Prevotella melaninogenica	S	1	0	1	1	9	9	other	1	observation	1	0	0	0
+28133	Prevotella nigrescens	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+28151	Serratia proteamaculans	S	1	0	1	1	9	9	other	1	observation	1	0	0	0
+28197	Aliarcobacter butzleri	S	1	0	1	1	24	24	other	1	observation	0	0	0	0
+28449	Neisseria subflava	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+28450	Burkholderia pseudomallei	S	0	1	0	1	7	7	other	1	observation	1	1	0	0
+28901	Salmonella enterica	S	1	0	1	1	13	13	other	1	observation	1	0	0	0
+29324	Caldicellulosiruptor naganoensis	S	0	1	0	1	1	1	other	1	observation	1	1	0	0
+29379	Staphylococcus auricularis	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+29442	Pseudomonas tolaasii	S	1	0	1	2	6	3	other	1	observation	1	0	0	0
+29468	Methylocystis echinoides	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+29507	Leptospira kirschneri	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+29546	Lawsonia intracellularis	S	0	1	0	1	2	2	other	1	observation	1	1	0	0
+31989	Paracoccaceae	F	1	0	1	1	164	164	other	1	observation	0	0	0	0
+32067	Leptotrichia	G	1	0	1	1	29	29	other	1	observation	0	0	0	0
+33038	Mediterraneibacter gnavus	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+33050	Sphingopyxis macrogoltabida	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+33059	Acidithiobacillus caldus	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+33069	Pseudomonas viridiflava	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+33634	Stramenopiles	D2	1	0	1	1	47	47	other	1	observation	0	0	0	0
+33882	Microbacterium	G	1	0	1	1	188	188	other	1	observation	0	0	0	0
+33910	Amycolatopsis mediterranei	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+33946	Kurthia gibsonii	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+33968	Leuconostoc pseudomesenteroides	S	0	1	0	2	5	2.5	other	1	observation	1	1	0	0
+34085	Riemerella anatipestifer	S	0	1	0	1	9	9	other	1	observation	1	1	0	0
+34087	Sphingobacterium faecium	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+35773	Candidatus Phytoplasma luffae	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+36329	Plasmodium falciparum 3D7	S1	1	0	1	1	4	4	other	1	observation	1	0	0	0
+36835	[Clostridium] colinum	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+37326	Nocardia brasiliensis	S	1	0	1	1	10	10	other	1	observation	1	0	0	0
+37727	Talaromyces marneffei	S	1	0	1	2	17	8.5	other	1	observation	1	0	0	0
+37914	Dietzia	G	0	1	0	1	12	12	other	1	observation	1	1	0	0
+38027	Methanosarcina siciliae	S	0	1	0	1	4	4	other	1	observation	1	1	0	0
+38574	Leishmania donovani species complex	G2	1	0	1	1	27	27	other	1	observation	0	0	0	0
+39485	Lachnospira eligens	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+40477	Mycoplasma mycoides subsp. capri	S1	1	0	1	1	5	5	other	1	observation	1	0	0	0
+40543	Sneathia sanguinegens	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+40566	Actinosynnema	G	1	0	1	1	13	13	other	1	observation	1	0	0	0
+41276	Brevundimonas vesicularis	S	1	0	1	2	6	3	other	1	observation	1	0	0	0
+41295	Rhodospirillaceae	F	0	1	0	1	24	24	other	1	observation	0	1	0	0
+41431	Rippkaea orientalis PCC 8801	S1	1	0	1	1	2	2	other	1	observation	1	0	0	0
+41675	Stygiolobus azoricus	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+41977	Parazoarcus communis	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+42234	Streptomyces acidiscabies	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+42858	Mammaliicoccus lentus	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+43080	Saccharolobus islandicus	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+43348	Mycobacterium branderi	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+43617	Mesorhizobium mediterraneum	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+43657	Pseudoalteromonas luteoviolacea	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+43662	Pseudoalteromonas piscicida	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+43664	Paenarthrobacter histidinolovorans	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+43770	Corynebacterium striatum	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+43774	Syntrophus buswellii	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+44260	Neomoorella	G	1	0	1	1	11	11	other	1	observation	1	0	0	0
+45398	Streptomyces griseoviridis	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+45851	Eshraghiella crossota	S	0	1	0	1	2	2	other	1	observation	1	1	0	0
+46127	Staphylococcus felis	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+46158	Actinomadura citrea	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+46163	Actinomadura luteofluorescens	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+46189	Sphaerisporangium viridialbum	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+47671	Lautropia mirabilis	S	0	1	0	1	2	2	other	1	observation	1	1	0	0
+47763	Streptomyces lydicus	S	1	0	1	1	10	10	other	1	observation	1	0	0	0
+47872	Micromonospora purpureochromogenes	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+47886	Pseudomonas luteola	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+47960	Guyparkeria halophila	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+51669	Tetragenococcus halophilus	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+52133	Acinetobacter venetianus	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+52226	Mitsuokella multacida	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+52584	Brachyspira pilosicoli	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+52774	Actinomyces slackii	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+52959	Polaribacter	G	1	0	1	1	97	97	other	1	observation	0	0	0	0
+53362	Dactylosporangium vinaceum	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+53408	Pseudomonas citronellolis	S	1	0	1	1	8	8	other	1	observation	1	0	0	0
+53442	Eubacterium callanderi	S	0	1	0	1	3	3	other	1	observation	1	1	0	0
+54005	Peptoniphilus harei	S	0	1	0	1	3	3	other	1	observation	1	1	0	0
+55079	Aneurinibacillus	G	0	1	0	1	6	6	other	1	observation	1	1	0	0
+55211	Erwinia persicina	S	1	0	1	2	2	1	other	1	observation	1	0	0	0
+55508	Janthinobacterium agaricidamnosum	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+56458	Xanthomonas sacchari	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+56459	Xanthomonas vasicola	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+57037	Lacticaseibacillus zeae	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+57477	Bacillus phage Bastille	S1	1	0	1	1	1	1	other	1	observation	1	0	0	0
+57975	Burkholderia thailandensis	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+59732	Chryseobacterium	G	0	1	0	1	212	212	other	1	observation	0	1	0	0
+59845	Paenibacillus illinoisensis	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+60035	Citrifermentans bremense	S	0	1	0	1	1	1	other	1	observation	1	1	0	0
+60137	Sulfitobacter pontiacus	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+64104	Bacillus pseudomycoides	S	1	0	1	1	9	9	other	1	observation	1	0	0	0
+64895	Borreliella	G	1	0	1	1	38	38	other	1	observation	0	0	0	0
+66229	Komagataeibacter intermedius	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+66425	Streptomyces luteoverticillatus	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+67326	Streptomyces melanogenes	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+67332	Streptomyces mutabilis	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+67352	Kitasatospora purpeofusca	S	0	1	0	1	9	9	other	1	observation	1	1	0	0
+67362	Streptomyces rubiginosohelvolus	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+67373	Streptomyces varsoviensis	S	1	0	1	1	8	8	other	1	observation	1	0	0	0
+68217	Kitasatospora herbaricolor	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+68233	Streptomyces luteogriseus	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+68246	Streptomyces olivoreticuli	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+68274	Streptomyces tauricus	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+69781	Penicillium oxalicum	S	1	0	1	1	14	14	other	1	observation	1	0	0	0
+69968	Macrococcus bovicus	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+73010	Aeromonas encheleia	S	0	1	0	1	1	1	other	1	observation	1	1	0	0
+73029	Dechloromonas	G	1	0	1	1	5	5	other	1	observation	1	0	0	0
+75105	Paraburkholderia caribensis	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+75289	Pseudonocardia xinjiangensis	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+75984	Mannheimia	G	1	0	1	1	9	9	other	1	observation	1	0	0	0
+76758	Pseudomonas orientalis	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+76760	Pseudomonas rhodesiae	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+76857	Fusobacterium polymorphum	S	1	0	1	1	13	13	other	1	observation	1	0	0	0
+79880	Shouchella clausii	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+79883	Sutcliffiella horikoshii	S	1	0	1	1	9	9	other	1	observation	1	0	0	0
+80866	Delftia acidovorans	S	1	0	1	2	7	3.5	other	1	observation	1	0	0	0
+82380	Microbacterium oxydans	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+82976	Buttiauxella	G	1	0	1	1	8	8	other	1	observation	1	0	0	0
+83451	Archangium violaceum	S	1	0	1	1	18	18	other	1	observation	1	0	0	0
+83555	Chlamydia abortus	S	0	1	0	1	1	1	other	1	observation	1	1	0	0
+83564	Desulfosarcina ovata	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+83889	unclassified Marinobacter	G1	1	0	1	1	15	15	other	1	observation	1	0	0	0
+84406	Virgibacillus	G	1	0	1	1	41	41	other	1	observation	0	0	0	0
+85023	Microbacteriaceae	F	1	0	1	1	461	461	other	1	observation	0	0	0	0
+86183	Xanthomonas boreopolis	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+86661	Bacillus cereus group	G1	1	0	1	2	136	68	other	1	observation	0	0	0	0
+87162	Borreliella sinica	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+89152	Peptacetobacter hiranonis	S	0	1	0	2	4	2	other	1	observation	1	1	0	0
+89153	[Clostridium] hylemonae	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+90244	Oligella ureolytica	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+90426	Methanothrix sp.	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+92404	[Mycoplasma] gypis	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+93219	Pandoraea norimbergensis	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+93222	Pandoraea sputorum	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+93466	Fervidobacterium pennivorans	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+94643	Besnoitia besnoiti	S	1	0	1	2	29	14.5	other	1	observation	0	0	0	0
+94869	Clostridium gasigenes	S	1	0	1	1	10	10	other	1	observation	1	0	0	0
+96468	Nocardia vinacea	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+98403	Drechmeria coniospora	S	1	0	1	1	17	17	other	1	observation	1	0	0	0
+100177	[Borrelia] lusitaniae	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+103733	Saccharothrix syringae	S	1	0	1	1	8	8	other	1	observation	1	0	0	0
+105841	Anaerostipes caccae	S	0	1	0	1	3	3	other	1	observation	1	1	0	0
+106634	Thioalkalivibrio versutus	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+106649	Acinetobacter guillouiae	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+109046	Methanosarcina baltica	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+110321	Sinorhizobium medicae	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+114295	unclassified Rickettsia	G1	1	0	1	1	7	7	other	1	observation	1	0	0	0
+115551	Vreelandella neptunia	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+115778	Leuconostoc gasicomitatum	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+118062	Methanobacterium congolense	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+119060	Burkholderiaceae	F	1	0	1	1	460	460	other	1	observation	0	0	0	0
+126156	Psychrobacillus psychrotolerans	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+129137	Pseudomonas amygdali pv. eriobotryae	S1	1	0	1	1	1	1	other	1	observation	1	0	0	0
+129138	Pseudomonas amygdali pv. morsprunorum	S1	1	0	1	3	1	0.3333	other	1	observation	1	0	0	0
+129337	Geobacillus	G	0	1	0	1	9	9	other	1	observation	1	1	0	0
+129985	Mesobacillus jeotgali	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+130049	Paenibacillus dendritiformis	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+134602	Actinomadura nitritigenes	S	0	1	0	1	2	2	other	1	observation	1	1	0	0
+135614	Lysobacterales	O	0	1	0	1	385	385	other	1	observation	0	1	0	0
+135621	Pseudomonadaceae	F	1	0	1	1	948	948	other	1	observation	0	0	0	0
+143232	Vanrija pseudolonga	S	1	0	1	1	13	13	other	1	observation	1	0	0	0
+145260	Methanothermobacter	G	1	0	1	1	9	9	other	1	observation	1	0	0	0
+145971	Colletotrichum lupini	S	1	0	1	1	27	27	other	1	observation	0	0	0	0
+146017	Mycolicibacterium boenickei	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+147802	Lactobacillus iners	S	0	1	0	1	2	2	other	1	observation	1	1	0	0
+148814	Apilactobacillus kunkeei	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+149696	Xanthomonas campestris pv. badrii	S1	1	0	1	1	1	1	other	1	observation	1	0	0	0
+149698	Massilia	G	1	0	1	1	49	49	other	1	observation	0	0	0	0
+154046	Hungatella hathewayi	S	0	1	0	1	6	6	other	1	observation	1	1	0	0
+158822	Cedecea neteri	S	1	0	1	1	8	8	other	1	observation	1	0	0	0
+158836	Enterobacter hormaechei	S	1	0	1	1	13	13	other	1	observation	1	0	0	0
+158899	Collimonas fungivorans	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+161358	Microtetraspora malaysiensis	S	1	0	1	1	10	10	other	1	observation	1	0	0	0
+161492	Anaeromyxobacter	G	1	0	1	1	11	11	other	1	observation	1	0	0	0
+161895	Corynebacterium phocae	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+162496	Glutamicibacter creatinolyticus	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+164546	Cupriavidus taiwanensis	S	1	0	1	1	9	9	other	1	observation	1	0	0	0
+165179	Segatella copri	S	1	0	1	1	12	12	other	1	observation	1	0	0	0
+169679	Clostridium saccharobutylicum	S	1	0	1	1	7	7	other	1	observation	1	0	0	0
+172043	Brevundimonas nasdae	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+181124	Marasmius oreades	S	1	0	1	1	17	17	other	1	observation	1	0	0	0
+182773	Clostridium isatidis	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+183417	Proteus hauseri	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+185007	Pseudobutyrivibrio xylanivorans	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+186803	Lachnospiraceae	F	1	0	1	2	224	112	other	1	observation	0	0	0	0
+186831	Acetoanaerobium	G	1	0	1	1	3	3	other	1	observation	1	0	0	0
+187327	Acidaminococcus intestini	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+188144	Enterovibrio norvegicus	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+189381	Rossellomorea marisflavi	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+189425	Paenibacillus graminis	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+190323	Plantibacter	G	0	1	0	1	3	3	other	1	observation	1	1	0	0
+191303	Turicibacter	G	1	0	1	1	6	6	other	1	observation	1	0	0	0
+191390	Pseudomonas palleroniana	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+193462	Streptomyces niveus	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+195108	Fusarium falciforme	S	1	0	1	2	12	6	other	1	observation	1	0	0	0
+195522	Thermococcus nautili	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+198483	Macrococcus brunensis	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+200451	Pseudomonas poae	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+203124	Trichodesmium erythraeum IMS101	S1	1	0	1	1	7	7	other	1	observation	1	0	0	0
+203804	Candidatus Blochmanniella	G	1	0	1	1	14	14	other	1	observation	1	0	0	0
+204507	Neodiprion abietis nucleopolyhedrovirus	S1	1	0	1	1	1	1	other	1	observation	1	0	0	0
+204525	Teichococcus cervicalis	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+204536	Sulfurihydrogenibium azorense Az-Fu1	S1	1	0	1	1	5	5	other	1	observation	1	0	0	0
+208596	Carnobacterium sp. 17-4	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+209247	Nocardia yamanashiensis	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+215813	Dinoroseobacter shibae	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+216572	Oscillospiraceae	F	1	0	1	1	82	82	other	1	observation	0	0	0	0
+216931	Spiroplasma alleghenense	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+216946	Spiroplasma turonicum	S	0	1	0	1	2	2	other	1	observation	1	1	0	0
+218208	Desulfatibacillum aliphaticivorans	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+221027	Treponema putidum	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+223818	Malassezia japonica	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+225849	Shewanella piezotolerans WP3	S1	1	0	1	1	2	2	other	1	observation	1	0	0	0
+226126	Saccharomyces mikatae IFO 1815	S1	1	0	1	1	10	10	other	1	observation	1	0	0	0
+227086	Bigelowiella natans	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+227942	Limosilactobacillus gastricus	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+227945	Lactobacillus ultunensis	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+228899	Peribacillus asahii	S	1	0	1	2	12	6	other	1	observation	1	0	0	0
+229533	Fusarium graminearum PH-1	S1	1	0	1	1	5	5	other	1	observation	1	0	0	0
+233316	Alteromonas stellipolaris	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+234831	Pseudoalteromonas sp. SM9913	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+235443	Cryptococcus neoformans H99	S1	1	0	1	1	10	10	other	1	observation	1	0	0	0
+235627	unclassified Arthrobacter	G1	1	0	1	1	108	108	other	1	observation	0	0	0	0
+237609	Pseudomonas alkylphenolica	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+239935	Akkermansia muciniphila	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+240521	Paenirhizobium daejeonense	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+241244	Rummeliibacillus stabekisii	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+248906	Zobellia laminariae	S	0	1	0	1	4	4	other	1	observation	1	1	0	0
+249567	Streptomyces decoyicus	S	1	0	1	1	7	7	other	1	observation	1	0	0	0
+251747	Chromobacterium subtsugae	S	0	1	0	1	2	2	other	1	observation	1	1	0	0
+254246	Aquicella lusitana	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+254839	Actinobacillus genomosp. 1	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+255247	Fictibacillus arsenicus	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+257496	unclassified Curtobacterium	G1	1	0	1	1	21	21	other	1	observation	0	0	0	0
+257708	Roseomonas gilardii	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+259564	Methanococcoides burtonii DSM 6242	S1	1	0	1	1	2	2	other	1	observation	1	0	0	0
+261299	Intestinibacter bartlettii	S	1	0	1	1	7	7	other	1	observation	1	0	0	0
+261825	Agarivorans	G	1	0	1	1	17	17	other	1	observation	1	0	0	0
+261936	Halomonas sp. H2	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+262209	Janibacter melonis	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+263475	Viridibacillus arvi	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+265960	Komagataeibacter nataicola	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+266809	Thalassobacter stenotrophicus	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+269799	Geobacter metallireducens GS-15	S1	1	0	1	1	3	3	other	1	observation	1	0	0	0
+272164	Olleya marilimosa	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+279810	Thiobacter subterraneus	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+280145	Acinetobacter colistiniresistens	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+282676	Acidianus manzaensis	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+284592	Debaryomyces hansenii CBS767	S1	1	0	1	1	9	9	other	1	observation	1	0	0	0
+290110	Xenorhabdus budapestensis	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+291112	Photorhabdus asymbiotica	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+291644	Bacteroides salyersiae	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+293388	Bacillus aerius	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+293826	Alkaliphilus metalliredigens QYMF	S1	1	0	1	1	3	3	other	1	observation	1	0	0	0
+294699	Anoxybacteroides amylolyticum	S	0	1	0	1	2	2	other	1	observation	1	1	0	0
+298596	Sporosarcina ureilytica	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+299767	Enterobacter ludwigii	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+302485	Phaeobacter	G	1	0	1	1	10	10	other	1	observation	1	0	0	0
+304417	Desulfuromusa ferrireducens	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+307121	Micromonospora krabiensis	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+307521	Gracilibacillus boraciitolerans	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+308865	Elizabethkingia	G	1	0	1	1	25	25	other	1	observation	0	0	0	0
+313588	Croceibacter atlanticus	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+316067	Geotalea daltonii FRC-32	S1	1	0	1	2	1	0.5	other	1	observation	1	0	0	0
+318161	Shewanella denitrificans OS217	S1	0	1	0	1	2	2	other	1	observation	1	1	0	0
+318836	Kotonkan virus	S1	1	0	1	1	1	1	other	1	observation	1	0	0	0
+321327	Synechococcus sp. JA-3-3Ab	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+324925	Pelodictyon phaeoclathratiforme BU-1	S1	1	0	1	1	1	1	other	1	observation	1	0	0	0
+325217	unclassified Mesorhizobium	G1	1	0	1	1	72	72	other	1	observation	0	0	0	0
+328813	Alistipes onderdonkii	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+332158	Larkinella insperata	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+335929	Erythrobacteraceae	F	1	0	1	1	85	85	other	1	observation	0	0	0	0
+338583	Polymorphospora	G	1	0	1	1	10	10	other	1	observation	1	0	0	0
+338584	Polymorphospora rubra	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+338963	Syntrophotalea carbinolica DSM 2380	S1	1	0	1	1	2	2	other	1	observation	1	0	0	0
+342409	Whispovirus xiabaidian	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+343403	Costertonia aggregata	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+351052	Alkalilimnicola ehrlichii	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+351614	Xenorhabdus stockiae	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+351672	Xenorhabdus griffiniae	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+352472	Dictyostelium discoideum AX4	S1	1	0	1	1	32	32	other	1	observation	0	0	0	0
+357808	Roseiflexus sp. RS-1	S	1	0	1	2	5	2.5	other	1	observation	1	0	0	0
+357809	Lachnoclostridium phytofermentans ISDg	S1	1	0	1	1	3	3	other	1	observation	1	0	0	0
+358220	Acidovorax sp. KKS102	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+361365	Tindallia texcoconensis	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+363843	Rhizobacter fulvus	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+370777	Arenimonas daejeonensis	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+373994	Rivularia sp. PCC 7116	S	0	1	0	1	7	7	other	1	observation	1	1	0	0
+376149	Streptomyces sp. NL15-2K	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+376686	Flavobacterium johnsoniae UW101	S1	0	1	0	1	2	2	other	1	observation	1	1	0	0
+379684	Affinirhizobium pseudoryzae	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+382954	Clostridium nitrophenolicum	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+383372	Roseiflexus castenholzii DSM 13941	S1	1	0	1	1	1	1	other	1	observation	1	0	0	0
+387090	Phocaeicola coprophilus	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+389348	Candidatus Protochlamydia naegleriophila	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+390157	Senecavirus A	S1	1	0	1	1	1	1	other	1	observation	1	0	0	0
+396015	Rothia terrae	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+398053	Mucilaginibacter ginsenosidivorans	S	0	1	0	1	1	1	other	1	observation	1	1	0	0
+401562	Aureimonas ureilytica	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+404385	Nonomuraea bangladeshensis	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+410837	Pseudarthrobacter defluvii	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+412384	Priestia aryabhattai	S	1	0	1	1	7	7	other	1	observation	1	0	0	0
+413502	Cronobacter turicensis	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+413882	Caldimonas brevitalea	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+414778	Planococcus donghaensis	S	0	1	0	1	1	1	other	1	observation	1	1	0	0
+415709	Brasilonema sennae CENA114	S1	1	0	1	1	3	3	other	1	observation	1	0	0	0
+418101	Vinckeia	G1	0	1	0	1	107	107	other	1	observation	0	1	0	0
+418107	Laverania	G1	0	1	0	1	53	53	other	1	observation	0	1	0	0
+419474	Brucella haematophila	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+419479	Jiangella alkaliphila	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+420402	Marinobacterium rhizophilum	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+420662	Methylibium petroleiphilum PM1	S1	1	0	1	1	1	1	other	1	observation	1	0	0	0
+424188	Streptomyces deccanensis	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+425104	Shewanella sediminis HAW-EB3	S1	1	0	1	1	1	1	other	1	observation	1	0	0	0
+426114	Thiomonas arsenitoxydans	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+426703	Alkalibacterium putridalgicola	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+430522	Pedobacter steynii	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+434010	Hydrogenophaga sp. PBL-H3	S	0	1	0	1	1	1	other	1	observation	1	1	0	0
+435905	Microbulbifer celer	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+436114	Sulfurihydrogenibium sp. YO3AOP1	S	0	1	0	1	3	3	other	1	observation	1	1	0	0
+442121	uncultured Pleomorphomonas sp.	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+442870	Acanthopleuribacter pedis	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+446471	Xylanimonas cellulosilytica DSM 15894	S1	1	0	1	1	3	3	other	1	observation	1	0	0	0
+446679	Nostoc sphaeroides	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+453783	Lysobacter soli	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+456163	Thermus parvatiensis	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+459529	Sphingobacterium siyangense	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+467262	Bacillus sp. T3	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+470932	Pantoea deleyi	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+477697	Streptomyces sp. T12	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+479432	Streptosporangium roseum DSM 43021	S1	1	0	1	1	4	4	other	1	observation	1	0	0	0
+479433	Catenulispora acidiphila DSM 44928	S1	1	0	1	1	3	3	other	1	observation	1	0	0	0
+480071	Virgibacillus siamensis	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+480418	Mycobacterium lepromatosis	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+483545	Thermobifida halotolerans	S	1	0	1	2	4	2	other	1	observation	1	0	0	0
+487316	Acinetobacter soli	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+498019	Candidozyma auris	S	0	1	0	1	7	7	other	1	observation	1	1	0	0
+498214	Clostridium botulinum A3 str. Loch Maree	S2	1	0	1	1	1	1	other	1	observation	1	0	0	0
+501572	Sinorhizobium chiapasense	S	0	1	0	1	3	3	other	1	observation	1	1	0	0
+511108	Ottowia pentelensis	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+512383	Acidisoma sibiricum	S	0	1	0	1	3	3	other	1	observation	1	1	0	0
+518636	[Clostridium] asparagiforme DSM 15981	S1	1	0	1	1	1	1	other	1	observation	1	0	0	0
+526949	Rhizobium phaseoli Brasil 5	S1	1	0	1	1	1	1	other	1	observation	1	0	0	0
+536227	Clostridium carboxidivorans P7	S1	1	0	1	1	5	5	other	1	observation	1	0	0	0
+544645	Butyricimonas virosa	S	0	1	0	1	2	2	other	1	observation	1	1	0	0
+546160	Dietzia lutea	S	0	1	0	1	3	3	other	1	observation	1	1	0	0
+554880	Halobacillus naozhouensis	S	1	0	1	2	2	1	other	1	observation	1	0	0	0
+555315	Ensifer canadensis	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+558151	Chryseobacterium angstadtii	S	1	0	1	2	2	1	other	1	observation	1	0	0	0
+559295	Lachancea thermotolerans CBS 6340	S1	1	0	1	1	6	6	other	1	observation	1	0	0	0
+571177	Desulfosarcina alkanivorans	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+572479	Halanaerobium praevalens DSM 2228	S1	1	0	1	1	1	1	other	1	observation	1	0	0	0
+573064	Methanocaldococcus fervens AG86	S1	1	0	1	1	3	3	other	1	observation	1	0	0	0
+573729	Thermothelomyces thermophilus ATCC 42464	S1	1	0	1	1	11	11	other	1	observation	1	0	0	0
+573826	Candida dubliniensis CD36	S1	1	0	1	3	17	5.667	other	1	observation	1	0	0	0
+574376	Bacillus manliponensis	S	0	1	0	1	2	2	other	1	observation	1	1	0	0
+574697	Butyricimonas	G	0	1	0	1	10	10	other	1	observation	1	1	0	0
+574964	Rahnella variigena	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+576926	Arthrobacter sp. A5	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+577386	Paraniabella yanshanensis	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+578920	Bradyrhizobium sp. STM 3557	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+582419	Thermococcus paralvinellae	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+589865	Desulfurivibrio alkaliphilus AHT 2	S1	1	0	1	1	2	2	other	1	observation	1	0	0	0
+604354	Thermococcus sibiricus MM 739	S1	0	1	0	1	4	4	other	1	observation	1	1	0	0
+619593	Acidianus sulfidivorans JP7	S1	0	1	0	1	3	3	other	1	observation	1	1	0	0
+626937	Christensenella minuta	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+627624	Nocardioides panacisoli	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+634121	Arsenophonus symbiont of Ornithomya chloropus	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+639200	Sphaerotilus sulfidivorans	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+639282	Deferribacter desulfuricans SSM1	S1	1	0	1	1	6	6	other	1	observation	1	0	0	0
+640132	Segniliparus rotundus DSM 44985	S1	1	0	1	1	3	3	other	1	observation	1	0	0	0
+643214	Mammaliicoccus stepanovicii	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+647221	Plasmodium gaboni	S	1	0	1	1	14	14	other	1	observation	1	0	0	0
+648800	Solibacillus	G	1	0	1	1	9	9	other	1	observation	1	0	0	0
+653045	Streptomyces violaceusniger Tu 4113	S1	1	0	1	2	3	1.5	other	1	observation	1	0	0	0
+656178	Pandoraea vervacti	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+660027	Fusarium oxysporum Fo47	S1	1	0	1	1	8	8	other	1	observation	1	0	0	0
+660470	Mesotoga prima MesG1.Ag.4.2	S1	1	0	1	1	3	3	other	1	observation	1	0	0	0
+666563	Aquimarina macrocephali	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+666685	Rhodanobacter denitrificans	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+666686	Bacillus sp. 1NLA3E	S	0	1	0	1	1	1	other	1	observation	1	1	0	0
+671077	Caldinitratiruptor microaerophilus	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+675635	Pseudonocardia benzenivorans CB1190	S1	1	0	1	1	8	8	other	1	observation	1	0	0	0
+679716	Trypanosoma brucei gambiense DAL972	S2	1	0	1	1	4	4	other	1	observation	1	0	0	0
+682956	Paenibacillus jilunlii	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+686309	Micromonospora haikouensis	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+689904	Tissierella carlieri	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+694327	Solidesulfovibrio carbinoliphilus subsp. oakridgensis	S1	1	0	1	1	1	1	other	1	observation	1	0	0	0
+704125	Clostridium gelidum	S	1	0	1	2	8	4	other	1	observation	1	0	0	0
+709878	Micromonospora vinacea	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+710111	Frankia sp. QA3	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+712357	Leptotrichia sp. oral taxon 212	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+714943	Mucilaginibacter paludis DSM 18603	S1	1	0	1	1	8	8	other	1	observation	1	0	0	0
+717610	Vibrio harveyi group	G1	1	0	1	1	43	43	other	1	observation	0	0	0	0
+742737	Hungatella hathewayi WAL-18680	S1	0	1	0	1	3	3	other	1	observation	1	1	0	0
+743009	Microbacterium oryzae	S	0	1	0	1	1	1	other	1	observation	1	1	0	0
+743971	Mesomycoplasma flocculare ATCC 27399	S1	1	0	1	1	1	1	other	1	observation	1	0	0	0
+745369	Acetoanaerobium noterae	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+754035	Mesorhizobium australicum WSM2073	S1	1	0	1	1	1	1	other	1	observation	1	0	0	0
+754397	Polaribacter sp. SA4-10	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+754476	Methylophaga nitratireducenticrescens	S	1	0	1	2	2	1	other	1	observation	1	0	0	0
+755307	Salinigranum rubrum	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+755731	Clostridium sp. BNL1100	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+758826	Acidovorax radicis	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+797291	Sphingobacterium lactis	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+859654	Candidatus Blochmanniella vafra str. BVAF	S1	1	0	1	1	1	1	other	1	observation	1	0	0	0
+860235	Kibdelosporangium phytohabitans	S	0	1	0	1	5	5	other	1	observation	1	1	0	0
+863575	Citricoccus nitrophenolicus	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+868864	Desulfurobacterium thermolithotrophum DSM 11699	S1	1	0	1	1	2	2	other	1	observation	1	0	0	0
+869250	Theileria orientalis strain Shintoku	S1	1	0	1	1	6	6	other	1	observation	1	0	0	0
+869816	Staphylococcus aureus subsp. aureus JKD6159	S1	1	0	1	1	1	1	other	1	observation	1	0	0	0
+869886	Halosimplex pelagicum	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+875171	Celeribacter baekdonensis	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+876851	Nitrospira calida	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+877500	Halarcobacter anaerophilus	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+880071	Bernardetia litoralis DSM 6794	S1	1	0	1	1	5	5	other	1	observation	1	0	0	0
+880724	Methanotorris igneus Kol 5	S1	0	1	0	1	2	2	other	1	observation	1	1	0	0
+881260	Enterobacter bugandensis	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+882083	Saccharomonospora marina XMU15	S1	1	0	1	1	5	5	other	1	observation	1	0	0	0
+882626	Pseudoalteromonas xiamenensis	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+886293	Singulisphaera acidiphila DSM 18658	S1	1	0	1	1	3	3	other	1	observation	1	0	0	0
+887464	Streptomyces laculatispora	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+889300	Nitratireductor aquimarinus	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+913109	Arcobacter ellisii	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+927083	Sandaracinus amylolyticus	S	1	0	1	1	7	7	other	1	observation	1	0	0	0
+930972	Porifericola rhodea	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+933801	Acidianus hospitalis W1	S1	0	1	0	1	1	1	other	1	observation	1	1	0	0
+935548	Mesorhizobium loti R88b	S1	0	1	0	1	3	3	other	1	observation	1	1	0	0
+938289	Levyella massiliensis	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+941986	Amycolatopsis bartoniae	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+979556	Microbacterium testaceum StLB037	S1	1	0	1	1	2	2	other	1	observation	1	0	0	0
+990078	Bradyrhizobium huanghuaihaiense	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+1004279	Mesorhizobium muleiense	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1008459	Taylorella asinigenitalis MCE3	S1	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1028752	Shewanella aestuarii	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1032243	Campylobacter californiensis	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+1032623	Otariodibacter oris	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+1036172	Aliarcobacter butzleri 7h1h	S1	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1036672	Advenella kashmirensis WT001	S1	1	0	1	1	2	2	other	1	observation	1	0	0	0
+1042133	Fusarium musae	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+1042156	Clostridium sp. SY8519	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+1045776	Kutzneria buriramensis	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+1050624	Synechococcus sp. A15-127	S	0	1	0	1	1	1	other	1	observation	1	1	0	0
+1054033	Arcobacter venerupis	S	1	0	1	1	7	7	other	1	observation	1	0	0	0
+1069201	Aspergillus luchuensis	S	1	0	1	1	17	17	other	1	observation	1	0	0	0
+1071378	Naumovozyma dairenensis CBS 421	S1	1	0	1	1	7	7	other	1	observation	1	0	0	0
+1071381	Tetrapisispora phaffii CBS 4417	S1	0	1	0	1	14	14	other	1	observation	1	1	0	0
+1071382	Kazachstania africana CBS 2517	S1	1	0	1	1	4	4	other	1	observation	1	0	0	0
+1076695	Halanaerobium sehlinense	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+1077946	Streptomyces hundungensis	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+1089553	Thermacetogenium phaeum DSM 12270	S1	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1117319	Pseudoalteromonas spongiae UST010723-006	S1	1	0	1	1	2	2	other	1	observation	1	0	0	0
+1123366	Thalassospira xiamenensis M-5 = DSM 17429	S1	0	1	0	1	2	2	other	1	observation	1	1	0	0
+1128398	Gottschalkia acidurici 9a	S1	1	0	1	1	4	4	other	1	observation	1	0	0	0
+1129704	Kyrpidia	G	1	0	1	1	2	2	other	1	observation	1	0	0	0
+1133849	Nocardia brasiliensis ATCC 700358	S1	0	1	0	1	2	2	other	1	observation	1	1	0	0
+1142394	Phycisphaera mikurensis NBRC 102666	S1	1	0	1	1	3	3	other	1	observation	1	0	0	0
+1144275	Corallococcus coralloides DSM 2259	S1	0	1	0	1	3	3	other	1	observation	1	1	0	0
+1144748	Kangiella sediminilitoris	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+1144750	Olleya namhaensis	S	0	1	0	1	1	1	other	1	observation	1	1	0	0
+1146883	Blastococcus saxobsidens DD2	S1	1	0	1	1	4	4	other	1	observation	1	0	0	0
+1148196	Luteimonas dalianensis	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+1157708	Variovorax atrisoli 110B	S1	1	0	1	1	3	3	other	1	observation	1	0	0	0
+1158459	Kosakonia sacchari	S	1	0	1	3	2	0.6667	other	1	observation	1	0	0	0
+1165090	Imtechella halotolerans	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+1168034	Draconibacterium orientale	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+1169025	Streptomyces pratensis	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+1173022	Crinalium epipsammum PCC 9333	S1	1	0	1	1	4	4	other	1	observation	1	0	0	0
+1173027	Allocoleopsis franciscana PCC 7113	S1	1	0	1	2	1	0.5	other	1	observation	1	0	0	0
+1176239	Halobacillus andaensis	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+1183400	Agrobacterium tumefaciens complex	G1	1	0	1	1	27	27	other	1	observation	0	0	0	0
+1183413	Agrobacterium salinitolerans	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1184151	Termitidicoccus mucosus	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+1185653	Planococcus antarcticus DSM 14505	S1	1	0	1	1	2	2	other	1	observation	1	0	0	0
+1188315	Streptomyces sp. AgN23	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1191523	Melioribacter roseus P3M-2	S1	1	0	1	1	2	2	other	1	observation	1	0	0	0
+1212491	Legionella fallonii LLAP-10	S1	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1214101	Streptomyces davaonensis JCM 4913	S1	1	0	1	1	3	3	other	1	observation	1	0	0	0
+1220207	Aspergillus puulaauensis	S	1	0	1	1	11	11	other	1	observation	1	0	0	0
+1221500	Fictibacillus phosphorivorans	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+1224163	Corynebacterium maris DSM 45190	S1	1	0	1	1	2	2	other	1	observation	1	0	0	0
+1226752	Mycolicibacterium holsaticum DSM 44478 = JCM 12374	S1	1	0	1	1	2	2	other	1	observation	1	0	0	0
+1226757	Streptomyces rapamycinicus	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+1228987	cyanobacterium endosymbiont of Epithemia turgida isolate EtSB Lake Yunoko	S1	1	0	1	1	3	3	other	1	observation	1	0	0	0
+1229727	Salipiger profundus	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+1233113	Niveispirillum fermenti	S	0	1	0	1	4	4	other	1	observation	1	1	0	0
+1237085	Candidatus Nitrososphaera gargensis Ga9.2	S1	1	0	1	1	2	2	other	1	observation	1	0	0	0
+1245417	Paraburkholderia strydomiana	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+1247613	Pseudooceanicola antarcticus	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1260629	Proteinivorax tanatarense	S	1	0	1	1	7	7	other	1	observation	1	0	0	0
+1268072	Paenibacillus sabinae T27	S1	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1276246	Spiroplasma culicicola AES-1	S1	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1276257	Spiroplasma sabaudiense Ar-1343	S1	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1278073	Myxococcus stipitatus DSM 14675	S1	1	0	1	1	5	5	other	1	observation	1	0	0	0
+1278232	Keratinibaculum paraultunense	S	0	1	0	1	4	4	other	1	observation	1	1	0	0
+1286698	Crassaminicella profunda	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+1287055	Brachyspira hampsonii	S	0	1	0	1	2	2	other	1	observation	1	1	0	0
+1287736	Achromobacter aegrifaciens	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+1288494	Nitrosospira lacus	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1295531	Cryptococcus depauperatus CBS 7841	S1	1	0	1	1	6	6	other	1	observation	1	0	0	0
+1300225	Agrobacterium tumefaciens WRT31	S1	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1302235	Arcanobacterium phocisimile	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+1314869	Pseudoalteromonas espejiana DSM 9414	S1	1	0	1	2	3	1.5	other	1	observation	1	0	0	0
+1315211	Arcobacter aquimarinus	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+1322246	Pseudodesulfovibrio piezophilus C1TLV30	S1	1	0	1	1	5	5	other	1	observation	1	0	0	0
+1323948	Nitrospina watsonii	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+1325120	Bradyrhizobium sp. CCBAU 53421	S	0	1	0	1	2	2	other	1	observation	1	1	0	0
+1330545	Lelliottia	G	1	0	1	1	3	3	other	1	observation	1	0	0	0
+1333528	Streptomyces sp. GMY02	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+1334193	[Enterobacter] lignolyticus	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1336802	Nonlabens sp. Hel1_33_55	S	0	1	0	1	2	2	other	1	observation	1	1	0	0
+1336804	Polaribacter sp. Hel1_33_78	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+1345115	Candidatus Hartigia pinicola	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1353260	Candidatus Nitrosocosmicus oleophilus	S	0	1	0	1	2	2	other	1	observation	1	1	0	0
+1354726	Polaribacter huanghezhanensis	S	0	1	0	1	4	4	other	1	observation	1	1	0	0
+1355477	Bradyrhizobium diazoefficiens	S	1	0	1	1	9	9	other	1	observation	1	0	0	0
+1357916	Sphingopyxis sp. QXT-31	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1358027	Limosilactobacillus reuteri TD1	S1	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1380432	Halorhabdus sp. CBA1104	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+1380685	Kroppenstedtia pulmonis	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1387557	Anaerocellum danielii	S	0	1	0	1	2	2	other	1	observation	1	1	0	0
+1388755	Candidatus Pelagibacter sp. HIMB1321	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1390384	Lacticaseibacillus rhamnosus L34	S1	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1399968	Paraburkholderia monticola	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+1404429	Bradyrhizobium sp. 2S1	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1408159	Pseudothermotoga caldifontis AZM44c09	S1	1	0	1	1	2	2	other	1	observation	1	0	0	0
+1408281	Endomicrobium proavitum	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+1416806	Bordetella genomosp. 8	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+1423913	Kwoniella europaea PYCC6329	S1	1	0	1	1	13	13	other	1	observation	1	0	0	0
+1424294	Geosporobacter ferrireducens	S	1	0	1	1	7	7	other	1	observation	1	0	0	0
+1434072	Halopseudomonas salegens	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+1434103	Methanosarcina sp. WWM596	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1434110	Methanosarcina horonobensis HB-1 = JCM 15518	S1	1	0	1	1	4	4	other	1	observation	1	0	0	0
+1434119	Methanosarcina siciliae HI350	S1	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1437360	Bradyrhizobium erythrophlei	S	1	0	1	2	6	3	other	1	observation	1	0	0	0
+1445607	Bacteroides reticulotermitis JCM 10512	S1	1	0	1	1	4	4	other	1	observation	1	0	0	0
+1449976	Kutzneria viridogrisea DSM 43870	S1	1	0	1	1	4	4	other	1	observation	1	0	0	0
+1452353	Methanosphaera sp. ISO3-F5	S	1	0	1	1	9	9	other	1	observation	1	0	0	0
+1453429	Candidatus Atelocyanobacterium thalassa isolate ALOHA	S1	1	0	1	1	2	2	other	1	observation	1	0	0	0
+1460447	Terrisporobacter petrolearius	S	0	1	0	1	15	15	other	1	observation	1	1	0	0
+1472417	Butyricimonas paravirosa	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+1486034	Lacinutrix venerupis	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+1493509	Synechococcus phage ACG-2014d	S1	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1497974	Georgenia sp. SUBG003	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+1499683	Clostridium culturomicium	S	0	1	0	1	2	2	other	1	observation	1	1	0	0
+1503041	Arcanobacterium pinnipediorum	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1507512	Romboutsia hominis	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+1514904	Ahrensia marina	S	0	1	0	1	2	2	other	1	observation	1	1	0	0
+1522312	Kingella negevensis	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1522432	Pseudoduganella	G	1	0	1	1	30	30	other	1	observation	0	0	0	0
+1524259	Aliisedimentitalea scapharcae	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1530123	Acinetobacter seifertii	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+1532552	Anaerobacillus isosaccharinicus	S	0	1	0	1	5	5	other	1	observation	1	1	0	0
+1535768	Streptomyces lunaelactis	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+1539056	Halotia branconii CENA392	S1	1	0	1	1	3	3	other	1	observation	1	0	0	0
+1561022	Streptomyces sp. CCM_MD2014	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+1562256	Candidatus Kurthia intestinigallinarum	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+1564165	Blastococcus brunescens	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+1570009	Prochlorococcus marinus str. MIT 0912	S1	1	0	1	1	2	2	other	1	observation	1	0	0	0
+1572644	Microbacterium proteolyticum	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+1572712	Geobacillus virus E3	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1574161	Proteus terrae	S	0	1	0	1	4	4	other	1	observation	1	1	0	0
+1580590	Leishmania martiniquensis	S	1	0	1	1	22	22	other	1	observation	0	0	0	0
+1581038	Bacillus sp. FJAT-22090	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+1588641	Subtercola lobariae	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+1597781	Eleftheria terrae	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+1608473	Acinetobacter sp. NCu2D-2	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+1610832	Bacillus phage Stahl	S1	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1612150	Mycoplasma tullyi	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+1615494	Mixta intestinalis	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+1615909	Geminocystis sp. NIES-3708	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+1619153	Cohnella sp. LGH	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+1632018	Pampinifervens diazotrophicum	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1639133	Citrobacter portucalensis	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+1643685	Borreliaceae	F	1	0	1	1	60	60	other	1	observation	0	0	0	0
+1648182	Streptomyces yangpuensis	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+1665476	Enterococcus bulliens	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+1670831	Egibacter rhizosphaerae	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1679096	Halococcoides cellulosivorans	S	0	1	0	1	3	3	other	1	observation	1	1	0	0
+1689272	Vitreoscilla massiliensis	S	0	1	0	2	2	1	other	1	observation	1	1	0	0
+1691904	Pseudomonas sediminis	S	0	1	0	1	1	1	other	1	observation	1	1	0	0
+1698420	Mycobacterium phage Tasp14	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1702103	Halomicrococcus gelatinilyticus	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+1702238	Clostridium sp. MF28	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1704044	Arthrobacter sp. ERGS1:01	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1714849	Aquimarina sp. AD10	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+1715720	Diaphorobacter ruginosibacter	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+1716143	Pseudodesulfovibrio indicus	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+1716543	Clostridium thermarum	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1717717	Labilibaculum antarcticum	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+1721091	Chryseobacterium sp. IHB B 17019	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+1723361	Wukongibacter baidiensis	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+1737425	Corynebacterium provencense	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+1745854	Ancylobacter pratisalsi	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+1751056	Flavobacterium ammonificans	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+1751095	Flavobacterium ammoniigenes	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+1756150	Elizabethkingia ursingii	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1760811	uncultured Acetobacteroides sp.	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+1763363	cyanobacterium endosymbiont of Rhopalodia gibberula	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+1775910	Methylobacterium indicum	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+1778540	Dickeya fangzhongdai	S	1	0	1	2	5	2.5	other	1	observation	1	0	0	0
+1778678	Paenibacillus psychroresistens	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+1784714	Arcticibacterium luteifluviistationis	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+1796644	Rodentibacter caecimuris	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+1798225	Formosa sp. Hel1_31_208	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+1813871	Panacibacter ginsenosidivorans	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+1813879	Sphingomonas panacisoli	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+1815583	Neisseria musculi	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+1842727	Rhodoferax koreensis	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+1848399	Crassaminicella	G	0	1	0	1	16	16	other	1	observation	1	1	0	0
+1849967	Streptomyces sp. SAT1	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+1852027	Roseovarius confluentis	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+1852365	Fusobacterium massiliense	S	0	1	0	1	3	3	other	1	observation	1	1	0	0
+1855352	Streptomyces sp. TLI_053	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+1855610	Polynucleobacter sp. MWH-UH19D	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1855823	Macrococcoides canis	S	1	0	1	2	7	3.5	other	1	observation	1	0	0	0
+1855912	Luteitalea pratensis	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+1866885	Mycolicibacterium	G	1	0	1	1	143	143	other	1	observation	0	0	0	0
+1868589	Phreatobacter cathodiphilus	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+1871049	Pseudoxanthomonas sp.	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1871053	Phenylobacterium sp.	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+1873716	Hyphomonas sp. CACIAM 19H1	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1874630	Clavibacter capsici	S	1	0	1	2	3	1.5	other	1	observation	1	0	0	0
+1881017	Pseudomonas sp. 7SR1	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+1882438	Mucilaginibacter sp.	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+1882682	Microvirga ossetica	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+1891926	Fuerstiella marisgermanici	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+1896164	Luteimonas sp. JM171	S	0	1	0	1	2	2	other	1	observation	1	1	0	0
+1896175	Polaribacter sp. KT 15	S	0	1	0	1	1	1	other	1	observation	1	1	0	0
+1897729	Halomonas aestuarii	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1903276	Candidatus Nitrosotalea okcheonensis	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+1904616	Streptomyces fodineus	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+1905730	Pectobacterium parmentieri	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+1910952	Gequatrovirus	G	0	1	0	1	4	4	other	1	observation	1	1	0	0
+1914461	Micromonospora terminaliae	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+1917215	Ferrovibrio sp.	S	0	1	0	1	3	3	other	1	observation	1	1	0	0
+1920191	Delftia sp. HK171	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1922217	Candidatus Erwinia haradaeae	S	0	1	0	1	10	10	other	1	observation	1	1	0	0
+1929246	Sodalis endosymbiont of Henestaris halophilus	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+1929291	Reyranella sp.	S	1	0	1	1	14	14	other	1	observation	1	0	0	0
+1933904	Bartonella sp. WD16.2	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+1936081	Seonamhaeicola sp. S2-3	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+1936156	Roseibium sp.	S	1	0	1	1	16	16	other	1	observation	1	0	0	0
+1938605	Brevundimonas sp. LM2	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+1965332	Kordia sp.	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+1965571	Erysipelatoclostridium sp. An173	S	0	1	0	1	3	3	other	1	observation	1	1	0	0
+1965590	Barnesiella sp. An22	S	0	1	0	1	1	1	other	1	observation	1	1	0	0
+1968788	Mycolicibacterium sp. CBMA 213	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1968839	Thermoflavifilum sp.	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1971364	Halomonas sp. GT	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1971397	Roseateles sp.	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+1979401	Thalassovita sp.	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+2010828	Aquipluma nitroreducens	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+2015348	Burkholderia aenigmatica	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2016596	Nitrogeniibacter mangrovi	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2020875	Methyloprofundus sp.	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2023057	Orpheovirus IHUMI-LCC2	S1	0	1	0	1	1	1	other	1	observation	1	1	0	0
+2023772	Paenibacillus sp. RUD330	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2024263	Agrobacterium phage Atu_ph04	S1	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2024608	Bodo saltans virus	S1	1	0	1	1	6	6	other	1	observation	1	0	0	0
+2024842	Nisaea sp.	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2026189	Bacillus albus	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2026190	Bacillus mobilis	S	0	1	0	1	2	2	other	1	observation	1	1	0	0
+2027405	Azoarcus sp. DD4	S	0	1	0	1	3	3	other	1	observation	1	1	0	0
+2027860	Mucilaginibacter rubeus	S	0	1	0	1	3	3	other	1	observation	1	1	0	0
+2035858	uncultured Pseudodesulfovibrio sp.	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2044521	Natrarchaeobaculum sulfurireducens	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2047744	Nonomuraea glycinis	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2048005	Shigella phage vB_SflS-ISF001	S1	0	1	0	1	1	1	other	1	observation	1	1	0	0
+2048283	Thalassospira marina	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2052660	Oceanobacillus zhaokaii	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2054227	Sphingopyxis lindanitolerans	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2058137	Polaribacter sp. ALD11	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2058152	Klebsiella grimontii	S	1	0	1	3	3	1	other	1	observation	1	0	0	0
+2058175	Antarcticibacterium flavum	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2060722	Labilibaculum	G	1	0	1	1	7	7	other	1	observation	1	0	0	0
+2065036	Torque teno mini virus 10	S1	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2067992	Methylibium sp.	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2070347	Agrococcus sp. SGAir0287	S	0	1	0	1	1	1	other	1	observation	1	1	0	0
+2072413	Stenotrophomonas sp. SAU14A_NAIMI4_5	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2080419	Deinococcus sp. NW-56	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2080742	Agromyces badenianii	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2107707	Pandoravirus macleodensis	S	0	1	0	1	3	3	other	1	observation	1	1	0	0
+2109558	Halobacteriovorax sp. BALOs_7	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2109914	Ottowia oryzae	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+2126011	Lentzea soli	S	0	1	0	1	6	6	other	1	observation	1	1	0	0
+2126352	Brevibacillus fortis	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2126436	Carnobacterium antarcticum	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2136401	Streptomyces sp. YIM 121038	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2152891	Paraburkholderia bonniea	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2164067	Algihabitans albus	S	0	1	0	1	3	3	other	1	observation	1	1	0	0
+2175091	Flavobacterium album	S	0	1	0	1	3	3	other	1	observation	1	1	0	0
+2175648	Curtobacterium sp. MCLR17_007	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2182432	Sediminicurvatus halobius	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2220073	Bdellovibrio sp. NC01	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2230878	Candidatus Enterococcus mangumiae	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2250578	Streptomyces reniochalinae	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+2282170	Kordia sp. SMS9	S	1	0	1	1	7	7	other	1	observation	1	0	0	0
+2283031	Dickeya phage vB_DsoM_JA29	S1	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2283270	Caulobacter phage CcrBL9	S1	0	1	0	1	2	2	other	1	observation	1	1	0	0
+2283408	Colletotrichum jinshuiense	S	1	0	1	2	19	9.5	other	1	observation	1	0	0	0
+2293567	Methylovirgula sp. 4M-Z18	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2305508	Mucilaginibacter celer	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+2315449	Yamadazyma tenuis	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+2316020	Mediterraneibacter	G	1	0	1	1	16	16	other	1	observation	1	0	0	0
+2316085	Pseudomonas bubulae	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2316736	Corallococcus exercitus	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+2321403	Chryseolinea soli	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2338073	Serratia inhibens	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+2339259	Yersinia hibernica	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2483110	Clostridium sp. JN-1	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+2483404	Mesorhizobium sp. NZP2077	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2486578	Rickettsiales endosymbiont of Stachyamoeba lipophora	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2487063	Chryseobacterium sp. G0162	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+2487064	Chryseobacterium sp. G0186	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+2487072	Epilithonimonas vandammei	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2487742	Shewanella psychromarinicola	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2493668	Mesorhizobium sp. M9A.F.Ca.ET.002.03.1.2	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+2494373	Flammeovirga pectinis	S	0	1	0	1	7	7	other	1	observation	1	1	0	0
+2496865	Maribacter sp. MJ134	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2507538	Muriicola soli	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2508687	Candidatus Thioglobus sp. NP1	S	1	0	1	4	1	0.25	other	1	observation	1	0	0	0
+2508882	Ornithinimicrobium sufpigmenti	S	0	1	0	1	3	3	other	1	observation	1	1	0	0
+2511995	Pseudolysobacter antarcticus	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2518370	Nocardioides euryhalodurans	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2518599	Pandoraea sp. XY-2	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2527963	Stieleria magnilauensis	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+2527973	Gimesia alba	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2527974	Tautonia plasticadhaerens	S	1	0	1	1	8	8	other	1	observation	1	0	0	0
+2527983	Caulifigura coniformis	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2528011	Engelhardtia mirabilis	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2529032	Oceanihabitans sp. IOP_32	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2545709	Schizosaccharomyces osmophilus	S	1	0	1	1	10	10	other	1	observation	1	0	0	0
+2546351	Thermaerobacter sp. FW80	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2562437	Arboribacterium acericorticis	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2562892	Myroides albus	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+2565368	Pseudomonas atacamensis	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2565556	Sphingopyxis sp. PAMC25046	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2571148	Chitiniphilus eburneus	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2576756	Caproicibacter fermentans	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2579935	Jejuibacter calystegiae	S	0	1	0	1	1	1	other	1	observation	1	1	0	0
+2583243	Micromonospora sp. HM134	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2583452	Amedibacterium intestinale	S	1	0	1	1	7	7	other	1	observation	1	0	0	0
+2583823	Salidesulfovibrio onnuriiensis	S	0	1	0	1	1	1	other	1	observation	1	1	0	0
+2583851	Elizabethkingia sp. JS20170427COW	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2585117	Alistipes onderdonkii subsp. vulgaris	S1	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2585118	Alistipes communis	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2587852	Roseivivax sp. THAF30	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2588536	Candidatus Methylopumilus universalis	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+2589074	Nocardioides sambongensis	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+2590012	Lysinibacillus agricola	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2590775	Pseudarthrobacter sp. NIBRBAC000502772	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2591463	Brevundimonas sp. M20	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2592814	Tardiphaga sp. vice154	S	0	1	0	1	1	1	other	1	observation	1	1	0	0
+2594004	Formosa sediminum	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2594042	Promethearchaeum syntrophicum	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+2596890	Candidatus Uabimicrobium amorphum	S	1	0	1	1	7	7	other	1	observation	1	0	0	0
+2597769	Geobacter sp. FeAm09	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+2597771	Fischerella sp. JS2	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+2599308	Crassaminicella thermophila	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+2600177	Allomicrovenator marinus	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2608089	Ekhidna sp.	S	1	0	1	1	8	8	other	1	observation	1	0	0	0
+2608891	unclassified Enterococcus	G1	1	0	1	1	35	35	other	1	observation	0	0	0	0
+2608897	unclassified Bifidobacterium	G1	1	0	1	1	10	10	other	1	observation	1	0	0	0
+2609290	unclassified Microbacterium	G1	1	0	1	1	79	79	other	1	observation	0	0	0	0
+2609415	Cobetia sp. cqz5-12	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+2609813	Candidatus Phytoplasma sacchari	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2613773	Sinorhizobium sp. BG8	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2618356	unclassified Amycolatopsis	G1	0	1	0	2	63	31.5	other	1	observation	0	1	0	0
+2626047	unclassified Synechococcus	G1	1	0	1	2	53	26.5	other	1	observation	0	0	0	0
+2627481	unclassified Prochlorococcus	G1	1	0	1	1	21	21	other	1	observation	0	0	0	0
+2629676	unclassified Stappia	G1	1	0	1	1	11	11	other	1	observation	1	0	0	0
+2630820	unclassified Apibacter	G1	1	0	1	1	5	5	other	1	observation	1	0	0	0
+2632669	unclassified Streptosporangium	G1	1	0	1	1	26	26	other	1	observation	0	0	0	0
+2635139	unclassified Tenacibaculum	G1	0	1	0	1	35	35	other	1	observation	0	1	0	0
+2635362	unclassified Lysobacter	G1	1	0	1	1	9	9	other	1	observation	1	0	0	0
+2635829	unclassified Clostridioides	G1	1	0	1	1	17	17	other	1	observation	1	0	0	0
+2640676	unclassified Wolbachia	G1	0	1	0	1	29	29	other	1	observation	0	1	0	0
+2644121	unclassified Kribbella	G1	1	0	1	1	55	55	other	1	observation	0	0	0	0
+2644732	unclassified Novosphingobium	G1	1	0	1	1	52	52	other	1	observation	0	0	0	0
+2647129	unclassified Bernardetia	G1	1	0	1	1	18	18	other	1	observation	1	0	0	0
+2647581	unclassified Blattabacterium	G1	0	1	0	1	4	4	other	1	observation	1	1	0	0
+2650157	Bacteroides zhangwenhongii	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+2651167	Ignavibacterium sp.	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+2653852	Rubrobacter marinus	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2653858	Desulfopila sp. IMCC35008	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2654191	Cellulomonas sp. JZ18	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+2660638	Citrobacter sp. S39	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2661800	Georhizobium	G	1	0	1	2	3	1.5	other	1	observation	1	0	0	0
+2662028	Aeromicrobium yanjiei	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2662262	Vibrio algicola	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2662364	Sphingobacterium zhuxiongii	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2663009	Fusobacterium pseudoperiodonticum	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+2663019	Saccharolobus sp. E5-1-F	S	0	1	0	1	1	1	other	1	observation	1	1	0	0
+2665643	Gordonia mangrovi	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2665914	Ulvibacterium sp.	S	1	0	1	1	7	7	other	1	observation	1	0	0	0
+2675233	Metabacillus	G	1	0	1	1	46	46	other	1	observation	0	0	0	0
+2675523	Mycobacterium sp. DL440	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2675772	Enterobacteriaceae endosymbiont of Donacia bicoloricornis	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2675878	Hymenobacter sp. BRD128	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2683196	Pigmentibacter ruber	S	1	0	1	1	7	7	other	1	observation	1	0	0	0
+2684468	Streptomyces sp. QHH-9511	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2686357	Labilibaculum euxinicum	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2692134	Spirosoma aureum	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2696063	Anaerocolumna sedimenticola	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+2697032	Xylophilus rhododendri	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2699430	Caldichromatium japonicum	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2703787	Chitinophaga agri	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2708338	Ruicaihuangia jiafui	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+2712223	Nocardioides anomalus	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2714926	Dysgonomonas sp. HDW5A	S	0	1	0	1	3	3	other	1	observation	1	1	0	0
+2714930	Erysipelothrix sp. HDW6C	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2714937	Propioniciclava coleopterorum	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2714938	Nocardioides piscis	S	0	1	0	1	2	2	other	1	observation	1	1	0	0
+2716225	Hydrogenophaga crocea	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2718938	Phyllobacterium sp. 628	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+2720871	Aspergillus subgen. Circumdati	G1	0	1	0	2	34	17	other	1	observation	0	1	0	0
+2723091	Mucilaginibacter saanensis	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2724914	Leifsonia sp. PS1209	S	1	0	1	3	3	1	other	1	observation	1	0	0	0
+2725288	Pseudodesulfovibrio sp. zrk46	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2725666	Terribium terrae	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2726954	Candidatus Sarcina troglodytae	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2728827	Catellatospora sp. IY07-71	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+2729725	Rhodococcus sp. KRD162	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2731360	Heunggongvirae	K	0	1	0	0	5810		other	1	observation	0	1	0	0
+2732864	Modestobacter italicus	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2735563	Thiothrix subterranea	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2741070	Pendulispora rubella	S	1	0	1	1	8	8	other	1	observation	1	0	0	0
+2741720	Rhodoferax sp. BAB1	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2742131	Amycolatopsis sp. Hca4	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2742204	Methyloligella sp. GL2	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2744515	Mesorhizobium sp. 113-1-2	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2745482	Pseudomonas kermanshahensis	S	0	1	0	1	3	3	other	1	observation	1	1	0	0
+2745495	Pseudomonas vanderleydeniana	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2745560	Olleya sp. HaHaR_3_96	S	0	1	0	1	3	3	other	1	observation	1	1	0	0
+2746932	Shewanella sp. MTB7	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2749049	Gardnerella bivia	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2751179	Vibrio sp. B1REV9	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2758563	Paenibacillus sp. 19GGS1-52	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2759045	Annamia dubia NIES-4383	S1	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2760705	Nocardioides sp. InS609-2	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2762577	Pseudomonas kielensis	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2763006	Streptomyces buecherae	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2763023	Bacteroides hominis	S	1	0	1	1	7	7	other	1	observation	1	0	0	0
+2763107	Alloacidobacterium dinghuense	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+2764325	Hoskinsella hominis	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+2766984	Pedobacter riviphilus	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+2768069	Streptomyces xanthii	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+2768071	Clavibacter zhangzhiyongii	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2768829	Longinema margulisiae	S	0	1	0	1	2	2	other	1	observation	1	1	0	0
+2774137	Devosia rhizoryzae	S	1	0	1	2	1	0.5	other	1	observation	1	0	0	0
+2774633	Enterococcus sp. DIV0876	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2774684	Enterococcus sp. DIV2379	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2774711	Enterococcus sp. DIV1368b	S	0	1	0	1	1	1	other	1	observation	1	1	0	0
+2775080	Aestuariispira ectoiniformans	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2777186	Psychroflexus sp. ALD_RP9	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2778476	Anthocerotibacter panamensis C109	S1	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2779352	Pseudoflavonifractor gallinarum	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+2779359	Zunongwangia sp. SCSIO 43204	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2782176	Orrella daihaiensis	S	0	1	0	1	3	3	other	1	observation	1	1	0	0
+2785627	Azospira inquinata	S	1	0	1	2	3	1.5	other	1	observation	1	0	0	0
+2785785	Methylomonas sp. LL1	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2792603	Acidihalobacter aeolianus	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2795000	Maridesulfovibrio sp.	S	1	0	1	1	15	15	other	1	observation	1	0	0	0
+2799564	Pseudoalteromonas sp. LC2018020214	S	1	0	1	2	1	0.5	other	1	observation	1	0	0	0
+2800818	Brevundimonas vitis	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2802641	Kutzneria sp. CA-103260	S	1	0	1	2	7	3.5	other	1	observation	1	0	0	0
+2806551	Polaribacter sp. Q13	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2808963	Arcobacteraceae	F	1	0	1	1	188	188	other	1	observation	0	0	0	0
+2809031	Marinitoga aeolica	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2810514	Sporosarcina sp. Marseille-Q4063	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2811091	Cotonvirus japonicus	S1	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2812896	Leptolyngbya sp. 7M	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2815296	Jejuibacter	G	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2815577	Alkalibacter rhizosphaerae	S	0	1	0	1	1	1	other	1	observation	1	1	0	0
+2816908	Sedimentibacter sp. zth1	S	1	0	1	1	9	9	other	1	observation	1	0	0	0
+2816950	Ottowia testudinis	S	0	1	0	1	2	2	other	1	observation	1	1	0	0
+2818388	Sulfidibacter corallicola	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2819101	Vibrio sp. SCSIO 43136	S	1	0	1	2	3	1.5	other	1	observation	1	0	0	0
+2820280	Sphingosinicellaceae	F	1	0	1	1	18	18	other	1	observation	1	0	0	0
+2820661	Candidatus Arcticimaribacter forsetii	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2821832	Stappiaceae	F	1	0	1	1	62	62	other	1	observation	0	0	0	0
+2822844	Ferrimonas sp. SCSIO 43195	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2825844	Streptomyces sp. Go40/10	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+2837508	Rossellomorea	G	1	0	1	1	13	13	other	1	observation	1	0	0	0
+2840457	Nocardioides sp. LMS-CY	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2843195	Bordetella sp. LUAb4	S	1	0	1	4	4	1	other	1	observation	1	0	0	0
+2845819	Flavobacterium sp. CECT 9288	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2851649	Microbacterium sufflavum	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+2855394	Crassaminicella indica	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+2855836	Streptomyces sp. WY228	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2856555	Micrococcus porci	S	0	1	0	1	2	2	other	1	observation	1	1	0	0
+2861776	Novosphingobium sp. NFX11	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2862456	Thermus brevis	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2862869	Horticoccus luteus	S	0	1	0	1	1	1	other	1	observation	1	1	0	0
+2864102	Pseudochrobactrum sp. Wa41.01b-1	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2865112	Agrilutibacter terrestris	S	0	1	0	1	3	3	other	1	observation	1	1	0	0
+2865833	Pseudonocardia sp. DSM 110487	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+2867011	Jannaschia sp. M317	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2870339	Ottowia caeni	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2870839	Flavobacterium agricola	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2871169	Stenotrophomonas forensis	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2872154	Nocardioides coralli	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2872646	Caenibius sp. WL	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2874846	Candidatus Methanoliparum sp. LAM-1	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+2875540	Ferruginibacter albus	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2875706	Streptomyces gobiensis	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+2875764	Macrococcus armenti	S	0	1	0	1	2	2	other	1	observation	1	1	0	0
+2879149	Lactococcus sp. NH2-7C	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2880221	Mesobacillus sp. S13	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2881234	Abyssibius alkaniclasticus	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2885764	Globicatella sp. PHS-GS-PNBC-21-1553	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2886936	Arthrobacter zhangbolii	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2890314	Erysipelothrix enhydrae	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2893883	Flavobacterium acetivorans	S	1	0	1	2	6	3	other	1	observation	1	0	0	0
+2894790	Bacillus phage vB_BanS_Sophrita	S1	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2895286	Pedobacter mucosus	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+2895565	Nocardioides sp. B-3	S	0	1	0	1	3	3	other	1	observation	1	1	0	0
+2895946	Paenibacillus sp. MMS20-IR301	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2896848	Yinghuangia sp. ASG 101	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2897772	Thauera sp. WB-2	S	1	0	1	2	4	2	other	1	observation	1	0	0	0
+2897773	Ruania halotolerans	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2899133	Candidatus Nanosynbacter sp. HMT-352	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2901381	Cytobacillus spongiae	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2902623	Halobacterium wangiae	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2903582	Lentzea sp. NBC_00516	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2903640	Streptomyces sp. NBC_00239	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+2903672	Streptomyces sp. NBC_00696	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2903680	Streptomyces sp. NBC_00838	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+2903686	Streptomyces sp. NBC_00872	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2903705	Streptomyces sp. NBC_00989	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2903764	Streptomyces sp. NBC_01185	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2903778	Streptomyces sp. NBC_01216	S	0	1	0	1	1	1	other	1	observation	1	1	0	0
+2903779	Streptomyces sp. NBC_01217	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+2903797	Streptomyces sp. NBC_01244	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2903798	Streptomyces sp. NBC_01255	S	1	0	1	4	7	1.75	other	1	observation	1	0	0	0
+2903833	Streptomyces sp. NBC_01351	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2903871	Streptomyces sp. NBC_01450	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2903881	Streptomyces sp. NBC_01476	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+2903891	Streptomyces sp. NBC_01518	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2903896	Streptomyces sp. NBC_01537	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2904790	Cellulomonas sp. S1-8	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2906078	Flavobacterium oreochromis	S	1	0	1	2	6	3	other	1	observation	1	0	0	0
+2906777	Halobacterium sp. CBA1161	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2907156	Pseudoalteromonas sp. N1230-9	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2908837	Mycolicibacterium sp. YH-1	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+2908839	Paenibacillus hexagrammi	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+2909588	Microbacterium sp. KUDC0406	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2914041	Nostoc sp. UHCC 0870	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+2914710	Sphaerotilus microaerophilus	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+2915619	Flagellimonas aurea	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2916754	Flaviramulus sp. BrNp1-15	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2917724	Nocardioides sp. TF02-7	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2918516	Endozoicomonas sp. SCSIO W0465	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2920380	Vagococcus luciliae	S	1	0	1	2	3	1.5	other	1	observation	1	0	0	0
+2921495	Paenibacillus sp. FSL K6-3182	S	0	1	0	1	3	3	other	1	observation	1	1	0	0
+2921556	Sporosarcina sp. FSL K6-2383	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2921704	Chryseomicrobium sp. FSL W7-1435	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2925782	Tepidibacter aestuarii	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2926399	Alkalihalobacillus sp. AL-G	S	0	1	0	1	2	2	other	1	observation	1	1	0	0
+2926907	Abyssalbus ytuae	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+2929481	Staphylococcus sp. IVB6181	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2931983	Streptomyces sp. LRE541	S	0	1	0	1	2	2	other	1	observation	1	1	0	0
+2932250	Hymenobacter sp. 5317J-9	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2932255	Gracilibacillus salinarum	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2932259	Halobacillus amylolyticus	S	0	1	0	1	4	4	other	1	observation	1	1	0	0
+2936799	Providencia sp. PROV252	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2937769	Psychrobacter sp. ANT206	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2937774	Prevotella sp. E15-22	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2937880	Pseudomonas sp. SA233	S	0	1	0	1	1	1	other	1	observation	1	1	0	0
+2944914	Allocoprobacillus halotolerans	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2950108	Sneathiella marina	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2952571	Chitinophaga sp. HK235	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2954535	Paenibacillus sp. FSL R7-0345	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+2954655	Anoxybacillus sp. FSL W8-1294	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2954661	Paenibacillus sp. FSL R10-2782	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2954706	Aeribacillus sp. FSL W8-0870	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2961520	Arcobacter roscoffensis	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+2961598	Natrinema marinum	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2962632	Cellulomonas electrica	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2969308	Pseudoxanthomonas sp. JBR18	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2971264	Citrobacter enshiensis	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2974552	Pseudomonas sp. GCEP-101	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2975699	Streptomyces sp. NBC_00280	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2975700	Streptomyces sp. NBC_00285	S	0	1	0	5	4	0.8	other	1	observation	1	1	0	0
+2975712	Streptomyces sp. NBC_00322	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2975718	Streptomyces sp. NBC_00342	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2975723	Streptomyces sp. NBC_00354	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2975735	Streptomyces sp. NBC_00388	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2975740	Streptomyces sp. NBC_00425	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2975801	Streptomyces sp. NBC_00663	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+2975842	Streptomyces sp. NBC_00820	S	0	1	0	1	4	4	other	1	observation	1	1	0	0
+2975900	Streptomyces sp. NBC_01618	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2975945	Streptomyces sp. NBC_01800	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2975946	Streptomyces sp. NBC_01803	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+2975959	Dactylosporangium sp. NBC_01737	S	1	0	1	1	8	8	other	1	observation	1	0	0	0
+2975974	Kribbella sp. NBC_00889	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2975989	Mycobacterium sp. NBC_00419	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2979869	Reichenbachiella carrageenanivorans	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+2980026	Fervidibacillus albus	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2981134	Streptomyces cynarae	S	0	1	0	1	3	3	other	1	observation	1	1	0	0
+2983233	Bifidobacterium sp. ESL0790	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2983836	Campylobacter sp. VBCF_01 NA2	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+2986803	Streptomyces sp. VB1	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2986823	Flavobacterium sp. N1736	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+2989684	Fontivita pretiosa	S	0	1	0	1	1	1	other	1	observation	1	1	0	0
+2992926	Dokdonella aquatica	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2994479	Buchnera aphidicola (Chaitophorus sp. 3695)	S1	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2995161	Pedobacter sp. SL55	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+2995170	Luteolibacter sp. SL250	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+2996034	Paenibacillus sp. SYP-B4298	S	0	1	0	1	4	4	other	1	observation	1	1	0	0
+2996794	Haliovirga abyssi	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+2996862	Acinetobacter sp. YWS30-1	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2997333	Baekduia alba	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+2997339	Paraconexibacter sp. AEG42_29	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3003265	Aurantiacibacter sp. MUD11	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3009078	Endozoicomonas sp. GU-1	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+3014267	Agathobaculum massiliense	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3015152	Micromonospora sp. WMMD812	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+3015952	Citrobacter sp. 21OH12SH02A-Citro	S	0	1	0	1	1	1	other	1	observation	1	1	0	0
+3019933	Rhizobium johnstonii	S	0	1	0	1	1	1	other	1	observation	1	1	0	0
+3022769	Gordonia abscondita	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3025190	Nostoc sp. UHCC 0926	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+3025670	Novosphingobium sp. KACC 22771	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+3026433	Paenibacillus marchantiae	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+3027796	Azospirillum sp. B2RO_4	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+3028315	Pullulanibacillus sp. KACC 23026	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3028318	Olleya sp. YS	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+3028808	Janibacter sp. DB-40	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3029174	Caloramator sp. Dgby_cultured_2	S	1	0	1	2	4	2	other	1	observation	1	0	0	0
+3029274	Amygdalobacter nucleatus	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3031916	Halobaculum limi	S	1	0	1	2	2	1	other	1	observation	1	0	0	0
+3031997	Flavobacterium sp. YJ01	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3032282	Cupriavidus sp. WKF15	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3032586	Zobellia alginiliquefaciens	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3033387	Haloarcula rara	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3034675	Pseudomonas sp. A34-9	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3036126	Tepidibacter hydrothermalis	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+3036359	Aurantibacillus circumpalustris	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+3038772	Tenacibaculum tangerinum	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3039180	Metallumcola ferriviriculae	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3043848	Nocardioides sp. L-11A	S	1	0	1	1	7	7	other	1	observation	1	0	0	0
+3045158	Mariniflexile litorale	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+3045780	Flavobacterium sp. B167r	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+3047874	Neobacillus sp. YX16	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+3048005	Bermanella sp. WJH001	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3049047	Curtobacterium sp. DN_7.5	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3050072	Proteiniborus sp. MB09-C3	S	1	0	1	1	8	8	other	1	observation	1	0	0	0
+3051121	Aureispira sp. CCB-E	S	0	1	0	1	3	3	other	1	observation	1	1	0	0
+3051171	Marivivens sp. LCG002	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3052091	Bacillus sp. DX3.1	S	1	0	1	2	5	2.5	other	1	observation	1	0	0	0
+3053610	Pseudoblastomonas flavescens	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3054939	Aciduricibacillus chroicocephali	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3056107	Acidovorax sp. A79	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3057550	Bartonella sp. TP	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3058402	Terrisporobacter vanillatitrophus	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+3061629	Nocardiopsis sp. HUAS JQ3	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3061632	Halomonas sp. I5-271120	S	0	1	0	1	3	3	other	1	observation	1	1	0	0
+3063957	Mariniflexile sp. AS56	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+3064705	Clostridium sp. JS66	S	1	0	1	1	7	7	other	1	observation	1	0	0	0
+3065647	Thalassotalea psychrophila	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+3066295	Spiroplasma endosymbiont of Tipula paludosa	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3066305	Spiroplasma endosymbiont of Labia minor	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3067902	Parvularcula sp. IMCC14364	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3069686	Tunturiibacter psychrotolerans	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+3070681	Clostridium sp. OS1-26	S	0	1	0	1	4	4	other	1	observation	1	1	0	0
+3070815	Pleionea litopenaei	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3070996	Clostridium sp. MB40-C1	S	1	0	1	2	5	2.5	other	1	observation	1	0	0	0
+3071453	Tianxiuia mixotrophica	S	0	1	0	1	3	3	other	1	observation	1	1	0	0
+3073064	Cellulomonas sp. ATA003	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3073268	Citricoccus sp. I39-566	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+3073563	Flavobacterium nakdongense	S	0	1	0	1	1	1	other	1	observation	1	1	0	0
+3074146	Pseudomonas sp. SG20056	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3075199	Actinacidiphila sp. ITFR-21	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+3075432	Streptomyces sp. Li-HN-5-11	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+3075818	Leptotrichia sp. SK-5	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+3077937	Rickettsiella endosymbiont of Rhagonycha lignosa	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3078083	Methanosarcina hadiensis	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3078084	Brevundimonas sp. S1H14	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3080827	Roseovarius rhodophyticola	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3081750	Anaerocolumna sp. AGMB13020	S	0	1	0	1	3	3	other	1	observation	1	1	0	0
+3082444	Niallia sp. XMNu-256	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3082771	Acutalibacteraceae	F	1	0	1	1	9	9	other	1	observation	1	0	0	0
+3085177	Xenorhabdus taiwanensis	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3088255	Longispora sp. K20-0274	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3089814	Xylophilus sp. GOD-11R	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3092100	Glaciecola sp. G7-5	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3092115	Marinomonas sp. GJ51-14	S	0	1	0	2	2	1	other	1	observation	1	1	0	0
+3092138	Roseobacter phycocola	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+3093850	Frigoribacterium sp. R86507	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3093870	Polaribacter sp. R77954	S	0	1	0	1	5	5	other	1	observation	1	1	0	0
+3093873	Algibacter sp. R77976	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+3094839	Chryseobacterium sp. HR92	S	0	1	0	1	3	3	other	1	observation	1	1	0	0
+3096000	Bacteroides mucinivorans	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3101273	Candidatus Spongiisocius sp.	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3103144	Faecalibacter sp. LW9	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3108485	Streptomyces sp. SS7	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+3110539	Paenibacillus silvisoli	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3111011	Grimontia sp. NTOU-MAR1	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3115649	Desulfosporosinus paludis	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+3116594	Chryseobacterium sp. CP-77	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3116862	Ralstonia solanacearum species complex	G1	1	0	1	1	16	16	other	1	observation	1	0	0	0
+3119018	Leeuwenhoekiella obamensis	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3120518	Acinetobacter sp. KS-LM10	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3121290	Croceibacterium sp. TMG7-5b_MA50	S	1	0	1	2	3	1.5	other	1	observation	1	0	0	0
+3127470	Bernardetia sp. MNP-M8	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+3127472	Bernardetia sp. ABR2-2B	S	1	0	1	1	9	9	other	1	observation	1	0	0	0
+3128980	Pseudarthrobacter quantipunctorum	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3129112	Streptomyces sp. GD-15H	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3133271	Dryocola mayonis	S	1	0	1	2	1	0.5	other	1	observation	1	0	0	0
+3133294	Sorangium sp. So ce291	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+3133322	Sorangium sp. So ce854	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+3134896	Nostoc sp. UHCC 0302	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+3136600	Mediterraneibacter flintii	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+3136601	Owariibacterium komagatae	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+3136632	Acidovorax sp. SDU_ACID1	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+3136739	Pseudomonas aestiva	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3137451	Pseudomonas viridinivis	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3137852	Tenacibaculum platacis	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+3138177	Chryseobacterium sp. POE27	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3141461	Allohahella sp. A8	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+3141542	Mucilaginibacter sp. CSA2-8R	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+3142262	Thauera sp. JM12B12	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3144103	Plantactinospora sp. ZYX-F-223	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3144874	Niabella insulamsoli	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3144975	Desulfoscipio sp. L	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+3145235	Microbulbifer sp. SAOS-129_SWC	S	0	1	0	1	4	4	other	1	observation	1	1	0	0
+3157618	Alteromonas sp. D210916BOD_24	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3160832	Christiangramia sp. LLG6405-1	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+3229863	Limibacterium fermenti	S	0	1	0	1	6	6	other	1	observation	1	1	0	0
+3230972	Candidatus Njordibacter sp. Uisw_039	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3230999	Candidatus Levibacter sp. Uisw_134_01	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+3231488	Ornithinibacillus sp. 4-3	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3233343	Aestuariibius sp. HNIBRBA575	S	0	1	0	1	1	1	other	1	observation	1	1	0	0
+3234199	Sphingomonas sp. MMS12-HWE2-04	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+3234853	Brevibacillus sp. TJ4	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3236840	Clostridium sp. BJN0013	S	1	0	1	2	5	2.5	other	1	observation	1	0	0	0
+3238631	Streptomyces sp. R39	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+3238634	Streptomyces sp. Y1	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+3239291	Bartonella sp. B17	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+3239303	Leptotrichia mesophila	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3239306	Pleomorphomonas sp. PLEO	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3239892	Actinomycetospora sp. CA-084318	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+3239935	Dactylosporangium sp. CS-033363	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+3239955	Micromonospora sp. CA-111912	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3239970	Nocardia sp. CA-084685	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3239997	Nonomuraea sp. CA-143628	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+3240029	Sphaerimonospora sp. CA-214678	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+3240036	Spirillospora sp. CA-142024	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+3240052	Streptomyces sp. CA-142005	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+3240913	Xanthomonas sp. NCPPB 3005	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3242468	Candidatus Izemoplasma sp. B36	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+3273430	Acidovorax sp. BLS4	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3342249	Agarivorans sp. DSG3-1	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3344655	Streptomyces okerensis	S	0	1	0	1	5	5	other	1	observation	1	1	0	0
+3350168	Herbiconiux sp. UC225_62	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+3350174	Pseudoduganella sp. UC29_71	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3372850	Agromyces sp. MMS24-K17	S	0	1	0	1	1	1	other	1	observation	1	1	0	0
+3372857	Parabacteroides sp. APC149_11_2_Y6	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+3373541	Krasilnikovia sp. MM14-A1004	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3374553	Pseudoduganella sp. UC29_106	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3377041	Labrys sp. E2SS-1L	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3382150	Sphingobacterium sp. Lzh-3	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3382189	Formosa bonchosmolovskayae	S	0	1	0	1	5	5	other	1	observation	1	1	0	0
+3383502	Nocardioides sp. R1-1	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+3384787	Pseudomonas sp. YH-1	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3388267	Nocardioides terrisoli	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3390038	Stenotrophomonas sp. LGBM10	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+3390273	Klebsiella pneumoniae complex	G1	0	1	0	1	40	40	other	1	observation	0	1	0	0
+3391145	Sulfurimonas iocasae	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+3391575	Rubrivirga aquatilis	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+3391823	Psychromonas sp. KJ10-10	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3394317	Thermodesulfovibrio sp. TK500a	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+3395374	Clavibacter rahimiani	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3398391	Anabaena sp. TISTR 8404	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+3399565	Fictibacillus sp. JL2B1089	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3400226	Roseateles sp. So40a	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3400627	Pseudocolwellia antarctica	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3400908	Parablastomonas sp. CN1-191	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3403457	Streptomyces sp. cg28	S	1	0	1	1	8	8	other	1	observation	1	0	0	0
+3405425	Carbonicoccus niuqiaonis	S	0	1	0	1	1	1	other	1	observation	1	1	0	0
+3406645	Psychrobacter sp. ER1	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3408580	Anoxybacterium hadale	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3409857	Pseudomonas sp. NyZ201	S	1	0	1	2	3	1.5	other	1	observation	1	0	0	0
+3410538	Desulfoluna sp. HI9BLuna	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3412683	Sphingomonas sp. MS122	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+3415673	Bradyrhizobium sp. McL0615	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3415678	Dactylosporangium sp. McL0621	S	1	0	1	1	9	9	other	1	observation	1	0	0	0
+3416081	Alloiococcus sp. CFN-8	S	0	1	0	1	3	3	other	1	observation	1	1	0	0
+3416711	Mucilaginibacter sp. R-33	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3417654	Cetobacterium sp. SF1	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+3418418	Pseudarthrobacter sp. P1	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+3421656	Thalassolituus sp. LLYu03	S	0	1	0	1	3	3	other	1	observation	1	1	0	0
+3422216	Dyella thailandensis	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3422307	Humitalea sp. 24SJ18S-53	S	1	0	1	2	1	0.5	other	1	observation	1	0	0	0
+3423415	Geodermatophilus sp. URMC 63	S	1	0	1	2	4	2	other	1	observation	1	0	0	0
+3423922	Christiangramia sp. D34-3	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3423964	Janthinobacterium sp. C22	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+3425867	Saccharothrix sp. DSM 118769	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+3425945	Limimaricola sp. AA108-03	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+3440154	Cytobacillus sp. BC1816	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3440865	Mycoplasma sp. 6243	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+3446116	Haloarchaeobius ordinarius	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+3446480	Cutibacterium sp. V947	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3447510	Streptomyces pallidus (ex Mingjun et al. 2026)	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+3448835	Caballeronia sp. KNU42	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+3449428	Pseudomonas medicaginis	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+3450750	Caproiciproducens sp. LBM24188	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3452854	Clostridioides sp. LIBA-6622	S	0	1	0	2	4	2	other	1	observation	1	1	0	0
+3453141	Rhizobium sp. F40D2	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3453321	Streptomyces sp. MMRG1	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+3453665	Mesorhizobium sp. ORM8.1	S	1	0	1	2	2	1	other	1	observation	1	0	0	0
+3454461	Brakhagea slesvicensis	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+3454464	Aeoliella sp. SH292	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3455775	Streptomyces malaysiensis subsp. malaysiensis	S1	0	1	0	1	7	7	other	1	observation	1	1	0	0
+3457314	Thalassospira sp. SM2505	S	0	1	0	1	3	3	other	1	observation	1	1	0	0
+3457316	Bradyrhizobium sp. WCU1	S	0	1	0	1	1	1	other	1	observation	1	1	0	0
+3457576	Pseudonocardia sp. Cha107L01	S	0	1	0	1	7	7	other	1	observation	1	1	0	0
+3457578	Mycolicibacterium sp. Dal123E01	S	1	0	1	1	7	7	other	1	observation	1	0	0	0
+3457706	Arthrobacter sp. AOP29-A2-19	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3458683	Flavobacterium sp. HNIBRBA15423	S	1	0	1	1	6	6	other	1	observation	1	0	0	0
+3459703	Halotolerantifilum yawarlongkerapense	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3461145	Alishewanella sp. HL-SH05	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3463623	Cysteiniphilum sp. GTC20157	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+3464702	Arthrobacter sp. AIWTK1	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3464716	Arthrobacter sp. BG5	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3465235	Brevundimonas sp. KH_058	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3465237	Citrobacter sp. KH_055_1	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3465831	Parasphingorhabdus sp. NYA22	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3466921	Sneathiella sp. D3-11	S	0	1	0	1	4	4	other	1	observation	1	1	0	0
+3466926	Rhodanobacter sp. G2-10	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3466929	Pseudocolwellia sp. G5-9	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+3466936	Devosia sp. J20-27	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3469245	Priestia sp. USM5	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3469560	Planktothricoides raciborskii Chao2109	S1	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3469809	Microbacterium sp. F01	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3469944	Flavobacterium sp. TS_SC_5	S	1	0	1	2	6	3	other	1	observation	1	0	0	0
+3470322	Croceitalea sp. W27	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+3470401	Vagococcus sp. 211	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+3470663	Novosphingobium sp. BL-S-20	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+3470772	Haloarcula sp. MBLA0163	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3473405	Agrobacterium sp. H141	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3475975	Clostridium sp. JNZ J1-5	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+3476336	Algorimicrobium bowmanii	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+3477385	Streptomyces kryoterrae	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+3477762	Microbulbifer sp. ABF4_107	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3478764	Wenyingzhuangia sp. IMCC45467	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3479081	Winogradskyella sp. PC D3.3	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+3479082	Wenyingzhuangia sp. IMCC45574	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+3479359	Shinella sp. OV683	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3479387	Methylobacterium sp. TK31	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3479768	Streptacidiphilus sp. PAMC 29251	S	1	0	1	1	8	8	other	1	observation	1	0	0	0
+3484032	Streptomyces sp. NC-S4	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3568943	Methylobacterium sp. CM6257	S	0	1	0	1	3	3	other	1	observation	1	1	0	0
+3569254	Nonomuraea sp. ATCC-39365	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+3681956	Flavobacterium sp. AC105	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3681959	Flavobacterium sp. AC274	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+3682575	Pseudomonas sp. LB3P31	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3685321	Paenibacillus sp. JL3B1040	S	1	0	1	2	6	3	other	1	observation	1	0	0	0
+3694151	Micromonospora sp. Utrum1	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+3694919	Paenirhodobacter sp. YD-8	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3695394	Candidatus Aciduliprofundum sp. HYA1	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3695799	Enterococcus sp. AMC1157	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3701232	Cellulomonas sp. plas2	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3707512	Novosphingobium sp. 550D	S	1	0	1	2	5	2.5	other	1	observation	1	0	0	0
+3709657	Pseudoxanthomonas sp. G3	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3713582	Paenibacillus sp. B46(2026)	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+3716033	Streptomyces sp. JLBT605	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+3720896	Paenibacillus sp. fava2	S	1	0	1	1	1	1	other	1	observation	1	0	0	0

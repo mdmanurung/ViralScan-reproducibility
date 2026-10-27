@@ -1,0 +1,23 @@
+taxid	name	rank	groups_called	groups_offcell	n_cells	reads	distinct_minimizers	minimizer_per_read	host_relation	db_has_9606	state	low_minimizer_diversity	offcell_dominant	host_lineage	viral_only_db
+9606	Homo sapiens	S	65628	91488	3405	195821	1134666	5.794	host	1	observation	0	1	1	0
+2759	Eukaryota	D	2899	4953	1699	11007	1139609	103.5	host_ancestor	1	observation	0	1	1	0
+33154	Opisthokonta	D1	31	39	31	78	1136357	1.457e+04	host_ancestor	1	observation	0	1	1	0
+2	Bacteria	D	2	6	2	9	53825	5981	other	1	observation	0	1	0	0
+1224	Pseudomonadota	P	1	3	1	4	17260	4315	other	1	observation	0	1	0	0
+139	Borreliella burgdorferi	S	0	3	0	3	13	4.333	other	1	observation	1	1	0	0
+1269	Micrococcus	G	0	2	0	3	31	10.33	other	1	observation	0	1	0	0
+1783272	Bacillati	K	0	2	0	2	23896	1.195e+04	other	1	observation	0	1	0	0
+286	Pseudomonas	G	0	1	0	1	1503	1503	other	1	observation	0	1	0	0
+543	Enterobacteriaceae	F	0	1	0	1	1060	1060	other	1	observation	0	1	0	0
+1760	Actinomycetes	C	1	0	1	1	9813	9813	other	1	observation	0	0	0	0
+4896	Schizosaccharomyces pombe	S	1	0	1	1	12	12	other	1	observation	1	0	0	0
+10298	Human alphaherpesvirus 1	S1	0	1	0	1	12	12	other	1	observation	1	1	0	0
+28211	Alphaproteobacteria	C	1	0	1	1	4928	4928	other	1	observation	0	0	0	0
+91347	Enterobacterales	O	0	1	0	1	2401	2401	other	1	observation	0	1	0	0
+155619	Agaricomycetes	C	0	1	0	1	122	122	other	1	observation	0	1	0	0
+182096	Aspergillus chevalieri	S	0	1	0	1	15	15	other	1	observation	1	1	0	0
+237561	Candida albicans SC5314	S1	1	0	1	1	43	43	other	1	observation	0	0	0	0
+451864	Dikarya	K1	0	1	0	1	3103	3103	other	1	observation	0	1	0	0
+547559	Natrialba magadii ATCC 43099	S1	0	1	0	1	3	3	other	1	observation	1	1	0	0
+2714947	Vagococcus hydrophili	S	1	0	1	1	8	8	other	1	observation	1	0	0	0
+2930200	Nitrosophilus kaiyonis	S	0	1	0	1	6	6	other	1	observation	1	1	0	0

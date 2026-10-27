@@ -1,0 +1,53 @@
+{
+  "barcodes": {
+    "n_cb_bad_geometry": 0,
+    "n_cb_corrected": 112305,
+    "n_cb_no_onlist": 0,
+    "n_cb_onlist": 17259824,
+    "n_cb_uncorrectable": 391668
+  },
+  "called_cells_overlap": 1.0,
+  "cells": {
+    "called_cells_barcode_space": "unknown",
+    "called_cells_path": "/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/dsr_round1/runs/ebv/combined_off/SRR12682296/SRR12682296/results/called_cells.tsv",
+    "called_cells_sha256": "3b43e378dd7295a48f314d3cc135e2cb5928828be9a1d66154c897d566e23511",
+    "cell_calling_method": null,
+    "n_called_cells": 2720,
+    "n_called_cells_seen": 2720,
+    "n_called_cells_with_resolved": 2612,
+    "n_candidates": 23,
+    "n_groups_called": 12535725,
+    "n_groups_called_ambiguous": 123,
+    "n_groups_called_resolved": 965230,
+    "n_groups_called_unclassified": 11570372,
+    "n_groups_offcell": 1512091,
+    "n_groups_offcell_ambiguous": 4,
+    "n_groups_offcell_resolved": 124921,
+    "n_groups_offcell_unclassified": 1387166,
+    "n_taxa": 21
+  },
+  "fractions": {
+    "kraken2_classified": 0.1058637970249266,
+    "kraken2_unclassified": 0.8941362029750735
+  },
+  "groups": {
+    "n_group_reads": 17372129,
+    "n_groups_ambiguous": 127,
+    "n_groups_resolved": 1090151,
+    "n_groups_unclassified": 12957538
+  },
+  "kraken2": {
+    "n_classified": 1880543,
+    "n_unclassified": 15883254
+  },
+  "n_fragments": 17763797,
+  "stream": {
+    "n_bad_geometry": 0,
+    "n_cb_has_n": 65926,
+    "n_input": 17763797,
+    "n_r2_bases_trimmed": 92590917,
+    "n_r2_trimmed": 2031971,
+    "n_umi_has_n": 2273,
+    "read_filter:not_run": 17763797
+  }
+}

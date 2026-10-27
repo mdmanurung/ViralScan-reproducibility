@@ -1,0 +1,50 @@
+taxid	name	rank	groups_called	groups_offcell	n_cells	reads	distinct_minimizers	minimizer_per_read	host_relation	db_has_9606	state	low_minimizer_diversity	offcell_dominant	host_lineage	viral_only_db
+10376	human gammaherpesvirus 4	S1	928898	121814	2598	1823451	37824	0.02074	other	0	observation	0	0	0	1
+67082	BeAn 58058 virus	S	84783	8757	2396	120046	80	0.0006664	other	0	observation	0	0	0	1
+1969841	Proteus phage VB_PmiS-Isfahan	S1	12421	1479	2120	16746	227	0.01356	other	0	observation	0	0	0	1
+166122	Human endogenous retrovirus K113	S1	10943	599	2107	15081	368	0.0244	other	0	observation	0	0	0	1
+2886930	Escherichia phage phiX174	S1	4678	544	1770	21512	1681	0.07814	other	0	observation	0	0	0	1
+10375	Lymphocryptovirus	G	3882	613	731	6457	41280	6.393	other	0	observation	0	0	0	1
+106332	Papiine gammaherpesvirus 1	S1	1621	190	327	3034	56	0.01846	other	0	observation	0	0	0	1
+12509	Human herpesvirus 4 type 2	S2	576	169	257	818	551	0.6736	other	0	observation	0	0	0	1
+2169863	Papiine betaherpesvirus 3	S1	227	26	213	298	50	0.1678	other	0	observation	0	0	0	1
+153135	Gammaretrovirus	G	158	19	153	205	46	0.2244	other	0	observation	0	0	0	1
+3701015	Eubullaviridae	F	36	3	36	104	1762	16.94	other	0	observation	0	0	0	1
+2731360	Heunggongvirae	K	21	2	21	16	45916	2870	other	0	observation	0	0	0	1
+3052441	Orthobunyavirus simbuense	S	15	2	15	22	3	0.1364	other	0	observation	1	0	0	1
+455364	Chrysochromulina ericina virus	S	9	2	9	13	14	1.077	other	0	observation	1	0	0	1
+2560569	macacine gammaherpesvirus 10	S1	10	1	10	19	142	7.474	other	0	observation	0	0	0	1
+45455	Macacine gammaherpesvirus 4	S1	6	2	6	13	140	10.77	other	0	observation	0	0	0	1
+2107708	Pandoravirus neocaledonia	S	7	1	7	8	34	4.25	other	0	observation	0	0	0	1
+11807	Harvey murine sarcoma virus	S1	4	0	4	4	3	0.75	other	0	observation	1	0	0	1
+159150	Shamonda virus	S1	2	2	2	5	6	1.2	other	0	observation	1	0	0	1
+3044472	Orthoherpesviridae	F	2	2	2	6	41692	6949	other	0	observation	0	0	0	1
+10280	Molluscum contagiosum virus subtype 1	S2	2	1	2	3	6	2	other	0	observation	1	0	0	1
+11855	Mason-Pfizer monkey virus	S1	3	0	3	3	5	1.667	other	0	observation	1	0	0	1
+56947	Choristoneura fumiferana granulovirus	S1	1	1	1	2	3	1.5	other	0	observation	1	0	0	1
+1590650	Adelie penguin polyomavirus	S1	2	0	2	3	3	1	other	0	observation	1	0	0	1
+1891767	Betapolyomavirus macacae	S	0	2	0	2	17	8.5	other	0	observation	1	1	0	1
+2060084	Pandoravirus	G	2	0	2	2	229	114.5	other	0	observation	0	0	0	1
+2341050	macacine gammaherpesvirus 13	S1	2	0	2	10	213	21.3	other	0	observation	0	0	0	1
+3044761	Megavirus	G	2	0	2	2	53	26.5	other	0	observation	0	0	0	1
+10374	Gammaherpesvirinae	F1	1	0	1	2	41425	2.071e+04	other	0	observation	0	0	0	1
+10381	Saimiriine gammaherpesvirus 2	S1	1	0	1	1	7	7	other	0	observation	1	0	0	1
+10442	Baculoviridae	F	1	0	1	1	241	241	other	0	observation	0	0	0	1
+93386	Columbid alphaherpesvirus 1	S1	1	0	1	3	8	2.667	other	0	observation	1	0	0	1
+159604	gorilline gammaherpesvirus 1	S1	0	1	0	2	26	13	other	0	observation	0	1	0	1
+270161	Pyrobaculum spherical virus	S1	1	0	1	1	3	3	other	0	observation	1	0	0	1
+315393	Mimivirus	G	1	0	1	1	62	62	other	0	observation	0	0	0	1
+338110	Escherichia phage NC29	S1	1	0	1	1	2	2	other	0	observation	1	0	0	1
+384642	Enterobacteria phage ID18	S1	1	0	1	1	8	8	other	0	observation	1	0	0	1
+1220602	Rhizobium phage RHEph02	S1	1	0	1	1	2	2	other	0	observation	1	0	0	1
+1500386	Staphylococcus phage 6ec	S1	1	0	1	1	3	3	other	0	observation	1	0	0	1
+1922653	Beihai rhabdo-like virus 3	S1	1	0	1	1	4	4	other	0	observation	1	0	0	1
+2025359	Murmansk poxvirus	S2	1	0	1	1	3	3	other	0	observation	1	0	0	1
+2065036	Torque teno mini virus 10	S1	1	0	1	1	2	2	other	0	observation	1	0	0	1
+2065203	Proteus phage phiP4-3	S1	1	0	1	1	5	5	other	0	observation	1	0	0	1
+2107707	Pandoravirus macleodensis	S	0	1	0	1	42	42	other	0	observation	0	1	0	1
+2560086	Alcyoneusvirus	G	1	0	1	1	13	13	other	0	observation	1	0	0	1
+2656546	Microbacterium phage Ariadne	S1	1	0	1	1	4	4	other	0	observation	1	0	0	1
+2732007	Nucleocytoviricota	P	0	1	0	2	1038	519	other	0	observation	0	1	0	1
+2732396	Orthornavirae	K	1	0	1	1	832	832	other	0	observation	0	0	0	1
+3424297	Caudoviricetes incertae sedis	C1	1	0	1	1	2810	2810	other	0	observation	0	0	0	1

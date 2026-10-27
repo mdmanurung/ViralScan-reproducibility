@@ -1,0 +1,75 @@
+taxid	name	rank	groups_called	groups_offcell	n_cells	reads	distinct_minimizers	minimizer_per_read	host_relation	db_has_9606	state	low_minimizer_diversity	offcell_dominant	host_lineage	viral_only_db
+10376	human gammaherpesvirus 4	S1	933617	122550	2600	1836688	37824	0.02059	other	0	observation	0	0	0	1
+67082	BeAn 58058 virus	S	95466	9558	2415	134515	80	0.0005947	other	0	observation	0	0	0	1
+1969841	Proteus phage VB_PmiS-Isfahan	S1	13083	1554	2152	17574	227	0.01292	other	0	observation	0	0	0	1
+166122	Human endogenous retrovirus K113	S1	12194	677	2128	16963	368	0.02169	other	0	observation	0	0	0	1
+2886930	Escherichia phage phiX174	S1	5202	581	1831	22185	1681	0.07577	other	0	observation	0	0	0	1
+10375	Lymphocryptovirus	G	3288	484	587	4521	41280	9.131	other	0	observation	0	0	0	1
+106332	Papiine gammaherpesvirus 1	S1	2295	258	369	4250	56	0.01318	other	0	observation	0	0	0	1
+12509	Human herpesvirus 4 type 2	S2	1457	299	427	1965	551	0.2804	other	0	observation	0	0	0	1
+2169863	Papiine betaherpesvirus 3	S1	714	53	559	908	50	0.05507	other	0	observation	0	0	0	1
+153135	Gammaretrovirus	G	231	29	223	301	46	0.1528	other	0	observation	0	0	0	1
+1349410	Pandoravirus salinus	S	48	1	46	62	45	0.7258	other	0	observation	0	0	0	1
+2731360	Heunggongvirae	K	22	2	22	6	45916	7653	other	0	observation	0	0	0	1
+3052441	Orthobunyavirus simbuense	S	17	2	17	24	3	0.125	other	0	observation	1	0	0	1
+2341050	macacine gammaherpesvirus 13	S1	16	2	16	43	213	4.953	other	0	observation	0	0	0	1
+45455	Macacine gammaherpesvirus 4	S1	14	2	14	28	140	5	other	0	observation	0	0	0	1
+2560569	macacine gammaherpesvirus 10	S1	15	1	15	31	142	4.581	other	0	observation	0	0	0	1
+3701015	Eubullaviridae	F	14	2	14	50	1762	35.24	other	0	observation	0	0	0	1
+455364	Chrysochromulina ericina virus	S	9	2	9	13	14	1.077	other	0	observation	1	0	0	1
+2107708	Pandoravirus neocaledonia	S	10	1	10	11	34	3.091	other	0	observation	0	0	0	1
+11807	Harvey murine sarcoma virus	S1	5	0	5	5	3	0.6	other	0	observation	1	0	0	1
+159150	Shamonda virus	S1	2	2	2	5	6	1.2	other	0	observation	1	0	0	1
+10280	Molluscum contagiosum virus subtype 1	S2	2	1	2	3	6	2	other	0	observation	1	0	0	1
+11855	Mason-Pfizer monkey virus	S1	3	0	3	3	5	1.667	other	0	observation	1	0	0	1
+1590650	Adelie penguin polyomavirus	S1	3	0	3	4	3	0.75	other	0	observation	1	0	0	1
+3044761	Megavirus	G	3	0	3	3	53	17.67	other	0	observation	0	0	0	1
+10381	Saimiriine gammaherpesvirus 2	S1	2	0	2	2	7	3.5	other	0	observation	1	0	0	1
+56947	Choristoneura fumiferana granulovirus	S1	1	1	1	3	3	1	other	0	observation	1	0	0	1
+159604	gorilline gammaherpesvirus 1	S1	1	1	1	4	26	6.5	other	0	observation	0	0	0	1
+384642	Enterobacteria phage ID18	S1	2	0	2	2	8	4	other	0	observation	1	0	0	1
+660954	Oxbow virus	S1	2	0	2	2	3	1.5	other	0	observation	1	0	0	1
+1891767	Betapolyomavirus macacae	S	0	2	0	2	17	8.5	other	0	observation	1	1	0	1
+1929150	Enterovirus AN12	S1	2	0	2	2	3	1.5	other	0	observation	1	0	0	1
+2732007	Nucleocytoviricota	P	1	1	1	2	1038	519	other	0	observation	0	0	0	1
+10244	Monkeypox virus	S1	1	0	1	1	3	3	other	0	observation	1	0	0	1
+10288	Choristoneura biennis entomopoxvirus	S1	0	1	0	1	3	3	other	0	observation	1	1	0	1
+93386	Columbid alphaherpesvirus 1	S1	1	0	1	3	8	2.667	other	0	observation	1	0	0	1
+181083	Chlorovirus	G	1	0	1	1	36	36	other	0	observation	0	0	0	1
+190061	Fowl aviadenovirus A	S1	0	1	0	1	3	3	other	0	observation	1	1	0	1
+212035	Acanthamoeba polyphaga mimivirus	S1	1	0	1	1	35	35	other	0	observation	0	0	0	1
+270161	Pyrobaculum spherical virus	S1	1	0	1	1	3	3	other	0	observation	1	0	0	1
+338110	Escherichia phage NC29	S1	1	0	1	1	2	2	other	0	observation	1	0	0	1
+376849	Lumpy skin disease virus NI-2490	S2	0	1	0	1	3	3	other	0	observation	1	1	0	1
+552509	Leptopilina boulardi filamentous virus	S1	1	0	1	1	4	4	other	0	observation	1	0	0	1
+745716	Coffee ringspot virus	S1	1	0	1	1	2	2	other	0	observation	1	0	0	1
+754046	Sulfitobacter phage phiCB2047-B	S1	1	0	1	1	2	2	other	0	observation	1	0	0	1
+768738	Elephant endotheliotropic herpesvirus 5	S	1	0	1	1	2	2	other	0	observation	1	0	0	1
+879630	Aeromonas phage phiAS5	S1	1	0	1	1	4	4	other	0	observation	1	0	0	1
+994485	Scophthalmus maximus reovirus	S1	1	0	1	1	3	3	other	0	observation	1	0	0	1
+1220602	Rhizobium phage RHEph02	S1	1	0	1	1	2	2	other	0	observation	1	0	0	1
+1329409	Elephant endotheliotropic herpesvirus 3A	S1	1	0	1	1	6	6	other	0	observation	1	0	0	1
+1434319	Staphylococcus phage vB_SepS_SEP9	S1	1	0	1	1	3	3	other	0	observation	1	0	0	1
+1500386	Staphylococcus phage 6ec	S1	1	0	1	1	3	3	other	0	observation	1	0	0	1
+1623281	Cheoctovirus	G	1	0	1	1	18	18	other	0	observation	1	0	0	1
+1642929	Lambdina fiscellaria nucleopolyhedrovirus	S1	1	0	1	1	2	2	other	0	observation	1	0	0	1
+1678078	Mollivirus sibericum	S	1	0	1	1	16	16	other	0	observation	1	0	0	1
+1922540	Beihai picorna-like virus 111	S	1	0	1	1	1	1	other	0	observation	1	0	0	1
+1922653	Beihai rhabdo-like virus 3	S1	1	0	1	1	4	4	other	0	observation	1	0	0	1
+2023057	Orpheovirus IHUMI-LCC2	S1	1	0	1	1	23	23	other	0	observation	0	0	0	1
+2024264	Agrobacterium phage Atu_ph07	S1	1	0	1	1	10	10	other	0	observation	1	0	0	1
+2025359	Murmansk poxvirus	S2	1	0	1	1	3	3	other	0	observation	1	0	0	1
+2065036	Torque teno mini virus 10	S1	1	0	1	1	2	2	other	0	observation	1	0	0	1
+2065203	Proteus phage phiP4-3	S1	1	0	1	1	5	5	other	0	observation	1	0	0	1
+2107707	Pandoravirus macleodensis	S	0	1	0	1	42	42	other	0	observation	0	1	0	1
+2126984	Tupanvirus deep ocean	S1	1	0	1	1	39	39	other	0	observation	0	0	0	1
+2126985	Tupanvirus soda lake	S1	1	0	1	1	38	38	other	0	observation	0	0	0	1
+2306887	Botrytis cinerea mymonavirus 1	S1	1	0	1	1	3	3	other	0	observation	1	0	0	1
+2560086	Alcyoneusvirus	G	1	0	1	1	13	13	other	0	observation	1	0	0	1
+2656546	Microbacterium phage Ariadne	S1	1	0	1	1	4	4	other	0	observation	1	0	0	1
+2731619	Caudoviricetes	C	1	0	1	1	3902	3902	other	0	observation	0	0	0	1
+2733141	Wifcevirus	G	1	0	1	1	5	5	other	0	observation	1	0	0	1
+2772061	uncultured phage cr107_1	S1	1	0	1	1	2	2	other	0	observation	1	0	0	1
+2772065	uncultured phage cr3_1	S1	0	1	0	1	8	8	other	0	observation	1	1	0	1
+2843400	Karimacvirus	G	1	0	1	1	14	14	other	0	observation	1	0	0	1
+2948800	Leonardvirus	G	1	0	1	1	2	2	other	0	observation	1	0	0	1

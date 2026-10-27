@@ -1,0 +1,17 @@
+taxid	name	rank	groups_called	groups_offcell	n_cells	reads	distinct_minimizers	minimizer_per_read	host_relation	db_has_9606	state	low_minimizer_diversity	offcell_dominant	host_lineage	viral_only_db
+1969841	Proteus phage VB_PmiS-Isfahan	S1	5652	54296	2504	73589	223	0.00303	other	0	observation	0	1	0	1
+67082	BeAn 58058 virus	S	1776	2933	1204	6526	85	0.01302	other	0	observation	0	1	0	1
+166122	Human endogenous retrovirus K113	S1	302	531	275	1281	492	0.3841	other	0	observation	0	1	0	1
+2169863	Papiine betaherpesvirus 3	S1	14	39	14	65	44	0.6769	other	0	observation	0	1	0	1
+10298	Human alphaherpesvirus 1	S1	0	13	0	13	107	8.231	other	0	observation	0	1	0	1
+153135	Gammaretrovirus	G	3	1	3	4	34	8.5	other	0	observation	0	0	0	1
+3052441	Orthobunyavirus simbuense	S	2	2	2	5	4	0.8	other	0	observation	1	0	0	1
+11807	Harvey murine sarcoma virus	S1	1	2	1	3	4	1.333	other	0	observation	1	1	0	1
+2786405	ssRNA phage SRR5466369_2	S1	0	2	0	2	13	6.5	other	0	observation	1	1	0	1
+2886930	Escherichia phage phiX174	S1	0	2	0	2	24	12	other	0	observation	0	1	0	1
+3424297	Caudoviricetes incertae sedis	C1	0	2	0	2	5129	2564	other	0	observation	0	1	0	1
+11095	Orthopestivirus	G	0	1	0	2	15	7.5	other	0	observation	1	1	0	1
+455364	Chrysochromulina ericina virus	S	1	0	1	1	40	40	other	0	observation	0	0	0	1
+1720526	Golden Marseillevirus	S	1	0	1	1	16	16	other	0	observation	1	0	0	1
+2731619	Caudoviricetes	C	0	1	0	1	7312	7312	other	0	observation	0	1	0	1
+2946167	Peduoviridae	F	0	1	0	1	90	90	other	0	observation	0	1	0	1

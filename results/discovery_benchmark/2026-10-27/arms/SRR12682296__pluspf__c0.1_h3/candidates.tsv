@@ -1,0 +1,34 @@
+taxid	name	rank	groups_called	groups_offcell	n_cells	reads	distinct_minimizers	minimizer_per_read	host_relation	db_has_9606	state	low_minimizer_diversity	offcell_dominant	host_lineage	viral_only_db
+9606	Homo sapiens	S	1079869	111741	2717	1416453	1526528	1.078	host	1	observation	0	0	1	0
+10376	human gammaherpesvirus 4	S1	414071	53113	2434	675087	5237	0.007758	other	1	observation	0	0	0	0
+2759	Eukaryota	D	27602	1675	2315	37214	1531054	41.14	host_ancestor	1	observation	0	0	1	0
+10375	Lymphocryptovirus	G	7265	996	800	13181	5722	0.4341	other	1	observation	0	0	0	0
+33154	Opisthokonta	D1	753	91	581	1026	1529731	1491	host_ancestor	1	observation	0	0	1	0
+12509	Human herpesvirus 4 type 2	S2	43	20	37	63	83	1.317	other	1	observation	0	0	0	0
+139	Borreliella burgdorferi	S	15	2	15	18	9	0.5	other	1	observation	1	0	0	0
+78331	Mycobacterium canetti	S	9	7	8	22	16	0.7273	other	1	observation	1	0	0	0
+2	Bacteria	D	7	4	7	13	26382	2029	other	1	observation	0	0	0	0
+1404	Priestia megaterium	S	10	1	10	16	25	1.562	other	1	observation	0	0	0	0
+3047871	Neobacillus sp. DY30	S	2	2	2	4	4	1	other	1	observation	1	0	0	0
+1224	Pseudomonadota	P	2	1	2	3	8941	2980	other	1	observation	0	0	0	0
+208348	Puccinia triticina	S	3	0	3	4	51	12.75	other	1	observation	0	0	0	0
+1396	Bacillus cereus	S	1	1	1	2	27	13.5	other	1	observation	0	0	0	0
+1760	Actinomycetes	C	2	0	2	2	6255	3128	other	1	observation	0	0	0	0
+10374	Gammaherpesvirinae	F1	1	1	1	3	5724	1908	other	1	observation	0	0	0	0
+45455	Macacine gammaherpesvirus 4	S1	2	0	2	2	27	13.5	other	1	observation	0	0	0	0
+1365647	Xanthomonas euvesicatoria pv. alfalfae CFBP 3836	S2	0	2	0	2	2	1	other	1	observation	1	1	0	0
+2649220	unclassified Sedimentibacter	G1	2	0	2	2	19	9.5	other	1	observation	1	0	0	0
+356	Hyphomicrobiales	O	1	0	1	1	1226	1226	other	1	observation	0	0	0	0
+573	Klebsiella pneumoniae	S	0	1	0	1	27	27	other	1	observation	0	1	0	0
+1236	Gammaproteobacteria	C	1	0	1	1	4534	4534	other	1	observation	0	0	0	0
+5855	Plasmodium vivax	S	1	0	1	1	23	23	other	1	observation	0	0	0	0
+5866	Babesia bigemina	S	0	1	0	1	9	9	other	1	observation	1	1	0	0
+79328	Chitinophaga	G	1	0	1	1	50	50	other	1	observation	0	0	0	0
+1460447	Terrisporobacter petrolearius	S	0	1	0	1	15	15	other	1	observation	1	1	0	0
+2024608	Bodo saltans virus	S1	1	0	1	1	6	6	other	1	observation	1	0	0	0
+2316085	Pseudomonas bubulae	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2341050	macacine gammaherpesvirus 13	S1	1	0	1	1	32	32	other	1	observation	0	0	0	0
+2599308	Crassaminicella thermophila	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+2808963	Arcobacteraceae	F	1	0	1	1	188	188	other	1	observation	0	0	0	0
+2921495	Paenibacillus sp. FSL K6-3182	S	0	1	0	1	3	3	other	1	observation	1	1	0	0
+3379134	Pseudomonadati	K	1	0	1	1	13861	1.386e+04	other	1	observation	0	0	0	0

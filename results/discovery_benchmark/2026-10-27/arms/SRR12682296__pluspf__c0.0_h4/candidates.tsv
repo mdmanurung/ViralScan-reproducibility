@@ -1,0 +1,56 @@
+taxid	name	rank	groups_called	groups_offcell	n_cells	reads	distinct_minimizers	minimizer_per_read	host_relation	db_has_9606	state	low_minimizer_diversity	offcell_dominant	host_lineage	viral_only_db
+9606	Homo sapiens	S	564322	56456	2694	737319	1526528	2.07	host	1	observation	0	0	1	0
+10376	human gammaherpesvirus 4	S1	264688	33322	2297	413459	5237	0.01267	other	1	observation	0	0	0	0
+2759	Eukaryota	D	7559	436	1957	10103	1531054	151.5	host_ancestor	1	observation	0	0	1	0
+1396	Bacillus cereus	S	292	60	264	411	27	0.06569	other	1	observation	0	0	0	0
+12509	Human herpesvirus 4 type 2	S2	119	26	90	156	83	0.5321	other	1	observation	0	0	0	0
+573	Klebsiella pneumoniae	S	105	8	100	172	27	0.157	other	1	observation	0	0	0	0
+10375	Lymphocryptovirus	G	54	3	49	110	5722	52.02	other	1	observation	0	0	0	0
+33154	Opisthokonta	D1	20	4	20	30	1529731	5.099e+04	host_ancestor	1	observation	0	0	1	0
+139	Borreliella burgdorferi	S	8	2	8	10	9	0.9	other	1	observation	1	0	0	0
+1404	Priestia megaterium	S	9	1	9	15	25	1.667	other	1	observation	0	0	0	0
+985665	Paenibacillus terrae HPL-003	S1	10	0	10	14	2	0.1429	other	1	observation	1	0	0	0
+78331	Mycobacterium canetti	S	6	3	6	13	16	1.231	other	1	observation	1	0	0	0
+1969841	Proteus phage VB_PmiS-Isfahan	S1	7	1	7	9	1	0.1111	other	1	observation	1	0	0	0
+492670	Bacillus velezensis	S	3	0	3	3	4	1.333	other	1	observation	1	0	0	0
+2	Bacteria	D	2	0	2	2	26382	1.319e+04	other	1	observation	0	0	0	0
+208348	Puccinia triticina	S	2	0	2	3	51	17	other	1	observation	0	0	0	0
+631220	Desulfovibrio sp. G11	S	2	0	2	2	1	0.5	other	1	observation	1	0	0	0
+644281	Methanocaldococcus sp. FS406-22	S	2	0	2	2	5	2.5	other	1	observation	1	0	0	0
+2341050	macacine gammaherpesvirus 13	S1	1	1	1	3	32	10.67	other	1	observation	0	0	0	0
+2528020	Poriferisphaera corsica	S	2	0	2	2	1	0.5	other	1	observation	1	0	0	0
+548	Klebsiella aerogenes	S	1	0	1	1	7	7	other	1	observation	1	0	0	0
+1236	Gammaproteobacteria	C	1	0	1	1	4534	4534	other	1	observation	0	0	0	0
+1280	Staphylococcus aureus	S	1	0	1	1	49	49	other	1	observation	0	0	0	0
+1824	Nocardia asteroides	S	1	0	1	1	7	7	other	1	observation	1	0	0	0
+2070	Pseudonocardiaceae	F	1	0	1	1	389	389	other	1	observation	0	0	0	0
+5855	Plasmodium vivax	S	1	0	1	1	23	23	other	1	observation	0	0	0	0
+29176	Neospora caninum	S	1	0	1	1	34	34	other	1	observation	0	0	0	0
+34406	Colletotrichum destructivum	S	0	1	0	1	15	15	other	1	observation	1	1	0	0
+40543	Sneathia sanguinegens	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+58343	Streptomyces canus	S	1	0	1	2	21	10.5	other	1	observation	0	0	0	0
+129337	Geobacillus	G	0	1	0	1	9	9	other	1	observation	1	1	0	0
+135614	Lysobacterales	O	0	1	0	1	385	385	other	1	observation	0	1	0	0
+146819	Streptomyces europaeiscabiei	S	1	0	1	1	10	10	other	1	observation	1	0	0	0
+216778	Stenotrophomonas rhizophila	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+227086	Bigelowiella natans	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+257496	unclassified Curtobacterium	G1	1	0	1	1	21	21	other	1	observation	0	0	0	0
+452529	Streptomyces scopuliridis	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+467262	Bacillus sp. T3	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+860235	Kibdelosporangium phytohabitans	S	0	1	0	1	5	5	other	1	observation	1	1	0	0
+927083	Sandaracinus amylolyticus	S	1	0	1	1	7	7	other	1	observation	1	0	0	0
+1357916	Sphingopyxis sp. QXT-31	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+1365647	Xanthomonas euvesicatoria pv. alfalfae CFBP 3836	S2	0	1	0	1	2	2	other	1	observation	1	1	0	0
+1380432	Halorhabdus sp. CBA1104	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+1651941	Kwoniella newhampshirensis	S	1	0	1	1	10	10	other	1	observation	1	0	0	0
+2072413	Stenotrophomonas sp. SAU14A_NAIMI4_5	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2560569	macacine gammaherpesvirus 10	S1	0	1	0	1	26	26	other	1	observation	0	1	0	0
+2576904	Nostoc sp. TCL26-01	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+2684468	Streptomyces sp. QHH-9511	S	1	0	1	1	3	3	other	1	observation	1	0	0	0
+2692234	Streptomyces sp. GS7	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+2843195	Bordetella sp. LUAb4	S	1	0	1	1	4	4	other	1	observation	1	0	0	0
+2903779	Streptomyces sp. NBC_01217	S	1	0	1	1	5	5	other	1	observation	1	0	0	0
+3071408	Alterisphingorhabdus coralli	S	0	1	0	1	2	2	other	1	observation	1	1	0	0
+3078083	Methanosarcina hadiensis	S	1	0	1	1	2	2	other	1	observation	1	0	0	0
+3388267	Nocardioides terrisoli	S	1	0	1	1	1	1	other	1	observation	1	0	0	0
+3391839	Erwinia sp. LJJL01	S	1	0	1	1	2	2	other	1	observation	1	0	0	0

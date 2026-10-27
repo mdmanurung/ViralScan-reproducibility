@@ -1,0 +1,26 @@
+taxid	name	rank	groups_called	groups_offcell	n_cells	reads	distinct_minimizers	minimizer_per_read	host_relation	db_has_9606	state	low_minimizer_diversity	offcell_dominant	host_lineage	viral_only_db
+9606	Homo sapiens	S	208725	59380	6775	422153	3776307	8.945	host	1	observation	0	0	1	0
+2759	Eukaryota	D	3623	952	2521	8776	3800628	433.1	host_ancestor	1	observation	0	0	1	0
+33154	Opisthokonta	D1	500	189	454	1317	3786692	2875	host_ancestor	1	observation	0	0	1	0
+2	Bacteria	D	66	92	11	735	208563	283.8	other	1	observation	0	1	0	0
+1280	Staphylococcus aureus	S	1	107	1	122	621	5.09	other	1	observation	0	1	0	0
+573	Klebsiella pneumoniae	S	0	15	0	16	242	15.12	other	1	observation	0	1	0	0
+153135	Gammaretrovirus	G	0	12	0	17	242	14.24	other	1	observation	0	1	0	0
+11676	Human immunodeficiency virus 1	S1	5	5	5	27	62	2.296	other	1	observation	0	0	0	0
+284592	Debaryomyces hansenii CBS767	S1	0	7	0	7	343	49	other	1	observation	0	1	0	0
+1224	Pseudomonadota	P	5	1	2	15	55852	3723	other	1	observation	0	0	0	0
+543	Enterobacteriaceae	F	4	1	1	14	4525	323.2	other	1	observation	0	0	0	0
+3379134	Pseudomonadati	K	0	5	0	29	104362	3599	other	1	observation	0	1	0	0
+91347	Enterobacterales	O	2	0	1	7	10580	1511	other	1	observation	0	0	0	0
+469	Acinetobacter	G	0	1	0	5	2931	586.2	other	1	observation	0	1	0	0
+1236	Gammaproteobacteria	C	1	0	1	1	33369	3.337e+04	other	1	observation	0	0	0	0
+1301	Streptococcus	G	0	1	0	3	1488	496	other	1	observation	0	1	0	0
+1498	Hathewaya histolytica	S	1	0	1	1	57	57	other	1	observation	0	0	0	0
+5866	Babesia bigemina	S	0	1	0	2	59	29.5	other	1	observation	0	1	0	0
+85023	Microbacteriaceae	F	0	1	0	1	2242	2242	other	1	observation	0	1	0	0
+91061	Bacilli	C	0	1	0	1	27812	2.781e+04	other	1	observation	0	1	0	0
+353769	unclassified Gammaretrovirus	G1	0	1	0	2	112	56	other	1	observation	0	1	0	0
+590745	Mus musculus mobilized endogenous polytropic provirus	S	0	1	0	1	78	78	other	1	observation	0	1	0	0
+1686313	Fenollaria	G	0	1	0	4	40	10	other	1	observation	0	1	0	0
+1783272	Bacillati	K	0	1	0	3	96894	3.23e+04	other	1	observation	0	1	0	0
+1912216	Cutibacterium	G	0	1	0	2	57	28.5	other	1	observation	0	1	0	0

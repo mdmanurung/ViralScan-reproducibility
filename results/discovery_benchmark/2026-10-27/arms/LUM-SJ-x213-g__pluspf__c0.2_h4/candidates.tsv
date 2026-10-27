@@ -1,0 +1,58 @@
+taxid	name	rank	groups_called	groups_offcell	n_cells	reads	distinct_minimizers	minimizer_per_read	host_relation	db_has_9606	state	low_minimizer_diversity	offcell_dominant	host_lineage	viral_only_db
+9606	Homo sapiens	S	2031273	597872	30046	3176368	4946519	1.557	host	1	observation	0	0	1	0
+2759	Eukaryota	D	76611	9937	19989	151844	4974940	32.76	host_ancestor	1	observation	0	0	1	0
+33154	Opisthokonta	D1	4793	1247	4127	7335	4957650	675.9	host_ancestor	1	observation	0	0	1	0
+2	Bacteria	D	19	130	19	572	103840	181.5	other	1	observation	0	1	0	0
+1716	Corynebacterium	G	6	30	6	84	830	9.881	other	1	observation	0	1	0	0
+572419	Mycoplasma amphoriforme A39	S1	20	9	1	57	148	2.596	other	1	observation	0	0	0	0
+1912216	Cutibacterium	G	4	14	4	45	181	4.022	other	1	observation	0	1	0	0
+468	Moraxellaceae	F	5	10	5	37	1317	35.59	other	1	observation	0	1	0	0
+1224	Pseudomonadota	P	1	10	1	26	34382	1322	other	1	observation	0	1	0	0
+1760	Actinomycetes	C	1	10	1	46	17703	384.8	other	1	observation	0	1	0	0
+57493	Kocuria	G	0	10	0	34	94	2.765	other	1	observation	0	1	0	0
+1279	Staphylococcus	G	2	6	1	12	810	67.5	other	1	observation	0	1	0	0
+1747	Cutibacterium acnes	S	0	7	0	18	106	5.889	other	1	observation	0	1	0	0
+28216	Betaproteobacteria	C	1	3	1	5	5941	1188	other	1	observation	0	1	0	0
+55193	Malassezia	G	1	2	1	4	129	32.25	other	1	observation	0	1	0	0
+76775	Malassezia restricta	S	1	2	1	9	90	10	other	1	observation	0	1	0	0
+3379134	Pseudomonadati	K	0	3	0	9	57082	6342	other	1	observation	0	1	0	0
+475	Moraxella	G	0	2	0	4	130	32.5	other	1	observation	0	1	0	0
+1236	Gammaproteobacteria	C	1	1	1	15	18470	1231	other	1	observation	0	0	0	0
+2093	Mycoplasma	G	1	1	1	7	324	46.29	other	1	observation	0	0	0	0
+28211	Alphaproteobacteria	C	0	2	0	4	9598	2400	other	1	observation	0	1	0	0
+29393	Dolosigranulum	G	1	1	1	5	58	11.6	other	1	observation	0	0	0	0
+31957	Propionibacteriaceae	F	0	2	0	11	350	31.82	other	1	observation	0	1	0	0
+80840	Burkholderiales	O	2	0	2	15	4856	323.7	other	1	observation	0	0	0	0
+87882	Burkholderia cepacia complex	G1	0	2	0	4	351	87.75	other	1	observation	0	1	0	0
+201174	Actinomycetota	P	0	2	0	7	18078	2583	other	1	observation	0	1	0	0
+488447	Burkholderia contaminans	S	0	2	0	10	112	11.2	other	1	observation	0	1	0	0
+544448	Mycoplasmatota	P	0	2	0	6	1040	173.3	other	1	observation	0	1	0	0
+1783272	Bacillati	K	0	2	0	4	43901	1.098e+04	other	1	observation	0	1	0	0
+2895353	Telluria group	F1	0	2	0	9	328	36.44	other	1	observation	0	1	0	0
+286	Pseudomonas	G	0	1	0	1	3242	3242	other	1	observation	0	1	0	0
+356	Hyphomicrobiales	O	0	1	0	1	4558	4558	other	1	observation	0	1	0	0
+480	Moraxella catarrhalis	S	0	1	0	3	22	7.333	other	1	observation	0	1	0	0
+976	Bacteroidota	P	0	1	0	1	14078	1.408e+04	other	1	observation	0	1	0	0
+1260	Finegoldia magna	S	0	1	0	2	45	22.5	other	1	observation	0	1	0	0
+1268	Micrococcaceae	F	0	1	0	3	1075	358.3	other	1	observation	0	1	0	0
+1282	Staphylococcus epidermidis	S	0	1	0	3	55	18.33	other	1	observation	0	1	0	0
+1385	Caryophanales	O	0	1	0	2	11458	5729	other	1	observation	0	1	0	0
+1762	Mycobacteriaceae	F	0	1	0	1	976	976	other	1	observation	0	1	0	0
+32008	Burkholderia	G	0	1	0	8	684	85.5	other	1	observation	0	1	0	0
+34072	Variovorax	G	0	1	0	3	345	115	other	1	observation	0	1	0	0
+53335	Pantoea	G	1	0	1	3	501	167	other	1	observation	0	0	0	0
+71999	Kocuria palustris	S	0	1	0	1	7	7	other	1	observation	1	1	0	0
+80864	Comamonadaceae	F	0	1	0	1	1180	1180	other	1	observation	0	1	0	0
+84566	Sphingobacteriaceae	F	0	1	0	6	1430	238.3	other	1	observation	0	1	0	0
+90964	Staphylococcaceae	F	0	1	0	1	1044	1044	other	1	observation	0	1	0	0
+91061	Bacilli	C	0	1	0	1	14836	1.484e+04	other	1	observation	0	1	0	0
+91347	Enterobacterales	O	1	0	1	7	4617	659.6	other	1	observation	0	0	0	0
+119045	Methylobacteriaceae	F	0	1	0	3	403	134.3	other	1	observation	0	1	0	0
+149698	Massilia	G	0	1	0	1	166	166	other	1	observation	0	1	0	0
+186828	Carnobacteriaceae	F	0	1	0	1	262	262	other	1	observation	0	1	0	0
+204455	Rhodobacterales	O	0	1	0	6	1408	234.7	other	1	observation	0	1	0	0
+204457	Sphingomonadales	O	0	1	0	3	1414	471.3	other	1	observation	0	1	0	0
+249058	Gordonia otitidis	S	0	1	0	1	8	8	other	1	observation	1	1	0	0
+452284	Ustilaginomycotina	P1	1	0	1	1	243	243	other	1	observation	0	0	0	0
+1903409	Erwiniaceae	F	1	0	1	1	802	802	other	1	observation	0	0	0	0
+2984843	Methylobacterium flocculans	S	1	0	1	3	71	23.67	other	1	observation	0	0	0	0
