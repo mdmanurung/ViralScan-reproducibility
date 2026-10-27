@@ -60,7 +60,7 @@ from scipy import sparse
 # Paths — all absolute, pinned to specific run  ANALYSIS_OK[file-selection]
 # ---------------------------------------------------------------------------
 KB = Path(
-    "/exports/para-lipg-hpc/mdmanurung/ViralScan/benchmark_runs"
+    "/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/benchmark_runs"
     "/reference_strategy_2026-06-28_fresh12b/runs/ebv__viralscan__combined"
     "/SRR12682296/kb-python"
 )
@@ -73,7 +73,7 @@ GENES_FILE       = KB / "counts_unfiltered" / "cells_x_genes.genes.txt"
 # matches the benchmark run it was built with (t2g line count = 230901, same as
 # transcripts.txt — confirmed by wc -l). No glob or latest-file selection is used.
 T2G_FILE   = Path(
-    "/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_showcase"
+    "/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/viralscan_showcase"
     "/viralscan_showcase/fullrun/refs/merged/t2g_plus_anellovirus.txt"
 )
 ADATA_FILE = KB / "counts_unfiltered" / "adata.h5ad"
@@ -486,7 +486,7 @@ REPO_ROOT = Path(os.environ.get("VIRALSCAN_PKG", "/exports/para-lipg-hpc/mdmanur
 sys.path.insert(0, str(REPO_ROOT / "src"))
 
 KB = Path(
-    "/exports/para-lipg-hpc/mdmanurung/ViralScan/benchmark_runs"
+    "/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/benchmark_runs"
     "/reference_strategy_2026-06-28_fresh12b/runs/ebv__viralscan__combined"
     "/SRR12682296/kb-python"
 )
@@ -495,7 +495,7 @@ EC_FILE = KB / "matrix.ec"
 TRANSCRIPTS_FILE = KB / "transcripts.txt"
 BARCODES_FILE = KB / "counts_unfiltered" / "cells_x_genes.barcodes.txt"
 T2G_FILE = Path(
-    "/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_showcase"
+    "/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/viralscan_showcase"
     "/viralscan_showcase/fullrun/refs/merged/t2g_plus_anellovirus.txt"
 )
 ADATA_FILE = KB / "counts_unfiltered" / "adata.h5ad"

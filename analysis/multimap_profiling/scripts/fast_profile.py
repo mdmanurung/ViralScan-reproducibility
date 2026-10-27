@@ -64,7 +64,7 @@ from scipy import sparse
 # Paths — all absolute, pinned to specific run  ANALYSIS_OK[file-selection]
 # ---------------------------------------------------------------------------
 KB = Path(
-    "/exports/para-lipg-hpc/mdmanurung/ViralScan/benchmark_runs"
+    "/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/benchmark_runs"
     "/reference_strategy_2026-06-28_fresh12b/runs/ebv__viralscan__combined"
     "/SRR12682296/kb-python"
 )
@@ -76,7 +76,7 @@ GENES_FILE       = KB / "counts_unfiltered" / "cells_x_genes.genes.txt"
 # ANALYSIS_OK[file-selection]: pinned to absolute path; t2g line count = 230901
 # matches transcripts.txt (confirmed by wc -l).
 T2G_FILE   = Path(
-    "/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_showcase"
+    "/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/viralscan_showcase"
     "/viralscan_showcase/fullrun/refs/merged/t2g_plus_anellovirus.txt"
 )
 ADATA_FILE = KB / "counts_unfiltered" / "adata.h5ad"

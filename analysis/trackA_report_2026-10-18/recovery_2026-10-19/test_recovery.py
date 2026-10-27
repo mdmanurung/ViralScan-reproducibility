@@ -12,7 +12,7 @@ from types import SimpleNamespace
 import pytest
 
 HERE = Path(__file__).resolve().parent
-PINNED = Path("/exports/archive/hg-funcgenom-research/mdmanurung/vs_pinned/97a64f6/scripts/plant_anello_10x.py")
+PINNED = Path("/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/pinned_snapshots/vs_pinned/97a64f6/scripts/plant_anello_10x.py")
 
 
 @pytest.mark.parametrize("read_len", [64, 98])
