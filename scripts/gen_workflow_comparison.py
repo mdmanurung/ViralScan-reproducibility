@@ -163,12 +163,21 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--check", action="store_true", help="exit 1 if the page is stale")
     args = parser.parse_args(argv)
     text = render()
+    # The package page may start with a Sphinx front-matter block (``---\norphan: true\n---``, docs reorg
+    # 2026-10-27); it belongs to the package's doc build, so keep it and compare the body only.
+    front, body = "", ""
+    if DOC.is_file():
+        body = DOC.read_text(encoding="utf-8")
+        if body.startswith("---\n"):
+            end = body.find("\n---\n", 4)
+            if end != -1:
+                front, body = body[: end + 5], body[end + 5 :].lstrip("\n")
     if args.check:
-        if not DOC.is_file() or DOC.read_text(encoding="utf-8") != text:
+        if not DOC.is_file() or body != text:
             print(f"{DOC} is stale; run scripts/gen_workflow_comparison.py", file=sys.stderr)
             return 1
         return 0
-    DOC.write_text(text, encoding="utf-8")
+    DOC.write_text(front + ("\n" if front else "") + text, encoding="utf-8")
     return 0
 
 
