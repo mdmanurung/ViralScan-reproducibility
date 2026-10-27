@@ -1,0 +1,248 @@
+{
+ "rule1": {
+  "pluspf": {
+   "reason": "no rule-2 k at the default (none)",
+   "result": "not_assessed"
+  },
+  "viral": {
+   "reason": "no rule-2 k at the default (none)",
+   "result": "not_assessed"
+  }
+ },
+ "rule2": {
+  "pluspf": {
+   "0.0/2": {
+    "k_negatives": 12616,
+    "panel_below_k": [
+     "LUM-SJ-x213-g"
+    ],
+    "result": "none"
+   },
+   "0.0/3": {
+    "k_negatives": 9666,
+    "panel_below_k": [
+     "LUM-SJ-x213-g"
+    ],
+    "result": "none"
+   },
+   "0.0/4": {
+    "k_negatives": 3886,
+    "panel_below_k": [
+     "LUM-SJ-x213-g"
+    ],
+    "result": "none"
+   },
+   "0.05/2": {
+    "k_negatives": 1689,
+    "panel_below_k": [
+     "LUM-SJ-x213-g"
+    ],
+    "result": "none"
+   },
+   "0.05/3": {
+    "k_negatives": 1669,
+    "panel_below_k": [
+     "LUM-SJ-x213-g"
+    ],
+    "result": "none"
+   },
+   "0.05/4": {
+    "k_negatives": 1648,
+    "panel_below_k": [
+     "LUM-SJ-x213-g"
+    ],
+    "result": "none"
+   },
+   "0.05/4/notrim": {
+    "k_negatives": 1645,
+    "panel_below_k": [
+     "LUM-SJ-x213-g"
+    ],
+    "result": "none"
+   },
+   "0.1/2": {
+    "k_negatives": 341,
+    "panel_below_k": [
+     "LUM-SJ-x213-g"
+    ],
+    "result": "none"
+   },
+   "0.1/3": {
+    "k_negatives": 341,
+    "panel_below_k": [
+     "LUM-SJ-x213-g"
+    ],
+    "result": "none"
+   },
+   "0.1/4": {
+    "k_negatives": 288,
+    "panel_below_k": [
+     "LUM-SJ-x213-g"
+    ],
+    "result": "none"
+   },
+   "0.2/2": {
+    "k_negatives": 75,
+    "panel_below_k": [
+     "LUM-SJ-x213-g"
+    ],
+    "result": "none"
+   },
+   "0.2/3": {
+    "k_negatives": 68,
+    "panel_below_k": [
+     "LUM-SJ-x213-g"
+    ],
+    "result": "none"
+   },
+   "0.2/4": {
+    "k_negatives": 67,
+    "panel_below_k": [
+     "LUM-SJ-x213-g"
+    ],
+    "result": "none"
+   }
+  },
+  "viral": {
+   "0.0/2": {
+    "k_negatives": 1,
+    "panel_below_k": [
+     "SRR12682296",
+     "GSM6416022",
+     "GSM3511335",
+     "LUM-SJ-x213-g"
+    ],
+    "result": "none"
+   },
+   "0.0/3": {
+    "k_negatives": 1,
+    "panel_below_k": [
+     "SRR12682296",
+     "GSM6416022",
+     "GSM3511335",
+     "LUM-SJ-x213-g"
+    ],
+    "result": "none"
+   },
+   "0.0/4": {
+    "k_negatives": 1,
+    "panel_below_k": [
+     "SRR12682296",
+     "GSM6416022",
+     "GSM3511335",
+     "LUM-SJ-x213-g"
+    ],
+    "result": "none"
+   },
+   "0.05/2": {
+    "k_negatives": 1,
+    "panel_below_k": [
+     "SRR12682296",
+     "GSM6416022",
+     "GSM3511335",
+     "LUM-SJ-x213-g"
+    ],
+    "result": "none"
+   },
+   "0.05/3": {
+    "k_negatives": 1,
+    "panel_below_k": [
+     "SRR12682296",
+     "GSM6416022",
+     "GSM3511335",
+     "LUM-SJ-x213-g"
+    ],
+    "result": "none"
+   },
+   "0.05/4": {
+    "k_negatives": 1,
+    "panel_below_k": [
+     "SRR12682296",
+     "GSM6416022",
+     "GSM3511335",
+     "LUM-SJ-x213-g"
+    ],
+    "result": "none"
+   },
+   "0.05/4/notrim": {
+    "k_negatives": 1,
+    "panel_below_k": [
+     "SRR12682296",
+     "GSM6416022",
+     "GSM3511335",
+     "LUM-SJ-x213-g"
+    ],
+    "result": "none"
+   },
+   "0.1/2": {
+    "k_negatives": 1,
+    "panel_below_k": [
+     "SRR12682296",
+     "GSM6416022",
+     "GSM3511335",
+     "LUM-SJ-x213-g"
+    ],
+    "result": "none"
+   },
+   "0.1/3": {
+    "k_negatives": 1,
+    "panel_below_k": [
+     "SRR12682296",
+     "GSM6416022",
+     "GSM3511335",
+     "LUM-SJ-x213-g"
+    ],
+    "result": "none"
+   },
+   "0.1/4": {
+    "k_negatives": 1,
+    "panel_below_k": [
+     "SRR12682296",
+     "GSM6416022",
+     "GSM3511335",
+     "LUM-SJ-x213-g"
+    ],
+    "result": "none"
+   },
+   "0.2/2": {
+    "k_negatives": 1,
+    "panel_below_k": [
+     "SRR12682296",
+     "GSM6416022",
+     "GSM3511335",
+     "LUM-SJ-x213-g"
+    ],
+    "result": "none"
+   },
+   "0.2/3": {
+    "k_negatives": 1,
+    "panel_below_k": [
+     "SRR12682296",
+     "GSM6416022",
+     "GSM3511335",
+     "LUM-SJ-x213-g"
+    ],
+    "result": "none"
+   },
+   "0.2/4": {
+    "k_negatives": 1,
+    "panel_below_k": [
+     "SRR12682296",
+     "GSM6416022",
+     "GSM3511335",
+     "LUM-SJ-x213-g"
+    ],
+    "result": "none"
+   }
+  }
+ },
+ "rule3": {
+  "reason": "spike-in only (protocol \u00a75.3)",
+  "result": "not_assessed"
+ },
+ "rule4": {
+  "note": "DBs side by side; viral-only DB capped at observation (G15)",
+  "result": "reported"
+ },
+ "rule5": "any rule above that could not be evaluated says not_assessed"
+}
