@@ -562,11 +562,12 @@
   "arms/SRR12682296__viral__c0.2_h4/qc.json": "37b478f3923c6cfd831a7094ae37a5e7cb96f281f0b0c32afb32db9a7346544f",
   "decisions.json": "8963d3822af84e5cacac2712a6c2b160d1ab916e046c72830a56b21095de7847",
   "metrics.tsv": "3f1c77b0d51212bcd78c3bc932b266b49c6b720e5e43026c0728925f7bd4bf20",
-  "offcell.tsv": "3155dc4379eabd09d7b27ea96c3b46bf6d65146af4550aedd74673a6e99770ba",
+  "offcell.tsv.gz": "97cf09b677af024bdadfb2405c5fa6dcbb06b3562ae66db837735cf724adfa40",
   "slurm_jobs.txt": "35fd0225058895a1a484773877248bf5ae77cbb7310af6508c4385d37526c6f3"
  },
  "missing_vs_protocol_6": [
   "per-arm candidate_states.tsv: not produced (rule 2 left prioritized unbuilt; states need run evidence the benchmark did not collect)",
   "sacct snapshot: not taken while the arrays ran; job IDs are in slurm_jobs.txt"
- ]
+ ],
+ "note": "offcell.tsv stored gzipped (gzip -9 -n) to stay under the 1 MB results/ size gate"
 }
