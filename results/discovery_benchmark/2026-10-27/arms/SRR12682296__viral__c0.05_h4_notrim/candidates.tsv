@@ -1,0 +1,24 @@
+taxid	name	rank	groups_called	groups_offcell	n_cells	reads	distinct_minimizers	minimizer_per_read	host_relation	db_has_9606	state	low_minimizer_diversity	offcell_dominant	host_lineage	viral_only_db
+10376	human gammaherpesvirus 4	S1	919847	120452	2597	1802281	37824	0.02099	other	0	observation	0	0	0	1
+67082	BeAn 58058 virus	S	19480	1683	2098	26943	80	0.002969	other	0	observation	0	0	0	1
+1969841	Proteus phage VB_PmiS-Isfahan	S1	11220	1348	2079	15254	227	0.01488	other	0	observation	0	0	0	1
+166122	Human endogenous retrovirus K113	S1	7034	397	1948	9565	368	0.03847	other	0	observation	0	0	0	1
+2886930	Escherichia phage phiX174	S1	4019	466	1676	20688	1681	0.08125	other	0	observation	0	0	0	1
+10375	Lymphocryptovirus	G	2779	417	565	4222	41280	9.777	other	0	observation	0	0	0	1
+106332	Papiine gammaherpesvirus 1	S1	1125	121	291	2099	58	0.02763	other	0	observation	0	0	0	1
+12509	Human herpesvirus 4 type 2	S2	883	222	333	1233	551	0.4469	other	0	observation	0	0	0	1
+2169863	Papiine betaherpesvirus 3	S1	48	3	48	62	50	0.8065	other	0	observation	0	0	0	1
+3701015	Eubullaviridae	F	14	1	14	54	1762	32.63	other	0	observation	0	0	0	1
+2731360	Heunggongvirae	K	11	1	11	0	46039		other	0	observation	0	0	0	1
+455364	Chrysochromulina ericina virus	S	9	2	9	13	15	1.154	other	0	observation	1	0	0	1
+2341050	macacine gammaherpesvirus 13	S1	8	1	8	19	213	11.21	other	0	observation	0	0	0	1
+2560569	macacine gammaherpesvirus 10	S1	8	1	8	16	142	8.875	other	0	observation	0	0	0	1
+153135	Gammaretrovirus	G	5	2	5	7	46	6.571	other	0	observation	0	0	0	1
+45455	Macacine gammaherpesvirus 4	S1	4	1	4	9	140	15.56	other	0	observation	0	0	0	1
+11855	Mason-Pfizer monkey virus	S1	3	0	3	3	5	1.667	other	0	observation	1	0	0	1
+159604	gorilline gammaherpesvirus 1	S1	1	1	1	3	26	8.667	other	0	observation	0	0	0	1
+1891767	Betapolyomavirus macacae	S	0	2	0	2	17	8.5	other	0	observation	1	1	0	1
+159150	Shamonda virus	S1	0	1	0	1	6	6	other	0	observation	1	1	0	1
+338110	Escherichia phage NC29	S1	1	0	1	1	2	2	other	0	observation	1	0	0	1
+384642	Enterobacteria phage ID18	S1	1	0	1	1	8	8	other	0	observation	1	0	0	1
+3044761	Megavirus	G	1	0	1	1	58	58	other	0	observation	0	0	0	1

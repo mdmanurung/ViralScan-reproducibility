@@ -1,0 +1,44 @@
+taxid	name	rank	groups_called	groups_offcell	n_cells	reads	distinct_minimizers	minimizer_per_read	host_relation	db_has_9606	state	low_minimizer_diversity	offcell_dominant	host_lineage	viral_only_db
+32604	Human betaherpesvirus 6B	S1	5518744	5290600	16237	27525266	33443	0.001215	other	0	observation	0	0	0	1
+40272	Roseolovirus	G	121551	154538	14993	976022	57572	0.05899	other	0	observation	0	1	0	1
+1969841	Proteus phage VB_PmiS-Isfahan	S1	6074	9763	3495	34109	241	0.007066	other	0	observation	0	1	0	1
+166122	Human endogenous retrovirus K113	S1	1001	377	890	2228	1223	0.5489	other	0	observation	0	0	0	1
+153135	Gammaretrovirus	G	16	716	16	1021	2141	2.097	other	0	observation	0	1	0	1
+67082	BeAn 58058 virus	S	531	150	494	929	215	0.2314	other	0	observation	0	0	0	1
+2786389	ssRNA phage SRR5466337_3	S1	150	161	33	724	36	0.04972	other	0	observation	0	1	0	1
+2786405	ssRNA phage SRR5466369_2	S1	88	66	23	411	72	0.1752	other	0	observation	0	0	0	1
+32603	Human betaherpesvirus 6A	S1	84	55	64	431	10776	25	other	0	observation	0	0	0	1
+482822	Escherichia phage DE3	S2	49	43	13	224	380	1.696	other	0	observation	0	0	0	1
+11757	Mouse mammary tumor virus	S1	2	61	2	71	656	9.239	other	0	observation	0	1	0	1
+590745	Mus musculus mobilized endogenous polytropic provirus	S	1	52	1	78	538	6.897	other	0	observation	0	1	0	1
+2731360	Heunggongvirae	K	31	16	30	37	100161	2707	other	0	observation	0	0	0	1
+11819	Spleen focus-forming virus	S	0	12	0	23	51	2.217	other	0	observation	0	1	0	1
+353769	unclassified Gammaretrovirus	G1	0	11	0	12	902	75.17	other	0	observation	0	1	0	1
+35269	Woodchuck hepatitis virus	S1	0	10	0	20	131	6.55	other	0	observation	0	1	0	1
+2716351	Escherichia phage 500465-1	S1	6	3	2	23	101	4.391	other	0	observation	0	0	0	1
+11676	Human immunodeficiency virus 1	S1	0	7	0	8	51	6.375	other	0	observation	0	1	0	1
+2946167	Peduoviridae	F	4	3	3	10	952	95.2	other	0	observation	0	0	0	1
+1981157	Traversvirus	G	2	4	1	12	109	9.083	other	0	observation	0	1	0	1
+1038068	PreXMRV-1	S2	0	5	0	5	126	25.2	other	0	observation	0	1	0	1
+11777	Feline sarcoma virus (STRAIN HARDY-ZUCKERMAN 4)	S2	2	1	2	4	33	8.25	other	0	observation	0	0	0	1
+44561	Murine type C retrovirus	S3	0	3	0	3	99	33	other	0	observation	0	1	0	1
+144353	Bovine viral diarrhea virus isolates and strains	S1	0	3	0	9	46	5.111	other	0	observation	0	1	0	1
+2842527	Hendrixvirinae	C2	3	0	1	5	30	6	other	0	observation	0	0	0	1
+2946085	Escherichia phage vB_EcoM-613R3	S1	1	2	1	7	106	15.14	other	0	observation	0	1	0	1
+10682	Enterobacteria phage P7	S1	1	1	1	2	21	10.5	other	0	observation	0	0	0	1
+11788	Abelson murine leukemia virus	S	0	2	0	3	107	35.67	other	0	observation	0	1	0	1
+11801	Moloney murine leukemia virus	S2	1	1	1	4	79	19.75	other	0	observation	0	0	0	1
+2731619	Caudoviricetes	C	0	2	0	15	40279	2685	other	0	observation	0	1	0	1
+2886930	Escherichia phage phiX174	S1	1	1	1	98	1318	13.45	other	0	observation	0	0	0	1
+10286	Betaentomopoxvirus	G	1	0	1	1	1178	1178	other	0	observation	0	0	0	1
+11855	Mason-Pfizer monkey virus	S1	0	1	0	1	14	14	other	0	observation	1	1	0	1
+54315	Bovine viral diarrhea virus 2	S1	0	1	0	3	33	11	other	0	observation	0	1	0	1
+159150	Shamonda virus	S1	1	0	1	3	9	3	other	0	observation	1	0	0	1
+548681	Herpesvirales	O	0	1	0	2	60765	3.038e+04	other	0	observation	0	1	0	1
+1307957	Clanis bilineata nucleopolyhedrovirus	S1	0	1	0	2	54	27	other	0	observation	0	1	0	1
+1407493	Shigella phage SfIV	S	0	1	0	1	20	20	other	0	observation	0	1	0	1
+2169863	Papiine betaherpesvirus 3	S1	1	0	1	2	76	38	other	0	observation	0	0	0	1
+2716352	Escherichia phage 500465-2	S1	0	1	0	1	39	39	other	0	observation	0	1	0	1
+2732007	Nucleocytoviricota	P	1	0	1	1	26383	2.638e+04	other	0	observation	0	0	0	1
+3044648	Megamimivirinae	F1	0	1	0	1	9903	9903	other	0	observation	0	1	0	1
+3424297	Caudoviricetes incertae sedis	C1	1	0	1	3	27457	9152	other	0	observation	0	0	0	1

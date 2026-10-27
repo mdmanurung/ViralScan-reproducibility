@@ -1,0 +1,16 @@
+taxid	name	rank	groups_called	groups_offcell	n_cells	reads	distinct_minimizers	minimizer_per_read	host_relation	db_has_9606	state	low_minimizer_diversity	offcell_dominant	host_lineage	viral_only_db
+9606	Homo sapiens	S	522860	52447	2690	681492	1526528	2.24	host	1	observation	0	0	1	0
+10376	human gammaherpesvirus 4	S1	259959	32757	2284	405340	5237	0.01292	other	1	observation	0	0	0	0
+2759	Eukaryota	D	14807	961	2217	19818	1531054	77.26	host_ancestor	1	observation	0	0	1	0
+10375	Lymphocryptovirus	G	2995	353	491	4745	5722	1.206	other	1	observation	0	0	0	0
+33154	Opisthokonta	D1	101	19	93	139	1529731	1.101e+04	host_ancestor	1	observation	0	0	1	0
+12509	Human herpesvirus 4 type 2	S2	34	6	29	40	83	2.075	other	1	observation	0	0	0	0
+139	Borreliella burgdorferi	S	8	2	8	10	9	0.9	other	1	observation	1	0	0	0
+1404	Priestia megaterium	S	7	1	7	13	25	1.923	other	1	observation	0	0	0	0
+78331	Mycobacterium canetti	S	4	3	4	10	16	1.6	other	1	observation	1	0	0	0
+208348	Puccinia triticina	S	2	0	2	3	51	17	other	1	observation	0	0	0	0
+2	Bacteria	D	1	0	1	1	26382	2.638e+04	other	1	observation	0	0	0	0
+1224	Pseudomonadota	P	0	1	0	1	8941	8941	other	1	observation	0	1	0	0
+1760	Actinomycetes	C	1	0	1	1	6255	6255	other	1	observation	0	0	0	0
+5855	Plasmodium vivax	S	1	0	1	1	23	23	other	1	observation	0	0	0	0
+1365647	Xanthomonas euvesicatoria pv. alfalfae CFBP 3836	S2	0	1	0	1	2	2	other	1	observation	1	1	0	0

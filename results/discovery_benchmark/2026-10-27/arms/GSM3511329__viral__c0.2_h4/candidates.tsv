@@ -1,0 +1,8 @@
+taxid	name	rank	groups_called	groups_offcell	n_cells	reads	distinct_minimizers	minimizer_per_read	host_relation	db_has_9606	state	low_minimizer_diversity	offcell_dominant	host_lineage	viral_only_db
+1969841	Proteus phage VB_PmiS-Isfahan	S1	3798	30336	2269	44004	210	0.004772	other	0	observation	0	1	0	1
+67082	BeAn 58058 virus	S	1148	1521	930	4137	85	0.02055	other	0	observation	0	1	0	1
+166122	Human endogenous retrovirus K113	S1	364	410	331	1384	462	0.3338	other	0	observation	0	1	0	1
+10298	Human alphaherpesvirus 1	S1	0	19	0	19	187	9.842	other	0	observation	0	1	0	1
+2169863	Papiine betaherpesvirus 3	S1	1	3	1	4	41	10.25	other	0	observation	0	1	0	1
+11855	Mason-Pfizer monkey virus	S1	0	1	0	1	6	6	other	0	observation	1	1	0	1
+2886930	Escherichia phage phiX174	S1	1	0	1	1	14	14	other	0	observation	1	0	0	1

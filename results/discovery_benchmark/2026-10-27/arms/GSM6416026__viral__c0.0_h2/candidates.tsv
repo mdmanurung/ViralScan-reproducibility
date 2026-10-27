@@ -1,0 +1,251 @@
+taxid	name	rank	groups_called	groups_offcell	n_cells	reads	distinct_minimizers	minimizer_per_read	host_relation	db_has_9606	state	low_minimizer_diversity	offcell_dominant	host_lineage	viral_only_db
+1969841	Proteus phage VB_PmiS-Isfahan	S1	14065	4650	4341	72639	239	0.00329	other	0	observation	0	0	0	1
+67082	BeAn 58058 virus	S	13525	3240	5206	29954	114	0.003806	other	0	observation	0	0	0	1
+159150	Shamonda virus	S1	4589	4087	2035	15263	10	0.0006552	other	0	observation	1	0	0	1
+3052441	Orthobunyavirus simbuense	S	1458	1502	988	10353	5	0.000483	other	0	observation	1	1	0	1
+56947	Choristoneura fumiferana granulovirus	S1	750	851	562	3014	33	0.01095	other	0	observation	0	1	0	1
+35269	Woodchuck hepatitis virus	S1	1149	398	919	5357	137	0.02557	other	0	observation	0	0	0	1
+153135	Gammaretrovirus	G	69	1339	69	1528	1738	1.137	other	0	observation	0	1	0	1
+2169863	Papiine betaherpesvirus 3	S1	628	139	577	1435	49	0.03415	other	0	observation	0	0	0	1
+166122	Human endogenous retrovirus K113	S1	520	113	483	1311	479	0.3654	other	0	observation	0	0	0	1
+11676	Human immunodeficiency virus 1	S1	445	173	418	2266	465	0.2052	other	0	observation	0	0	0	1
+660954	Oxbow virus	S1	208	155	193	436	6	0.01376	other	0	observation	1	0	0	1
+1531287	Rukutama virus	S1	1	210	1	410	3	0.007317	other	0	observation	1	1	0	1
+590745	Mus musculus mobilized endogenous polytropic provirus	S	2	119	2	136	479	3.522	other	0	observation	0	1	0	1
+2732514	Revtraviricetes	C	61	21	57	7	3130	447.1	other	0	observation	0	0	0	1
+1272948	Matariya virus	S1	0	66	0	93	4	0.04301	other	0	observation	1	1	0	1
+11819	Spleen focus-forming virus	S	0	60	0	62	64	1.032	other	0	observation	0	1	0	1
+2786389	ssRNA phage SRR5466337_3	S1	27	14	1	118	36	0.3051	other	0	observation	0	0	0	1
+10280	Molluscum contagiosum virus subtype 1	S2	35	4	35	43	11	0.2558	other	0	observation	1	0	0	1
+2107708	Pandoravirus neocaledonia	S	23	8	20	106	150	1.415	other	0	observation	0	0	0	1
+44561	Murine type C retrovirus	S3	1	22	1	27	119	4.407	other	0	observation	0	1	0	1
+11780	Snyder-Theilen feline sarcoma virus	S1	16	3	16	39	46	1.179	other	0	observation	0	0	0	1
+1038068	PreXMRV-1	S2	1	16	1	17	55	3.235	other	0	observation	0	1	0	1
+1247379	Moumouvirus goulette	S1	14	3	14	19	280	14.74	other	0	observation	0	0	0	1
+32604	Human betaherpesvirus 6B	S1	0	15	0	17	361	21.24	other	0	observation	0	1	0	1
+2024608	Bodo saltans virus	S1	12	2	12	17	348	20.47	other	0	observation	0	0	0	1
+2109587	Moumouvirus australiensis	S1	13	1	13	14	311	22.21	other	0	observation	0	0	0	1
+1269028	Acanthamoeba polyphaga moumouvirus	S1	10	3	10	14	292	20.86	other	0	observation	0	0	0	1
+3060017	Fadolivirus algeromassiliense	S	10	2	10	16	479	29.94	other	0	observation	0	0	0	1
+11757	Mouse mammary tumor virus	S1	0	10	0	11	123	11.18	other	0	observation	0	1	0	1
+2126985	Tupanvirus soda lake	S1	7	3	7	12	323	26.92	other	0	observation	0	0	0	1
+2811091	Cotonvirus japonicus	S1	6	4	6	12	454	37.83	other	0	observation	0	0	0	1
+212035	Acanthamoeba polyphaga mimivirus	S1	5	4	5	9	254	28.22	other	0	observation	0	0	0	1
+1842663	Powai lake megavirus	S1	8	1	8	9	303	33.67	other	0	observation	0	0	0	1
+2060617	Tetraselmis virus 1	S1	8	1	8	10	56	5.6	other	0	observation	0	0	0	1
+59376	Ectropis obliqua nucleopolyhedrovirus	S1	7	1	7	8	28	3.5	other	0	observation	0	0	0	1
+2023057	Orpheovirus IHUMI-LCC2	S1	7	1	7	10	391	39.1	other	0	observation	0	0	0	1
+2126984	Tupanvirus deep ocean	S1	5	3	5	10	355	35.5	other	0	observation	0	0	0	1
+11807	Harvey murine sarcoma virus	S1	4	3	4	7	30	4.286	other	0	observation	0	0	0	1
+455364	Chrysochromulina ericina virus	S	4	3	4	11	140	12.73	other	0	observation	0	0	0	1
+1499987	Prymnesium kappa virus	S1	5	2	5	9	455	50.56	other	0	observation	0	0	0	1
+1678078	Mollivirus sibericum	S	7	0	7	12	60	5	other	0	observation	0	0	0	1
+2786405	ssRNA phage SRR5466369_2	S1	2	5	1	33	85	2.576	other	0	observation	0	1	0	1
+353769	unclassified Gammaretrovirus	G1	0	6	0	6	697	116.2	other	0	observation	0	1	0	1
+482822	Escherichia phage DE3	S2	4	2	1	12	185	15.42	other	0	observation	0	0	0	1
+1349410	Pandoravirus salinus	S	6	0	6	11	190	17.27	other	0	observation	0	0	0	1
+10242	Orthopoxvirus	G	4	1	4	6	157	26.17	other	0	observation	0	0	0	1
+10381	Saimiriine gammaherpesvirus 2	S1	5	0	5	13	29	2.231	other	0	observation	0	0	0	1
+11855	Mason-Pfizer monkey virus	S1	4	1	4	14	9	0.6429	other	0	observation	1	0	0	1
+11878	Avian sarcoma virus CT10	S1	4	1	4	9	6	0.6667	other	0	observation	1	0	0	1
+930275	Cotia virus SPAn232	S2	4	1	4	5	56	11.2	other	0	observation	0	0	0	1
+1293572	Mythimna separata entomopoxvirus 'L'	S2	3	2	3	5	93	18.6	other	0	observation	0	0	0	1
+3044761	Megavirus	G	3	2	3	5	651	130.2	other	0	observation	0	0	0	1
+11788	Abelson murine leukemia virus	S	2	2	2	4	24	6	other	0	observation	0	0	0	1
+173707	Streptococcus phage phiNIH1.1	S	4	0	4	4	6	1.5	other	0	observation	1	0	0	1
+345198	Invertebrate iridescent virus 22	S1	4	0	4	4	100	25	other	0	observation	0	0	0	1
+2003309	Bat associated circovirus 4	S1	4	0	4	8	3	0.375	other	0	observation	1	0	0	1
+2072024	Mocis latipes granulovirus	S1	3	1	3	4	10	2.5	other	0	observation	1	0	0	1
+2293305	Spinybacked orbweaver circular virus 1	S	4	0	4	4	4	1	other	0	observation	1	0	0	1
+2731360	Heunggongvirae	K	4	0	4	5	19356	3871	other	0	observation	0	0	0	1
+11095	Orthopestivirus	G	3	0	3	6	53	8.833	other	0	observation	0	0	0	1
+11777	Feline sarcoma virus (STRAIN HARDY-ZUCKERMAN 4)	S2	2	1	1	3	14	4.667	other	0	observation	1	0	0	1
+11795	Friend murine leukemia virus	S2	0	3	0	3	11	3.667	other	0	observation	1	1	0	1
+42683	Paramecium bursaria Chlorella virus CVA-1	S2	2	1	2	5	14	2.8	other	0	observation	1	0	0	1
+93386	Columbid alphaherpesvirus 1	S1	1	2	1	4	19	4.75	other	0	observation	1	1	0	1
+1293539	Choristoneura rosaceana entomopoxvirus 'L'	S2	2	1	2	3	54	18	other	0	observation	0	0	0	1
+1307957	Clanis bilineata nucleopolyhedrovirus	S1	3	0	3	3	23	7.667	other	0	observation	0	0	0	1
+1572712	Geobacillus virus E3	S	2	1	2	4	20	5	other	0	observation	0	0	0	1
+1732180	Sulfolobales Virus YNP2	S	3	0	3	3	5	1.667	other	0	observation	1	0	0	1
+1857843	Kayvirus	G	1	2	1	4	72	18	other	0	observation	0	1	0	1
+2100419	Planarian secretory cell nidovirus	S2	2	1	2	3	11	3.667	other	0	observation	1	0	0	1
+2652755	Ruhugu virus	S1	3	0	1	3	3	1	other	0	observation	1	0	0	1
+2742114	Salmonella phage SAP012	S1	2	1	2	6	6	1	other	0	observation	1	0	0	1
+2886930	Escherichia phage phiX174	S1	2	1	2	328	1605	4.893	other	0	observation	0	0	0	1
+2908167	Staphylococcus phage Twort	S1	2	1	2	5	23	4.6	other	0	observation	0	0	0	1
+3424297	Caudoviricetes incertae sedis	C1	3	0	3	6	11889	1982	other	0	observation	0	0	0	1
+10371	Equid gammaherpesvirus 5	S1	2	0	2	2	22	11	other	0	observation	0	0	0	1
+11885	Fujinami sarcoma virus	S1	2	0	2	2	6	3	other	0	observation	1	0	0	1
+28321	Betaentomopoxvirus amoorei	S	2	0	2	2	73	36.5	other	0	observation	0	0	0	1
+40272	Roseolovirus	G	0	2	0	2	558	279	other	0	observation	0	1	0	1
+47418	Phocid alphaherpesvirus 1	S1	1	1	1	2	22	11	other	0	observation	0	0	0	1
+85618	Ateline gammaherpesvirus 3	S1	1	1	1	2	11	5.5	other	0	observation	1	0	0	1
+261939	Ostreid herpesvirus 1	S1	1	1	1	2	33	16.5	other	0	observation	0	0	0	1
+315393	Mimivirus	G	1	1	1	2	474	237	other	0	observation	0	0	0	1
+419435	Ichnoviriform fumiferanae	S	2	0	2	2	29	14.5	other	0	observation	0	0	0	1
+455649	Vespertiliovirus SkV1CR23x	S	1	1	1	2	6	3	other	0	observation	1	0	0	1
+558017	Betabaculovirus	G	2	0	2	2	399	199.5	other	0	observation	0	0	0	1
+693272	Cafeteria roenbergensis virus BV-PW1	S2	1	1	1	3	210	70	other	0	observation	0	0	0	1
+999883	Lausannevirus	S1	2	0	2	2	33	16.5	other	0	observation	0	0	0	1
+1076255	Yokapox virus	S1	2	0	2	2	46	23	other	0	observation	0	0	0	1
+1128151	Mimivirus terra2	S	1	1	1	2	53	26.5	other	0	observation	0	0	0	1
+1414655	Pepper chlorotic spot virus	S1	0	2	0	2	7	3.5	other	0	observation	1	1	0	1
+1524910	Staphylococcus phage MCE-2014	S1	2	0	2	2	5	2.5	other	0	observation	1	0	0	1
+1580580	Agrotis segetum nucleopolyhedrovirus B	S1	1	1	1	2	19	9.5	other	0	observation	1	0	0	1
+1586712	Yellowstone lake mimivirus	S	0	2	0	2	19	9.5	other	0	observation	1	1	0	1
+1826170	Tokyovirus A1	S	1	1	1	2	59	29.5	other	0	observation	0	0	0	1
+1837876	Acinetobacter phage vB_AbaM_ME3	S1	1	1	1	2	29	14.5	other	0	observation	0	0	0	1
+1932881	Pacmanvirus A23	S	2	0	2	2	82	41	other	0	observation	0	0	0	1
+2065203	Proteus phage phiP4-3	S1	2	0	2	2	18	9	other	0	observation	1	0	0	1
+2486603	Mauternbach virus	S1	2	0	2	2	38	19	other	0	observation	0	0	0	1
+2547425	Tenacibaculum phage PTm1	S1	2	0	2	2	47	23.5	other	0	observation	0	0	0	1
+2560777	Spheniscid alphaherpesvirus 1	S1	2	0	2	3	13	4.333	other	0	observation	1	0	0	1
+2565304	Chrysochromulina parva virus	S	1	1	1	2	126	63	other	0	observation	0	0	0	1
+2704413	Lymphocystis disease virus 4	S1	2	0	2	3	86	28.67	other	0	observation	0	0	0	1
+2731619	Caudoviricetes	C	1	1	1	2	17175	8588	other	0	observation	0	0	0	1
+2732007	Nucleocytoviricota	P	1	1	1	2	9028	4514	other	0	observation	0	0	0	1
+2732968	Schiekvirus	G	2	0	1	35	49	1.4	other	0	observation	0	0	0	1
+2732973	Baylorvirus	G	2	0	2	2	7	3.5	other	0	observation	1	0	0	1
+2875839	Escherichia phage MLP1	S1	2	0	2	2	3	1.5	other	0	observation	1	0	0	1
+2986398	uncultured phage cr54_1	S1	2	0	2	3	14	4.667	other	0	observation	1	0	0	1
+2986412	uncultured phage cr149_1	S1	2	0	2	2	5	2.5	other	0	observation	1	0	0	1
+10260	Avipoxvirus	G	1	0	1	2	242	121	other	0	observation	0	0	0	1
+10261	Fowlpox virus	S1	1	0	1	1	45	45	other	0	observation	0	0	0	1
+10264	Pigeonpox virus	S1	1	0	1	2	29	14.5	other	0	observation	0	0	0	1
+10265	Capripoxvirus	G	1	0	1	1	72	72	other	0	observation	0	0	0	1
+10276	Swinepox virus	S1	0	1	0	1	22	22	other	0	observation	0	1	0	1
+10286	Betaentomopoxvirus	G	1	0	1	1	395	395	other	0	observation	0	0	0	1
+10288	Choristoneura biennis entomopoxvirus	S1	1	0	1	1	65	65	other	0	observation	0	0	0	1
+10497	African swine fever virus	S1	0	1	0	1	117	117	other	0	observation	0	1	0	1
+10682	Enterobacteria phage P7	S1	0	1	0	3	60	20	other	0	observation	0	1	0	1
+10814	Begomovirus	G	1	0	1	1	156	156	other	0	observation	0	0	0	1
+10827	Potato yellow mosaic virus	S1	1	0	1	1	2	2	other	0	observation	1	0	0	1
+11809	Moloney murine sarcoma virus	S1	0	1	0	1	9	9	other	0	observation	1	1	0	1
+11830	Murine osteosarcoma virus	S	0	1	0	2	1	0.5	other	0	observation	1	1	0	1
+11970	Woolly monkey sarcoma virus	S1	0	1	0	2	10	5	other	0	observation	1	1	0	1
+12215	Potato virus A	S1	1	0	1	1	1	1	other	0	observation	1	0	0	1
+28289	Cydia pomonella granulovirus	S1	0	1	0	1	15	15	other	0	observation	1	1	0	1
+36363	Lymphocystis disease virus 1	S1	1	0	1	1	36	36	other	0	observation	0	0	0	1
+44088	Canarypox virus	S1	1	0	1	1	43	43	other	0	observation	0	0	0	1
+51313	Helicoverpa armigera nucleopolyhedrovirus	S1	1	0	1	1	14	14	other	0	observation	1	0	0	1
+53988	Bracoviriform demolitoris	S	1	0	1	1	23	23	other	0	observation	0	0	0	1
+62099	Alphaentomopoxvirus acuprea	S	1	0	1	1	90	90	other	0	observation	0	0	0	1
+68347	Wiseana iridescent virus	S2	1	0	1	1	22	22	other	0	observation	0	0	0	1
+83440	Macropodid alphaherpesvirus 2	S1	1	0	1	1	14	14	other	0	observation	1	0	0	1
+98383	Plutella xylostella granulovirus	S1	0	1	0	1	15	15	other	0	observation	1	1	0	1
+111874	Neodiprion sertifer nucleopolyhedrovirus	S1	1	0	1	1	11	11	other	0	observation	1	0	0	1
+119164	Polerovirus	G	1	0	1	1	25	25	other	0	observation	0	0	0	1
+159144	Utinga virus	S1	1	0	1	1	6	6	other	0	observation	1	0	0	1
+170325	Canid alphaherpesvirus 1	S1	1	0	1	1	29	29	other	0	observation	0	0	0	1
+175814	Cestrum yellow leaf curling virus	S1	1	0	1	1	2	2	other	0	observation	1	0	0	1
+176106	Sulfolobus islandicus filamentous virus	S1	1	0	1	1	6	6	other	0	observation	1	0	0	1
+186789	Punavirus	G	1	0	1	2	78	39	other	0	observation	0	0	0	1
+188763	Panine betaherpesvirus 2	S1	1	0	1	1	28	28	other	0	observation	0	0	0	1
+249584	Lyssavirus caucasicus	S	1	0	1	1	1	1	other	0	observation	1	0	0	1
+251749	Phaeocystis globosa virus	S	0	1	0	2	81	40.5	other	0	observation	0	1	0	1
+256729	lymphocystis disease virus-China	S2	1	0	1	1	54	54	other	0	observation	0	0	0	1
+268746	Prochlorococcus phage P-SSM2	S1	1	0	1	2	24	12	other	0	observation	0	0	0	1
+271108	Bombyx mori nucleopolyhedrovirus	S1	1	0	1	1	12	12	other	0	observation	1	0	0	1
+307240	Bacillus phage GIL16c	S1	0	1	0	4	1	0.25	other	0	observation	1	1	0	1
+307448	Hyphantria cunea granulovirus	S1	1	0	1	1	24	24	other	0	observation	0	0	0	1
+376852	Goatpox virus Pellor	S2	0	1	0	1	12	12	other	0	observation	1	1	0	1
+380598	Paramecium bursaria Chlorella virus AR158	S	0	1	0	1	22	22	other	0	observation	0	1	0	1
+432587	Gryllus bimaculatus nudivirus	S1	0	1	0	1	37	37	other	0	observation	0	1	0	1
+444860	Synechococcus phage S-SM2	S1	1	0	1	1	18	18	other	0	observation	1	0	0	1
+447897	Mythimna unipuncta nucleopolyhedrovirus	S	1	0	1	1	41	41	other	0	observation	0	0	0	1
+508441	Ictalurid herpesvirus 2	S1	1	0	1	1	7	7	other	0	observation	1	0	0	1
+515320	Lamium leaf distortion virus	S1	1	0	1	2	4	2	other	0	observation	1	0	0	1
+542343	Adoxophyes orana nucleopolyhedrovirus	S	1	0	1	1	17	17	other	0	observation	1	0	0	1
+546803	Mycobacterium phage Cali	S1	1	0	1	1	1	1	other	0	observation	1	0	0	1
+549779	Mimiviridae	F	1	0	1	1	4251	4251	other	0	observation	0	0	0	1
+573172	Vibrio phage eugene 12A10	S	1	0	1	1	2	2	other	0	observation	1	0	0	1
+648998	Penguinpox virus	S1	1	0	1	1	30	30	other	0	observation	0	0	0	1
+686439	Clavibacter phage CMP1	S1	0	1	0	1	7	7	other	0	observation	1	1	0	1
+753670	Pea necrotic yellow dwarf virus	S1	0	1	0	1	2	2	other	0	observation	1	1	0	1
+764595	Bacillus phage W.Ph.	S1	1	0	1	2	17	8.5	other	0	observation	1	0	0	1
+994601	Planktothrix phage PaV-LD	S	0	1	0	1	14	14	other	0	observation	1	1	0	1
+1034149	Mycobacterium phage Vortex	S	0	1	0	2	2	1	other	0	observation	1	1	0	1
+1094892	Megavirus chiliensis	S1	1	0	1	2	281	140.5	other	0	observation	0	0	0	1
+1187894	Clostridium phage PhiS63	S	1	0	1	1	10	10	other	0	observation	1	0	0	1
+1237364	Escherichia phage HX01	S1	0	1	0	1	5	5	other	0	observation	1	1	0	1
+1246677	Norovirus GV	S2	0	1	0	1	4	4	other	0	observation	1	1	0	1
+1261101	Achimota virus 2	S1	0	1	0	1	2	2	other	0	observation	1	1	0	1
+1307956	Leucania separata nucleopolyhedrovirus	S1	1	0	1	1	22	22	other	0	observation	0	0	0	1
+1327968	Cellulophaga phage phi48:2	S	0	1	0	1	4	4	other	0	observation	1	1	0	1
+1329402	Eptesipox virus	S1	1	0	1	1	59	59	other	0	observation	0	0	0	1
+1340769	Staphylococcus phage phiIBB-SEP1	S1	1	0	1	1	10	10	other	0	observation	1	0	0	1
+1340810	Synechococcus phage ACG-2014h	S1	1	0	1	1	10	10	other	0	observation	1	0	0	1
+1406780	Acinetobacter phage Presley	S1	0	1	0	1	7	7	other	0	observation	1	1	0	1
+1411095	Clostridium phage CDMH1	S1	1	0	1	1	8	8	other	0	observation	1	0	0	1
+1421067	Tunisvirus fontaine2	S1	1	0	1	1	31	31	other	0	observation	0	0	0	1
+1446490	Escherichia phage FFH2	S1	0	1	0	1	2	2	other	0	observation	1	1	0	1
+1458860	Shewanella sp. phage 1/40	S	1	0	1	1	10	10	other	0	observation	1	0	0	1
+1458862	Shewanella sp. phage 1/44	S	0	1	0	1	4	4	other	0	observation	1	1	0	1
+1527469	Bacillus phage Bobb	S1	0	1	0	1	14	14	other	0	observation	1	1	0	1
+1527515	Idiomarinaceae phage Phi1M2-2	S	1	0	1	1	3	3	other	0	observation	1	0	0	1
+1529056	Penaeus monodon nudivirus	S1	1	0	1	1	17	17	other	0	observation	1	0	0	1
+1540097	Escherichia phage Pollock	S1	1	0	1	1	9	9	other	0	observation	1	0	0	1
+1560351	Goutanap virus	S	1	0	1	1	2	2	other	0	observation	1	0	0	1
+1567011	Clostridium phage phiCT19406C	S	1	0	1	1	8	8	other	0	observation	1	0	0	1
+1590650	Adelie penguin polyomavirus	S1	1	0	1	1	3	3	other	0	observation	1	0	0	1
+1592335	Pseudoplusia includens SNPV IE	S2	0	1	0	1	20	20	other	0	observation	0	1	0	1
+1642929	Lambdina fiscellaria nucleopolyhedrovirus	S1	1	0	1	1	25	25	other	0	observation	0	0	0	1
+1647411	Salmonella phage NR01	S1	0	1	0	3	1	0.3333	other	0	observation	1	1	0	1
+1660368	Escherichia phage PA28	S1	1	0	1	1	2	2	other	0	observation	1	0	0	1
+1673638	Cyclovirus Equ1	S1	1	0	1	1	2	2	other	0	observation	1	0	0	1
+1701810	Citrobacter phage Margaery	S1	1	0	1	1	4	4	other	0	observation	1	0	0	1
+1732178	Sulfolobus monocaudavirus SMV4	S	1	0	1	1	4	4	other	0	observation	1	0	0	1
+1813599	Brazilian marseillevirus	S	0	1	0	5	34	6.8	other	0	observation	0	1	0	1
+1864623	Enterobacter phage Tyrion	S	0	1	0	1	4	4	other	0	observation	1	1	0	1
+1883366	Synechococcus phage S-CAM3	S1	1	0	1	1	13	13	other	0	observation	1	0	0	1
+1891767	Betapolyomavirus macacae	S	0	1	0	1	8	8	other	0	observation	1	1	0	1
+1898060	Lymphocystis disease virus Sa	S	1	0	1	1	28	28	other	0	observation	0	0	0	1
+1911929	Caeruleovirus	G	0	1	0	1	52	52	other	0	observation	0	1	0	1
+1923625	Wenzhou picorna-like virus 39	S	1	0	1	1	2	2	other	0	observation	1	0	0	1
+1982108	Demosthenesvirus katyusha	S	0	1	0	1	3	3	other	0	observation	1	1	0	1
+1982660	Bellflower veinal mottle virus	S1	1	0	1	1	2	2	other	0	observation	1	0	0	1
+2025359	Murmansk poxvirus	S2	0	1	0	1	29	29	other	0	observation	0	1	0	1
+2025360	NY_014 poxvirus	S	1	0	1	1	17	17	other	0	observation	1	0	0	1
+2048005	Shigella phage vB_SflS-ISF001	S1	1	0	1	1	4	4	other	0	observation	1	0	0	1
+2054179	Rhinolophus gammaherpesvirus 1	S1	1	0	1	1	18	18	other	0	observation	1	0	0	1
+2060084	Pandoravirus	G	1	0	1	1	996	996	other	0	observation	0	0	0	1
+2072209	Esparto virus	S1	1	0	1	1	24	24	other	0	observation	0	0	0	1
+2080449	Acanthamoeba castellanii medusavirus	S	0	1	0	1	68	68	other	0	observation	0	1	0	1
+2083176	Oxyplax ochracea nucleopolyhedrovirus	S1	0	1	0	1	39	39	other	0	observation	0	1	0	1
+2107709	Pandoravirus quercus	S	1	0	1	1	161	161	other	0	observation	0	0	0	1
+2200830	Orthopoxvirus akhmetapox	S	1	0	1	1	14	14	other	0	observation	1	0	0	1
+2259792	Linepithema humile entomopoxvirus 1	S	1	0	1	1	19	19	other	0	observation	1	0	0	1
+2560094	Asteriusvirus	G	0	1	0	1	34	34	other	0	observation	0	1	0	1
+2560160	Kochikohdavirus	G	1	0	1	1	28	28	other	0	observation	0	0	0	1
+2565517	Salmonella phage Sepoy	S1	1	0	1	1	1	1	other	0	observation	1	0	0	1
+2588487	Synechococcus phage S-SCSM1	S1	0	1	0	2	25	12.5	other	0	observation	0	1	0	1
+2589652	Escherichia phage Henu7	S1	0	1	0	2	6	3	other	0	observation	1	1	0	1
+2607629	Physalis rugose mosaic virus	S1	1	0	1	1	2	2	other	0	observation	1	0	0	1
+2732396	Orthornavirae	K	0	1	0	1	3775	3775	other	0	observation	0	1	0	1
+2732523	Megaviricetes	C	1	0	1	1	7123	7123	other	0	observation	0	0	0	1
+2732554	Imitervirales	O	1	0	1	1	4845	4845	other	0	observation	0	0	0	1
+2733109	Leucotheavirus	G	0	1	0	1	15	15	other	0	observation	1	1	0	1
+2733171	Coralvirus	G	1	0	1	1	6	6	other	0	observation	1	0	0	1
+2743961	Escherichia phage Mt1B1_P17	S1	1	0	1	1	6	6	other	0	observation	1	0	0	1
+2772059	uncultured phage cr50_1	S1	1	0	1	1	9	9	other	0	observation	1	0	0	1
+2772070	uncultured phage cr110_1	S1	1	0	1	1	13	13	other	0	observation	1	0	0	1
+2772076	uncultured phage cr128_1	S1	1	0	1	1	12	12	other	0	observation	1	0	0	1
+2772093	uncultured phage cr131_1	S1	1	0	1	1	11	11	other	0	observation	1	0	0	1
+2776821	Escherichia phage VEcB	S1	1	0	1	1	3	3	other	0	observation	1	0	0	1
+2788787	unclassified Caudoviricetes	C1	1	0	1	1	1123	1123	other	0	observation	0	0	0	1
+2797313	Erwinia phage pEa_SNUABM_5	S1	1	0	1	2	28	14	other	0	observation	0	0	0	1
+2843355	Bakolyvirus	G	1	0	1	1	4	4	other	0	observation	1	0	0	1
+2879287	Mongoose-associated circovirus	S	1	0	1	1	1	1	other	0	observation	1	0	0	1
+2884431	Bacillus phage vB_BtS_BMBtp2	S1	1	0	1	1	4	4	other	0	observation	1	0	0	1
+2894293	Microbacterium phage Franklin22	S	1	0	1	1	5	5	other	0	observation	1	0	0	1
+2927268	Microbacterium phage PineapplePizza	S1	1	0	1	1	2	2	other	0	observation	1	0	0	1
+2935866	Escherichia phage ZCEC13	S1	0	1	0	1	4	4	other	0	observation	1	1	0	1
+2946648	Weiservirinae	C2	0	1	0	1	140	140	other	0	observation	0	1	0	1
+2986404	uncultured phage cr17_1	S1	1	0	1	1	36	36	other	0	observation	0	0	0	1
+2992576	Uncultured Caudovirales phage clone 2F_1	S1	1	0	1	1	7	7	other	0	observation	1	0	0	1
+2994045	Campylobacter phage CPt10	S1	1	0	1	1	21	21	other	0	observation	0	0	0	1
+3038364	Gordonia phage Commandaria	S1	1	0	1	1	8	8	other	0	observation	1	0	0	1
+3044696	Cuauhnahuacvirus	G	1	0	1	1	24	24	other	0	observation	0	0	0	1
+3052239	Orthohepacivirus vittatae	S	1	0	1	1	4	4	other	0	observation	1	0	0	1
+3052763	Tenuivirus oryzaclavatae	S	1	0	1	1	3	3	other	0	observation	1	0	0	1
+3068353	Caudoviricetes sp. vir080	S	0	1	0	1	17	17	other	0	observation	1	1	0	1

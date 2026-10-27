@@ -1,0 +1,38 @@
+taxid	name	rank	groups_called	groups_offcell	n_cells	reads	distinct_minimizers	minimizer_per_read	host_relation	db_has_9606	state	low_minimizer_diversity	offcell_dominant	host_lineage	viral_only_db
+40272	Roseolovirus	G	541442	537045	16216	1914624	7781	0.004064	other	1	observation	0	0	0	0
+32604	Human betaherpesvirus 6B	S1	425992	338611	16066	1357495	4489	0.003307	other	1	observation	0	0	0	0
+9606	Homo sapiens	S	194416	160444	15036	422976	4939998	11.68	host	1	observation	0	0	1	0
+2759	Eukaryota	D	8326	2861	4051	16065	5023031	312.7	host_ancestor	1	observation	0	0	1	0
+2	Bacteria	D	618	862	141	2813	521198	185.3	other	1	observation	0	1	0	0
+2779361	Erythrobacter sp. SCSIO 43205	S	762	703	663	2519	12	0.004764	other	1	observation	1	0	0	0
+33154	Opisthokonta	D1	528	539	515	1314	4979323	3789	host_ancestor	1	observation	0	1	1	0
+1280	Staphylococcus aureus	S	1	89	1	115	1229	10.69	other	1	observation	0	1	0	0
+543	Enterobacteriaceae	F	57	32	13	139	16350	117.6	other	1	observation	0	0	0	0
+91347	Enterobacterales	O	12	15	5	53	34289	647	other	1	observation	0	1	0	0
+1236	Gammaproteobacteria	C	12	14	6	36	90277	2508	other	1	observation	0	1	0	0
+1224	Pseudomonadota	P	7	13	7	30	129971	4332	other	1	observation	0	1	0	0
+1760	Actinomycetes	C	1	12	1	35	38030	1087	other	1	observation	0	1	0	0
+3379134	Pseudomonadati	K	2	7	2	14	277576	1.983e+04	other	1	observation	0	1	0	0
+153135	Gammaretrovirus	G	0	5	0	7	275	39.29	other	1	observation	0	1	0	0
+563835	Chitinophagaceae	F	1	4	1	9	2424	269.3	other	1	observation	0	1	0	0
+1912216	Cutibacterium	G	3	1	3	6	151	25.17	other	1	observation	0	0	0	0
+85007	Mycobacteriales	O	1	2	1	5	5251	1050	other	1	observation	0	1	0	0
+353769	unclassified Gammaretrovirus	G1	0	3	0	6	137	22.83	other	1	observation	0	1	0	0
+1747	Cutibacterium acnes	S	0	2	0	2	58	29	other	1	observation	0	1	0	0
+31957	Propionibacteriaceae	F	1	1	1	5	477	95.4	other	1	observation	0	0	0	0
+590745	Mus musculus mobilized endogenous polytropic provirus	S	1	1	1	4	88	22	other	1	observation	0	0	0	0
+356	Hyphomicrobiales	O	0	1	0	3	9805	3268	other	1	observation	0	1	0	0
+573	Klebsiella pneumoniae	S	0	1	0	1	477	477	other	1	observation	0	1	0	0
+848	Fusobacterium	G	0	1	0	1	6565	6565	other	1	observation	0	1	0	0
+1239	Bacillota	P	1	0	1	1	153128	1.531e+05	other	1	observation	0	0	0	0
+1260	Finegoldia magna	S	0	1	0	1	368	368	other	1	observation	0	1	0	0
+1279	Staphylococcus	G	0	1	0	1	9439	9439	other	1	observation	0	1	0	0
+1385	Caryophanales	O	0	1	0	1	63152	6.315e+04	other	1	observation	0	1	0	0
+11788	Abelson murine leukemia virus	S	0	1	0	1	11	11	other	1	observation	1	1	0	0
+31993	Methylocystaceae	F	0	1	0	1	167	167	other	1	observation	0	1	0	0
+55193	Malassezia	G	1	0	1	1	183	183	other	1	observation	0	0	0	0
+76775	Malassezia restricta	S	1	0	1	3	113	37.67	other	1	observation	0	0	0	0
+89966	Hymenobacter	G	1	0	1	1	564	564	other	1	observation	0	0	0	0
+91061	Bacilli	C	0	1	0	1	87350	8.735e+04	other	1	observation	0	1	0	0
+182709	Oceanobacillus	G	0	1	0	1	893	893	other	1	observation	0	1	0	0
+1783272	Bacillati	K	0	1	0	1	224593	2.246e+05	other	1	observation	0	1	0	0

@@ -1,0 +1,30 @@
+taxid	name	rank	groups_called	groups_offcell	n_cells	reads	distinct_minimizers	minimizer_per_read	host_relation	db_has_9606	state	low_minimizer_diversity	offcell_dominant	host_lineage	viral_only_db
+10376	human gammaherpesvirus 4	S1	925040	121176	2597	1814725	37824	0.02084	other	0	observation	0	0	0	1
+67082	BeAn 58058 virus	S	44014	4258	2298	61627	80	0.001298	other	0	observation	0	0	0	1
+1969841	Proteus phage VB_PmiS-Isfahan	S1	11914	1429	2102	16129	227	0.01407	other	0	observation	0	0	0	1
+166122	Human endogenous retrovirus K113	S1	8042	450	2000	10979	368	0.03352	other	0	observation	0	0	0	1
+2886930	Escherichia phage phiX174	S1	4390	510	1734	21153	1681	0.07947	other	0	observation	0	0	0	1
+10375	Lymphocryptovirus	G	3395	535	673	5595	41280	7.378	other	0	observation	0	0	0	1
+106332	Papiine gammaherpesvirus 1	S1	1393	170	313	2621	56	0.02137	other	0	observation	0	0	0	1
+12509	Human herpesvirus 4 type 2	S2	572	168	256	813	551	0.6777	other	0	observation	0	0	0	1
+2169863	Papiine betaherpesvirus 3	S1	105	10	101	130	50	0.3846	other	0	observation	0	0	0	1
+3701015	Eubullaviridae	F	28	2	28	93	1762	18.95	other	0	observation	0	0	0	1
+153135	Gammaretrovirus	G	16	7	16	24	46	1.917	other	0	observation	0	0	0	1
+2731360	Heunggongvirae	K	15	1	15	6	45916	7653	other	0	observation	0	0	0	1
+3052441	Orthobunyavirus simbuense	S	11	2	11	16	3	0.1875	other	0	observation	1	0	0	1
+455364	Chrysochromulina ericina virus	S	9	2	9	13	14	1.077	other	0	observation	1	0	0	1
+2560569	macacine gammaherpesvirus 10	S1	8	1	8	16	142	8.875	other	0	observation	0	0	0	1
+2107708	Pandoravirus neocaledonia	S	7	1	7	8	34	4.25	other	0	observation	0	0	0	1
+45455	Macacine gammaherpesvirus 4	S1	3	2	3	10	140	14	other	0	observation	0	0	0	1
+11807	Harvey murine sarcoma virus	S1	4	0	4	4	3	0.75	other	0	observation	1	0	0	1
+159150	Shamonda virus	S1	2	2	2	5	6	1.2	other	0	observation	1	0	0	1
+11855	Mason-Pfizer monkey virus	S1	3	0	3	3	5	1.667	other	0	observation	1	0	0	1
+3044472	Orthoherpesviridae	F	2	1	2	4	41692	1.042e+04	other	0	observation	0	0	0	1
+1590650	Adelie penguin polyomavirus	S1	2	0	2	3	3	1	other	0	observation	1	0	0	1
+1891767	Betapolyomavirus macacae	S	0	2	0	2	17	8.5	other	0	observation	1	1	0	1
+2341050	macacine gammaherpesvirus 13	S1	2	0	2	9	213	23.67	other	0	observation	0	0	0	1
+3044761	Megavirus	G	2	0	2	2	53	26.5	other	0	observation	0	0	0	1
+10374	Gammaherpesvirinae	F1	1	0	1	2	41425	2.071e+04	other	0	observation	0	0	0	1
+159604	gorilline gammaherpesvirus 1	S1	0	1	0	1	26	26	other	0	observation	0	1	0	1
+338110	Escherichia phage NC29	S1	1	0	1	1	2	2	other	0	observation	1	0	0	1
+384642	Enterobacteria phage ID18	S1	1	0	1	1	8	8	other	0	observation	1	0	0	1

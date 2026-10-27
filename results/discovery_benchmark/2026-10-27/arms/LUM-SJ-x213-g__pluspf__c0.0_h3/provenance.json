@@ -1,0 +1,111 @@
+{
+  "bustools": {
+    "path": "/exports/archive/hg-funcgenom-research/mdmanurung/conda/envs/viralscan_test_full/lib/python3.11/site-packages/kb_python/bins/linux/bustools/bustools",
+    "sha256": "019e38e92fe249f6cf35b174e9c41aad81152c273e0627e2627d6235489e2f39",
+    "version": "0.45.1"
+  },
+  "called_cells_barcode_space": "unknown",
+  "called_cells_path": "/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/dsr_round1/runs/covid/combined_off/LUM-SJ-x213-g/LUM-SJ-x213-g/results/called_cells.tsv",
+  "called_cells_sha256": "76ac9bca88f4aab4a6c5a055e87531f5bc00d4c3841cba2f6310b9d6d915487b",
+  "db_identity": {
+    "md5_manifest": null,
+    "sha256": {
+      "hash.k2d": "abb740fb1fcbe4f34359a2edbf7156f4cd58b0fc22eef98246b7d779fc166200",
+      "opts.k2d": "60f70f7113cda6883d880c79dbaac10c4a21dc248441ff0cab93d70f5bc1661f",
+      "taxo.k2d": "416c6d5e21170f2ea2897755a478025b9c861a6c71bcb9b0d4baaa01086077f5"
+    }
+  },
+  "discovery_fingerprint": "c46b462a4827fa105597d1ccfa334c4cd0d688184d17044a9a101f4b175222d2",
+  "fingerprint_inputs": {
+    "bustools_sha256": "019e38e92fe249f6cf35b174e9c41aad81152c273e0627e2627d6235489e2f39",
+    "called_cells_barcode_space": "unknown",
+    "called_cells_sha256": "76ac9bca88f4aab4a6c5a055e87531f5bc00d4c3841cba2f6310b9d6d915487b",
+    "db_sha256": {
+      "hash.k2d": "abb740fb1fcbe4f34359a2edbf7156f4cd58b0fc22eef98246b7d779fc166200",
+      "opts.k2d": "60f70f7113cda6883d880c79dbaac10c4a21dc248441ff0cab93d70f5bc1661f",
+      "taxo.k2d": "416c6d5e21170f2ea2897755a478025b9c861a6c71bcb9b0d4baaa01086077f5"
+    },
+    "input_source": {
+      "sha256": {
+        "r1": "ac4b561a0fbc42c7ae0b0acaf5374a0284fb924ac5208891e182c773c588cdc6",
+        "r2": "a76deef019605728dd268aa22211a75443310298f1cd400ab1d2d6aed1cac3a0"
+      },
+      "source": "primary_host_filtered",
+      "star_args": {
+        "alignIntronMin": "20",
+        "alignSJDBoverhangMin": "8",
+        "alignSJoverhangMin": "8",
+        "outFilterMatchNminOverLread": "0.9",
+        "outFilterMismatchNmax": "4",
+        "outFilterMismatchNoverReadLmax": "0.05",
+        "outFilterMultimapNmax": "20",
+        "outFilterType": "Normal",
+        "outSAMattributes": "None",
+        "outSAMprimaryFlag": "OneBestScore"
+      },
+      "star_param_set": "pinned"
+    },
+    "kraken2": {
+      "confidence": 0.0,
+      "minimum_hit_groups": 3,
+      "version": "Kraken version 2.17.2"
+    },
+    "onlist_sha256": "2b6679922cae0ad887d297153a767f27e75c2d87656eba188d2bcf054b95cc0a",
+    "polya_trim": {
+      "min_polya_run": 15,
+      "min_polyt_run": 15
+    },
+    "primary_run_fingerprint": "8ca0621ffab716c9e347b1bbd1d5907b93a5df4e59772edbb640868d3288868c",
+    "technology": "10xv3",
+    "viralscan_version": "3.0.0rc1"
+  },
+  "host_subtract": null,
+  "input_source": {
+    "sha256": {
+      "r1": "ac4b561a0fbc42c7ae0b0acaf5374a0284fb924ac5208891e182c773c588cdc6",
+      "r2": "a76deef019605728dd268aa22211a75443310298f1cd400ab1d2d6aed1cac3a0"
+    },
+    "source": "primary_host_filtered",
+    "star_args": {
+      "alignIntronMin": "20",
+      "alignSJDBoverhangMin": "8",
+      "alignSJoverhangMin": "8",
+      "outFilterMatchNminOverLread": "0.9",
+      "outFilterMismatchNmax": "4",
+      "outFilterMismatchNoverReadLmax": "0.05",
+      "outFilterMultimapNmax": "20",
+      "outFilterType": "Normal",
+      "outSAMattributes": "None",
+      "outSAMprimaryFlag": "OneBestScore"
+    },
+    "star_param_set": "pinned"
+  },
+  "kraken2": {
+    "confidence": 0.0,
+    "memory_mapping": true,
+    "minimum_hit_groups": 3,
+    "version": "Kraken version 2.17.2"
+  },
+  "onlist": "/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan/covid_viralscan/viralscan_ref/cellranger_whitelist.txt",
+  "onlist_sha256": "2b6679922cae0ad887d297153a767f27e75c2d87656eba188d2bcf054b95cc0a",
+  "polya_trim": {
+    "min_polya_run": 15,
+    "min_polyt_run": 15
+  },
+  "primary_run_fingerprint": "8ca0621ffab716c9e347b1bbd1d5907b93a5df4e59772edbb640868d3288868c",
+  "resolved_input": {
+    "kb_input_check": "same_content",
+    "n_fragments": 139652693,
+    "primary_verified": false,
+    "r1": "/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/dsr_round1/runs/covid/twostep_v2/LUM-SJ-x213-g/LUM-SJ-x213-g/host_filtered/R1.fastq.gz",
+    "r2": "/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/dsr_round1/runs/covid/twostep_v2/LUM-SJ-x213-g/LUM-SJ-x213-g/host_filtered/R2.fastq.gz"
+  },
+  "schema_version": 1,
+  "taxonomy_sha256": "16f4212eda3ae49ff9b40091fb3467d39e41ae93e38c5c2dd01c9e0a0fbca8cb",
+  "technology": "10xv3",
+  "viralscan": {
+    "build_sha256": "434c7df78cedda6c17ec0f34dfcc0921d0da457df6692803e3a5b5e42480b82c",
+    "kind": "installed",
+    "version": "3.0.0rc1"
+  }
+}
