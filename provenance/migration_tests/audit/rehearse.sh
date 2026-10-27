@@ -7,12 +7,13 @@
 #                        if present, run pytest, diff against rehearsal/baseline/results.tsv.
 # Exit 0 only when nothing is unexplained (see rehearse_diff.py).
 set -euo pipefail
-SPLIT=/exports/para-lipg-hpc/mdmanurung/viralscan-split
+SPLIT=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/backups/viralscan-split
+REH_ROOT=${REH_ROOT:-$SPLIT/rehearsal}
 REPO=/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan
 E=/exports/archive/hg-funcgenom-research/mdmanurung/conda/envs/viralscan_test_full
 PY=$SPLIT/env/bin/python
 batch=${1:?usage: rehearse.sh <batch> [git-ref]}; ref=${2:-HEAD}
-W=$SPLIT/rehearsal/$batch
+W=$REH_ROOT/$batch
 rm -rf "$W"; mkdir -p "$W/tree"
 sha=$(git -C "$REPO" rev-parse "$ref")
 rmdir "$W/tree"
@@ -43,7 +44,7 @@ n=$(( ($(wc -l < "$W/files.txt") + 2) / 3 )); split -l "$n" -d "$W/files.txt" "$
 for c in "$W"/chunk_??; do
   b=$(basename "$c")
   # shellcheck disable=SC2046
-  PATH=$E/bin:$PATH PYTHONPATH=src timeout 900 python -m pytest $(cat "$c") -q -p no:cacheprovider \
+  PATH=$E/bin:$PATH PYTHONPATH=src timeout ${CHUNK_TIMEOUT:-1800} python -m pytest $(cat "$c") -q -p no:cacheprovider \
     --continue-on-collection-errors --junitxml="$W/$b.xml" > "$W/$b.log" 2>&1 || true
   echo "$b: $(tail -1 "$W/$b.log")"
 done

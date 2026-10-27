@@ -11,6 +11,7 @@ per-file git history (`provenance/package_commit_map.tsv` maps old package commi
 | `claims/`, `audits/`, `docs/plans/` | claim registry, audits, plans and design notes |
 | `scripts/`, `extras/`, `tests/` | SLURM jobs, study scripts, helpers and their tests |
 | `.living/`, `PLAN.md`, `HANDOFF*.md` | living-repo notes, tracker (experiment sections), session handoffs |
+| `provenance/PLAN_archive_2026-10.md`, `docs/handoffs/`, `docs/superpowers/`, `skillpacks/`, `.github/prompts/` | frozen pre-4e package tracker (all done rows) and dev notes moved out of the package tree (REPO-SPLIT-01 batch 4e, 2026-10-27) |
 | `provenance/` | split provenance: commit map, pinned package sha, carry list |
 
 ## Pinned package
