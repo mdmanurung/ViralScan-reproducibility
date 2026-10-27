@@ -1,0 +1,21 @@
+09:29:13 start sources
+09:29:14 done sources rc=0
+09:29:14 start logs
+09:29:15 done logs rc=0
+09:29:15 start cost01
+09:30:24 done cost01 rc=0
+09:30:24 start starsolo_p22_6b
+09:31:33 done starsolo_p22_6b rc=0
+09:31:33 start references
+09:37:26 done references rc=0
+09:37:26 start starsolo_p22_6
+09:43:01 done starsolo_p22_6 rc=0
+09:43:01 start viral_panel_max_2026-09-28
+09:47:30 done viral_panel_max_2026-09-28 rc=0
+09:47:30 start ebv_latest_ref_2026-09-27
+10:06:10 done ebv_latest_ref_2026-09-27 rc=0
+10:06:10 start benchmark_runs
+10:57:21 parallel start benchmark_runs
+11:42:29 workers done, final pass
+11:44:18 done benchmark_runs rc=0
+ALLDONE

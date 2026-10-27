@@ -1,0 +1,6 @@
+# tests deleted on purpose in 4a (byte-identity of the deleted top-level schemas/ copy; 2 protocol-consistency tests -> repro carry file)
+test_bus_correction_audit::test_schema_copies_identical
+test_validation::test_packaged_v3_schemas_match_public_contracts
+test_positive_control_receipt::test_shipped_schema_copies_are_identical
+test_evidence_tiers::test_grid_parser_refuses_anything_but_the_three_declared_sets
+test_evidence_tiers::test_the_grid_follows_the_protocol_text_not_a_constant

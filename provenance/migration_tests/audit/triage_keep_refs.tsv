@@ -1,0 +1,157 @@
+area	id	referenced_by
+Next action (preamble + dated log)	catalogued_not_indexed.tsv (CAT-31)	tests/test_index_reconciliation.py:645-648 reads PLAN.md and asserts it contains the filename; in this range the filename appears only at PLAN.md:462 (F-015 paragraph, 452-483). Also PLAN.md:5044,5057,5079 outside range. Keep at least one of these in package PLAN.md.
+Next action (preamble + dated log)	CAT-31	tests/test_index_reconciliation.py:645 (comment); paragraph at PLAN.md:430
+Next action (preamble + dated log)	PLAN.md as a whole	CLAUDE.md:27,30-53,97,167-168; docs/manuscript_draft.md:11 (link, will move); src/viralscan/hpv_genes.py:48 (docstring); scripts/publication_checklist.sh:23,127 (moves)
+Software backlog reconciliation (2026-10-09)	PKG-01, QA-02, SENS-CORR-03, EVID-CORR-01, MECH-C	Only in comments or docstrings: tests/test_ship_scope_tracked_tree.py, tests/test_multimap_tool_resolution.py, src/viralscan/sensitivity.py, src/viralscan/evidence.py, tests/test_sensitivity.py, CLAUDE.md MECH-C mention. No test parses these rows; no breakage if moved.
+Software backlog reconciliation (2026-10-09)	CAT-13	scripts/check_dist_size.py:10 comment (not in this range)
+How to use this tracker	PLAN.md contract	CLAUDE.md:30-53
+WP0 Governance and legacy freeze	GOV-06	tests/test_fresh_control_gov06.py (id mention only; that test is in the move set)
+WP0 Governance and legacy freeze	GOV-01..05	No hits in src/tests/docs/scripts/CLAUDE.md outside docs/plans, handoffs, reviews, superpowers (which move)
+WP1D tail (lines 1701-2101; section starts at 1318 under '## WP1')	ANELLO-PRIOR	src/viralscan/anello_align.py:10 (comment, 'a label, never a filter'); scripts/plant_anello_10x.py:218 (docstring 'PLAN ANELLO-PRIOR, CAT-20'). Both comments only, nothing breaks. If the row splits, keep the package half (.3 and .4 outcomes) in the package PLAN.md.
+WP1D tail (lines 1701-2101; section starts at 1318 under '## WP1')	MECH-A2/MECH-B/MECH-C/MECH-D/MECH-F/SW-23/SW-24/CAT-41	Comment refs only, e.g. src/viralscan/menu.py:180 and runconfig.py:9 (MECH-C), scripts/cellcalling.py:22,427 (SW-23), tests/test_chemistry.py:1 (MECH-D). These rows stay in the package, so nothing breaks.
+WP1E — Grill decisions for 3.0 (lines 2102-2401)	DEF-02	tests/test_cli.py:791, tests/test_chemistry.py:1, src/viralscan/chemistry.py:1, chemistry_check.py:5, strand.py:1, scripts/slurm_quant_5p_strand_rerun.sh:2 (comments only)
+WP1E — Grill decisions for 3.0 (lines 2102-2401)	DEF-03	tests/test_build_manifest.py:1, src/viralscan/reference_strategy.py:694, menu.py:1086, scripts/build_reference.py:1505 (comments)
+WP1E — Grill decisions for 3.0 (lines 2102-2401)	DEF-01	src/viralscan/scripts/read_filter.py:2 (docstring)
+WP1E — Grill decisions for 3.0 (lines 2102-2401)	DEF-06	tests/test_multimapping_properties.py:1 (docstring)
+WP1E — Grill decisions for 3.0 (lines 2102-2401)	SW-25	tests/test_reference_strategy_benchmark.py:457; src/viralscan/reference_strategy.py:719 (comments)
+WP1E — Grill decisions for 3.0 (lines 2102-2401)	WP1E Q-table (Q6 etc.)	tests/test_cli.py:791, tests/test_chemistry.py:1 cite 'WP1E Q6' (comments). No assertion reads PLAN.md for any row in this range; the only test that opens PLAN.md is tests/test_index_reconciliation.py:645-648, for CAT-31, which is outside 1701-2447.
+WP1 core software contracts (incl. WP1A, WP1B, SW-26 at top)	SW-03	src/viralscan/multimapping.py:406,482,583,790; src/viralscan/defaults.py:47; src/viralscan/menu.py:325; tests/test_rerun_multimap.py:317; tests/test_multimapping_properties.py:295; tests/test_qa03_bus_ingestion.py:3 (comment-only)
+WP1 core software contracts (incl. WP1A, WP1B, SW-26 at top)	SW-04	src/viralscan/scripts/hostresponse.py:162; src/viralscan/scripts/multimap.py:480; src/viralscan/scripts/detection.py:1990,2200; tests/test_hostresponse.py:1500; tests/test_detection.py:372,498 (comment-only)
+WP1 core software contracts (incl. WP1A, WP1B, SW-26 at top)	SW-05	tests/integration/test_rerun_no_stale_artifacts.py:1 (comment-only)
+WP1 core software contracts (incl. WP1A, WP1B, SW-26 at top)	SW-06	tests/test_run_complete_marker.py:1; tests/integration/test_tiny_end_to_end.py:270 (comment-only)
+WP1 core software contracts (incl. WP1A, WP1B, SW-26 at top)	SW-07	tests/test_host_filter.py:107; tests/integration/test_host_filter_star.py:1 (comment-only)
+WP1 core software contracts (incl. WP1A, WP1B, SW-26 at top)	SW-09	src/viralscan/cli/__init__.py:1; src/viralscan/cli/parsers.py:1 (docstring-only)
+WP1 core software contracts (incl. WP1A, WP1B, SW-26 at top)	SW-10	tests/integration/test_tiny_end_to_end.py:1,28,354; src/viralscan/menu.py:423; tests/test_cli.py:705 (comment-only)
+WP1 core software contracts (incl. WP1A, WP1B, SW-26 at top)	SW-11	src/viralscan/scripts/cellcalling.py:457; tests/test_cellcalling.py:63,312,359 (comment-only)
+WP1 core software contracts (incl. WP1A, WP1B, SW-26 at top)	SW-14	src/viralscan/menu.py:204; tests/test_cli.py:764 (comment-only)
+WP1 core software contracts (incl. WP1A, WP1B, SW-26 at top)	SW-15	src/viralscan/scripts/host_filter.py:353; tests/test_host_filter.py:205,267 (comment-only)
+WP1 core software contracts (incl. WP1A, WP1B, SW-26 at top)	SW-16	src/viralscan/scripts/detection.py:466; tests/test_detection.py:490; tests/integration/test_tiny_end_to_end.py:208 (comment-only)
+WP1 core software contracts (incl. WP1A, WP1B, SW-26 at top)	SW-17	src/viralscan/evidence.py:69; tests/test_evidence.py:142 (comment-only)
+WP1 core software contracts (incl. WP1A, WP1B, SW-26 at top)	SW-18	src/viralscan/anellovirus.py:216; tests/test_anellovirus_reference.py:429 (comment-only)
+WP1 core software contracts (incl. WP1A, WP1B, SW-26 at top)	SW-19	src/viralscan/menu.py:333; tests/test_rerun_multimap.py:217 (comment-only)
+WP1 core software contracts (incl. WP1A, WP1B, SW-26 at top)	SW-20	src/viralscan/scripts/multimap.py:97; tests/test_multimap.py:95 (comment-only)
+WP1 core software contracts (incl. WP1A, WP1B, SW-26 at top)	SW-21	src/viralscan/chemistry.py:42,136; src/viralscan/scripts/anello_align.py:88; tests/test_snakefile_dag.py:331 (comment-only)
+WP1 core software contracts (incl. WP1A, WP1B, SW-26 at top)	SW-22	src/viralscan/menu.py:187,354; tests/test_rerun_multimap.py:280; tests/test_createconfig.py:444 (comment-only)
+WP1D Mechanism consolidation: MECH-A (Virus Identity table) and its steps	MECH-A	src/viralscan/virus_grouping.py:3; src/viralscan/virus_identity.py:3,27,357,882; src/viralscan/virus_catalog.py:117; src/viralscan/scripts/analysis.py:7; src/viralscan/scripts/multimap.py:44; src/viralscan/scripts/build_reference.py:950; tests/test_mech_a_presentation.py:1; tests/test_mech_a_consumers.py:1; tests/test_identity_backfill.py:1; tests/test_virus_identity.py:1,300,398; tests/test_virus_catalog.py:157; tests/test_virus_grouping.py:271; tests/test_index_reconciliation.py:160; tests/integration/test_tiny_end_to_end.py:228 (all comment/docstring-only)
+WP1D Mechanism consolidation: MECH-A (Virus Identity table) and its steps	CAT-31	tests/test_index_reconciliation.py:647 asserts catalogued_not_indexed.tsv appears in PLAN.md. In this slice only line 1356 mentions CAT-31 (without the filename); the filename is at PLAN.md lines 462, 5044, 5057, 5079, outside this range. Hard dependency: PLAN.md must keep the filename in package rows.
+WP1D exploratory experiment rows (EXPL-*) under Mechanism consolidation	EXPL-HPV16	docs/plans/ambient-and-barcode-swapping-controls.md:167; docs/plans/real-data-sensitivity-specificity.md:62,264 (all docs/plans, which move to repro; not a keep_ref)
+WP1D exploratory experiment rows (EXPL-*) under Mechanism consolidation	EXPL-TTMDV	docs/plans/2026-10-04-package-completion-plan.md:68 (docs/plans moves to repro; not a keep_ref)
+(tail of ### WP4H expansion - breadth and measured diversity, begins 3985; contains CAT-16)	CAT-16	soft only (comments/docstrings): src/viralscan/reference_gates.py:1,16,274,316,368; scripts/build_bundled_panel_ref.py:443,903
+### WP4H expansion correction and additions	CAT-17	soft: scripts/build_bundled_panel_ref.py:89,104,145,385,396,449,489,754,794,875; tests/test_build_reference.py:40; tests/integration/test_anellovirus_chain.py:47
+### WP4H expansion correction and additions	CAT-19	soft: src/viralscan/reference_gates.py:1,12,37; tests/test_cat19_tonsil02_contracts.py:1,16
+### WP4H external-asset adoption and adversarial corrections	CAT-05	soft/data: tests/test_index_reconciliation.py:621,627,640; src/viralscan/data/index_exclusions.tsv:39; src/viralscan/data/anellovirus_accessions.tsv:26; scripts/build_bundled_panel_ref.py:682
+## WP4I - Complete latent/lytic state calling	PROG-12	soft: src/viralscan/gene_programs.py:104,444,537; src/viralscan/defaults.py:105; tests/test_gene_programs.py:1083
+## WP4I - Complete latent/lytic state calling	PROG-17	soft+docs: docs/output_reference.md:94,467,569; src/viralscan/scripts/detection.py:2057; cellcalling.py:477
+## WP4I - Complete latent/lytic state calling	PROG-14	soft+docs: docs/output_reference.md:570; src/viralscan/gene_programs.py:552,657; tests/test_gene_programs_unresolved.py:1
+## WP4J - SFL tonsil TTV and HPV screen	TONSIL-02	soft: tests/test_cat19_tonsil02_contracts.py:1; scripts/slurm_tonsil_pilot.sh:2 (script moves)
+## WP4K - Catalogue-index reconciliation and targeted reference adds	CAT-31	HARD: tests/test_index_reconciliation.py:645-647 asserts PLAN.md contains 'catalogued_not_indexed.tsv' (the CAT-31 row names it; keep the filename string in package PLAN.md). Soft: src/viralscan/constants.py:166; src/viralscan/scripts/build_reference.py:25,859,1233; scripts/build_bundled_panel_ref.py:30,500,831; src/viralscan/data/index_exclusions.tsv:7
+## WP4K - Catalogue-index reconciliation and targeted reference adds	CAT-40	soft+docs: docs/panel_integrity.md:67; src/viralscan/reference_gates.py:1,12,37,97,114,385; src/viralscan/scripts/build_reference.py:1592
+## WP4K - Catalogue-index reconciliation and targeted reference adds	CAT-37	soft: src/viralscan/scripts/ncbi_fetch.py:576; tests/test_ncbi_fetch.py:608
+## WP4K - Catalogue-index reconciliation and targeted reference adds	CAT-32	data: src/viralscan/data/index_exclusions.tsv:26
+## WP4K - Catalogue-index reconciliation and targeted reference adds	CAT-33	data: src/viralscan/data/index_exclusions.tsv:27
+## WP4L - Audit 2026-10 findings	AUD-06/AUD-07	soft: src/viralscan/defaults.py:27,31; scripts/detection.py:452-892; menu.py:976; run_safety.py:215; tests/test_infected_rule_and_gate.py:1,4
+## WP4L - Audit 2026-10 findings	AUD-20	soft: src/viralscan/reference_strategy.py:62,405,479,1015,1106,1268; scripts/evidence_run.py:225; tests/test_constants.py:27
+## WP4L - Audit 2026-10 findings	AUD-19/AUD-17	soft: src/viralscan/gene_programs.py:112,125,202,219,225,699; tests/test_gene_programs_audit4.py:1; test_gene_programs_capturability.py:1
+## WP4L - Audit 2026-10 findings	AUD-13	soft: src/viralscan/gtf_normalise.py:8; virus_identity.py:546; tests/test_gene_programs_staleness.py:1 (staleness test stays per tracker)
+### WP5A - Generator	VAL-01	soft: scripts/generate_truth_panel.py:2; tests/test_generate_truth_panel.py:1; tests/test_read_filter.py:116 (scripts/ref07,sens07,cost01 also mention it but move)
+### WP5B - Scorer and tiny gate	VAL-08	soft: scripts/val08_golden.py:2,6; scripts/v3_score.py:219; tests/integration/test_truth_panel_exact.py:1,307
+### WP5B - Scorer and tiny gate	VAL-06/VAL-07	soft: scripts/v3_score.py:2,5; v3_partition.py:2; v3_lod.py:2
+### WP5B - Scorer and tiny gate	VAL-09	soft: src/viralscan/schemas/v3/validation_protocol.schema.json:1014
+WP2 - Install, lock, and artifact parity (incl. WP2A, WP2B, WP2C)	REL-16	src/viralscan/validation.py:44,77; src/viralscan/menu.py:1299; src/viralscan/scripts/evidence_run.py:171; tests/test_validation.py:424,454; tests/integration/test_tiny_end_to_end.py:112 (comments/docstrings only)
+WP2 - Install, lock, and artifact parity (incl. WP2A, WP2B, WP2C)	REL-11	scripts/audit_locks.py:2,8 (docstring only)
+WP2 - Install, lock, and artifact parity (incl. WP2A, WP2B, WP2C)	REL-12	scripts/check_actions_pinned.py:2 (docstring only)
+WP2 - Install, lock, and artifact parity (incl. WP2A, WP2B, WP2C)	REL-13	scripts/check_release_ci.py:2 (docstring only)
+WP2 - Install, lock, and artifact parity (incl. WP2A, WP2B, WP2C)	REL-03	scripts/write_explicit_lock.py:2 (docstring); tests/test_validation_protocol.py:864,1502,1506 (moving test)
+WP2 - Install, lock, and artifact parity (incl. WP2A, WP2B, WP2C)	REL-08	scripts/release_sif_definition.py:2 (docstring only)
+WP2 - Install, lock, and artifact parity (incl. WP2A, WP2B, WP2C)	REF-11 (cited from WP2 rows)	tests/integration/test_tiny_end_to_end.py:24,126 (comments only; row itself is in WP4A)
+WP3 - Preregister scientific validation	SCI-02	src/viralscan/schemas/v3/validation_protocol.schema.json:646 (const resolution_task) - schema stays; the value is protocol vocabulary, not a PLAN lookup
+WP3 - Preregister scientific validation	SCI-04	src/viralscan/schemas/v3/validation_protocol.schema.json:838 (const string 'exact-version-and-container-digest-in-SCI-04-workflow-row')
+WP3 - Preregister scientific validation	SCI-03	src/viralscan/schemas/v3/validation_protocol.schema.json:980 (const string 'one-continuous-score-id-frozen-in-SCI-03')
+WP4 header + WP4A - Profiles and provenance	REF-11	tests/integration/test_tiny_end_to_end.py:24,126 (comments)
+WP4 header + WP4A - Profiles and provenance	REF-02	tests/test_build_reference.py:394 (comment)
+WP4 header + WP4A - Profiles and provenance	REF-03	src/viralscan/scripts/build_reference.py:1758,2030; tests/test_build_reference.py:1065 (comments/docstrings)
+WP4 header + WP4A - Profiles and provenance	MASK-01	src/viralscan/scripts/build_reference.py:153,1975; tests/test_build_reference.py:989 (comments/docstrings)
+WP4 header + WP4A - Profiles and provenance	REF-04	scripts/compare_reference_reproducibility.py:2; tests/test_compare_reference_reproducibility.py:1 (docstrings)
+WP4B - Full-genome competition and anellovirus	REF-13	src/viralscan/gtf_normalise.py:1; scripts/write_gtf_manifest.py:2,17; scripts/fix_thin_gtfs.py:2; scripts/panel_integrity.py:42; scripts/build_bundled_panel_ref.py:818; scripts/package_starsolo_viral_references.py:161; tests/test_gtf_normalise.py:1; tests/test_panel_integrity_contract.py:263; tests/test_anellovirus_reference.py:751; tests/test_package_starsolo_duplicates.py:1 (docstrings/comments)
+WP4B - Full-genome competition and anellovirus	REF-07	src/viralscan/scripts/build_reference.py:563,817; scripts/ref07_host_homology_table.py:2,360; scripts/generate_truth_panel.py:147; tests/test_cli.py:451 (comments/docstrings)
+WP4B - Full-genome competition and anellovirus	REF-10	src/viralscan/virus_grouping.py:61; src/viralscan/scripts/detection.py:1793; tests/test_mech_a_consumers.py:133; docs/output_reference.md:867 (comments/docs)
+WP4B - Full-genome competition and anellovirus	REF-08	docs/output_reference.md:811 (prose cites the REF-08 calibration)
+WP4B - Full-genome competition and anellovirus	REF-06 / REF-07 (experiment scripts)	scripts/ref06_compare_cat42b_d.py:2, scripts/ref07_level_proposal.py:2, scripts/ref07_recovery_control.py:2 (docstrings; tracked in scripts/, move set not verified)
+WP4C - Detection sensitivity and negative-result claims	SENS-CORR-01	src/viralscan/runconfig.py:202; src/viralscan/scripts/detection.py:1185; tests/_exact_control.py:1; tests/test_positive_control.py:206,347,482; tests/test_sensitivity.py:626 (comments/docstrings)
+WP4C - Detection sensitivity and negative-result claims	SENS-CORR-02	src/viralscan/sensitivity.py:187; src/viralscan/scripts/detection.py:1152; tests/test_sensitivity.py:179,204,450,553; tests/test_positive_control.py:94 (comments/docstrings)
+WP4C - Detection sensitivity and negative-result claims	SENS-CAL-01	tests/test_val_ra_guard.py:4 (docstring; test stays, not in tests_move_set)
+WP4C - Detection sensitivity and negative-result claims	SENS-01, SENS-02 (ID reuse)	none in stay code; the same ids also name the WP4B REF-13 sub-bullets
+WP4D - Gene-programme inference, layer 2	PROG-07	src/viralscan/gene_programs.py:32,57,142; docs/output_reference.md:467 (cite PLAN PROG-07 numbers)
+WP4D - Gene-programme inference, layer 2	PROG-08	tests/test_gene_programs.py:70,586 (comments/docstrings)
+WP4E - Named HPV ORFs for the oncogene-versus-capsid contrast	PLAN.md (whole-file)	src/viralscan/hpv_genes.py:48 (prose 'see PLAN.md before quoting a per-type number'; HPV rows must stay discoverable). Not in this range, but tests/test_index_reconciliation.py:647 asserts PLAN.md contains 'catalogued_not_indexed.tsv' (CAT-31 at PLAN.md:462, 5044, 5057, outside lines 2448-3416, so no keep_ref from this slice)
+WP4F — Real gene structure for the Anelloviridae panel	ANELLO-*/WP4F	comment-only: tests/integration/test_anellovirus_chain.py:139 (WP4F); no test reads these rows from PLAN.md, so moving would not break anything
+WP4G — Anellovirus detection you can trust	ANDET-01	comment-only: src/viralscan/scripts/detection.py:811,923; src/viralscan/anello_align.py:652,797; tests/test_anello_detection_merge.py:143
+WP4G — Anellovirus detection you can trust	ANDET-02	comment-only: src/viralscan/virus_grouping.py:295; scripts/detection.py:1742,1797
+WP4G — Anellovirus detection you can trust	ANDET-04	comment-only: src/viralscan/Snakefile:308; runconfig.py:218,445; defaults.py:98; scripts/auto_evidence.py:1
+WP4G — Anellovirus detection you can trust	ANDET-05	comment-only: src/viralscan/virus_identity.py:54,215; virus_catalog.py:126; tests/test_virus_catalog.py:135
+WP4G — Anellovirus detection you can trust	ANDET-09	comment-only: src/viralscan/Snakefile:97; anello_align.py:1; cli/parsers.py:1065; tests/integration/test_anello_align_star.py:1; tests/test_snakemake_script_modules.py:10
+WP4H — Comprehensive human-virus catalogue	CAT-01	comment-only: src/viralscan/scripts/build_reference.py:1788,2135,2158,2165; tests/test_virus_catalog.py:120
+WP4H — Comprehensive human-virus catalogue	CAT-03	comment-only: src/viralscan/virus_catalog.py:3; tests/test_virus_catalog.py:1
+WP4H — Comprehensive human-virus catalogue	CAT-05	data/test citation: src/viralscan/data/anellovirus_accessions.tsv:26; src/viralscan/data/index_exclusions.tsv:39; tests/test_anellovirus_reference.py:106,146; tests/test_index_reconciliation.py:621-640
+WP4H — Comprehensive human-virus catalogue	CAT-06	comment-only: src/viralscan/scripts/analysis.py:96,118; virus_identity.py:433,525; tests/test_build_manifest.py:91; tests/integration/test_tiny_end_to_end.py:25
+WP4H — Comprehensive human-virus catalogue	CAT-09	comment-only: tests/test_virus_catalog.py:180
+WP4H expansion — breadth and measured diversity	CAT-11	comment-only: tests/test_measure_kmer_capture.py:1
+WP4H expansion — breadth and measured diversity	CAT-14	comment-only: src/viralscan/reference_gates.py:1,13,14,128,169,213
+WP4H expansion — breadth and measured diversity	CAT-15	comment-only: src/viralscan/reference_gates.py:1,15,227,242
+.living/learnings.md	L@94	scripts/git-hooks/pre-commit:4 cites .living/learnings.md for this hazard (file-level ref only; keep the file, entry title could stay)
+.living/learnings.md	L@1733	CLAUDE.md Style section and tests/test_snakemake_script_modules.py describe this rule (not citing the entry)
+Evidence log	REF-11	CLAUDE.md:117; tests/integration/test_tiny_end_to_end.py:24 and :126
+Evidence log	CAT-03	src/viralscan/virus_catalog.py:3; tests/test_virus_catalog.py:1
+Evidence log	CAT-09	tests/test_virus_catalog.py:180
+Evidence log	SIMP-03	tests/test_detection.py:241
+Evidence log	DOC-01	tests/test_docs_consistency.py:56 (comment)
+Evidence log	PROG-07	src/viralscan/gene_programs.py:32,57,142; docs/output_reference.md:463,467 (comments and docs prose, not asserted)
+Evidence log	SCI-02/SCI-03/SCI-04	src/viralscan/schemas/v3/validation_protocol.schema.json:646,838,980 (const strings); tests/test_validation_protocol.py:277,295,378,477,489,547,716 (strings asserted against validator output, not PLAN.md); scripts/validate_v3_protocol.py moves with the validator
+Evidence log	CAT-11	scripts/measure_kmer_capture.py:4 and tests/test_measure_kmer_capture.py:1 (comments; both files are in the repro move set)
+Evidence log	GOV-06	tests/test_fresh_control_gov06.py:1 (docstring; moves)
+Evidence log	R11-F2	scripts/check_ledger_append_only.py:135,184,215; tests/test_ledger_git_sha.py:97,114,135,147 (move with the ledger tooling)
+.living/learnings.md	[2026-10-04] Artefact measures flag, never filter	src/viralscan/scripts/read_filter.py:28 cites decisions.md 2026-10-04 and 2026-10-05
+.living/learnings.md	[2026-10-05] DEF-01 read filter: opt-in, off by default	src/viralscan/scripts/read_filter.py:28 cites decisions.md 2026-10-05
+.living/learnings.md	[2026-10-05] DEF-01 artefact level: complex body either orientation (DEV-024)	src/viralscan/scripts/read_filter.py:28 cites decisions.md 2026-10-05
+.living/learnings.md	[2026-10-06] D18/D19 on a real background: per-cell twin exclusion (DEV-025)	docs/plans/real-data-sensitivity-specificity.md:45 (doc itself moves with docs/plans)
+WP12 — Observe and maintain	OPS-01	docs/release_policy.md:3
+WP12 — Observe and maintain	OPS-02	docs/reference_maintenance.md:3 and :107
+WP12 — Observe and maintain	OPS-05	docs/reference_maintenance.md:28
+files	.living/findings/FINDINGS_REGISTRY.md	scripts/dsr05_dossier.py:439-442 (moves to repro; needs F-005,F-010,F-018,F-019,F-021,F-022,F-025,F-026); docs/notices/CAT-30_retraction_DRAFT.md:11,45 (moves); docs/plans/2026-09-27-viral-reference-panel-expansion.md:571. src cites F-IDs in comments only (no file read): virus_grouping.py:58, anello_align.py:5,46,50,176,418,800, whitelist_preflight.py:6,102, chemistry_check.py:8,88,114,122,135, chemistry.py:241, menu.py:812, constants.py:166,413,420, strand.py:1, cli/parsers.py:642,863,1344, scripts/build_reference.py:25,859,888,1139,1233, scripts/hostresponse.py:21,651 (F-001/F-003 only in registry)
+files	.living/findings/anellovirus-detection-audit-commensal-prior.md	scripts/dsr05_dossier.py:439-442 (moves)
+files	.living/findings/catalogue-is-not-the-index-ebv-type2-and-hpv-gaps.md	src/viralscan/scripts/build_reference.py:25,859,888,1139,1233; src/viralscan/constants.py:166; tests/test_index_reconciliation.py:645-647 (asserts PLAN.md contains catalogued_not_indexed.tsv)
+files	.living/findings/covid-anellovirus-signal-is-polyg-reads.md	docs/notices/CAT-30_retraction_DRAFT.md (moves); scripts/dsr05_dossier.py:439-442 (moves); src comments cite F-019: virus_grouping.py:58, anello_align.py:46,50,418, constants.py:413,420
+files	.living/findings/dropseq-kb-allowlist-prefilter.md	scripts/dsr05_dossier.py:439-442 (F-018; moves)
+files	.living/findings/final-reference-panel-2343-genomes.md	src/viralscan/constants.py:166 (cites F-015/F-016)
+files	.living/findings/fiveprime-strand-default-loses-reads.md	src/viralscan/anello_align.py:176; chemistry_check.py:8,88,114,122; strand.py:1; cli/parsers.py:863 (comments/messages only); docs/notices/CAT-30_retraction_DRAFT.md:45 (moves)
+files	.living/findings/hhv6a-residual-in-hhv6b-sample-is-6b.md	scripts/dsr05_dossier.py:439-442 (moves)
+files	.living/findings/hhv6b-call-in-ebv-sample-is-telomere-repeat.md	scripts/dsr05_dossier.py:439-442 (moves)
+files	.living/findings/hpv16-positive-control-and-polya-anellovirus-sink.md	docs/notices/CAT-30_retraction_DRAFT.md (moves); scripts/dsr05_dossier.py:439-442 (moves); src comment: virus_grouping.py:58, constants.py:420
+files	.living/findings/raw-count-thresholds-confound-with-sequencing-depth.md	src/viralscan/scripts/hostresponse.py:21,651 (comment only)
+files	.living/findings/reference_strategy_2x2.md	docs/plans/pre-v3-implementation-history.md:258 (gitignored private history; moves or stays, not public)
+files	.living/findings/twostep-hpv77-call-is-host-reads-star-missed.md	src/viralscan/cli/parsers.py:1344 (cites F-028 in help text only); scripts/dsr05_dossier.py:439-442 (moves; F-028 only here)
+files	.living/INDEX.md	CLAUDE.md:172; docs/plans/2026-08-08-viralscan-v3-stable-g8.md:20 and docs/handoffs/2026-08-08-viralscan-v3-stable-g8-executor.md:92 (SHA-256 pin of INDEX.md; both move, pin goes stale)
+files	.living/conventions/ (53 tracked files), .living/conventions.md	CLAUDE.md:122-132 (.living/conventions/*/analysis-conventions.md, aifi-scrna-pipeline/SKILL.md)
+files	.living/log/ (106 tracked session logs, 6.8 MB)	none
+files	.living/archive/ (208 MB, untracked)	none
+files	HANDOFF.md	none (grep clean)
+files	CONTEXT.md	src/viralscan/virus_grouping.py:24; src/viralscan/runconfig.py:11; src/viralscan/run_context.py:10; src/viralscan/kb_outputs.py:6
+files	PROGRESS.md	none
+files	CHANGELOG.md	docs/changelog.md:3 (include ../CHANGELOG.md); MANIFEST.in:3; docs/release_policy.md:67,94,109,113; docs/reference_maintenance.md:63
+files	migration_plan/ (untracked, 608 KB)	pyproject.toml:115 (ruff/other exclude list entry; stale if removed, harmless)
+files	docs/plans/2026-07-22-viralscan-v3-correctness-and-publication.md	CLAUDE.md:52; MANIFEST.in:47 (prune docs/plans)
+files	docs/plans/2026-09-27-viral-reference-panel-expansion.md	src/viralscan/scripts/ncbi_fetch.py:478 (cites section 5.1)
+files	docs/plans/2026-10-05-val01-generator-design.md	scripts/v3_partition.py:6 (cites step 3 and section 8)
+files	docs/plans/2026-10-14-viral-read-cleanup-and-transcript-reconstruction.md	src/viralscan/scripts/read_filter.py:28 cites .living/decisions.md only
+files	docs/plans/ambient-and-barcode-swapping-controls.md	src/viralscan/scripts/detection.py:601; tests/test_ambient_screen.py:3
+files	docs/plans/pre-v3-implementation-history.md	none (is itself gitignored)
+files	docs/plans/real-data-sensitivity-specificity.md	scripts/v3_score.py:29 (section 2 vocabulary)
+files	docs/handoffs/handoff-CFtSVg.md	docs/review-clear-execute-plan.md:33, docs/review-clear-execute-tasks.md:5 (both in the move set)
+files	docs/manuscript_draft.md	scripts/publication_checklist.sh:22,126 (moves); scripts/curation_manifest.yaml:82 (deleted in 4a); MANIFEST.in:51; docs/conf.py:49
+files	docs/ROADMAP.md	docs/conf.py:61; MANIFEST.in:55
+files	docs/IMPLEMENTATION_PLAN.md	docs/conf.py:60; MANIFEST.in:56
+files	docs/PUBLICATION_READINESS.md	docs/conf.py:59; MANIFEST.in:52
+files	docs/PUBLICATION_READINESS_2026-07-17.md	docs/conf.py:59; MANIFEST.in:53
+files	docs/PUBLICATION_READINESS_EXECUTION.md	docs/conf.py:59; MANIFEST.in:54
+files	PLAN.md rows + .living/decisions.md + .living/learnings.md (note, not asked as files)	tests/test_index_reconciliation.py:645-647; CLAUDE.md:165,172
+files	docs build / packaging note	docs/conf.py:44-64; MANIFEST.in:46-56

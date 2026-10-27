@@ -1,0 +1,82 @@
+== package remote
+error: unable to delete 'origin': remote ref does not exist
+error: failed to push some refs to 'github.com:mdmanurung/ViralScan.git'
+== package local
+Deleted branch codex/ci-scautoqc (was 9f76f8d).
+Deleted branch codex/cli-unify (was 23c4047).
+Deleted branch codex/cli-unify-02-hostresponse (was 9350f24).
+Deleted branch codex/disc13-candidate-states (was 768ea2a).
+Deleted branch codex/disc13-read-support (was 38686ce).
+Deleted branch codex/disc13-star-evidence (was 7096706).
+Deleted branch codex/docs-revision (was 3a000fb).
+Deleted branch codex/hhv6b-3utr-strand-finding (was d6807a4).
+Deleted branch codex/kraken2-discovery-plan (was bb4b01b).
+Deleted branch codex/quickstart-real-run (was c02014c).
+Deleted branch codex/reference-caveats (was f1a92a9).
+Deleted branch codex/release-jsonschema (was 67d631a).
+Deleted branch codex/release-lock-pipcheck (was 60f2770).
+Deleted branch codex/research-tree-gitignore (was b7315e4).
+Deleted branch codex/scautoqc-rebased (was 325475e).
+Deleted branch codex/shifted-log-normalization (was cdb4d3d).
+Deleted branch codex/spq-coverage-map-star (was e874596).
+Deleted branch codex/star-confirm (was a4e4802).
+Deleted branch codex/strip-institutional-paths (was 039d933).
+Deleted branch codex/strip-paths-docs-scripts (was 37d9c4f).
+Deleted branch codex/tchem-second-opinion (was 1c4b36c).
+Deleted branch codex/virus-taxonomy-rollup (was dae02c9).
+== repro remote
+error: unable to delete 'origin': remote ref does not exist
+error: failed to push some refs to 'github.com:mdmanurung/ViralScan-reproducibility.git'
+== repro local
+Deleted branch finish-split-data-layout (was 5261d79).
+== prune
+== remaining: pkg local 28 remote 52; repro local 2 remote 8
+== retry package remote
+To github.com:mdmanurung/ViralScan.git
+ - [deleted]         codex/ci-scautoqc
+ - [deleted]         codex/cli-unify
+ - [deleted]         codex/cli-unify-02-hostresponse
+ - [deleted]         codex/cli-unify-02-layout
+ - [deleted]         codex/disc12-protocol
+ - [deleted]         codex/disc13-candidate-states
+ - [deleted]         codex/disc13-read-support
+ - [deleted]         codex/disc13-star-evidence
+ - [deleted]         codex/discover-called-cells
+ - [deleted]         codex/docs-revision
+ - [deleted]         codex/drop-py39
+ - [deleted]         codex/hhv6b-3utr-strand-finding
+ - [deleted]         codex/kraken2-discovery-plan
+ - [deleted]         codex/panel-archive-script
+ - [deleted]         codex/quickstart-real-run
+ - [deleted]         codex/reference-caveats
+ - [deleted]         codex/release-3.0.0rc1
+ - [deleted]         codex/release-jsonschema
+ - [deleted]         codex/release-lock-pipcheck
+ - [deleted]         codex/research-tree-gitignore
+ - [deleted]         codex/reviewed-roadmap
+ - [deleted]         codex/scautoqc-rebased
+ - [deleted]         codex/shifted-log-normalization
+ - [deleted]         codex/spikein-posthoc
+ - [deleted]         codex/split-4a-governance-analysis
+ - [deleted]         codex/split-4b-experiment-scripts
+ - [deleted]         codex/split-4c-docs-dev-files
+ - [deleted]         codex/split-4d-doc-relinks
+ - [deleted]         codex/split-drop-environments-template
+ - [deleted]         codex/split-plan-pointer
+ - [deleted]         codex/split-ship-scope-coverage
+ - [deleted]         codex/spq-coverage-map-star
+ - [deleted]         codex/star-confirm
+ - [deleted]         codex/star-gate-decision
+ - [deleted]         codex/strip-institutional-paths
+ - [deleted]         codex/strip-paths-docs-scripts
+ - [deleted]         codex/tchem-second-opinion
+ - [deleted]         codex/virus-taxonomy-rollup
+== retry repro remote
+To github.com:mdmanurung/ViralScan-reproducibility.git
+ - [deleted]         add-repro-ci
+ - [deleted]         data-root-env
+ - [deleted]         finish-split-data-layout
+ - [deleted]         no-local-links
+ - [deleted]         port-pr117-hosthomolog
+ - [deleted]         repin-package-ebd3813
+== remaining: pkg local 28 remote 14; repro local 2 remote 2

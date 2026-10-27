@@ -1,0 +1,115 @@
+== before
+90M	/exports/para-lipg-hpc/mdmanurung/ViralScan-reproducibility
+61M	/exports/para-lipg-hpc/mdmanurung/ViralScan-main
+38M	/exports/para-lipg-hpc/mdmanurung/ViralScan-pin2
+1.1M	/exports/para-lipg-hpc/mdmanurung/viralscan-analysis
+4.2G	/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_env_pinned
+== recheck clean
+/exports/para-lipg-hpc/mdmanurung/ViralScan-reproducibility dirty=0 unpushed=0
+/exports/para-lipg-hpc/mdmanurung/ViralScan-main dirty=0 unpushed=0
+== 2
+deleted
+== 3
+deleted
+== 4
+deleted
+== 5
+deleted
+== after
+5
+__archive
+captan
+captan_pilot
+conda
+containers
+czi-cellranger-outputs
+czi-cytof
+czi-scrnaseq
+docs
+micromamba
+_misc
+nextflow
+nih-malaria
+public_immune_refs
+renv
+schisto_citeseq
+senegal_citeseq_exvivo
+senegal_citeseq_stim
+senegal-cytof
+senegal-czi-citeseq
+software
+tools
+venvs
+ViralScan
+ViralScan-reproducibility
+--
+ami-metabolomics
+basemalvac
+batchdx-cyto
+bayes-workflow-skill
+bmv
+bmv_new
+bmv_pilot
+bmv_pilot_cytof_integration
+bmv_pilot_data
+bmv_pilot_integration
+bmv_pilot_large_artifacts
+bmv_pilot_untracked_donor_records
+cell-curator
+cell-curator-plugin
+cellimo
+cellprograms
+cmdstan-2.38.0
+conda
+conda_envs
+cytoBRIDGE
+czi-cytof
+czi-scrnaseq
+dotfiles
+flashier-utils
+_hobby
+INFLECT
+jobs
+lachmi-rnaseq
+llm-models
+lucid-coder
+malaria_bcells
+mx-logs-0977
+mycelium-extra
+mycelium-extra-backup-20261016
+mycelium-extra-wt-layout
+mycelium-extra-wt-lucid
+mycelium-upstream-8f8b167
+null
+omics-workshop
+opencode-plain
+opencode-plugin-cc
+ordinal-immune-aging
+pylibs
+R
+RaJIVEutils
+rapids-choir
+rapids-choir-data
+rapids-choir-reproducibility
+research-writer
+rlibs
+r_pkgs
+rules_reliable_agents
+SATURN
+scale
+sccomp
+schisto_citeseq
+scvi-tools
+Senegal_phipseq
+sfl_tonsil_citeseq
+shark-hpc-skills
+somerge
+spVIPES
+spVIPESmulti
+spVIPES_orig_src
+stablr
+stablr-experiments
+stablr-validation-artifacts
+tools
+TTV-AFRI
+viralscan-split

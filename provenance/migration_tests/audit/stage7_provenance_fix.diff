@@ -1,0 +1,10 @@
+# Proposed (NOT applied): tA_provenance 25884040 failed "Concat plan does not match frozen manifest for GSM3511320".
+# Cause: manifest.tsv (frozen record, 90 rows) keeps old viralscan_work paths; concat_plan.tsv was regenerated at 15:34 with new paths.
+# Fix: map the old root to the new one when the manifest is loaded, so the check and the hashed paths both use the new location.
+--- a/.../data/runs/work/trackA_round1/scripts/build_provenance.py
++++ b/.../data/runs/work/trackA_round1/scripts/build_provenance.py
+@@ -86 +86,3 @@
+-manifest = [m for m in tsv(f"{R}/manifest.tsv") if m["sample"] not in superseded and m["dataset"] != "tonsil_atlas"]  # tonsil cancelled 2026-10-18
++OLD_ROOT = "/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/"  # manifest.tsv is frozen with pre-move paths (stage 6, 2026-10-26)
++manifest = [{k: v.replace(OLD_ROOT, R.rsplit("trackA_round1", 1)[0], 1) for k, v in m.items()}
++            for m in tsv(f"{R}/manifest.tsv") if m["sample"] not in superseded and m["dataset"] != "tonsil_atlas"]  # tonsil cancelled 2026-10-18

@@ -1,0 +1,5 @@
+/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/parity_mechA/src_4a/src/viralscan/scripts/kmer3.py
+/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/parity_mechA/src_a2/src/viralscan/scripts/kmer3.py
+/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackA_round1/chem_pilot_2026-10-18/run_pilot_v2.py
+/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackA_round1/provenance/reference/cat42d/build.sbatch
+/exports/archive/hg-funcgenom-research/mdmanurung/viralscan_work/trackA_round1/superseded/provenance_before_finish_2026-10-19/reference/cat42d/build.sbatch

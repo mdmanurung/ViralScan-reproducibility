@@ -1,0 +1,23 @@
+# package: local merged branches to delete with git branch -d (not in a worktree)
+codex/ci-scautoqc
+codex/cli-unify
+codex/cli-unify-02-hostresponse
+codex/disc13-candidate-states
+codex/disc13-read-support
+codex/disc13-star-evidence
+codex/docs-revision
+codex/hhv6b-3utr-strand-finding
+codex/kraken2-discovery-plan
+codex/quickstart-real-run
+codex/reference-caveats
+codex/release-jsonschema
+codex/release-lock-pipcheck
+codex/research-tree-gitignore
+codex/scautoqc-rebased
+codex/shifted-log-normalization
+codex/spq-coverage-map-star
+codex/star-confirm
+codex/strip-institutional-paths
+codex/strip-paths-docs-scripts
+codex/tchem-second-opinion
+codex/virus-taxonomy-rollup

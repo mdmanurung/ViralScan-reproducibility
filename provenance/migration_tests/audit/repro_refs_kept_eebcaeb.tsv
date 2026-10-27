@@ -1,0 +1,13 @@
+scripts/build_genome_panel_ref.sh	build_bundled_panel_ref
+tests/test_sens07_planted_sensitivity.py	plant_anello_10x
+scripts/sens07_planted_sensitivity.py	plant_anello_10x
+docs/plans/2026-08-08-viralscan-v3-stable-g8-tasks.md	check_data_governance; check_ship_scope
+docs/plans/competitive-host-virus-reference.md	generate_truth_panel
+docs/plans/2026-10-05-val01-generator-design.md	generate_truth_panel; plant_anello_10x; v3_partition
+docs/plans/2026-08-08-viralscan-v3-stable-g8.md	check_ship_scope
+docs/plans/2026-09-27-viral-reference-panel-expansion.md	build_bundled_panel_ref
+scripts/validate_claim_registry.py	governance_utils
+docs/plans/ambient-and-barcode-swapping-controls.md	generate_truth_panel
+scripts/validate_artifact_inventory.py	governance_utils
+docs/plans/real-data-sensitivity-specificity.md	generate_truth_panel; plant_anello_10x; v3_score
+analysis/reference_strategy_benchmark/COMPLETION_PLAN.md	build_bundled_panel_ref

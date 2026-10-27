@@ -1,0 +1,1111 @@
+path	class	reason
+.dockerignore	package	D4 keep-list
+.github/ISSUE_TEMPLATE/bug_report.yml	package	D4 keep-list
+.github/PULL_REQUEST_TEMPLATE.md	package	D4 keep-list
+.github/prompts/audit-to-tdd-plan.prompt.md	package	D4 keep-list
+.github/prompts/viralscan-scientific-audit.prompt.md	package	D4 keep-list
+.github/workflows/ci.yml	package	D4 keep-list
+.github/workflows/docs.yml	package	D4 keep-list
+.github/workflows/lock-audit.yml	package	D4 keep-list
+.github/workflows/release.yml	package	D4 keep-list
+.gitignore	package	D4 keep-list
+.living/HANDOFF_2026-09-29.md	TRIAGE	step 2 triage
+.living/HANDOFF_2026-09-30.md	TRIAGE	step 2 triage
+.living/HANDOFF_2026-10-01.md	TRIAGE	step 2 triage
+.living/HANDOFF_2026-10-03.md	TRIAGE	step 2 triage
+.living/INDEX.md	TRIAGE	step 2 triage
+.living/conventions.md	TRIAGE	step 2 triage
+.living/conventions/ACTIVE_CONVENTIONS.yaml	TRIAGE	step 2 triage
+.living/conventions/aifi-scrna-pipeline/SKILL.md	TRIAGE	step 2 triage
+.living/conventions/aifi-scrna-pipeline/assets/aifi_l2_doublet_thresholds.json	TRIAGE	step 2 triage
+.living/conventions/aifi-scrna-pipeline/assets/aifi_l3_refinement_rules.csv	TRIAGE	step 2 triage
+.living/conventions/aifi-scrna-pipeline/assets/aifi_marker_library.json	TRIAGE	step 2 triage
+.living/conventions/aifi-scrna-pipeline/scripts/aifi_cluster_pipeline.py	TRIAGE	step 2 triage
+.living/conventions/aifi-scrna-pipeline/scripts/aifi_markers.py	TRIAGE	step 2 triage
+.living/conventions/aifi-scrna-pipeline/scripts/aifi_qc_pipeline.py	TRIAGE	step 2 triage
+.living/conventions/aifi-scrna-pipeline/scripts/celltypist_batch_labeling.py	TRIAGE	step 2 triage
+.living/conventions/aifi-scrna-pipeline/scripts/clr_frequency_analysis.py	TRIAGE	step 2 triage
+.living/conventions/aifi-scrna-pipeline/scripts/marker_doublet_filter.py	TRIAGE	step 2 triage
+.living/conventions/aifi-scrna-pipeline/scripts/pseudobulk_deseq2.py	TRIAGE	step 2 triage
+.living/conventions/bioinformatics/CONVENTION_PACK.yaml	TRIAGE	step 2 triage
+.living/conventions/bioinformatics/analysis-conventions.md	TRIAGE	step 2 triage
+.living/conventions/bioinformatics/qc-checklist.md	TRIAGE	step 2 triage
+.living/conventions/bioinformatics/statistical-conventions.md	TRIAGE	step 2 triage
+.living/conventions/bioinformatics/templates/deseq2-report.tex	TRIAGE	step 2 triage
+.living/conventions/bioinformatics/templates/rnaseq-analysis.md	TRIAGE	step 2 triage
+.living/conventions/idea-generator/CONVENTION_PACK.yaml	TRIAGE	step 2 triage
+.living/conventions/idea-generator/analysis-conventions.md	TRIAGE	step 2 triage
+.living/conventions/idea-generator/execution-protocol.md	TRIAGE	step 2 triage
+.living/conventions/idea-generator/idea-template.md	TRIAGE	step 2 triage
+.living/conventions/idea-generator/persona-catalog.md	TRIAGE	step 2 triage
+.living/conventions/report-generator/CONVENTION_PACK.yaml	TRIAGE	step 2 triage
+.living/conventions/report-generator/analysis-conventions.md	TRIAGE	step 2 triage
+.living/conventions/report-generator/assets/report-template-comprehensive.tex	TRIAGE	step 2 triage
+.living/conventions/report-generator/assets/report-template-overview-supplement.tex	TRIAGE	step 2 triage
+.living/conventions/report-generator/assets/report-template-overview.tex	TRIAGE	step 2 triage
+.living/conventions/report-generator/qc-checklist.md	TRIAGE	step 2 triage
+.living/conventions/report-generator/references/manifest-example.json	TRIAGE	step 2 triage
+.living/conventions/report-generator/references/phase-prompts.md	TRIAGE	step 2 triage
+.living/conventions/report-generator/references/section-guide.md	TRIAGE	step 2 triage
+.living/conventions/robust-analysis/CONVENTION_PACK.yaml	TRIAGE	step 2 triage
+.living/conventions/robust-analysis/adversarial-probing.md	TRIAGE	step 2 triage
+.living/conventions/robust-analysis/analysis-conventions.md	TRIAGE	step 2 triage
+.living/conventions/robust-analysis/failure-mode-analysis.md	TRIAGE	step 2 triage
+.living/conventions/robust-analysis/null-hypothesis-protocol.md	TRIAGE	step 2 triage
+.living/conventions/robust-analysis/qc-checklist.md	TRIAGE	step 2 triage
+.living/conventions/robust-analysis/sensitivity-analysis.md	TRIAGE	step 2 triage
+.living/conventions/robust-analysis/spot-check-protocol.md	TRIAGE	step 2 triage
+.living/conventions/robust-analysis/strict-execution-rules.md	TRIAGE	step 2 triage
+.living/conventions/robust-analysis/templates/sensitivity-report.md	TRIAGE	step 2 triage
+.living/conventions/robust-analysis/validation-checks.md	TRIAGE	step 2 triage
+.living/conventions/skill-bridge/CONVENTION_PACK.yaml	TRIAGE	step 2 triage
+.living/conventions/skill-bridge/analysis-conventions.md	TRIAGE	step 2 triage
+.living/conventions/skill-bridge/persona-routing.md	TRIAGE	step 2 triage
+.living/conventions/skill-bridge/qc-checklist.md	TRIAGE	step 2 triage
+.living/conventions/skill-bridge/references/single-cell-workflow.md	TRIAGE	step 2 triage
+.living/conventions/skill-bridge/skill-routing.md	TRIAGE	step 2 triage
+.living/conventions/skill-bridge/skill-sources.yaml	TRIAGE	step 2 triage
+.living/conventions/skill-bridge/templates/persona-review-log.md	TRIAGE	step 2 triage
+.living/conventions/skill-bridge/templates/skill-invocation-log.md	TRIAGE	step 2 triage
+.living/conventions/skill-bridge/templates/validation-report.md	TRIAGE	step 2 triage
+.living/decisions.md	TRIAGE	step 2 triage
+.living/findings/FINDINGS_REGISTRY.md	TRIAGE	step 2 triage
+.living/findings/anellovirus-capture-ceiling-is-set-by-cdhit-dereplication.md	TRIAGE	step 2 triage
+.living/findings/anellovirus-detection-audit-commensal-prior.md	TRIAGE	step 2 triage
+.living/findings/capture-metric-measured-forward-strand-only.md	TRIAGE	step 2 triage
+.living/findings/catalogue-is-not-the-index-ebv-type2-and-hpv-gaps.md	TRIAGE	step 2 triage
+.living/findings/covid-anellovirus-signal-is-polyg-reads.md	TRIAGE	step 2 triage
+.living/findings/covid-viralscan-no-sars2-anellovirus-dominant.md	TRIAGE	step 2 triage
+.living/findings/dead-summary-output-destroyed-by-later-rule.md	TRIAGE	step 2 triage
+.living/findings/dropseq-kb-allowlist-prefilter.md	TRIAGE	step 2 triage
+.living/findings/ebv-type2-sibling-dilution-equal-split.md	TRIAGE	step 2 triage
+.living/findings/evidence-replay-used-primary-ec-numbering.md	TRIAGE	step 2 triage
+.living/findings/final-reference-panel-2343-genomes.md	TRIAGE	step 2 triage
+.living/findings/fiveprime-strand-default-loses-reads.md	TRIAGE	step 2 triage
+.living/findings/frozen-seed-never-reached-emptydrops.md	TRIAGE	step 2 triage
+.living/findings/hhv6a-residual-in-hhv6b-sample-is-6b.md	TRIAGE	step 2 triage
+.living/findings/hhv6b-call-in-ebv-sample-is-telomere-repeat.md	TRIAGE	step 2 triage
+.living/findings/hhv6b-flank-reads-missed-by-cds-only-index.md	TRIAGE	step 2 triage
+.living/findings/host-transcriptome-encodes-viral-infection-state.md	TRIAGE	step 2 triage
+.living/findings/host-virus-homology-is-low-complexity.md	TRIAGE	step 2 triage
+.living/findings/hpv16-positive-control-and-polya-anellovirus-sink.md	TRIAGE	step 2 triage
+.living/findings/hsv1-lat-exon-recut.md	TRIAGE	step 2 triage
+.living/findings/kmer-capture-independence-model-overstates-detection.md	TRIAGE	step 2 triage
+.living/findings/legacy-multimap-bypasses-umi-deduplication.md	TRIAGE	step 2 triage
+.living/findings/low-complexity-is-a-kmer-property-not-n-masking.md	TRIAGE	step 2 triage
+.living/findings/per-sample-run-cost.md	TRIAGE	step 2 triage
+.living/findings/raw-count-thresholds-confound-with-sequencing-depth.md	TRIAGE	step 2 triage
+.living/findings/reference_strategy_2x2.md	TRIAGE	step 2 triage
+.living/findings/sfl-tonsil-no-ttv-or-hpv-host-subtracted.md	TRIAGE	step 2 triage
+.living/findings/twostep-hpv77-call-is-host-reads-star-missed.md	TRIAGE	step 2 triage
+.living/findings/unsupervised-feature-selection-leakage-is-often-negligible.md	TRIAGE	step 2 triage
+.living/findings/viralscan-panel-doi-unregistered.md	TRIAGE	step 2 triage
+.living/last-session.md	TRIAGE	step 2 triage
+.living/learnings.md	TRIAGE	step 2 triage
+.living/log/.log-scribe-2026-07-01-003.log	TRIAGE	step 2 triage
+.living/log/2026-07-01-001-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-01-002-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-01-003-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-01-004-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-02-001-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-02-002-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-02-003-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-03-001-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-04-001-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-04-002-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-04-003-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-04-004-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-04-005-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-04-006-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-05-001-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-05-002-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-05-003-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-05-004-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-05-005-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-06-001-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-06-002-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-06-003-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-06-004-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-06-005-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-06-006-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-06-007-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-06-008-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-06-009-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-15-001-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-15-002-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-15-003-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-15-004-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-15-005-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-15-006-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-15-007-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-15-008-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-15-009-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-15-010-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-17-001-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-17-002-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-17-003-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-17-004-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-17-005-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-20-001-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-20-002-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-20-003-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-21-001-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-21-002-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-25-001-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-26-001-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-26-002-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-27-001-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-07-27-002-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-09-27-001-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-09-27-002-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-09-27-003-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-09-28-001-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-09-30-001-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-09-30-002-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-09-30-003-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-10-01-001-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-10-02-001-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-10-03-001-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-10-03-002-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-10-04-001-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-10-04-002-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-10-04-003-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-10-05-001-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-10-05-002-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-10-05-003-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-10-05-004-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-10-05-005-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-10-06-001-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-10-06-002-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-10-06-003-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-10-06-004-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-10-07-001-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-10-08-001-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-10-09-001-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-10-11-001-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-10-11-002-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-10-11-003-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-10-12-001-viralscan.md	TRIAGE	step 2 triage
+.living/log/2026-10-14-002-translated-proteins.md	TRIAGE	step 2 triage
+.living/log/LOG_REGISTRY.md	TRIAGE	step 2 triage
+.living/outputs/reviews/2026-07-01-hostresponse-ebv-matched.md	TRIAGE	step 2 triage
+.living/outputs/reviews/2026-07-02-followup-scripts.md	TRIAGE	step 2 triage
+.living/outputs/reviews/2026-07-15-covid-viralscan-findings-tripwires.md	TRIAGE	step 2 triage
+.living/outputs/reviews/2026-07-15-covid-viralscan-findings.md	TRIAGE	step 2 triage
+.living/outputs/reviews/2026-07-27-branch-codex-viralscan-v3-tripwires.md	TRIAGE	step 2 triage
+.living/outputs/reviews/2026-07-27-branch-codex-viralscan-v3.md	TRIAGE	step 2 triage
+.pre-commit-config.yaml	package	D4 keep-list
+.readthedocs.yaml	package	D4 keep-list
+BENCHMARK_COMPARISON.md	repro	top-level BENCHMARK_COMPARISON.md
+CHANGELOG.md	package	D4 keep-list
+CITATION.cff	package	D4 keep-list
+CLAUDE.md	package	D4 keep-list
+CODE_OF_CONDUCT.md	package	D4 keep-list
+CONTEXT.md	package	D4 keep-list
+CONTRIBUTING.md	package	D4 keep-list
+Dockerfile	package	D4 keep-list
+ENVIRONMENTS_INSTALLATIONS.md	UNCLASSIFIED	no rule
+LICENSE	package	D4 keep-list
+MAINTAINER_CHECKLIST.md	UNCLASSIFIED	no rule
+MANIFEST.in	package	D4 keep-list
+PLAN.md	TRIAGE	step 2 triage (split by rows)
+PROGRESS.md	repro	top-level PROGRESS.md
+README.md	package	D4 keep-list
+SECURITY.md	package	D4 keep-list
+SUPPORT.md	package	D4 keep-list
+Singularity.def	package	D4 keep-list
+Singularity.pixi.def	UNCLASSIFIED	no rule
+analysis/ANALYSIS_MANIFEST.md	repro	analysis/
+analysis/audit_2026-10-verification/verification_matrix.tsv	repro	analysis/
+analysis/audit_2026-10-verification/verification_report.md	repro	analysis/
+analysis/audit_2026-10/M01_strand_audit.md	repro	analysis/
+analysis/audit_2026-10/M01_strand_note.md	repro	analysis/
+analysis/audit_2026-10/aud01_sensitivity.tsv	repro	analysis/
+analysis/audit_2026-10/findings.tsv	repro	analysis/
+analysis/audit_2026-10/findings_A_reference.tsv	repro	analysis/
+analysis/audit_2026-10/findings_B_detection.tsv	repro	analysis/
+analysis/audit_2026-10/findings_C_cli_fetch.tsv	repro	analysis/
+analysis/audit_2026-10/findings_D_remaining.tsv	repro	analysis/
+analysis/audit_2026-10/repro_A/a01_normalise_all.py	repro	analysis/
+analysis/audit_2026-10/repro_A/a02_ebv_lmp2_wrap.py	repro	analysis/
+analysis/audit_2026-10/repro_A/a03_list_spliced.py	repro	analysis/
+analysis/audit_2026-10/repro_A/a04_cache_coverage.py	repro	analysis/
+analysis/audit_2026-10/repro_A/a05_cross_file_ids.py	repro	analysis/
+analysis/audit_2026-10/repro_A/a06_normaliser_edges.py	repro	analysis/
+analysis/audit_2026-10/repro_A/a07_overlap_threshold.py	repro	analysis/
+analysis/audit_2026-10/repro_A/a08_ebv_chain.py	repro	analysis/
+analysis/audit_2026-10/repro_A/a09_pairwise_vs_chain.py	repro	analysis/
+analysis/audit_2026-10/repro_A/a10_ebv_marker_pairs.py	repro	analysis/
+analysis/audit_2026-10/repro_A/a11_starsolo_fallback.py	repro	analysis/
+analysis/audit_2026-10/repro_A/a12_run_one_drops_selected_only_cells.py	repro	analysis/
+analysis/audit_2026-10/repro_A/a13_stale_tsv_partition.py	repro	analysis/
+analysis/audit_2026-10/repro_A/a14_virus_keys.py	repro	analysis/
+analysis/audit_2026-10/repro_A/a15_repeat_merge_kmers.py	repro	analysis/
+analysis/audit_2026-10/repro_A/a16_unmerged_repeat_copies.py	repro	analysis/
+analysis/audit_2026-10/repro_A/a17_marker_kmer_sharing_vs_groups.py	repro	analysis/
+analysis/audit_2026-10/repro_A/a18_co_transcribed_closure.py	repro	analysis/
+analysis/audit_2026-10/repro_A/a19_cds_in_exons.py	repro	analysis/
+analysis/audit_2026-10/repro_A/a20_t2g_and_manifest.py	repro	analysis/
+analysis/audit_2026-10/repro_B/r_cc1.py	repro	analysis/
+analysis/audit_2026-10/repro_B/r_chem.py	repro	analysis/
+analysis/audit_2026-10/repro_B/r_det1.py	repro	analysis/
+analysis/audit_2026-10/repro_B/r_evid.py	repro	analysis/
+analysis/audit_2026-10/repro_B/r_hr1.py	repro	analysis/
+analysis/audit_2026-10/repro_B/r_hr2.py	repro	analysis/
+analysis/audit_2026-10/repro_B/r_hr3.py	repro	analysis/
+analysis/audit_2026-10/repro_B/r_sens1.py	repro	analysis/
+analysis/audit_2026-10/repro_B/r_umap.py	repro	analysis/
+analysis/audit_2026-10/repro_B/r_umap2.py	repro	analysis/
+analysis/audit_2026-10/repro_C/README.txt	repro	analysis/
+analysis/audit_2026-10/repro_C/build_ref_no_overwrite_probe.py	repro	analysis/
+analysis/audit_2026-10/repro_C/mkcfg_dag.py	repro	analysis/
+analysis/audit_2026-10/repro_C/ncbi_fetch_probe.py	repro	analysis/
+analysis/audit_2026-10/repro_C/reference_host_as_viral_probe.py	repro	analysis/
+analysis/audit_2026-10/repro_D/add.py	repro	analysis/
+analysis/audit_2026-10/repro_D/d00_names.py	repro	analysis/
+analysis/audit_2026-10/repro_D/d01_reactivating.py	repro	analysis/
+analysis/audit_2026-10/repro_D/d02_evidence_flag_order.py	repro	analysis/
+analysis/audit_2026-10/repro_D/d03_manifest_memory.py	repro	analysis/
+analysis/audit_2026-10/repro_D/d04_refstrategy_viralscan_schema.py	repro	analysis/
+analysis/audit_2026-10/repro_D/d05_refstrategy_universe_delta.py	repro	analysis/
+analysis/audit_2026-10/repro_D/d06_refstrategy_presence_provenance.py	repro	analysis/
+analysis/audit_2026-10/repro_D/d07_slurm_array_chdir.py	repro	analysis/
+analysis/audit_2026-10/repro_D/d08_constants_checks.py	repro	analysis/
+analysis/audit_2026-10/repro_D/d09_anello_virus_summary.py	repro	analysis/
+analysis/audit_2026-10/repro_D/d10_anello_wrap_gene_cdna.py	repro	analysis/
+analysis/audit_2026-10/repro_D/d11_catalogue_consistency.py	repro	analysis/
+analysis/cat09_sweep/candidates.tsv	repro	analysis/
+analysis/cat09_sweep/fetch_errors.tsv	repro	analysis/
+analysis/cat09_sweep/kept_accessions.txt	repro	analysis/
+analysis/cat09_sweep/review_host.tsv	repro	analysis/
+analysis/cat09_sweep/species_taxids.tsv	repro	analysis/
+analysis/dedicated_tool_comparison/README.md	repro	analysis/
+analysis/discovery_mg2sc_comparison/DISCOVERY_MG2SC_COMPARISON.md	repro	analysis/
+analysis/discovery_mg2sc_comparison/outputs/comparison.tsv	repro	analysis/
+analysis/discovery_mg2sc_comparison/outputs/umi_detail.tsv.gz	repro	analysis/
+analysis/discovery_mg2sc_comparison/scripts/compare.py	repro	analysis/
+analysis/dsr_round1/dossier_roles.tsv	repro	analysis/
+analysis/dsr_round1/dossier_spec.tsv	repro	analysis/
+analysis/hostresponse_ebv_matched/HOSTRESPONSE_EBV_MATCHED.md	repro	analysis/
+analysis/hostresponse_ebv_matched/outputs/figures/intermediate_umap_allcells.pdf	repro	analysis/
+analysis/hostresponse_ebv_matched/outputs/figures/intermediate_umap_depthmatched.pdf	repro	analysis/
+analysis/hostresponse_ebv_matched/outputs/figures/metrics_summary.pdf	repro	analysis/
+analysis/hostresponse_ebv_matched/outputs/numbers.json	repro	analysis/
+analysis/hostresponse_ebv_matched/reports/.compile-log.md	repro	analysis/
+analysis/hostresponse_ebv_matched/reports/.manifest.json	repro	analysis/
+analysis/hostresponse_ebv_matched/reports/.planning-brief.yaml	repro	analysis/
+analysis/hostresponse_ebv_matched/reports/build/report_values.tex	repro	analysis/
+analysis/hostresponse_ebv_matched/reports/hostresponse_ebv_matched-report.pdf	repro	analysis/
+analysis/hostresponse_ebv_matched/reports/hostresponse_ebv_matched-report.tex	repro	analysis/
+analysis/hostresponse_ebv_matched/scripts/cpm_label_crosscheck.py	repro	analysis/
+analysis/hostresponse_ebv_matched/scripts/depth_confounder_check.py	repro	analysis/
+analysis/hostresponse_ebv_matched/scripts/depth_matched_reanalysis.py	repro	analysis/
+analysis/hostresponse_ebv_matched/scripts/go_enrichment.py	repro	analysis/
+analysis/hostresponse_ebv_matched/scripts/intermediate_state_test.py	repro	analysis/
+analysis/hostresponse_ebv_matched/scripts/mi_panel.py	repro	analysis/
+analysis/hostresponse_ebv_matched/scripts/reconcile_package_hostresponse.py	repro	analysis/
+analysis/hostresponse_ebv_matched/scripts/register_report_values.py	repro	analysis/
+analysis/hostresponse_ebv_matched/scripts/threshold_hill_sweep.py	repro	analysis/
+analysis/ideas/2026-07-01-cross-disciplinary-brainstorm/00_index.md	repro	analysis/
+analysis/ideas/2026-07-01-cross-disciplinary-brainstorm/01_evolutionary-biologist.md	repro	analysis/
+analysis/ideas/2026-07-01-cross-disciplinary-brainstorm/02_quantitative-geneticist.md	repro	analysis/
+analysis/ideas/2026-07-01-cross-disciplinary-brainstorm/03_pharmacologist.md	repro	analysis/
+analysis/ideas/2026-07-01-cross-disciplinary-brainstorm/04_stem-cell-biologist.md	repro	analysis/
+analysis/ideas/2026-07-01-cross-disciplinary-brainstorm/05_causal-inference-researcher.md	repro	analysis/
+analysis/ideas/2026-07-01-cross-disciplinary-brainstorm/06_ecologist.md	repro	analysis/
+analysis/ideas/2026-07-01-cross-disciplinary-brainstorm/07_information-theorist.md	repro	analysis/
+analysis/legacy_v2_v3/EBV_SCALE_PILOT.md	repro	analysis/
+analysis/legacy_v2_v3/FRESH_CONTROLS.md	repro	analysis/
+analysis/legacy_v2_v3/README.md	repro	analysis/
+analysis/legacy_v2_v3/REPORT.md	repro	analysis/
+analysis/legacy_v2_v3/TRACKER.md	repro	analysis/
+analysis/legacy_v2_v3/candidate_persistence.tsv	repro	analysis/
+analysis/legacy_v2_v3/cell_concordance.tsv	repro	analysis/
+analysis/legacy_v2_v3/cohort_manifest.tsv	repro	analysis/
+analysis/legacy_v2_v3/control_inputs.tsv	repro	analysis/
+analysis/legacy_v2_v3/failures.tsv	repro	analysis/
+analysis/legacy_v2_v3/fresh_control_evidence.tsv	repro	analysis/
+analysis/legacy_v2_v3/fresh_control_stack_comparison.tsv	repro	analysis/
+analysis/legacy_v2_v3/fresh_vs_archive.json	repro	analysis/
+analysis/legacy_v2_v3/legacy_reproduction.tsv	repro	analysis/
+analysis/legacy_v2_v3/protocol.yaml	repro	analysis/
+analysis/legacy_v2_v3/run_metrics.tsv	repro	analysis/
+analysis/legacy_v2_v3/technical_repeat_audit.tsv	repro	analysis/
+analysis/legacy_v2_v3/validation.json	repro	analysis/
+analysis/legacy_v2_v3/virus_metrics.tsv	repro	analysis/
+analysis/multimap_profiling/outputs/cprofile_em.txt	repro	analysis/
+analysis/multimap_profiling/outputs/cprofile_equal.txt	repro	analysis/
+analysis/multimap_profiling/outputs/fast_profile_run.log	repro	analysis/
+analysis/multimap_profiling/outputs/numbers.json	repro	analysis/
+analysis/multimap_profiling/outputs/profile_run.log	repro	analysis/
+analysis/multimap_profiling/scripts/fast_profile.py	repro	analysis/
+analysis/multimap_profiling/scripts/fast_profile_resume.py	repro	analysis/
+analysis/multimap_profiling/scripts/interpret_cprofile.py	repro	analysis/
+analysis/multimap_profiling/scripts/profile_multimap.py	repro	analysis/
+analysis/multimap_profiling/scripts/register_values.py	repro	analysis/
+analysis/multimap_profiling/scripts/run.sh	repro	analysis/
+analysis/panel_expansion/README.md	package	D10 -> curation/panel/
+analysis/panel_expansion/biomni_review_2026-10-08.md	package	D10 -> curation/panel/
+analysis/panel_expansion/candidates.tsv	package	D10 -> curation/panel/
+analysis/panel_expansion/cat28_panviral_marker_check.tsv	package	D10 -> curation/panel/
+analysis/panel_expansion/census.tsv	package	D10 -> curation/panel/
+analysis/panel_expansion/census_raw.json	package	D10 -> curation/panel/
+analysis/panel_expansion/curation_round1.tsv	package	D10 -> curation/panel/
+analysis/panel_expansion/evonk_candidates.tsv	package	D10 -> curation/panel/
+analysis/panel_expansion/gtf_corpus_manifest.tsv	package	D10 -> curation/panel/
+analysis/panel_expansion/hpv_modelled_cds_qc.tsv	package	D10 -> curation/panel/
+analysis/panel_expansion/human_relevant_curated.tsv	package	D10 -> curation/panel/
+analysis/panel_expansion/index_inspect_viral_ref_cat42d.json	package	D10 -> curation/panel/
+analysis/panel_expansion/index_inspect_viral_ref_final.json	package	D10 -> curation/panel/
+analysis/panel_expansion/kmer_panel_baseline.tsv	package	D10 -> curation/panel/
+analysis/panel_expansion/kmer_partners.tsv	package	D10 -> curation/panel/
+analysis/panel_expansion/kmer_sharing.tsv	package	D10 -> curation/panel/
+analysis/panel_expansion/pool_vhdb.tsv	package	D10 -> curation/panel/
+analysis/panel_expansion/promotions_pending_records.tsv	package	D10 -> curation/panel/
+analysis/panel_expansion/promotions_round1.tsv	package	D10 -> curation/panel/
+analysis/panel_expansion/ref13_normaliser_qc.tsv	package	D10 -> curation/panel/
+analysis/panel_expansion/roles_round1.tsv	package	D10 -> curation/panel/
+analysis/panel_expansion/round1_screen.tsv	package	D10 -> curation/panel/
+analysis/reference_strategy_benchmark/COMPLETION_PLAN.md	repro	analysis/
+analysis/reference_strategy_benchmark/REFERENCE_STRATEGY_BENCHMARK.md	repro	analysis/
+analysis/reference_strategy_benchmark/outputs/feature_match_audit.tsv	repro	analysis/
+analysis/reference_strategy_benchmark/outputs/harmonize_2x2.log	repro	analysis/
+analysis/reference_strategy_benchmark/outputs/harmonized_2x2_unique.tsv	repro	analysis/
+analysis/reference_strategy_benchmark/outputs/hsv1_root_cause.json	repro	analysis/
+analysis/reference_strategy_benchmark/outputs/numbers.json	repro	analysis/
+analysis/reference_strategy_benchmark/run_packets/2026-06-28_fresh12/README.md	repro	analysis/
+analysis/reference_strategy_benchmark/run_packets/2026-06-28_fresh12/commands.jsonl	repro	analysis/
+analysis/reference_strategy_benchmark/run_packets/2026-06-28_fresh12/failure_summary.tsv	repro	analysis/
+analysis/reference_strategy_benchmark/run_packets/2026-06-28_fresh12/fastq_audit.tsv	repro	analysis/
+analysis/reference_strategy_benchmark/run_packets/2026-06-28_fresh12/reference_audit.tsv	repro	analysis/
+analysis/reference_strategy_benchmark/scripts/harmonize_2x2.py	repro	analysis/
+analysis/reference_strategy_benchmark/scripts/register_report_values.py	repro	analysis/
+analysis/reference_strategy_benchmark/scripts/run.sh	repro	analysis/
+analysis/release_checks/2026-10-12/SHA256SUMS	repro	analysis/
+analysis/release_checks/2026-10-12/rel04_build_and_venvs.txt	repro	analysis/
+analysis/release_checks/2026-10-12/rel05_doctor_validate_run.log	repro	analysis/
+analysis/release_checks/2026-10-12/rel11_lock_audit.txt	repro	analysis/
+analysis/release_checks/2026-10-12/rel11_lock_audit_py310.txt	repro	analysis/
+analysis/release_checks/2026-10-12/sdist_members.txt	repro	analysis/
+analysis/release_checks/2026-10-12/wheel_members.txt	repro	analysis/
+analysis/star_confirm_acceptance/accept_ebv.py	repro	analysis/
+analysis/star_confirm_acceptance/accept_ebv.sbatch	repro	analysis/
+analysis/star_confirm_acceptance/accept_r01.sbatch	repro	analysis/
+analysis/star_confirm_acceptance/fallback139.py	repro	analysis/
+analysis/star_confirm_acceptance/fallback139.sbatch	repro	analysis/
+analysis/translated_search/.gitignore	repro	analysis/
+analysis/translated_search/README.md	repro	analysis/
+analysis/translated_search/Snakefile	repro	analysis/
+analysis/translated_search/check_barcodes.py	repro	analysis/
+analysis/translated_search/config.example.yaml	repro	analysis/
+analysis/translated_search/confirm_hits.py	repro	analysis/
+analysis/translated_search/count_library.py	repro	analysis/
+analysis/translated_search/expected_taxa.tsv	repro	analysis/
+analysis/translated_search/make_configs.py	repro	analysis/
+analysis/translated_search/palmdb_overlap_expected.tsv	repro	analysis/
+analysis/translated_search/palmdb_provenance.json	repro	analysis/
+analysis/translated_search/summarize_translated.py	repro	analysis/
+analysis/translated_search/validation_2026-10-14.json	repro	analysis/
+analysis/truth_panel/README.md	repro	analysis/
+analysis/v3_artifact_inventory.tsv	repro	analysis/
+analysis/v3_ebv_baseline/README.md	repro	analysis/
+analysis/v3_ebv_baseline/host_conservative.json	repro	analysis/
+analysis/v3_validation/README.md	repro	analysis/
+analysis/v3_validation/deviations.yaml	repro	analysis/
+analysis/v3_validation/protocol.yaml	repro	analysis/
+analysis/v3_validation/sci05_review.yaml	repro	analysis/
+analysis/v3_validation/sci05_review_round10.yaml	repro	analysis/
+analysis/v3_validation/sci05_review_round11.yaml	repro	analysis/
+analysis/v3_validation/sci05_review_round2.yaml	repro	analysis/
+analysis/v3_validation/sci05_review_round3.yaml	repro	analysis/
+analysis/v3_validation/sci05_review_round4.yaml	repro	analysis/
+analysis/v3_validation/sci05_review_round5.yaml	repro	analysis/
+analysis/v3_validation/sci05_review_round6.yaml	repro	analysis/
+analysis/v3_validation/sci05_review_round7.yaml	repro	analysis/
+analysis/v3_validation/sci05_review_round8.yaml	repro	analysis/
+analysis/v3_validation/sci05_review_round9.yaml	repro	analysis/
+analysis/viral_read_cleanup/Assembly.Snakefile	repro	analysis/
+analysis/viral_read_cleanup/Snakefile	repro	analysis/
+analysis/viral_read_cleanup/assembly.py	repro	analysis/
+analysis/viral_read_cleanup/pilot.py	repro	analysis/
+audits/2026-05-08-full-pipeline.md	repro	top-level audits
+benchmark_inputs/dsr_2026-10-05/E-MTAB-13687_filereport.tsv	repro	top-level benchmark_inputs
+benchmark_inputs/dsr_2026-10-05/dl_ena.sbatch	repro	top-level benchmark_inputs
+benchmark_inputs/dsr_2026-10-05/dl_sra.sbatch	repro	top-level benchmark_inputs
+benchmark_inputs/dsr_2026-10-05/ena_files.tsv	repro	top-level benchmark_inputs
+benchmark_inputs/dsr_2026-10-05/sra_runs.tsv	repro	top-level benchmark_inputs
+benchmark_inputs/reference_strategy/SRR12682296/source_urls.tsv	repro	top-level benchmark_inputs
+benchmark_inputs/reference_strategy/SRR20710641/source_urls.tsv	repro	top-level benchmark_inputs
+benchmark_inputs/reference_strategy/SRR8315713/source_urls.tsv	repro	top-level benchmark_inputs
+claims/registry.json	repro	top-level claims
+conda-recipe/README.md	package	D4 keep-list
+conda-recipe/meta.yaml	package	D4 keep-list
+config/dsr_round2b_sens07.template.tsv	package	public_ship_scope.json
+config/dsr_round2c_sens07.template.tsv	package	public_ship_scope.json
+config/large_file_allowlist.txt	package	public_ship_scope.json
+config/public_ship_scope.json	package	public_ship_scope.json
+config/track_b_denylist.txt	package	public_ship_scope.json
+covid_viralscan/README.md	repro	top-level covid_viralscan
+covid_viralscan/RUNBOOK.md	repro	top-level covid_viralscan
+covid_viralscan/scripts/annotate_eve.py	repro	top-level covid_viralscan
+covid_viralscan/scripts/diag_bustools_count.sh	repro	top-level covid_viralscan
+covid_viralscan/scripts/diag_viral_read_origin.sh	repro	top-level covid_viralscan
+covid_viralscan/scripts/gen_combined_cdna_gtf.py	repro	top-level covid_viralscan
+covid_viralscan/scripts/slurm_build_ref.sh	repro	top-level covid_viralscan
+covid_viralscan/scripts/slurm_build_ref_v2.sh	repro	top-level covid_viralscan
+covid_viralscan/scripts/slurm_eve_analysis.sh	repro	top-level covid_viralscan
+covid_viralscan/scripts/slurm_evidence_rerun.sh	repro	top-level covid_viralscan
+covid_viralscan/scripts/slurm_kallisto_index.sh	repro	top-level covid_viralscan
+covid_viralscan/scripts/slurm_starsolo_covid.sh	repro	top-level covid_viralscan
+covid_viralscan/scripts/slurm_viralscan_quant.sh	repro	top-level covid_viralscan
+covid_viralscan/scripts/summarize_survey.py	repro	top-level covid_viralscan
+data/DATA_MANIFEST.md	repro	top-level data
+data/metadata/reference_strategy_fastqs/provenance.md	repro	top-level data
+data/metadata/reference_strategy_fastqs/schema.yaml	repro	top-level data
+data/metadata/reference_strategy_fastqs/summary_stats.md	repro	top-level data
+data/metadata/reference_strategy_refs/provenance.md	repro	top-level data
+data/metadata/reference_strategy_refs/schema.yaml	repro	top-level data
+data/metadata/reference_strategy_refs/summary_stats.md	repro	top-level data
+data/raw/reference_strategy_fastqs/REFERENCE_STRATEGY_FASTQS.md	repro	top-level data
+data/raw/reference_strategy_refs/REFERENCE_STRATEGY_REFS.md	repro	top-level data
+docs/IMPLEMENTATION_PLAN.md	package	public docs (check refs)
+docs/PUBLICATION_READINESS.md	package	public docs (check refs)
+docs/PUBLICATION_READINESS_2026-07-17.md	package	public docs (check refs)
+docs/PUBLICATION_READINESS_EXECUTION.md	package	public docs (check refs)
+docs/ROADMAP.md	package	public docs (check refs)
+docs/api.md	package	public docs (check refs)
+docs/api_reference.md	package	public docs (check refs)
+docs/assess_evidence.md	package	public docs (check refs)
+docs/changelog.md	package	public docs (check refs)
+docs/cli_reference.md	package	public docs (check refs)
+docs/conf.py	package	public docs (check refs)
+docs/discovery.md	package	public docs (check refs)
+docs/faq.md	package	public docs (check refs)
+docs/figures/figure1_workflow.pdf	package	public docs (check refs)
+docs/figures/figure1_workflow.png	package	public docs (check refs)
+docs/figures/figure2_benchmark.pdf	package	public docs (check refs)
+docs/figures/figure2_benchmark.png	package	public docs (check refs)
+docs/handoffs/2026-07-24-legacy-v2-v3-execution.md	package	public docs (check refs)
+docs/handoffs/2026-07-25-legacy-v2-v3-results.md	package	public docs (check refs)
+docs/handoffs/2026-08-08-viralscan-v3-stable-g8-executor.md	package	public docs (check refs)
+docs/handoffs/handoff-CFtSVg.md	package	public docs (check refs)
+docs/index.md	package	public docs (check refs)
+docs/inspect_results.md	package	public docs (check refs)
+docs/installation.md	package	public docs (check refs)
+docs/manuscript_draft.md	package	public docs (check refs)
+docs/migration.md	package	public docs (check refs)
+docs/notices/CAT-30_retraction_DRAFT.md	package	public docs (check refs)
+docs/output_reference.md	package	public docs (check refs)
+docs/panel_integrity.md	package	public docs (check refs)
+docs/plans/2026-07-22-viralscan-v3-correctness-and-publication.md	repro	docs/plans
+docs/plans/2026-07-22-viralscan-v3-tasks.md	repro	docs/plans
+docs/plans/2026-08-08-viralscan-v3-stable-g8-tasks.md	repro	docs/plans
+docs/plans/2026-08-08-viralscan-v3-stable-g8.md	repro	docs/plans
+docs/plans/2026-09-27-viral-reference-panel-expansion.md	repro	docs/plans
+docs/plans/2026-10-04-anello-remaining-work.md	repro	docs/plans
+docs/plans/2026-10-04-package-completion-plan.md	repro	docs/plans
+docs/plans/2026-10-05-dataset-run-plan.md	repro	docs/plans
+docs/plans/2026-10-05-def00-protocol-amendment.md	repro	docs/plans
+docs/plans/2026-10-05-val01-generator-design.md	repro	docs/plans
+docs/plans/2026-10-07-dsr-dossier-spec.md	repro	docs/plans
+docs/plans/2026-10-13-protocol-pending-sections-draft.md	repro	docs/plans
+docs/plans/2026-10-14-viral-read-cleanup-and-transcript-reconstruction.md	repro	docs/plans
+docs/plans/2026-10-17-performance-triage-byte-identical-outputs.md	repro	docs/plans
+docs/plans/2026-10-17-remaining-performance-candidates.md	repro	docs/plans
+docs/plans/2026-10-19-legacy-worker-qualification.md	repro	docs/plans
+docs/plans/2026-10-19-performance-qualification.md	repro	docs/plans
+docs/plans/2026-10-19-performance-resource-policy.md	repro	docs/plans
+docs/plans/2026-10-19-performance-whole-run-proposal.md	repro	docs/plans
+docs/plans/2026-10-20-cpu-budget-qualification-status.md	repro	docs/plans
+docs/plans/2026-10-20-documentation-revision-plan.md	repro	docs/plans
+docs/plans/2026-10-21-kraken2-discovery-plan.md	repro	docs/plans
+docs/plans/ambient-and-barcode-swapping-controls.md	repro	docs/plans
+docs/plans/competitive-host-virus-reference.md	repro	docs/plans
+docs/plans/dsr_round2_GUARD.md	repro	docs/plans
+docs/plans/dsr_round2b_sens07_GUARD.md	repro	docs/plans
+docs/plans/dsr_round2c_sens07_GUARD.md	repro	docs/plans
+docs/plans/real-data-sensitivity-specificity.md	repro	docs/plans
+docs/project_info.md	package	public docs (check refs)
+docs/quickstart.md	package	public docs (check refs)
+docs/reference_help.md	package	public docs (check refs)
+docs/reference_maintenance.md	package	public docs (check refs)
+docs/reference_panel.md	package	public docs (check refs)
+docs/reference_panel_research_2026-09-27.md	package	public docs (check refs)
+docs/release_policy.md	package	public docs (check refs)
+docs/requirements.txt	package	public docs (check refs)
+docs/review-clear-execute-plan.md	package	public docs (check refs)
+docs/review-clear-execute-tasks.md	package	public docs (check refs)
+docs/showcase_runbook.md	package	public docs (check refs)
+docs/superpowers/plans/2026-07-03-publication-readiness-99-reconciled.md	package	public docs (check refs)
+docs/superpowers/plans/2026-07-03-publication-readiness-99.md	package	public docs (check refs)
+docs/v3_counting_contract.md	package	public docs (check refs)
+docs/vignettes/README.md	package	public docs (check refs)
+docs/vignettes/VIGNETTES_PLAN.md	package	public docs (check refs)
+docs/vignettes/building_a_reference.ipynb	package	public docs (check refs)
+docs/vignettes/cell_calling_denominators.ipynb	package	public docs (check refs)
+docs/vignettes/cell_type_enrichment.ipynb	package	public docs (check refs)
+docs/vignettes/host_response_depth_control.ipynb	package	public docs (check refs)
+docs/vignettes/multimapping_correction.ipynb	package	public docs (check refs)
+docs/vignettes/qc_and_read_evidence.ipynb	package	public docs (check refs)
+docs/vignettes/quickstart_fastq_to_viral_load.ipynb	package	public docs (check refs)
+docs/vignettes/specificity_true_negative.ipynb	package	public docs (check refs)
+docs/workflow_comparison.md	package	public docs (check refs)
+docs/write-docs-prompt.md	package	public docs (check refs)
+environment.coverage.yml	UNCLASSIFIED	no rule
+environment.discovery.yml	UNCLASSIFIED	no rule
+environment.explicit.txt	package	D4 keep-list
+environment.tools.lock.txt	UNCLASSIFIED	no rule
+environment.yml	package	D4 keep-list
+extras/build_anello_table.py	package	builds src/viralscan/data
+extras/build_anellovirus_genes.py	package	builds src/viralscan/data
+extras/build_gene_programs.py	package	builds src/viralscan/data
+extras/build_hpv_reference.py	package	builds src/viralscan/data
+extras/build_virus_catalog.py	package	builds src/viralscan/data
+extras/build_virus_taxonomy.py	package	builds src/viralscan/data
+extras/cat09_human_host_sweep.py	repro	extras cat09/cat28
+extras/cat28_panviral_marker_check.py	repro	extras cat09/cat28
+extras/seed_catalogue_overlays.py	package	builds src/viralscan/data
+extras/vendor_sources/ACCESSION_VERIFICATION.md	package	builds src/viralscan/data
+extras/vendor_sources/VENDOR_MANIFEST.tsv	package	builds src/viralscan/data
+extras/vendor_sources/VENDOR_REPORT.md	package	builds src/viralscan/data
+extras/vendor_sources/fetch_vendored.py	package	builds src/viralscan/data
+pixi.toml	UNCLASSIFIED	no rule
+pyproject.toml	package	D4 keep-list
+ref/10x_version2_whitelist.txt	repro	top-level ref
+reference_audit.tsv	repro	top-level reference_audit.tsv
+reference_manifest.json	repro	top-level reference_manifest.json
+results/hostresponse_ebv_matched/Epstein-Barr_virus_gene_weights.csv	repro	top-level results
+results/hostresponse_ebv_matched/Epstein-Barr_virus_stability.csv	repro	top-level results
+results/hostresponse_ebv_matched/analysis.txt	repro	top-level results
+results/hostresponse_ebv_matched/cpm_label_crosscheck.txt	repro	top-level results
+results/hostresponse_ebv_matched/depth_confounder.txt	repro	top-level results
+results/hostresponse_ebv_matched/depth_confounder_gene_evalues.csv	repro	top-level results
+results/hostresponse_ebv_matched/depth_matched_reanalysis.txt	repro	top-level results
+results/hostresponse_ebv_matched/depth_robust_genes.md	repro	top-level results
+results/hostresponse_ebv_matched/go_enrichment.txt	repro	top-level results
+results/hostresponse_ebv_matched/hostresponse_metrics.csv	repro	top-level results
+results/hostresponse_ebv_matched/hostresponse_summary.tsv	repro	top-level results
+results/hostresponse_ebv_matched/intermediate_state_test.txt	repro	top-level results
+results/hostresponse_ebv_matched/matched_barcodes.tsv	repro	top-level results
+results/hostresponse_ebv_matched/mi_panel.txt	repro	top-level results
+results/hostresponse_ebv_matched/threshold_hill_sweep.txt	repro	top-level results
+results/matched_barcode_comparison.tsv	repro	top-level results
+results/matched_barcode_comparison_ebna_recovery.tsv	repro	top-level results
+results/matched_barcode_comparison_per_gene.tsv	repro	top-level results
+results/reference_strategy_benchmark.tsv	repro	top-level results
+schemas/v3/artifact_inventory.schema.json	delete	duplicate of src/viralscan/schemas/v3
+schemas/v3/claim_registry.schema.json	delete	duplicate of src/viralscan/schemas/v3
+schemas/v3/count_audit.schema.json	delete	duplicate of src/viralscan/schemas/v3
+schemas/v3/evidence_manifest.schema.json	delete	duplicate of src/viralscan/schemas/v3
+schemas/v3/h5ad_contract.json	delete	duplicate of src/viralscan/schemas/v3
+schemas/v3/positive_control_receipt.schema.json	delete	duplicate of src/viralscan/schemas/v3
+schemas/v3/positive_control_report.schema.json	delete	duplicate of src/viralscan/schemas/v3
+schemas/v3/protocol_lock.schema.json	delete	duplicate of src/viralscan/schemas/v3
+schemas/v3/reference_manifest.schema.json	delete	duplicate of src/viralscan/schemas/v3
+schemas/v3/run_complete.schema.json	delete	duplicate of src/viralscan/schemas/v3
+schemas/v3/run_manifest.schema.json	delete	duplicate of src/viralscan/schemas/v3
+schemas/v3/validation_protocol.schema.json	delete	duplicate of src/viralscan/schemas/v3
+scripts/adjudicate_candidates.py	UNCLASSIFIED	scripts/ not in keep-list or repro pattern
+scripts/anello_acceptance_report.py	repro	experiment script pattern
+scripts/anello_body_census.py	repro	experiment script pattern
+scripts/apply_repeat_gene_merges.py	package	scripts keep-list
+scripts/audit_fastq_pair.py	repro	experiment script pattern
+scripts/audit_locks.py	package	scripts keep-list
+scripts/audit_reference_strategy.py	repro	experiment script pattern
+scripts/benchmark_v3_multimap.py	repro	experiment script pattern
+scripts/build_bundled_panel_ref.py	package	scripts keep-list
+scripts/build_curation_view.py	delete	navigation view of mixed repo
+scripts/build_genome_panel_ref.sh	repro	experiment script pattern
+scripts/bulk_viral_scan.sh	repro	experiment script pattern
+scripts/bulk_viral_summarize.py	repro	experiment script pattern
+scripts/cal13_decoys.py	UNCLASSIFIED	scripts/ not in keep-list or repro pattern
+scripts/check_actions_pinned.py	package	scripts keep-list
+scripts/check_data_governance.py	package	scripts keep-list
+scripts/check_dist_size.py	package	scripts keep-list
+scripts/check_g3_diff.py	UNCLASSIFIED	scripts/ not in keep-list or repro pattern
+scripts/check_ledger_append_only.py	repro	experiment script pattern
+scripts/check_reads_api.py	repro	experiment script pattern
+scripts/check_release_ci.py	package	scripts keep-list
+scripts/check_ship_scope.py	package	scripts keep-list
+scripts/check_tracked_file_sizes.py	UNCLASSIFIED	scripts/ not in keep-list or repro pattern
+scripts/check_versions.py	package	scripts keep-list
+scripts/combine_palmdb_reference.py	UNCLASSIFIED	scripts/ not in keep-list or repro pattern
+scripts/compare_legacy_v2_v3.py	repro	experiment script pattern
+scripts/compare_legacy_v2_v3_attempts.py	repro	experiment script pattern
+scripts/compare_reference_reproducibility.py	repro	experiment script pattern
+scripts/compare_starsolo_viralscan.py	repro	experiment script pattern
+scripts/cost01_per_sample_cost.py	repro	experiment script pattern
+scripts/curation_manifest.yaml	delete	navigation view of mixed repo
+scripts/dlist_kmer_check.py	repro	experiment script pattern
+scripts/dsr02_calibration.py	repro	experiment script pattern
+scripts/dsr02_enumerate_calls.py	repro	experiment script pattern
+scripts/dsr02_validate_call.py	repro	experiment script pattern
+scripts/dsr02_verdicts.py	repro	experiment script pattern
+scripts/dsr03_evidence_cards.py	repro	experiment script pattern
+scripts/dsr05_dossier.py	repro	experiment script pattern
+scripts/dsr06_reference_cells.py	repro	experiment script pattern
+scripts/dsr_common_cells.py	repro	experiment script pattern
+scripts/dsr_host_shutoff_diagnostic.py	repro	experiment script pattern
+scripts/dsr_round_compare.py	repro	experiment script pattern
+scripts/explore_ledger.py	UNCLASSIFIED	scripts/ not in keep-list or repro pattern
+scripts/fetch_reference_strategy_fastqs.py	repro	experiment script pattern
+scripts/fix_thin_gtfs.py	package	scripts keep-list
+scripts/freeze_control_inputs.py	repro	experiment script pattern
+scripts/freeze_fresh_control_packet.py	repro	experiment script pattern
+scripts/freeze_legacy_v2_v3_execution.py	repro	experiment script pattern
+scripts/freeze_legacy_v2_v3_provenance.py	repro	experiment script pattern
+scripts/gen_cli_reference.py	package	scripts keep-list
+scripts/gen_workflow_comparison.py	repro	experiment script pattern
+scripts/generate_truth_panel.py	package	scripts keep-list
+scripts/git-hooks/pre-commit	package	CI hook
+scripts/governance_utils.py	package	scripts keep-list
+scripts/hostresponse_ebv_matched.py	repro	experiment script pattern
+scripts/longitudinal_compile.py	UNCLASSIFIED	scripts/ not in keep-list or repro pattern
+scripts/make_manuscript_figures.py	repro	experiment script pattern
+scripts/make_panel_archive.py	UNCLASSIFIED	scripts/ not in keep-list or repro pattern
+scripts/matched_barcode_comparison.py	repro	experiment script pattern
+scripts/measure_kmer_capture.py	repro	experiment script pattern
+scripts/model_hpv_cds_gtfs.py	package	scripts keep-list
+scripts/model_nocds_gtfs.py	package	scripts keep-list
+scripts/package_starsolo_viral_references.py	repro	experiment script pattern
+scripts/panel_candidates.py	package	scripts keep-list
+scripts/panel_census.py	repro	experiment script pattern
+scripts/panel_integrity.py	package	scripts keep-list
+scripts/panel_kmer_sharing.py	package	scripts keep-list
+scripts/panel_pool.py	package	scripts keep-list
+scripts/panel_promote.py	package	scripts keep-list
+scripts/plant_anello_10x.py	package	scripts keep-list
+scripts/prepare_fresh_controls.py	repro	experiment script pattern
+scripts/prepare_legacy_v2_v3_slurm.py	repro	experiment script pattern
+scripts/prepare_reference_strategy_benchmark.py	repro	experiment script pattern
+scripts/prepare_viral_proteins.py	package	scripts keep-list
+scripts/publication_checklist.sh	repro	experiment script pattern
+scripts/ref06_compare_cat42b_d.py	repro	experiment script pattern
+scripts/ref07_host_homology_table.py	package	scripts keep-list
+scripts/ref07_level_proposal.py	repro	experiment script pattern
+scripts/ref07_recovery_control.py	repro	experiment script pattern
+scripts/ref13_normaliser_qc.py	repro	experiment script pattern
+scripts/release_package_smoke.py	package	scripts keep-list
+scripts/release_sif_definition.py	package	scripts keep-list
+scripts/revalidate_fresh_control.py	repro	experiment script pattern
+scripts/run_fresh_control.py	repro	experiment script pattern
+scripts/run_fresh_control_evidence.py	repro	experiment script pattern
+scripts/run_fresh_control_task.sh	repro	experiment script pattern
+scripts/sens07_planted_sensitivity.py	repro	experiment script pattern
+scripts/slurm_build_panel_kbref.sh	repro	experiment script pattern
+scripts/slurm_build_starsolo_reference_strategy_refs.sh	repro	experiment script pattern
+scripts/slurm_cat42d_virus_only_dlist2_index.sh	repro	experiment script pattern
+scripts/slurm_cat42d_virus_only_index.sh	repro	experiment script pattern
+scripts/slurm_dsr02_evidence.sh	repro	experiment script pattern
+scripts/slurm_dsr02_evidence_array.sh	repro	experiment script pattern
+scripts/slurm_dsr_chem_array.sh	repro	experiment script pattern
+scripts/slurm_dsr_collect.sh	repro	experiment script pattern
+scripts/slurm_dsr_concat_inputs.sh	repro	experiment script pattern
+scripts/slurm_dsr_rerun_array.sh	repro	experiment script pattern
+scripts/slurm_dsr_round2b_sens07_array.sh	repro	experiment script pattern
+scripts/slurm_dsr_twostep_redetect.sh	repro	experiment script pattern
+scripts/slurm_full_depth_validation.sh	repro	experiment script pattern
+scripts/slurm_kbref_full_panel.sh	repro	experiment script pattern
+scripts/slurm_kbref_full_panel_v2.sh	repro	experiment script pattern
+scripts/slurm_kbref_max_panel.sh	repro	experiment script pattern
+scripts/slurm_quant_5p_strand_rerun.sh	repro	experiment script pattern
+scripts/slurm_quant_combined_array.sh	repro	experiment script pattern
+scripts/slurm_quant_corrected_array.sh	repro	experiment script pattern
+scripts/slurm_quant_covid_exploratory.sh	repro	experiment script pattern
+scripts/slurm_quant_hhv6b_5p.sh	repro	experiment script pattern
+scripts/slurm_quant_max_corrected.sh	repro	experiment script pattern
+scripts/slurm_quant_max_regression.sh	repro	experiment script pattern
+scripts/slurm_quant_sw21_hsv1.sh	repro	experiment script pattern
+scripts/slurm_quant_twostep_array.sh	repro	experiment script pattern
+scripts/slurm_rerun_multimap_em_cell_cost.sh	repro	experiment script pattern
+scripts/slurm_star_host_index_rebuild.sh	repro	experiment script pattern
+scripts/slurm_starsolo_ebv_comparison.sh	repro	experiment script pattern
+scripts/slurm_starsolo_ebv_wl.sh	repro	experiment script pattern
+scripts/slurm_strand_pilot_3p.sh	repro	experiment script pattern
+scripts/slurm_strand_test.sh	repro	experiment script pattern
+scripts/slurm_tonsil_pilot.sh	repro	experiment script pattern
+scripts/slurm_v3_ebv_multimap_baseline.sh	repro	experiment script pattern
+scripts/slurm_viralscan_ebv_wl.sh	repro	experiment script pattern
+scripts/subset_fastq_pair.py	UNCLASSIFIED	scripts/ not in keep-list or repro pattern
+scripts/summarize_fresh_controls.py	repro	experiment script pattern
+scripts/summarize_legacy_v2_v3_candidates.py	repro	experiment script pattern
+scripts/summarize_legacy_v2_v3_cells.py	repro	experiment script pattern
+scripts/summarize_reference_strategy.py	repro	experiment script pattern
+scripts/super_expressors.py	UNCLASSIFIED	scripts/ not in keep-list or repro pattern
+scripts/swap_check.py	package	scripts keep-list
+scripts/ttv_public_datasets.json	repro	experiment script pattern
+scripts/v3_lod.py	package	scripts keep-list
+scripts/v3_partition.py	package	scripts keep-list
+scripts/v3_score.py	package	scripts keep-list
+scripts/val08_golden.py	package	scripts keep-list
+scripts/validate_artifact_inventory.py	repro	experiment script pattern
+scripts/validate_claim_registry.py	repro	experiment script pattern
+scripts/validate_protocol_lock.py	repro	experiment script pattern
+scripts/validate_v3_protocol.py	repro	experiment script pattern
+scripts/write_explicit_lock.py	package	scripts keep-list
+scripts/write_gtf_manifest.py	package	scripts keep-list
+skillpacks/.gitignore	repro	top-level skillpacks
+skillpacks/README.md	repro	top-level skillpacks
+src/viralscan/Snakefile	package	D4 keep-list
+src/viralscan/__init__.py	package	D4 keep-list
+src/viralscan/__main__.py	package	D4 keep-list
+src/viralscan/anello_align.py	package	D4 keep-list
+src/viralscan/anellovirus.py	package	D4 keep-list
+src/viralscan/chemistry.py	package	D4 keep-list
+src/viralscan/chemistry_check.py	package	D4 keep-list
+src/viralscan/cli/__init__.py	package	D4 keep-list
+src/viralscan/cli/parsers.py	package	D4 keep-list
+src/viralscan/competitive_plot.py	package	D4 keep-list
+src/viralscan/constants.py	package	D4 keep-list
+src/viralscan/data/__init__.py	package	D4 keep-list
+src/viralscan/data/anellovirus_accessions.tsv	package	D4 keep-list
+src/viralscan/data/anellovirus_genes.tsv	package	D4 keep-list
+src/viralscan/data/broad_discovery_accessions.tsv	package	D4 keep-list
+src/viralscan/data/gene_programs.tsv	package	D4 keep-list
+src/viralscan/data/hpv_genes.tsv	package	D4 keep-list
+src/viralscan/data/index_exclusions.tsv	package	D4 keep-list
+src/viralscan/data/read_support_loci.tsv	package	D4 keep-list
+src/viralscan/data/repeat_gene_merges.tsv	package	D4 keep-list
+src/viralscan/data/virus_catalog.tsv	package	D4 keep-list
+src/viralscan/data/virus_taxonomy.tsv	package	D4 keep-list
+src/viralscan/data_fetch.py	package	D4 keep-list
+src/viralscan/defaults.py	package	D4 keep-list
+src/viralscan/discovery.py	package	D4 keep-list
+src/viralscan/enrichment.py	package	D4 keep-list
+src/viralscan/evidence.py	package	D4 keep-list
+src/viralscan/evidence_tiers.py	package	D4 keep-list
+src/viralscan/gene_programs.py	package	D4 keep-list
+src/viralscan/gtf_normalise.py	package	D4 keep-list
+src/viralscan/hostresponse_contract.py	package	D4 keep-list
+src/viralscan/hpv_genes.py	package	D4 keep-list
+src/viralscan/kb_outputs.py	package	D4 keep-list
+src/viralscan/kmer_sharing.py	package	D4 keep-list
+src/viralscan/menu.py	package	D4 keep-list
+src/viralscan/molecule_verdict.py	package	D4 keep-list
+src/viralscan/multimapping.py	package	D4 keep-list
+src/viralscan/outputs.py	package	D4 keep-list
+src/viralscan/read_support.py	package	D4 keep-list
+src/viralscan/reads.py	package	D4 keep-list
+src/viralscan/reference_gates.py	package	D4 keep-list
+src/viralscan/reference_strategy.py	package	D4 keep-list
+src/viralscan/repeat_merges.py	package	D4 keep-list
+src/viralscan/resources.py	package	D4 keep-list
+src/viralscan/run_context.py	package	D4 keep-list
+src/viralscan/run_safety.py	package	D4 keep-list
+src/viralscan/runconfig.py	package	D4 keep-list
+src/viralscan/scautoqc.py	package	D4 keep-list
+src/viralscan/schemas/__init__.py	package	D4 keep-list
+src/viralscan/schemas/v3/__init__.py	package	D4 keep-list
+src/viralscan/schemas/v3/artifact_inventory.schema.json	package	D4 keep-list
+src/viralscan/schemas/v3/claim_registry.schema.json	package	D4 keep-list
+src/viralscan/schemas/v3/count_audit.schema.json	package	D4 keep-list
+src/viralscan/schemas/v3/evidence_manifest.schema.json	package	D4 keep-list
+src/viralscan/schemas/v3/h5ad_contract.json	package	D4 keep-list
+src/viralscan/schemas/v3/positive_control_receipt.schema.json	package	D4 keep-list
+src/viralscan/schemas/v3/positive_control_report.schema.json	package	D4 keep-list
+src/viralscan/schemas/v3/reference_manifest.schema.json	package	D4 keep-list
+src/viralscan/schemas/v3/run_complete.schema.json	package	D4 keep-list
+src/viralscan/schemas/v3/run_manifest.schema.json	package	D4 keep-list
+src/viralscan/schemas/v3/validation_protocol.schema.json	package	D4 keep-list
+src/viralscan/scripts/analysis.py	package	D4 keep-list
+src/viralscan/scripts/anello_align.py	package	D4 keep-list
+src/viralscan/scripts/auto_evidence.py	package	D4 keep-list
+src/viralscan/scripts/build_reference.py	package	D4 keep-list
+src/viralscan/scripts/cellcalling.py	package	D4 keep-list
+src/viralscan/scripts/detection.py	package	D4 keep-list
+src/viralscan/scripts/emptydrops.R	package	D4 keep-list
+src/viralscan/scripts/evidence_run.py	package	D4 keep-list
+src/viralscan/scripts/gene_programs.py	package	D4 keep-list
+src/viralscan/scripts/host_capture.py	package	D4 keep-list
+src/viralscan/scripts/host_filter.py	package	D4 keep-list
+src/viralscan/scripts/hostresponse.py	package	D4 keep-list
+src/viralscan/scripts/multimap.py	package	D4 keep-list
+src/viralscan/scripts/ncbi_fetch.py	package	D4 keep-list
+src/viralscan/scripts/read_filter.py	package	D4 keep-list
+src/viralscan/scripts/scautoqc.py	package	D4 keep-list
+src/viralscan/scripts/star_confirm.py	package	D4 keep-list
+src/viralscan/scripts/umap.py	package	D4 keep-list
+src/viralscan/sensitivity.py	package	D4 keep-list
+src/viralscan/star_hostvirus.py	package	D4 keep-list
+src/viralscan/star_run.py	package	D4 keep-list
+src/viralscan/strand.py	package	D4 keep-list
+src/viralscan/tchem.py	package	D4 keep-list
+src/viralscan/templates/report.html.j2	package	D4 keep-list
+src/viralscan/tier_measures.py	package	D4 keep-list
+src/viralscan/utils.py	package	D4 keep-list
+src/viralscan/validation.py	package	D4 keep-list
+src/viralscan/viral_loci.py	package	D4 keep-list
+src/viralscan/virus_catalog.py	package	D4 keep-list
+src/viralscan/virus_grouping.py	package	D4 keep-list
+src/viralscan/virus_identity.py	package	D4 keep-list
+src/viralscan/virus_rollup.py	package	D4 keep-list
+src/viralscan/whitelist_preflight.py	package	D4 keep-list
+tests/__init__.py	package	no moved refs
+tests/_exact_control.py	package	no moved refs
+tests/_fastq.py	package	no moved refs
+tests/_frozen_oracles/frozen_align_d056986.py	package	no moved refs
+tests/_frozen_oracles/frozen_build_reference_5e551c9.py	package	no moved refs
+tests/_frozen_oracles/frozen_genbank_gtf_d056986.py	REVIEW	refs moved path(s): docs/plans/
+tests/_frozen_oracles/frozen_gene_programs_5e551c9.py	REVIEW	refs moved path(s): results/
+tests/_frozen_oracles/frozen_host_features_d056986.py	package	no moved refs
+tests/_frozen_oracles/frozen_menu_faf5667.py	package	no moved refs
+tests/_frozen_oracles/frozen_molecule_verdict_faf5667.py	package	no moved refs
+tests/_frozen_oracles/frozen_read_filter_d056986.py	package	no moved refs
+tests/_truth_panel_real.py	package	no moved refs
+tests/data/adjudication_lock_TEST_ONLY.json	REVIEW	test data/non-py
+tests/data/ebv_nc_007605_eber_excerpt.gtf	REVIEW	test data/non-py
+tests/data/evidence_tiny/R1.fastq	REVIEW	test data/non-py
+tests/data/evidence_tiny/R2.fastq	REVIEW	test data/non-py
+tests/data/evidence_tiny/called_cells.txt	REVIEW	test data/non-py
+tests/data/evidence_tiny/combined.gtf	REVIEW	test data/non-py
+tests/data/evidence_tiny/host.fasta	REVIEW	test data/non-py
+tests/data/evidence_tiny/reference.fasta	REVIEW	test data/non-py
+tests/data/evidence_tiny/t2g.txt	REVIEW	test data/non-py
+tests/data/evidence_tiny/transcripts.fasta	REVIEW	test data/non-py
+tests/data/evidence_tiny/viral.fasta	REVIEW	test data/non-py
+tests/data/evidence_tiny/viral.gtf	REVIEW	test data/non-py
+tests/data/viral_loci_TEST_ONLY.gtf	REVIEW	test data/non-py
+tests/fixtures/performance_original.py	package	no moved refs
+tests/integration/__init__.py	package	no moved refs
+tests/integration/test_anello_align_star.py	package	no moved refs
+tests/integration/test_anellovirus_chain.py	package	no moved refs
+tests/integration/test_competitor_evidence.py	package	no moved refs
+tests/integration/test_evidence_chain.py	package	no moved refs
+tests/integration/test_exact_lineage.py	package	no moved refs
+tests/integration/test_host_filter_star.py	package	no moved refs
+tests/integration/test_minimap2_secondary_ties.py	package	no moved refs
+tests/integration/test_pipeline_counts.py	package	no moved refs
+tests/integration/test_rerun_no_stale_artifacts.py	package	no moved refs
+tests/integration/test_smoke.py	package	no moved refs
+tests/integration/test_strand_replay_kallisto.py	package	no moved refs
+tests/integration/test_tiny_end_to_end.py	REVIEW	refs moved path(s): results/
+tests/integration/test_truth_panel_exact.py	package	no moved refs
+tests/test_adjudicate_candidates.py	REVIEW	refs moved path(s): results/
+tests/test_ambient_screen.py	REVIEW	refs moved path(s): docs/plans/
+tests/test_analysis.py	REVIEW	refs moved path(s): results/
+tests/test_anello_acceptance_report.py	repro	tests moved script(s): anello_acceptance_report
+tests/test_anello_align.py	package	no moved refs
+tests/test_anello_detection_merge.py	package	no moved refs
+tests/test_anello_star139.py	package	no moved refs
+tests/test_anellovirus_reference.py	package	no moved refs
+tests/test_artifact_inventory.py	repro	tests moved script(s): validate_artifact_inventory
+tests/test_aud3_09a_input_robustness.py	package	no moved refs
+tests/test_audit_fastq_pair.py	repro	tests moved script(s): audit_fastq_pair
+tests/test_auto_evidence.py	package	no moved refs
+tests/test_benchmark_v3_multimap.py	repro	tests moved script(s): benchmark_v3_multimap
+tests/test_build_manifest.py	package	no moved refs
+tests/test_build_reference.py	package	no moved refs
+tests/test_bundled_panel_mask.py	package	no moved refs
+tests/test_bus_correction_audit.py	package	no moved refs
+tests/test_cal13_decoys.py	package	no moved refs
+tests/test_cat19_tonsil02_contracts.py	package	no moved refs
+tests/test_cat28_panviral_marker_check.py	package	no moved refs
+tests/test_cellcalling.py	REVIEW	refs moved path(s): results/
+tests/test_check_dist_size.py	package	no moved refs
+tests/test_chemistry.py	package	no moved refs
+tests/test_chemistry_check.py	package	no moved refs
+tests/test_claim_registry.py	repro	tests moved script(s): validate_artifact_inventory,validate_claim_registry
+tests/test_cli.py	package	no moved refs
+tests/test_cli_reference_parity.py	package	no moved refs
+tests/test_cli_unify.py	package	no moved refs
+tests/test_combine_palmdb_reference.py	package	no moved refs
+tests/test_compare_reference_reproducibility.py	repro	tests moved script(s): compare_reference_reproducibility
+tests/test_competitive_plot.py	package	no moved refs
+tests/test_confirm_hits.py	package	no moved refs
+tests/test_constants.py	package	no moved refs
+tests/test_control_input_manifest.py	repro	tests moved script(s): freeze_control_inputs
+tests/test_count_library.py	REVIEW	refs moved path(s): analysis/
+tests/test_coverage_map.py	package	no moved refs
+tests/test_covid_annotate_eve.py	REVIEW	refs moved path(s): covid_viralscan
+tests/test_createconfig.py	package	no moved refs
+tests/test_data_fetch.py	package	no moved refs
+tests/test_data_governance.py	package	no moved refs
+tests/test_detection.py	package	no moved refs
+tests/test_detection_audit_s2.py	repro	tests moved script(s): compare_legacy_v2_v3
+tests/test_detection_gate_tolerance.py	package	no moved refs
+tests/test_detection_sensitivity_contract.py	package	no moved refs
+tests/test_discovery.py	package	no moved refs
+tests/test_discovery_integration.py	package	no moved refs
+tests/test_discovery_kb_evidence.py	package	no moved refs
+tests/test_discovery_read_support.py	package	no moved refs
+tests/test_discovery_star_evidence.py	package	no moved refs
+tests/test_docs_consistency.py	package	no moved refs
+tests/test_docs_sources.py	package	no moved refs
+tests/test_dsr02_calibration.py	repro	tests moved script(s): dsr02_calibration
+tests/test_dsr02_enumerate_calls.py	repro	tests moved script(s): dsr02_enumerate_calls
+tests/test_dsr02_validate_call.py	repro	tests moved script(s): dsr02_validate_call
+tests/test_dsr02_verdicts.py	repro	tests moved script(s): dsr02_verdicts
+tests/test_dsr03_evidence_cards.py	repro	tests moved script(s): dsr03_evidence_cards
+tests/test_dsr05_dossier.py	repro	tests moved script(s): dsr02_validate_call,dsr05_dossier
+tests/test_dsr06_reference_cells.py	repro	tests moved script(s): dsr06_reference_cells,dsr_common_cells
+tests/test_dsr_common_cells.py	repro	tests moved script(s): dsr_common_cells
+tests/test_dsr_host_shutoff_diagnostic.py	repro	tests moved script(s): dsr_host_shutoff_diagnostic
+tests/test_dsr_round2b_sens07.py	repro	tests moved script(s): sens07_planted_sensitivity,slurm_dsr_round2b_sens07_array
+tests/test_dsr_round_compare.py	repro	tests moved script(s): dsr_round_compare
+tests/test_dsr_round_env.py	repro	tests moved script(s): slurm_dsr_chem_array,slurm_dsr_collect,slurm_dsr_rerun_array,slurm_dsr_twostep_redetect
+tests/test_em_global_residue_pinning.py	package	no moved refs
+tests/test_errorhandler.py	package	no moved refs
+tests/test_evidence.py	package	no moved refs
+tests/test_evidence_competitors.py	package	no moved refs
+tests/test_evidence_subcommand.py	package	no moved refs
+tests/test_evidence_tiers.py	package	no moved refs
+tests/test_explore_ledger.py	package	no moved refs
+tests/test_freeze_fresh_control_packet.py	repro	tests moved script(s): freeze_fresh_control_packet,run_fresh_control,run_fresh_control_task
+tests/test_fresh_control_gov06.py	repro	tests moved script(s): compare_legacy_v2_v3,freeze_fresh_control_packet,prepare_fresh_controls,run_fresh_control
+tests/test_fresh_control_run.py	repro	tests moved script(s): run_fresh_control
+tests/test_gene_programs.py	REVIEW	refs moved path(s): results/
+tests/test_gene_programs_audit4.py	package	no moved refs
+tests/test_gene_programs_capturability.py	package	no moved refs
+tests/test_gene_programs_staleness.py	package	no moved refs
+tests/test_gene_programs_unresolved.py	package	no moved refs
+tests/test_generate_truth_panel.py	package	no moved refs
+tests/test_generate_truth_panel_m04.py	package	no moved refs
+tests/test_generate_truth_panel_real.py	package	no moved refs
+tests/test_gtf_normalise.py	package	no moved refs
+tests/test_headline_denominators.py	package	no moved refs
+tests/test_host_capture.py	package	no moved refs
+tests/test_host_filter.py	package	no moved refs
+tests/test_host_homology_loci.py	REVIEW	refs moved path(s): results/
+tests/test_host_species.py	package	no moved refs
+tests/test_hostresponse.py	package	no moved refs
+tests/test_hostresponse_auto_cv.py	repro	tests moved script(s): hostresponse_ebv_matched
+tests/test_hostresponse_baselines.py	package	no moved refs
+tests/test_hostresponse_ebv_matched_script.py	repro	tests moved script(s): hostresponse_ebv_matched
+tests/test_hostresponse_groups.py	package	no moved refs
+tests/test_hostresponse_null.py	package	no moved refs
+tests/test_hostresponse_strata.py	package	no moved refs
+tests/test_hostresponse_subcommand.py	package	no moved refs
+tests/test_hostresponse_symbols.py	package	no moved refs
+tests/test_hostresponse_warnings.py	package	no moved refs
+tests/test_hpv_reference.py	package	no moved refs
+tests/test_hr_entrypoint_contract.py	package	no moved refs
+tests/test_identity_backfill.py	REVIEW	refs moved path(s): results/
+tests/test_identity_matrix_reconcile.py	package	no moved refs
+tests/test_index_reconciliation.py	REVIEW	refs moved path(s): PLAN.md
+tests/test_infected_rule_and_gate.py	repro	tests moved script(s): compare_legacy_v2_v3
+tests/test_kb_outputs.py	package	no moved refs
+tests/test_ledger_append_only.py	repro	tests moved script(s): check_ledger_append_only
+tests/test_ledger_git_sha.py	repro	tests moved script(s): check_ledger_append_only
+tests/test_legacy_v2_v3.py	repro	tests moved script(s): benchmark_v3_multimap,compare_legacy_v2_v3
+tests/test_legacy_v2_v3_attempts.py	repro	tests moved script(s): compare_legacy_v2_v3_attempts
+tests/test_legacy_v2_v3_candidates.py	repro	tests moved script(s): summarize_legacy_v2_v3_candidates
+tests/test_legacy_v2_v3_cells.py	repro	tests moved script(s): summarize_legacy_v2_v3_cells
+tests/test_legacy_v2_v3_execution_evidence.py	repro	tests moved script(s): freeze_legacy_v2_v3_execution
+tests/test_legacy_v2_v3_execution_freeze.py	repro	tests moved script(s): freeze_legacy_v2_v3_execution
+tests/test_legacy_v2_v3_provenance.py	repro	tests moved script(s): freeze_legacy_v2_v3_provenance
+tests/test_legacy_v2_v3_slurm.py	repro	tests moved script(s): benchmark_v3_multimap,compare_legacy_v2_v3,prepare_legacy_v2_v3_slurm
+tests/test_legacy_worker_requests.py	package	no moved refs
+tests/test_longitudinal_compile.py	package	no moved refs
+tests/test_make_manuscript_figures.py	repro	tests moved script(s): make_manuscript_figures
+tests/test_measure_kmer_capture.py	repro	tests moved script(s): measure_kmer_capture
+tests/test_mech_a_consumers.py	package	no moved refs
+tests/test_mech_a_presentation.py	package	no moved refs
+tests/test_molecule_representatives.py	package	no moved refs
+tests/test_molecule_verdict.py	package	no moved refs
+tests/test_multimap.py	package	no moved refs
+tests/test_multimap_aliases.py	package	no moved refs
+tests/test_multimap_tool_resolution.py	package	no moved refs
+tests/test_multimapping.py	package	no moved refs
+tests/test_multimapping_counting_contract.py	package	no moved refs
+tests/test_multimapping_properties.py	package	no moved refs
+tests/test_multimapping_tolerance.py	package	no moved refs
+tests/test_ncbi_fetch.py	package	no moved refs
+tests/test_output_layout.py	package	no moved refs
+tests/test_package_starsolo_duplicates.py	repro	tests moved script(s): package_starsolo_viral_references
+tests/test_panel_candidates.py	package	no moved refs
+tests/test_panel_integrity_contract.py	package	no moved refs
+tests/test_panel_kmer_sharing.py	package	no moved refs
+tests/test_panel_pool.py	package	no moved refs
+tests/test_panel_promote.py	package	no moved refs
+tests/test_perf_remaining_b13.py	package	no moved refs
+tests/test_perf_remaining_b16.py	package	no moved refs
+tests/test_perf_remaining_b21.py	package	no moved refs
+tests/test_perf_remaining_b28.py	package	no moved refs
+tests/test_perf_wave1_b04.py	package	no moved refs
+tests/test_perf_wave1_b06.py	package	no moved refs
+tests/test_perf_wave1_b23.py	package	no moved refs
+tests/test_perf_wave1_b24.py	package	no moved refs
+tests/test_perf_wave2_b18.py	package	no moved refs
+tests/test_perf_wave2_b25.py	package	no moved refs
+tests/test_performance_exactness.py	REVIEW	refs moved path(s): results/
+tests/test_pgt_coverage_maps.py	package	no moved refs
+tests/test_plant_anello_tails.py	package	no moved refs
+tests/test_positive_control.py	package	no moved refs
+tests/test_positive_control_receipt.py	package	no moved refs
+tests/test_posthoc_layout.py	package	no moved refs
+tests/test_prepare_fresh_controls.py	repro	tests moved script(s): prepare_fresh_controls
+tests/test_prepare_viral_proteins.py	package	no moved refs
+tests/test_program_evidence_boundary.py	package	no moved refs
+tests/test_protocol_code_honouring.py	repro	tests moved script(s): check_ledger_append_only,gen_workflow_comparison,validate_v3_protocol
+tests/test_protocol_lock.py	repro	tests moved script(s): validate_protocol_lock
+tests/test_qa03_bus_ingestion.py	package	no moved refs
+tests/test_read_filter.py	package	no moved refs
+tests/test_read_start_profile.py	package	no moved refs
+tests/test_read_support.py	package	no moved refs
+tests/test_reads.py	package	no moved refs
+tests/test_reference_audit.py	package	no moved refs
+tests/test_reference_gates_catalogue.py	package	no moved refs
+tests/test_reference_gates_inspect.py	package	no moved refs
+tests/test_reference_manifest_contract.py	package	no moved refs
+tests/test_reference_near_duplicate.py	package	no moved refs
+tests/test_reference_pipeline_aud15.py	package	no moved refs
+tests/test_reference_provenance.py	package	no moved refs
+tests/test_reference_strategy_benchmark.py	package	no moved refs
+tests/test_release_static.py	package	no moved refs
+tests/test_repeat_merges.py	package	no moved refs
+tests/test_rerun_multimap.py	package	no moved refs
+tests/test_revalidate_fresh_control.py	repro	tests moved script(s): revalidate_fresh_control
+tests/test_run_complete_marker.py	REVIEW	refs moved path(s): results/
+tests/test_run_safety.py	package	no moved refs
+tests/test_scautoqc.py	package	no moved refs
+tests/test_sci05_round13_code.py	repro	tests moved script(s): validate_v3_protocol
+tests/test_sci05_round14_code.py	repro	tests moved script(s): validate_v3_protocol
+tests/test_sci05_round15_code.py	repro	tests moved script(s): validate_v3_protocol
+tests/test_sens07_planted_sensitivity.py	repro	tests moved script(s): sens07_planted_sensitivity
+tests/test_sensitivity.py	package	no moved refs
+tests/test_shifted_log_normalization.py	package	no moved refs
+tests/test_ship_scope.py	package	no moved refs
+tests/test_ship_scope_tracked_tree.py	package	no moved refs
+tests/test_snakefile_dag.py	REVIEW	refs moved path(s): results/
+tests/test_snakemake_script_modules.py	package	no moved refs
+tests/test_software_identity.py	package	no moved refs
+tests/test_star_confirm.py	package	no moved refs
+tests/test_star_hostvirus.py	package	no moved refs
+tests/test_strand_auto.py	package	no moved refs
+tests/test_strand_consistency.py	package	no moved refs
+tests/test_subset_fastq_pair.py	repro	tests moved script(s): audit_fastq_pair
+tests/test_super_expressor_plot.py	package	no moved refs
+tests/test_super_expressors.py	package	no moved refs
+tests/test_swap_check.py	package	no moved refs
+tests/test_tchem.py	package	no moved refs
+tests/test_thin_gtf_scripts.py	package	no moved refs
+tests/test_tier_measures.py	package	no moved refs
+tests/test_tracked_file_sizes.py	REVIEW	refs moved path(s): analysis/
+tests/test_translated_search_tools.py	package	no moved refs
+tests/test_umap.py	package	no moved refs
+tests/test_v3_lod.py	package	no moved refs
+tests/test_v3_scorer.py	package	no moved refs
+tests/test_v3_scorer_m04.py	package	no moved refs
+tests/test_val08_golden.py	package	no moved refs
+tests/test_val_generator_audit.py	package	no moved refs
+tests/test_val_ra_guard.py	package	no moved refs
+tests/test_validation.py	package	no moved refs
+tests/test_validation_protocol.py	repro	tests moved script(s): validate_v3_protocol
+tests/test_validation_protocol_round12.py	repro	tests moved script(s): validate_v3_protocol
+tests/test_validation_protocol_round13.py	repro	tests moved script(s): validate_v3_protocol
+tests/test_var_names_safety.py	package	no moved refs
+tests/test_viral_loci.py	package	no moved refs
+tests/test_viral_read_cleanup_pilot.py	REVIEW	refs moved path(s): analysis/
+tests/test_virus_catalog.py	package	no moved refs
+tests/test_virus_grouping.py	package	no moved refs
+tests/test_virus_identity.py	package	no moved refs
+tests/test_virus_rollup.py	package	no moved refs
+tests/test_whitelist_preflight.py	package	no moved refs
+tests/test_workflow_comparison.py	repro	tests moved script(s): gen_workflow_comparison
+tests/test_write_gtf_manifest.py	package	no moved refs
+todo/TODOLIST.md	repro	top-level todo
+todo/depth-confounder-check.md	repro	top-level todo
+todo/hostresponse-depth-robust-module.md	repro	top-level todo
+todo/intermediate-attractor-test.md	repro	top-level todo
+todo/read-start-distribution.md	repro	top-level todo
+uv.lock	package	D4 keep-list

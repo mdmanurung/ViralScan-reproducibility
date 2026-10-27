@@ -1,0 +1,21 @@
+.........................................F...ss......................... [ 73%]
+..................s..sssss                                               [100%]
+=================================== FAILURES ===================================
+______________ test_R3_paths_named_in_live_scripts_still_resolve _______________
+
+    def test_R3_paths_named_in_live_scripts_still_resolve():
+        now = _script_paths()
+        if not _SNAP.exists():  # first run, before any move: remember which named paths are already broken
+            assert not os.path.isdir(os.path.join(R["repro_new"], "data/runs")), "snapshot must be taken before moves"
+            _SNAP.write_text(json.dumps({f: [p for p in ps if not os.path.exists(p)] for f, ps in now.items()}))
+        broken0 = {p for ps in json.loads(_SNAP.read_text()).values() for p in ps}
+        broken = sorted({p for ps in now.values() for p in ps if not (os.path.exists(p) or glob.glob(p))} - broken0)
+>       assert not broken, broken[:8]
+E       AssertionError: ['/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/references/panel_builds/viralscan_p...ncgenom-research/mdmanurung/ViralScan-reproducibility/data/references/panel_builds/viralscan_panel_ref_genomic/build_']
+E       assert not ['/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/references/panel_builds/viralscan_p...ncgenom-research/mdmanurung/ViralScan-reproducibility/data/references/panel_builds/viralscan_panel_ref_genomic/build_']
+
+test_regression.py:101: AssertionError
+=========================== short test summary info ============================
+FAILED test_regression.py::test_R3_paths_named_in_live_scripts_still_resolve
+1 failed, 89 passed, 8 skipped in 35.31s
+exit=1

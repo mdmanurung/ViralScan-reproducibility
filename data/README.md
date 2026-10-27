@@ -16,6 +16,10 @@ Every directory was moved here whole (renamed, not copied), so the paths recorde
 | Run outputs incl. BAMs, count matrices | `runs/` | `benchmark_runs`, `covid_viralscan`, `viralscan_showcase`, `work` (Track A/B/C, discovery, dsr*, disc12), `vs_work`, `cost01`, `logs`, `sources` |
 | Package snapshots (git worktrees) | `pinned_snapshots/vs_pinned*`, `runs/vs_work/*` | registered in the package checkout; `git worktree repair` if you move them |
 | Backups | `backups/` | old-checkout leftovers, pruned branches, split backups, branch bundles |
+| Branch bundles (every ref of both repos, 2026-10-27) | `backups/branch-bundles/*.bundle` | restore a pruned branch with `git bundle list-heads` / `git fetch <bundle> <ref>` |
+| Migration tooling + rehearsal captures | `backups/viralscan-split/` | tracker `SPLIT_TRACKER.md`, `tests/` (gate), `audit/`, rehearsal trees; copy of tests/audit/tracker tracked in `provenance/migration_tests/` |
+| Script / record backups from the path rewrite | `backups/stage5-script-backups/`, `backups/stage7-record-backups/` | pre-rewrite copies keyed by absolute path |
+| Pinned conda env lock | `envs/viralscan_env_pinned.explicit.txt` | `conda create -n viralscan_env_pinned --file ...` rebuilds the deleted env (309 packages) |
 
 Index of an area: `find data/<area> -maxdepth 2 | head`. Per-tree manifests (path, size, sha256 of key files) are written to
 `data/metadata/` as trees are documented.

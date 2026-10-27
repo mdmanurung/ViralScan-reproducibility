@@ -1,0 +1,95 @@
+# Single source of truth for the two-folder migration (plan: ~/.claude/plans/mossy-marinating-hamster.md).
+# Every path is absolute. `old` is where it is today, `new` where it must end up. Nothing here moves anything.
+roots:
+  archive: /exports/archive/hg-funcgenom-research/mdmanurung
+  scratch: /exports/para-lipg-hpc/mdmanurung
+  old_checkout: /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan          # the package repo (stays)
+  repro_new: /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility
+  repro_old: /exports/para-lipg-hpc/mdmanurung/ViralScan-reproducibility               # scratch clone (stage 1 re-clones to repro_new)
+  data: /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data
+
+# Directory renames. stage = the stage whose target tests turn green when it is done.
+moves:
+  # stage 2: old checkout -> data/
+  - {stage: 2, old: ViralScan/benchmark_runs, new: data/runs/benchmark_runs}
+  - {stage: 2, old: ViralScan/references, new: data/references/starsolo/references}
+  - {stage: 2, old: ViralScan/starsolo_p22_6, new: data/references/starsolo/starsolo_p22_6}
+  - {stage: 2, old: ViralScan/starsolo_p22_6b, new: data/references/starsolo/starsolo_p22_6b}
+  - {stage: 2, old: ViralScan/ebv_latest_ref_2026-09-27, new: data/references/starsolo/ebv_latest_ref_2026-09-27}
+  - {stage: 2, old: ViralScan/viral_panel_max_2026-09-28, new: data/references/starsolo/viral_panel_max_2026-09-28}
+  - {stage: 2, old: ViralScan/cost01, new: data/runs/cost01}
+  - {stage: 2, old: ViralScan/logs, new: data/runs/logs}
+  - {stage: 2, old: ViralScan/sources, new: data/runs/sources}
+  - {stage: 2, old: ViralScan/covid_viralscan, new: data/runs/covid_viralscan}
+  - {stage: 2, old: ViralScan/benchmark_inputs, new: data/inputs/benchmark_inputs}
+  - {stage: 2, old: ViralScan/analysis, new: data/runs/old_checkout_analysis}
+  - {stage: 2, old: ViralScan/results, new: data/runs/old_checkout_results}
+  - {stage: 2, old: ViralScan/tmp, new: data/runs/tmp}
+  - {stage: 2, old: ViralScan/.tmp, new: data/runs/dot_tmp}
+  - {stage: 2, old: ViralScan/hhv6a_in_hhv6b_2026-10-05, new: data/runs/hhv6a_in_hhv6b_2026-10-05}
+  - {stage: 2, old: ViralScan/hhv6b_in_ebv_2026-10-05, new: data/runs/hhv6b_in_ebv_2026-10-05}
+  - {stage: 2, old: ViralScan/biomni_bundle, new: data/backups/old-checkout-leftovers/biomni_bundle}
+  - {stage: 2, old: ViralScan/viralscan_lshwcp_spec, new: data/backups/old-checkout-leftovers/viralscan_lshwcp_spec}
+  - {stage: 2, old: ViralScan/migration_plan, new: data/backups/old-checkout-leftovers/migration_plan}
+  # stage 3: siblings -> data/
+  - {stage: 3, old: viral_ref_cat42, new: data/references/panel_builds/viral_ref_cat42}
+  - {stage: 3, old: viral_ref_cat42b, new: data/references/panel_builds/viral_ref_cat42b}
+  - {stage: 3, old: viral_ref_cat42d, new: data/references/panel_builds/viral_ref_cat42d}
+  - {stage: 3, old: viral_ref_cat42d_dlist2, new: data/references/panel_builds/viral_ref_cat42d_dlist2}
+  - {stage: 3, old: viral_ref_final, new: data/references/panel_builds/viral_ref_final}
+  - {stage: 3, old: viral_ref_wp5, new: data/references/panel_builds/viral_ref_wp5}
+  - {stage: 3, old: _misc/viralscan_panel_ref, new: data/references/panel_builds/viralscan_panel_ref}
+  - {stage: 3, old: _misc/viralscan_panel_ref_genomic, new: data/references/panel_builds/viralscan_panel_ref_genomic}
+  - {stage: 3, old: kraken2_db, new: data/references/kraken2_db}
+  - {stage: 3, old: viral_scan_probe, new: data/references/probes/viral_scan_probe}
+  - {stage: 3, old: virtus2_probe, new: data/references/probes/virtus2_probe}
+  - {stage: 3, old: viralscan_showcase, new: data/runs/viralscan_showcase}
+  - {stage: 3, old: vs_pinned, new: data/pinned_snapshots/vs_pinned}
+  - {stage: 3, old: vs_pinned_molassign_2026-10-19, new: data/pinned_snapshots/vs_pinned_molassign_2026-10-19}
+  - {stage: 3, old: vs_work, new: data/runs/vs_work}
+  - {stage: 3, old: _kbtest, new: data/backups/_kbtest}
+  - {stage: 3, old: ViralScan_pruned_branches_2026-10-10, new: data/backups/ViralScan_pruned_branches_2026-10-10}
+  - {stage: 3, old: ViralScan-discovery, new: data/backups/ViralScan-discovery}
+  # stage 6: last, only when no job runs from it
+  - {stage: 6, old: viralscan_work, new: data/runs/work}
+
+# Untracked GTFs inside the package tree: moved file by file (src/viralscan/data also holds tracked package data).
+gtf_move:
+  stage: 2
+  old_dir: ViralScan/src/viralscan/data
+  glob: "*.gtf"
+  new_dir: data/references/gtf/data
+  expected_count: 393
+
+# Untracked loose files at the old checkout root -> data/backups/old-checkout-leftovers/ (stage 2)
+leftover_globs: ["HANDOFF*.md", "SESSION_RESUME.md", "count_audit.tsv"]
+
+# Allowed top-level entries in the old checkout besides git-tracked ones (tool/cache dirs and hook output).
+old_checkout_allow: [".git", ".claude", ".mycelium", ".living", ".venv", ".vendor_mypy", ".snakemake", ".specify", ".pybiomart.sqlite",
+  ".aws", ".agents", ".codex", ".pip-cache", ".mypy_cache", ".ruff_cache", ".pytest_cache", "build", ".coverage", "curation", "Rplots.pdf", "Log.out", "HANDOFF.md"]  # Log.out: STAR log written by the package test suite
+
+# Scripts that name old absolute paths (T5/R3). Globs relative to archive root.
+live_scripts:
+  - viralscan_work/trackA_round1/scripts/slurm_trackA_variant.sh
+  - viralscan_work/trackC_iav/refs/build_src/scripts/*.sh
+  - viralscan_work/parity_mechA/*.sh
+  - viralscan_work/ttmdv_readcheck/readcheck.sbatch
+  - viralscan_work/hpv16_gse189670/readcheck/readcheck.sbatch
+# old-path patterns that must no longer appear in live scripts once stage 5 is done
+old_path_regex: '(/exports/para-lipg-hpc/mdmanurung/ViralScan(?![A-Za-z0-9_-])|/ViralScan/(benchmark_runs|references|starsolo_p22_6b?|ebv_latest_ref_2026-09-27|viral_panel_max_2026-09-28|cost01|covid_viralscan|benchmark_inputs)|/viralscan_work/|/viralscan_showcase/|/vs_pinned/|/vs_work/|/viral_ref_)'
+
+# Baselines taken from earlier verified runs.
+baselines:
+  repro_suite: {passed: 1112, skipped: 3, xml: /exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/backups/viralscan-split/rehearsal/step4_real.xml}
+  package_head: ebd3813
+
+# Final state (T7/T8)
+final:
+  archive_viralscan_names: [ViralScan, ViralScan-reproducibility]
+  scratch_viralscan_names: []
+  package_remote_branches: [main, codex/disc12-hosthomolog, codex/g3-signing-r2]
+  repro_remote_branches: [main, codex/stage5-script-paths]
+
+# Frozen records inside data/runs/work: never rewritten, never counted by T7. Provenance/superseded dirs, script backups,
+# and vendored package source snapshots (src/viralscan, code*/viralscan, build_src) whose text mirrors the package itself.
+frozen_dir_regex: '/(provenance|superseded|source_snapshot|src_4a|src_a2|chem_pilot_[^/]*|backups|\.snakemake)/|/build_src/(src|analysis)/|/(src|code[^/]*)/viralscan/'
