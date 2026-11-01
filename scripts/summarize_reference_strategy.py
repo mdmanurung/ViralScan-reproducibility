@@ -7,7 +7,9 @@ import argparse
 import sys
 from pathlib import Path
 
-from viralscan.reference_strategy import (
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))  # direct ``python scripts/...`` runs
+
+from scripts.reference_strategy import (  # noqa: E402
     BenchmarkContractError,
     validate_results,
     write_parsed_benchmark_results,
