@@ -25,8 +25,9 @@ import numpy as np
 
 REPO = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(REPO / "src"))
+sys.path.insert(0, str(REPO))
 
-from viralscan.reference_strategy import (  # noqa: E402
+from scripts.reference_strategy import (  # noqa: E402
     DATASETS,
     METHOD_ROWS,
     _read_lines,

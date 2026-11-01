@@ -6,6 +6,12 @@ package repo at that commit. Section classification: package `audit/main-0/triag
 
 ## Next action
 
+- [x] `REF-STRATEGY-MOVE-01` (2026-11-01, user decision; package row `HELPERS-01`): `reference_strategy.py` moves out of the package into
+  `scripts/reference_strategy.py` (verbatim except `write_slurm_array` finds the package checkout through `viralscan.__file__`).
+  Its tests moved with it (`tests/test_reference_audit.py`, `tests/test_reference_strategy_benchmark.py`,
+  `tests/test_reference_strategy_viral_gtf.py`, the last one split out of the package's `tests/test_build_manifest.py`). The three
+  `scripts/*reference_strategy*.py` entry points and `harmonize_2x2.py` import it from `scripts.`; the frozen
+  `analysis/audit_2026-10/repro_D/d0[4-7]` audit scripts keep `viralscan.reference_strategy` (they reproduce the audit at the old pin).
 - [~] `REPO-SPLIT-01` (2026-10-23, user: separate the package from the experiments): split this repo into
   `ViralScan` (package) and `ViralScan-reproducibility` (experiments). Live tracker, decisions D1-D45 and
   agent instructions: `/exports/para-lipg-hpc/mdmanurung/viralscan-split/SPLIT_TRACKER.md` (it moves into the
