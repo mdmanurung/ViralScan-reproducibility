@@ -15,7 +15,7 @@ per-file git history (`provenance/package_commit_map.tsv` maps old package commi
 | `provenance/` | split provenance: commit map, pinned package sha, carry list |
 
 ## Pinned package
-These analyses were run against ViralScan commit `6bfac9400ced58de99eb52db4dafe358aafc6735` (see `provenance/PACKAGE_BASE_SHA`; update it when you re-pin).
+These analyses were run against ViralScan commit `1f13506ba70b10f9ca1880079e861089eb7ce0f5` (see `provenance/PACKAGE_BASE_SHA`; update it when you re-pin).
 
 ```bash
 git -C /path/to/ViralScan worktree add --detach pkg "$(head -1 provenance/PACKAGE_BASE_SHA)"   # the pinned package checkout, at ./pkg
