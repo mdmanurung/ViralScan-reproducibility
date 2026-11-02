@@ -38,11 +38,11 @@ Script: `scripts/host05_hh_aggregate.py`; Wilson 95% intervals. Fragments/molecu
 |---|---|---|---|---|---|---|---|---|---|
 | default | D03 (HHV-6B) | pinned | 15 | 1329 | 0 | 1329 | 0 | 0 | 0 [0, 0.29%] |
 | default | D03 (HHV-6B) | star-default | 15 | 1329 | 0 | 1329 | 0 | 0 | 0 [0, 0.29%] |
-| default | R01 (EBV) | pinned | 15 | 1329 | 0 | 1329 | 0 | 0 | 0 [0, 0.29%] |
-| default | R01 (EBV) | star-default | 15 | 1329 | 0 | 1329 | 0 | 0 | 0 [0, 0.29%] |
+| default | R01 (EBV) | pinned | 15 | 1329 | 0 | 1329 | 0 | 0 | in-house, excluded from public results (user 2026-11-02) |
+| default | R01 (EBV) | star-default | 15 | 1329 | 0 | 1329 | 0 | 0 | in-house, excluded from public results (user 2026-11-02) |
 | outside_truth | D03 (HHV-6B) | pinned | 8 of 15 | 99 | 0 | 99 | 0 | 0 | 0 [0, 3.7%] |
 | outside_truth | D03 (HHV-6B) | star-default | 8 of 15 | 99 | 0 | 99 | 0 | 0 | 0 [0, 3.7%] |
-| outside_truth | R01 (EBV) | both | not submitted | n/a | n/a | n/a | n/a | n/a | not estimable (pool empty) |
+| outside_truth | R01 (EBV) | both | not submitted | n/a | n/a | n/a | n/a | n/a | in-house, excluded from public results (user 2026-11-02); not submitted, pool empty |
 
 - `outside_truth` rows 8 and 10-15 (HHV-6B levels 30 seed 2 and 100/300) failed in `spikein.py spike`: the host-homologous
   pool holds 22-31 reads, too few to draw 30+ distinct fragments. Recorded as n/a, not retried (loud failure is the design).
@@ -67,8 +67,8 @@ It writes `host05/summary/host_loss.tsv` (D15/D16 with Wilson CIs, `not_in_linea
 
 ## Reading so far
 
-Across 2,658 real viral fragments per STAR parameter set (two backgrounds) the filter removed none; upper 95% bound 0.29%.
-On the 99 host-homologous HHV-6B fragments it removed none; upper bound 3.7%. This is a lower bound on the cost (source
+**Public result (D03 = SRR29320037 only; R01_SOC4 is in-house, excluded by user decision 2026-11-02, raw rows kept above and in the source `host_loss.tsv` files).** On 1,329 real HHV-6B fragments per STAR parameter set the filter removed none (pinned and star-default): exact one-sided 95% upper bound 1-0.05^(1/1329) = 0.225% (Wilson two-sided above: 0.29%). On the 99 host-homologous D03 HHV-6B fragments it removed none: exact upper bound 2.98% (Wilson 3.7%). The fragments repeat across conditions, so the bounds are optimistic.
+Previous two-background pooling (2,658) is withdrawn. This is a lower bound on the cost (source
 reads are host-unmapped by construction) and does not close HOST-05, which also needs the Part B end-to-end arms, the
 phase-6 EBV acceptance and CMP-01..03.
 
