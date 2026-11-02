@@ -5634,6 +5634,7 @@ elapsed time: 2-4 weeks, dominated by downloads, queues, and comparator setup.
 - [ ] `RUN-01` — HHV-6B `SRR20710641` under measured 10x v3 geometry.
 - [ ] `RUN-02` — EBV `SRR12682296` under measured 10x v2 geometry.
 - [ ] `RUN-03` — HSV-1 `SRR8315713` under measured Drop-seq geometry.
+  - 2026-11-02 (`codex/round-2026-11-02-hsv1`): four arms submitted on package de55424, jobs 25941198-25941201; see `analysis/round_2026-11-02/hsv1_SRR8315713.md`. Results pending; row stays open.
 - [ ] `RUN-04` — KSHV latent/lytic series `GSE190558`.
 - [ ] `RUN-05` — KSHV plus EBV replicates `GSE154900`.
 
