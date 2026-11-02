@@ -5823,7 +5823,7 @@ behind the package-completion plan unless the user releases a row.
   - 2026-11-02: runs submitted on `de55424` (3 arms x 2 rafts, jobs 25941178-25941183), not yet started; read validation not run (needs the GRCh38 FASTA path). `analysis/round_2026-11-02/hpv16_gse189670.md`.
 - [ ] `DSR-04` — COVID x213/x216 rerun: cat42d, `--strand reverse`, read
   filter off / artefact, emptydrops.
-  - 2026-11-02: runs submitted on `de55424` (3 arms x 2 libraries, jobs 25941184-25941189), not yet started; anellovirus rows stay unverified (CAT-30). `analysis/round_2026-11-02/covid_x213_x216.md`.
+  - 2026-11-02: not run in the 2026-11-02 public round (in-house data; user decision 2026-11-02); jobs 25941184-25941189 to be cancelled by the user.
 - [x] `DSR-05` — HHV-6A residual in SRR20710641: read validation (job
   25701668, 10 HHV-6A-only + 45 shared 6A/6B records, 95 reads). Result
   F-026: the residual is HHV-6B (EM bleed + single strain SNPs), no
