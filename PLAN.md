@@ -3801,6 +3801,20 @@ homology negatives cannot become probable/strong calls.
 - [ ] `HOST-05` — **open.** The sensitivity cost of the v3 STARsolo path is still
   unmeasured. It blocks `MS-02`/`CMP-01`–`CMP-03` and the preregistered
   `D15`/`D16` endpoints; no number should be quoted for it until then.
+  - 2026-11-02, moved from package PLAN (package row text at the move, verbatim in the quote; the package-code sub-rows `HOST-05a`/`b`/`d` are done there):
+    > - [ ] `HOST-05` — **open.** The sensitivity cost of the v3 STARsolo path is still
+    >   unmeasured. It blocks `MS-02`/`CMP-01`–`CMP-03` and the preregistered
+    >   `D15`/`D16` endpoints; no number should be quoted for it until then.
+    >   - [x] `HOST-05a` (2026-10-27, `codex/host-loss`): `viralscan host-loss --run-dir SAMPLE --truth TSV [--viral-label]
+    >     [--mixed-manifest] [-o]` exposes `host_filter.lost_truth_counts` on a run's `host_filtered/fragment_lineage.tsv.gz`,
+    >     writing `posthoc/host_loss/host_loss.json` with `lower_bound: true` and `not_estimable` when truth reads are missing
+    >     from the lineage. Tests `tests/test_host_loss.py` (2).
+    >   - [x] `HOST-05b` (2026-10-27): `tests/integration/test_host_filter_star.py` parametrised over `STAR_FILTER_PARAM_SETS`
+    >     (`pinned`, `star-default`); the spiked viral read survives both (D15 loss 0, nothing unseen). Runs in CI once STAR-05
+    >     lands.
+    >   - [x] `HOST-05d` (2026-10-27): docs state the loss as a lower bound (`output_reference.md`, `cli_reference.md`).
+    >   - Still open (needs real-data compute): `hosthomolog.sbatch` on the Track A libraries (DISC-12-HH), phase-6 EBV
+    >     acceptance, CMP-01..03. HOST-05 itself stays `[ ]`.
 
 ## WP4D — Gene-programme inference, layer 2 (new 2026-09-26)
 
@@ -6610,6 +6624,130 @@ Estimated effort: 1-2 writing weeks after `G5`, excluding author review.
 there are no placeholders or ineligible private results, citations support their
 sentences, and independent review has no unresolved correctness, denominator,
 annotation, uncertainty, ethics, or unsupported-claim finding.
+
+## Moved from the package tracker (2026-11-02)
+
+User decision 2026-11-02: public-data experiment work lives only in this repo; the package `PLAN.md` (ViralScan, `PLAN-SPLIT-EXP-01`) keeps package code, tests,
+docs, packaging, release and CI. The open experiment rows moved here with their history. Most already existed above, word for word, from the REPO-SPLIT-01 copy;
+only the rows that were missing are added below, verbatim and grouped as in the package file. Checkbox state is unchanged.
+
+### Rows new to this tracker (verbatim from the package `PLAN.md`)
+
+#### WP4C — Detection sensitivity and negative-result claims
+
+- [~] `SENS-06` — **open.** `SENS-01`–`SENS-05` make the limit *reportable*;
+  they do not make a negative *certifiable* in practice, because no shipped
+  workflow plants a control. Closing this needs either a spike-in recipe in
+  `docs/vignettes/` or integration with `VAL-01`'s generator, after which
+  `E8`/`D17` LOD95 can be estimated by the preregistered probit fit rather than
+  reported as an analytic floor.
+- [ ] `SENS-CAL-01` — **TODO** empirical capture calibration against ViralScan's own
+  index. Take real fragments (88-91 bp R2 geometry) from held-out viruses, mutate
+  them on a divergence grid (0-15 %, i.i.d. substitutions first, then clustered),
+  run `kb count` against the real panel + host index, compare recovery with
+  `fragment_capture_exact`, and fit one effective-length (or effective-divergence)
+  parameter. Training-only: it feeds VAL-RA / VAL-RA-CAL and is never scored on the
+  untouched holdout. Why: Luebbert et al. 2025 Fig 1c (EBOV, i.i.d. substitutions,
+  figure reading +/-3 pts, read length unverified) puts real recall near 55 % at 4.4 %
+  divergence where the exact DP at L=88 gives ~76 %; the DP also cannot see
+  panel/host competition. Depends: SENS-CORR-02, a frozen panel+host index.
+
+#### WP4E — Named HPV ORFs for the oncogene-versus-capsid contrast
+
+- [ ] `HPV-11` — next: rebuild the real index with the named HPV panel and
+  measure the cross-mapping directly, rather than reasoning about it. Requires
+  `HPV-09` or the `--emit-reference` path, plus `kb` on PATH. Until then the
+  L1 claim in `HPV-10` is a literature-based expectation, not a measurement from
+  this panel. Do not publish a per-type HPV number before this row is closed.
+  - **2026-09-26, not evidence:** a local run tiled 1,837 error-free 90 bp reads
+    from the panel's own E6/E7/L1/L2 CDS, pseudoaligned them against a
+    panel-only `kb ref` index, and found **0** cross-genotype assignments (19
+    within-genome only, E6/E8 and L1/L2 junctions). That result is expected by
+    construction: reads drawn from indexed sequences match themselves, and HPV
+    types are defined by ≥10 % L1 divergence. It says nothing about HPV-10's
+    actual risk, which is reads from strains *not* in the panel. The valid test
+    is `CAT-08`'s leave-one-out design: held-out isolates (HPV16 lineage variants,
+    types outside the panel) scored for where their reads land.
+
+#### WP4F — Real gene structure for the Anelloviridae panel (measured CDS coverage)
+
+- [~] `ANELLO-12` — **the honest limit, recorded so it is not over-read.** The
+  bug is fixed and the 99.8 %-in-one-bucket artifact is now *explainable and
+  testable*: with one anonymous gene per genome there was nothing else it could
+  have been, and the decisive test is to rebuild the index and check that
+  anellovirus UMI spread across many genome-scoped gene IDs instead of
+  concentrating in the most conserved one. **That test is not run here** — it
+  needs `kb ref` and a re-run of the COVID sample, neither available in this
+  environment (`ANELLO-13`). **What remains true regardless, and is the
+  important caveat: 1,740 of 1,995 annotated genomes (87 %) carry exactly one
+  CDS spanning the whole genome.** For those genomes a "real gene" is still a
+  whole-genome transcript, so the count is still a whole-genome count and still
+  cross-maps against the rest of the panel in proportion to conservation. The fix
+  makes that cross-mapping *attributable and visible* — a count can now be
+  traced to a genome and a product, and a conservation-driven skew is
+  distinguishable from a single-genome infection — but it does **not** make
+  per-genotype anellovirus quantification defensible, and it cannot: a
+  unique-sequence argument is needed, not a gene name. That is a different piece
+  of work, closer to `SENS-06` (measured k-mer capture) than to this fix. The
+  honest summary is: **genus-level anellovirus load becomes interpretable;
+  genotype-level anellovirus load does not.**
+  - Blocked (2026-10-02): the decisive test is `ANELLO-13` (`[ ]`, not started). Kept `[~]` as a recorded limit.
+- [ ] `ANELLO-13` — next: rebuild the reference with the real-gene panel and
+  **measure** the covid artifact rather than reasoning about it. Requires `kb` on
+  PATH and a re-run of the COVID scRNA-seq sample; then compare the anellovirus
+  UMI distribution across genome-scoped gene IDs against the 99.8 % single-bucket
+  baseline. Until this row closes, the covid number in this section is a
+  measurement of the *old* build and says nothing about the new one. Do not
+  report a per-genotype anellovirus number before this row is closed.
+  - **2026-09-27:** the bespoke covid build cannot run this test. It reads the
+    static `references/starsolo/all_virus_serratus_plus_anellovirus/viral_genome.gtf`,
+    which still carries 6,126 `_gene` placeholder IDs, so a rebuild through
+    `slurm_build_ref_v2.sh` would reproduce the old artifact. Decided path: native
+    `viralscan build-ref`, which first needs `CAT-01` (build-ref currently discards
+    the real GTF). The retraction question is already answered by F-005
+    (`.living/findings/`); this row only validates the WP4F code fix.
+
+#### WP4K — Catalogue↔index reconciliation and targeted reference adds
+
+- [~] `CAT-40` — **run `kallisto inspect` on the new index** (max EC size,
+  discarded EC count) before trusting it. The k-mer-overlap metrics in F-016 are
+  computed outside kallisto and cannot see the pseudo-inverse threshold effect,
+  which is `CAT-19`'s actual failure mode.
+  - **Software done 2026-10-12** (`src/viralscan/reference_gates.py`, `python -m
+    viralscan.reference_gates inspect`): `parse_inspect` (recorded text or live index),
+    `index_inspect.json` written on every bundled-panel build
+    (`build_bundled_panel_ref.py`, new `--ec-baseline`; exit non-zero on regression) and, as a
+    one-line non-fatal hook in `build_reference.py:_finish_reference_build`, on every
+    `viralscan build-ref` index build (record only; separate commit, `build_reference.py` is
+    pinned and was re-pinned). Regression =
+    either metric above the baseline record; no absolute threshold was invented (`--max-ec-size`
+    / `--max-discarded-ecs` are caller-supplied budgets). Tests: recorded text plus a tiny
+    kallisto index in `tmp_path` (integration, skipped without kallisto).
+  - **Measured 2026-10-12 on the existing indexes** (`analysis/panel_expansion/index_inspect_*.json`):
+    `viral_ref_final` (2,343 genomes, 471,948 targets, 84,861,133 k-mers) and `viral_ref_cat42d`
+    both give **max EC size 9,921, ECs discarded 0**. Note: the conda `kallisto` on PATH aborts
+    (`bad_array_new_length`) on a `kb ref` index, so inspect runs with kb's own binary
+    (`validation.tool_path`, REL-16).
+  - Left: the user's next full build exercises the hook; whether 9,921 is acceptable (EC size
+    is driven by the near-identical anellovirus genomes) is a user decision, so no pass/fail
+    claim is made. The baseline file is the `viral_ref_final` record.
+
+#### Split from a package row
+
+- [ ] `SCAUTOQC-01-RUN` — (2026-11-02, split from package `SCAUTOQC-01`; the package code, tests and flags are done there) real FASTQ-to-UMAP validation of
+  `--scautoqc` on the public HSV-1 library `SRR8315713` (needs the kb/kallisto/bustools env, a reference and user-approved compute). Also untested:
+  clusterwise multi-resolution QC (absent in SCTK 0.2.0) and ribo/globin marker sensitivity. Closing this row lets the package flip `SCAUTOQC-01` to `[x]`.
+
+### Rows already tracked above (identical text, nothing appended)
+
+`AUD3-G3-EVIDENCE`, `AA-02`, `AA-04`, `AA-05`, `ANELLO-PRIOR` (with `.1`..`.4`), `CMP-00`..`CMP-06`, `REF-08`, `REF-09`, `REF-10`, `ANDET-07`, `ANDET-08`, `ANDET-09`,
+`ANDET-09f`, `CAT-07`, `CAT-08`, `CAT-10`, `CAT-14`, `CAT-15`, `CAT-16`, `CAT-19`, `PROG-15`, `PROG-16`, `PROG-18`, `TONSIL-02`, `VAL-04`, `VAL-08`, `VAL-10`,
+`RUN-01`..`RUN-05`, `DSR-02`, `DSR-03`, `DSR-04`, `DSR-06`, `DSR-07`, `DSR-10`, `DSR-12`, `DSR-13`, `DSR-16`, `T2-AMEND-01` (both rows), `DISC-01`, `CAL-13`,
+`VERDICT-01`, `CARD-01`, `ADJ-01`, `SENS-07`, `DLIST-01`.
+
+### Row merged by a dated note
+
+`HOST-05`: the package row had newer sub-rows (`HOST-05a`/`b`/`d`, 2026-10-27); the package text is appended as a dated note under the `HOST-05` row in WP4B2 above.
 
 ## Gate dashboard
 
