@@ -5645,7 +5645,8 @@ elapsed time: 2-4 weeks, dominated by downloads, queues, and comparator setup.
 
 ### WP6A — Public v3 reruns
 
-- [ ] `RUN-01` — HHV-6B `SRR20710641` under measured 10x v3 geometry.
+- [ ] `RUN-01` — HHV-6B `SRR20710641` under measured 10xv2 geometry (5′, reverse strand, R1 150 nt untrimmed).
+  - 2026-11-02: user decision 2026-11-02: measured chemistry wins; R1 stays untrimmed. Measured in `data/runs/work/dsr_round1/chem/SRR20710641.json`: 10xv2 (88.2% on the bundled 10xv2 on-list; 9.7% 10xv3), 5p end, strand pilot `reverse` (45.5% vs 5.8% forward), R1 length 150, UMI 10. The earlier "10x v3" label was wrong.
 - [ ] `RUN-02` — EBV `SRR12682296` under measured 10x v2 geometry.
 - [ ] `RUN-03` — HSV-1 `SRR8315713` under measured Drop-seq geometry.
 - [ ] `RUN-04` — KSHV latent/lytic series `GSE190558`.
@@ -6737,6 +6738,10 @@ only the rows that were missing are added below, verbatim and grouped as in the 
 - [ ] `SCAUTOQC-01-RUN` — (2026-11-02, split from package `SCAUTOQC-01`; the package code, tests and flags are done there) real FASTQ-to-UMAP validation of
   `--scautoqc` on the public HSV-1 library `SRR8315713` (needs the kb/kallisto/bustools env, a reference and user-approved compute). Also untested:
   clusterwise multi-resolution QC (absent in SCTK 0.2.0) and ribo/globin marker sensitivity. Closing this row lets the package flip `SCAUTOQC-01` to `[x]`.
+- [ ] `COVMAP-01-RUN` — (2026-11-02, split from package `COVMAP-01`; the coverage-map code, tests and STAR option A are done there) a pyGenomeTracks run on a real library beyond HHV-6B AF157706.1. Closing this row, with the package items (user layout review, `environment.coverage.yml` CI solve), lets the package flip `COVMAP-01` to `[x]`.
+- [ ] `REVIEW-C-RUN` — (2026-11-02, split from package `REVIEW-C`; the coverage-map code and fixtures pass there) real-directory qualification pending. Closing this row lets the package flip `REVIEW-C` to `[x]`.
+
+`AUD3-REF08-DIVERGED` was checked and not split: it has no run part (the homology threshold is deferred to `REF-08`), so it stays as one row above.
 
 ### Rows already tracked above (identical text, nothing appended)
 
