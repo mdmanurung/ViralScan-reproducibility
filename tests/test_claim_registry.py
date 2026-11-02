@@ -318,3 +318,17 @@ def test_coverage_scans_markers_in_public_docs_outside_claim_bearing(tmp_path: P
 
 def test_repository_claim_registry_is_valid_and_covered() -> None:
     assert validate_registry_file(coverage=True) == []
+
+
+def test_unmarked_gate_fails_on_new_claim_and_on_stale_anchor(tmp_path: Path) -> None:
+    from scripts.validate_claim_registry import unmarked_gate_errors
+
+    (tmp_path / "doc.md").write_text("Threshold is 95 % identity.\n\nNow 3.5x faster than v2.\n", encoding="utf-8")
+    scope = tmp_path / "scope.json"
+    scope.write_text(json.dumps({"public_docs": ["doc.md"], "claim_bearing": []}), encoding="utf-8")
+    allow = tmp_path / "allow.tsv"
+    allow.write_text("path\tanchor\treason\ndoc.md\t95 % identity\tparameter\ndoc.md\tgone\tstale\n", encoding="utf-8")
+    assert unmarked_gate_errors(scope, tmp_path, allow) == [
+        "unmarked quantitative claim: doc.md:3",
+        "unused unmarked-allowlist anchor: doc.md: 'gone'",
+    ]

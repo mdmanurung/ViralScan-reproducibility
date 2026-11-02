@@ -6550,7 +6550,7 @@ and frozen results. Estimated effort: 4-7 days; quantitative pages wait for `G5`
     The manuscript is not yet in scope. Run
     `python scripts/validate_claim_registry.py --coverage --report-unmarked`.
   coverage check for README, docs, manuscript, tables, figures, and captions.
-- [~] `DOC-10` — require each quantitative, comparative, validated, performance,
+- [x] `DOC-10` — *(2026-11-02, user decision: gate on. `validate_claim_registry.py --report-unmarked` now fails CI on a quantitative public-doc line with no claim marker and no anchor in `claims/unmarked_allowlist.tsv` (27 anchors: parameters, worked examples, the DOC-10 changelog entry; each with a reason), and on an unused anchor. Package docs pass: ViralScan #166. Pinned to package `de55424`. Open: installation claims still have no registry artifact; CHANGELOG "4.0% to 0.2%" is allow-listed but unverified.)* require each quantitative, comparative, validated, performance,
   specificity, and installation claim to resolve to a `validated_v3` artifact.
   - 2026-10-12 (`codex/docs-pass`): registered the two claims that an existing artifact backs, each
     with a marker in `docs/faq.md`, a pinned `software_invariant` row in `claims/registry.json` and

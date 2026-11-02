@@ -42,6 +42,7 @@ DEFAULT_REGISTRY = REPO_ROOT / "claims" / "registry.json"
 DEFAULT_SCHEMA = package_path("schemas/v3/claim_registry.schema.json")
 DEFAULT_SCOPE = package_path("config/public_ship_scope.json")
 DEFAULT_INVENTORY = REPO_ROOT / "analysis" / "v3_artifact_inventory.tsv"
+DEFAULT_ALLOWLIST = REPO_ROOT / "claims" / "unmarked_allowlist.tsv"
 
 MARKER = re.compile(
     r"<!-- viralscan-claim:(?P<id>[a-z0-9][a-z0-9-]*) "
@@ -60,7 +61,7 @@ def unmarked_quantitative_lines(text: str) -> list[int]:
     """1-based lines with quantitative wording in paragraphs lacking a claim marker.
 
     ponytail: regex heuristic outside code fences; a marker anywhere in the
-    blank-line-delimited paragraph covers it. Report-only, never a gate.
+    blank-line-delimited paragraph covers it. Gated by ``unmarked_gate_errors`` (DOC-10).
     """
     flagged: list[int] = []
     block: list[int] = []
@@ -79,6 +80,28 @@ def unmarked_quantitative_lines(text: str) -> list[int]:
                 block.append(number)
     flagged.extend([] if marked else block)
     return flagged
+
+
+def unmarked_gate_errors(scope_path: Path, repo_root: Path, allowlist_path: Path) -> list[str]:
+    """DOC-10 gate: every flagged public-doc line must match an allow-list anchor; unused anchors fail too."""
+    with allowlist_path.open(newline="", encoding="utf-8") as handle:
+        anchors = [(row["path"], row["anchor"]) for row in csv.DictReader(handle, delimiter="\t")]
+    used: set[tuple[str, str]] = set()
+    public_docs, _claim_bearing, errors = _load_scope_files(scope_path)
+    for relative in public_docs:
+        name = relative.as_posix()
+        path = package_fallback(repo_root, name) / relative
+        if not path.is_file():
+            errors.append(f"public doc not found: {name}")
+            continue
+        lines = path.read_text(encoding="utf-8").splitlines()
+        for number in unmarked_quantitative_lines("\n".join(lines)):
+            hits = [a for a in anchors if a[0] == name and a[1] in lines[number - 1]]
+            used.update(hits)
+            if not hits:
+                errors.append(f"unmarked quantitative claim: {name}:{number}")
+    errors.extend(f"unused unmarked-allowlist anchor: {p}: {a!r}" for p, a in anchors if (p, a) not in used)
+    return errors
 
 
 def validate_registry_document(document: Any, repo_root: Path, schema_path: Path) -> list[str]:
@@ -460,19 +483,15 @@ def main() -> int:
     parser.add_argument(
         "--report-unmarked",
         action="store_true",
-        help="list quantitative lines in public docs lacking a claim marker (report-only)",
+        help="fail on quantitative public-doc lines with no claim marker and no allow-list anchor (DOC-10)",
     )
+    parser.add_argument("--allowlist", type=Path, default=DEFAULT_ALLOWLIST)
     args = parser.parse_args()
+    unmarked: list[str] = []
     if args.report_unmarked:
         scope = args.scope or package_path("config/public_ship_scope.json")
-        for relative in _load_scope_files(scope)[0]:
-            try:
-                text = (args.repo_root / relative).read_text(encoding="utf-8")
-            except (OSError, UnicodeDecodeError):
-                continue
-            for number in unmarked_quantitative_lines(text):
-                print(f"unmarked quantitative claim: {relative.as_posix()}:{number}")
-    errors = validate_registry_file(
+        unmarked = unmarked_gate_errors(scope, args.repo_root, args.allowlist)
+    errors = unmarked + validate_registry_file(
         args.registry,
         repo_root=args.repo_root,
         git_root=args.git_root,
