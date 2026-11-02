@@ -8,6 +8,7 @@ Every directory was moved here whole (renamed, not copied), so the paths recorde
 | Kind | Where | Notes |
 |---|---|---|
 | Viral GTF annotations (393) | `references/gtf/data/*.gtf` | the package reads them through `VIRALSCAN_CACHE` (`<cache>/data/*.gtf`) |
+| GRCh38 host genome (10x 2024-A) | `references/grch38/` | DSR-02 host FASTA; sha256 in `metadata/host_reference_grch38/MANIFEST.tsv` |
 | kraken2 databases | `references/kraken2_db/` | |
 | Reference-panel builds | `references/panel_builds/` | `viral_ref_*`, `viralscan_panel_ref*` |
 | STARsolo / kallisto reference runs | `references/starsolo/` | `references`, `starsolo_p22_6{,b}`, `ebv_latest_ref_2026-09-27`, `viral_panel_max_2026-09-28` |

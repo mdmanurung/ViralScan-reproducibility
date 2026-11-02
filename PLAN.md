@@ -5830,6 +5830,11 @@ behind the package-completion plan unless the user releases a row.
     scripts call the driver. Tests `tests/test_dsr02_validate_call.py` (SAM text, no binaries).
   - Decision: the `telomeric` label (>= 50 % of bases in TTAGGG/CCCTAA hexamers, >= 2 hexamers) is an
     annotation only, PROVISIONAL, and gates no verdict; the user owns any threshold that does.
+  - 2026-11-02 (`codex/grch38-ref`, user decision): the GRCh38 host FASTA is now in the repro, so read validation no longer
+    depends on the collaborator folder: `data/references/grch38/refdata-gex-GRCh38-2024-A/genome.fa` (+ `.fai`), sha256
+    `fb7421217e7058120cd60a5277445198e8deef2dff1edc46cd1e98b31fe64cbb`, equal to the source. Manifest:
+    `data/metadata/host_reference_grch38/MANIFEST.tsv`. `slurm_dsr02_evidence{,_array}.sh` default `HOST_FA` to it
+    (`VIRALSCAN_REPRO_ROOT` overrides the root, `HOST_FA` overrides the file; they no longer need `VIRALSCAN_COLLAB_ROOT`).
   - **Left:** run it on a real evidence directory (needs samtools + minimap2 output; first use is the
     `DSR-13` evidence regeneration on a pinned commit). `dsr02_verdicts.py` does not read the per-read table yet.
 - [ ] `DSR-03` — HPV16 GSE189670 rerun on the target commit; read-validate
