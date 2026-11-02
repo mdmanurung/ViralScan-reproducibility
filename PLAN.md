@@ -5632,7 +5632,9 @@ elapsed time: 2-4 weeks, dominated by downloads, queues, and comparator setup.
 ### WP6A — Public v3 reruns
 
 - [ ] `RUN-01` — HHV-6B `SRR20710641` under measured 10x v3 geometry.
+  - 2026-11-02 (`codex/round-2026-11-02-run0102`): submitted on pin `de55424`, jobs 25941191 (chem), 25941251/52/53 (off/artefact/twostep). Round-1 chemistry measured 10xv2 reverse, not v3; see `analysis/round_2026-11-02/hhv6b_SRR20710641.md`. Results pending.
 - [ ] `RUN-02` — EBV `SRR12682296` under measured 10x v2 geometry.
+  - 2026-11-02 (`codex/round-2026-11-02-run0102`): submitted on pin `de55424`, jobs 25941190 (chem), 25941248/49/50 (off/artefact/twostep). Results pending; see `analysis/round_2026-11-02/ebv_SRR12682296.md`.
 - [ ] `RUN-03` — HSV-1 `SRR8315713` under measured Drop-seq geometry.
 - [ ] `RUN-04` — KSHV latent/lytic series `GSE190558`.
 - [ ] `RUN-05` — KSHV plus EBV replicates `GSE154900`.
