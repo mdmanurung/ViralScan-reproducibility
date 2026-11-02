@@ -4745,6 +4745,7 @@ Six failure modes it surfaces are not in any row above and are added here.
   committing to any per-virus genome cap. k is hard-capped at 31, so genomes
   differing by ~30–70 nt share k-mers in conserved regions.
   - **Re-measured 2026-11-02** (pin de55424, kb kallisto 0.52.0): shipped WP5 index and three earlier ones all give max EC size 9,921, 0 discarded, no regression (`analysis/round_2026-11-02/cat40_index_inspect.md`).
+  - [x] `CAT-40` — accepted by user 2026-11-02: max EC 9,921, 0 discarded, unchanged across 4 builds; CAT-08 confusability is the follow-up test. (The repro PLAN has no standalone CAT-40 checkbox row; the package tracker row is the one to flip.)
   - **Software done 2026-10-12:** the build-time record and regression gate are `CAT-40`'s
     (`reference_gates inspect`, `--ec-baseline`). **Ambiguity, most conservative reading:**
     `kb count` has no `--multimapping` (or `--em`) flag; its flag is `--mm`. ViralScan already
