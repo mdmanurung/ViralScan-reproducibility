@@ -14,4 +14,4 @@ dependencies:
   # The package itself: install the pinned commit, or (when pip cannot build all dependencies) use PYTHONPATH via env.sh.
   - pip
   - pip:
-      - "viralscan @ git+https://github.com/mdmanurung/ViralScan@1f13506ba70b10f9ca1880079e861089eb7ce0f5"
+      - "viralscan @ git+https://github.com/mdmanurung/ViralScan@9e31c65b6688d6ead12649cb7f83fb2ed66ee267"
