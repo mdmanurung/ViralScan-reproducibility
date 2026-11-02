@@ -5207,6 +5207,7 @@ Objective: make `gene_programs` biologically correct and measurable. Continues
   call on a real dataset: a public PEL or KS scRNA-seq set (BCBL-1/BC-3 PEL
   lines are latently infected). Expect mostly latent, with a lytic minority.
   Not started.
+  - 2026-11-02 (`codex/round-2026-11-02-kshv`): GSE154900 BC-1 `GSM4682311` submitted on `de55424` (jobs 25941228 off, 25941231 artefact, 25941254_4 twostep; DSR-02 chain 25941255). Round 2 (e7c1b08) already detects KSHV (555,654 molecules) and EBV (1,652) in all three arms; the latent-vs-lytic programme table is new at `de55424`. `GSM4682312` n/a (no barcode read). Result pending: `analysis/round_2026-11-02/kshv_gse154900.md`.
 - [x] `PROG-17` — **closed 2026-10-03.** Detection writes
   `results/called_cells.tsv`; layer 2 scores only those barcodes and adds
   `n_called_cells` to the summary. Pre-PROG-17 run dirs fall back to the run's
@@ -5223,6 +5224,7 @@ Objective: make `gene_programs` biologically correct and measurable. Continues
   2026-10-02 finish-pass).
 - [ ] `PROG-16` — lytic acceptance test: KSHV `GSE190558` (`RUN-04`), induced vs
   uninduced; HSV-1 `SRR8315713` expected productive with no latent calls.
+  - 2026-11-02 (`codex/round-2026-11-02-kshv`): GSE190558 x4 libraries x3 arms submitted on `de55424` (jobs 25941227, 25941230, 25941254_0-3; DSR-02 chain 25941255). Round 2 (e7c1b08) baseline: KSHV 59,365 molecules in latent `GSM5725695` vs 23.7-31.8 M in the three induced libraries (about 400x), all arms within 1 %. Latent-gene (LANA/vFLIP/vCyclin) presence in both conditions awaits the `de55424` gene-programme tables: `analysis/round_2026-11-02/kshv_gse190558.md`. Still open.
 
 ## WP4J — SFL tonsil TTV and HPV screen (new 2026-09-27)
 
@@ -5635,7 +5637,9 @@ elapsed time: 2-4 weeks, dominated by downloads, queues, and comparator setup.
 - [ ] `RUN-02` — EBV `SRR12682296` under measured 10x v2 geometry.
 - [ ] `RUN-03` — HSV-1 `SRR8315713` under measured Drop-seq geometry.
 - [ ] `RUN-04` — KSHV latent/lytic series `GSE190558`.
+  - 2026-11-02: rerun on `de55424`, full arm set, submitted (see `PROG-16`). Round 2 on e7c1b08 had finished all 12 cells (explore ledger).
 - [ ] `RUN-05` — KSHV plus EBV replicates `GSE154900`.
+  - 2026-11-02: `GSM4682311` rerun on `de55424` submitted (see `PROG-18`); `GSM4682312` `n/a: no barcode read` (check-chemistry: bulk).
 
 Each sample must produce a validated output tree plus input/reference hashes,
 command manifest, tool versions, scheduler accounting, and failure log. Expected
