@@ -1,0 +1,990 @@
+genome	group	source	length	n_cds	nearest_identity	nearest_panel	nearest_panel_group	band	in_panel	eligible
+AF285882.1	Gyrovirus	NCBI_nuccore	2298	3	0.9526	JQ690762.1	Gyrovirus	>=95	False	True
+BK068993	Gammatorquevirus	Modha2025_TPA	2687	3	0.9387	MN774972.1	Anelloviridae	90-95	False	True
+BK068994	Alphatorquevirus	Modha2025_TPA	3711	2	0.8051	OZ258799.1	Alphatorquevirus	<85	False	True
+BK068995	Alphatorquevirus	Modha2025_TPA	2936	6	0.9155	PP374828.1	Alphatorquevirus	90-95	False	True
+BK068996	Betatorquevirus	Modha2025_TPA	2885	1	0.8494	MN769057.1	Betatorquevirus	<85	False	True
+BK068997	Gammatorquevirus	Modha2025_TPA	2856	3	0.9471	MN774972.1	Anelloviridae	90-95	False	True
+BK068998	Alphatorquevirus	Modha2025_TPA	2777	1	0.9992	OZ258742.1	Alphatorquevirus	>=95	False	True
+BK068999	Memtorquevirus	Modha2025_TPA	2724	1				no_alignment	False	True
+BK069000	Gammatorquevirus	Modha2025_TPA	2515	3				no_alignment	False	True
+BK069001	Alphatorquevirus	Modha2025_TPA	2086	1	0.9257	KP036971.1	Alphatorquevirus	90-95	False	True
+BK069002	Alphatorquevirus	Modha2025_TPA	3763	5	0.9945	LC385662.1	Alphatorquevirus	>=95	False	True
+BK069003	Alphatorquevirus	Modha2025_TPA	3432	3	0.9024	MZ286158.1	Alphatorquevirus	90-95	False	True
+BK069004	Alphatorquevirus	Modha2025_TPA	3330	2	0.9692	MH649092.1	Alphatorquevirus	>=95	False	True
+BK069005	Alphatorquevirus	Modha2025_TPA	3329	6	0.9546	MZ286206.1	Alphatorquevirus	>=95	False	True
+BK069006	Betatorquevirus	Modha2025_TPA	3550	3	0.8872	MN770161.1	Betatorquevirus	85-90	False	True
+BK069007	Alphatorquevirus	Modha2025_TPA	3447	3	0.9047	MT783406.1	Alphatorquevirus	90-95	False	True
+BK069008	Alphatorquevirus	Modha2025_TPA	3263	3	0.9856	NC_038340.1	Alphatorquevirus	>=95	False	True
+BK069009	Alphatorquevirus	Modha2025_TPA	3006	3	0.9385	MZ286063.1	Alphatorquevirus	90-95	False	True
+BK069010	Alphatorquevirus	Modha2025_TPA	2982	4	0.9614	OZ258620.1	Alphatorquevirus	>=95	False	True
+BK069011	Alphatorquevirus	Modha2025_TPA	2939	6	0.9406	PP374828.1	Alphatorquevirus	90-95	False	True
+BK069012	Gammatorquevirus	Modha2025_TPA	2854	2	0.9038	AB303558.1	Gammatorquevirus	90-95	False	True
+BK069013	Alphatorquevirus	Modha2025_TPA	2497	1	0.9799	MH649256.1	Alphatorquevirus	>=95	False	True
+BK069014	Alphatorquevirus	Modha2025_TPA	3833	3	0.963	MT783405.1	Anelloviridae	>=95	False	True
+BK069015	Betatorquevirus	Modha2025_TPA	3221	1	0.9882	MK212031.1	Betatorquevirus	>=95	False	True
+BK069016	Alphatorquevirus	Modha2025_TPA	3100	4				no_alignment	False	True
+BK069017	Alphatorquevirus	Modha2025_TPA	3035	6	0.9102	KP036971.1	Alphatorquevirus	90-95	False	True
+BK069018	Betatorquevirus	Modha2025_TPA	2692	2	0.9113	MN770983.1	Betatorquevirus	90-95	False	True
+BK069019	Betatorquevirus	Modha2025_TPA	2632	1	0.9644	OZ258713.1	Betatorquevirus	>=95	False	True
+BK069020	Alphatorquevirus	Modha2025_TPA	2072	2	0.927	OQ283124.1	Anelloviridae	90-95	False	True
+BK069021	Gammatorquevirus	Modha2025_TPA	2031	1	0.9702	MZ286177.1	Anelloviridae	>=95	False	True
+BK069022	Gammatorquevirus	Modha2025_TPA	2503	2				no_alignment	False	True
+BK069023	Betatorquevirus	Modha2025_TPA	2430	2	0.8281	MN771070.1	Betatorquevirus	<85	False	True
+BK069024	Betatorquevirus	Modha2025_TPA	2149	1	0.879	MN771044.1	Betatorquevirus	85-90	False	True
+BK069025	Alphatorquevirus	Modha2025_TPA	3631	2	0.9987	OZ258742.1	Alphatorquevirus	>=95	False	True
+BK069026	Alphatorquevirus	Modha2025_TPA	3530	3	0.9565	OZ258785.1	Alphatorquevirus	>=95	False	True
+BK069027	Alphatorquevirus	Modha2025_TPA	3525	4	0.9767	OZ258675.1	Alphatorquevirus	>=95	False	True
+BK069028	Alphatorquevirus	Modha2025_TPA	3452	2	0.9702	MH649092.1	Alphatorquevirus	>=95	False	True
+BK069029	Memtorquevirus	Modha2025_TPA	3255	1	0.8243	MN774927.1	Anelloviridae	<85	False	True
+BK069030	Betatorquevirus	Modha2025_TPA	2971	3	0.9152	MN771421.1	Betatorquevirus	90-95	False	True
+BK069031	Alphatorquevirus	Modha2025_TPA	2681	2	0.9146	MW455347.1	Alphatorquevirus	90-95	False	True
+BK069032	Gammatorquevirus	Modha2025_TPA	2415	2	0.9578	MZ286159.1	Gammatorquevirus	>=95	False	True
+BK069033	Betatorquevirus	Modha2025_TPA	2050	1	0.9678	MN770379.1	Betatorquevirus	>=95	False	True
+BK069034	Gammatorquevirus	Modha2025_TPA	2022	2	0.8251	OP549859.1	Anelloviridae	<85	False	True
+BK069035	Alphatorquevirus	Modha2025_TPA	3735	3	0.9085	MN765200.1	Anelloviridae	90-95	False	True
+BK069036	Alphatorquevirus	Modha2025_TPA	3208	3	0.9393	MZ286063.1	Alphatorquevirus	90-95	False	True
+BK069037	Alphatorquevirus	Modha2025_TPA	2891	2				no_alignment	False	True
+BK069038	Alphatorquevirus	Modha2025_TPA	2099	2	0.9208	OQ283124.1	Anelloviridae	90-95	False	True
+BK069039	Betatorquevirus	Modha2025_TPA	2971	2	0.9148	MN771421.1	Betatorquevirus	90-95	False	True
+BK069040	Betatorquevirus	Modha2025_TPA	2904	2				no_alignment	False	True
+BK069041	Alphatorquevirus	Modha2025_TPA	3678	2	0.956	MZ286022.1	Anelloviridae	>=95	False	True
+BK069042	Gammatorquevirus	Modha2025_TPA	3218	4	0.9151	MZ285986.1	Anelloviridae	90-95	False	True
+BK069043	Betatorquevirus	Modha2025_TPA	2980	3	0.9139	MN769189.1	Betatorquevirus	90-95	False	True
+BK069044	Alphatorquevirus	Modha2025_TPA	3247	4	0.9103	MW455352.1	Anelloviridae	90-95	False	True
+BK069045	Alphatorquevirus	Modha2025_TPA	3641	4	0.905	MH649109.1	Anelloviridae	90-95	False	True
+BK069046	Alphatorquevirus	Modha2025_TPA	3284	2	0.9414	MZ286056.1	Alphatorquevirus	90-95	False	True
+BK069047	Alphatorquevirus	Modha2025_TPA	3048	3	0.9225	MZ286184.1	Alphatorquevirus	90-95	False	True
+BK069048	Alphatorquevirus	Modha2025_TPA	3045	3	0.9886	KJ194503.1	Anelloviridae	>=95	False	True
+BK069049	Alphatorquevirus	Modha2025_TPA	3022	2	0.9406	MZ286063.1	Alphatorquevirus	90-95	False	True
+BK069050	Alphatorquevirus	Modha2025_TPA	2986	2	0.9042	NC_014096.1	Alphatorquevirus	90-95	False	True
+BK069051	Alphatorquevirus	Modha2025_TPA	2970	4	0.928	MZ286011.1	Alphatorquevirus	90-95	False	True
+BK069052	Alphatorquevirus	Modha2025_TPA	2953	4	0.9779	MW455446.1	Anelloviridae	>=95	False	True
+BK069053	Alphatorquevirus	Modha2025_TPA	2856	3	0.9225	MW455346.1	Alphatorquevirus	90-95	False	True
+BK069054	Betatorquevirus	Modha2025_TPA	2824	2	0.8792	MN770250.1	Betatorquevirus	85-90	False	True
+BK069055	Gammatorquevirus	Modha2025_TPA	2551	2	0.9692	MN774984.1	Gammatorquevirus	>=95	False	True
+BK069056	Alphatorquevirus	Modha2025_TPA	2400	1	0.9501	MW455389.1	Alphatorquevirus	>=95	False	True
+BK069057	Alphatorquevirus	Modha2025_TPA	2079	2	0.9399	MH649158.1	Anelloviridae	90-95	False	True
+BK069058	Alphatorquevirus	Modha2025_TPA	3506	5	0.9368	NC_014073.1	Alphatorquevirus	90-95	False	True
+BK069059	Memtorquevirus	Modha2025_TPA	3202	2	0.8809	MN774938.1	Memtorquevirus	85-90	False	True
+BK069060	Alphatorquevirus	Modha2025_TPA	3105	2	0.9161	MH649210.1	Alphatorquevirus	90-95	False	True
+BK069061	Alphatorquevirus	Modha2025_TPA	3083	2				no_alignment	False	True
+BK069062	Alphatorquevirus	Modha2025_TPA	3068	2				no_alignment	False	True
+BK069063	Alphatorquevirus	Modha2025_TPA	3067	3	0.9486	OZ258684.1	Alphatorquevirus	90-95	False	True
+BK069064	Alphatorquevirus	Modha2025_TPA	3045	4				no_alignment	False	True
+BK069065	Alphatorquevirus	Modha2025_TPA	3039	3	0.9438	MZ286043.1	Alphatorquevirus	90-95	False	True
+BK069066	Alphatorquevirus	Modha2025_TPA	3026	3	0.9076	MZ286063.1	Alphatorquevirus	90-95	False	True
+BK069067	Alphatorquevirus	Modha2025_TPA	3025	2	0.8862	MN765195.1	Alphatorquevirus	85-90	False	True
+BK069068	Betatorquevirus	Modha2025_TPA	3021	2	0.9231	AB026929.1	Betatorquevirus	90-95	False	True
+BK069069	Alphatorquevirus	Modha2025_TPA	3010	4				no_alignment	False	True
+BK069070	Betatorquevirus	Modha2025_TPA	2990	1	0.8436	MN769917.1	Betatorquevirus	<85	False	True
+BK069071	Alphatorquevirus	Modha2025_TPA	2978	3	0.9007	OQ283124.1	Anelloviridae	90-95	False	True
+BK069072	Alphatorquevirus	Modha2025_TPA	2975	2	0.9139	MN765197.1	Anelloviridae	90-95	False	True
+BK069073	Alphatorquevirus	Modha2025_TPA	2974	2	0.8877	MN765197.1	Anelloviridae	85-90	False	True
+BK069074	Alphatorquevirus	Modha2025_TPA	2956	3	0.8706	MZ286130.1	Alphatorquevirus	85-90	False	True
+BK069075	Betatorquevirus	Modha2025_TPA	2925	6	0.9178	MN771097.1	Betatorquevirus	90-95	False	True
+BK069076	Alphatorquevirus	Modha2025_TPA	2912	2	0.896	MZ286060.1	Alphatorquevirus	85-90	False	True
+BK069077	Alphatorquevirus	Modha2025_TPA	2905	3	0.9153	MZ285987.1	Alphatorquevirus	90-95	False	True
+BK069078	Alphatorquevirus	Modha2025_TPA	2897	5	0.9488	MN768561.1	Alphatorquevirus	90-95	False	True
+BK069079	Alphatorquevirus	Modha2025_TPA	2892	4	0.8693	MW455435.1	Anelloviridae	85-90	False	True
+BK069080	Alphatorquevirus	Modha2025_TPA	2883	2	0.9684	MW455435.1	Anelloviridae	>=95	False	True
+BK069081	Betatorquevirus	Modha2025_TPA	2876	3	0.8923	KP343847.1	Betatorquevirus	85-90	False	True
+BK069082	Gammatorquevirus	Modha2025_TPA	2864	3	0.9589	MZ286238.1	Anelloviridae	>=95	False	True
+BK069083	Alphatorquevirus	Modha2025_TPA	2845	5	0.8885	OZ258632.1	Alphatorquevirus	85-90	False	True
+BK069084	Betatorquevirus	Modha2025_TPA	2843	1	0.8333	MZ286192.1	Betatorquevirus	<85	False	True
+BK069085	Betatorquevirus	Modha2025_TPA	2841	1	0.9123	MN771349.1	Betatorquevirus	90-95	False	True
+BK069086	Alphatorquevirus	Modha2025_TPA	2836	3	0.9228	MW455384.1	Anelloviridae	90-95	False	True
+BK069087	Alphatorquevirus	Modha2025_TPA	2801	2	0.9458	MZ285992.1	Anelloviridae	90-95	False	True
+BK069088	Alphatorquevirus	Modha2025_TPA	2795	4	0.8973	MH649109.1	Anelloviridae	85-90	False	True
+BK069089	Betatorquevirus	Modha2025_TPA	2769	2	0.8798	MZ286020.1	Anelloviridae	85-90	False	True
+BK069090	Alphatorquevirus	Modha2025_TPA	2739	1	0.9467	MZ286017.1	Alphatorquevirus	90-95	False	True
+BK069091	Gammatorquevirus	Modha2025_TPA	2730	3	0.9565	MZ286095.1	Anelloviridae	>=95	False	True
+BK069092	Alphatorquevirus	Modha2025_TPA	2722	3	0.927	MZ286184.1	Alphatorquevirus	90-95	False	True
+BK069093	Gammatorquevirus	Modha2025_TPA	2690	2				no_alignment	False	True
+BK069094	Gammatorquevirus	Modha2025_TPA	2667	4	0.9751	MZ286041.1	Anelloviridae	>=95	False	True
+BK069095	Alphatorquevirus	Modha2025_TPA	2634	1	0.887	MW455392.1	Alphatorquevirus	85-90	False	True
+BK069096	Alphatorquevirus	Modha2025_TPA	2615	3				no_alignment	False	True
+BK069097	Gammatorquevirus	Modha2025_TPA	2595	2				no_alignment	False	True
+BK069098	Gammatorquevirus	Modha2025_TPA	2569	3				no_alignment	False	True
+BK069099	Gammatorquevirus	Modha2025_TPA	2556	3				no_alignment	False	True
+BK069100	Gammatorquevirus	Modha2025_TPA	2540	2	0.8638	MW455361.1	Anelloviridae	85-90	False	True
+BK069101	Alphatorquevirus	Modha2025_TPA	2538	1				no_alignment	False	True
+BK069102	Gammatorquevirus	Modha2025_TPA	2538	3	0.8748	OZ258698.1	Gammatorquevirus	85-90	False	True
+BK069103	Gammatorquevirus	Modha2025_TPA	2528	2				no_alignment	False	True
+BK069104	Gammatorquevirus	Modha2025_TPA	2517	2	0.931	AB303558.1	Gammatorquevirus	90-95	False	True
+BK069105	Alphatorquevirus	Modha2025_TPA	2510	3	0.8891	MZ286209.1	Anelloviridae	85-90	False	True
+BK069106	Gammatorquevirus	Modha2025_TPA	2508	2				no_alignment	False	True
+BK069107	Gammatorquevirus	Modha2025_TPA	2501	3				no_alignment	False	True
+BK069108	Gammatorquevirus	Modha2025_TPA	2497	2				no_alignment	False	True
+BK069109	Gammatorquevirus	Modha2025_TPA	2496	3				no_alignment	False	True
+BK069110	Gammatorquevirus	Modha2025_TPA	2491	3				no_alignment	False	True
+BK069111	Gammatorquevirus	Modha2025_TPA	2484	3				no_alignment	False	True
+BK069112	Gammatorquevirus	Modha2025_TPA	2482	4				no_alignment	False	True
+BK069113	Gammatorquevirus	Modha2025_TPA	2481	4				no_alignment	False	True
+BK069114	Gammatorquevirus	Modha2025_TPA	2480	2				no_alignment	False	True
+BK069115	Gammatorquevirus	Modha2025_TPA	2478	3	0.8609	MZ286091.1	Anelloviridae	85-90	False	True
+BK069116	Gammatorquevirus	Modha2025_TPA	2478	2	0.8167	MZ286055.1	Gammatorquevirus	<85	False	True
+BK069117	Gammatorquevirus	Modha2025_TPA	2478	3	0.8742	NC_038350.1	Gammatorquevirus	85-90	False	True
+BK069118	Gammatorquevirus	Modha2025_TPA	2474	3				no_alignment	False	True
+BK069119	Gammatorquevirus	Modha2025_TPA	2474	1				no_alignment	False	True
+BK069120	Gammatorquevirus	Modha2025_TPA	2471	2				no_alignment	False	True
+BK069121	Gammatorquevirus	Modha2025_TPA	2467	2				no_alignment	False	True
+BK069122	Gammatorquevirus	Modha2025_TPA	2457	2				no_alignment	False	True
+BK069123	Gammatorquevirus	Modha2025_TPA	2446	2				no_alignment	False	True
+BK069124	Alphatorquevirus	Modha2025_TPA	2420	2	0.9355	MH649158.1	Anelloviridae	90-95	False	True
+BK069125	Alphatorquevirus	Modha2025_TPA	2411	1	0.899	NC_038341.1	Alphatorquevirus	85-90	False	True
+BK069126	Alphatorquevirus	Modha2025_TPA	2295	2	0.8998	MZ286061.1	Alphatorquevirus	85-90	False	True
+BK069127	Gammatorquevirus	Modha2025_TPA	2295	4				no_alignment	False	True
+BK069128	Gammatorquevirus	Modha2025_TPA	2217	1	0.9539	MZ285986.1	Anelloviridae	>=95	False	True
+BK069129	Alphatorquevirus	Modha2025_TPA	2204	2	0.9025	MW455393.1	Anelloviridae	90-95	False	True
+BK069130	Alphatorquevirus	Modha2025_TPA	2178	2	0.8558	MZ286043.1	Alphatorquevirus	85-90	False	True
+BK069131	Alphatorquevirus	Modha2025_TPA	2168	1	0.8774	OR148955.1	Alphatorquevirus	85-90	False	True
+BK069132	Hetorquevirus	Modha2025_TPA	2150	2	0.9576	MN769236.1	Betatorquevirus	>=95	False	True
+BK069133	Alphatorquevirus	Modha2025_TPA	2105	2	0.8536	AY823988.1	Anelloviridae	85-90	False	True
+BK069134	Alphatorquevirus	Modha2025_TPA	2064	1	0.9161	MZ286064.1	Alphatorquevirus	90-95	False	True
+BK069135	Gammatorquevirus	Modha2025_TPA	2041	4	0.9282	MZ286095.1	Anelloviridae	90-95	False	True
+BK069136	Gammatorquevirus	Modha2025_TPA	2039	3	0.8482	MZ285963.1	Gammatorquevirus	<85	False	True
+BK069137	Alphatorquevirus	Modha2025_TPA	2021	4	0.9316	KP343840.1	Alphatorquevirus	90-95	False	True
+BK069138	Alphatorquevirus	Modha2025_TPA	2270	1	0.9485	MZ285979.1	Alphatorquevirus	90-95	False	True
+BK069139	Alphatorquevirus	Modha2025_TPA	2203	2	0.8559	MZ286043.1	Alphatorquevirus	85-90	False	True
+BK069140	Alphatorquevirus	Modha2025_TPA	2186	1	0.943	HM224451.1	Alphatorquevirus	90-95	False	True
+BK069141	Alphatorquevirus	Modha2025_TPA	2090	2	0.9163	MZ286215.1	Alphatorquevirus	90-95	False	True
+BK069142	Alphatorquevirus	Modha2025_TPA	2021	2	0.9768	NC_014091.1	Alphatorquevirus	>=95	False	True
+BK069143	Alphatorquevirus	Modha2025_TPA	2005	1	0.9611	NC_038344.1	Alphatorquevirus	>=95	False	True
+BK069144	Alphatorquevirus	Modha2025_TPA	2002	2	0.8731	GU797360.1	Alphatorquevirus	85-90	False	True
+BK069145	Alphatorquevirus	Modha2025_TPA	3458	5	0.9512	NC_014081.1	Alphatorquevirus	>=95	False	True
+BK069146	Alphatorquevirus	Modha2025_TPA	3233	2	0.8998	NC_014075.1	Alphatorquevirus	85-90	False	True
+BK069147	Alphatorquevirus	Modha2025_TPA	3105	3	0.8989	MZ286062.1	Anelloviridae	85-90	False	True
+BK069148	Alphatorquevirus	Modha2025_TPA	3100	3				no_alignment	False	True
+BK069149	Alphatorquevirus	Modha2025_TPA	3035	3	0.9402	MW455401.1	Anelloviridae	90-95	False	True
+BK069150	Alphatorquevirus	Modha2025_TPA	2987	2				no_alignment	False	True
+BK069151	Alphatorquevirus	Modha2025_TPA	2981	4	0.918	MZ286141.1	Anelloviridae	90-95	False	True
+BK069152	Betatorquevirus	Modha2025_TPA	2974	1	0.8487	MN769917.1	Betatorquevirus	<85	False	True
+BK069153	Alphatorquevirus	Modha2025_TPA	2958	3	0.9525	NC_038337.1	Alphatorquevirus	>=95	False	True
+BK069154	Betatorquevirus	Modha2025_TPA	2902	1	0.8379	MZ286282.1	Betatorquevirus	<85	False	True
+BK069155	Alphatorquevirus	Modha2025_TPA	2896	3	0.9143	MZ286076.1	Alphatorquevirus	90-95	False	True
+BK069156	Alphatorquevirus	Modha2025_TPA	2893	3	0.9013	MZ286181.1	Alphatorquevirus	90-95	False	True
+BK069157	Alphatorquevirus	Modha2025_TPA	2882	3	0.9102	MZ286186.1	Alphatorquevirus	90-95	False	True
+BK069158	Betatorquevirus	Modha2025_TPA	2866	1	0.8731	KP343851.1	Betatorquevirus	85-90	False	True
+BK069159	Alphatorquevirus	Modha2025_TPA	2859	4	0.949	OP985294.1	Alphatorquevirus	90-95	False	True
+BK069160	Betatorquevirus	Modha2025_TPA	2822	1	0.8629	OK574426.1	Betatorquevirus	85-90	False	True
+BK069161	Gammatorquevirus	Modha2025_TPA	2746	3	0.9391	AB303566.1	Gammatorquevirus	90-95	False	True
+BK069162	Gammatorquevirus	Modha2025_TPA	2735	3	0.8587	MZ286173.1	Gammatorquevirus	85-90	False	True
+BK069163	Gammatorquevirus	Modha2025_TPA	2706	3	0.9708	MZ286095.1	Anelloviridae	>=95	False	True
+BK069164	Gammatorquevirus	Modha2025_TPA	2622	3				no_alignment	False	True
+BK069165	Gammatorquevirus	Modha2025_TPA	2603	3	0.9093	MZ286173.1	Gammatorquevirus	90-95	False	True
+BK069166	Alphatorquevirus	Modha2025_TPA	2591	2	0.9223	MZ286060.1	Alphatorquevirus	90-95	False	True
+BK069167	Samektorquevirus	Modha2025_TPA	2590	3	0.9662	PP728781.1	Samektorquevirus	>=95	False	True
+BK069168	Alphatorquevirus	Modha2025_TPA	2569	2	0.8948	MZ286018.1	Anelloviridae	85-90	False	True
+BK069169	Gammatorquevirus	Modha2025_TPA	2515	3	0.8487	OZ258610.1	Gammatorquevirus	<85	False	True
+BK069170	Gammatorquevirus	Modha2025_TPA	2512	1				no_alignment	False	True
+BK069171	Gammatorquevirus	Modha2025_TPA	2494	2	0.9648	MZ285996.1	Anelloviridae	>=95	False	True
+BK069172	Gammatorquevirus	Modha2025_TPA	2480	2				no_alignment	False	True
+BK069173	Gammatorquevirus	Modha2025_TPA	2464	3	0.8643	MW455406.1	Anelloviridae	85-90	False	True
+BK069174	Gammatorquevirus	Modha2025_TPA	2451	2	0.8623	AB303560.1	Gammatorquevirus	85-90	False	True
+BK069175	Alphatorquevirus	Modha2025_TPA	2421	4	0.9139	MW455417.1	Alphatorquevirus	90-95	False	True
+BK069176	Gammatorquevirus	Modha2025_TPA	2415	4				no_alignment	False	True
+BK069177	Alphatorquevirus	Modha2025_TPA	3203	4	0.9498	MN768562.1	Alphatorquevirus	90-95	False	True
+BK069178	Alphatorquevirus	Modha2025_TPA	3153	5	0.9398	KP036971.1	Alphatorquevirus	90-95	False	True
+BK069179	Alphatorquevirus	Modha2025_TPA	3141	2	0.9158	MZ286064.1	Alphatorquevirus	90-95	False	True
+BK069180	Alphatorquevirus	Modha2025_TPA	3133	4	0.9754	NC_002076.2	Alphatorquevirus	>=95	False	True
+BK069181	Alphatorquevirus	Modha2025_TPA	3125	3	0.8798	JN980171.1	Alphatorquevirus	85-90	False	True
+BK069182	Samektorquevirus	Modha2025_TPA	3081	3	0.9736	KP343820.1	Samektorquevirus	>=95	False	True
+BK069183	Alphatorquevirus	Modha2025_TPA	3078	4				no_alignment	False	True
+BK069184	Alphatorquevirus	Modha2025_TPA	3064	4	0.9379	OZ258675.1	Alphatorquevirus	90-95	False	True
+BK069185	Alphatorquevirus	Modha2025_TPA	3059	4	0.8418	OZ258803.1	Alphatorquevirus	<85	False	True
+BK069186	Alphatorquevirus	Modha2025_TPA	3058	3	0.9349	MZ286076.1	Alphatorquevirus	90-95	False	True
+BK069187	Alphatorquevirus	Modha2025_TPA	3026	2	0.9185	OZ258670.1	Alphatorquevirus	90-95	False	True
+BK069188	Alphatorquevirus	Modha2025_TPA	3013	2	0.8981	KP343841.1	Anelloviridae	85-90	False	True
+BK069189	Alphatorquevirus	Modha2025_TPA	2980	2	0.8855	KP343837.1	Alphatorquevirus	85-90	False	True
+BK069190	Alphatorquevirus	Modha2025_TPA	2977	2	0.874	MW455421.1	Alphatorquevirus	85-90	False	True
+BK069191	Alphatorquevirus	Modha2025_TPA	2962	3	0.9545	NC_038337.1	Alphatorquevirus	>=95	False	True
+BK069192	Memtorquevirus	Modha2025_TPA	2957	2	0.8809	MN774938.1	Memtorquevirus	85-90	False	True
+BK069193	Betatorquevirus	Modha2025_TPA	2949	3	0.9203	AB026929.1	Betatorquevirus	90-95	False	True
+BK069194	Betatorquevirus	Modha2025_TPA	2925	5	0.8897	MN771097.1	Betatorquevirus	85-90	False	True
+BK069195	Alphatorquevirus	Modha2025_TPA	2919	2				no_alignment	False	True
+BK069196	Alphatorquevirus	Modha2025_TPA	2918	2	0.9211	MZ285979.1	Alphatorquevirus	90-95	False	True
+BK069197	Alphatorquevirus	Modha2025_TPA	2911	3				no_alignment	False	True
+BK069198	Alphatorquevirus	Modha2025_TPA	2900	2	0.8611	MZ286060.1	Alphatorquevirus	85-90	False	True
+BK069199	Betatorquevirus	Modha2025_TPA	2899	2	0.8792	MH649101.1	Anelloviridae	85-90	False	True
+BK069200	Betatorquevirus	Modha2025_TPA	2899	1	0.8621	MZ286252.1	Betatorquevirus	85-90	False	True
+BK069201	Alphatorquevirus	Modha2025_TPA	2896	2	0.939	MZ286022.1	Anelloviridae	90-95	False	True
+BK069202	Betatorquevirus	Modha2025_TPA	2895	1	0.927	MN769940.1	Betatorquevirus	90-95	False	True
+BK069203	Betatorquevirus	Modha2025_TPA	2889	2	0.8591	OK574388.1	Betatorquevirus	85-90	False	True
+BK069204	Alphatorquevirus	Modha2025_TPA	2888	2				no_alignment	False	True
+BK069205	Betatorquevirus	Modha2025_TPA	2885	1	0.8675	OK574426.1	Betatorquevirus	85-90	False	True
+BK069206	Betatorquevirus	Modha2025_TPA	2862	1	0.8348	MN769945.1	Betatorquevirus	<85	False	True
+BK069207	Gammatorquevirus	Modha2025_TPA	2857	3	0.888	MN774948.1	Anelloviridae	85-90	False	True
+BK069208	Betatorquevirus	Modha2025_TPA	2855	2	0.8172	MZ286192.1	Betatorquevirus	<85	False	True
+BK069209	Betatorquevirus	Modha2025_TPA	2855	2	0.9147	MN770455.1	Betatorquevirus	90-95	False	True
+BK069210	Betatorquevirus	Modha2025_TPA	2855	1	0.9019	MH649056.1	Anelloviridae	90-95	False	True
+BK069211	Betatorquevirus	Modha2025_TPA	2850	4	0.8644	OK574436.1	Betatorquevirus	85-90	False	True
+BK069212	Betatorquevirus	Modha2025_TPA	2850	1	0.8977	MZ286196.1	Betatorquevirus	85-90	False	True
+BK069213	Alphatorquevirus	Modha2025_TPA	2847	2	0.9151	MZ286130.1	Alphatorquevirus	90-95	False	True
+BK069214	Alphatorquevirus	Modha2025_TPA	2843	3	0.89	OZ258612.1	Alphatorquevirus	85-90	False	True
+BK069215	Alphatorquevirus	Modha2025_TPA	2832	2	0.9365	MZ286061.1	Alphatorquevirus	90-95	False	True
+BK069216	Alphatorquevirus	Modha2025_TPA	2832	3				no_alignment	False	True
+BK069217	Betatorquevirus	Modha2025_TPA	2820	3	0.9412	MN770259.1	Betatorquevirus	90-95	False	True
+BK069218	Betatorquevirus	Modha2025_TPA	2820	2				no_alignment	False	True
+BK069219	Gammatorquevirus	Modha2025_TPA	2819	3	0.8241	MZ286173.1	Gammatorquevirus	<85	False	True
+BK069220	Betatorquevirus	Modha2025_TPA	2819	2	0.8464	MN770133.1	Betatorquevirus	<85	False	True
+BK069221	Alphatorquevirus	Modha2025_TPA	2813	2	0.8454	MN768566.1	Alphatorquevirus	<85	False	True
+BK069222	Gammatorquevirus	Modha2025_TPA	2811	3	0.955	MZ286159.1	Gammatorquevirus	>=95	False	True
+BK069223	Gammatorquevirus	Modha2025_TPA	2808	4	0.9639	MW455361.1	Anelloviridae	>=95	False	True
+BK069224	Betatorquevirus	Modha2025_TPA	2804	1	0.9627	MN769461.1	Betatorquevirus	>=95	False	True
+BK069225	Betatorquevirus	Modha2025_TPA	2801	1	0.9445	MZ286228.1	Betatorquevirus	90-95	False	True
+BK069226	Betatorquevirus	Modha2025_TPA	2799	2				no_alignment	False	True
+BK069227	Betatorquevirus	Modha2025_TPA	2798	1	0.8654	MH649104.1	Betatorquevirus	85-90	False	True
+BK069228	Betatorquevirus	Modha2025_TPA	2796	3	0.8761	MN771409.1	Betatorquevirus	85-90	False	True
+BK069229	Gammatorquevirus	Modha2025_TPA	2795	3	0.9284	MW455378.1	Anelloviridae	90-95	False	True
+BK069230	Betatorquevirus	Modha2025_TPA	2795	2				no_alignment	False	True
+BK069231	Gammatorquevirus	Modha2025_TPA	2794	2	0.9343	OP549859.1	Anelloviridae	90-95	False	True
+BK069232	Betatorquevirus	Modha2025_TPA	2784	5	0.8514	MN770389.1	Betatorquevirus	85-90	False	True
+BK069233	Alphatorquevirus	Modha2025_TPA	2777	2	0.903	MW455375.1	Alphatorquevirus	90-95	False	True
+BK069234	Gammatorquevirus	Modha2025_TPA	2775	3				no_alignment	False	True
+BK069235	Betatorquevirus	Modha2025_TPA	2772	4	0.9558	MN769365.1	Betatorquevirus	>=95	False	True
+BK069236	Betatorquevirus	Modha2025_TPA	2767	1	0.8911	MH649011.1	Anelloviridae	85-90	False	True
+BK069237	Betatorquevirus	Modha2025_TPA	2766	2	0.8602	MZ286266.1	Betatorquevirus	85-90	False	True
+BK069238	Gammatorquevirus	Modha2025_TPA	2761	3	0.9511	OP549860.1	Gammatorquevirus	>=95	False	True
+BK069239	Gammatorquevirus	Modha2025_TPA	2752	3				no_alignment	False	True
+BK069240	Alphatorquevirus	Modha2025_TPA	2749	1				no_alignment	False	True
+BK069241	Gammatorquevirus	Modha2025_TPA	2749	3				no_alignment	False	True
+BK069242	Gammatorquevirus	Modha2025_TPA	2743	2	0.944	KP343826.1	Gammatorquevirus	90-95	False	True
+BK069243	Gammatorquevirus	Modha2025_TPA	2730	3	0.8188	NC_038350.1	Gammatorquevirus	<85	False	True
+BK069244	Gammatorquevirus	Modha2025_TPA	2721	3	0.9207	MZ286159.1	Gammatorquevirus	90-95	False	True
+BK069245	Betatorquevirus	Modha2025_TPA	2718	1	0.9373	MN770072.1	Betatorquevirus	90-95	False	True
+BK069246	Alphatorquevirus	Modha2025_TPA	2697	4				no_alignment	False	True
+BK069247	Gammatorquevirus	Modha2025_TPA	2696	4	0.9498	MZ286238.1	Anelloviridae	90-95	False	True
+BK069248	Alphatorquevirus	Modha2025_TPA	2678	1	0.9286	MW455442.1	Alphatorquevirus	90-95	False	True
+BK069249	Betatorquevirus	Modha2025_TPA	2676	2	0.856	MN769545.1	Betatorquevirus	85-90	False	True
+BK069250	Betatorquevirus	Modha2025_TPA	2647	2				no_alignment	False	True
+BK069251	Memtorquevirus	Modha2025_TPA	2639	2				no_alignment	False	True
+BK069252	Betatorquevirus	Modha2025_TPA	2634	3				no_alignment	False	True
+BK069253	Betatorquevirus	Modha2025_TPA	2629	2	0.87	MN771263.1	Betatorquevirus	85-90	False	True
+BK069254	Betatorquevirus	Modha2025_TPA	2623	1	0.8728	MZ286290.1	Betatorquevirus	85-90	False	True
+BK069255	Betatorquevirus	Modha2025_TPA	2623	3	0.8992	MN769695.1	Betatorquevirus	85-90	False	True
+BK069256	Betatorquevirus	Modha2025_TPA	2618	1	0.9555	MN770795.1	Betatorquevirus	>=95	False	True
+BK069257	Alphatorquevirus	Modha2025_TPA	2614	3				no_alignment	False	True
+BK069258	Alphatorquevirus	Modha2025_TPA	2606	2				no_alignment	False	True
+BK069259	Betatorquevirus	Modha2025_TPA	2606	1	0.8717	MZ286228.1	Betatorquevirus	85-90	False	True
+BK069260	Samektorquevirus	Modha2025_TPA	2575	3	0.8359	PP728781.1	Samektorquevirus	<85	False	True
+BK069261	Gammatorquevirus	Modha2025_TPA	2566	3	0.8619	MN774940.1	Gammatorquevirus	85-90	False	True
+BK069262	Gammatorquevirus	Modha2025_TPA	2563	3	0.923	KP343827.1	Gammatorquevirus	90-95	False	True
+BK069263	Betatorquevirus	Modha2025_TPA	2560	3	0.9661	OK574421.1	Betatorquevirus	>=95	False	True
+BK069264	Betatorquevirus	Modha2025_TPA	2557	2	0.85	MN769567.1	Betatorquevirus	85-90	False	True
+BK069265	Betatorquevirus	Modha2025_TPA	2542	1	0.9506	MN769648.1	Betatorquevirus	>=95	False	True
+BK069266	Gammatorquevirus	Modha2025_TPA	2539	3				no_alignment	False	True
+BK069267	Gammatorquevirus	Modha2025_TPA	2533	3				no_alignment	False	True
+BK069268	Betatorquevirus	Modha2025_TPA	2533	1				no_alignment	False	True
+BK069269	Alphatorquevirus	Modha2025_TPA	2533	2				no_alignment	False	True
+BK069270	Gammatorquevirus	Modha2025_TPA	2528	3				no_alignment	False	True
+BK069271	Betatorquevirus	Modha2025_TPA	2528	2				no_alignment	False	True
+BK069272	Gammatorquevirus	Modha2025_TPA	2522	2				no_alignment	False	True
+BK069273	Gammatorquevirus	Modha2025_TPA	2522	2				no_alignment	False	True
+BK069274	Betatorquevirus	Modha2025_TPA	2519	1	0.8995	MZ286084.1	Betatorquevirus	85-90	False	True
+BK069275	Gammatorquevirus	Modha2025_TPA	2518	3	0.8576	MZ285963.1	Gammatorquevirus	85-90	False	True
+BK069276	Betatorquevirus	Modha2025_TPA	2518	1				no_alignment	False	True
+BK069277	Betatorquevirus	Modha2025_TPA	2512	3	0.916	MN770736.1	Betatorquevirus	90-95	False	True
+BK069278	Betatorquevirus	Modha2025_TPA	2511	2				no_alignment	False	True
+BK069279	Alphatorquevirus	Modha2025_TPA	2509	1	0.9099	PP374835.1	Alphatorquevirus	90-95	False	True
+BK069280	Gammatorquevirus	Modha2025_TPA	2509	3				no_alignment	False	True
+BK069281	Gammatorquevirus	Modha2025_TPA	2509	2				no_alignment	False	True
+BK069282	Gammatorquevirus	Modha2025_TPA	2509	4				no_alignment	False	True
+BK069283	Betatorquevirus	Modha2025_TPA	2508	2	0.8722	MN771452.1	Betatorquevirus	85-90	False	True
+BK069284	Gammatorquevirus	Modha2025_TPA	2507	3				no_alignment	False	True
+BK069285	Gammatorquevirus	Modha2025_TPA	2507	3				no_alignment	False	True
+BK069286	Betatorquevirus	Modha2025_TPA	2505	1	0.9605	MZ286269.1	Betatorquevirus	>=95	False	True
+BK069287	Gammatorquevirus	Modha2025_TPA	2500	2	0.8333	MZ286055.1	Gammatorquevirus	<85	False	True
+BK069288	Gammatorquevirus	Modha2025_TPA	2500	2				no_alignment	False	True
+BK069289	Gammatorquevirus	Modha2025_TPA	2500	3				no_alignment	False	True
+BK069290	Gammatorquevirus	Modha2025_TPA	2498	2				no_alignment	False	True
+BK069291	Gammatorquevirus	Modha2025_TPA	2498	3				no_alignment	False	True
+BK069292	Gammatorquevirus	Modha2025_TPA	2497	3	0.8688	MZ286050.1	Gammatorquevirus	85-90	False	True
+BK069293	Gammatorquevirus	Modha2025_TPA	2497	2				no_alignment	False	True
+BK069294	Gammatorquevirus	Modha2025_TPA	2496	2				no_alignment	False	True
+BK069295	Gammatorquevirus	Modha2025_TPA	2496	4				no_alignment	False	True
+BK069296	Gammatorquevirus	Modha2025_TPA	2494	3				no_alignment	False	True
+BK069297	Gammatorquevirus	Modha2025_TPA	2493	2				no_alignment	False	True
+BK069298	Gammatorquevirus	Modha2025_TPA	2492	2				no_alignment	False	True
+BK069299	Gammatorquevirus	Modha2025_TPA	2492	3				no_alignment	False	True
+BK069300	Gammatorquevirus	Modha2025_TPA	2490	4	0.9338	MZ286095.1	Anelloviridae	90-95	False	True
+BK069301	Gammatorquevirus	Modha2025_TPA	2490	2				no_alignment	False	True
+BK069302	Gammatorquevirus	Modha2025_TPA	2490	3				no_alignment	False	True
+BK069303	Gammatorquevirus	Modha2025_TPA	2489	4				no_alignment	False	True
+BK069304	Gammatorquevirus	Modha2025_TPA	2488	4	0.8658	AB303560.1	Gammatorquevirus	85-90	False	True
+BK069305	Betatorquevirus	Modha2025_TPA	2488	1	0.9377	MW455444.1	Betatorquevirus	90-95	False	True
+BK069306	Gammatorquevirus	Modha2025_TPA	2487	4				no_alignment	False	True
+BK069307	Gammatorquevirus	Modha2025_TPA	2487	4				no_alignment	False	True
+BK069308	Gammatorquevirus	Modha2025_TPA	2486	2	0.8253	MZ286191.1	Gammatorquevirus	<85	False	True
+BK069309	Gammatorquevirus	Modha2025_TPA	2485	2	0.8881	MZ286172.1	Anelloviridae	85-90	False	True
+BK069310	Gammatorquevirus	Modha2025_TPA	2485	3				no_alignment	False	True
+BK069311	Gammatorquevirus	Modha2025_TPA	2484	3	0.868	MN774965.1	Anelloviridae	85-90	False	True
+BK069312	Gammatorquevirus	Modha2025_TPA	2484	4				no_alignment	False	True
+BK069313	Gammatorquevirus	Modha2025_TPA	2482	2				no_alignment	False	True
+BK069314	Gammatorquevirus	Modha2025_TPA	2481	4				no_alignment	False	True
+BK069315	Gammatorquevirus	Modha2025_TPA	2480	3	0.8535	MW455410.1	Anelloviridae	85-90	False	True
+BK069316	Alphatorquevirus	Modha2025_TPA	2480	2	0.8462	MW455346.1	Alphatorquevirus	<85	False	True
+BK069317	Gammatorquevirus	Modha2025_TPA	2479	3				no_alignment	False	True
+BK069318	Gammatorquevirus	Modha2025_TPA	2478	2	0.852	MZ286149.1	Gammatorquevirus	85-90	False	True
+BK069319	Gammatorquevirus	Modha2025_TPA	2478	3				no_alignment	False	True
+BK069320	Gammatorquevirus	Modha2025_TPA	2477	3				no_alignment	False	True
+BK069321	Gammatorquevirus	Modha2025_TPA	2476	3				no_alignment	False	True
+BK069322	Gammatorquevirus	Modha2025_TPA	2475	3	0.8774	AB303555.1	Anelloviridae	85-90	False	True
+BK069323	Gammatorquevirus	Modha2025_TPA	2475	3				no_alignment	False	True
+BK069324	Gammatorquevirus	Modha2025_TPA	2474	2				no_alignment	False	True
+BK069325	Betatorquevirus	Modha2025_TPA	2474	2	0.8687	MZ286021.1	Anelloviridae	85-90	False	True
+BK069326	Gammatorquevirus	Modha2025_TPA	2473	4				no_alignment	False	True
+BK069327	Gammatorquevirus	Modha2025_TPA	2473	3				no_alignment	False	True
+BK069328	Gammatorquevirus	Modha2025_TPA	2473	4				no_alignment	False	True
+BK069329	Gammatorquevirus	Modha2025_TPA	2473	3	0.8286	MZ286087.1	Gammatorquevirus	<85	False	True
+BK069330	Betatorquevirus	Modha2025_TPA	2473	2	0.9582	AB026931.1	Betatorquevirus	>=95	False	True
+BK069331	Gammatorquevirus	Modha2025_TPA	2471	2				no_alignment	False	True
+BK069332	Gammatorquevirus	Modha2025_TPA	2471	3				no_alignment	False	True
+BK069333	Gammatorquevirus	Modha2025_TPA	2470	1				no_alignment	False	True
+BK069334	Gammatorquevirus	Modha2025_TPA	2470	2				no_alignment	False	True
+BK069335	Gammatorquevirus	Modha2025_TPA	2470	3				no_alignment	False	True
+BK069336	Gammatorquevirus	Modha2025_TPA	2469	3				no_alignment	False	True
+BK069337	Gammatorquevirus	Modha2025_TPA	2469	3				no_alignment	False	True
+BK069338	Gammatorquevirus	Modha2025_TPA	2468	2	0.8574	MW455405.1	Anelloviridae	85-90	False	True
+BK069339	Gammatorquevirus	Modha2025_TPA	2466	2				no_alignment	False	True
+BK069340	Gammatorquevirus	Modha2025_TPA	2466	3				no_alignment	False	True
+BK069341	Gammatorquevirus	Modha2025_TPA	2466	4	0.8725	MZ286154.1	Anelloviridae	85-90	False	True
+BK069342	Gammatorquevirus	Modha2025_TPA	2463	3				no_alignment	False	True
+BK069343	Gammatorquevirus	Modha2025_TPA	2463	4	0.8688	MZ286150.1	Anelloviridae	85-90	False	True
+BK069344	Gammatorquevirus	Modha2025_TPA	2463	3	0.9274	MZ286153.1	Gammatorquevirus	90-95	False	True
+BK069345	Gammatorquevirus	Modha2025_TPA	2463	2				no_alignment	False	True
+BK069346	Gammatorquevirus	Modha2025_TPA	2462	2				no_alignment	False	True
+BK069347	Gammatorquevirus	Modha2025_TPA	2461	3				no_alignment	False	True
+BK069348	Gammatorquevirus	Modha2025_TPA	2460	2				no_alignment	False	True
+BK069349	Gammatorquevirus	Modha2025_TPA	2459	4				no_alignment	False	True
+BK069350	Gammatorquevirus	Modha2025_TPA	2459	2				no_alignment	False	True
+BK069351	Gammatorquevirus	Modha2025_TPA	2457	4				no_alignment	False	True
+BK069352	Gammatorquevirus	Modha2025_TPA	2457	3				no_alignment	False	True
+BK069353	Gammatorquevirus	Modha2025_TPA	2456	4				no_alignment	False	True
+BK069354	Gammatorquevirus	Modha2025_TPA	2442	3				no_alignment	False	True
+BK069355	Gammatorquevirus	Modha2025_TPA	2441	2				no_alignment	False	True
+BK069356	Gammatorquevirus	Modha2025_TPA	2441	2				no_alignment	False	True
+BK069357	Gammatorquevirus	Modha2025_TPA	2440	3				no_alignment	False	True
+BK069358	Gammatorquevirus	Modha2025_TPA	2439	3				no_alignment	False	True
+BK069359	Gammatorquevirus	Modha2025_TPA	2439	2				no_alignment	False	True
+BK069360	Alphatorquevirus	Modha2025_TPA	2436	3	0.9402	MH649022.1	Anelloviridae	90-95	False	True
+BK069361	Gammatorquevirus	Modha2025_TPA	2434	1				no_alignment	False	True
+BK069362	Gammatorquevirus	Modha2025_TPA	2434	3				no_alignment	False	True
+BK069363	Betatorquevirus	Modha2025_TPA	2433	1	0.9054	KP343830.1	Betatorquevirus	90-95	False	True
+BK069364	Gammatorquevirus	Modha2025_TPA	2433	3				no_alignment	False	True
+BK069365	Gammatorquevirus	Modha2025_TPA	2428	1				no_alignment	False	True
+BK069366	Gammatorquevirus	Modha2025_TPA	2422	3	0.9075	MZ286050.1	Gammatorquevirus	90-95	False	True
+BK069367	Gammatorquevirus	Modha2025_TPA	2422	3				no_alignment	False	True
+BK069368	Alphatorquevirus	Modha2025_TPA	2418	1	0.9151	NC_038338.1	Alphatorquevirus	90-95	False	True
+BK069369	Gammatorquevirus	Modha2025_TPA	2405	3	0.9335	MZ286071.1	Anelloviridae	90-95	False	True
+BK069370	Gammatorquevirus	Modha2025_TPA	2387	4				no_alignment	False	True
+BK069371	Gammatorquevirus	Modha2025_TPA	2369	3				no_alignment	False	True
+BK069372	Gammatorquevirus	Modha2025_TPA	2368	2				no_alignment	False	True
+BK069373	Gammatorquevirus	Modha2025_TPA	2367	3	0.852	MN774984.1	Gammatorquevirus	85-90	False	True
+BK069374	Alphatorquevirus	Modha2025_TPA	2310	3	0.9259	PP374832.1	Alphatorquevirus	90-95	False	True
+BK069375	Gammatorquevirus	Modha2025_TPA	2297	1				no_alignment	False	True
+BK069376	Gammatorquevirus	Modha2025_TPA	2292	2				no_alignment	False	True
+BK069377	Alphatorquevirus	Modha2025_TPA	2291	2	0.9155	MZ286019.1	Alphatorquevirus	90-95	False	True
+BK069378	Gammatorquevirus	Modha2025_TPA	2290	3				no_alignment	False	True
+BK069379	Alphatorquevirus	Modha2025_TPA	2279	2	0.9544	MZ286101.1	Anelloviridae	>=95	False	True
+BK069380	Gammatorquevirus	Modha2025_TPA	2215	4				no_alignment	False	True
+BK069381	Betatorquevirus	Modha2025_TPA	2203	3	0.8338	MN770805.1	Betatorquevirus	<85	False	True
+BK069382	Betatorquevirus	Modha2025_TPA	2196	2	0.8877	MN770805.1	Betatorquevirus	85-90	False	True
+BK069383	Gammatorquevirus	Modha2025_TPA	2184	3				no_alignment	False	True
+BK069384	Gammatorquevirus	Modha2025_TPA	2181	1				no_alignment	False	True
+BK069385	Alphatorquevirus	Modha2025_TPA	2144	1	0.9204	MW455416.1	Alphatorquevirus	90-95	False	True
+BK069386	Betatorquevirus	Modha2025_TPA	2122	1	0.8514	MH649165.1	Anelloviridae	85-90	False	True
+BK069387	Gammatorquevirus	Modha2025_TPA	2121	2				no_alignment	False	True
+BK069388	Betatorquevirus	Modha2025_TPA	2102	1				no_alignment	False	True
+BK069389	Alphatorquevirus	Modha2025_TPA	2097	2				no_alignment	False	True
+BK069390	Gammatorquevirus	Modha2025_TPA	2090	2				no_alignment	False	True
+BK069391	Gammatorquevirus	Modha2025_TPA	2081	4				no_alignment	False	True
+BK069392	Gammatorquevirus	Modha2025_TPA	2081	4				no_alignment	False	True
+BK069393	Betatorquevirus	Modha2025_TPA	2068	2				no_alignment	False	True
+BK069394	Gammatorquevirus	Modha2025_TPA	2067	3				no_alignment	False	True
+BK069395	Gammatorquevirus	Modha2025_TPA	2049	3				no_alignment	False	True
+BK069396	Alphatorquevirus	Modha2025_TPA	2037	1	0.9302	MW455400.1	Alphatorquevirus	90-95	False	True
+BK069397	Gammatorquevirus	Modha2025_TPA	2035	3				no_alignment	False	True
+BK069398	Gammatorquevirus	Modha2025_TPA	2026	1	0.8836	MZ285996.1	Anelloviridae	85-90	False	True
+BK069399	Gammatorquevirus	Modha2025_TPA	2025	3				no_alignment	False	True
+BK069400	Alphatorquevirus	Modha2025_TPA	2021	1	0.9125	MT501646.1	Anelloviridae	90-95	False	True
+BK069401	Alphatorquevirus	Modha2025_TPA	2020	1	0.9722	NC_038340.1	Alphatorquevirus	>=95	False	True
+BK069402	Gammatorquevirus	Modha2025_TPA	2020	1	0.8355	AB303558.1	Gammatorquevirus	<85	False	True
+BK069403	Gammatorquevirus	Modha2025_TPA	2016	3	0.8514	MW455361.1	Anelloviridae	85-90	False	True
+BK069404	Alphatorquevirus	Modha2025_TPA	2233	3	0.9515	MH649122.1	Alphatorquevirus	>=95	False	True
+BK069405	Alphatorquevirus	Modha2025_TPA	3547	4	0.8598	MZ285973.1	Anelloviridae	85-90	False	True
+BK069406	Betatorquevirus	Modha2025_TPA	2523	1	0.878	MN769926.1	Betatorquevirus	85-90	False	True
+BK069407	Gammatorquevirus	Modha2025_TPA	2643	2	0.9856	MN774958.1	Gammatorquevirus	>=95	False	True
+BK069408	Alphatorquevirus	Modha2025_TPA	3126	4	0.9662	MZ286141.1	Anelloviridae	>=95	False	True
+BK069409	Alphatorquevirus	Modha2025_TPA	3098	2	0.8736	MZ286130.1	Alphatorquevirus	85-90	False	True
+BK069410	Gammatorquevirus	Modha2025_TPA	3219	5	0.9939	MZ286176.1	Anelloviridae	>=95	False	True
+BK069411	Alphatorquevirus	Modha2025_TPA	3002	5	0.9521	MW455421.1	Alphatorquevirus	>=95	False	True
+BK069412	Betatorquevirus	Modha2025_TPA	2856	1				no_alignment	False	True
+BK069413	Betatorquevirus	Modha2025_TPA	2692	2	0.8782	MN769316.1	Betatorquevirus	85-90	False	True
+BK069414	Betatorquevirus	Modha2025_TPA	2895	2	0.8134	OK574426.1	Betatorquevirus	<85	False	True
+BK069415	Betatorquevirus	Modha2025_TPA	2893	1	0.9174	MZ286136.1	Betatorquevirus	90-95	False	True
+BK069416	Betatorquevirus	Modha2025_TPA	2867	1	0.9515	KY462758.1	Betatorquevirus	>=95	False	True
+BK069417	Betatorquevirus	Modha2025_TPA	2865	1	0.8673	MZ286228.1	Betatorquevirus	85-90	False	True
+BK069418	Betatorquevirus	Modha2025_TPA	2851	2	0.9734	MN769190.1	Betatorquevirus	>=95	False	True
+BK069419	Betatorquevirus	Modha2025_TPA	2827	1				no_alignment	False	True
+BK069420	Alphatorquevirus	Modha2025_TPA	2799	1	0.929	KP343837.1	Alphatorquevirus	90-95	False	True
+BK069421	Betatorquevirus	Modha2025_TPA	2783	2	0.9605	MH649223.1	Betatorquevirus	>=95	False	True
+BK069422	Betatorquevirus	Modha2025_TPA	2671	1	0.8694	MH649028.1	Betatorquevirus	85-90	False	True
+BK069423	Alphatorquevirus	Modha2025_TPA	3480	4	0.9387	MT501646.1	Anelloviridae	90-95	False	True
+BK069424	Alphatorquevirus	Modha2025_TPA	3174	5	0.931	KP343845.1	Alphatorquevirus	90-95	False	True
+BK069425	Gammatorquevirus	Modha2025_TPA	3018	2	0.9552	MZ286238.1	Anelloviridae	>=95	False	True
+BK069426	Alphatorquevirus	Modha2025_TPA	3699	2	0.9439	MZ286062.1	Anelloviridae	90-95	False	True
+BK069427	Alphatorquevirus	Modha2025_TPA	3489	1	0.9222	NC_038341.1	Alphatorquevirus	90-95	False	True
+BK069428	Alphatorquevirus	Modha2025_TPA	3314	4	0.909	MZ286042.1	Alphatorquevirus	90-95	False	True
+BK069429	Alphatorquevirus	Modha2025_TPA	3072	2	0.9608	MZ285979.1	Alphatorquevirus	>=95	False	True
+BK069430	Gammatorquevirus	Modha2025_TPA	2717	3	0.9712	MZ286159.1	Gammatorquevirus	>=95	False	True
+BK069431	Gammatorquevirus	Modha2025_TPA	2779	3	0.9547	MZ286083.1	Anelloviridae	>=95	False	True
+BK069432	Gammatorquevirus	Modha2025_TPA	2455	3	0.883	KP343827.1	Gammatorquevirus	85-90	False	True
+BK069433	Alphatorquevirus	Modha2025_TPA	3739	4	0.9292	MZ286182.1	Alphatorquevirus	90-95	False	True
+BK069434	Alphatorquevirus	Modha2025_TPA	3601	4	0.9423	MW455400.1	Alphatorquevirus	90-95	False	True
+BK069435	Alphatorquevirus	Modha2025_TPA	3597	2	0.9645	MW455392.1	Alphatorquevirus	>=95	False	True
+BK069436	Alphatorquevirus	Modha2025_TPA	3081	2	0.9631	MH649062.1	Alphatorquevirus	>=95	False	True
+BK069437	Alphatorquevirus	Modha2025_TPA	2996	3	0.9698	OZ258617.1	Alphatorquevirus	>=95	False	True
+BK069438	Alphatorquevirus	Modha2025_TPA	3898	4	0.9357	MZ286102.1	Alphatorquevirus	90-95	False	True
+BK069439	Alphatorquevirus	Modha2025_TPA	3832	2	0.9481	MZ285992.1	Anelloviridae	90-95	False	True
+BK069440	Alphatorquevirus	Modha2025_TPA	3620	3	0.9318	MZ286086.1	Anelloviridae	90-95	False	True
+BK069441	Alphatorquevirus	Modha2025_TPA	3587	3	0.9309	MW455432.1	Alphatorquevirus	90-95	False	True
+BK069442	Alphatorquevirus	Modha2025_TPA	3386	5	0.9041	MZ286128.1	Alphatorquevirus	90-95	False	True
+BK069443	Alphatorquevirus	Modha2025_TPA	3382	2	0.9247	MZ286063.1	Alphatorquevirus	90-95	False	True
+BK069444	Alphatorquevirus	Modha2025_TPA	3090	3	0.9487	MZ286118.1	Alphatorquevirus	90-95	False	True
+BK069445	Alphatorquevirus	Modha2025_TPA	3040	3	0.9262	MZ286097.1	Alphatorquevirus	90-95	False	True
+BK069446	Alphatorquevirus	Modha2025_TPA	2949	2	0.9227	PP374835.1	Alphatorquevirus	90-95	False	True
+BK069447	Alphatorquevirus	Modha2025_TPA	2939	3	0.9423	PQ438050.1	Alphatorquevirus	90-95	False	True
+BK069448	Alphatorquevirus	Modha2025_TPA	2906	3	0.9364	MH649158.1	Anelloviridae	90-95	False	True
+BK069449	Gammatorquevirus	Modha2025_TPA	2761	3	0.9486	MZ286071.1	Anelloviridae	90-95	False	True
+BK069450	Alphatorquevirus	Modha2025_TPA	2757	2	0.8901	MZ286158.1	Alphatorquevirus	85-90	False	True
+BK069451	Alphatorquevirus	Modha2025_TPA	3782	2	0.9074	PP374830.1	Alphatorquevirus	90-95	False	True
+BK069452	Alphatorquevirus	Modha2025_TPA	3704	4	0.9481	OZ258670.1	Alphatorquevirus	90-95	False	True
+BK069453	Alphatorquevirus	Modha2025_TPA	3300	3				no_alignment	False	True
+BK069454	Alphatorquevirus	Modha2025_TPA	3159	2	0.9855	MW679006.1	Alphatorquevirus	>=95	False	True
+BK069455	Gammatorquevirus	Modha2025_TPA	2746	2	0.971	MW455436.1	Gammatorquevirus	>=95	False	True
+BK069456	Betatorquevirus	Modha2025_TPA	2628	1	0.9534	MH649212.1	Betatorquevirus	>=95	False	True
+BK069457	Alphatorquevirus	Modha2025_TPA	3475	6	0.9609	MN768562.1	Alphatorquevirus	>=95	False	True
+BK069458	Alphatorquevirus	Modha2025_TPA	3121	2	0.9444	MZ286046.1	Alphatorquevirus	90-95	False	True
+BK069459	Betatorquevirus	Modha2025_TPA	2931	2	0.9007	OK574422.1	Betatorquevirus	90-95	False	True
+BK069460	Betatorquevirus	Modha2025_TPA	2906	2	0.9861	MZ286048.1	Betatorquevirus	>=95	False	True
+BK069461	Betatorquevirus	Modha2025_TPA	2878	2	0.953	MH649223.1	Betatorquevirus	>=95	False	True
+BK069462	Alphatorquevirus	Modha2025_TPA	3194	2	0.9516	NC_014096.1	Alphatorquevirus	>=95	False	True
+BK069463	Gammatorquevirus	Modha2025_TPA	3187	1	0.9131	MZ286024.1	Anelloviridae	90-95	False	True
+BK069464	Memtorquevirus	Modha2025_TPA	2933	1	0.9348	MN774928.1	Anelloviridae	90-95	False	True
+BK069465	Alphatorquevirus	Modha2025_TPA	2904	5	0.851	OZ258632.1	Alphatorquevirus	85-90	False	True
+BK069466	Betatorquevirus	Modha2025_TPA	2896	2	0.9539	MN770630.1	Betatorquevirus	>=95	False	True
+BK069467	Betatorquevirus	Modha2025_TPA	2809	1	0.9068	MZ286277.1	Betatorquevirus	90-95	False	True
+BK069468	Betatorquevirus	Modha2025_TPA	2788	1	0.933	MN770312.1	Betatorquevirus	90-95	False	True
+BK069469	Alphatorquevirus	Modha2025_TPA	3803	3	0.9399	MW455432.1	Alphatorquevirus	90-95	False	True
+BK069470	Alphatorquevirus	Modha2025_TPA	3785	3	0.8762	MZ286043.1	Alphatorquevirus	85-90	False	True
+BK069471	Alphatorquevirus	Modha2025_TPA	3765	4	0.9584	MW455347.1	Alphatorquevirus	>=95	False	True
+BK069472	Alphatorquevirus	Modha2025_TPA	3753	3	0.844	PP374829.1	Alphatorquevirus	<85	False	True
+BK069473	Alphatorquevirus	Modha2025_TPA	3558	4	0.9281	OZ258670.1	Alphatorquevirus	90-95	False	True
+BK069474	Gammatorquevirus	Modha2025_TPA	3220	4	0.9062	MZ286165.1	Anelloviridae	90-95	False	True
+BK069475	Gammatorquevirus	Modha2025_TPA	2217	2				no_alignment	False	True
+BK069476	Alphatorquevirus	Modha2025_TPA	3629	3	0.9471	MZ286086.1	Anelloviridae	90-95	False	True
+BK069477	Alphatorquevirus	Modha2025_TPA	3554	2	0.9527	NC_014096.1	Alphatorquevirus	>=95	False	True
+BK069478	Alphatorquevirus	Modha2025_TPA	3523	2	0.9793	MH649256.1	Alphatorquevirus	>=95	False	True
+BK069479	Alphatorquevirus	Modha2025_TPA	3067	2	0.9201	MN768566.1	Alphatorquevirus	90-95	False	True
+BK069480	Alphatorquevirus	Modha2025_TPA	3000	2	0.8472	MN768566.1	Alphatorquevirus	<85	False	True
+BK069481	Alphatorquevirus	Modha2025_TPA	2979	3	0.9367	MH649242.1	Alphatorquevirus	90-95	False	True
+BK069482	Alphatorquevirus	Modha2025_TPA	3716	6	0.9355	MN768564.1	Alphatorquevirus	90-95	False	True
+BK069483	Alphatorquevirus	Modha2025_TPA	2969	4	0.9757	MZ286031.1	Alphatorquevirus	>=95	False	True
+BK069484	Alphatorquevirus	Modha2025_TPA	3051	3				no_alignment	False	True
+BK069485	Alphatorquevirus	Modha2025_TPA	3042	3	0.9573	MZ286018.1	Anelloviridae	>=95	False	True
+BK069486	Alphatorquevirus	Modha2025_TPA	2973	3	0.9517	MZ286215.1	Alphatorquevirus	>=95	False	True
+BK069487	Alphatorquevirus	Modha2025_TPA	2959	3	0.9691	MZ286097.1	Alphatorquevirus	>=95	False	True
+BK069488	Betatorquevirus	Modha2025_TPA	2950	1	0.9025	OK574387.1	Betatorquevirus	90-95	False	True
+BK069489	Alphatorquevirus	Modha2025_TPA	2944	3	0.9409	MZ286019.1	Alphatorquevirus	90-95	False	True
+BK069490	Alphatorquevirus	Modha2025_TPA	3778	2	0.9022	MZ286017.1	Alphatorquevirus	90-95	False	True
+BK069491	Betatorquevirus	Modha2025_TPA	2872	1	0.9005	MN769269.1	Betatorquevirus	90-95	False	True
+BK069492	Alphatorquevirus	Modha2025_TPA	2871	1	0.9046	MZ286060.1	Alphatorquevirus	90-95	False	True
+BK069493	Betatorquevirus	Modha2025_TPA	2869	3	0.8984	MN769071.1	Betatorquevirus	85-90	False	True
+BK069494	Betatorquevirus	Modha2025_TPA	2862	1	0.8908	MN770519.1	Betatorquevirus	85-90	False	True
+BK069495	Betatorquevirus	Modha2025_TPA	2851	2	0.9018	MN769333.1	Betatorquevirus	90-95	False	True
+BK069496	Betatorquevirus	Modha2025_TPA	2807	1	0.9739	MN771246.1	Betatorquevirus	>=95	False	True
+BK069497	Alphatorquevirus	Modha2025_TPA	3743	3	0.9451	MW455448.1	Anelloviridae	90-95	False	True
+BK069498	Gammatorquevirus	Modha2025_TPA	2683	3	0.9596	MW455378.1	Anelloviridae	>=95	False	True
+BK069499	Alphatorquevirus	Modha2025_TPA	2549	1	0.9289	MZ286060.1	Alphatorquevirus	90-95	False	True
+BK069500	Alphatorquevirus	Modha2025_TPA	2374	3	0.9287	KP343844.1	Anelloviridae	90-95	False	True
+BK069501	Alphatorquevirus	Modha2025_TPA	2339	3	0.861	MH649109.1	Anelloviridae	85-90	False	True
+BK069502	Alphatorquevirus	Modha2025_TPA	3611	5	0.9236	MW455417.1	Alphatorquevirus	90-95	False	True
+BK069503	Alphatorquevirus	Modha2025_TPA	3596	3	0.9079	MZ286101.1	Anelloviridae	90-95	False	True
+BK069504	Alphatorquevirus	Modha2025_TPA	3582	3	0.7961	MH648959.1	Anelloviridae	<85	False	True
+BK069505	Alphatorquevirus	Modha2025_TPA	3413	4	0.8879	MW455347.1	Alphatorquevirus	85-90	False	True
+BK069506	Alphatorquevirus	Modha2025_TPA	3352	3	0.7958	OR148955.1	Alphatorquevirus	<85	False	True
+BK069507	Alphatorquevirus	Modha2025_TPA	3127	3	0.9337	MZ286063.1	Alphatorquevirus	90-95	False	True
+BK069508	Betatorquevirus	Modha2025_TPA	2976	1	0.9282	MZ286226.1	Betatorquevirus	90-95	False	True
+BK069509	Gammatorquevirus	Modha2025_TPA	2819	3	0.8723	OP549859.1	Anelloviridae	85-90	False	True
+BK069510	Alphatorquevirus	Modha2025_TPA	3686	4	0.9509	HM224451.1	Alphatorquevirus	>=95	False	True
+BK069511	Alphatorquevirus	Modha2025_TPA	3183	3	0.9822	MZ286011.1	Alphatorquevirus	>=95	False	True
+BK069512	Alphatorquevirus	Modha2025_TPA	3178	4	0.9163	MH649156.1	Alphatorquevirus	90-95	False	True
+BK069513	Alphatorquevirus	Modha2025_TPA	3105	4	0.9636	MZ285973.1	Anelloviridae	>=95	False	True
+BK069514	Alphatorquevirus	Modha2025_TPA	3104	4	0.9288	MW455352.1	Anelloviridae	90-95	False	True
+BK069515	Alphatorquevirus	Modha2025_TPA	3001	3				no_alignment	False	True
+BK069516	Alphatorquevirus	Modha2025_TPA	3725	4	0.9157	MT783406.1	Alphatorquevirus	90-95	False	True
+BK069517	Betatorquevirus	Modha2025_TPA	2891	1	0.9	MH649254.1	Anelloviridae	90-95	False	True
+BK069518	Gammatorquevirus	Modha2025_TPA	2811	3	0.9553	MZ286050.1	Gammatorquevirus	>=95	False	True
+BK069519	Betatorquevirus	Modha2025_TPA	2758	2	0.8783	MN769356.1	Betatorquevirus	85-90	False	True
+BK069520	Betatorquevirus	Modha2025_TPA	2687	2	0.9448	MW455391.1	Betatorquevirus	90-95	False	True
+BK069521	Betatorquevirus	Modha2025_TPA	2686	2	0.9138	MW455391.1	Betatorquevirus	90-95	False	True
+BK069522	Alphatorquevirus	Modha2025_TPA	2401	3	0.9205	MZ286097.1	Alphatorquevirus	90-95	False	True
+BK069523	Alphatorquevirus	Modha2025_TPA	3724	6	0.9436	NC_014075.1	Alphatorquevirus	90-95	False	True
+BK069524	Alphatorquevirus	Modha2025_TPA	3708	3	0.9577	MZ286006.1	Alphatorquevirus	>=95	False	True
+BK069525	Alphatorquevirus	Modha2025_TPA	3548	5	0.9361	MZ286124.1	Alphatorquevirus	90-95	False	True
+BK069526	Alphatorquevirus	Modha2025_TPA	3194	3	0.9559	KP343843.1	Alphatorquevirus	>=95	False	True
+BK069527	Alphatorquevirus	Modha2025_TPA	3695	6	0.9498	MH649070.1	Alphatorquevirus	90-95	False	True
+BK069528	Gammatorquevirus	Modha2025_TPA	2826	2	0.9346	OP549859.1	Anelloviridae	90-95	False	True
+BK069529	Betatorquevirus	Modha2025_TPA	2783	3	0.9416	MZ286053.1	Betatorquevirus	90-95	False	True
+BK069530	Betatorquevirus	Modha2025_TPA	2782	2	0.8549	MN770104.1	Betatorquevirus	85-90	False	True
+BK069531	Alphatorquevirus	Modha2025_TPA	2760	2	0.9272	KP343839.1	Alphatorquevirus	90-95	False	True
+BK069532	Gammatorquevirus	Modha2025_TPA	2725	4	0.9709	MZ285986.1	Anelloviridae	>=95	False	True
+BK069533	Gammatorquevirus	Modha2025_TPA	2680	2	0.9525	MZ286159.1	Gammatorquevirus	>=95	False	True
+BK069534	Alphatorquevirus	Modha2025_TPA	2582	2	0.9145	MZ286060.1	Alphatorquevirus	90-95	False	True
+BK069535	Alphatorquevirus	Modha2025_TPA	2419	2	0.9163	KP343837.1	Alphatorquevirus	90-95	False	True
+BK069536	Betatorquevirus	Modha2025_TPA	2398	2	0.9132	MH649165.1	Anelloviridae	90-95	False	True
+BK069537	Alphatorquevirus	Modha2025_TPA	3961	5	0.9351	OZ258672.1	Alphatorquevirus	90-95	False	True
+BK069538	Alphatorquevirus	Modha2025_TPA	2130	3	0.9036	OZ258816.1	Alphatorquevirus	90-95	False	True
+BK069539	Alphatorquevirus	Modha2025_TPA	3051	3	0.9713	OR148953.1	Alphatorquevirus	>=95	False	True
+BK069540	Alphatorquevirus	Modha2025_TPA	2940	4	0.9383	MH648958.1	Alphatorquevirus	90-95	False	True
+BK069541	Alphatorquevirus	Modha2025_TPA	2930	3	0.9323	MH649242.1	Alphatorquevirus	90-95	False	True
+BK069542	Alphatorquevirus	Modha2025_TPA	3024	4	0.9189	MW455352.1	Anelloviridae	90-95	False	True
+BK069543	Alphatorquevirus	Modha2025_TPA	3008	3	0.9523	MZ286063.1	Alphatorquevirus	>=95	False	True
+BK069544	Alphatorquevirus	Modha2025_TPA	3007	6	0.9712	MZ286105.1	Alphatorquevirus	>=95	False	True
+BK069545	Betatorquevirus	Modha2025_TPA	2823	4	0.9249	MH649165.1	Anelloviridae	90-95	False	True
+BK069546	Gammatorquevirus	Modha2025_TPA	2513	4				no_alignment	False	True
+BK069547	Alphatorquevirus	Modha2025_TPA	3782	2	0.9444	MH649092.1	Alphatorquevirus	90-95	False	True
+BK069548	Alphatorquevirus	Modha2025_TPA	3313	5	0.9384	MZ286182.1	Alphatorquevirus	90-95	False	True
+BK069549	Alphatorquevirus	Modha2025_TPA	3312	5	0.9514	MH649122.1	Alphatorquevirus	>=95	False	True
+BK069550	Alphatorquevirus	Modha2025_TPA	3858	2	0.8951	MZ286074.1	Anelloviridae	85-90	False	True
+BK069551	Alphatorquevirus	Modha2025_TPA	3075	3	0.9728	OZ258617.1	Alphatorquevirus	>=95	False	True
+BK069552	Alphatorquevirus	Modha2025_TPA	3021	2	0.9333	MH649242.1	Alphatorquevirus	90-95	False	True
+BK069553	Alphatorquevirus	Modha2025_TPA	3012	5	0.894	MH649242.1	Alphatorquevirus	85-90	False	True
+BK069554	Alphatorquevirus	Modha2025_TPA	2951	3				no_alignment	False	True
+BK069555	Alphatorquevirus	Modha2025_TPA	2915	3	0.9518	MW455401.1	Anelloviridae	>=95	False	True
+BK069556	Alphatorquevirus	Modha2025_TPA	2883	4	0.9145	MH649109.1	Anelloviridae	90-95	False	True
+BK069557	Alphatorquevirus	Modha2025_TPA	2878	4	0.9692	MH649158.1	Anelloviridae	>=95	False	True
+BK069558	Alphatorquevirus	Modha2025_TPA	3730	3	0.8685	OZ258684.1	Alphatorquevirus	85-90	False	True
+BK069559	Alphatorquevirus	Modha2025_TPA	2564	3	0.9347	MH649242.1	Alphatorquevirus	90-95	False	True
+BK069560	Alphatorquevirus	Modha2025_TPA	2487	1	0.9745	MZ286094.1	Alphatorquevirus	>=95	False	True
+BK069561	Betatorquevirus	Modha2025_TPA	2402	2	0.9134	MW455391.1	Betatorquevirus	90-95	False	True
+BK069562	Alphatorquevirus	Modha2025_TPA	2033	3	0.9781	MZ286110.1	Anelloviridae	>=95	False	True
+BK069563	Alphatorquevirus	Modha2025_TPA	3639	6	0.9482	MH649122.1	Alphatorquevirus	90-95	False	True
+BK069564	Alphatorquevirus	Modha2025_TPA	3639	2	0.965	MZ286062.1	Anelloviridae	>=95	False	True
+BK069565	Alphatorquevirus	Modha2025_TPA	3530	3	0.9237	MH649210.1	Alphatorquevirus	90-95	False	True
+BK069566	Alphatorquevirus	Modha2025_TPA	3308	4	0.9389	KP343839.1	Alphatorquevirus	90-95	False	True
+BK069567	Alphatorquevirus	Modha2025_TPA	3121	5	0.9054	MZ286215.1	Alphatorquevirus	90-95	False	True
+BK069568	Alphatorquevirus	Modha2025_TPA	3428	3	0.9563	MH649156.1	Alphatorquevirus	>=95	False	True
+BK069569	Alphatorquevirus	Modha2025_TPA	3767	3	0.9571	MH649156.1	Alphatorquevirus	>=95	False	True
+BK069570	Betatorquevirus	Modha2025_TPA	2884	2	0.9529	OK574350.1	Betatorquevirus	>=95	False	True
+BK069571	Betatorquevirus	Modha2025_TPA	2700	1	0.8394	MH649002.1	Betatorquevirus	<85	False	True
+BK069572	Gammatorquevirus	Modha2025_TPA	2676	2	0.9677	MZ286095.1	Anelloviridae	>=95	False	True
+BK069573	Betatorquevirus	Modha2025_TPA	2674	1	0.8637	KP343851.1	Betatorquevirus	85-90	False	True
+BK069574	Alphatorquevirus	Modha2025_TPA	3659	6	0.9226	PP374832.1	Alphatorquevirus	90-95	False	True
+BK069575	Alphatorquevirus	Modha2025_TPA	3078	3	0.9352	PQ438050.1	Alphatorquevirus	90-95	False	True
+BK069576	Alphatorquevirus	Modha2025_TPA	3044	5	0.9165	GU797360.1	Alphatorquevirus	90-95	False	True
+BK069577	Betatorquevirus	Modha2025_TPA	2996	2	0.8247	KP343819.1	Betatorquevirus	<85	False	True
+BK069578	Betatorquevirus	Modha2025_TPA	2950	2	0.849	KP343819.1	Betatorquevirus	<85	False	True
+BK069579	Gammatorquevirus	Modha2025_TPA	2482	2				no_alignment	False	True
+BK069580	Alphatorquevirus	Modha2025_TPA	3822	4	0.9551	MZ286099.1	Alphatorquevirus	>=95	False	True
+BK069581	Alphatorquevirus	Modha2025_TPA	3102	3	0.9233	MT501648.1	Alphatorquevirus	90-95	False	True
+BK069582	Alphatorquevirus	Modha2025_TPA	2994	4	0.9123	MW455389.1	Alphatorquevirus	90-95	False	True
+BK069583	Alphatorquevirus	Modha2025_TPA	3761	4	0.8332	MZ286060.1	Alphatorquevirus	<85	False	True
+BK069584	Alphatorquevirus	Modha2025_TPA	3643	4	0.9327	MZ286182.1	Alphatorquevirus	90-95	False	True
+BK069585	Alphatorquevirus	Modha2025_TPA	3531	5	0.9412	MW455438.1	Alphatorquevirus	90-95	False	True
+BK069586	Alphatorquevirus	Modha2025_TPA	2985	2	0.9369	PQ438050.1	Alphatorquevirus	90-95	False	True
+BK069587	Betatorquevirus	Modha2025_TPA	2885	2	0.9238	MZ286241.1	Betatorquevirus	90-95	False	True
+BK069588	Betatorquevirus	Modha2025_TPA	2781	2	0.9191	MW455429.1	Betatorquevirus	90-95	False	True
+BK069589	Alphatorquevirus	Modha2025_TPA	2737	4	0.9824	MZ286097.1	Alphatorquevirus	>=95	False	True
+BK069590	Alphatorquevirus	Modha2025_TPA	2502	3	0.9589	OR148953.1	Alphatorquevirus	>=95	False	True
+BK069591	Alphatorquevirus	Modha2025_TPA	3587	2	0.9132	MH649210.1	Alphatorquevirus	90-95	False	True
+BK069592	Alphatorquevirus	Modha2025_TPA	3840	3	0.9268	MZ286086.1	Anelloviridae	90-95	False	True
+BK069593	Alphatorquevirus	Modha2025_TPA	3677	5	0.949	MH649070.1	Alphatorquevirus	90-95	False	True
+BK069594	Alphatorquevirus	Modha2025_TPA	3247	2	0.9336	MZ286057.1	Anelloviridae	90-95	False	True
+BK069595	Betatorquevirus	Modha2025_TPA	2825	1	0.8522	MZ286084.1	Betatorquevirus	85-90	False	True
+BK069596	Alphatorquevirus	Modha2025_TPA	2742	1	0.9922	MZ286047.1	Alphatorquevirus	>=95	False	True
+BK069597	Alphatorquevirus	Modha2025_TPA	2462	4	0.9481	OR148955.1	Alphatorquevirus	90-95	False	True
+BK069598	Alphatorquevirus	Modha2025_TPA	3780	6	0.8957	KP343839.1	Alphatorquevirus	85-90	False	True
+BK069599	Alphatorquevirus	Modha2025_TPA	3768	6	0.9334	MH649070.1	Alphatorquevirus	90-95	False	True
+BK069600	Alphatorquevirus	Modha2025_TPA	3685	2	0.9518	MT783405.1	Anelloviridae	>=95	False	True
+BK069601	Alphatorquevirus	Modha2025_TPA	3554	4	0.8855	NC_014081.1	Alphatorquevirus	85-90	False	True
+BK069602	Alphatorquevirus	Modha2025_TPA	3104	2	0.9211	OQ283124.1	Anelloviridae	90-95	False	True
+BK069603	Alphatorquevirus	Modha2025_TPA	3022	3	0.9568	OZ258684.1	Alphatorquevirus	>=95	False	True
+BK069604	Alphatorquevirus	Modha2025_TPA	2979	3	0.9485	OZ258693.1	Alphatorquevirus	90-95	False	True
+BK069605	Betatorquevirus	Modha2025_TPA	2755	3	0.9513	MZ286225.1	Betatorquevirus	>=95	False	True
+BK069606	Alphatorquevirus	Modha2025_TPA	3576	4	0.8684	MZ286184.1	Alphatorquevirus	85-90	False	True
+BK069607	Alphatorquevirus	Modha2025_TPA	3105	2	0.8823	MZ286017.1	Alphatorquevirus	85-90	False	True
+BK069608	Alphatorquevirus	Modha2025_TPA	3080	2	0.872	MZ286017.1	Alphatorquevirus	85-90	False	True
+BK069609	Alphatorquevirus	Modha2025_TPA	3073	4	0.9468	OZ258693.1	Alphatorquevirus	90-95	False	True
+BK069610	Alphatorquevirus	Modha2025_TPA	3064	3	0.8853	MW455349.1	Alphatorquevirus	85-90	False	True
+BK069611	Alphatorquevirus	Modha2025_TPA	3010	1	0.8832	MW455392.1	Alphatorquevirus	85-90	False	True
+BK069612	Gammatorquevirus	Modha2025_TPA	2905	2	0.8626	MN774988.1	Samektorquevirus	85-90	False	True
+BK069613	Alphatorquevirus	Modha2025_TPA	3764	3	0.9306	MW455438.1	Alphatorquevirus	90-95	False	True
+BK069614	Betatorquevirus	Modha2025_TPA	2793	1	0.9469	KY462758.1	Betatorquevirus	90-95	False	True
+BK069615	Alphatorquevirus	Modha2025_TPA	2730	3	0.9145	MZ286186.1	Alphatorquevirus	90-95	False	True
+BK069616	Alphatorquevirus	Modha2025_TPA	2627	4				no_alignment	False	True
+BK069617	Alphatorquevirus	Modha2025_TPA	2579	3	0.8821	OZ258632.1	Alphatorquevirus	85-90	False	True
+BK069618	Gammatorquevirus	Modha2025_TPA	2533	2				no_alignment	False	True
+BK069619	Alphatorquevirus	Modha2025_TPA	2449	1	0.9142	MZ286106.1	Alphatorquevirus	90-95	False	True
+BK069620	Alphatorquevirus	Modha2025_TPA	2366	2	0.8686	MZ286037.1	Anelloviridae	85-90	False	True
+BK069621	Gammatorquevirus	Modha2025_TPA	2310	2	0.9157	MZ286203.1	Anelloviridae	90-95	False	True
+BK069622	Alphatorquevirus	Modha2025_TPA	2179	1	0.9214	NC_014096.1	Alphatorquevirus	90-95	False	True
+BK069623	Alphatorquevirus	Modha2025_TPA	2106	2	0.9605	MH649258.1	Alphatorquevirus	>=95	False	True
+BK069624	Alphatorquevirus	Modha2025_TPA	3596	2	0.8177	MZ286022.1	Anelloviridae	<85	False	True
+BK069625	Alphatorquevirus	Modha2025_TPA	3566	2	0.7824	MH648959.1	Anelloviridae	<85	False	True
+BK069626	Alphatorquevirus	Modha2025_TPA	3473	3	0.9393	MH649158.1	Anelloviridae	90-95	False	True
+BK069627	Alphatorquevirus	Modha2025_TPA	3327	4	0.8904	MH649258.1	Alphatorquevirus	85-90	False	True
+BK069628	Alphatorquevirus	Modha2025_TPA	3223	2	0.9349	OZ258799.1	Alphatorquevirus	90-95	False	True
+BK069629	Alphatorquevirus	Modha2025_TPA	3215	3	0.9273	MW857571.1	Anelloviridae	90-95	False	True
+BK069630	Alphatorquevirus	Modha2025_TPA	3888	5	0.8524	MZ286097.1	Alphatorquevirus	85-90	False	True
+BK069631	Alphatorquevirus	Modha2025_TPA	3757	5	0.9352	MH648901.1	Alphatorquevirus	90-95	False	True
+BK069632	Alphatorquevirus	Modha2025_TPA	3616	2	0.9621	MZ285992.1	Anelloviridae	>=95	False	True
+BK069633	Alphatorquevirus	Modha2025_TPA	3037	2	0.9757	MZ286110.1	Anelloviridae	>=95	False	True
+BK069634	Alphatorquevirus	Modha2025_TPA	2881	3	0.9684	MZ286031.1	Alphatorquevirus	>=95	False	True
+BK069635	Alphatorquevirus	Modha2025_TPA	2940	3	0.8345	NC_038340.1	Alphatorquevirus	<85	False	True
+BK069636	Alphatorquevirus	Modha2025_TPA	2741	3	0.9164	MZ286114.1	Alphatorquevirus	90-95	False	True
+BK069637	Betatorquevirus	Modha2025_TPA	2650	1	0.915	MN769029.1	Betatorquevirus	90-95	False	True
+BK069638	Alphatorquevirus	Modha2025_TPA	3708	5	0.9788	MW455439.1	Alphatorquevirus	>=95	False	True
+BK069639	Alphatorquevirus	Modha2025_TPA	3647	5	0.912	MZ286182.1	Alphatorquevirus	90-95	False	True
+BK069640	Alphatorquevirus	Modha2025_TPA	3549	2	0.8731	PP374831.1	Alphatorquevirus	85-90	False	True
+BK069641	Samektorquevirus	Modha2025_TPA	3241	2	0.7944	PP728776.1	Samektorquevirus	<85	False	True
+BK069642	Alphatorquevirus	Modha2025_TPA	2960	3	0.9511	KP343837.1	Alphatorquevirus	>=95	False	True
+BK069643	Alphatorquevirus	Modha2025_TPA	3674	5	0.9477	MH649070.1	Alphatorquevirus	90-95	False	True
+BK069644	Alphatorquevirus	Modha2025_TPA	2940	3	0.9377	MZ286101.1	Anelloviridae	90-95	False	True
+BK069645	Betatorquevirus	Modha2025_TPA	2774	3	0.9034	MN770429.1	Betatorquevirus	90-95	False	True
+BK069646	Alphatorquevirus	Modha2025_TPA	3562	2	0.9584	MW455440.1	Alphatorquevirus	>=95	False	True
+BK069647	Alphatorquevirus	Modha2025_TPA	3485	4	0.9262	MZ286156.1	Alphatorquevirus	90-95	False	True
+BK069648	Alphatorquevirus	Modha2025_TPA	3005	2	0.9608	MZ285979.1	Alphatorquevirus	>=95	False	True
+BK069649	Betatorquevirus	Modha2025_TPA	2855	1	0.8626	OK574426.1	Betatorquevirus	85-90	False	True
+BK069650	Betatorquevirus	Modha2025_TPA	2837	2				no_alignment	False	True
+BK069651	Alphatorquevirus	Modha2025_TPA	2925	3	0.9495	MH649158.1	Anelloviridae	90-95	False	True
+BK069652	Alphatorquevirus	Modha2025_TPA	2807	1	0.8902	MZ286056.1	Alphatorquevirus	85-90	False	True
+BK069653	Alphatorquevirus	Modha2025_TPA	2380	5	0.8863	PP374828.1	Alphatorquevirus	85-90	False	True
+BK069654	Alphatorquevirus	Modha2025_TPA	2379	2	0.912	MZ286063.1	Alphatorquevirus	90-95	False	True
+BK069655	Alphatorquevirus	Modha2025_TPA	2055	2	0.893	MH648901.1	Alphatorquevirus	85-90	False	True
+BK069656	Alphatorquevirus	Modha2025_TPA	3653	4	0.9396	MT501646.1	Anelloviridae	90-95	False	True
+BK069657	Alphatorquevirus	Modha2025_TPA	3557	4	0.9012	MN765201.1	Alphatorquevirus	90-95	False	True
+BK069658	Alphatorquevirus	Modha2025_TPA	3287	5	0.9405	NC_038344.1	Alphatorquevirus	90-95	False	True
+BK069659	Alphatorquevirus	Modha2025_TPA	3222	4	0.9489	HM224451.1	Alphatorquevirus	90-95	False	True
+BK069660	Alphatorquevirus	Modha2025_TPA	3218	2	0.9669	MZ286070.1	Anelloviridae	>=95	False	True
+BK069661	Alphatorquevirus	Modha2025_TPA	3193	3	0.9547	MW679006.1	Alphatorquevirus	>=95	False	True
+BK069662	Samektorquevirus	Modha2025_TPA	3148	2				no_alignment	False	True
+BK069663	Alphatorquevirus	Modha2025_TPA	2592	2	0.9515	MZ286140.1	Alphatorquevirus	>=95	False	True
+BK069664	Alphatorquevirus	Modha2025_TPA	3858	5	0.9292	MH649137.1	Alphatorquevirus	90-95	False	True
+BK069665	Alphatorquevirus	Modha2025_TPA	3794	4	0.9449	MN765200.1	Anelloviridae	90-95	False	True
+BK069666	Alphatorquevirus	Modha2025_TPA	3151	3	0.9835	OZ258785.1	Alphatorquevirus	>=95	False	True
+BK069667	Alphatorquevirus	Modha2025_TPA	3113	4	0.9345	MW455446.1	Anelloviridae	90-95	False	True
+BK069668	Alphatorquevirus	Modha2025_TPA	3053	5	0.8898	MZ286143.1	Anelloviridae	85-90	False	True
+BK069669	Alphatorquevirus	Modha2025_TPA	3044	4	0.8948	MW455440.1	Alphatorquevirus	85-90	False	True
+BK069670	Alphatorquevirus	Modha2025_TPA	2929	3	0.9592	MZ286158.1	Alphatorquevirus	>=95	False	True
+BK069671	Alphatorquevirus	Modha2025_TPA	2904	3	0.9295	MH649156.1	Alphatorquevirus	90-95	False	True
+BK069672	Alphatorquevirus	Modha2025_TPA	2903	3	0.8776	OZ258612.1	Alphatorquevirus	85-90	False	True
+BK069673	Alphatorquevirus	Modha2025_TPA	2764	4	0.9349	MW455446.1	Anelloviridae	90-95	False	True
+BK069674	Alphatorquevirus	Modha2025_TPA	2575	2	0.9414	MZ286101.1	Anelloviridae	90-95	False	True
+BK069675	Alphatorquevirus	Modha2025_TPA	3749	3	0.9287	MH649242.1	Alphatorquevirus	90-95	False	True
+BK069676	Alphatorquevirus	Modha2025_TPA	3631	4	0.9559	MH649122.1	Alphatorquevirus	>=95	False	True
+BK069677	Alphatorquevirus	Modha2025_TPA	3598	4	0.9627	MZ286043.1	Alphatorquevirus	>=95	False	True
+BK069678	Alphatorquevirus	Modha2025_TPA	3358	7	0.9886	OZ258803.1	Alphatorquevirus	>=95	False	True
+BK069679	Alphatorquevirus	Modha2025_TPA	3332	5	0.8546	OZ258803.1	Alphatorquevirus	85-90	False	True
+BK069680	Alphatorquevirus	Modha2025_TPA	3194	4	0.9282	MZ285989.1	Alphatorquevirus	90-95	False	True
+BK069681	Alphatorquevirus	Modha2025_TPA	3062	4	0.8536	MN768560.1	Alphatorquevirus	85-90	False	True
+BK069682	Alphatorquevirus	Modha2025_TPA	3825	2	0.9048	MZ286056.1	Alphatorquevirus	90-95	False	True
+BK069683	Alphatorquevirus	Modha2025_TPA	3189	4	0.9484	MZ286042.1	Alphatorquevirus	90-95	False	True
+BK069684	Alphatorquevirus	Modha2025_TPA	3701	3	0.928	MZ286140.1	Alphatorquevirus	90-95	False	True
+BK069685	Gammatorquevirus	Modha2025_TPA	2745	2	0.9541	OP549859.1	Anelloviridae	>=95	False	True
+BK069686	Alphatorquevirus	Modha2025_TPA	3623	5	0.9345	MZ286183.1	Alphatorquevirus	90-95	False	True
+BK069687	Alphatorquevirus	Modha2025_TPA	3612	4	0.9496	AY823989.1	Alphatorquevirus	90-95	False	True
+BK069688	Alphatorquevirus	Modha2025_TPA	3522	2	0.8716	MZ286113.1	Anelloviridae	85-90	False	True
+BK069689	Betatorquevirus	Modha2025_TPA	2873	2	0.9036	MN769100.1	Betatorquevirus	90-95	False	True
+BK069690	Alphatorquevirus	Modha2025_TPA	3699	3	0.9406	NC_014096.1	Alphatorquevirus	90-95	False	True
+BK069691	Alphatorquevirus	Modha2025_TPA	3018	3	0.929	MH649158.1	Anelloviridae	90-95	False	True
+BK069692	Alphatorquevirus	Modha2025_TPA	2971	3	0.8884	MW455352.1	Anelloviridae	85-90	False	True
+BK069693	Betatorquevirus	Modha2025_TPA	2722	1				no_alignment	False	True
+BK069694	Alphatorquevirus	Modha2025_TPA	3675	4	0.9252	KJ194503.1	Anelloviridae	90-95	False	True
+BK069695	Gammatorquevirus	Modha2025_TPA	3238	3	0.8504	OP549859.1	Anelloviridae	85-90	False	True
+BK069696	Alphatorquevirus	Modha2025_TPA	3786	3	0.9795	MZ286206.1	Alphatorquevirus	>=95	False	True
+BK069697	Betatorquevirus	Modha2025_TPA	2937	2	0.8413	MZ286196.1	Betatorquevirus	<85	False	True
+BK069698	Gammatorquevirus	Modha2025_TPA	2820	2	0.9942	KP343821.1	Anelloviridae	>=95	False	True
+BK069699	Betatorquevirus	Modha2025_TPA	2988	2	0.9002	MN769059.1	Betatorquevirus	90-95	False	True
+BK069700	Alphatorquevirus	Modha2025_TPA	3662	3	0.9639	MZ286158.1	Alphatorquevirus	>=95	False	True
+BK069701	Betatorquevirus	Modha2025_TPA	2961	3	0.9691	MN770631.1	Betatorquevirus	>=95	False	True
+BK069702	Gammatorquevirus	Modha2025_TPA	2803	3	0.8717	MN774968.1	Anelloviridae	85-90	False	True
+BK069703	Gammatorquevirus	Modha2025_TPA	2664	3	0.8276	OP549859.1	Anelloviridae	<85	False	True
+BK069704	Alphatorquevirus	Modha2025_TPA	3725	4	0.9041	PP374830.1	Alphatorquevirus	90-95	False	True
+BK069705	Gammatorquevirus	Modha2025_TPA	2982	3	0.8316	MN774970.1	Gammatorquevirus	<85	False	True
+BK069706	Betatorquevirus	Modha2025_TPA	2005	2	0.828	MN769981.1	Betatorquevirus	<85	False	True
+BK069707	Alphatorquevirus	Modha2025_TPA	3790	2	0.8653	MH648959.1	Anelloviridae	85-90	False	True
+BK069708	Alphatorquevirus	Modha2025_TPA	3069	3	0.8672	MW455392.1	Alphatorquevirus	85-90	False	True
+BK069709	Alphatorquevirus	Modha2025_TPA	3553	4	0.9515	MZ286160.1	Alphatorquevirus	>=95	False	True
+BK069710	Betatorquevirus	Modha2025_TPA	2511	2	0.9616	MN770631.1	Betatorquevirus	>=95	False	True
+BK069711	Alphatorquevirus	Modha2025_TPA	2307	1	0.9339	MZ286110.1	Anelloviridae	90-95	False	True
+BK069712	Betatorquevirus	Modha2025_TPA	2983	2	0.8904	MN769585.1	Betatorquevirus	85-90	False	True
+BK069713	Alphatorquevirus	Modha2025_TPA	3692	5	0.9336	MZ286092.1	Alphatorquevirus	90-95	False	True
+BK069714	Alphatorquevirus	Modha2025_TPA	3737	4	0.9625	MZ286220.1	Alphatorquevirus	>=95	False	True
+BK069715	Betatorquevirus	Modha2025_TPA	2940	1	0.8073	MN769046.1	Betatorquevirus	<85	False	True
+BK069716	Samektorquevirus	Modha2025_TPA	2799	2	0.8999	MN774933.1	Anelloviridae	85-90	False	True
+BK069717	Alphatorquevirus	Modha2025_TPA	3132	4	0.9206	PP374832.1	Alphatorquevirus	90-95	False	True
+BK069718	Alphatorquevirus	Modha2025_TPA	2009	2	0.9167	MZ286092.1	Alphatorquevirus	90-95	False	True
+BK069719	Gammatorquevirus	Modha2025_TPA	2402	2				no_alignment	False	True
+BK069720	Betatorquevirus	Modha2025_TPA	2147	1	0.9929	OZ258751.1	Betatorquevirus	>=95	False	True
+BK069721	Alphatorquevirus	Modha2025_TPA	3768	5	0.9451	MZ286122.1	Alphatorquevirus	90-95	False	True
+BK069722	Alphatorquevirus	Modha2025_TPA	3495	4	0.8947	OZ258803.1	Alphatorquevirus	85-90	False	True
+BK069723	Betatorquevirus	Modha2025_TPA	2931	1	0.923	MZ286234.1	Betatorquevirus	90-95	False	True
+BK069724	Alphatorquevirus	Modha2025_TPA	3040	4	0.9212	MW455352.1	Anelloviridae	90-95	False	True
+BK069725	Alphatorquevirus	Modha2025_TPA	3031	3	0.9257	MH649014.1	Anelloviridae	90-95	False	True
+BK069726	Alphatorquevirus	Modha2025_TPA	2985	3	0.9236	MH649156.1	Alphatorquevirus	90-95	False	True
+BK069727	Betatorquevirus	Modha2025_TPA	2958	2	0.9331	MN769642.1	Betatorquevirus	90-95	False	True
+BK069728	Alphatorquevirus	Modha2025_TPA	3639	5	0.9507	KP343839.1	Alphatorquevirus	>=95	False	True
+BK069729	Betatorquevirus	Modha2025_TPA	2904	2	0.881	MZ286048.1	Betatorquevirus	85-90	False	True
+BK069730	Alphatorquevirus	Modha2025_TPA	3661	2	0.9276	OZ258660.1	Alphatorquevirus	90-95	False	True
+BK069731	Alphatorquevirus	Modha2025_TPA	3638	5	0.9439	KP343839.1	Alphatorquevirus	90-95	False	True
+BK069732	Alphatorquevirus	Modha2025_TPA	3711	5	0.8972	MZ286140.1	Alphatorquevirus	85-90	False	True
+BK069733	Alphatorquevirus	Modha2025_TPA	3467	2	0.9832	MZ286094.1	Alphatorquevirus	>=95	False	True
+BK069734	Betatorquevirus	Modha2025_TPA	2838	1	0.9295	MZ286276.1	Betatorquevirus	90-95	False	True
+BK069735	Gammatorquevirus	Modha2025_TPA	3231	3	0.982	MN774975.1	Anelloviridae	>=95	False	True
+BK069736	Alphatorquevirus	Modha2025_TPA	2696	2	0.9298	MW455383.1	Alphatorquevirus	90-95	False	True
+BK069737	Alphatorquevirus	Modha2025_TPA	3723	2	0.9383	MZ286017.1	Alphatorquevirus	90-95	False	True
+BK069738	Betatorquevirus	Modha2025_TPA	2904	3	0.9004	MZ286048.1	Betatorquevirus	90-95	False	True
+BK069739	Betatorquevirus	Modha2025_TPA	2904	3	0.8794	MZ286048.1	Betatorquevirus	85-90	False	True
+BK069740	Gammatorquevirus	Modha2025_TPA	2765	4	0.9583	MW455362.1	Anelloviridae	>=95	False	True
+BK069741	Alphatorquevirus	Modha2025_TPA	2753	2	0.9199	OZ258660.1	Alphatorquevirus	90-95	False	True
+BK069742	Betatorquevirus	Modha2025_TPA	2876	1	0.9356	MZ286259.1	Betatorquevirus	90-95	False	True
+BK069743	Betatorquevirus	Modha2025_TPA	2569	3	0.9324	KP343847.1	Betatorquevirus	90-95	False	True
+BK069744	Betatorquevirus	Modha2025_TPA	2959	6	0.8518	NC_038346.1	Betatorquevirus	85-90	False	True
+BK069745	Alphatorquevirus	Modha2025_TPA	3579	3	0.9302	MH649014.1	Anelloviridae	90-95	False	True
+BK069746	Alphatorquevirus	Modha2025_TPA	3575	3	0.905	KP343846.1	Anelloviridae	90-95	False	True
+BK069747	Alphatorquevirus	Modha2025_TPA	3471	8	0.9508	NC_014081.1	Alphatorquevirus	>=95	False	True
+BK069748	Betatorquevirus	Modha2025_TPA	2969	2	0.8481	OK574405.1	Betatorquevirus	<85	False	True
+BK069749	Betatorquevirus	Modha2025_TPA	2985	3	0.8879	MN770601.1	Betatorquevirus	85-90	False	True
+BK069750	Betatorquevirus	Modha2025_TPA	2767	3	0.8948	MZ286020.1	Anelloviridae	85-90	False	True
+BK069751	Alphatorquevirus	Modha2025_TPA	3801	5	0.9105	OR148953.1	Alphatorquevirus	90-95	False	True
+BK069752	Gammatorquevirus	Modha2025_TPA	2802	2				no_alignment	False	True
+BK069753	Alphatorquevirus	Modha2025_TPA	3840	4	0.88	MZ286209.1	Anelloviridae	85-90	False	True
+BK069754	Alphatorquevirus	Modha2025_TPA	2309	3	0.9204	MZ286183.1	Alphatorquevirus	90-95	False	True
+BK069755	Alphatorquevirus	Modha2025_TPA	3772	3	0.9548	MZ286056.1	Alphatorquevirus	>=95	False	True
+BK069756	Betatorquevirus	Modha2025_TPA	2951	3	0.9172	MN770149.1	Betatorquevirus	90-95	False	True
+BK069757	Betatorquevirus	Modha2025_TPA	2955	4				no_alignment	False	True
+BK069758	Alphatorquevirus	Modha2025_TPA	2823	3	0.9265	MW455352.1	Anelloviridae	90-95	False	True
+BK069759	Alphatorquevirus	Modha2025_TPA	3025	6	0.9013	PP374828.1	Alphatorquevirus	90-95	False	True
+BK069760	Betatorquevirus	Modha2025_TPA	2960	2	0.8338	MN770201.1	Betatorquevirus	<85	False	True
+BK069761	Gammatorquevirus	Modha2025_TPA	2933	3	0.9557	OK574374.1	Gammatorquevirus	>=95	False	True
+BK069762	Betatorquevirus	Modha2025_TPA	2931	1				no_alignment	False	True
+BK069763	Betatorquevirus	Modha2025_TPA	2931	2	0.9115	MN770808.1	Betatorquevirus	90-95	False	True
+BK069764	Betatorquevirus	Modha2025_TPA	2905	2	0.8491	MN769336.1	Betatorquevirus	<85	False	True
+BK069765	Alphatorquevirus	Modha2025_TPA	2890	4	0.9082	OZ258816.1	Alphatorquevirus	90-95	False	True
+BK069766	Betatorquevirus	Modha2025_TPA	2881	1				no_alignment	False	True
+BK069767	Betatorquevirus	Modha2025_TPA	2879	3	0.8808	KU041847.1	Betatorquevirus	85-90	False	True
+BK069768	Alphatorquevirus	Modha2025_TPA	2863	2	0.9089	MH649062.1	Alphatorquevirus	90-95	False	True
+BK069769	Alphatorquevirus	Modha2025_TPA	2845	4	0.8645	KP343839.1	Alphatorquevirus	85-90	False	True
+BK069770	Betatorquevirus	Modha2025_TPA	2845	2	0.958	OK574411.1	Betatorquevirus	>=95	False	True
+BK069771	Betatorquevirus	Modha2025_TPA	2844	1	0.8523	MZ286180.1	Betatorquevirus	85-90	False	True
+BK069772	Betatorquevirus	Modha2025_TPA	2732	1	0.9473	MZ286148.1	Betatorquevirus	90-95	False	True
+BK069773	Betatorquevirus	Modha2025_TPA	2717	2				no_alignment	False	True
+BK069774	Betatorquevirus	Modha2025_TPA	2666	2	0.8372	MN769711.1	Betatorquevirus	<85	False	True
+BK069775	Betatorquevirus	Modha2025_TPA	2635	2	0.8687	OK574434.1	Betatorquevirus	85-90	False	True
+BK069776	Betatorquevirus	Modha2025_TPA	2615	1	0.8783	OK574370.1	Betatorquevirus	85-90	False	True
+BK069777	Betatorquevirus	Modha2025_TPA	2541	1	0.8874	OK574370.1	Betatorquevirus	85-90	False	True
+BK069778	Gammatorquevirus	Modha2025_TPA	2502	2	0.8548	MW455405.1	Anelloviridae	85-90	False	True
+BK069779	Gammatorquevirus	Modha2025_TPA	2498	2	0.9022	MN774986.1	Anelloviridae	90-95	False	True
+BK069780	Gammatorquevirus	Modha2025_TPA	2464	3				no_alignment	False	True
+BK069781	Alphatorquevirus	Modha2025_TPA	2097	2	0.9115	MW455392.1	Alphatorquevirus	90-95	False	True
+BK069782	Alphatorquevirus	Modha2025_TPA	3947	3	0.9334	MZ286064.1	Alphatorquevirus	90-95	False	True
+BK069783	Alphatorquevirus	Modha2025_TPA	3587	2	0.8992	KP343841.1	Anelloviridae	85-90	False	True
+BK069784	Alphatorquevirus	Modha2025_TPA	3587	4	0.9278	OZ258670.1	Alphatorquevirus	90-95	False	True
+BK069785	Alphatorquevirus	Modha2025_TPA	3490	4	0.8853	MN768565.1	Alphatorquevirus	85-90	False	True
+BK069786	Alphatorquevirus	Modha2025_TPA	3272	2	0.9201	KP343843.1	Alphatorquevirus	90-95	False	True
+BK069787	Alphatorquevirus	Modha2025_TPA	3150	5	0.9098	MW455368.1	Alphatorquevirus	90-95	False	True
+BK069788	Alphatorquevirus	Modha2025_TPA	3036	4	0.936	MZ286118.1	Alphatorquevirus	90-95	False	True
+BK069789	Alphatorquevirus	Modha2025_TPA	2529	2	0.8885	MZ286092.1	Alphatorquevirus	85-90	False	True
+BK069790	Betatorquevirus	Modha2025_TPA	2934	3	0.9302	MH648897.1	Betatorquevirus	90-95	False	True
+BK069791	Alphatorquevirus	Modha2025_TPA	2307	2	0.9297	MT501648.1	Alphatorquevirus	90-95	False	True
+BK069792	Alphatorquevirus	Modha2025_TPA	2029	1	0.9149	MZ285971.1	Anelloviridae	90-95	False	True
+BK069793	Alphatorquevirus	Modha2025_TPA	3338	4	0.9488	MZ286002.1	Alphatorquevirus	90-95	False	True
+BK069794	Alphatorquevirus	Modha2025_TPA	3312	3	0.9189	MZ286008.1	Alphatorquevirus	90-95	False	True
+BK069795	Alphatorquevirus	Modha2025_TPA	3055	4	0.9309	MH649070.1	Alphatorquevirus	90-95	False	True
+BK069796	Alphatorquevirus	Modha2025_TPA	3030	2	0.8539	MW455348.1	Anelloviridae	85-90	False	True
+BK069797	Betatorquevirus	Modha2025_TPA	2998	1	0.9746	MN770127.1	Betatorquevirus	>=95	False	True
+BK069798	Alphatorquevirus	Modha2025_TPA	2980	4	0.9649	MZ286110.1	Anelloviridae	>=95	False	True
+BK069799	Alphatorquevirus	Modha2025_TPA	3884	5	0.9267	MN765196.1	Alphatorquevirus	90-95	False	True
+BK069800	Gammatorquevirus	Modha2025_TPA	2525	2				no_alignment	False	True
+BK069801	Alphatorquevirus	Modha2025_TPA	3851	4	0.9521	MW455399.1	Anelloviridae	>=95	False	True
+BK069802	Alphatorquevirus	Modha2025_TPA	3775	5	0.9773	MZ286215.1	Alphatorquevirus	>=95	False	True
+BK069803	Alphatorquevirus	Modha2025_TPA	2966	3	0.9341	MW455389.1	Alphatorquevirus	90-95	False	True
+BK069804	Betatorquevirus	Modha2025_TPA	2867	2	0.8304	KP343851.1	Betatorquevirus	<85	False	True
+BK069805	Gammatorquevirus	Modha2025_TPA	2556	4				no_alignment	False	True
+BK069806	Alphatorquevirus	Modha2025_TPA	3880	4	0.88	MH649022.1	Anelloviridae	85-90	False	True
+BK069807	Alphatorquevirus	Modha2025_TPA	3815	4	0.8715	NC_014078.1	Alphatorquevirus	85-90	False	True
+BK069808	Alphatorquevirus	Modha2025_TPA	3249	4	0.9282	MN768564.1	Alphatorquevirus	90-95	False	True
+BK069809	Gammatorquevirus	Modha2025_TPA	3070	2	0.8542	MT506589.1	Gammatorquevirus	85-90	False	True
+BK069810	Gammatorquevirus	Modha2025_TPA	3014	3	0.7562	MN774941.1	Gammatorquevirus	<85	False	True
+BK069811	Alphatorquevirus	Modha2025_TPA	3002	2	0.8924	MZ285978.1	Anelloviridae	85-90	False	True
+BK069812	Betatorquevirus	Modha2025_TPA	2960	3	0.8517	MN770353.1	Betatorquevirus	85-90	False	True
+BK069813	Gammatorquevirus	Modha2025_TPA	2856	2	0.9087	MN774951.1	Anelloviridae	90-95	False	True
+BK069814	Gammatorquevirus	Modha2025_TPA	2847	2	0.9483	MZ286172.1	Anelloviridae	90-95	False	True
+BK069815	Betatorquevirus	Modha2025_TPA	2827	4	0.9157	MN770266.1	Betatorquevirus	90-95	False	True
+BK069816	Gammatorquevirus	Modha2025_TPA	2568	4	0.8504	AB303557.1	Gammatorquevirus	85-90	False	True
+BK069817	Gammatorquevirus	Modha2025_TPA	2554	3				no_alignment	False	True
+BK069818	Gammatorquevirus	Modha2025_TPA	2516	2				no_alignment	False	True
+BK069819	Gammatorquevirus	Modha2025_TPA	2509	3				no_alignment	False	True
+BK069820	Gammatorquevirus	Modha2025_TPA	2506	1				no_alignment	False	True
+BK069821	Gammatorquevirus	Modha2025_TPA	2346	3				no_alignment	False	True
+JX964755.1	Gyrovirus	NCBI_nuccore	2292	3	0.9599	JQ690762.1	Gyrovirus	>=95	False	True
+KF224928.1	Gyrovirus	NCBI_nuccore	2298	3	0.9621	JQ690762.1	Gyrovirus	>=95	False	True
+KF224933.1	Gyrovirus	NCBI_nuccore	2298	3	0.9621	JQ690762.1	Gyrovirus	>=95	False	True
+KM111536.1	Gyrovirus	NCBI_nuccore	2439	3				no_alignment	False	True
+KM593802.2	Anelloviridae	NCBI_nuccore	3840	3	1.0	KM593802.2	Anelloviridae	>=95	True	False
+KU845734.1	Gyrovirus	NCBI_nuccore	2298	3	0.9505	JQ690762.1	Gyrovirus	>=95	False	True
+KX708506.1	Gyrovirus	NCBI_nuccore	2376	3	0.9836	JQ690763.1	Gyrovirus	>=95	False	True
+KX708512.1	Gyrovirus	NCBI_nuccore	2376	3	0.971	JQ690763.1	Gyrovirus	>=95	False	True
+KX811526.1	Gyrovirus	NCBI_nuccore	2298	3	0.9474	JQ690762.1	Gyrovirus	90-95	False	True
+KY486139.1	Gyrovirus	NCBI_nuccore	2298	3	0.9685	JQ690762.1	Gyrovirus	>=95	False	True
+KY486149.1	Gyrovirus	NCBI_nuccore	2298	3	0.9625	JQ690762.1	Gyrovirus	>=95	False	True
+KY486152.1	Gyrovirus	NCBI_nuccore	2298	3	0.9664	JQ690762.1	Gyrovirus	>=95	False	True
+MF346361.1	Anelloviridae	NCBI_nuccore	2220	4				no_alignment	False	True
+MH001567.1	Gyrovirus	NCBI_nuccore	2298	3	0.9531	JQ690762.1	Gyrovirus	>=95	False	True
+MH186139.1	Gyrovirus	NCBI_nuccore	2293	3	0.9408	JQ690762.1	Gyrovirus	90-95	False	True
+MH648892.1	Anelloviridae	NCBI_nuccore	2547	1	1.0	MH648892.1	Betatorquevirus	>=95	True	False
+MH648985.1	Anelloviridae	NCBI_nuccore	2648	3	1.0	MH648985.1	Betatorquevirus	>=95	True	False
+MH648999.1	Anelloviridae	NCBI_nuccore	2299	2	1.0	MH648999.1	Betatorquevirus	>=95	True	False
+MH649009.1	Anelloviridae	NCBI_nuccore	1983	2	1.0	MH649009.1	Betatorquevirus	>=95	True	False
+MH649014.1	Anelloviridae	NCBI_nuccore	3886	3	1.0	MH649014.1	Anelloviridae	>=95	True	False
+MH649053.1	Anelloviridae	NCBI_nuccore	1704	2	0.974	MH648942.1	Anelloviridae	>=95	False	True
+MH649083.1	Anelloviridae	NCBI_nuccore	2794	3	1.0	MH649083.1	Betatorquevirus	>=95	True	False
+MH649084.1	Anelloviridae	NCBI_nuccore	2127	1	1.0	MH649084.1	Betatorquevirus	>=95	True	False
+MH649122.1	Anelloviridae	NCBI_nuccore	3955	5	1.0	MH649122.1	Alphatorquevirus	>=95	True	False
+MH649137.1	Anelloviridae	NCBI_nuccore	3696	3	1.0	MH649137.1	Alphatorquevirus	>=95	True	False
+MH649179.1	Anelloviridae	NCBI_nuccore	3777	4	0.9835	OR148955.1	Alphatorquevirus	>=95	False	True
+MH649185.1	Anelloviridae	NCBI_nuccore	1649	2	1.0	MH649185.1	Anelloviridae	>=95	True	False
+MH649210.1	Anelloviridae	NCBI_nuccore	3965	3	1.0	MH649210.1	Alphatorquevirus	>=95	True	False
+MH649258.1	Anelloviridae	NCBI_nuccore	3168	3	1.0	MH649258.1	Alphatorquevirus	>=95	True	False
+MK012479.1	Anelloviridae	NCBI_nuccore	1980	3				no_alignment	False	True
+MK089243.1	Gyrovirus	NCBI_nuccore	2298	3	0.9698	JQ690762.1	Gyrovirus	>=95	False	True
+MK212032.1	Hetorquevirus	NCBI_nuccore	2919	2	1.0	MK212032.1	Hetorquevirus	>=95	True	False
+MN299315.1	Gyrovirus	NCBI_nuccore	2298	3	0.972	JQ690762.1	Gyrovirus	>=95	False	True
+MN769098.1	Hetorquevirus	NCBI_nuccore	2918	1	0.9962	MK212032.1	Hetorquevirus	>=95	False	True
+MN769225.1	Hetorquevirus	NCBI_nuccore	2898	1	0.9879	MN769141.1	Hetorquevirus	>=95	False	True
+MN769234.1	Hetorquevirus	NCBI_nuccore	2919	1	1.0	MN769234.1	Hetorquevirus	>=95	True	False
+MN769516.1	Hetorquevirus	NCBI_nuccore	2918	1	0.9955	MK212032.1	Hetorquevirus	>=95	False	True
+MN769899.1	Hetorquevirus	NCBI_nuccore	2970	1	0.998	MN769310.1	Betatorquevirus	>=95	False	True
+MN770183.1	Hetorquevirus	NCBI_nuccore	2918	1	0.9979	MN769234.1	Hetorquevirus	>=95	False	True
+MN770270.1	Hetorquevirus	NCBI_nuccore	2747	1	0.9622	MN770248.1	Betatorquevirus	>=95	False	True
+MN771277.1	Hetorquevirus	NCBI_nuccore	2942	1	1.0	MN771277.1	Betatorquevirus	>=95	True	False
+MN774927.1	Memtorquevirus	NCBI_nuccore	3057	1	1.0	MN774927.1	Anelloviridae	>=95	True	False
+MN774932.1	Samektorquevirus	NCBI_nuccore	3066	1	1.0	MN774932.1	Anelloviridae	>=95	True	False
+MN774939.1	Memtorquevirus	NCBI_nuccore	3248	1	1.0	MN774939.1	Memtorquevirus	>=95	True	False
+MN774956.1	Samektorquevirus	NCBI_nuccore	3056	1	1.0	MN774956.1	Samektorquevirus	>=95	True	False
+MN774959.1	Samektorquevirus	NCBI_nuccore	2923	1	1.0	MN774959.1	Samektorquevirus	>=95	True	False
+MT259311.1	Gyrovirus	NCBI_nuccore	2296	3	0.9715	JQ690762.1	Gyrovirus	>=95	False	True
+MT671980.1	Gyrovirus	NCBI_nuccore	2298	3	0.9521	JQ690762.1	Gyrovirus	>=95	False	True
+MT671982.1	Gyrovirus	NCBI_nuccore	2355	3	0.9826	JQ308210.1	Gyrovirus	>=95	False	True
+MT795931.1	Gyrovirus	NCBI_nuccore	2298	3	0.9508	JQ690762.1	Gyrovirus	>=95	False	True
+MT795932.1	Gyrovirus	NCBI_nuccore	2298	3	0.9707	JQ690762.1	Gyrovirus	>=95	False	True
+MW091349.1	Gyrovirus	NCBI_nuccore	2298	3	0.9544	JQ690762.1	Gyrovirus	>=95	False	True
+MW436619.1	Anelloviridae	NCBI_nuccore	2372	3				no_alignment	False	True
+MW455364.1	Anelloviridae	NCBI_nuccore	2897	1	1.0	MW455364.1	Betatorquevirus	>=95	True	False
+MW455365.1	Anelloviridae	NCBI_nuccore	2576	1	1.0	MW455365.1	Gammatorquevirus	>=95	True	False
+MW455366.1	Anelloviridae	NCBI_nuccore	2572	1	0.9705	MZ286149.1	Gammatorquevirus	>=95	False	True
+MW455391.1	Anelloviridae	NCBI_nuccore	2839	1	1.0	MW455391.1	Betatorquevirus	>=95	True	False
+MW455392.1	Anelloviridae	NCBI_nuccore	3328	1	1.0	MW455392.1	Alphatorquevirus	>=95	True	False
+MW455396.1	Anelloviridae	NCBI_nuccore	3081	1	0.9748	MZ286099.1	Alphatorquevirus	>=95	False	True
+MW455405.1	Anelloviridae	NCBI_nuccore	2606	1	1.0	MW455405.1	Anelloviridae	>=95	True	False
+MW455420.1	Anelloviridae	NCBI_nuccore	3013	1	1.0	MW455420.1	Alphatorquevirus	>=95	True	False
+MW455422.1	Anelloviridae	NCBI_nuccore	2988	1	1.0	MW455422.1	Alphatorquevirus	>=95	True	False
+MW455423.1	Anelloviridae	NCBI_nuccore	2927	1	1.0	MW455423.1	Alphatorquevirus	>=95	True	False
+MW455432.1	Anelloviridae	NCBI_nuccore	3763	1	1.0	MW455432.1	Alphatorquevirus	>=95	True	False
+MW455434.1	Anelloviridae	NCBI_nuccore	3057	1	1.0	MW455434.1	Betatorquevirus	>=95	True	False
+MW455436.1	Anelloviridae	NCBI_nuccore	2476	1	1.0	MW455436.1	Gammatorquevirus	>=95	True	False
+MW455440.1	Anelloviridae	NCBI_nuccore	3195	1	1.0	MW455440.1	Alphatorquevirus	>=95	True	False
+MW455449.1	Anelloviridae	NCBI_nuccore	3007	1	0.962	MW455347.1	Alphatorquevirus	>=95	False	True
+MZ285968.1	Anelloviridae	NCBI_nuccore	3809	1	0.9899	OZ258785.1	Alphatorquevirus	>=95	False	True
+MZ285985.1	Anelloviridae	NCBI_nuccore	2867	1	1.0	MZ285985.1	Anelloviridae	>=95	True	False
+MZ286000.1	Anelloviridae	NCBI_nuccore	3186	1	1.0	MZ286000.1	Gammatorquevirus	>=95	True	False
+MZ286001.1	Anelloviridae	NCBI_nuccore	2775	1	1.0	MZ286001.1	Gammatorquevirus	>=95	True	False
+MZ286003.1	Anelloviridae	NCBI_nuccore	3175	1	1.0	MZ286003.1	Alphatorquevirus	>=95	True	False
+MZ286022.1	Anelloviridae	NCBI_nuccore	3918	1	1.0	MZ286022.1	Anelloviridae	>=95	True	False
+MZ286044.1	Anelloviridae	NCBI_nuccore	2894	1	1.0	MZ286044.1	Betatorquevirus	>=95	True	False
+MZ286051.1	Anelloviridae	NCBI_nuccore	3016	1	0.9738	MZ286099.1	Alphatorquevirus	>=95	False	True
+MZ286057.1	Anelloviridae	NCBI_nuccore	3515	1	1.0	MZ286057.1	Anelloviridae	>=95	True	False
+MZ286058.1	Anelloviridae	NCBI_nuccore	2879	1	1.0	MZ286058.1	Anelloviridae	>=95	True	False
+MZ286068.1	Anelloviridae	NCBI_nuccore	2641	1	1.0	MZ286068.1	Anelloviridae	>=95	True	False
+MZ286103.1	Anelloviridae	NCBI_nuccore	2157	1	0.9568	MZ286002.1	Alphatorquevirus	>=95	False	True
+MZ286109.1	Anelloviridae	NCBI_nuccore	3667	1	1.0	MZ286109.1	Alphatorquevirus	>=95	True	False
+MZ286119.1	Anelloviridae	NCBI_nuccore	2617	1	0.966	MW455390.1	Alphatorquevirus	>=95	False	True
+MZ286134.1	Anelloviridae	NCBI_nuccore	2923	1	1.0	MZ286134.1	Anelloviridae	>=95	True	False
+MZ286141.1	Anelloviridae	NCBI_nuccore	3479	1	1.0	MZ286141.1	Anelloviridae	>=95	True	False
+MZ286156.1	Anelloviridae	NCBI_nuccore	3996	1	1.0	MZ286156.1	Alphatorquevirus	>=95	True	False
+MZ286159.1	Anelloviridae	NCBI_nuccore	3226	1	1.0	MZ286159.1	Gammatorquevirus	>=95	True	False
+MZ286176.1	Anelloviridae	NCBI_nuccore	3275	1	1.0	MZ286176.1	Anelloviridae	>=95	True	False
+MZ286182.1	Anelloviridae	NCBI_nuccore	3651	1	1.0	MZ286182.1	Alphatorquevirus	>=95	True	False
+MZ286189.1	Anelloviridae	NCBI_nuccore	2905	1	0.9665	OP549859.1	Anelloviridae	>=95	False	True
+MZ286197.1	Anelloviridae	NCBI_nuccore	2554	1	1.0	MZ286197.1	Anelloviridae	>=95	True	False
+MZ286201.1	Anelloviridae	NCBI_nuccore	2463	1	1.0	MZ286201.1	Gammatorquevirus	>=95	True	False
+MZ286203.1	Anelloviridae	NCBI_nuccore	2443	1	1.0	MZ286203.1	Anelloviridae	>=95	True	False
+MZ286209.1	Anelloviridae	NCBI_nuccore	3813	1	1.0	MZ286209.1	Anelloviridae	>=95	True	False
+MZ286211.1	Anelloviridae	NCBI_nuccore	3109	1	0.9503	MZ286220.1	Alphatorquevirus	>=95	False	True
+MZ286222.1	Anelloviridae	NCBI_nuccore	2959	1	1.0	MZ286222.1	Alphatorquevirus	>=95	True	False
+MZ286223.1	Anelloviridae	NCBI_nuccore	2861	1	1.0	MZ286223.1	Anelloviridae	>=95	True	False
+MZ286229.1	Anelloviridae	NCBI_nuccore	2879	1	1.0	MZ286229.1	Betatorquevirus	>=95	True	False
+MZ286237.1	Anelloviridae	NCBI_nuccore	2876	1	1.0	MZ286237.1	Betatorquevirus	>=95	True	False
+MZ286250.1	Anelloviridae	NCBI_nuccore	2852	1	1.0	MZ286250.1	Betatorquevirus	>=95	True	False
+MZ286251.1	Anelloviridae	NCBI_nuccore	2988	1	0.971	MW455419.1	Betatorquevirus	>=95	False	True
+MZ286254.1	Anelloviridae	NCBI_nuccore	2978	1	1.0	MZ286254.1	Betatorquevirus	>=95	True	False
+MZ286265.1	Anelloviridae	NCBI_nuccore	2848	1	1.0	MZ286265.1	Betatorquevirus	>=95	True	False
+MZ286273.1	Anelloviridae	NCBI_nuccore	2834	1	1.0	MZ286273.1	Betatorquevirus	>=95	True	False
+MZ286281.1	Anelloviridae	NCBI_nuccore	2963	1	1.0	MZ286281.1	Betatorquevirus	>=95	True	False
+MZ666100.1	Gyrovirus	NCBI_nuccore	2181	3	0.9548	JQ690762.1	Gyrovirus	>=95	False	True
+MZ825095.1	Anelloviridae	NCBI_nuccore	2904	1	0.8822	NC_038346.1	Betatorquevirus	85-90	False	True
+MZ825102.1	Anelloviridae	NCBI_nuccore	2988	1	0.951	MZ286072.1	Betatorquevirus	>=95	False	True
+MZ825106.1	Anelloviridae	NCBI_nuccore	2942	1	0.9819	MZ286207.1	Betatorquevirus	>=95	False	True
+MZ825110.1	Anelloviridae	NCBI_nuccore	2893	1	0.9516	MN769214.1	Betatorquevirus	>=95	False	True
+MZ825138.1	Anelloviridae	NCBI_nuccore	2920	1	0.9503	MH649157.1	Anelloviridae	>=95	False	True
+MZ825140.1	Anelloviridae	NCBI_nuccore	2810	1	0.9585	MW455382.1	Betatorquevirus	>=95	False	True
+MZ825145.1	Anelloviridae	NCBI_nuccore	2965	1	0.9591	MZ286268.1	Betatorquevirus	>=95	False	True
+NC_075371.1	Anelloviridae	NCBI_nuccore	2536	3	1.0	MH649114.1	Anelloviridae	>=95	False	True
+NC_075377.1	Anelloviridae	NCBI_nuccore	2407	2	1.0	MH648966.1	Anelloviridae	>=95	False	True
+NC_075379.1	Anelloviridae	NCBI_nuccore	1871	2	1.0	MH648910.1	Betatorquevirus	>=95	False	True
+NC_075382.1	Anelloviridae	NCBI_nuccore	2218	3				no_alignment	False	True
+OK012317.1	Gyrovirus	NCBI_nuccore	2298	3	0.9569	JQ690762.1	Gyrovirus	>=95	False	True
+OK012319.1	Gyrovirus	NCBI_nuccore	2296	3	0.9731	JQ690762.1	Gyrovirus	>=95	False	True
+OK245350.1	Gyrovirus	NCBI_nuccore	2298	3	0.9618	JQ690762.1	Gyrovirus	>=95	False	True
+OK245351.1	Gyrovirus	NCBI_nuccore	2298	3	0.9705	JQ690762.1	Gyrovirus	>=95	False	True
+OL448832.1	Gyrovirus	NCBI_nuccore	2298	3	0.9726	JQ690762.1	Gyrovirus	>=95	False	True
+OL448839.1	Gyrovirus	NCBI_nuccore	2298	3	0.9616	JQ690762.1	Gyrovirus	>=95	False	True
+OL448842.1	Gyrovirus	NCBI_nuccore	2298	3	0.9677	JQ690762.1	Gyrovirus	>=95	False	True
+OL448986.1	Gyrovirus	NCBI_nuccore	2383	3	0.9829	JQ690763.1	Gyrovirus	>=95	False	True
+OM892276.1	Gyrovirus	NCBI_nuccore	2239	3	0.9644	JQ690762.1	Gyrovirus	>=95	False	True
+OP038334.1	Gyrovirus	NCBI_nuccore	2298	3	0.9672	JQ690762.1	Gyrovirus	>=95	False	True
+OP038336.1	Gyrovirus	NCBI_nuccore	2298	3	0.9672	JQ690762.1	Gyrovirus	>=95	False	True
+OP038337.1	Gyrovirus	NCBI_nuccore	2298	3	0.9681	JQ690762.1	Gyrovirus	>=95	False	True
+OP038349.1	Gyrovirus	NCBI_nuccore	2298	3	0.9638	JQ690762.1	Gyrovirus	>=95	False	True
+OP038384.1	Gyrovirus	NCBI_nuccore	2298	3	0.9603	JQ690762.1	Gyrovirus	>=95	False	True
+OQ116632.1	Gyrovirus	NCBI_nuccore	2356	3	0.9818	JQ308210.1	Gyrovirus	>=95	False	True
+OQ116658.1	Gyrovirus	NCBI_nuccore	2298	3	0.9707	JQ690762.1	Gyrovirus	>=95	False	True
+OQ116661.1	Gyrovirus	NCBI_nuccore	2298	3	0.969	JQ690762.1	Gyrovirus	>=95	False	True
+OQ850271.1	Gyrovirus	NCBI_nuccore	2298	3	0.9657	JQ690762.1	Gyrovirus	>=95	False	True
+OQ850280.1	Gyrovirus	NCBI_nuccore	2298	3	0.9744	JQ690762.1	Gyrovirus	>=95	False	True
+OQ869207.1	Gyrovirus	NCBI_nuccore	2298	3	0.9633	JQ690762.1	Gyrovirus	>=95	False	True
+OR355450.1	Gyrovirus	NCBI_nuccore	2376	3	0.9701	JQ690763.1	Gyrovirus	>=95	False	True
+OR921204.1	Gyrovirus	NCBI_nuccore	2375	3	0.9798	JQ690763.1	Gyrovirus	>=95	False	True
+OR921205.1	Gyrovirus	NCBI_nuccore	2375	3	0.9743	JQ690763.1	Gyrovirus	>=95	False	True
+OR924329.1	Gyrovirus	NCBI_nuccore	2319	3				no_alignment	False	True
+OZ258714.1	Hetorquevirus	NCBI_nuccore	2895	1	1.0	OZ258714.1	Hetorquevirus	>=95	True	False
+OZ258926.1	Hetorquevirus	NCBI_nuccore	2895	1	1.0	OZ258714.1	Hetorquevirus	>=95	False	True
+PP728776.1	Samektorquevirus	NCBI_nuccore	3178	2	1.0	PP728776.1	Samektorquevirus	>=95	True	False
+PP728779.1	Samektorquevirus	NCBI_nuccore	3230	2	1.0	PP728779.1	Samektorquevirus	>=95	True	False
+PP728781.1	Samektorquevirus	NCBI_nuccore	2940	2	1.0	PP728781.1	Samektorquevirus	>=95	True	False
+PP728782.1	Memtorquevirus	NCBI_nuccore	3223	2	1.0	PP728782.1	Memtorquevirus	>=95	True	False
+PP827003.1	Gyrovirus	NCBI_nuccore	2376	3	0.9827	JQ690763.1	Gyrovirus	>=95	False	True
+PP827008.1	Gyrovirus	NCBI_nuccore	2376	3	0.9697	JQ690763.1	Gyrovirus	>=95	False	True
+PP932492.1	Gyrovirus	NCBI_nuccore	2298	3	0.9681	JQ690762.1	Gyrovirus	>=95	False	True
+PQ519597.1	Gyrovirus	NCBI_nuccore	2282	3	0.9702	KF294862.1	Gyrovirus	>=95	False	True
+PQ659224.1	Gyrovirus	NCBI_nuccore	1749	2				no_alignment	False	True
+PV815585.1	Gyrovirus	NCBI_nuccore	2298	3	0.9603	JQ690762.1	Gyrovirus	>=95	False	True
+PV815586.1	Gyrovirus	NCBI_nuccore	2298	3	0.9608	JQ690762.1	Gyrovirus	>=95	False	True
+PV941941.1	Gyrovirus	NCBI_nuccore	2376	3	0.9651	JQ690763.1	Gyrovirus	>=95	False	True
+PV941953.1	Gyrovirus	NCBI_nuccore	2376	3	0.9823	JQ690763.1	Gyrovirus	>=95	False	True
+PX718868.1	Gyrovirus	NCBI_nuccore	2376	3	0.9672	JQ690763.1	Gyrovirus	>=95	False	True
+PX718880.1	Gyrovirus	NCBI_nuccore	2376	3	0.9823	JQ690763.1	Gyrovirus	>=95	False	True
+PX718886.1	Gyrovirus	NCBI_nuccore	2376	3	0.9701	JQ690763.1	Gyrovirus	>=95	False	True
+PX764158.1	Gyrovirus	NCBI_nuccore	2298	3	0.9526	JQ690762.1	Gyrovirus	>=95	False	True
