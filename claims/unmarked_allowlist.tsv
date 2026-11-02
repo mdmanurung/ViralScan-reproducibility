@@ -1,0 +1,28 @@
+path	anchor	reason
+CHANGELOG.md	unbacked quantitative wording is removed or softened	DOC-10 entry quotes the removed numbers
+CHANGELOG.md	derived percentage changes from **4.0% to 0.2%**	test-fixture arithmetic; unverified (50/1000 is 5 %), see DOC-10
+CHANGELOG.md	under 5% of the record's	near-copy threshold (parameter)
+README.md	img.shields.io/badge/python	badge
+docs/cli_reference.md	| `--cell-calling METHOD` |	CLI help (parameter)
+docs/cli_reference.md	| `--cluster` | | off |	CLI help (parameter)
+docs/cli_reference.md	fewer than 90 % of the called cells	barcode-check threshold (parameter)
+docs/cli_reference.md	| `--strand STRAND` |	generated argparse help; F-020 finding, not a registered claim
+docs/cli_reference.md	| `--host-filter-star-params	generated argparse help (STAR parameters)
+docs/cli_reference.md	| `--strict-reference, --no-strict-reference` |	generated argparse help (threshold)
+docs/cli_reference.md	| `--cluster` | `False` |	generated argparse help (parameter)
+docs/cli_reference.md	sensitivity cost of `--host-filter starsolo`	states the cost is unmeasured
+docs/faq.md	read 100 % /	worked arithmetic, not a measurement
+docs/output_reference.md	sensitivity cost of the STARsolo path	states the cost is unmeasured
+docs/output_reference.md	| `ambient_viral_fraction_ub95` |	column definition (95 % bound)
+docs/output_reference.md	| `alignment_breadth` |	column definition; F-005 threshold
+docs/output_reference.md	so dividing by it gives 100 %	worked arithmetic
+docs/output_reference.md	badge (above 1 %)	badge threshold (parameter)
+docs/output_reference.md	**Correction (2026-09-27).** `BARF1`	annotation correction; divergence example
+docs/output_reference.md	at least 50 % of the	overlap threshold (parameter)
+docs/output_reference.md	would read as 100 % swapping	worked arithmetic
+docs/output_reference.md	at 95 % identity, so a divergent	clustering threshold (parameter)
+docs/output_reference.md	≥80 % of the read aligned	alignment filter (parameter)
+docs/output_reference.md	| `molecule_support.tsv`, `read_support_summary.tsv` |	file definition (filter parameters)
+docs/results.md	over 9,850 called cells (0.38 %)	worked example of one output row
+docs/reference_panel.md	fewer than 5% of its	exclusion threshold (parameter)
+docs/reference_panel.md	| `--cluster` | Run `cd-hit-est` at 95% identity	CLI help (parameter)
