@@ -1,3 +1,5 @@
+> **Retraction (CAT-30, 2026-11-02):** the published covid `Alphatorquevirus` counts are retracted as artefacts. See [RETRACTION_NOTICE_CAT-30.md](RETRACTION_NOTICE_CAT-30.md).
+
 # Detecting viral reads
 
 Accession numbers:
