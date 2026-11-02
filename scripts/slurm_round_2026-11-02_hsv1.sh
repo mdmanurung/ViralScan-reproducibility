@@ -25,7 +25,8 @@ ARMDIR=$D/runs/round_2026-11-02/hsv1_$SAMPLE/$ARM${TAG:-}   # TAG=_r2 for a reru
 export PATH="$M/conda/envs/viralscan_test_full/bin:$PATH" PYTHONPATH="$CODE/src" MPLBACKEND=Agg
 SHA=$(git -C "$CODE" describe --always --dirty)
 case "$SHA" in *-dirty) echo "dirty pinned tree: $SHA" >&2; exit 2;; esac
-[ "$(git -C "$CODE" rev-parse --short=7 HEAD)" = de55424 ] || { echo "not de55424" >&2; exit 2; }
+PIN=${PIN_SHA:-de55424}   # CODE_DIR + PIN_SHA select another pinned worktree
+[ "$(git -C "$CODE" rev-parse --short=7 HEAD)" = "$PIN" ] || { echo "not $PIN" >&2; exit 2; }
 EXTRA=()
 case "$ARM" in
   combined_off|scautoqc_gate) IDX=(-i "$B/panel.idx" -t "$B/panel.t2g");;
