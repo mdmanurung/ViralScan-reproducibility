@@ -4268,6 +4268,7 @@ anelloviruses, so ~99 other species.
 - [ ] `CAT-08` — build with native `viralscan build-ref` and measure leave-one-out
   confusability per family: where reads from non-indexed isolates land. Also the
   valid `HPV-11` test.
+  - 2026-11-02 (round_2026-11-02): jobs 25941238 (leave-fold-out, all families) and 25941241 (native build-ref HPV-11 hold-out) submitted at package pin de55424; results pending, see `analysis/round_2026-11-02/`. Row stays open.
 
 ### WP4H expansion — breadth and measured diversity (new 2026-09-27)
 
@@ -4743,6 +4744,7 @@ Six failure modes it surfaces are not in any row above and are added here.
   `--distinguish`** (custom workflow, zero-indexed numeric target names) before
   committing to any per-virus genome cap. k is hard-capped at 31, so genomes
   differing by ~30–70 nt share k-mers in conserved regions.
+  - **Re-measured 2026-11-02** (pin de55424, kb kallisto 0.52.0): shipped WP5 index and three earlier ones all give max EC size 9,921, 0 discarded, no regression (`analysis/round_2026-11-02/cat40_index_inspect.md`).
   - **Software done 2026-10-12:** the build-time record and regression gate are `CAT-40`'s
     (`reference_gates inspect`, `--ec-baseline`). **Ambiguity, most conservative reading:**
     `kb count` has no `--multimapping` (or `--em`) flag; its flag is `--mm`. ViralScan already
