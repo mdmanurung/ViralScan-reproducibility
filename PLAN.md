@@ -2768,6 +2768,7 @@ Implementation rows:
     sha256 `90052893879a002f0d2a0e281081c86abc638a1ff6b5234ac97d7ceb36f55a7c`) placed beside the four `viral_summary.tsv` and next to
     `SURVEY_SUMMARY*.md` in the untracked `covid_viralscan/results/`; no published file edited. `claims/registry.json` `ttv-biological-signal`
     `reason` rewritten as drafted; `analysis/v3_artifact_inventory.tsv` row `claim-registry` re-pinned in the follow-up commit.
+  - 2026-11-02 **done** (user approved CAT-30 retraction): the 2026-10-13 note above was never applied (the notice is absent from `covid_viralscan/results/`; registry reason was already rewritten). Tracked notice now at `covid_viralscan/RETRACTION_NOTICE_CAT-30.md`, linked from `covid_viralscan/README.md`. Registry unchanged (`ttv-biological-signal` is `rejected`, reason already states the retraction), so no inventory re-pin. Untracked `results/` copies stay the user's call.
   - 2026-10-12 (grill, user-confirmed): user will sign off the notice wording (R3.5) before it lands; add the notice beside the covid results, never edit the published TSVs.
   claim marked retracted in `claims/registry.json` (Q11). Needs the user's
   sign-off on the wording (R3.5).
