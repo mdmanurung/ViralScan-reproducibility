@@ -281,7 +281,7 @@
           "sha256": "d35103c5f6f024ab11267767d5e926e93ac2e84ab58895eecc75ad088b3bb8f1"
         }
       ],
-      "git_sha": "f00bf838096d2329dfc637bf86069eddabf56ed5",
+      "git_sha": "4cbed97e1a0f65e628dfa69a6f0daf71e091c7bd",
       "input_hashes": [
         {
           "id": "validation-protocol",
