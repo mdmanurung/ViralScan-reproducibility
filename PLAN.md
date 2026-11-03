@@ -3802,7 +3802,7 @@ homology negatives cannot become probable/strong calls.
 - [ ] `HOST-05` — **open.** The sensitivity cost of the v3 STARsolo path is still
   unmeasured. It blocks `MS-02`/`CMP-01`–`CMP-03` and the preregistered
   `D15`/`D16` endpoints; no number should be quoted for it until then.
-  - **2026-11-02 (HOST-05, `codex/round-2026-11-02-host05`): Part A (DISC-12-HH, above), D03 only, gives 0 lost of 1,329 default (upper 0.225%) and 0 of 99 host-homologous fragments (upper 2.98%) (lower bound; R01_SOC4 in-house, excluded). Part B end-to-end `none` vs `pinned` vs `star-default` on EBV SRR12682296 (plant reuse) plus HHV-6B unplanted: Slurm 25941194, pending; collect with `scripts/host05_collect.py`. HOST-05 stays open.**
+  - **2026-11-02 (HOST-05, `codex/round-2026-11-02-host05`): Part A (DISC-12-HH, above), D03 only, gives 0 lost of 1,329 default (upper 0.225%) and 0 of 99 host-homologous fragments (upper 2.98%) (lower bound; R01_SOC4 in-house, excluded). Part B end-to-end `none` vs `pinned` vs `star-default` on EBV SRR12682296 (plant reuse) plus HHV-6B unplanted: Slurm 25949123 (25941194 failed on removed CLI flags), pending; collect with `scripts/host05_collect.py`. HOST-05 stays open.**
 
 ## WP4D — Gene-programme inference, layer 2 (new 2026-09-26)
 

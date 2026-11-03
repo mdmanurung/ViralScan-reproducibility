@@ -1,6 +1,6 @@
 # HOST-05: sensitivity cost of `--host-filter starsolo` (round 2026-11-02)
 
-Status: **Part A measured; Part B submitted (Slurm 25941194, array 0-7, partition `all`), still PENDING on Priority when this note was written**. Package pin: `de55424`
+Status: **Part A measured; Part B submitted (Slurm 25949123 (first submission 25941194 failed in 2 s: package CLI removed -s1/-s2/-gtf, now `viralscan run --r1 --r2 --gtf`; fixed in the script, new dirs `host05/r2/`), array 0-7, partition `all`), still PENDING on Priority when this note was written**. Package pin: `de55424`
 (`v3.0.0rc1-164-gde55424`, worktree `ViralScan/.claude/worktrees/pin-host05`). Env `viralscan_test_full`.
 Exploratory, n = 2 background libraries (Part A) and n = 1 library (Part B). No pass/fail threshold.
 
@@ -51,9 +51,9 @@ Script: `scripts/host05_hh_aggregate.py`; Wilson 95% intervals. Fragments/molecu
 
 ## Part B jobs and collect command
 
-Slurm array 25941194 (`scripts/host05_run_arm.sh`, `-p all -c 8 --mem=64G -t 12:00:00 --array=0-7`), logs in
+Slurm array 25949123 (`scripts/host05_run_arm.sh`, `-p all -c 8 --mem=64G -t 12:00:00 --array=0-7`), logs in
 `data/runs/round_2026-11-02/host05/logs/`. Task to arm: 0 ebv_planted_none, 1 ebv_planted_pinned, 2 ebv_planted_star-default,
-3-5 the same on ebv_unplanted, 6 hhv6b_none, 7 hhv6b_pinned. Run dirs `data/runs/round_2026-11-02/host05/<arm>/{run,meta}`.
+3-5 the same on ebv_unplanted, 6 hhv6b_none, 7 hhv6b_pinned. Run dirs `data/runs/round_2026-11-02/host05/r2/<arm>/{run,meta}`.
 Expected 1.5-2.5 h per task (round-1 twostep: 1h21 EBV, 2h08 HHV-6B at 4 cores).
 
 After tasks 0-5 finish, from the repro checkout:
@@ -61,7 +61,7 @@ After tasks 0-5 finish, from the repro checkout:
     PYTHONPATH=<ViralScan>/.claude/worktrees/pin-host05/src \
       <conda>/envs/viralscan_test_full/bin/python scripts/host05_collect.py
 
-It writes `host05/summary/host_loss.tsv` (D15/D16 with Wilson CIs, `not_in_lineage`) and `host05/score_{none,pinned,star-default}/`
+It writes `host05/r2/summary/host_loss.tsv` (D15/D16 with Wilson CIs, `not_in_lineage`) and `host05/r2/score_{none,pinned,star-default}/`
 (SENS-07 capture per family). Endogenous molecules for EBV (unplanted arms) and HHV-6B (tasks 6-7) come from each run's
 `<run>/<sample>/results/viral_summary.tsv`. Part B results are **not yet measured**.
 

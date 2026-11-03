@@ -37,7 +37,7 @@ def sh(cmd):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--root", default=str(REPRO / "data/runs/round_2026-11-02/host05"))
+    ap.add_argument("--root", default=str(REPRO / "data/runs/round_2026-11-02/host05/r2"))
     root = Path(ap.parse_args().root)
     out = root / "summary"
     out.mkdir(exist_ok=False)

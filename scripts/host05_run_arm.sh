@@ -14,7 +14,7 @@ D=$REPRO/data
 M=/exports/archive/hg-funcgenom-research/mdmanurung
 CODE=${CODE_DIR:-$M/ViralScan/.claude/worktrees/pin-host05}
 ENVBIN=$M/conda/envs/viralscan_test_full/bin
-ROOT=$D/runs/round_2026-11-02/host05
+ROOT=${HOST05_ROOT:-$D/runs/round_2026-11-02/host05/r2}   # r1 (25941194) failed in 2 s on removed -s1/-s2 flags
 B=$D/references/panel_builds/viral_ref_cat42d/build
 VO=$D/references/panel_builds/viral_ref_cat42d/build_virus_only
 HOST_IDX=$D/references/starsolo/ebv_latest_ref_2026-09-27/star_host_2.7.11b
@@ -41,13 +41,13 @@ PY
 )
 OUT=$ROOT/$ARM/run; META=$ROOT/$ARM/meta
 [ ! -e "$ROOT/$ARM" ] || { echo "exists, refusing to reuse: $ROOT/$ARM" >&2; exit 3; }
-ARGS=(-o "$OUT" -s1 "$R1" -s2 "$R2" -i "$VO/virus_panel.idx" -t "$VO/virus_panel.t2g" -gtf "$B/viral_panel.gtf"
+ARGS=(-o "$OUT" --r1 "$R1" --r2 "$R2" -i "$VO/virus_panel.idx" -t "$VO/virus_panel.t2g" --gtf "$B/viral_panel.gtf"
       -x "$TECH" -c "${SLURM_CPUS_PER_TASK:-8}" --cell-calling emptydrops --anellovirus-gene-ids --yes --verbose)
 [ "$STRAND" = NONE ] || ARGS+=(--strand "$STRAND")
 echo "code $SHA arm=$ARM $S -x $TECH --strand $STRAND ${HF[*]:-no host filter}"
-if [ -n "${DRY_RUN-}" ]; then printf '%q ' python -m viralscan.menu "${ARGS[@]}" ${HF[@]+"${HF[@]}"}; echo; exit 0; fi
+if [ -n "${DRY_RUN-}" ]; then printf '%q ' python -m viralscan.menu run "${ARGS[@]}" ${HF[@]+"${HF[@]}"}; echo; exit 0; fi
 mkdir -p "$META"; echo "$SHA" > "$META/code_sha.txt"; cp "$CH" "$META/check_chemistry.json"
 printf '%s\n' "$R1" "$R2" > "$META/inputs.txt"
-/usr/bin/time -v -o "$META/time.txt" python -m viralscan.menu "${ARGS[@]}" ${HF[@]+"${HF[@]}"}
+/usr/bin/time -v -o "$META/time.txt" python -m viralscan.menu run "${ARGS[@]}" ${HF[@]+"${HF[@]}"}
 test -s "$OUT/$S/results/viral_summary.tsv"
 echo "DONE $ARM"
