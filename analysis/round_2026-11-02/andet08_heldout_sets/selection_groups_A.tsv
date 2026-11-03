@@ -1,0 +1,35 @@
+genome	group	source	length	nearest_identity	band
+BK069610	Alphatorquevirus	Modha2025_TPA	3064	0.885312783318223	85-90
+BK069129	Alphatorquevirus	Modha2025_TPA	2204	0.9025	90-95
+BK069092	Alphatorquevirus	Modha2025_TPA	2722	0.9269734065006332	90-95
+BK069096	Alphatorquevirus	Modha2025_TPA	2615		no_alignment
+BK069811	Alphatorquevirus	Modha2025_TPA	3002	0.8924076329679252	85-90
+BK069236	Betatorquevirus	Modha2025_TPA	2767	0.8911242603550296	85-90
+BK069205	Betatorquevirus	Modha2025_TPA	2885	0.8675252989880404	85-90
+BK069030	Betatorquevirus	Modha2025_TPA	2971	0.9152058703628211	90-95
+BK069245	Betatorquevirus	Modha2025_TPA	2718	0.9373297002724795	90-95
+BK069199	Betatorquevirus	Modha2025_TPA	2899	0.8791762013729977	85-90
+BK069333	Gammatorquevirus	Modha2025_TPA	2470		no_alignment
+BK069022	Gammatorquevirus	Modha2025_TPA	2503		no_alignment
+BK069356	Gammatorquevirus	Modha2025_TPA	2441		no_alignment
+BK069174	Gammatorquevirus	Modha2025_TPA	2451	0.8623279098873592	85-90
+BK069366	Gammatorquevirus	Modha2025_TPA	2422	0.9074626865671642	90-95
+OR924329.1	Gyrovirus	NCBI_nuccore	2319		no_alignment
+PQ659224.1	Gyrovirus	NCBI_nuccore	1749		no_alignment
+KX811526.1	Gyrovirus	NCBI_nuccore	2298	0.9474370112945265	90-95
+MH186139.1	Gyrovirus	NCBI_nuccore	2293	0.9408438451500652	90-95
+KM111536.1	Gyrovirus	NCBI_nuccore	2439		no_alignment
+BK069641	Samektorquevirus	Modha2025_TPA	3241	0.7943548387096774	<85
+BK069716	Samektorquevirus	Modha2025_TPA	2799	0.8998646820027063	85-90
+BK069260	Samektorquevirus	Modha2025_TPA	2575	0.835930735930736	<85
+BK069662	Samektorquevirus	Modha2025_TPA	3148		no_alignment
+BK069251	Memtorquevirus	Modha2025_TPA	2639		no_alignment
+BK069059	Memtorquevirus	Modha2025_TPA	3202	0.880859375	85-90
+BK069464	Memtorquevirus	Modha2025_TPA	2933	0.9348341232227488	90-95
+BK068999	Memtorquevirus	Modha2025_TPA	2724		no_alignment
+BK069192	Memtorquevirus	Modha2025_TPA	2957	0.880859375	85-90
+MF346361.1	Anelloviridae	NCBI_nuccore	2220		no_alignment
+NC_075382.1	Anelloviridae	NCBI_nuccore	2218		no_alignment
+MZ825095.1	Anelloviridae	NCBI_nuccore	2904	0.8822027716994895	85-90
+MK012479.1	Anelloviridae	NCBI_nuccore	1980		no_alignment
+MW436619.1	Anelloviridae	NCBI_nuccore	2372		no_alignment

@@ -1388,3 +1388,31 @@ deviations:
     git_sha: 8f311ed
     review_reference: PLAN.md SCI-05 round 15 (agent and Biomni reports; not committed under analysis/v3_validation)
     record_sha256: 322d720f332b39c574508df58a3fb974b45305163b6d6c2f55a60c555bd1c2db
+  - deviation_id: DEV-033
+    date: '2026-11-03'
+    affected_workflow_row_ids: []
+    protocol_section: pre_freeze_runs, frozen_inputs
+    description: 'Adds inventory entries PFR-14 (ANDET-08 held-out anellovirus plants) and PFR-15 (SENS-CAL-01 iid-divergence
+      calibration plants), both outcome-generating exploratory runs of 2026-11-02 on the CAL-08 10k_PBMC_3p_nextgem_Chromium_X
+      library (package de55424, reference cat42d). Each records the library, date, run directories, purpose and why CAL-08 was
+      used: the VAL-04 background (H01, pbmc_10x_healthy_v3) is a block_study_use holdout and is not downloaded. The inventory
+      digest and frozen_inputs.contract_sha256 move (DEV-033 joins frozen_inputs.recorded_deviations); no factor, seed, section
+      status or execution flag changes.'
+    reason: 'Outcome-generating runs made before the freeze commit must be inventoried (pre_freeze_runs.outcome_definition).
+      The runs were unplanned in the protocol: CAL-08 is a registered calibration background, but a viral-count run on it had
+      not been inventoried. The user approved the inventory entries on 2026-11-03.'
+    outcome_triggered: false
+    outcome_triggered_justification: The runs touch no protocol dataset (protocol_datasets is empty in both entries); CAL-08
+      is not a scored or pending-row dataset. No protocol decision was prompted by their outcome; both are unscored, one library,
+      no pass/fail threshold.
+    user_decisions_recorded:
+    - 'User (2026-11-03): add the ANDET-08 and SENS-CAL-01 runs on the CAL-08 PBMC 3'' library to the pre_freeze_runs inventory,
+      then merge ViralScan-reproducibility PR #31.'
+    user_decision_needed: []
+    protocol_sha256_before: d4b26bcef697a1c87d6bd69c5b0f40952a4ce0dc49d7dca5e97feda0973be77f
+    protocol_sha256_after: 31216b35a6f057b0b5e5592ac26272a8bbf37486f281970ba1bf770ef806a4e8
+    digest_scope: frozen_inputs.contract_sha256
+    git_sha: 69f3113
+    review_reference: PLAN.md ANDET-08 and SENS-CAL-01 notes; analysis/round_2026-11-02/*.md (git_sha is the parent commit of
+      the amending commit)
+    record_sha256: 29b9c3ea702c0a4360aea995fd7f7a8525624c7d490c04f96e244dcc52b57f05
