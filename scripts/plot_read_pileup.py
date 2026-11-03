@@ -37,6 +37,8 @@ TSO = "AAGCAGTGGTATCAACGCAGAGTACATGGG"
 # a read "carries the TSO" if it holds any 12-mer of the TSO or its reverse complement
 TSO_K = 12
 MAX_ROWS = 60
+# gene lanes drawn; the shortest overlapping genes are kept, the rest are counted in the label
+MAX_GENE_LANES = 6
 BASE_COLOURS = {"A": "#1a9850", "C": "#2166ac", "G": "#e08214", "T": "#d73027"}
 SHOW_BASES_BELOW = 160
 
@@ -124,10 +126,16 @@ if args.gtf:
             continue
         g0, g1 = int(f[3]) - 1, int(f[4])
         if g1 > start0 and g0 < end:
-            name = re.search(r'gene_name "([^"]+)"', f[8]) or re.search(
-                r'gene_id "([^"]+)"', f[8]
+            # RefSeq panels name the gene in `gene`, others in `gene_name`; gene_id last
+            name = (
+                re.search(r'gene_name "([^"]+)"', f[8])
+                or re.search(r'(?:^|; )gene "([^"]+)"', f[8])
+                or re.search(r'gene_id "([^"]+)"', f[8])
             )
             genes.append((g0, g1, f[6], name.group(1) if name else "?"))
+# long spliced genes (EBV EBNA transcripts span 80 kb) would fill the track: keep the shortest
+genes_dropped = max(0, len(genes) - MAX_GENE_LANES)
+genes = sorted(genes, key=lambda g: g[1] - g[0])[:MAX_GENE_LANES]
 
 # Draw coverage, reference, reads and genes -----------------------------------------
 
@@ -136,7 +144,7 @@ heights = [
     1.2,
     0.35 if len(ref) <= SHOW_BASES_BELOW else 0.01,
     max(2.0, n_rows * 0.12),
-    0.5,
+    0.5 + 0.18 * max(len(genes) - 1, 0),
 ]
 fig, axes = plt.subplots(
     4,
@@ -241,6 +249,10 @@ ax_gene.xaxis.set_major_formatter(
 )
 ax_gene.set_yticks([])
 ax_gene.set_ylabel("genes" if args.gtf else "", fontsize=7)
+if genes_dropped:
+    ax_gene.set_title(
+        f"{genes_dropped} longer overlapping gene(s) not drawn", fontsize=6, loc="right"
+    )
 ax_gene.set_xlim(start - 0.5, end + 0.5)
 ax_gene.set_xlabel(f"{plain_contig} position (bp)", fontsize=7)
 for ax in axes:
