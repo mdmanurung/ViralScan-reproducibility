@@ -5208,6 +5208,7 @@ Objective: make `gene_programs` biologically correct and measurable. Continues
   lines are latently infected). Expect mostly latent, with a lytic minority.
   Not started.
   - 2026-11-02 (`codex/round-2026-11-02-kshv`): GSE154900 BC-1 `GSM4682311` submitted on `de55424` (jobs 25941228 off, 25941231 artefact, 25941254_4 twostep; DSR-02 chain 25941255). Round 2 (e7c1b08) already detects KSHV (555,654 molecules) and EBV (1,652) in all three arms; the latent-vs-lytic programme table is new at `de55424`. `GSM4682312` n/a (no barcode read). Result pending: `analysis/round_2026-11-02/kshv_gse154900.md`.
+  - 2026-11-03: 5b419d4 catalogue (PR #181) on BC-1: combined_off productive 0, latent 2,889, mixed 288 (twostep recompute 605). Mixed cells are 85-89 % PAN + K4 only, median 3 molecules, 6 % with 3+ productive markers (36 of 605); PAN is also in 64 % of latent-called cells; ambient count test inconclusive (denominator differs by arm). Reading: small, shallow lytic signal, not a broad lytic minority. `analysis/round_2026-11-02/kshv_gse154900.md`.
 - [x] `PROG-17` — **closed 2026-10-03.** Detection writes
   `results/called_cells.tsv`; layer 2 scores only those barcodes and adds
   `n_called_cells` to the summary. Pre-PROG-17 run dirs fall back to the run's
@@ -5225,6 +5226,7 @@ Objective: make `gene_programs` biologically correct and measurable. Continues
 - [ ] `PROG-16` — lytic acceptance test: KSHV `GSE190558` (`RUN-04`), induced vs
   uninduced; HSV-1 `SRR8315713` expected productive with no latent calls.
   - 2026-11-02 (`codex/round-2026-11-02-kshv`): GSE190558 x4 libraries x3 arms submitted on `de55424` (jobs 25941227, 25941230, 25941254_0-3; DSR-02 chain 25941255). Round 2 (e7c1b08) baseline: KSHV 59,365 molecules in latent `GSM5725695` vs 23.7-31.8 M in the three induced libraries (about 400x), all arms within 1 %. Latent-gene (LANA/vFLIP/vCyclin) presence in both conditions awaits the `de55424` gene-programme tables: `analysis/round_2026-11-02/kshv_gse190558.md`. Still open.
+  - 2026-11-03: 5b419d4 catalogue: latent GSM5725695 98 % latent, 1 productive, 0 mixed; induced GSM5725696/-97 (twostep) 4,709 / 3,065 productive of 7,638 / 6,485 scored, mixed 1,699 / 1,993. Induced > uninduced now holds at programme level; ambient is large in the induced libraries (0.07-0.12). GSM5725698 and the `_r2` arms pending. `analysis/round_2026-11-02/kshv_gse190558.md`.
 
 ## WP4J — SFL tonsil TTV and HPV screen (new 2026-09-27)
 
