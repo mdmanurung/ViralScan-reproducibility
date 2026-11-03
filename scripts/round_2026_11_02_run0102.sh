@@ -16,7 +16,7 @@ case "$DS" in ebv) ACC=SRR12682296;; hhv6b) ACC=SRR20710641;; *) echo "bad DS" >
 IN=$DATA/inputs/benchmark_inputs/reference_strategy/$ACC
 R1=$IN/${ACC}_1.fastq.gz; R2=$IN/${ACC}_2.fastq.gz
 D=$DATA/runs/round_2026-11-02/${DS}_$ACC
-META=$D/_meta/$ARM
+META=$D/_meta/$ARM${RETRY:+_$RETRY}   # RETRY=r2 keeps the failed attempt's _meta intact
 export PATH="$M/conda/envs/viralscan_test_full/bin:$M/conda/envs/R4_51/bin:$PATH" PYTHONPATH="$CODE/src" MPLBACKEND=Agg
 SHA=$(git -C "$CODE" describe --always --dirty)
 case "$SHA" in *-dirty) printf '%s\n' "dirty pinned tree: $SHA" >&2; exit 2;; esac
@@ -54,6 +54,8 @@ OUT=$D/$ARM
 ARGS=(-o "$OUT" --r1 "$R1" --r2 "$R2" "${IDX[@]}" --gtf "$B/viral_panel.gtf" -x "$TECH" -c "$CORES"
       --cell-calling emptydrops --anellovirus-gene-ids --yes --verbose)
 [ "$STRAND" = NONE ] || ARGS+=(--strand "$STRAND")
+# FORCE_TECH=1: tchem cannot compare 10x 5' v1/v2 with a kb technology (HHV-6B, R1 150 nt untrimmed); -x is from the on-list match
+[ -z "${FORCE_TECH:-}" ] || ARGS+=(--force-technology)
 printf '%s\n' "python -m viralscan.menu run ${ARGS[*]} ${EXTRA[*]}" > "$META/command.txt"
 /usr/bin/time -v -o "$META/time.txt" python -m viralscan.menu run "${ARGS[@]}" "${EXTRA[@]}"
 test -s "$OUT/$ACC/results/viral_summary.tsv"
