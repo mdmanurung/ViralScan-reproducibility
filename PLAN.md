@@ -6,6 +6,9 @@ package repo at that commit. Section classification: package `audit/main-0/triag
 
 ## Next action
 
+- [~] `SENS-CAL-01` (package row; result recorded here by user decision 2026-11-02, branch `codex/round-2026-11-02-sens`): iid-substitution arm run on the cat42d index.
+  Measured capture matches `fragment_capture_exact` within about 1 point (best effective length L_eff = 88 for 90 nt reads; capture 1.00 at 0 %, 0.71 at 5 %, 0.25 at 10 %, 0.06 at 15 %);
+  Luebbert's 55 % at 4.4 % is not reproduced (curve gives about 0.76). Clustered substitutions and the frozen WP5 index are not done. `analysis/round_2026-11-02/senscal01_capture.md`.
 - [x] `REF-STRATEGY-MOVE-01` (2026-11-01, user decision; package row `HELPERS-01`): `reference_strategy.py` moves out of the package into
   `scripts/reference_strategy.py` (verbatim except `write_slurm_array` finds the package checkout through `viralscan.__file__`).
   Its tests moved with it (`tests/test_reference_audit.py`, `tests/test_reference_strategy_benchmark.py`,
@@ -4093,6 +4096,12 @@ orthogonally confirmed positive sample (`REF-10`) every anellovirus result stays
   10x v3 geometry into a checksum-pinned healthy-PBMC background (`VAL-04`),
   probit fit per the `SCI-03` method; the unplanted background must yield no
   reported call. A minimal `VAL-01` slice; closes `SENS-06` for this family.
+  - 2026-11-02 (`codex/round-2026-11-02-sens`, package de55424, exploratory, n = 1 library): **measured, gate not met, row stays open and becomes `[~]`.**
+    Plant design, seeds, job IDs and per-genus table: `analysis/round_2026-11-02/andet08_genus_lod95.md`. Background = CAL-08 10k PBMC 3' (not VAL-04 H01, which is a holdout),
+    12 M pairs; held-out genomes < 95 % identity to the panel (Modha TPA + NCBI), up to 15 per genus. Pooled probit LOD95 (planted molecules per 5-cell condition): Alpha 9.9
+    (BCa 5.4-19.5), Beta 20.7, Samek 46, Mem 43 (bracket 20-50 each; no BCa), Gamma 694 (some genomes never detected), Gyro and the genus-less bucket not reached at 3000, Hetor has no held-out genome below 95 %.
+    **Gate fails:** the unplanted background reports one Gammatorquevirus molecule in one cell (real anellovirus is plausible), so "no reported call" is not met. Pre-freeze note for the protocol inventory:
+    outcome-generating runs on CAL-08 `10k_PBMC_3p_nextgem_Chromium_X` (anellovirus counts); the user adds the inventory line.
 - [ ] `ANDET-09` — STARsolo anellovirus alignment branch that does not depend on
   kallisto (grill 2026-10-03). The plan this replaces assumed bulk and rustar.
   The user chose scRNA inside v3, STAR/STARsolo, and default-on.

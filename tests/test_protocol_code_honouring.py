@@ -201,6 +201,7 @@ PRODUCER = re.compile(
 )
 #: ungated on purpose: file -> why
 EXEMPT = {
+    "andet08_genus_lod95.py": "exploratory ANDET-08 probit over planted held-out runs; imports only the pure estimator v3_lod, runs no protocol row",
     "check_g3_diff.py": "read-only git diff check for the G3 signing commit; runs nothing",
     "check_ledger_append_only.py": "read-only ledger check",
     "gen_workflow_comparison.py": "renders protocol text into docs; runs nothing",
