@@ -98,3 +98,34 @@ Official numbers: `viralscan rerun-programs` from a detached worktree at 5b419d4
 | GSM5725697 lytic + casp-i | twostep | 6,485 | 3,065 | 1,231 | 1,993 | 196 |
 
 PROG-16: with the new catalogue the induced libraries are mostly productive (62 % and 47 %) or mixed (22 % and 31 %); the latent library is 98 % latent with 1 productive and 0 mixed cell. This is the induced > uninduced contrast the earlier catalogue missed (it gave 0 and 1 productive). Productive cells in the induced libraries are broad: 2-7 markers, median 6-7 molecules; mixed cells there carry 2-8 markers (median 14-19 molecules). Latent genes in both conditions: the latent library is latent-called in 98 % of scored cells, and the induced libraries keep 1,043 and 1,231 latent-called cells. Caveat: ambient is large in the induced libraries (`ambient_viral_fraction` 0.068 and 0.118), and the marker profile of the soup matches the mixed cells (cosine 0.99), so cell-level productive counts there overlap with soup; the 4,709 / 3,065 productive cells are not all independent of it. Still open: the GSM5725698 library and the combined arms of the induced libraries (OOM reruns running).
+
+## Update 2026-11-03: combined_off_r2 programme calls, and states by load including non-called barcodes
+
+**combined_off_r2 (job 25950135, `rerun-programs` at 5b419d4, `posthoc/programs_5b419d4/`).** KSHV scored / productive / latent / mixed / indeterminate:
+GSM5725696 7,939 / 4,842 / 1,152 / 1,661 / 284 (61 % productive); GSM5725697 6,835 / 3,095 / 1,414 / 1,986 / 340 (45 %); GSM5725698 9,159 / 5,444 / 1,230 / 2,269 / 216 (59 %). Same pattern as twostep (62 % and 47 %).
+
+**Why this check.** An adversarial review (2026-11-03) found that cell calling leaves 34 % (GSM5725696) and 16 % (GSM5725697) of KSHV molecules in non-called barcodes, 229 and 79 of them with >= 500 molecules, and that "98 % latent" in GSM5725695 may be depth-limited (latent cells median 15 molecules).
+**Method.** `scripts/kshv_programmes_by_load.py` scores every called cell plus every non-called barcode with >= 100 KSHV molecules, using the package's own `run_one` at 5b419d4 and the run's parameters, on the twostep arm. It stops if its called-cell states differ from the official `gene_program_cells.tsv` (they match). Output `data/runs/round_2026-11-02/_kshv/programmes_by_load/` (`barcode_states.tsv`, `states_by_load.tsv`, `versions.txt`).
+
+Barcodes with >= 500 KSHV molecules, called and non-called together:
+
+| library | n | productive | mixed | latent | non-called share of n |
+|---|---|---|---|---|---|
+| GSM5725695 latent | 0 | | | | (no barcode reaches 500) |
+| GSM5725696 lytic | 2,532 | 1,278 (50 %) | 1,237 (49 %) | 17 (1 %) | 229 |
+| GSM5725697 lytic + casp-i | 2,346 | 920 (39 %) | 1,361 (58 %) | 64 (3 %) | 80 |
+
+At matched load (twostep, called cells):
+
+| load bin (KSHV molecules) | GSM5725695 latent: latent / productive / mixed | GSM5725696: latent / productive / mixed | GSM5725697: latent / productive / mixed |
+|---|---|---|---|
+| 15-100 | 1,252 / 1 / 0 | 357 / 319 / 21 | 449 / 354 / 21 |
+| 100-500 | 27 / 0 / 0 | 660 / 3,183 / 594 | 713 / 1,832 / 645 |
+| 500-2,000 | none | 13 / 853 / 408 | 56 / 639 / 679 |
+| >= 2,000 | none | 1 / 352 / 676 | 4 / 240 / 648 |
+
+Reading:
+- Cell calling does not drive the contrast. Adding the non-called heavy barcodes moves the productive share by 2 points or less, and among heavy barcodes 97-99 % are productive or mixed.
+- The latent library is latent at matched load too: at 15-100 molecules it has 1 productive cell in 1,253, the lytic libraries about half. At 100-500 it has 27 latent and 0 productive. Depth alone does not explain "98 % latent", though only 27 latent-library cells reach 100 molecules.
+- The productive / mixed split is load-driven: the mixed share rises with load (about 15 % at 100-500, about 65 % at >= 2,000), consistent with latent markers reaching one molecule in heavily lytic cells, which the latent-marker veto then calls mixed. Read productive + mixed together as "lytic programme present"; do not read the split as biology.
+- Not addressed: the 5b419d4 markers were chosen with this dataset in view; the held-out test (PROG-16) is still open.

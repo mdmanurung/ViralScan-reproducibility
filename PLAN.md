@@ -5640,6 +5640,7 @@ elapsed time: 2-4 weeks, dominated by downloads, queues, and comparator setup.
 - [ ] `RUN-03` — HSV-1 `SRR8315713` under measured Drop-seq geometry.
 - [ ] `RUN-04` — KSHV latent/lytic series `GSE190558`.
   - 2026-11-02: rerun on `de55424`, full arm set, submitted (see `PROG-16`). Round 2 on e7c1b08 had finished all 12 cells (explore ledger).
+  - 2026-11-03: combined_off_r2 programmes 61 / 45 / 59 % productive (GSM5725696-98). States by load incl. non-called barcodes (`scripts/kshv_programmes_by_load.py`): heavy barcodes 97-99 % productive or mixed, latent library has 0 barcodes >= 500 and 1 productive in 1,253 cells at 15-100 molecules; productive/mixed split is load-driven. Held-out test still open (PROG-16).
 - [ ] `RUN-05` — KSHV plus EBV replicates `GSE154900`.
   - 2026-11-02: `GSM4682311` rerun on `de55424` submitted (see `PROG-18`); `GSM4682312` `n/a: no barcode read` (check-chemistry: bulk).
 
