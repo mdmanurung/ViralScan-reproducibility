@@ -43,7 +43,7 @@ print(d["chemistry"]["chemistry"] or "NONE", (d.get("strand_pilot") or {}).get("
 PY
 )
 [ "$TECH" != NONE ] || { echo "chemistry unresolved for $LIB" >&2; exit 3; }
-OUT=$RP/data/runs/round_2026-11-02/$DS/$LIB/$ARM
+OUT=$RP/data/runs/round_2026-11-02/$DS/$LIB/${ARM_DIR:-$ARM}   # ARM_DIR: new dir name for a resubmission
 META=$OUT.meta
 [ ! -e "$OUT" ] && [ ! -e "$META" ] || { echo "run dir exists, refusing to reuse: $OUT" >&2; exit 4; }
 mkdir -p "$META"
