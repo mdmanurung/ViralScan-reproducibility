@@ -20,7 +20,7 @@ Inputs:
 Outputs (in <run_dir>):
   igv_loci.js     window.IGV_LOCI: one object per locus with data URIs for igv.js
   igv_loci.tsv    per locus: reads on the reference, reads drawn, reference length
-  <locus>.bam/.bai/.fa/.fai/.gtf   the embedded files, for loading into desktop IGV
+  <locus>.bam/.bai/.fa/.fai/.gtf/.genes.bed   the embedded files, for loading into desktop IGV
 """
 
 import base64
@@ -37,6 +37,10 @@ import pysam
 MAX_READS = 4000
 # spliced reads kept first, so split reads show at a junction; the rest are drawn at random
 MAX_SPLICED = 1500
+# gene track: transcripts longer than this (EBV latency, spanning most of the genome) are
+# left out of the page's BED; CDS of one gene further apart than COPY_GAP are separate copies
+MAX_FEATURE_BP = 20_000
+COPY_GAP = 10_000
 SEED = 20261103
 TRACKA = "data/runs/work/trackA_round1/evidence"
 HOST_FA = "data/references/grch38/refdata-gex-GRCh38-2024-A/genome.fa"
@@ -155,6 +159,81 @@ for spec in LOCI:
     gtf = [f"{name}\t{rest}" for seqname, rest in viral_gtf if seqname == plain]
     Path(f"{stem}.gtf").write_text("".join(gtf))
 
+    # genes as BED12 for the page: one named row per transcript (or per gene without one),
+    # blocks from exons, else CDS; igv.js labels BED rows, not every combined GTF transcript
+    features = {}
+    rows = [line.rstrip("\n").split("\t") for line in gtf]
+    rows = [(f, dict(re.findall(r'(\w+) "([^"]*)"', f[8]))) for f in rows]
+    # genes with transcript rows are drawn per transcript; their gene row is skipped
+    with_transcripts = {a["gene_id"] for f, a in rows if f[2] == "transcript"}
+    for f, attr in rows:
+        if f[2] not in ("gene", "transcript", "exon", "CDS"):
+            continue
+        if f[2] == "gene" and attr["gene_id"] in with_transcripts:
+            continue
+        key = (
+            attr["transcript_id"]
+            if attr["gene_id"] in with_transcripts and f[2] != "gene"
+            else attr["gene_id"]
+        )
+        label = (
+            attr.get("gene_name") or attr.get("gene") or attr["gene_id"].split("_")[-1]
+        )
+        feat = features.setdefault(
+            key, {"name": label, "strand": f[6], "exon": [], "CDS": [], "span": []}
+        )
+        span = (int(f[3]) - 1, int(f[4]))
+        feat["span" if f[2] in ("gene", "transcript") else f[2]].append(span)
+    bed, n_long = [], 0
+    for feat in features.values():
+        blocks = sorted(feat["exon"] or feat["CDS"] or feat["span"])
+        if not blocks:
+            continue
+        # a CDS-only gene annotated in both terminal repeats: one feature per copy
+        copies = [[blocks[0]]]
+        for block in blocks[1:]:
+            if not feat["exon"] and block[0] - copies[-1][-1][1] > COPY_GAP:
+                copies.append([block])
+            else:
+                copies[-1].append(block)
+        for blocks in copies:
+            # CDS-only blocks reach out to the gene row's UTR ends, copy by copy
+            if not feat["exon"]:
+                for g0, g1 in feat["span"]:
+                    if (
+                        g0 <= blocks[0][0]
+                        and blocks[-1][1] <= g1
+                        and g1 - g0 < COPY_GAP
+                    ):
+                        blocks = [(g0, blocks[0][1]), *blocks[1:]]
+                        blocks[-1] = (blocks[-1][0], g1)
+            start, end = blocks[0][0], max(e for _, e in blocks)
+            if end - start > MAX_FEATURE_BP:
+                n_long += 1
+                continue
+            thick = [c for c in feat["CDS"] if start <= c[0] < end] or blocks
+            bed.append(
+                (
+                    start,
+                    end,
+                    feat["name"],
+                    feat["strand"],
+                    min(t[0] for t in thick),
+                    max(t[1] for t in thick),
+                    blocks,
+                )
+            )
+    Path(f"{stem}.genes.bed").write_text(
+        "".join(
+            f"{name}\t{s}\t{e}\t{n}\t0\t{st}\t{ts}\t{te}\t0\t{len(b)}\t"
+            + ",".join(str(e1 - s1) for s1, e1 in b)
+            + "\t"
+            + ",".join(str(s1 - s) for s1, _ in b)
+            + "\n"
+            for s, e, n, st, ts, te, b in sorted(bed)
+        )
+    )
+
     loci_js.append(
         {
             "id": spec["id"],
@@ -168,9 +247,11 @@ for spec in LOCI:
             "bam": data_uri(Path(f"{stem}.bam")),
             "bai": data_uri(Path(f"{stem}.bam.bai")),
             "gtf": data_uri(Path(f"{stem}.gtf")) if len(gtf) else None,
+            "genes_bed": data_uri(Path(f"{stem}.genes.bed")) if len(gtf) else None,
             "n_reads": len(reads),
             "n_drawn": len(drawn),
             "n_spliced_drawn": len(spliced),
+            "n_long_transcripts_left_out": n_long,
             "length": len(seq),
             "offset": offset,
         }
@@ -185,6 +266,7 @@ for spec in LOCI:
             "n_drawn": len(drawn),
             "n_spliced_drawn": len(spliced),
             "n_gtf_rows": len(gtf),
+            "n_long_transcripts_left_out": n_long,
         }
     )
 
