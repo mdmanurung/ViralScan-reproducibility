@@ -77,3 +77,13 @@ phase-6 EBV acceptance and CMP-01..03.
 Do not change `docs/cli_reference.md` or `docs/output_reference.md` yet: those "unmeasured" lines are on the DOC-10
 allow-list and need a registered claim first. Once Part B lands, register D15/D16 in `claims/` and then reword both docs
 and the package PLAN HOST-05 row in one change.
+
+## Part B amendment (2026-11-03)
+
+25949123_0 failed after 7m42s: `CellCallingError: every column ... is viral (a virus-only index): there is no host transcriptome`.
+`--host-filter none` with a virus-only index cannot run emptyDrops, so tasks 0, 3 and 6 (no-filter arms) cannot succeed; tasks
+1, 2, 4, 5, 7 (starsolo, cells called on the STARsolo host matrix) are unaffected. The no-filter arms were resubmitted as
+Slurm **25949506** (array 8-10: `ebv_planted_none_combined`, `ebv_unplanted_none_combined`, `hhv6b_none_combined`) on the
+combined host+virus index `viral_ref_cat42d/build/panel.idx`, the usual no-filter configuration (round-2c `combined_off`).
+So the none-vs-starsolo contrast now also differs in reference (combined vs virus-only); this is the product-level comparison.
+`host_loss` and the STAR arms are unchanged. `host05_collect.py` reads `*_none_combined`.

@@ -62,7 +62,7 @@ def main():
             fl, fh_ = wilson(rf, nf)
             ml, mh = wilson(lm, nm)
             o.write(f"{f}\t{nf}\t{rf}\t{rf / nf:.5f}\t{fl:.5f}\t{fh_:.5f}\t{nm}\t{lm}\t{lm / nm:.5f}\t{ml:.5f}\t{mh:.5f}\t{c['not_in_lineage']}\n")
-    for f in ("none", "pinned", "star-default"):
+    for f in ("none_combined", "pinned", "star-default"):
         run = root / f"ebv_planted_{f}/run/{S}"
         twin = root / f"ebv_unplanted_{f}/run/{S}"
         sh([sys.executable, SENS, "score", "--out-dir", root / f"score_{f}", "--truth", truth,

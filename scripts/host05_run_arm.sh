@@ -24,14 +24,17 @@ export PATH="$ENVBIN:$PATH" PYTHONPATH="$CODE/src" MPLBACKEND=Agg
 SHA=$(git -C "$CODE" describe --always --dirty); case "$SHA" in *-dirty) echo "dirty pin: $SHA" >&2; exit 2;; esac
 
 ARMS=(ebv_planted_none ebv_planted_pinned ebv_planted_star-default ebv_unplanted_none ebv_unplanted_pinned
-      ebv_unplanted_star-default hhv6b_none hhv6b_pinned)
+      ebv_unplanted_star-default hhv6b_none hhv6b_pinned
+      ebv_planted_none_combined ebv_unplanted_none_combined hhv6b_none_combined)
+# 0, 3, 6 (virus-only index, no filter) cannot call cells: emptyDrops needs host columns (CellCallingError, 25949123_0).
+# 8-10 are the no-filter arms on the combined host+virus index (build/panel.idx), as round 2c combined_off.
 ARM=${ARMS[${SLURM_ARRAY_TASK_ID:?array index}]}
 case "$ARM" in
   ebv_planted_*)   S=SRR12682296; R1=$P2C/planted/${S}_R1.fastq.gz;   R2=$P2C/planted/${S}_R2.fastq.gz;   CH=$D/runs/work/dsr_round2/chem/$S.json;;
   ebv_unplanted_*) S=SRR12682296; R1=$P2C/unplanted/${S}_R1.fastq.gz; R2=$P2C/unplanted/${S}_R2.fastq.gz; CH=$D/runs/work/dsr_round2/chem/$S.json;;
   hhv6b_*)         S=SRR20710641; R1=$IN/$S/${S}_1.fastq.gz;          R2=$IN/$S/${S}_2.fastq.gz;          CH=$D/runs/work/dsr_round2/chem/$S.json;;
 esac
-case "$ARM" in *_none) HF=();; *_pinned) HF=(--host-filter starsolo --host-index "$HOST_IDX" --host-filter-star-params pinned);;
+case "$ARM" in *_none|*_none_combined) HF=();; *_pinned) HF=(--host-filter starsolo --host-index "$HOST_IDX" --host-filter-star-params pinned);;
                *_star-default) HF=(--host-filter starsolo --host-index "$HOST_IDX" --host-filter-star-params star-default);; esac
 read -r TECH STRAND < <(python - "$CH" <<'PY'
 import json, sys
@@ -41,7 +44,8 @@ PY
 )
 OUT=$ROOT/$ARM/run; META=$ROOT/$ARM/meta
 [ ! -e "$ROOT/$ARM" ] || { echo "exists, refusing to reuse: $ROOT/$ARM" >&2; exit 3; }
-ARGS=(-o "$OUT" --r1 "$R1" --r2 "$R2" -i "$VO/virus_panel.idx" -t "$VO/virus_panel.t2g" --gtf "$B/viral_panel.gtf"
+IDX=("$VO/virus_panel.idx" "$VO/virus_panel.t2g"); case "$ARM" in *_combined) IDX=("$B/panel.idx" "$B/panel.t2g");; esac
+ARGS=(-o "$OUT" --r1 "$R1" --r2 "$R2" -i "${IDX[0]}" -t "${IDX[1]}" --gtf "$B/viral_panel.gtf"
       -x "$TECH" -c "${SLURM_CPUS_PER_TASK:-8}" --cell-calling emptydrops --anellovirus-gene-ids --yes --verbose)
 [ "$STRAND" = NONE ] || ARGS+=(--strand "$STRAND")
 echo "code $SHA arm=$ARM $S -x $TECH --strand $STRAND ${HF[*]:-no host filter}"
