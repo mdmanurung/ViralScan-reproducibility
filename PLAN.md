@@ -6750,9 +6750,10 @@ only the rows that were missing are added below, verbatim and grouped as in the 
 
 #### Split from a package row
 
-- [ ] `SCAUTOQC-01-RUN` — (2026-11-02, split from package `SCAUTOQC-01`; the package code, tests and flags are done there) real FASTQ-to-UMAP validation of
+- [x] `SCAUTOQC-01-RUN` — (2026-11-02, split from package `SCAUTOQC-01`; the package code, tests and flags are done there) real FASTQ-to-UMAP validation of
   `--scautoqc` on the public HSV-1 library `SRR8315713` (needs the kb/kallisto/bustools env, a reference and user-approved compute). Also untested:
   clusterwise multi-resolution QC (absent in SCTK 0.2.0) and ribo/globin marker sensitivity. Closing this row lets the package flip `SCAUTOQC-01` to `[x]`.
+  - 2026-11-03 PASS: job 25949687, package a4ca989, `--scautoqc --umap`, HSV-1 SRR8315713, run dir `data/runs/round_2026-11-02/hsv1_SRR8315713/scautoqc_gate_a4ca989/`, 29:52 wall, 4.4 GB RSS. The scautoqc rule ran after detection (detection.done 12:07:59, scautoqc.done 12:09:18, umap.done 12:10:08). `n_cells_scored` = 3767 = called cells (both adata.h5ad and adata_multimap.h5ad, clusterwise complete) of 1,432,678 barcodes; non-called flags all NA; called flags none NA; three scautoqc UMAP HTML plots written (about 5 MB each). `scripts/check_scautoqc_gate.py` GATE_DATA_CHECKS PASS. Caveats: gene annotations were pre-seeded from the 77b1fc8 run's BioMart fetch because www.ensembl.org now 308-redirects and pybiomart fails (so the live BioMart path is not validated); clusterwise multi-resolution QC and ribo/globin sensitivity stay untested. Earlier attempts: 77b1fc8 failed on the obsm bug (fixed #178), aed1a80 twice on the BioMart redirect. Note: `analysis/round_2026-11-02/hsv1_SRR8315713.md`, repro PR #24.
 - [ ] `COVMAP-01-RUN` — (2026-11-02, split from package `COVMAP-01`; the coverage-map code, tests and STAR option A are done there) a pyGenomeTracks run on a real library beyond HHV-6B AF157706.1. Closing this row, with the package items (user layout review, `environment.coverage.yml` CI solve), lets the package flip `COVMAP-01` to `[x]`.
 - [ ] `REVIEW-C-RUN` — (2026-11-02, split from package `REVIEW-C`; the coverage-map code and fixtures pass there) real-directory qualification pending. Closing this row lets the package flip `REVIEW-C` to `[x]`.
 
