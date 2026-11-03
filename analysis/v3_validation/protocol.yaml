@@ -2168,7 +2168,7 @@ pre_freeze_runs:
       re-verified because scripts evolve and the exact revision that ran is recorded
       elsewhere (explore-ledger code_sha, PLAN); work-tree is a file outside the
       repository, hashed 2026-10-13, recorded but not re-checkable by the validator.
-  inventory_sha256: c366327f9f8d2fd6fa5db246fade254ef1986208431df588fa3aee267045f1de
+  inventory_sha256: 4b9759e53dcacc25ccbf14be0a25bc69320bad8004df4235747413acaa4fe804
   inventory:
     - id: PFR-01
       kind: outcome-generating
@@ -2409,6 +2409,41 @@ pre_freeze_runs:
         - location: work-tree
           path: viralscan_work/dsr_round2/status/HOLDOUT_QUARANTINE_RELEASED.txt
           sha256: faea06af5ab721b66966e53c9a22f149e3f27966c58f3adbcfc794ce6ffc54e9
+    - id: PFR-14
+      kind: outcome-generating
+      period: "2026-11-02"
+      protocol_datasets: []
+      other_datasets:
+        - CAL-08 10k_PBMC_3p_nextgem_Chromium_X (10x public healthy PBMC 3' v3.1; first 12,000,000 read pairs of lane L001)
+      summary: >-
+        ANDET-08 genus-level LOD95 plants (exploratory, one library, package de55424, reference cat42d). Held-out
+        anellovirus genomes (Modha TPA and NCBI, absent from the panel) were planted into the CAL-08 background in four
+        runs (sets A, B, C below 95 percent nearest-panel identity, set H at or above it) and an unplanted twin was
+        quantified. This produced anellovirus molecule counts on a CAL-08 library, including one Gammatorquevirus
+        molecule in the unplanted background. CAL-08 was used instead of the VAL-04 background because VAL-04 (H01,
+        pbmc_10x_healthy_v3) is a block_study_use holdout and is not downloaded. Run directories:
+        data/runs/round_2026-11-02/sens/{runs_v3,heldout_sets,background}. Planned purpose: ANDET-08 (PLAN); unscored,
+        no pass/fail threshold, no VAL-01 or G3 claim. CAL-08 donor independence from H01 is unresolved (REG-05).
+      evidence:
+        - location: repo
+          path: analysis/round_2026-11-02/andet08_genus_lod95.md
+          sha256: ca53e28aa686e972f3f8916b9611f29fab20f8a87e3a202a03563cf4fd71d546
+    - id: PFR-15
+      kind: outcome-generating
+      period: "2026-11-02"
+      protocol_datasets: []
+      other_datasets:
+        - CAL-08 10k_PBMC_3p_nextgem_Chromium_X (first 3,000,000 read pairs of lane L001)
+      summary: >-
+        SENS-CAL-01 capture calibration (exploratory, one library, package de55424, reference cat42d). Exact panel
+        genomes (3 each from Papillomaviridae, Polyomaviridae, Orthoherpesviridae, Anelloviridae) were planted at nine iid
+        substitution rates (0 to 0.15) into a 3,000,000-pair CAL-08 background, with an unplanted twin. Viral molecule
+        counts on a CAL-08 library, training use only. Same CAL-08 reason as PFR-14 (VAL-04 H01 is block_study_use).
+        Run directories: data/runs/round_2026-11-02/sens/calibration/runs_v3.
+      evidence:
+        - location: repo
+          path: analysis/round_2026-11-02/senscal01_capture.md
+          sha256: a50c2928f2eb2500bdac686186a58df3f9866982f7a00e4751026a60946bf1ca
 
 frozen_inputs:
   status: frozen
@@ -2469,6 +2504,7 @@ frozen_inputs:
     - DEV-030
     - DEV-031
     - DEV-032
+    - DEV-033
   # DEV-027 (SCI-05 round 12, m2): canonical sha256 of the validation schema. The
   # schema pins the harmonization digests as const and was itself in no digest.
   schema_sha256: 1c9609a844e99820c055d8e342c26d2914547f705d48b56a18567451faaf74a1
@@ -2503,7 +2539,7 @@ frozen_inputs:
     trust, so this detects a changed claim, not a false one. It does not cover
     prose fields elsewhere in the protocol whose sections carry their own
     contract digests.
-  contract_sha256: d4b26bcef697a1c87d6bd69c5b0f40952a4ce0dc49d7dca5e97feda0973be77f
+  contract_sha256: 31216b35a6f057b0b5e5592ac26272a8bbf37486f281970ba1bf770ef806a4e8
 
 exclusions:
   - id: X1_invalid_input

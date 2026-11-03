@@ -11,14 +11,13 @@
 #SBATCH --time=12:00:00
 #SBATCH -o slurm_%x_%j.log
 SITE_ROOT=${VIRALSCAN_SITE_ROOT:?set VIRALSCAN_SITE_ROOT to the site work root}
-COLLAB_ROOT=${VIRALSCAN_COLLAB_ROOT:?set VIRALSCAN_COLLAB_ROOT to the collaborator root}
 
 set -euo pipefail
 : "${CALLS:?calls.tsv}"
 OFFSET=${OFFSET:-0}   # MaxArraySize is 125: rows >=125 go in a second array with OFFSET=125
 M=$SITE_ROOT
 CODE=${CODE:-$M/vs_pinned/ef0c0c8}
-HOST=${HOST_FA:-$COLLAB_ROOT/old/intern/human_reference/refdata-gex-GRCh38-2024-A/fasta/genome.fa}
+HOST=${HOST_FA:-${VIRALSCAN_REPRO_ROOT:-/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility}/data/references/grch38/refdata-gex-GRCh38-2024-A/genome.fa}  # copy, sha256 in data/metadata/host_reference_grch38/MANIFEST.tsv
 PANEL_FA=${PANEL_FA:-$M/viral_ref_cat42d/build/viral.fa}
 export PATH="$M/conda/envs/viralscan_test_full/bin:$PATH" PYTHONPATH="$CODE/src" MPLBACKEND=Agg
 PANEL_ARGS=()

@@ -1,0 +1,44 @@
+{
+  "k": 31,
+  "planted_read_len": 90,
+  "n_divergences": 9,
+  "pooled_planted": [
+    12000.0,
+    12000.0,
+    12000.0,
+    12000.0,
+    12000.0,
+    12000.0,
+    12000.0,
+    12000.0,
+    12000.0
+  ],
+  "pooled_recovered": [
+    12000.000000000002,
+    11885.000000000002,
+    11501.000000000002,
+    10719.000000000002,
+    8477.000000000002,
+    5319.0,
+    2975.0000000000005,
+    1486.0,
+    750.0
+  ],
+  "one_parameter": {
+    "L_eff": 88,
+    "loglik": -36332.433696350505,
+    "L_95ci": [
+      88,
+      88
+    ],
+    "loglik_at_L90": -36344.28733194832,
+    "lrt_L90_vs_best": 23.707271195627982
+  },
+  "two_parameter": {
+    "L_eff": 88,
+    "c0": 1.0,
+    "loglik": -36332.433696350505
+  },
+  "capture_at_zero_divergence": 1.0000000000000002,
+  "caveat": "pooled over families; binomial likelihood treats planted molecules as independent trials; iid substitutions only; clustered divergence deferred"
+}

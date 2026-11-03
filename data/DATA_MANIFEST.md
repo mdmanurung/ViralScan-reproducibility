@@ -62,3 +62,21 @@ dataset is the shared input for `results/reference_strategy_benchmark.tsv`.
 | `data/envs/viralscan_env_pinned.explicit.txt` | 96K | 385ea0f4c104dbeaf182c3112f3473282f3a19890c4ba808a521974157493ee6 |
 | `data/backups/viralscan-split/` | 3.4G, 48560 entries | tracker/tests/audit copied to `provenance/migration_tests/` |
 | `data/backups/stage5-script-backups/`, `stage7-record-backups/` | 12M, 2.1M | pre-rewrite script/table copies |
+
+### host_reference_grch38
+```yaml
+name: host_reference_grch38
+type: genomic
+source: 10x Genomics refdata-gex-GRCh38-2024-A (genome.fa copied from the collaborator folder, source path in MANIFEST.tsv)
+date_acquired: 2026-11-02
+format: FASTA + .fai
+size: "3.15 GB"
+raw_path: data/references/grch38/refdata-gex-GRCh38-2024-A/   # gitignored; sha256 in the manifest
+metadata_path: data/metadata/host_reference_grch38/MANIFEST.tsv
+status: validated   # source and copy sha256 equal
+access_restrictions: none
+tags: [reference, grch38, host, dsr02]
+```
+
+Host genome for DSR-02 read validation (`scripts/dsr02_validate_call.py --host-fasta`). Copied so runs do not depend on a
+collaborator's folder (user decision 2026-11-02). Never edit in place; check with `sha256sum -c` against the manifest values.
