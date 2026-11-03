@@ -43,6 +43,14 @@ printf '%s\n' "$SHA" > "$ARMDIR/meta/code_sha.txt"
 printf '%s\n' "${SLURM_JOB_ID:-nojob}" > "$ARMDIR/meta/jobid.txt"
 cp "$D/runs/work/dsr_round2/chem/$SAMPLE.json" "$ARMDIR/meta/check_chemistry.json"
 echo "code $SHA arm=$ARM -x dropseq --strand forward"
+# SEED_ANNOT=<tsv>: viralscan refuses a non-empty -o, so the scAutoQC gene annotations (BioMart is unusable
+# from here: www.ensembl.org 308-redirects) are copied in (no clobber) once the sample results/ dir exists,
+# long before the scautoqc rule runs (it follows detection).
+if [ -n "${SEED_ANNOT:-}" ]; then
+  ( until [ -d "$ARMDIR/out/$SAMPLE/results" ]; do sleep 5; done
+    cp -n "$SEED_ANNOT" "$ARMDIR/out/$SAMPLE/results/scautoqc_gene_annotations.tsv"
+    echo "seeded annotations from $SEED_ANNOT" ) &
+fi
 /usr/bin/time -v -o "$ARMDIR/meta/time.txt" python -m viralscan run \
   -o "$ARMDIR/out" --r1 "$IN/${SAMPLE}_1.fastq.gz" --r2 "$IN/${SAMPLE}_2.fastq.gz" \
   "${IDX[@]}" --gtf "$B/viral_panel.gtf" -x dropseq --strand forward -c "${SLURM_CPUS_PER_TASK:-4}" \
