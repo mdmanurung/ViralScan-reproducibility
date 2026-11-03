@@ -127,5 +127,5 @@ At matched load (twostep, called cells):
 Reading:
 - Cell calling does not drive the contrast. Adding the non-called heavy barcodes moves the productive share by 2 points or less, and among heavy barcodes 97-99 % are productive or mixed.
 - The latent library is latent at matched load too: at 15-100 molecules it has 1 productive cell in 1,253, the lytic libraries about half. At 100-500 it has 27 latent and 0 productive. Depth alone does not explain "98 % latent", though only 27 latent-library cells reach 100 molecules.
-- The productive / mixed split is load-driven: the mixed share rises with load (about 15 % at 100-500, about 65 % at >= 2,000), consistent with latent markers reaching one molecule in heavily lytic cells, which the latent-marker veto then calls mixed. Read productive + mixed together as "lytic programme present"; do not read the split as biology.
+- The productive / mixed split is load-driven: the mixed share rises with load (13-20 % at 100-500, 66-73 % at >= 2,000), consistent with latent markers reaching one molecule in heavily lytic cells, which the latent-marker veto then calls mixed. Read productive + mixed together as "lytic programme present"; do not read the split as biology.
 - Not addressed: the 5b419d4 markers were chosen with this dataset in view; the held-out test (PROG-16) is still open.
