@@ -5858,6 +5858,7 @@ behind the package-completion plan unless the user releases a row.
   same method.
 - [~] `DSR-06` — GSE164690 HNSCC one-lane pilot, HN18 CD45− vs HN01.
   - 2026-11-02 (`codex/round-2026-11-02-dsr0607`): rerun on package pin `de55424`, standard arm set (combined_off, combined_artefact, twostep), cat42d, emptydrops, frozen round-1 chem JSON (`-x 10xv2 --strand forward`). Jobs 25941204-25941209 submitted; results and DSR-02 read validation pending. Record: `analysis/round_2026-11-02/hnscc_gse164690.md`. Earlier rounds 1-2 (`e7c1b08`) already ran all arms for both libraries.
+  - 2026-11-03: accept check met: HPV16 only in HN18 (562-587 molecules, 13-16 % of called cells), absent from HN01. DSR-02 rows 0-3 (HN18): HPV29 mostly host, Samektorquevirus inconclusive at 3 molecules. Open: HN01 HPV29 rows 4-6.
 - [~] `DSR-07` — E-MTAB-13687 tonsil atlas negative-control subset, samples
   chosen from metadata before any viral output.
   - 2026-11-02 (`codex/round-2026-11-02-dsr0607`): rerun on `de55424`, ERR13027010 and ERR13027027 x 3 arms (`-x 10xv3 --strand forward`), jobs 25941210-25941215. ERR13027122 recorded n/a (HTO/ADT, strand pilot 0.1/0.0/0.2 %). ERR13027027 `combined_artefact` needs about 11 h. Results and DSR-02 pending. Record: `analysis/round_2026-11-02/tonsil_emtab13687.md`.

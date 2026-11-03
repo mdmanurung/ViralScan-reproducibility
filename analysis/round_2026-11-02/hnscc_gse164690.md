@@ -1,6 +1,6 @@
 # DSR-06 GSE164690 HNSCC one-lane pilot (HN18 CD45- SRR13419165 vs HN01 SRR13418973), round 2026-11-02
 
-Status 2026-11-03: runs finished (see Results); DSR-02 read validation of off-target calls submitted. Package pin: `de55424` (clean worktree
+Status 2026-11-03: runs finished (see Results); DSR-02 rows 0-3 done, rows 4-6 pending. Package pin: `de55424` (clean worktree
 `ViralScan/.claude/worktrees/pin-dsr0607`). Reference: cat42d (`data/references/panel_builds/viral_ref_cat42d/{build,build_virus_only}`),
 STAR host index `data/references/starsolo/ebv_latest_ref_2026-09-27/star_host_2.7.11b`. Env: `conda/envs/viralscan_test_full` + `R4_51`.
 Script: `scripts/slurm_round_2026_11_02_dsr0607.sh` (same conventions as `slurm_round_2026_11_02_dsr0304.sh`).
@@ -41,6 +41,15 @@ Source: `<run dir>/<library>/results/viral_summary.tsv`; all six jobs COMPLETED 
 
 Accept check: met. HPV16 is called only in HN18 (562-587 molecules, 13-16 % of called cells, background 36-38 UMIs), and is absent from HN01 in all three arms. The read filter changes nothing for HPV16. Off-target rows with >= 3 molecules (HPV29 in both libraries, Samektorquevirus in HN18 twostep) go to DSR-02 below. HPV29 appears at 4-9 molecules in both a positive and a negative library, so it is probably a shared cross-map, not a finding; DSR-02 decides.
 
-## Pending
-- Collect step, then DSR-02 per call with `scripts/dsr02_validate_call.py --run-dir <library run dir> --virus <name> --panel-fasta data/references/panel_builds/viral_ref_cat42d/build/viral.fa --host-fasta <GRCh38 genome.fa> --out <dir>`.
-  `scripts/dsr02_enumerate_calls.py` cannot be used as is: it globs `runs/<dataset>/<arm>/<sample>/` and this round uses `<dataset>/<library>/<arm>/`.
+## DSR-02 read validation (array 25949116, rows of `analysis/round_2026-11-02/dsr0607_offtarget_calls.tsv`)
+Script `scripts/slurm_round_2026_11_02_dsr0607_dsr02.sh`, package `de55424`, GRCh38 `data/references/grch38/refdata-gex-GRCh38-2024-A/genome.fa`. Output `data/runs/round_2026-11-02/_dsr0607/evidence/<dataset>__<library>__<arm>__<virus>/`. Molecules are the `counted` rows of `molecule_verdict_summary.tsv`; flags from `interpretation_flags.tsv`.
+
+| Row | Library | Arm | Call | Molecules virus-best / host-best / tie / unaligned | Flags | Verdict |
+|---|---|---|---|---|---|---|
+| 0 | HN18 SRR13419165 | combined_off | HPV29 | 3 / 5 / 0 / 1 | host_homology, coverage and EVE-like hotspot | not supported: mostly host |
+| 1 | HN18 | combined_artefact | HPV29 | 3 / 5 / 0 / 1 | same | not supported: mostly host |
+| 2 | HN18 | twostep | Samektorquevirus | 2 / 1 / 0 / 0 | host_homology | inconclusive: 3 molecules, at the floor |
+| 3 | HN18 | twostep | HPV29 | 3 / 6 / 1 / 1 | host_homology, coverage and EVE-like hotspot | not supported: mostly host |
+| 4-6 | HN01 SRR13418973 | all three | HPV29 | pending (25949116_4-6) | | |
+
+Reading: HPV29 in HN18 is the same host cross-map seen in the HPV16 rafts (DSR-03 note): more molecules align to human than to HPV29, with a single-locus hotspot. No BLAST read has a viral top hit. The Samektorquevirus call has 2 virus-best molecules; that is too few to call an anellovirus present or absent.
