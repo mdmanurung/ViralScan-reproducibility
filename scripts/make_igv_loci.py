@@ -2,7 +2,7 @@
 """Purpose: pack `viralscan evidence` reads for an igv.js page, one small genome per locus.
 
 Each locus gets its own reference (the viral genome, or a slice of a host chromosome),
-a BAM of at most MAX_READS primary alignments drawn at random, and the GTF rows of that
+a BAM of at most MAX_READS primary alignments (spliced ones first, then at random), and the GTF rows of that
 reference. All files are embedded as base64 data URIs in one JS file, so a static page
 can load them into igv.js without a server.
 
@@ -12,7 +12,8 @@ Run (from the repro checkout root):
     data/runs/round_2026-11-02/_igv_browser_2026-11-03
 
 Inputs:
-  <evidence dir>/competitive_reads.umi_dedup.bam   UMI-deduplicated reads [viralscan evidence]
+  <evidence dir>/competitive_reads.umi_dedup.bam   UMI-deduplicated reads, host slice [viralscan evidence]
+  <SPLICE>/<id>.splice.bam   viral reads realigned splice-aware [splice_realign_viral_reads.py]
   data/references/grch38/refdata-gex-GRCh38-2024-A/genome.fa   host genome, for the host slice
   data/references/panel_builds/viral_ref_cat42d/build/viral_panel.gtf   viral genes
   data/references/panel_builds/viral_ref_cat42d/build/viral.fa   viral genomes, unmasked here
@@ -34,31 +35,38 @@ import pysam
 
 # reads drawn per locus: keeps the page under a few MB and igv.js responsive
 MAX_READS = 4000
+# spliced reads kept first, so split reads show at a junction; the rest are drawn at random
+MAX_SPLICED = 1500
 SEED = 20261103
 TRACKA = "data/runs/work/trackA_round1/evidence"
 HOST_FA = "data/references/grch38/refdata-gex-GRCh38-2024-A/genome.fa"
 VIRAL_GTF = "data/references/panel_builds/viral_ref_cat42d/build/viral_panel.gtf"
 VIRAL_FA = "data/references/panel_builds/viral_ref_cat42d/build/viral.fa"
+# splice-aware realignment of the viral reads [splice_realign_viral_reads.py]
+SPLICE = "data/runs/round_2026-11-02/_splice_realign_2026-11-03"
 
 # slice: (start, end) 1-based on the host chromosome; positions in the page start at 1
 LOCI = [
     {
         "id": "hsv1",
         "evidence": f"{TRACKA}/hsv1__GSM3511327__combined_off__Human_herpesvirus_1",
-        "contig": "VIRUS|NC_001806.2",
+        "contig": "NC_001806.2",
+        "bam": f"{SPLICE}/hsv1.splice.bam",
         "locus": "NC_001806.2:45,800-48,600",
     },
     {
         "id": "ebv",
         "evidence": f"{TRACKA}/ebv__GSM4796271__combined_off__Epstein_Barr_virus",
-        "contig": "VIRUS|NC_007605.1",
-        "locus": "NC_007605.1:165,500-168,000",
+        "contig": "NC_007605.1",
+        "bam": f"{SPLICE}/ebv.splice.bam",
+        "locus": "NC_007605.1:89,700-91,100",
     },
     {
         "id": "hhv6b",
         "evidence": f"{TRACKA}/hhv6b__GSM6416035__combined_off__Human_herpesvirus_6b",
-        "contig": "VIRUS|AF157706.1",
-        "locus": "AF157706.1:86,500-89,500",
+        "contig": "AF157706.1",
+        "bam": f"{SPLICE}/hhv6b.splice.bam",
+        "locus": "AF157706.1:137,700-139,300",
     },
     {
         "id": "hpv77_offtarget",
@@ -104,7 +112,7 @@ for spec in LOCI:
 
     # reads: primary alignments on the reference, a seeded random draw of MAX_READS
     with pysam.AlignmentFile(
-        f"{spec['evidence']}/competitive_reads.umi_dedup.bam"
+        spec.get("bam", f"{spec['evidence']}/competitive_reads.umi_dedup.bam")
     ) as bam:
         region = (
             (spec["contig"], offset, spec["slice"][1])
@@ -118,7 +126,12 @@ for spec in LOCI:
             and a.reference_start >= offset
             and a.reference_end <= offset + len(seq)
         ]
-    drawn = sorted(random.sample(range(len(reads)), min(MAX_READS, len(reads))))
+    spliced = [i for i, a in enumerate(reads) if "N" in a.cigarstring]
+    spliced = random.sample(spliced, min(MAX_SPLICED, len(spliced)))
+    rest = sorted(set(range(len(reads))) - set(spliced))
+    drawn = sorted(
+        spliced + random.sample(rest, min(MAX_READS - len(spliced), len(rest)))
+    )
     header = pysam.AlignmentHeader.from_dict(
         {"HD": {"VN": "1.6", "SO": "coordinate"}, "SQ": [{"SN": name, "LN": len(seq)}]}
     )
@@ -157,6 +170,7 @@ for spec in LOCI:
             "gtf": data_uri(Path(f"{stem}.gtf")) if len(gtf) else None,
             "n_reads": len(reads),
             "n_drawn": len(drawn),
+            "n_spliced_drawn": len(spliced),
             "length": len(seq),
             "offset": offset,
         }
@@ -169,6 +183,7 @@ for spec in LOCI:
             "offset": offset,
             "n_reads": len(reads),
             "n_drawn": len(drawn),
+            "n_spliced_drawn": len(spliced),
             "n_gtf_rows": len(gtf),
         }
     )
