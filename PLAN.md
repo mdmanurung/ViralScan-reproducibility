@@ -5847,9 +5847,10 @@ behind the package-completion plan unless the user releases a row.
     (`VIRALSCAN_REPRO_ROOT` overrides the root, `HOST_FA` overrides the file; they no longer need `VIRALSCAN_COLLAB_ROOT`).
   - **Left:** run it on a real evidence directory (needs samtools + minimap2 output; first use is the
     `DSR-13` evidence regeneration on a pinned commit). `dsr02_verdicts.py` does not read the per-read table yet.
-- [ ] `DSR-03` — HPV16 GSE189670 rerun on the target commit; read-validate
+- [~] `DSR-03` — HPV16 GSE189670 rerun on the target commit; read-validate
   HPV118 / HPV29, which appear in both the infected and parental raft.
   - 2026-11-02: runs submitted on `de55424` (3 arms x 2 rafts, jobs 25941178-25941183), not yet started; read validation not run (needs the GRCh38 FASTA path). `analysis/round_2026-11-02/hpv16_gse189670.md`.
+  - 2026-11-03: all 6 arms COMPLETED; HPV16 7,673 molecules in 1,950 cells (infected raft), 8 molecules and 0 cells (parental), molecules identical to rounds 1 and 2. DSR-02 (array 25949109): HPV29, HPV118 and the twostep HPV77 (F-028, still unflagged in `viral_summary.tsv`) are host chr1 reads. Open: Cercopithecine herpesvirus rows 6-7.
 - [ ] `DSR-04` — COVID x213/x216 rerun: cat42d, `--strand reverse`, read
   filter off / artefact, emptydrops.
   - 2026-11-02: not run in the 2026-11-02 public round (in-house data; user decision 2026-11-02); jobs 25941184-25941189 to be cancelled by the user.
