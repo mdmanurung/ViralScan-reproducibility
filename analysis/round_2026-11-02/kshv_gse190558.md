@@ -84,3 +84,17 @@ Finished cells (table: `analysis/round_2026-11-02/kshv_summary_partial.tsv`, fro
 Molecule counts reproduce round 2 within 0.1 % (latent, three arms) and 0.5 % (lytic, twostep).
 
 PROG-16 reading: induced > uninduced holds on molecules (400x). The programme layer does not show it: in the two induced libraries almost no cell is called productive (0 and 1 of about 7,000), and most are called latent. Latent presence in the uninduced library is shown (2,523 latent cells). A productive call of 0 with 23.7 M KSHV molecules points at the productive-marker rule (uniquely placed molecules, at least 2 non-overlapping groups) failing on KSHV, not at absent lysis. Treat the acceptance test as not passed at the programme level until the marker rule is checked (open question, not diagnosed here).
+
+## Update 2026-11-03: package 5b419d4 catalogue (PR #181: PAN, K4, K3, ORF52 productive; ORF37 dropped; `induced_in_lytic`)
+
+Official numbers: `viralscan rerun-programs` from a detached worktree at 5b419d4 (`ViralScan/.claude/worktrees/pin-kshv-5b419d4`), into NEW `posthoc/programs_5b419d4/` of each run (job 25949495, `scripts/slurm_kshv_programs_5b419d4.sh`; the older `posthoc/programs/` is kept). Table: `analysis/round_2026-11-02/kshv_summary_5b419d4.tsv`. Read-only diagnosis script: `scripts/kshv_mixed_diagnosis.py` (log `_kshv/logs/kshv_diag_25949496.log`). Runs finished by then only; `_r2` and remaining twostep runs still to do: rerun `slurm_kshv_programs_5b419d4.sh` (it skips done dirs).
+
+| GSM | arm | scored | productive | latent | mixed | indeterminate |
+|---|---|---|---|---|---|---|
+| GSM5725695 latent | combined_off | 2,574 | 1 | 2,522 | 0 | 51 |
+| GSM5725695 latent | combined_artefact | 2,573 | 1 | 2,521 | 0 | 51 |
+| GSM5725695 latent | twostep | 2,527 | 1 | 2,478 | 0 | 48 |
+| GSM5725696 lytic | twostep | 7,638 | 4,709 | 1,043 | 1,699 | 187 |
+| GSM5725697 lytic + casp-i | twostep | 6,485 | 3,065 | 1,231 | 1,993 | 196 |
+
+PROG-16: with the new catalogue the induced libraries are mostly productive (62 % and 47 %) or mixed (22 % and 31 %); the latent library is 98 % latent with 1 productive and 0 mixed cell. This is the induced > uninduced contrast the earlier catalogue missed (it gave 0 and 1 productive). Productive cells in the induced libraries are broad: 2-7 markers, median 6-7 molecules; mixed cells there carry 2-8 markers (median 14-19 molecules). Latent genes in both conditions: the latent library is latent-called in 98 % of scored cells, and the induced libraries keep 1,043 and 1,231 latent-called cells. Caveat: ambient is large in the induced libraries (`ambient_viral_fraction` 0.068 and 0.118), and the marker profile of the soup matches the mixed cells (cosine 0.99), so cell-level productive counts there overlap with soup; the 4,709 / 3,065 productive cells are not all independent of it. Still open: the GSM5725698 library and the combined arms of the induced libraries (OOM reruns running).

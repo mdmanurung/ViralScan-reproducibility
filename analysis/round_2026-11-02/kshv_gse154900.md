@@ -60,3 +60,27 @@ Gene programmes were off in the run; added with `rerun-programs` (job 25949108).
 | combined_off | EBV | 1,652 | 3,426 | 44 | 1 | 0 | 0 | 43 |
 
 Counts reproduce round 2 (555,654 and 1,652.25). PROG-18 reading: KSHV is mostly latent (3,172 of 3,205 scored cells, 99 %), with a small mixed minority (5) and no productive cell. That matches the "mostly latent" expectation, with the caveat from `kshv_gse190558.md` that the productive rule gave 0 even in induced libraries. EBV: only 44 cells scored and 43 indeterminate, so the EBV programme is not informative here. Per-cell co-infection is still not computed.
+
+## Update 2026-11-03: package 5b419d4 catalogue and the "mixed" cells
+
+Official `rerun-programs` at 5b419d4 on this round's `combined_off` run (`posthoc/programs_5b419d4/`, job 25949495): KSHV 3,265 scored, productive 0, latent 2,889, mixed 288, indeterminate 88. EBV unchanged (44 scored, 43 indeterminate). The coordinator's recompute on the round-2 twostep run of the same library (called-cell set 2,979) gives productive 0, latent 2,357, mixed 605. The two arms differ in the called-cell set and the mixed count, same pattern.
+
+Diagnosis of the mixed cells (`scripts/kshv_mixed_diagnosis.py`, read-only; unique KSHV molecules in the called cells):
+
+| | twostep (n = 605 mixed) | combined_off (n = 288 mixed) |
+|---|---|---|
+| marker pair PAN (gs01) + K4 (gp13) only | 516 (85 %) | 256 (89 %) |
+| other 2-marker sets (PAN + K3, K4 + K3) | 34 | 14 |
+| 3 or more productive markers | 36 (6 %) | 18 (6 %) |
+| 4 or more | 7 | 7 |
+| productive molecules per cell: median [q25, q75, q95] | 3 [2, 4, 10] | 3 [2, 3.2, 17.6] |
+| cells with at most 2 productive molecules | 196 (32 %) | 140 (49 %) |
+| any ORF50 (gp52) or ORF16 (gp19) | about 40 | about 13 |
+| latent molecules per cell, median | 62 | 58 |
+
+Same readout in the latent-called cells of this library: PAN alone in 1,516 of 2,357 (64 %), K4 alone in 164, no productive marker in 653. So PAN at 1-2 molecules is the baseline of this library, and the mixed state is mostly the cells where K4 (or K3) also reaches 1 molecule on top of PAN: a threshold on a continuum, not a separate population. Only about 6 % of the mixed cells (36 of 605) show three or more productive markers, and only 7 show the late/IE markers expected of true lysis.
+Latent library GSM5725695 for comparison: 0 mixed, 1 productive; its cells carry few KSHV molecules overall (median latent molecules 5 vs 38-62 here), so the contrast is depth-confounded and is not evidence that BC-1 differs biologically.
+
+Ambient: the soup is dominated by the latent gene ORF71/K13 (90 % of ambient marker molecules; ambient_viral_fraction 0.0037). PAN is 6.9 % of the soup's marker molecules against 14.3 % in the mixed cells, K4 1.0 % against 2.7 %: the mixed cells are enriched about 2-3x for PAN and K4 over the soup profile, so soup alone does not explain the profile. The count-level expectation does not settle it: ambient_viral_fraction x the cell's total molecules gives 0.04 expected ambient productive molecules per cell in the twostep matrix (598 of 605 cells above the Poisson 99th percentile) but 35 per cell in the combined matrix (9 of 288 above), because the denominator (viral-only versus host-plus-virus totals) differs between arms. The ambient fraction was measured on its own denominator, so I treat this count test as inconclusive.
+
+Verdict on the 605 (and the 288): mostly a narrow, shallow PAN + K4 signal (median 3 molecules from two early genes), enriched over the soup but not broad; likely a mix of low-level lytic-gene leakage in latent cells and ambient/threshold effects. A spontaneous-lytic minority proper is at most the 6 % with three or more productive markers (36 cells, about 1 % of called cells), and the 7 with four or more are the best candidates. The "mostly latent, lytic minority" reading of PROG-18 stands, with the lytic minority small and not confirmed at read level.
