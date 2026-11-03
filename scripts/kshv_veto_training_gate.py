@@ -16,7 +16,7 @@ Inputs (per library, round 2026-11-02 twostep, package de55424 runs):
   <run>/kb-python/counts_unfiltered/adata_multimap.h5ad    unique layer for N
   <run>/results/virus_identity.tsv                         gene -> virus
   <run>/posthoc/programs_5b419d4/results/gene_program_cells.tsv      rule any [rerun-programs]
-  _kshv/veto_training_check_betabinom/<lib>/results/gene_program_cells.tsv  rule
+  _kshv/veto_training_check_betabinom_13ec4ff/<lib>/results/gene_program_cells.tsv  rule
                                                            betabinomial [rerun-programs]
 Outputs (in <run_dir>):
   mixed_share_by_bin.tsv   library, rule, bin, n cells, mixed share (%)
@@ -36,7 +36,7 @@ from viralscan.virus_grouping import group_genes_by_identity, load_run_identity
 # run from the repro checkout root: data/ is not in branch worktrees
 ROOT = Path.cwd()
 RUNS = ROOT / "data/runs/round_2026-11-02/GSE190558"
-CHECK = ROOT / "data/runs/round_2026-11-02/_kshv/veto_training_check_betabinom"
+CHECK = ROOT / "data/runs/round_2026-11-02/_kshv/veto_training_check_betabinom_13ec4ff"
 LIBRARIES = ["GSM5725696", "GSM5725697"]
 KSHV = "Human herpesvirus 8"
 # bins on unique-layer KSHV molecules, fixed by decision Q13a before this run

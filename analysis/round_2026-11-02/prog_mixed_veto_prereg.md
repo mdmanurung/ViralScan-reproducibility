@@ -11,7 +11,7 @@ per cell. Package commit: the PR #187 head at the time of the runs, recorded per
 veto code and fit must be byte-identical to `13ec4ff`.
 
 Fit and training check (training data, not evidence for the gate): `scripts/kshv_fit_veto_p0.py`
-(`_kshv/veto_fit_betabinom_342c8db/`), `scripts/kshv_veto_training_gate.py` (`_kshv/veto_training_gate/`):
+(`_kshv/veto_fit_betabinom_342c8db/`), `scripts/kshv_veto_training_gate.py` (`_kshv/veto_training_gate_13ec4ff/`, on the forced runs in `_kshv/veto_training_check_betabinom_13ec4ff/`; both byte-identical to the first runs made on an unpushed WIP commit):
 on GSM5725696/-97 the mixed-share gap is -0.3 and -4.7 points under `betabinomial` against 68.5 and 48.5
 under `any`. The earlier binomial test (p0 0.004167) failed that check; it is not tested here.
 
@@ -48,7 +48,7 @@ under `any`. The earlier binomial test (p0 0.004167) failed that check; it is no
 | 3 | GSE184257 KSHV-infected libraries | \|mixed share high - mixed share low\| <= 10 points, per library |
 | 4 | GSM5725698 | criteria 1 and 3 |
 | 5 | GSM5725695 | >= 95 % of scored KSHV cells latent and <= 1 % productive |
-| 6 | HSV-1 SRR8315713 | productive calls identical to the `any` run |
+| 6 | HSV-1 SRR8315713 | productive calls identical to the `any` run. HSV-1 latency is unobservable, so `mixed` is unreachable and the veto cannot change it: this checks the plumbing, not the rule |
 
 A criterion whose bin holds fewer than 30 cells is **not estimable** for that library and is reported so; it
 neither passes nor fails. The gate passes only if every estimable criterion passes and criteria 1 and 3 are

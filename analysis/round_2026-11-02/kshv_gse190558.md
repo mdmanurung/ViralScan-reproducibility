@@ -139,7 +139,7 @@ lytic cells and failed the training check (mixed share 2-7 % at 100-500 and 19-2
 molecules; `_kshv/veto_training_check/`). Beta-binomial MLE on the same cells: mean 0.007365, rho 0.006506
 (`_kshv/veto_fit_betabinom_342c8db/`, byte-identical to the first fit run).
 
-Training gate (`scripts/kshv_veto_training_gate.py`, unique-layer bins, `_kshv/veto_training_gate/`):
+Training gate (`scripts/kshv_veto_training_gate.py`, unique-layer bins, `_kshv/veto_training_gate_13ec4ff/` on `_kshv/veto_training_check_betabinom_13ec4ff/`, package 13ec4ff; byte-identical to the first runs):
 
 | library | rule | mixed % at [15,100) / [500,inf) | gap (points) |
 |---|---|---|---|
