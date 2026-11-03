@@ -129,3 +129,25 @@ Reading:
 - The latent library is latent at matched load too: at 15-100 molecules it has 1 productive cell in 1,253, the lytic libraries about half. At 100-500 it has 27 latent and 0 productive. Depth alone does not explain "98 % latent", though only 27 latent-library cells reach 100 molecules.
 - The productive / mixed split is load-driven: the mixed share rises with load (13-20 % at 100-500, 66-73 % at >= 2,000), consistent with latent markers reaching one molecule in heavily lytic cells, which the latent-marker veto then calls mixed. Read productive + mixed together as "lytic programme present"; do not read the split as biology.
 - Not addressed: the 5b419d4 markers were chosen with this dataset in view; the held-out test (PROG-16) is still open.
+
+## Update 2026-11-03: mixed veto fit and training gate (PLAN PROG-MIXED-VETO-01)
+
+Package PR #187 adds a load-aware `mixed` veto. Fit (`scripts/kshv_fit_veto_p0.py`, 135 called cells with >= 2,000
+unique KSHV molecules in GSM5725696/-97 twostep): median latent-veto share 0.004167, IQR 0.0023-0.0086; the
+counts are 57.5x overdispersed against a binomial, so the planned binomial veto flagged 42 of the 135 heavy
+lytic cells and failed the training check (mixed share 2-7 % at 100-500 and 19-20 % at >= 2,000 allocated
+molecules; `_kshv/veto_training_check/`). Beta-binomial MLE on the same cells: mean 0.007365, rho 0.006506
+(`_kshv/veto_fit_betabinom_342c8db/`, byte-identical to the first fit run).
+
+Training gate (`scripts/kshv_veto_training_gate.py`, unique-layer bins, `_kshv/veto_training_gate/`):
+
+| library | rule | mixed % at [15,100) / [500,inf) | gap (points) |
+|---|---|---|---|
+| GSM5725696 | any | 26.0 / 94.5 | 68.5 |
+| GSM5725696 | betabinomial | 1.9 / 1.6 | -0.3 |
+| GSM5725697 | any | 41.2 / 89.8 | 48.5 |
+| GSM5725697 | betabinomial | 7.5 / 2.8 | -4.7 |
+
+Under the beta-binomial veto mixed cells fall from 1,699 to 99 (-96) and 1,993 to 311 (-97); productive + mixed
+and latent calls are unchanged; GSM5725695 is unchanged (1 productive, 2,478 latent). Training data only: the
+held-out gate is pre-registered in `prog_mixed_veto_prereg.md` (committed before any held-out run).

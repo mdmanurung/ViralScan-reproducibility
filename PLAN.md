@@ -5641,6 +5641,7 @@ elapsed time: 2-4 weeks, dominated by downloads, queues, and comparator setup.
 - [ ] `RUN-04` — KSHV latent/lytic series `GSE190558`.
   - 2026-11-02: rerun on `de55424`, full arm set, submitted (see `PROG-16`). Round 2 on e7c1b08 had finished all 12 cells (explore ledger).
   - 2026-11-03: combined_off_r2 programmes 61 / 45 / 59 % productive (GSM5725696-98). States by load incl. non-called barcodes (`scripts/kshv_programmes_by_load.py`): heavy barcodes 97-99 % productive or mixed, latent library has 0 barcodes >= 500 and 1 productive in 1,253 cells at 15-100 molecules; productive/mixed split is load-driven. Held-out test still open (PROG-16).
+  - 2026-11-03: mixed-veto fit and training gate for package PR #187 (beta-binomial mean 0.007365, rho 0.006506; gap -0.3 / -4.7 points vs 68.5 / 48.5 under `any`). Held-out gate pre-registered: `analysis/round_2026-11-02/prog_mixed_veto_prereg.md`.
 - [ ] `RUN-05` — KSHV plus EBV replicates `GSE154900`.
   - 2026-11-02: `GSM4682311` rerun on `de55424` submitted (see `PROG-18`); `GSM4682312` `n/a: no barcode read` (check-chemistry: bulk).
 
