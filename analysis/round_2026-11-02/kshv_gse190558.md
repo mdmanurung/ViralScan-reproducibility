@@ -9,7 +9,7 @@ below (pin e7c1b08, 2026-10-13/14) are the baseline and are labelled as such. Ex
 - Reference: cat42d (`data/references/panel_builds/viral_ref_cat42d/build`, virus-only `build_virus_only`), STAR host `data/references/starsolo/ebv_latest_ref_2026-09-27/star_host_2.7.11b`.
 - Inputs (read only): lane-concatenated GSM FASTQs `data/runs/work/dsr_round1/inputs/<GSM>/<GSM>_R{1,2}.fastq.gz`, the round-1/2 inputs, so the arms compare with round 2. Source SRRs under `data/inputs/benchmark_inputs/dsr_2026-10-05/GSE190558/SRR17180386-401` all present with `DONE`. Lane map (runbook 12a): GSM5725695 latent = SRR17180398-401; GSM5725696 lytic = 394-397; GSM5725697 lytic + casp-i = 390-393; GSM5725698 lytic + casp-i + anti-IFN = 386-389.
 - Chemistry: frozen round-1 `check-chemistry` JSONs, copied to `data/runs/round_2026-11-02/_kshv/chem/`: 10xv3 (95.7-96.4 % on-list), strand forward. Not re-measured.
-- Arms per library: `combined_off`, `combined_artefact` (`--read-filter artefact`), `twostep` (`--host-filter starsolo`, virus-only index). All with `--cell-calling emptydrops --anellovirus-gene-ids`. Gene programmes are on by default at this pin (`gene_program_summary.tsv`).
+- Arms per library: `combined_off`, `combined_artefact` (`--read-filter artefact`), `twostep` (`--host-filter starsolo`, virus-only index). All with `--cell-calling emptydrops --anellovirus-gene-ids`. Gene programmes were OFF in these runs (`config.yaml: gene_programs: false`, despite the help text); layer 2 is added afterwards with `viralscan rerun-programs` (`scripts/slurm_kshv_programs.sh`, job 25949108), which writes only `<run>/posthoc/programs/` and changes no counts.
 - DSR-02 read validation: chained job, see below.
 - Outputs: `data/runs/round_2026-11-02/GSE190558/<GSM>/<arm>/` (run metadata and `time.txt` in `meta_<arm>/`). Logs `data/runs/round_2026-11-02/_kshv/logs/`.
 
@@ -58,8 +58,29 @@ Source: `data/runs/work/dsr_round2/runs/kshv_gse190558/<arm>/<GSM>/<GSM>/results
 | GSM5725698 lytic + casp-i + anti-IFN | combined_off | 31,763,568 | 9,463 | 9,463 | 100 |
 | GSM5725698 lytic + casp-i + anti-IFN | twostep | 31,822,240 | 8,940 | 8,813 | 98.6 |
 
-Read: KSHV molecules are about 400x higher in the induced libraries than in the latent one, and all three arms agree to within 1 % on molecules. EBV shows 1 molecule in GSM5725697 (noise). Round 2 wrote no gene programme file, so the latent-gene half of the acceptance test (LANA/ORF73, vFLIP/ORF71, vCyclin/ORF72 in both conditions) is not yet shown; the de55424 runs add `gene_program_summary.tsv`.
+Read: KSHV molecules are about 400x higher in the induced libraries than in the latent one, and all three arms agree to within 1 % on molecules. EBV shows 1 molecule in GSM5725697 (noise). Round 2 wrote no gene programme file, so the latent-gene half of the acceptance test (LANA/ORF73, vFLIP/ORF71, vCyclin/ORF72 in both conditions) is not yet shown; the programme tables are added by `rerun-programs` (see Interim).
 
 ## What this says for PROG-16 (lytic acceptance)
 
 Partly met on round 2: induced > uninduced by molecule count, in every arm. Not yet shown: latent genes present in both conditions, and the programme-level (productive vs latent cell counts) contrast. The de55424 gene-programme tables settle this. GSE190558 is iSLK.219, a cell line with a high latent fraction, so "54 % of called cells infected" in the latent library needs the programme table before it is read as latent.
+
+## Interim 2026-11-03 (de55424)
+
+Status of the jobs (sacct): `combined_off` GSM5725695 COMPLETED (25941227_0, 57 min, MaxRSS 17 GB); `combined_artefact` GSM5725695 COMPLETED (25941230_0, 3 h 57); `twostep` GSM5725695/-96/-97 COMPLETED (25941254_0-2, 1 h 54 to 5 h 15, MaxRSS 15 GB); `twostep` GSM5725698 (_3) pending.
+OUT_OF_MEMORY at 32G (sacct MaxRSS is capped at the limit, 30.8-31.9 GB, so the true need is unknown): `combined_off` GSM5725696/-97/-98 (25941227_1-3, 1 h 10 to 1 h 26), `combined_artefact` GSM5725696/-97 (25941230_1-2, 6 h and 9 h). `combined_artefact` GSM5725698 (25941230_3) was still pending at 32G.
+Reruns into NEW dirs `<arm>_r2` (`ARM_SUFFIX=_r2`, the OOM dirs are left as they are): `combined_off_r2` rows 1-3 at 96G (job 25949104), `combined_artefact_r2` rows 1-3 at 128G (job 25949105), DSR-02 for them via chain 25949110 (`TAG=_r2`).
+The original DSR-02 chain 25941255 runs once the original arrays end; it sees only the arms that finished, and the OOM arms count as `n/a (no summary)` there. The `_r2` chain covers them, so 25941255 does not need re-running.
+
+Finished cells (table: `analysis/round_2026-11-02/kshv_summary_partial.tsv`, from `scripts/kshv_round_collect.py new`):
+
+| GSM | arm | KSHV molecules | called cells | scored for programme | latent | productive | mixed | indeterminate |
+|---|---|---|---|---|---|---|---|---|
+| GSM5725695 latent | combined_off | 59,365 | 5,690 | 2,556 | 2,523 | 0 | 0 | 33 |
+| GSM5725695 latent | combined_artefact | 59,361 | 5,690 | 2,555 | 2,522 | 0 | 0 | 33 |
+| GSM5725695 latent | twostep | 59,506 | 5,587 | 2,512 | 2,479 | 0 | 0 | 33 |
+| GSM5725696 lytic | twostep | 23,717,600 | 7,748 | 7,534 | 6,116 | 0 | 1,230 | 188 |
+| GSM5725697 lytic + casp-i | twostep | 23,600,287 | 6,597 | 6,345 | 5,295 | 1 | 914 | 135 |
+
+Molecule counts reproduce round 2 within 0.1 % (latent, three arms) and 0.5 % (lytic, twostep).
+
+PROG-16 reading: induced > uninduced holds on molecules (400x). The programme layer does not show it: in the two induced libraries almost no cell is called productive (0 and 1 of about 7,000), and most are called latent. Latent presence in the uninduced library is shown (2,523 latent cells). A productive call of 0 with 23.7 M KSHV molecules points at the productive-marker rule (uniquely placed molecules, at least 2 non-overlapping groups) failing on KSHV, not at absent lysis. Treat the acceptance test as not passed at the programme level until the marker rule is checked (open question, not diagnosed here).

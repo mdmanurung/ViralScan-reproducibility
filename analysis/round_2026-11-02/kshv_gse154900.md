@@ -47,4 +47,16 @@ Caveats: the called-cell set differs by arm (3.4 k combined, 11.5 k twostep, whi
 
 ## What this says for PROG-18 (KSHV latent validation)
 
-Detection part met on round 2: KSHV and EBV are both detected in the BC-1 library in all three arms. Not yet shown: "mostly latent, lytic minority". Round 2 wrote no programme table; the de55424 `gene_program_summary.tsv` gives latent/productive/mixed cell counts for both viruses. One library (n = 1; the second replicate cannot run) limits the claim. EBV is 0.3 % of KSHV molecules, so EBV latency calls may sit near the detection floor.
+Detection part met on round 2: KSHV and EBV are both detected in the BC-1 library in all three arms. Not yet shown: "mostly latent, lytic minority". Round 2 wrote no programme table; the `rerun-programs` table gives latent/productive/mixed cell counts for both viruses. One library (n = 1; the second replicate cannot run) limits the claim. EBV is 0.3 % of KSHV molecules, so EBV latency calls may sit near the detection floor.
+
+## Interim 2026-11-03 (de55424)
+
+`combined_off` GSM4682311 COMPLETED (25941228_4, 3 h 17, 64G). `combined_artefact` (25941231_4) running (13 h 44 at last check). `twostep` row 4 (25941254_4) pending. No OOM here.
+Gene programmes were off in the run; added with `rerun-programs` (job 25949108).
+
+| arm | virus | molecules | called cells | scored | latent | productive | mixed | indeterminate |
+|---|---|---|---|---|---|---|---|---|
+| combined_off | KSHV | 555,654 | 3,426 | 3,205 | 3,172 | 0 | 5 | 28 |
+| combined_off | EBV | 1,652 | 3,426 | 44 | 1 | 0 | 0 | 43 |
+
+Counts reproduce round 2 (555,654 and 1,652.25). PROG-18 reading: KSHV is mostly latent (3,172 of 3,205 scored cells, 99 %), with a small mixed minority (5) and no productive cell. That matches the "mostly latent" expectation, with the caveat from `kshv_gse190558.md` that the productive rule gave 0 even in induced libraries. EBV: only 44 cells scored and 43 indeterminate, so the EBV programme is not informative here. Per-cell co-infection is still not computed.

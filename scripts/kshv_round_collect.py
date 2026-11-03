@@ -28,6 +28,8 @@ def main(layout: str, root: str) -> None:
     out.writerow(["dataset", "gsm", "arm", "virus", *COLS, *PROG])
     for ds, gsm, arm, p in summaries(layout, Path(root)):
         gp = p.with_name("gene_program_summary.tsv")
+        if not gp.is_file():  # rerun-programs writes under the run dir's posthoc/
+            gp = p.parent.parent / "posthoc/programs/results/gene_program_summary.tsv"
         prog = {r["virus_name"]: r for r in csv.DictReader(gp.open(), delimiter="\t")} if gp.is_file() else {}
         for r in csv.DictReader(p.open(), delimiter="\t"):
             if VIRUS.search(r["virus_name"]):

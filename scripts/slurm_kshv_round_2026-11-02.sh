@@ -39,8 +39,9 @@ case "$ARM" in
                      EXTRA=(--host-filter starsolo --host-index "$STAR_IDX");;
   *) echo "unknown ARM $ARM" >&2; exit 2;;
 esac
-OUT=$ROUND/$GSE/$GSM/$ARM
-META=$ROUND/$GSE/$GSM/meta_$ARM
+ARMDIR=$ARM${ARM_SUFFIX:-}   # ARM_SUFFIX=_r2 for a rerun after OOM: a new dir, never the old one
+OUT=$ROUND/$GSE/$GSM/$ARMDIR
+META=$ROUND/$GSE/$GSM/meta_$ARMDIR
 [ ! -e "$OUT" ] && [ ! -e "$META" ] || { echo "exists, not reusing: $OUT" >&2; exit 5; }
 mkdir -p "$META"
 printf '%s\n' "$SHA" > "$META/code_sha.txt"; cp "$CHEM" "$META/check_chemistry.json"
