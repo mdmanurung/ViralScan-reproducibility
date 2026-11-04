@@ -1416,3 +1416,195 @@ deviations:
     review_reference: PLAN.md ANDET-08 and SENS-CAL-01 notes; analysis/round_2026-11-02/*.md (git_sha is the parent commit of
       the amending commit)
     record_sha256: 29b9c3ea702c0a4360aea995fd7f7a8525624c7d490c04f96e244dcc52b57f05
+  - deviation_id: DEV-034
+    date: '2026-11-04'
+    affected_workflow_row_ids:
+      - W10a_legacy_v2_native__synthetic_factorial
+      - W10a_legacy_v2_native__synthetic_host_only
+      - W10a_legacy_v2_native__synthetic_host_homology
+      - W10a_legacy_v2_native__hhv6b_srr20710641
+      - W10a_legacy_v2_native__ebv_srr12682296
+      - W10a_legacy_v2_native__hsv1_srr8315713
+      - W10b_legacy_v2_matched__synthetic_factorial
+      - W10b_legacy_v2_matched__synthetic_host_only
+      - W10b_legacy_v2_matched__synthetic_host_homology
+      - W10b_legacy_v2_matched__hhv6b_srr20710641
+      - W10b_legacy_v2_matched__ebv_srr12682296
+      - W10b_legacy_v2_matched__hsv1_srr8315713
+    protocol_section: workflow_matrix, references, exclusions, datasets, execution_readiness, frozen_inputs, harmonization, protocol_version
+    description: >-
+      G3 amendment, decision group 1 of 4 (scope and comparators); the whole amendment is DEV-034 to DEV-037 and is a
+      draft awaiting the next independent review round and the user's sign-off. Nothing freezes: no section status,
+      factor, freeze.* or top-level status moves, and the execution flags stay false. (1) Q6: the comparators are
+      CMP-01 to CMP-05. The head-to-head with the original evonk ViralScan 2.2.0 (CMP-06) is dropped, so workflow rows
+      W10a_legacy_v2_native and W10b_legacy_v2_matched (12 rows), the reference legacy_v2_native_panel and the keys
+      predecessor_comparison_layer, predecessor_comparable_axes and predecessor_incomparable_axes_rule are removed.
+      expected_row_count goes from 98 to 86. predecessor_comparison_rule is rewritten to say 2.2.0 is not a comparator.
+      excluded_workflows gains X_viralscan_2_2_0_head_to_head. The tool_environments blocker text drops viralscan-2.2.0
+      and the version-policy and breadth-disclosure prose follow. The endpoint E1 acceptance text still names
+      viralscan-2.2.0 among tools that declare no invariant; it is left as written because endpoints sit under the
+      harmonization dependent-fields digest and the sentence stays true. VIRTUS (W9a, W9b) is not among CMP-01 to CMP-05
+      and Q6 did not name it, so it stays. (2) Q7: translated (protein) search is out of v3 scope; new exclusion
+      X6_translated_search and excluded workflow X_translated_protein_search say it is experimental and never changes
+      detected. (3) Q14: exclusion X3_legacy_or_private says the in-house COVID libraries x213 and x216 (DSR-04) are a
+      private negative control only and never appear in public results. (4) Q17: the anellovirus_orthogonal_positive
+      exclusion_rule restates that anellovirus detection stays claim-gating. (5) protocol_version 0.3.0 becomes 0.4.0
+      for the whole amendment; the version feeds the stage-seed derivation, so no stage seed derived under 0.3.0 may be
+      reused (none has been used for a run). Digest note: the harmonization dependent-fields digest moves because
+      exclusions and a dataset field changed. The digests in DEV-034 to DEV-036 are those of the protocol after each
+      group's edits in order; the schema consts and frozen_inputs.schema_sha256 move once, in DEV-037.
+    reason: >-
+      User decisions of the 2026-11-04 grilling (Q6, Q7, Q14, Q17). The 2.2.0 head-to-head measured an implementation
+      difference that no v3 claim needs, and translated search has no dataset, endpoint or calibration in the protocol.
+    outcome_triggered: false
+    outcome_triggered_justification: >-
+      Stated under pre_freeze_runs.outcome_definition and its outcome_triggered_rule. The amendments follow from user
+      decisions; no viral outcome on a scored dataset prompted them and no workflow row has executed. The COVID x213 and
+      x216 libraries are context-only exposure already inventoried (pre_freeze_runs), and this record changes no scored row.
+    user_decisions_recorded:
+      - 'Q6 (user decision Q6, 2026-11-04): comparators are CMP-01 to CMP-05 (ViralScan arms, STARsolo arms, traditional host subtraction, Venus, Viral-Track). CMP-06, the head-to-head with the original evonk ViralScan, is dropped from v3 scope.'
+      - 'Q7 (user decision Q7, 2026-11-04): translated (protein) search is out of v3 scope, is labelled experimental and never changes detected.'
+      - 'Q14 (user decision Q14, 2026-11-04): in-house COVID x213 and x216 (DSR-04) are a private negative control only, never in public results.'
+      - 'Q17 (user decision Q17, 2026-11-04): anellovirus detection stays claim-gating; no anellovirus detection claim without an orthogonally confirmed positive (anellovirus_orthogonal_positive).'
+    user_decision_needed:
+      - 'Whether VIRTUS (W9a, W9b) stays as a comparator. It has no CMP row and Q6 named only CMP-01 to CMP-05; it is kept until the user says otherwise.'
+      - 'The G3 freeze, sign-off and date stay with the user.'
+    protocol_sha256_before: 31216b35a6f057b0b5e5592ac26272a8bbf37486f281970ba1bf770ef806a4e8
+    protocol_sha256_after: 3b01e52d02e817df16173661326fe96ac570406c62c31d2c6c38c1a2ccff2d4f
+    digest_scope: frozen_inputs.contract_sha256
+    additional_digest_changes:
+      harmonization.contract_sha256:
+        before: 16e464a661f260a4d332c8d0d1d169a2d64bf62a8d777e411d50ef5a2f4ccf43
+        after: 25086d08e0bb7436cd21f963887383544c9a32e20851449ca29ed9b8260c0b99
+      workflow_matrix.contract_sha256:
+        before: ba90792ebc913a7f90c03eeca20a1bd39431e5696a530afb78bf07616ea10bc7
+        after: 29aaf47cd91736128238996c262ccff9140857b14a63bae2a496ef78e1977cf9
+    git_sha: 69abcc6
+    review_reference: analysis/v3_validation/g3_amendment_2026-11-04.md (git_sha is the base commit the amendment was written against)
+    record_sha256: 5f5e0521426ef126b954d10eab8e67e88f12530482c54fb85c06d165424a619a
+  - deviation_id: DEV-035
+    date: '2026-11-04'
+    affected_workflow_row_ids: []
+    protocol_section: references, execution_readiness, principal_risks, frozen_inputs
+    description: >-
+      G3 amendment, decision group 2 of 4 (production reference). Nothing freezes. (1) Q9 and Q16: cat42d
+      (data/references/panel_builds/viral_ref_cat42d) is the v3 production reference. references.curated_human_virus
+      purpose says so; curated_combined_index gets that locator and keeps digest_status pending with no hash, because no
+      hash exists until the G4 rebuild. (2) G4 is a byte-identical rebuild of cat42d plus the GRCh38 D-list. The training
+      blocker production_reference is reworded to that (resolution_task REF-09 becomes REF-04). (3) REF-08 (host-homology
+      thresholds, calibrated on training data only) and REF-09 (planted human-homology reads cannot reach probable or
+      strong) move into the truth panel's training arm and report at G5; this supersedes the earlier plan (Q71, 2026-10-13)
+      that a G4 agent does them. (4) Panel changes after the freeze (HPV-11 named genes, ANELLO-13 real-gene anellovirus
+      panel, CAT-08 leave-one-out) go to release 3.1; principal_risks records that. viral_panel and host_release stay null
+      (the accession-linkage rule still says so).
+    reason: >-
+      User decisions of the 2026-11-04 grilling (Q9, Q16). A fixed reference lets G4 be a rebuild-and-hash check rather than
+      a panel design step, and keeps unfinished panel work out of the v3 claims.
+    outcome_triggered: false
+    outcome_triggered_justification: >-
+      Stated under pre_freeze_runs.outcome_definition and its outcome_triggered_rule. The choice of cat42d follows the
+      REF-06 gates of 2026-10-05 and a user decision; no viral outcome on a scored dataset prompted it.
+    user_decisions_recorded:
+      - 'Q9 (user decision Q9, 2026-11-04): freeze cat42d as the v3 production reference. G4 is a byte-identical rebuild of cat42d plus the GRCh38 D-list.'
+      - 'Q16 (user decision Q16, 2026-11-04): REF-08 and REF-09 move into the truth panel training arm and report at G5; HPV-11 named genes, ANELLO-13 and CAT-08 go to release 3.1.'
+    user_decision_needed:
+      - 'The G3 freeze, sign-off and date stay with the user. The cat42d index hashes are recorded at the G4 rebuild, not here.'
+    protocol_sha256_before: 3b01e52d02e817df16173661326fe96ac570406c62c31d2c6c38c1a2ccff2d4f
+    protocol_sha256_after: 4fb408f38ee7630de6dc5dfaf2833c8f102355e5ba5930fb93adfc3774244ac4
+    digest_scope: frozen_inputs.contract_sha256
+    git_sha: 69abcc6
+    review_reference: analysis/v3_validation/g3_amendment_2026-11-04.md (git_sha is the base commit the amendment was written against)
+    record_sha256: e5bf9d3acac7ca1bc04b52556cb47d884afbbf07c90d829127e510388b906e10
+  - deviation_id: DEV-036
+    date: '2026-11-04'
+    affected_workflow_row_ids: []
+    protocol_section: factors, seeds, frozen_inputs
+    description: >-
+      G3 amendment, decision group 3 of 4 (values G3 still needs). Nothing freezes: no factor status moves and
+      seeds.generation stays pending. (1) viral_abundance: pending_reason cites the user decision VAL-01 D3 (2026-10-05),
+      levels 1, 3, 10, 30, 100, 300, 1000, unchanged. sibling_virus_similarity cites VAL-01 D2. (2) infected_cell_fraction,
+      host_virus_homology, low_complexity, pcr_duplication, cb_umi_collisions and ambient_index_hopping keep their DEF-00
+      levels and are marked proposed_pending_user_signoff in pending_reason with a one-line rationale; the PLAN holds no
+      separate user decision on their values. (3) seeds.generation carries the proposed value 20260727005 in its
+      pending_reason (proposed_pending_user_signoff): the next integer in the root-date series after seeds.bootstrap,
+      distinct from every stage seed. The value field stays null because the frozen-key registry has no consumer entry for
+      a seed value; the signing commit writes the signed value. The owner-held holdout salt sha256 stays pending.
+    reason: >-
+      The G3 signing commit may fill factor levels and the generation seed only if they are ready for the user to sign;
+      this record marks which are decided and which are proposals, so the user signs a complete list.
+    outcome_triggered: false
+    outcome_triggered_justification: >-
+      Stated under pre_freeze_runs.outcome_definition and its outcome_triggered_rule. No generation run exists; the values
+      and the seed are set before any outcome and follow no measured result.
+    user_decisions_recorded:
+      - 'VAL-01 D3 (user, 2026-10-05): abundance is total molecules per virus per sample at 1, 3, 10, 30, 100, 300 and 1000. Restated here from PLAN VAL-01; not a new decision.'
+      - 'VAL-01 D2 (user, 2026-10-05): one_member_only added to the sibling regimes. Restated from PLAN VAL-01; not a new decision.'
+    user_decision_needed:
+      - 'Sign the proposed level sets (infected_cell_fraction, host_virus_homology, low_complexity, pcr_duplication, cb_umi_collisions, ambient_index_hopping) and the proposed seeds.generation value 20260727005 at G3.'
+    protocol_sha256_before: 4fb408f38ee7630de6dc5dfaf2833c8f102355e5ba5930fb93adfc3774244ac4
+    protocol_sha256_after: d07a185fbd4558cc70385080c0ae4dec3180814e7d14a6c17889eec657b20868
+    digest_scope: frozen_inputs.contract_sha256
+    git_sha: 69abcc6
+    review_reference: analysis/v3_validation/g3_amendment_2026-11-04.md (git_sha is the base commit the amendment was written against)
+    record_sha256: d52cf8c4feb95b643b319f3a2d7a10821e750d5c2606567499bf901771c685f4
+  - deviation_id: DEV-037
+    date: '2026-11-04'
+    affected_workflow_row_ids: []
+    protocol_section: datasets, harmonization, schema, frozen_inputs
+    description: >-
+      G3 amendment, decision group 4 of 4 (external-evaluation held-out set). Nothing freezes. Q18 to Q20 add six dataset
+      rows for the read-evidence verdict (package PLAN EVID-06): evid06_gse182227 (HPV oropharyngeal tumours, 11 HPV-positive
+      and 5 HPV-negative, 10x 3-prime with 2 libraries on 5-prime, PMID 37012457), evid06_gse166766 (SARS-CoV-2 airway
+      air-liquid-interface cultures, mock versus infected 1 to 3 days post infection, PMID 33730024), evid06_gse268542
+      (influenza A lung explant, infected versus uninfected, PMID 39395995), evid06_gse120926 (EBV nasopharyngeal carcinoma
+      versus non-malignant nasopharynx, 10x libraries only, PMID 32901110), evid06_gse184257 (KSHV EpiOral, mock versus
+      KSHV at 3 and 6 days post infection) and the reserve evid06_gse139324_reserve (HPV head and neck squamous carcinoma
+      immune cells, chemistry to be confirmed). All are analysis_role external-evaluation, truth_status contextual,
+      required false, with no_workflow_rows_reason (no workflow row, no endpoint, no comparator), chemistries left empty,
+      and an asset manifest pending with resolution_task EVID-06. They are downloaded only after the verdict code and
+      thresholds are frozen; content hashes are recorded at download. Labels are set per (library, virus) without the
+      verdict: the expected virus in an infected or virus-positive library is positive, in a mock or virus-negative
+      library negative, and any other virus called in any library a presumed host artefact unless the paper reports it.
+      Because DEV-028 bars accuracy claims from non-exact truth, the labels are presumed and the verdict is reported as
+      descriptive agreement with them, with unit counts. The evidence unit is the counted virus-best molecule of the
+      package's docs/evidence_unit.md. GSE184257 is shared with the PROG-MIXED-VETO-01 held-out gate, which reads
+      programme states only and must not open evidence outputs. Schema: the two harmonization digests pinned as const move
+      (both follow the dependent-fields digest, which covers the dataset list) and frozen_inputs.schema_sha256 follows.
+      The packaged copy of the schema in the package repository must be updated to the same bytes and the package pin
+      moved; until then tests/test_validation_protocol.py::test_packaged_schema_matches_the_canonical_schema fails.
+    reason: >-
+      User decisions of the 2026-11-04 grilling (Q18 to Q20). EVID-06 needs a named held-out set whose labels are fixed
+      before the verdict is built and whose files are not opened until the code and thresholds are frozen.
+    outcome_triggered: false
+    outcome_triggered_justification: >-
+      Stated under pre_freeze_runs.outcome_definition and its outcome_triggered_rule. No library of the new rows has been
+      downloaded or run, so no outcome on them exists; the rows are protected by scored_dataset_rule.
+    user_decisions_recorded:
+      - 'Q18 to Q20 (user decisions, 2026-11-04): the external-evaluation held-out set is GSE182227, GSE166766, GSE268542, GSE120926 (10x libraries only) and GSE184257, with GSE139324 in reserve; downloaded only after the verdict code and thresholds are frozen, hashes recorded at download; labels set per (library, virus) without the verdict.'
+    user_decision_needed:
+      - 'Whether the verdict may be scored as sensitivity and specificity. The frozen prohibition in failure_and_deviation_reporting bars accuracy claims from non-exact truth, so this record reports agreement with presumed labels only; changing that is a separate amendment.'
+      - 'Whether the PROG-MIXED-VETO-01 run on GSE184257 may precede the freeze commit (it reads programme states only).'
+      - 'The G3 freeze, sign-off and date stay with the user.'
+    field_corrections:
+      - deviation_id: DEV-035
+        field: before_digest_uncommitted
+        corrected_value: true
+        reason: DEV-034 to DEV-037 were written against one base commit (the four decision groups of one amendment), so the frozen_inputs digest between them existed only in a working tree and is unverifiable against history by construction.
+      - deviation_id: DEV-036
+        field: before_digest_uncommitted
+        corrected_value: true
+        reason: Same as DEV-035; the before-digest is the frozen_inputs digest after DEV-035's edits.
+      - deviation_id: DEV-037
+        field: before_digest_uncommitted
+        corrected_value: true
+        reason: Same as DEV-035; the before-digest is the frozen_inputs digest after DEV-036's edits.
+    protocol_sha256_before: d07a185fbd4558cc70385080c0ae4dec3180814e7d14a6c17889eec657b20868
+    protocol_sha256_after: e3ad369891785c9d68fc783d41d790073be5d47a404ea2770055251a82af5998
+    digest_scope: frozen_inputs.contract_sha256
+    additional_digest_changes:
+      harmonization.contract_sha256:
+        before: 25086d08e0bb7436cd21f963887383544c9a32e20851449ca29ed9b8260c0b99
+        after: 5db74530690817d649508050a5e9eb59cad05173cf676b099aec064497768b60
+    git_sha: 69abcc6
+    review_reference: analysis/v3_validation/g3_amendment_2026-11-04.md (git_sha is the base commit the amendment was written against)
+    record_sha256: 5c3adb2515af38a7d3a64678d707a40912e3196c6bed1c4ba91d884a746a4fc9

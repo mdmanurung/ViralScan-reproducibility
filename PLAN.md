@@ -3326,6 +3326,15 @@ review finding, is hashed, and there is no recorded pre-freeze outcome on scored
 or protected pending-row datasets (attestation wording, user, 2026-10-13).
 
 - [~] `SCI-05-R13P` — SCI-05 round 13, protocol side (`DEV-030`, 2026-10-13, base `b43fedf`; Q118-Q122)
+  - **2026-11-04 (G3 amendment draft, `codex/g3-amend-2026-11-04`, `DEV-034` to `DEV-037`, protocol 0.4.0, user decisions Q6, Q7, Q9, Q14, Q16-Q20):**
+    the draft exists and is **not signed**. It awaits the next independent review round (the reviewed baseline `R` becomes this PR's merge
+    commit after a clean round) and the user's sign-off. G3 is not passed. Summary for reviewers: `analysis/v3_validation/g3_amendment_2026-11-04.md`.
+    Groups: (1) comparators are `CMP-01`..`CMP-05`, the 2.2.0 head-to-head (`CMP-06`, rows W10a/W10b) is dropped, translated search is out of
+    scope, in-house COVID x213/x216 are a private negative control, anellovirus detection stays claim-gating; (2) `cat42d` is the production
+    reference, `G4` = byte-identical rebuild plus the GRCh38 D-list, `REF-08`/`REF-09` move to the truth panel training arm and report at `G5`;
+    (3) factor levels and `seeds.generation` are marked decided or `proposed_pending_user_signoff` (no status flips); (4) the `EVID-06`
+    external-evaluation held-out set (six `evid06_*` dataset rows, no workflow rows). The schema consts move, so the packaged schema copy and
+    `docs/workflow_comparison.md` in the package repo need the matching update and a re-pin before the two dependent tests pass in CI.
   - Round 13 (agent: 8 Majors, 12 Minors; Biomni: 6 Majors) returned does-not-pass. This row covers the protocol-side
     findings; M1-M5, BM5 and BM6 and the code Minors are on `codex/sci05-r13-code`.
   - `[x]` **M6/BM2 (Q119):** `calibration.freeze_scope`. G3 freezes the probable tier (cumulative tiers) only. Strong,
@@ -3635,6 +3644,8 @@ about 8 cluster hours per full GRCh38 build.
   preregistered training controls and freeze `thresholds.json`.
 - [ ] `REF-09` — prove planted human-homology reads cannot reach probable/strong
   evidence on holdout; retain raw measurements and all excluded calls.
+  - 2026-11-04 (user decision Q16, protocol draft `DEV-035`): `REF-08` and `REF-09` move into the truth panel's training arm and report at `G5`,
+    not `G4`. This supersedes Q71 (a G4 agent does them). Panel changes after the `cat42d` freeze (`HPV-11`, `ANELLO-13`, `CAT-08`) go to 3.1.
   - 2026-10-13 (Q96, `codex/evidence-tiers`): **depends on `TIER-01`** (the probable/strong code, now built) and on
     `SCI-03` freezing (a) a `strong` rule and (b) the exact-fragment support-fraction definition. Until a supplied
     calibration result exists, `viralscan.evidence_tiers.assign_tier` returns `uncalibrated`/`no_tier`, so the test has
@@ -5683,6 +5694,8 @@ virus recovery is contextual evidence, not ground truth.
 - [ ] `CMP-06` — (added 2026-09-30, user request) head-to-head with the
   **original ViralScan 2.2.0**, as released and run by evonk, on the **same
   reference** as v3.
+  - **2026-11-04: dropped from v3 scope (user decision Q6).** The comparators are `CMP-01`..`CMP-05`. The protocol draft removes rows W10a/W10b
+    and the legacy native panel (`DEV-034`, `SCI-05-R13P`); this row stays open only as a record of the earlier request.
   - **Scope.** The comparison measures *implementation* differences only. It
     runs 2.2.0 on the same inputs as v3. GOV-06, by contrast, compares
     *archived* 2.2.0 outputs.
@@ -6775,8 +6788,8 @@ only the rows that were missing are added below, verbatim and grouped as in the 
 | `G0` governance | `[~]` | prescribed PyPA-frontend archive build and member check; governance validators otherwise pass |
 | `G1` software | `[x]` | full unit/property/safety/tiny-workflow suite. 2026-10-05: green in the full env `viralscan_test_full` (integration 73/73, no skips; unit 1,715; ruff clean) |
 | `G2` distribution | `[~]` | clean installs, locks, Docker/Apptainer parity, supply-chain reports |
-| `G3` preregistration | `[ ]` | reviewed, schema-valid, hashed protocol frozen with no recorded pre-freeze outcome on scored or protected pending-row datasets. 2026-10-13: Q83 choices accepted and pasted (`DEV-028`); next is SCI-05 round 13, then the user's signature and the freeze commit |
-| `G4` references | `[~]` | byte-rebuild, GRCh38 D-list, calibrated holdout safeguard |
+| `G3` preregistration | `[ ]` | reviewed, schema-valid, hashed protocol frozen with no recorded pre-freeze outcome on scored or protected pending-row datasets. 2026-10-13: Q83 choices accepted and pasted (`DEV-028`); next is SCI-05 round 13, then the user's signature and the freeze commit. 2026-11-04: amendment draft `DEV-034`..`DEV-037` (protocol 0.4.0) awaits the next review round and the user's sign-off; G3 is not passed (see `SCI-05-R13P`) |
+| `G4` references | `[~]` | byte-identical rebuild of `cat42d` (the v3 production reference, Q9) and the GRCh38 D-list. 2026-11-04 (Q16): the calibrated holdout safeguard (`REF-08`, `REF-09`) moves to the truth panel training arm and reports at `G5` |
 | `G5` science | `[ ]` | truth holdout, public positives, all comparators, uncertainty, frozen bundle |
 | `G6a` docs | `[~]` | parser parity, executable docs, complete validated claim graph |
 | `G6` manuscript | `[ ]` | artifact-generated manuscript plus independent audits |

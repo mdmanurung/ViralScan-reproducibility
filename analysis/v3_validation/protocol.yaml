@@ -1,6 +1,6 @@
 schema_version: "3.0.0"
 protocol_id: viralscan-v3-validation
-protocol_version: "0.3.0"
+protocol_version: "0.4.0"
 target_release: "3.0.0"
 title: ViralScan v3 correctness, specificity, sensitivity, and workflow validation
 status: draft
@@ -59,8 +59,8 @@ harmonization:
   status: frozen
   resolution_task: SCI-02
   frozen_at: "2026-07-22T20:11:16Z"
-  contract_sha256: 16e464a661f260a4d332c8d0d1d169a2d64bf62a8d777e411d50ef5a2f4ccf43
-  dependent_fields_sha256: 77238132332872803de7f3389171865cd5ed1bbf04a77b117f48417b8dc41fa4
+  contract_sha256: 5db74530690817d649508050a5e9eb59cad05173cf676b099aec064497768b60
+  dependent_fields_sha256: c8c024d671cd490851fa03996370232a0cb0a9f75595c31e75e394381325781d
   normative_precedence: harmonization-controls-cell-feature-layer-and-denominator-semantics
   decision_timing: before-any-viral-outcome-is-inspected
   outcome_blinding:
@@ -1789,6 +1789,245 @@ datasets:
       Exclude only on checksum, corruption, mate synchronization, or unresolved chemistry.
       The two TechReps of a BioRep are one biological replicate. Never choose the
       gene-expression experiment, or drop a library, by viral signal.
+  # DEV-037 (user decisions Q18 to Q20, 2026-11-04): the external-evaluation held-out set for the
+  # read-evidence verdict (package PLAN EVID-06). These rows are not workflow-matrix datasets: no
+  # comparator, no endpoint and no workflow row. They follow the influenza_gse336913 pattern (a registered
+  # row without workflow rows) and are protected: no outcome-generating run may touch them before the
+  # freeze commit (pre_freeze_runs.scored_dataset_rule).
+  - id: evid06_gse182227
+    label: HPV-positive and HPV-negative oropharyngeal tumours (EVID-06 external evaluation, GSE182227)
+    class: public-positive
+    analysis_role: external-evaluation
+    truth_status: contextual
+    source: >-
+      GSE182227, HPV-associated oropharyngeal squamous cell carcinoma (PMID 37012457): 11 HPV-positive and 5
+      HPV-negative tumours. 10x 3-prime libraries, with 2 libraries on 5-prime chemistry. Chemistry per library is
+      confirmed by the read-structure check before any outcome run; chemistries is left empty rather than guessed.
+    chemistries: []
+    accessions: [GSE182227]
+    assets:
+      - id: GSE182227_fastq_manifest
+        role: SRA run-to-library mapping, FASTQ content hashes and per-library chemistry
+        locator: null
+        digest_status: pending
+        sha256: null
+        freeze_required: false
+        hash_source: null
+        pending_reason: >-
+          Downloaded only after the EVID-06 verdict code and thresholds are frozen; content hashes are recorded at
+          download. freeze_required is false because this row has no workflow row; promoting it needs its own
+          amendment.
+        resolution_task: EVID-06
+    expected_targets: [HPV]
+    required: false
+    no_workflow_rows_reason: >-
+      DEV-037 (Q18 to Q20): external-evaluation set for the read-evidence verdict (package PLAN EVID-06), not a
+      workflow-matrix dataset. Labels are set per (library, virus) before and without the verdict: the study's
+      expected virus in an infected or virus-positive library is positive; that virus in a mock or virus-negative
+      library is negative; any other virus called in any library is a presumed host artefact unless the paper
+      reports it. The labels are presumed, never truth (DEV-028): the verdict is reported as agreement with them,
+      descriptively, with the number of libraries and molecules, and no accuracy, sensitivity, specificity,
+      precision, recall or PPV claim is made. The evidence unit is the counted virus-best molecule of the
+      package's docs/evidence_unit.md. No run on any library may precede the commit that freezes the verdict
+      code and thresholds; a FASTQ download is data acquisition and is not such a run.
+    exclusion_rule: >-
+      Exclude only on checksum, corruption, mate synchronization, or unresolved chemistry (X1). Never drop a
+      library, or change its label, by viral signal or by the verdict.
+  - id: evid06_gse166766
+    label: SARS-CoV-2 infected and mock airway epithelium (EVID-06 external evaluation, GSE166766)
+    class: public-positive
+    analysis_role: external-evaluation
+    truth_status: contextual
+    source: >-
+      GSE166766, SARS-CoV-2 in air-liquid-interface airway epithelial cultures, mock versus infected at 1 to 3
+      days post infection (PMID 33730024). Chemistry per library is confirmed by the read-structure check before
+      any outcome run; chemistries is left empty rather than guessed.
+    chemistries: []
+    accessions: [GSE166766]
+    assets:
+      - id: GSE166766_fastq_manifest
+        role: SRA run-to-library mapping, FASTQ content hashes and per-library chemistry
+        locator: null
+        digest_status: pending
+        sha256: null
+        freeze_required: false
+        hash_source: null
+        pending_reason: >-
+          Downloaded only after the EVID-06 verdict code and thresholds are frozen; content hashes are recorded at
+          download. freeze_required is false because this row has no workflow row; promoting it needs its own
+          amendment.
+        resolution_task: EVID-06
+    expected_targets: [SARS-CoV-2]
+    required: false
+    no_workflow_rows_reason: >-
+      DEV-037 (Q18 to Q20): external-evaluation set for the read-evidence verdict (package PLAN EVID-06), not a
+      workflow-matrix dataset. Labels are set per (library, virus) before and without the verdict: the study's
+      expected virus in an infected or virus-positive library is positive; that virus in a mock or virus-negative
+      library is negative; any other virus called in any library is a presumed host artefact unless the paper
+      reports it. The labels are presumed, never truth (DEV-028): the verdict is reported as agreement with them,
+      descriptively, with the number of libraries and molecules, and no accuracy, sensitivity, specificity,
+      precision, recall or PPV claim is made. The evidence unit is the counted virus-best molecule of the
+      package's docs/evidence_unit.md. No run on any library may precede the commit that freezes the verdict
+      code and thresholds; a FASTQ download is data acquisition and is not such a run.
+    exclusion_rule: >-
+      Exclude only on checksum, corruption, mate synchronization, or unresolved chemistry (X1). Never drop a
+      library, or change its label, by viral signal or by the verdict.
+  - id: evid06_gse268542
+    label: Influenza A infected and uninfected lung explant (EVID-06 external evaluation, GSE268542)
+    class: public-positive
+    analysis_role: external-evaluation
+    truth_status: contextual
+    source: >-
+      GSE268542, influenza A virus in human lung explants, infected versus uninfected (PMID 39395995). Chemistry
+      per library is confirmed by the read-structure check before any outcome run; chemistries is left empty
+      rather than guessed.
+    chemistries: []
+    accessions: [GSE268542]
+    assets:
+      - id: GSE268542_fastq_manifest
+        role: SRA run-to-library mapping, FASTQ content hashes and per-library chemistry
+        locator: null
+        digest_status: pending
+        sha256: null
+        freeze_required: false
+        hash_source: null
+        pending_reason: >-
+          Downloaded only after the EVID-06 verdict code and thresholds are frozen; content hashes are recorded at
+          download. freeze_required is false because this row has no workflow row; promoting it needs its own
+          amendment.
+        resolution_task: EVID-06
+    expected_targets: [Influenza A virus]
+    required: false
+    no_workflow_rows_reason: >-
+      DEV-037 (Q18 to Q20): external-evaluation set for the read-evidence verdict (package PLAN EVID-06), not a
+      workflow-matrix dataset. Labels are set per (library, virus) before and without the verdict: the study's
+      expected virus in an infected or virus-positive library is positive; that virus in a mock or virus-negative
+      library is negative; any other virus called in any library is a presumed host artefact unless the paper
+      reports it. The labels are presumed, never truth (DEV-028): the verdict is reported as agreement with them,
+      descriptively, with the number of libraries and molecules, and no accuracy, sensitivity, specificity,
+      precision, recall or PPV claim is made. The evidence unit is the counted virus-best molecule of the
+      package's docs/evidence_unit.md. No run on any library may precede the commit that freezes the verdict
+      code and thresholds; a FASTQ download is data acquisition and is not such a run.
+    exclusion_rule: >-
+      Exclude only on checksum, corruption, mate synchronization, or unresolved chemistry (X1). Never drop a
+      library, or change its label, by viral signal or by the verdict.
+  - id: evid06_gse120926
+    label: EBV nasopharyngeal carcinoma and non-malignant nasopharynx, 10x libraries (EVID-06 external evaluation, GSE120926)
+    class: public-positive
+    analysis_role: external-evaluation
+    truth_status: contextual
+    source: >-
+      GSE120926, EBV-associated nasopharyngeal carcinoma versus non-malignant nasopharynx (PMID 32901110). Only
+      the 10x libraries of the series are in the set; libraries on any other platform are out by design. Chemistry
+      per library is confirmed by the read-structure check before any outcome run; chemistries is left empty
+      rather than guessed.
+    chemistries: []
+    accessions: [GSE120926]
+    assets:
+      - id: GSE120926_fastq_manifest
+        role: SRA run-to-library mapping (10x libraries only), FASTQ content hashes and per-library chemistry
+        locator: null
+        digest_status: pending
+        sha256: null
+        freeze_required: false
+        hash_source: null
+        pending_reason: >-
+          Downloaded only after the EVID-06 verdict code and thresholds are frozen; content hashes are recorded at
+          download. freeze_required is false because this row has no workflow row; promoting it needs its own
+          amendment.
+        resolution_task: EVID-06
+    expected_targets: [EBV]
+    required: false
+    no_workflow_rows_reason: >-
+      DEV-037 (Q18 to Q20): external-evaluation set for the read-evidence verdict (package PLAN EVID-06), not a
+      workflow-matrix dataset. Labels are set per (library, virus) before and without the verdict: the study's
+      expected virus in an infected or virus-positive library is positive; that virus in a mock or virus-negative
+      library is negative; any other virus called in any library is a presumed host artefact unless the paper
+      reports it. The labels are presumed, never truth (DEV-028): the verdict is reported as agreement with them,
+      descriptively, with the number of libraries and molecules, and no accuracy, sensitivity, specificity,
+      precision, recall or PPV claim is made. The evidence unit is the counted virus-best molecule of the
+      package's docs/evidence_unit.md. No run on any library may precede the commit that freezes the verdict
+      code and thresholds; a FASTQ download is data acquisition and is not such a run.
+    exclusion_rule: >-
+      Exclude only on checksum, corruption, mate synchronization, or unresolved chemistry (X1). Never drop a
+      library, or change its label, by viral signal or by the verdict. Non-10x libraries are excluded by design,
+      before download.
+  - id: evid06_gse184257
+    label: KSHV and mock EpiOral epithelium (EVID-06 external evaluation, GSE184257)
+    class: public-positive
+    analysis_role: external-evaluation
+    truth_status: contextual
+    source: >-
+      GSE184257, EpiOral oral epithelial cultures, mock versus KSHV at 3 and 6 days post infection. Chemistry per
+      library is confirmed by the read-structure check before any outcome run; chemistries is left empty rather
+      than guessed. The PROG-MIXED-VETO-01 held-out gate also uses this dataset (see no_workflow_rows_reason).
+    chemistries: []
+    accessions: [GSE184257]
+    assets:
+      - id: GSE184257_fastq_manifest
+        role: SRA run-to-library mapping, FASTQ content hashes and per-library chemistry
+        locator: null
+        digest_status: pending
+        sha256: null
+        freeze_required: false
+        hash_source: null
+        pending_reason: >-
+          Downloaded only after the EVID-06 verdict code and thresholds are frozen; content hashes are recorded at
+          download. freeze_required is false because this row has no workflow row; promoting it needs its own
+          amendment.
+        resolution_task: EVID-06
+    expected_targets: [KSHV]
+    required: false
+    no_workflow_rows_reason: >-
+      DEV-037 (Q18 to Q20): external-evaluation set for the read-evidence verdict (package PLAN EVID-06), not a
+      workflow-matrix dataset. Labels are set per (library, virus) before and without the verdict: the study's
+      expected virus in an infected or virus-positive library is positive; that virus in a mock or virus-negative
+      library is negative; any other virus called in any library is a presumed host artefact unless the paper
+      reports it. The labels are presumed, never truth (DEV-028): the verdict is reported as agreement with them,
+      descriptively, with the number of libraries and molecules, and no accuracy, sensitivity, specificity,
+      precision, recall or PPV claim is made. The evidence unit is the counted virus-best molecule of the
+      package's docs/evidence_unit.md. No run on any library may precede the commit that freezes the verdict
+      code and thresholds; a FASTQ download is data acquisition and is not such a run. Shared use: the
+      PROG-MIXED-VETO-01 held-out gate reads host programme states only and must not open evidence outputs
+      (verdicts, molecule tables, viral counts or tiers) of this dataset. A run that does open them is
+      outcome-generating (pre_freeze_runs.outcome_definition). Whether the programme gate's own run may precede
+      the freeze commit is left to the user at sign-off.
+    exclusion_rule: >-
+      Exclude only on checksum, corruption, mate synchronization, or unresolved chemistry (X1). Never drop a
+      library, or change its label, by viral signal or by the verdict.
+  - id: evid06_gse139324_reserve
+    label: HPV-positive head and neck squamous carcinoma immune cells (EVID-06 reserve, GSE139324)
+    class: public-positive
+    analysis_role: external-evaluation
+    truth_status: contextual
+    source: >-
+      GSE139324, immune cells from HPV-associated head and neck squamous cell carcinoma. Reserve dataset. Its
+      chemistry is not yet confirmed and is settled by the read-structure check (check-chemistry) before any use.
+    chemistries: []
+    accessions: [GSE139324]
+    assets:
+      - id: GSE139324_fastq_manifest
+        role: SRA run-to-library mapping, FASTQ content hashes and per-library chemistry
+        locator: null
+        digest_status: pending
+        sha256: null
+        freeze_required: false
+        hash_source: null
+        pending_reason: >-
+          Reserve: not downloaded unless a ledgered amendment, made before any outcome run, brings it into the set.
+          Content hashes are recorded at download.
+        resolution_task: EVID-06
+    expected_targets: [HPV]
+    required: false
+    no_workflow_rows_reason: >-
+      DEV-037 (Q18 to Q20): reserve for the EVID-06 external-evaluation set, not a workflow-matrix dataset and not
+      part of the set until a ledgered amendment, made before any outcome run, says so (for example when a listed
+      dataset fails X1 or its chemistry check). The same label, presumed-label and reporting rules as the five
+      listed datasets apply: no verdict is run on it, no label is set, and no accuracy, sensitivity, specificity,
+      precision, recall or PPV claim is made.
+    exclusion_rule: >-
+      Exclude only on checksum, corruption, mate synchronization, or unresolved chemistry (X1). Never drop a
+      library, or change its label, by viral signal or by the verdict.
   - id: anellovirus_orthogonal_positive
     label: Orthogonally confirmed anellovirus positive
     class: orthogonal-positive
@@ -1814,7 +2053,9 @@ datasets:
       would not be exact, and real-data labels are presumed, never known (DEV-028, DEV-030).
       Without it, publish screening support only. If a lawful sample is found it is reported
       descriptively under E11, with the number of units, and it gates the wording of
-      screening-support claims only.
+      screening-support claims only. DEV-034 (user decision Q17, 2026-11-04): anellovirus detection stays
+      claim-gating. No anellovirus detection claim is made without an orthogonally confirmed positive in this
+      dataset; the gate is not relaxed by the 3.1 anellovirus panel work (ANELLO-13).
 
 factors:
   # DEF-00: every level below is proposed, not frozen. Each factor stays pending
@@ -1828,7 +2069,9 @@ factors:
     status: pending
     levels: [1, 3, 10, 30, 100, 300, 1000]
     resolution_task: VAL-01
-    pending_reason: Proposed by DEF-00; frozen at G3.
+    pending_reason: >-
+      Decided by the user (VAL-01 D3, 2026-10-05): total molecules per virus per sample at 1, 3, 10, 30,
+      100, 300 and 1000. DEV-036 records the decision. The status flips to frozen in the G3 signing commit.
   - id: infected_cell_fraction
     description: >-
       Fraction of a sample's 2,000 cells designated for each virus (DEF-00 B10):
@@ -1839,7 +2082,10 @@ factors:
     status: pending
     levels: [0.01, 0.04, 0.15]
     resolution_task: VAL-01
-    pending_reason: Proposed by DEF-00; frozen at G3.
+    pending_reason: >-
+      proposed_pending_user_signoff (DEV-036). Written by the DEF-00 amendment (DEV-020); the PLAN holds no
+      separate user decision on these values. Rationale: 20, 80 and 300 designated cells of 2,000. The user signs
+      the level set at G3.
   - id: host_virus_homology
     description: >-
       Presence of host-derived challenge reads homologous to the panel (DEF-00
@@ -1858,7 +2104,11 @@ factors:
     status: pending
     levels: [none, repeat_homology]
     resolution_task: REF-07
-    pending_reason: Proposed by DEF-00 from the REF-07 table; frozen at G3.
+    pending_reason: >-
+      proposed_pending_user_signoff (DEV-036). Two levels taken from the REF-07 table (DEF-00 section F, set
+      at the user's instruction): REF-07 found the viral-to-GRCh38 homology is 98.8 percent low-complexity
+      (F-023), so identity bands have no material and one planted level, repeat_homology, over 89 clusters (70
+      training, 19 holdout, assigned whole) is all the table supports. The user signs the level set at G3.
   - id: sibling_virus_similarity
     description: >-
       Planting regime for each partitions.sibling_virus_pairs pair (DEF-00 B3,
@@ -1870,7 +2120,9 @@ factors:
     status: pending
     levels: [disjoint_cells, co_infected, one_member_only]
     resolution_task: VAL-01
-    pending_reason: Proposed by DEF-00; frozen at G3.
+    pending_reason: >-
+      Decided by the user (VAL-01 D2, 2026-10-05: one_member_only added for the absent-sibling metric); the
+      three regimes are recorded by DEV-036. The status flips to frozen in the G3 signing commit.
   - id: low_complexity
     description: >-
       Fraction of library reads that are low-complexity artefact reads (DEF-00
@@ -1881,7 +2133,10 @@ factors:
     status: pending
     levels: [0, 0.01, 0.05]
     resolution_task: VAL-01
-    pending_reason: Proposed by DEF-00; frozen at G3.
+    pending_reason: >-
+      proposed_pending_user_signoff (DEV-036). Written by the DEF-00 amendment (DEV-020); the PLAN holds no
+      separate user decision on these values. Rationale: 0, 1 and 5 percent artefact reads bracket the measured
+      artefact classes. The user signs the level set at G3.
   - id: pcr_duplication
     description: >-
       Mean reads per source molecule (DEF-00 B12), drawn as one plus a geometric
@@ -1889,7 +2144,10 @@ factors:
     status: pending
     levels: [2, 5, 10]
     resolution_task: VAL-01
-    pending_reason: Proposed by DEF-00; frozen at G3.
+    pending_reason: >-
+      proposed_pending_user_signoff (DEV-036). Written by the DEF-00 amendment (DEV-020); the PLAN holds no
+      separate user decision on these values. Rationale: mean 2, 5 and 10 reads per source molecule span low to
+      heavy duplication at 25,000 reads per cell. The user signs the level set at G3.
   - id: cb_umi_collisions
     description: >-
       Fraction of viral molecules given a corrected CB-UMI collision (DEF-00
@@ -1898,7 +2156,10 @@ factors:
     status: pending
     levels: [0, 0.005, 0.02]
     resolution_task: VAL-01
-    pending_reason: Proposed by DEF-00; frozen at G3.
+    pending_reason: >-
+      proposed_pending_user_signoff (DEV-036). Written by the DEF-00 amendment (DEV-020); the PLAN holds no
+      separate user decision on these values. Rationale: 0, 0.5 and 2 percent of viral molecules collide on a
+      corrected CB-UMI key. The user signs the level set at G3.
   - id: ambient_index_hopping
     description: >-
       Fraction of each virus's molecules relocated as contamination (DEF-00
@@ -1908,7 +2169,10 @@ factors:
     status: pending
     levels: [0, 0.01, 0.05]
     resolution_task: VAL-01
-    pending_reason: Proposed by DEF-00; frozen at G3.
+    pending_reason: >-
+      proposed_pending_user_signoff (DEV-036). Written by the DEF-00 amendment (DEV-020); the PLAN holds no
+      separate user decision on these values. Rationale: 0, 1 and 5 percent of a virus's molecules relocated as
+      ambient or index-hopped contamination. The user signs the level set at G3.
   - id: chemistry
     description: Supported barcode and UMI geometry.
     status: frozen
@@ -1932,6 +2196,12 @@ seeds:
     resolution_task: VAL-01
     freeze_required: true
     pending_reason: >-
+      proposed_pending_user_signoff (DEV-036): 20260727005. Rationale: the next integer after
+      seeds.bootstrap in the root-date series (20260727 plus 001 to 004), distinct from every other
+      stage seed, set before any generation run exists. The generator is Python, so the R integer
+      limit that hit seeds.cell_calling (Q154) does not apply. The value field stays null on
+      purpose: the frozen-key registry has no consumer entry for a seed value yet, and the G3 signing
+      commit writes the signed value and flips the status.
       Simulator RNG and version are not implemented. DEF-00 B9 (D6): training
       generation derives from seeds.root alone and is reproducible from the
       protocol. Holdout generation also takes an owner-held secret salt; the
@@ -1963,9 +2233,15 @@ references:
     profile: curated
     purpose: >-
       Primary combined host-plus-virus quantification and competitive evidence
-      reference. DEF-00 C2: the candidate is cat42d, which is cat42b plus a
-      checksum-pinned GRCh38 genome D-list (3,094,720 D-list k-mers); it passed
-      every REF-06 gate on 2026-10-05 and stays a candidate until the G4 freeze.
+      reference. DEF-00 C2: cat42d is cat42b plus a checksum-pinned GRCh38
+      genome D-list (3,094,720 D-list k-mers); it passed every REF-06 gate on
+      2026-10-05. DEV-035 (user decisions Q9 and Q16, 2026-11-04): cat42d
+      (data/references/panel_builds/viral_ref_cat42d) is the v3 production
+      reference and no other panel is a candidate. G4 is a byte-identical
+      rebuild of cat42d plus the GRCh38 D-list; hashes are recorded at that
+      rebuild. Panel changes after this choice (HPV-11 named genes, ANELLO-13
+      real-gene anellovirus panel, CAT-08 leave-one-out) go to release 3.1 and
+      do not enter the v3 panel.
     host_release: null
     viral_panel: null
     assets:
@@ -1976,7 +2252,9 @@ references:
         sha256: null
         freeze_required: true
         hash_source: null
-        pending_reason: Curated panel and host release are not frozen.
+        pending_reason: >-
+          The panel is cat42d (DEV-035, Q9 and Q16). Its accession manifest and the
+          host release are pinned at the G4 byte-identical rebuild.
         resolution_task: REF-01
       - id: full_human_genome_dlist
         role: checksum-pinned full-genome host-competition D-list
@@ -1993,12 +2271,15 @@ references:
         resolution_task: REF-06
       - id: curated_combined_index
         role: production quantification index, t2g, GTF, and build manifest
-        locator: null
+        locator: data/references/panel_builds/viral_ref_cat42d
         digest_status: pending
         sha256: null
         freeze_required: true
         hash_source: null
-        pending_reason: Production reference depends on REF-01 through REF-07.
+        pending_reason: >-
+          DEV-035 (Q9 and Q16): the production index is cat42d. Its index, t2g, GTF and
+          build manifest are hashed at the G4 byte-identical rebuild; no hash is
+          recorded here before that rebuild.
         resolution_task: REF-07
   - id: venus_native_panel
     profile: native-published
@@ -2065,30 +2346,6 @@ references:
         pending_reason: >-
           The panel ships inside the tool's pinned container, so its identity is
           fixed only when the container digest is pinned.
-        resolution_task: REL-03
-  - id: legacy_v2_native_panel
-    profile: native-published
-    purpose: >-
-      Viral annotation panel bundled with ViralScan 2.2.0. This is the panel the
-      original package actually shipped, and the one whose contents produced the
-      absent HIV-1 feature observed in the GOV-06 diagnostic. Running the legacy
-      arm on it measures the original's reference as its users had it. It does
-      not measure the original's reported product: only the adapter-eligible
-      counts_original layer is scored, so 2.2.0's multimap correction is
-      described but never scored. See workflow_matrix.predecessor_comparison_layer.
-    host_release: null
-    viral_panel: null
-    assets:
-      - id: legacy_v2_native_panel_manifest
-        role: viral GTF panel distributed with ViralScan 2.2.0
-        locator: null
-        digest_status: pending
-        sha256: null
-        freeze_required: true
-        hash_source: null
-        pending_reason: >-
-          The panel is fixed by the pinned 2.2.0 environment, so its identity is
-          established when that environment is pinned.
         resolution_task: REL-03
   - id: anellovirus_representative
     profile: anellovirus-representative
@@ -2505,9 +2762,13 @@ frozen_inputs:
     - DEV-031
     - DEV-032
     - DEV-033
+    - DEV-034
+    - DEV-035
+    - DEV-036
+    - DEV-037
   # DEV-027 (SCI-05 round 12, m2): canonical sha256 of the validation schema. The
   # schema pins the harmonization digests as const and was itself in no digest.
-  schema_sha256: 1c9609a844e99820c055d8e342c26d2914547f705d48b56a18567451faaf74a1
+  schema_sha256: a2c2b75ce12bc7a37f99b3afc6e99fb8e8c3302c04844b8fd4e1a0580e9f8fbd
   threat_model: >-
     This scheme is tamper-evident against accidental and partial edits: a digest
     left stale, a ledger record edited without re-chaining, a blocker deleted in
@@ -2539,7 +2800,7 @@ frozen_inputs:
     trust, so this detects a changed claim, not a false one. It does not cover
     prose fields elsewhere in the protocol whose sections carry their own
     contract digests.
-  contract_sha256: 31216b35a6f057b0b5e5592ac26272a8bbf37486f281970ba1bf770ef806a4e8
+  contract_sha256: e3ad369891785c9d68fc783d41d790073be5d47a404ea2770055251a82af5998
 
 exclusions:
   - id: X1_invalid_input
@@ -2552,7 +2813,11 @@ exclusions:
     rationale: They are outside the v3 production contract.
   - id: X3_legacy_or_private
     scope: result and manuscript
-    rule: Exclude all pre-v3 corrected/combined counts and private clinical results lacking ethics and access documentation.
+    rule: >-
+      Exclude all pre-v3 corrected/combined counts and private clinical results lacking ethics and access documentation.
+      DEV-034 (user decision Q14, 2026-11-04): the in-house COVID libraries x213 and x216 (PLAN DSR-04) are a private
+      negative control only. They appear in no public result, table, figure, release file or manuscript, and no
+      public claim cites a number from them.
     rationale: Legacy values are scientifically incompatible; private human data require owner-supplied governance.
   - id: X4_unsafe_workflow
     scope: workflow row
@@ -2562,6 +2827,13 @@ exclusions:
     scope: all analyses
     rule: Never exclude low performance, ambiguous molecules, candidate false evidence, comparator crashes/timeouts, or unfavourable public samples after outcomes are known.
     rationale: Such exclusions create selection and reporting bias; failures remain planned rows.
+  - id: X6_translated_search
+    scope: claim and workflow
+    rule: >-
+      DEV-034 (user decision Q7, 2026-11-04): translated (protein) search is outside v3 scope. Any translated-search
+      output is labelled experimental, is not a protocol workflow row, and never changes detected, an evidence tier,
+      a called cell or any endpoint value.
+    rationale: It has no dataset, endpoint or calibration in this protocol, so a claim that rests on it would be unregistered.
 
 workflow_matrix:
   status: pending
@@ -2622,8 +2894,8 @@ workflow_matrix:
       pinned at its latest tagged release on the REL-03 pin date, never a branch
       head, unless that release changed the published defaults the row measures,
       in which case the release named in the tool's publication is pinned and the
-      substitution is recorded in a deviation record. ViralScan 2.2.0 is fixed.
-      The matrix is frozen at G3 before the pins exist; REL-03 fills tool_version
+      substitution is recorded in a deviation record. ViralScan 2.2.0 is not in
+      the matrix (DEV-034, Q6). The matrix is frozen at G3 before the pins exist; REL-03 fills tool_version
       and container_digest by one amendment (DEV-028, UC-W1).
     execution_gate:
       guard: scripts.validate_v3_protocol.require_execution_allowed
@@ -2808,73 +3080,17 @@ workflow_matrix:
         - hhv6b_srr20710641
         - ebv_srr12682296
         - hsv1_srr8315713
-    - id: W10a_legacy_v2_native
-      tool: viralscan-2.2.0
-      mode: published-default-legacy-v2
-      role: comparator
-      reference_id: legacy_v2_native_panel
-      reference_resolution: native-published
-      dataset_ids:
-        - synthetic_factorial
-        - synthetic_host_only
-        - synthetic_host_homology
-        - hhv6b_srr20710641
-        - ebv_srr12682296
-        - hsv1_srr8315713
-    - id: W10b_legacy_v2_matched
-      tool: viralscan-2.2.0
-      mode: published-default-legacy-v2
-      role: comparator
-      reference_id: curated_human_virus
-      reference_resolution: matched-accession-index
-      native_counterpart: W10a_legacy_v2_native
-      dataset_ids:
-        - synthetic_factorial
-        - synthetic_host_only
-        - synthetic_host_homology
-        - hhv6b_srr20710641
-        - ebv_srr12682296
-        - hsv1_srr8315713
-  predecessor_comparison_layer: >-
-    ViralScan 2.2.0's reported product sums a UMI-deduplicated unique-mapping
-    term with a read-weighted fractional multimap term, so the product itself is
-    not an integer unique-molecule quantity and cannot satisfy the cross-tool
-    adapter. The scored layer for both legacy arms is therefore counts_original,
-    its UMI-deduplicated unique-mapping term, which is adapter-eligible. This
-    must be stated wherever a legacy number appears, because counts_original is
-    the kb-python unique-mapping output rather than 2.2.0's distinguishing
-    multimap correction: the comparison measures the counting contract the two
-    versions share, not the correction that differs. The merged 2.2.0 product is
-    declared incomparable at every endpoint under the existing
-    missing_equivalent_policy, and is reported descriptively only.
-  predecessor_comparable_axes:
-    - molecule-precision-recall-f1-on-counts_unique
-  predecessor_incomparable_axes_rule: >-
-    Cell precision, recall, and F1, negative false-call rate, cell-level sibling
-    confusion, host-virus allocation error, and limit of detection are all
-    denominated on the evidence-tier layer, which is ViralScan-internal and has
-    no comparator adapter. No claim on those axes may be made against ViralScan
-    2.2.0 or any other comparator unless an adapter is first declared and frozen
-    for it. Reporting them as not-applicable is required; reporting them as a
-    comparator failure or as zero is prohibited.
   predecessor_comparison_rule: >-
-    ViralScan 2.2.0 is included as a comparator so that any claim that v3
-    improves on the original is a measured claim rather than a count ratio. The
-    two versions report different units: 2.2.0 emits read and BUS-weighted values
-    that can be fractional, v3 emits integer corrected-barcode-UMI molecules. A
-    difference in reported magnitude between them is therefore definitional and
-    carries no information about which is more correct. Only truth-panel metrics
-    may support an improvement claim, and only those denominated on a layer both
-    tools can produce. As of SCI-05 round 5 that is exactly one axis: molecule
-    precision, recall, and F1 on counts_unique, listed in
-    predecessor_comparable_axes. Every other axis once contemplated here, namely
-    cell precision, recall, and F1, negative false-call rate, sibling confusion,
-    host-virus allocation error, and limit of detection, is denominated on the
-    ViralScan-internal evidence-tier layer and is governed by
-    predecessor_incomparable_axes_rule, which requires reporting it as
-    not-applicable rather than as a comparator result. The comparable axis must be
-    reported with its denominator, and an improvement on it may not be reported as
-    general superiority.
+    DEV-034 (user decision Q6, 2026-11-04): ViralScan 2.2.0 is not a comparator in
+    v3. The comparators are CMP-01 to CMP-05 (ViralScan arms, STARsolo arms,
+    traditional host subtraction, Venus, Viral-Track). The head-to-head with the
+    original evonk ViralScan (CMP-06, former rows W10a and W10b) is out of v3
+    scope, so no claim in a v3 result that v3 improves on 2.2.0 rests on this
+    protocol. The two versions report different units (2.2.0 emits read and
+    BUS-weighted values that can be fractional, v3 emits integer corrected
+    barcode-UMI molecules), so any comparison of reported magnitudes is
+    definitional and not a measure of correctness. Archived 2.2.0 outputs stay
+    descriptive context under the GOV-06 diagnostic and exclusion X3.
   accession_linkage_rule: >-
     A matched-accession-index arm must build its index from the same accession set
     that its native counterpart's bundled panel contains. Today every relevant
@@ -2894,6 +3110,24 @@ workflow_matrix:
       revisit_condition: >-
         Include only if exact fragment lineage becomes available and is audited
         before any outcome is inspected.
+    - id: X_viralscan_2_2_0_head_to_head
+      reason: >-
+        DEV-034 (user decision Q6, 2026-11-04): the same-input head-to-head with
+        the original evonk ViralScan 2.2.0 (PLAN CMP-06; former rows W10a and
+        W10b, 12 rows) is dropped from v3 scope. It measured an implementation
+        difference that no v3 claim needs, and its only comparable axis was
+        molecule precision, recall and F1 on counts_unique.
+      revisit_condition: >-
+        Re-enter only by a ledgered amendment before any outcome run, with its own
+        workflow rows, native and matched reference arms and environment pins.
+    - id: X_translated_protein_search
+      reason: >-
+        DEV-034 (user decision Q7, 2026-11-04): translated (protein) search is out
+        of v3 scope. It is an experimental feature, has no workflow row, and never
+        changes detected or any evidence tier (see exclusion X6_translated_search).
+      revisit_condition: >-
+        Protocol v2 or a later ledgered amendment that registers a dataset, an
+        endpoint and a workflow row for it.
   no_silent_algorithm_patch: >-
     Venus, Viral-Track, and VIRTUS run in isolated, digest-pinned environments at
     their published defaults. Any change to a comparator's algorithm, parameters,
@@ -2917,8 +3151,11 @@ workflow_matrix:
     uncontested and hypothetical coverage as if it were measured comparison. W2
     was extended from six datasets to all thirteen under the standard-arm-set rule
     (DEV-028, UC-W3); no dataset is not-applicable for W2. The comparator rows stay
-    at six datasets. A fourteenth registered dataset,
-    influenza_gse336913, has no workflow row (DEV-027) and is in no count.
+    at six datasets. Registered datasets that have no workflow row
+    (influenza_gse336913, DEV-027; the EVID-06 external-evaluation set, DEV-037)
+    are in no count. DEV-034 (Q6) removed the ViralScan 2.2.0 rows, so the
+    comparator rows are those of STARsolo, traditional host subtraction, Venus,
+    Viral-Track and VIRTUS.
   chemistry_confound_disclosure: >-
     Chemistry is confounded with virus in the public positives: EBV appears only
     under 10x v2, HSV-1 only under Drop-seq, and HHV-6B and KSHV only under
@@ -2934,8 +3171,8 @@ workflow_matrix:
     any tier-dependent endpoint, may omit this asymmetry. The cross-tool parity
     endpoint is unaffected, because its layer is counts_unique rather than the
     tuned allocated product.
-  expected_row_count: 98
-  contract_sha256: ba90792ebc913a7f90c03eeca20a1bd39431e5696a530afb78bf07616ea10bc7
+  expected_row_count: 86
+  contract_sha256: 29aaf47cd91736128238996c262ccff9140857b14a63bae2a496ef78e1977cf9
 
 failure_and_deviation_reporting:
   status: pending
@@ -3083,8 +3320,16 @@ execution_readiness:
         and tests them, no outcome-generating run may use a scored dataset.
       resolution_task: SCI-04
     - id: production_reference
-      description: Curated reference, GRCh38 D-list, and calibrated host-homology safeguards are pending.
-      resolution_task: REF-09
+      description: >-
+        DEV-035 (user decisions Q9 and Q16, 2026-11-04). The production reference is
+        chosen: cat42d. What is pending is its G4 record, a byte-identical rebuild of
+        cat42d plus the GRCh38 D-list, with every hash written down. The calibrated
+        host-homology safeguards are no longer a G4 item. REF-08 (host-homology
+        thresholds, calibrated on training data only) and REF-09 (planted
+        human-homology reads cannot reach probable or strong) run in the truth
+        panel's training arm and report at G5. This supersedes the earlier plan
+        (Q71, 2026-10-13) that a G4 agent does REF-08 and REF-09.
+      resolution_task: REF-04
     - id: real_background_anchor
       description: >-
         The principal dataset needs real healthy-donor PBMC backgrounds whose called cells are
@@ -3104,8 +3349,8 @@ execution_readiness:
     - id: tool_environments
       description: >-
         Versions and container digests are pending for every comparator tool:
-        starsolo, traditional-host-subtraction, venus, viral-track, virtus,
-        viralscan-2.2.0.
+        starsolo, traditional-host-subtraction, venus, viral-track, virtus.
+        DEV-034 (Q6) removed viralscan-2.2.0, which is no longer a comparator.
       resolution_task: REL-03
   holdout_blockers:
     - id: training_gate
@@ -3211,3 +3456,10 @@ principal_risks:
     sibling split between EBV1 and EBV2. Whole-genome or windowed herpes pseudo-transcripts
     would address the annotation and edge losses and are deferred to protocol v2. Until then
     herpes recovery is reported as measured, together with this limitation.
+  - >-
+    Frozen production panel (DEV-035, user decisions Q9 and Q16, 2026-11-04): v3 ships cat42d as
+    built. Known gaps are deferred to release 3.1 and are not v3 claims: the HPV-11 named-gene
+    panel, the ANELLO-13 real-gene anellovirus panel and the CAT-08 leave-one-out measurement.
+    Host-homology safeguards (REF-08, REF-09) are measured in the truth panel's training arm and
+    reported at G5, so G4 does not certify them. Read any v3 specificity result for HPV or
+    anellovirus targets with that limit in mind.
