@@ -39,7 +39,9 @@ supported_scope:
     geometry: [10xv2, 10xv3]
     strand_handling: >-
       Strand comes from --strand when given, otherwise from a one-million-read
-      pilot inference (R2.6), and is recorded in the run manifest.
+      pilot inference (R2.6), and is recorded in the run manifest. This fallback is kept
+      (user decision, 2026-11-04, DEV-040). A per-chemistry strand default may enter only by
+      a later ledgered amendment made before the freeze, drawn from measured strand data.
     validation_status: >-
       Pending. The VAL-01 first build has no 5-prime read model (reads at the TSS,
       R2 antisense under -x 10xv2); it is added with DEF-02 strand handling, and
@@ -59,8 +61,8 @@ harmonization:
   status: frozen
   resolution_task: SCI-02
   frozen_at: "2026-07-22T20:11:16Z"
-  contract_sha256: 5db74530690817d649508050a5e9eb59cad05173cf676b099aec064497768b60
-  dependent_fields_sha256: c8c024d671cd490851fa03996370232a0cb0a9f75595c31e75e394381325781d
+  contract_sha256: a44536dfaf67a2a32686280313fc143ce0b359762dfabc186f40c212c002f8fb
+  dependent_fields_sha256: 9b2944105d348f5df93e6bbe14ea7e684cfa4f02254776fcaed7c7ec8a8e15e4
   normative_precedence: harmonization-controls-cell-feature-layer-and-denominator-semantics
   decision_timing: before-any-viral-outcome-is-inspected
   outcome_blinding:
@@ -1254,7 +1256,7 @@ endpoints:
       conserve molecule mass by construction, and scoring it here would make a
       safety hypothesis about v3 permanently unpassable for reasons unrelated to
       v3. Of the declared tools only viralscan declares such an invariant.
-      starsolo, traditional-host-subtraction, venus, viral-track, virtus, and
+      starsolo, traditional-host-subtraction, venus, viral-track, and
       viralscan-2.2.0 declare none and are not-applicable here; a comparator
       enters scope only by declaring the invariant explicitly.
   - id: E2_negative_false_calls
@@ -1802,7 +1804,7 @@ datasets:
     source: >-
       GSE182227, HPV-associated oropharyngeal squamous cell carcinoma (PMID 37012457): 11 HPV-positive and 5
       HPV-negative tumours. 10x 3-prime libraries, with 2 libraries on 5-prime chemistry. Chemistry per library is
-      confirmed by the read-structure check before any outcome run; chemistries is left empty rather than guessed.
+      confirmed by the read-structure check run after the EVID-06 freeze (DEV-040: only acquisition and hashing before it); chemistries is left empty rather than guessed.
       Per-library chemistry is captured, not per series: 5-prime libraries change read start and strand, so the
       strand check (package EVID-03) is calibrated per library on host exons and a library with unknown chemistry is
       not assessed. Review round 13 (F9, and the paper reading behind it) reports one tumour (OP8) that was
@@ -1820,9 +1822,8 @@ datasets:
         hash_source: null
         pending_reason: >-
           DEV-038 global rule: acquisition and content hashing may precede the freeze for any dataset (a
-          download is not a run). Content hashes are recorded at download; no run that produces a viral call, count,
-          tier, label or verdict on any library precedes the commit that freezes the EVID-06 verdict code and
-          thresholds. freeze_required is false because this row has no workflow row; promoting it needs its own
+          download is not a run). Content hashes are recorded at download; no run or check of any kind (user-approved 2026-11-04, DEV-040: before the freeze only acquisition and
+          content hashing) precedes the commit that freezes the EVID-06 verdict code and thresholds. freeze_required is false because this row has no workflow row; promoting it needs its own
           amendment.
         resolution_task: EVID-06
     expected_targets: [HPV]
@@ -1831,11 +1832,20 @@ datasets:
       DEV-037 (Q18 to Q20): external-evaluation set for the read-evidence verdict (package PLAN EVID-06), not a
       workflow-matrix dataset. Labels are set per (library, virus) before and without the verdict: the study's
       expected virus in an infected or virus-positive library is positive; that virus in a mock or virus-negative
-      library is negative; any other virus called in any library is classed, before the verdict, as (a)
-      unexpected but biologically plausible (reported separately, not counted against agreement; an unlisted virus with
-      orthogonal support in the evidence output is never a disagreement), (b) endogenous or integrated (ciHHV-6, HERV,
-      integrated-HPV chimeras; flagged by the evidence step and left out of the artefact tally) or (c) technical
-      artefact (counted as disagreement), unless the paper reports it (DEV-038, review round 13 F3). The labels are
+      library is negative; any other virus called in any library is assigned one class by the ordered rule below (DEV-040; the three
+      classes and the requirement that the rule is written and frozen before unblinding are user-approved,
+      2026-11-04). The rule is applied once per (library, virus), from the evidence output and the study record
+      alone, before the verdict is unblinded, and a class is never revised afterwards. Step 1: if the study
+      reports that virus in that library, it takes the study's label for that (library, virus) and is not classed.
+      Step 2: else, if the evidence step flags it as endogenous or integrated (ciHHV-6, HERV, integrated-HPV
+      chimera), it is class (b), reported separately and left out of the artefact tally. Step 3: else, if the
+      evidence output carries orthogonal support for it, it is class (a), unexpected but biologically plausible,
+      reported separately and not counted against agreement. Step 4: else it is class (c), technical artefact,
+      counted as disagreement. Only class (c) is a disagreement. OPEN ITEM EVID06-OV-1 (for the user): the
+      protocol and the amendment do not say which evidence-output field and values mean "flagged as endogenous or
+      integrated" (step 2) or "orthogonal support" (step 3), and the order of steps 2 and 3 is a proposal (it
+      does not change the disagreement tally, only which separate report lists the virus). The rule cannot be
+      frozen, and no class is assigned, until the user fixes both tests. The labels are
       presumed, never truth (DEV-028): the verdict is reported as agreement with them, descriptively, per library
       with the number of libraries and molecules, with no pooling across libraries or datasets as if they were
       replicates (most arms are one biological unit, so no claim generalises across donors), and no accuracy, sensitivity, specificity,
@@ -1852,8 +1862,7 @@ datasets:
     truth_status: contextual
     source: >-
       GSE166766, SARS-CoV-2 in air-liquid-interface airway epithelial cultures, mock versus infected at 1 to 3
-      days post infection (PMID 33730024). Chemistry per library is confirmed by the read-structure check before
-      any outcome run; chemistries is left empty rather than guessed. Review round 13 (F7) reports one epithelial
+      days post infection (PMID 33730024). Chemistry per library is confirmed by the read-structure check run after the EVID-06 freeze (DEV-040: only acquisition and hashing before it); chemistries is left empty rather than guessed. Review round 13 (F7) reports one epithelial
       source with single libraries per time point: one biological unit per arm, reported per library.
     chemistries: []
     accessions: [GSE166766]
@@ -1867,9 +1876,8 @@ datasets:
         hash_source: null
         pending_reason: >-
           DEV-038 global rule: acquisition and content hashing may precede the freeze for any dataset (a
-          download is not a run). Content hashes are recorded at download; no run that produces a viral call, count,
-          tier, label or verdict on any library precedes the commit that freezes the EVID-06 verdict code and
-          thresholds. freeze_required is false because this row has no workflow row; promoting it needs its own
+          download is not a run). Content hashes are recorded at download; no run or check of any kind (user-approved 2026-11-04, DEV-040: before the freeze only acquisition and
+          content hashing) precedes the commit that freezes the EVID-06 verdict code and thresholds. freeze_required is false because this row has no workflow row; promoting it needs its own
           amendment.
         resolution_task: EVID-06
     expected_targets: [SARS-CoV-2]
@@ -1878,11 +1886,20 @@ datasets:
       DEV-037 (Q18 to Q20): external-evaluation set for the read-evidence verdict (package PLAN EVID-06), not a
       workflow-matrix dataset. Labels are set per (library, virus) before and without the verdict: the study's
       expected virus in an infected or virus-positive library is positive; that virus in a mock or virus-negative
-      library is negative; any other virus called in any library is classed, before the verdict, as (a)
-      unexpected but biologically plausible (reported separately, not counted against agreement; an unlisted virus with
-      orthogonal support in the evidence output is never a disagreement), (b) endogenous or integrated (ciHHV-6, HERV,
-      integrated-HPV chimeras; flagged by the evidence step and left out of the artefact tally) or (c) technical
-      artefact (counted as disagreement), unless the paper reports it (DEV-038, review round 13 F3). The labels are
+      library is negative; any other virus called in any library is assigned one class by the ordered rule below (DEV-040; the three
+      classes and the requirement that the rule is written and frozen before unblinding are user-approved,
+      2026-11-04). The rule is applied once per (library, virus), from the evidence output and the study record
+      alone, before the verdict is unblinded, and a class is never revised afterwards. Step 1: if the study
+      reports that virus in that library, it takes the study's label for that (library, virus) and is not classed.
+      Step 2: else, if the evidence step flags it as endogenous or integrated (ciHHV-6, HERV, integrated-HPV
+      chimera), it is class (b), reported separately and left out of the artefact tally. Step 3: else, if the
+      evidence output carries orthogonal support for it, it is class (a), unexpected but biologically plausible,
+      reported separately and not counted against agreement. Step 4: else it is class (c), technical artefact,
+      counted as disagreement. Only class (c) is a disagreement. OPEN ITEM EVID06-OV-1 (for the user): the
+      protocol and the amendment do not say which evidence-output field and values mean "flagged as endogenous or
+      integrated" (step 2) or "orthogonal support" (step 3), and the order of steps 2 and 3 is a proposal (it
+      does not change the disagreement tally, only which separate report lists the virus). The rule cannot be
+      frozen, and no class is assigned, until the user fixes both tests. The labels are
       presumed, never truth (DEV-028): the verdict is reported as agreement with them, descriptively, per library
       with the number of libraries and molecules, with no pooling across libraries or datasets as if they were
       replicates (most arms are one biological unit, so no claim generalises across donors), and no accuracy, sensitivity, specificity,
@@ -1899,7 +1916,7 @@ datasets:
     truth_status: contextual
     source: >-
       GSE268542, influenza A virus in human lung explants, infected versus uninfected (PMID 39395995). Chemistry
-      per library is confirmed by the read-structure check before any outcome run; chemistries is left empty
+      per library is confirmed by the read-structure check run after the EVID-06 freeze (DEV-040: only acquisition and hashing before it); chemistries is left empty
       rather than guessed. Review round 13 (F7) reports one COPD donor with one infected and one uninfected pooled
       library, and the paper's own caveat on ambient and extracellular viral mRNA: one biological unit per arm,
       reported per library, with no donor-level inference.
@@ -1915,9 +1932,8 @@ datasets:
         hash_source: null
         pending_reason: >-
           DEV-038 global rule: acquisition and content hashing may precede the freeze for any dataset (a
-          download is not a run). Content hashes are recorded at download; no run that produces a viral call, count,
-          tier, label or verdict on any library precedes the commit that freezes the EVID-06 verdict code and
-          thresholds. freeze_required is false because this row has no workflow row; promoting it needs its own
+          download is not a run). Content hashes are recorded at download; no run or check of any kind (user-approved 2026-11-04, DEV-040: before the freeze only acquisition and
+          content hashing) precedes the commit that freezes the EVID-06 verdict code and thresholds. freeze_required is false because this row has no workflow row; promoting it needs its own
           amendment.
         resolution_task: EVID-06
     expected_targets: [Influenza A virus]
@@ -1926,11 +1942,20 @@ datasets:
       DEV-037 (Q18 to Q20): external-evaluation set for the read-evidence verdict (package PLAN EVID-06), not a
       workflow-matrix dataset. Labels are set per (library, virus) before and without the verdict: the study's
       expected virus in an infected or virus-positive library is positive; that virus in a mock or virus-negative
-      library is negative; any other virus called in any library is classed, before the verdict, as (a)
-      unexpected but biologically plausible (reported separately, not counted against agreement; an unlisted virus with
-      orthogonal support in the evidence output is never a disagreement), (b) endogenous or integrated (ciHHV-6, HERV,
-      integrated-HPV chimeras; flagged by the evidence step and left out of the artefact tally) or (c) technical
-      artefact (counted as disagreement), unless the paper reports it (DEV-038, review round 13 F3). The labels are
+      library is negative; any other virus called in any library is assigned one class by the ordered rule below (DEV-040; the three
+      classes and the requirement that the rule is written and frozen before unblinding are user-approved,
+      2026-11-04). The rule is applied once per (library, virus), from the evidence output and the study record
+      alone, before the verdict is unblinded, and a class is never revised afterwards. Step 1: if the study
+      reports that virus in that library, it takes the study's label for that (library, virus) and is not classed.
+      Step 2: else, if the evidence step flags it as endogenous or integrated (ciHHV-6, HERV, integrated-HPV
+      chimera), it is class (b), reported separately and left out of the artefact tally. Step 3: else, if the
+      evidence output carries orthogonal support for it, it is class (a), unexpected but biologically plausible,
+      reported separately and not counted against agreement. Step 4: else it is class (c), technical artefact,
+      counted as disagreement. Only class (c) is a disagreement. OPEN ITEM EVID06-OV-1 (for the user): the
+      protocol and the amendment do not say which evidence-output field and values mean "flagged as endogenous or
+      integrated" (step 2) or "orthogonal support" (step 3), and the order of steps 2 and 3 is a proposal (it
+      does not change the disagreement tally, only which separate report lists the virus). The rule cannot be
+      frozen, and no class is assigned, until the user fixes both tests. The labels are
       presumed, never truth (DEV-028): the verdict is reported as agreement with them, descriptively, per library
       with the number of libraries and molecules, with no pooling across libraries or datasets as if they were
       replicates (most arms are one biological unit, so no claim generalises across donors), and no accuracy, sensitivity, specificity,
@@ -1952,7 +1977,7 @@ datasets:
       labelled "EBV status unverified" and are left out of the negative tally unless orthogonal EBV negativity
       (EBER or qPCR) exists; EBV found in them is reported as unexpected, never as a false positive. Only
       the 10x libraries of the series are in the set; libraries on any other platform are out by design. Chemistry
-      per library is confirmed by the read-structure check before any outcome run; chemistries is left empty
+      per library is confirmed by the read-structure check run after the EVID-06 freeze (DEV-040: only acquisition and hashing before it); chemistries is left empty
       rather than guessed.
     chemistries: []
     accessions: [GSE120926]
@@ -1966,9 +1991,8 @@ datasets:
         hash_source: null
         pending_reason: >-
           DEV-038 global rule: acquisition and content hashing may precede the freeze for any dataset (a
-          download is not a run). Content hashes are recorded at download; no run that produces a viral call, count,
-          tier, label or verdict on any library precedes the commit that freezes the EVID-06 verdict code and
-          thresholds. freeze_required is false because this row has no workflow row; promoting it needs its own
+          download is not a run). Content hashes are recorded at download; no run or check of any kind (user-approved 2026-11-04, DEV-040: before the freeze only acquisition and
+          content hashing) precedes the commit that freezes the EVID-06 verdict code and thresholds. freeze_required is false because this row has no workflow row; promoting it needs its own
           amendment.
         resolution_task: EVID-06
     expected_targets: [EBV]
@@ -1977,11 +2001,20 @@ datasets:
       DEV-037 (Q18 to Q20): external-evaluation set for the read-evidence verdict (package PLAN EVID-06), not a
       workflow-matrix dataset. Labels are set per (library, virus) before and without the verdict: the study's
       expected virus in an infected or virus-positive library is positive; that virus in a mock or virus-negative
-      library is negative; any other virus called in any library is classed, before the verdict, as (a)
-      unexpected but biologically plausible (reported separately, not counted against agreement; an unlisted virus with
-      orthogonal support in the evidence output is never a disagreement), (b) endogenous or integrated (ciHHV-6, HERV,
-      integrated-HPV chimeras; flagged by the evidence step and left out of the artefact tally) or (c) technical
-      artefact (counted as disagreement), unless the paper reports it (DEV-038, review round 13 F3). The labels are
+      library is negative; any other virus called in any library is assigned one class by the ordered rule below (DEV-040; the three
+      classes and the requirement that the rule is written and frozen before unblinding are user-approved,
+      2026-11-04). The rule is applied once per (library, virus), from the evidence output and the study record
+      alone, before the verdict is unblinded, and a class is never revised afterwards. Step 1: if the study
+      reports that virus in that library, it takes the study's label for that (library, virus) and is not classed.
+      Step 2: else, if the evidence step flags it as endogenous or integrated (ciHHV-6, HERV, integrated-HPV
+      chimera), it is class (b), reported separately and left out of the artefact tally. Step 3: else, if the
+      evidence output carries orthogonal support for it, it is class (a), unexpected but biologically plausible,
+      reported separately and not counted against agreement. Step 4: else it is class (c), technical artefact,
+      counted as disagreement. Only class (c) is a disagreement. OPEN ITEM EVID06-OV-1 (for the user): the
+      protocol and the amendment do not say which evidence-output field and values mean "flagged as endogenous or
+      integrated" (step 2) or "orthogonal support" (step 3), and the order of steps 2 and 3 is a proposal (it
+      does not change the disagreement tally, only which separate report lists the virus). The rule cannot be
+      frozen, and no class is assigned, until the user fixes both tests. The labels are
       presumed, never truth (DEV-028): the verdict is reported as agreement with them, descriptively, per library
       with the number of libraries and molecules, with no pooling across libraries or datasets as if they were
       replicates (most arms are one biological unit, so no claim generalises across donors), and no accuracy, sensitivity, specificity,
@@ -1999,7 +2032,7 @@ datasets:
     truth_status: contextual
     source: >-
       GSE184257, EpiOral oral epithelial cultures, mock versus KSHV at 3 and 6 days post infection. Chemistry per
-      library is confirmed by the read-structure check before any outcome run; chemistries is left empty rather
+      library is confirmed by the read-structure check run after the EVID-06 freeze (DEV-040: only acquisition and hashing before it); chemistries is left empty rather
       than guessed. The PROG-MIXED-VETO-01 held-out gate also uses this dataset (see no_workflow_rows_reason).
       Infection truth in the paper is reporter based (rKSHV.219 GFP and RFP); native LANA and RTA transcripts are
       mostly undetected at 10x depth, and the paper's reference was hg38 plus KSHV JSC-1 (GQ994935.1) plus GFP and
@@ -2021,11 +2054,10 @@ datasets:
         hash_source: null
         pending_reason: >-
           DEV-038 global rule: acquisition and content hashing may precede the freeze for any dataset (a
-          download is not a run). Content hashes are recorded at download; no run that produces a viral call, count,
-          tier, label or verdict on any library precedes the commit that freezes the EVID-06 verdict code and
-          thresholds. freeze_required is false because this row has no workflow row; promoting it needs its own
+          download is not a run). Content hashes are recorded at download; no run or check of any kind (user-approved 2026-11-04, DEV-040: before the freeze only acquisition and
+          content hashing) precedes the commit that freezes the EVID-06 verdict code and thresholds. freeze_required is false because this row has no workflow row; promoting it needs its own
           amendment. Recorded 2026-11-04: Set 3 downloaded (the other sets are not), per-file sha256 in
-          data/runs/work/gse184257_set3/raw/<GSM>/sha256.tsv, no run has touched it. GSM6249889 SRR19685943
+          data/runs/work/gse184257_set3/raw/<GSM>/sha256.tsv, no run has touched it except the read-structure check of DEV-039. GSM6249889 SRR19685943
           _1 8282baadece24c98f21caf9126172da4289f406db7ac982d40e456970eceae65, _2
           271c8627d3d56493e101d6933ad11edfd890746439d2b8baabbed499711630f9. GSM6249890 SRR19685944 _1
           1e75ecd5e08f5527ff8484391e85b03f697f5d5c8e437c764eb46ba58c8bdb79, _2
@@ -2041,25 +2073,34 @@ datasets:
       DEV-037 (Q18 to Q20): external-evaluation set for the read-evidence verdict (package PLAN EVID-06), not a
       workflow-matrix dataset. Labels are set per (library, virus) before and without the verdict: the study's
       expected virus in an infected or virus-positive library is positive; that virus in a mock or virus-negative
-      library is negative; any other virus called in any library is classed, before the verdict, as (a)
-      unexpected but biologically plausible (reported separately, not counted against agreement; an unlisted virus with
-      orthogonal support in the evidence output is never a disagreement), (b) endogenous or integrated (ciHHV-6, HERV,
-      integrated-HPV chimeras; flagged by the evidence step and left out of the artefact tally) or (c) technical
-      artefact (counted as disagreement), unless the paper reports it (DEV-038, review round 13 F3). The labels are
+      library is negative; any other virus called in any library is assigned one class by the ordered rule below (DEV-040; the three
+      classes and the requirement that the rule is written and frozen before unblinding are user-approved,
+      2026-11-04). The rule is applied once per (library, virus), from the evidence output and the study record
+      alone, before the verdict is unblinded, and a class is never revised afterwards. Step 1: if the study
+      reports that virus in that library, it takes the study's label for that (library, virus) and is not classed.
+      Step 2: else, if the evidence step flags it as endogenous or integrated (ciHHV-6, HERV, integrated-HPV
+      chimera), it is class (b), reported separately and left out of the artefact tally. Step 3: else, if the
+      evidence output carries orthogonal support for it, it is class (a), unexpected but biologically plausible,
+      reported separately and not counted against agreement. Step 4: else it is class (c), technical artefact,
+      counted as disagreement. Only class (c) is a disagreement. OPEN ITEM EVID06-OV-1 (for the user): the
+      protocol and the amendment do not say which evidence-output field and values mean "flagged as endogenous or
+      integrated" (step 2) or "orthogonal support" (step 3), and the order of steps 2 and 3 is a proposal (it
+      does not change the disagreement tally, only which separate report lists the virus). The rule cannot be
+      frozen, and no class is assigned, until the user fixes both tests. The labels are
       presumed, never truth (DEV-028): the verdict is reported as agreement with them, descriptively, per library
       with the number of libraries and molecules, with no pooling across libraries or datasets as if they were
       replicates (most arms are one biological unit, so no claim generalises across donors), and no accuracy, sensitivity, specificity,
       precision, recall or PPV claim is made. The evidence unit is the counted virus-best molecule of the
       package's docs/evidence_unit.md. No run on any library may precede the commit that freezes the verdict
       code and thresholds; a FASTQ download is data acquisition and is not such a run. Shared use (DEV-038,
-      review round 13 R13-F1, F1, F2; proposed_pending_user_signoff because it reverses user decision Q3, "GSE184257
-      Set 3 now", in favour of Q19): the PROG-MIXED-VETO-01 held-out gate scores KSHV latent-veto molecules
+      review round 13 R13-F1, F1, F2; user-approved 2026-11-04, DEV-040: it reverses user decision Q3, "GSE184257 Set 3 now", in favour of Q19): the PROG-MIXED-VETO-01 held-out gate scores KSHV latent-veto molecules
       against total KSHV molecules, which are viral programme states, so its run on this dataset is
       outcome-generating (pre_freeze_runs.outcome_definition) whether or not an evidence file is opened. That run
       waits for both G3 execution clearance and the EVID-06 verdict code and threshold freeze. Gate results may not
       change any EVID-06 rule, label, threshold or exclusion. Any earlier use needs an amendment that states the
-      lost held-out status. Set 3 FASTQs (GSM6249889 to GSM6249892) were downloaded on 2026-11-04 and hashed; no
-      run has touched them.
+      lost held-out status. Set 3 FASTQs (GSM6249889 to GSM6249892) were downloaded on 2026-11-04 and hashed; no run that yields a
+      call, count, tier, label or verdict has touched them, and the one read-structure check that ran before
+      the pre-freeze rule (job 25956713, outputs unopened) is recorded in DEV-039 and PFR-16.
     exclusion_rule: >-
       Exclude only on checksum, corruption, mate synchronization, or unresolved chemistry (X1). Never drop a
       library, or change its label, by viral signal or by the verdict.
@@ -2071,7 +2112,7 @@ datasets:
     source: >-
       GSE139324, immune cells from HPV-associated head and neck squamous cell carcinoma. Reserve dataset. Review
       round 13 (F4) reports the cells are live CD45-positive sorted immune cells on 10x 3-prime v2; chemistry is
-      still confirmed per library by the read-structure check (check-chemistry) before any use. DEV-038 re-scopes
+      still confirmed per library by the read-structure check (check-chemistry) after the EVID-06 freeze and before any use. DEV-038 re-scopes
       the reserve: HPV transcripts sit in epithelial tumour cells, which CD45 sorting removes, so a library from
       an HPV-positive patient is not an HPV positive control. If used, it is an HPV specificity substrate (the
       immune compartment is expected to carry no HPV signal, and any HPV call is reported as unexpected). It was
@@ -2159,9 +2200,8 @@ factors:
     levels: [0.01, 0.04, 0.15]
     resolution_task: VAL-01
     pending_reason: >-
-      proposed_pending_user_signoff (DEV-036). Written by the DEF-00 amendment (DEV-020); the PLAN holds no
-      separate user decision on these values. Rationale: 20, 80 and 300 designated cells of 2,000. The user signs
-      the level set at G3.
+      User-approved 2026-11-04 (DEV-040). Written by the DEF-00 amendment (DEV-020); the formal G3 sign-off still
+      follows the round-14 external review. Rationale: 20, 80 and 300 designated cells of 2,000. The status flips to frozen in the G3 signing commit.
   - id: host_virus_homology
     description: >-
       Presence of host-derived challenge reads homologous to the panel (DEF-00
@@ -2181,10 +2221,10 @@ factors:
     levels: [none, repeat_homology]
     resolution_task: REF-07
     pending_reason: >-
-      proposed_pending_user_signoff (DEV-036). Two levels taken from the REF-07 table (DEF-00 section F, set
+      User-approved 2026-11-04 (DEV-040). Two levels taken from the REF-07 table (DEF-00 section F, set
       at the user's instruction): REF-07 found the viral-to-GRCh38 homology is 98.8 percent low-complexity
       (F-023), so identity bands have no material and one planted level, repeat_homology, over 89 clusters (70
-      training, 19 holdout, assigned whole) is all the table supports. The user signs the level set at G3.
+      training, 19 holdout, assigned whole) is all the table supports. The status flips to frozen in the G3 signing commit.
   - id: sibling_virus_similarity
     description: >-
       Planting regime for each partitions.sibling_virus_pairs pair (DEF-00 B3,
@@ -2210,9 +2250,9 @@ factors:
     levels: [0, 0.01, 0.05]
     resolution_task: VAL-01
     pending_reason: >-
-      proposed_pending_user_signoff (DEV-036). Written by the DEF-00 amendment (DEV-020); the PLAN holds no
-      separate user decision on these values. Rationale: 0, 1 and 5 percent artefact reads bracket the measured
-      artefact classes. The user signs the level set at G3.
+      User-approved 2026-11-04 (DEV-040). Written by the DEF-00 amendment (DEV-020); the formal G3 sign-off still
+      follows the round-14 external review. Rationale: 0, 1 and 5 percent artefact reads bracket the measured
+      artefact classes. The status flips to frozen in the G3 signing commit.
   - id: pcr_duplication
     description: >-
       Mean reads per source molecule (DEF-00 B12), drawn as one plus a geometric
@@ -2221,9 +2261,9 @@ factors:
     levels: [2, 5, 10]
     resolution_task: VAL-01
     pending_reason: >-
-      proposed_pending_user_signoff (DEV-036). Written by the DEF-00 amendment (DEV-020); the PLAN holds no
-      separate user decision on these values. Rationale: mean 2, 5 and 10 reads per source molecule span low to
-      heavy duplication at 25,000 reads per cell. The user signs the level set at G3.
+      User-approved 2026-11-04 (DEV-040). Written by the DEF-00 amendment (DEV-020); the formal G3 sign-off still
+      follows the round-14 external review. Rationale: mean 2, 5 and 10 reads per source molecule span low to
+      heavy duplication at 25,000 reads per cell. The status flips to frozen in the G3 signing commit.
   - id: cb_umi_collisions
     description: >-
       Fraction of viral molecules given a corrected CB-UMI collision (DEF-00
@@ -2233,9 +2273,9 @@ factors:
     levels: [0, 0.005, 0.02]
     resolution_task: VAL-01
     pending_reason: >-
-      proposed_pending_user_signoff (DEV-036). Written by the DEF-00 amendment (DEV-020); the PLAN holds no
-      separate user decision on these values. Rationale: 0, 0.5 and 2 percent of viral molecules collide on a
-      corrected CB-UMI key. The user signs the level set at G3.
+      User-approved 2026-11-04 (DEV-040). Written by the DEF-00 amendment (DEV-020); the formal G3 sign-off still
+      follows the round-14 external review. Rationale: 0, 0.5 and 2 percent of viral molecules collide on a
+      corrected CB-UMI key. The status flips to frozen in the G3 signing commit.
   - id: ambient_index_hopping
     description: >-
       Fraction of each virus's molecules relocated as contamination (DEF-00
@@ -2246,9 +2286,9 @@ factors:
     levels: [0, 0.01, 0.05]
     resolution_task: VAL-01
     pending_reason: >-
-      proposed_pending_user_signoff (DEV-036). Written by the DEF-00 amendment (DEV-020); the PLAN holds no
-      separate user decision on these values. Rationale: 0, 1 and 5 percent of a virus's molecules relocated as
-      ambient or index-hopped contamination. The user signs the level set at G3.
+      User-approved 2026-11-04 (DEV-040). Written by the DEF-00 amendment (DEV-020); the formal G3 sign-off still
+      follows the round-14 external review. Rationale: 0, 1 and 5 percent of a virus's molecules relocated as
+      ambient or index-hopped contamination. The status flips to frozen in the G3 signing commit.
   - id: chemistry
     description: Supported barcode and UMI geometry.
     status: frozen
@@ -2272,7 +2312,7 @@ seeds:
     resolution_task: VAL-01
     freeze_required: true
     pending_reason: >-
-      proposed_pending_user_signoff (DEV-036): 20260727005. Rationale: the next integer after
+      User-approved 2026-11-04 (DEV-040): 20260727005; the formal G3 sign-off still follows the round-14 external review. Rationale: the next integer after
       seeds.bootstrap in the root-date series (20260727 plus 001 to 004), distinct from every other
       stage seed, set before any generation run exists. The generator is Python, so the R integer
       limit that hit seeds.cell_calling (Q154) does not apply. The value field stays null on
@@ -2397,28 +2437,6 @@ references:
     assets:
       - id: viral_track_native_panel_manifest
         role: the viral reference distributed with Viral-Track
-        locator: null
-        digest_status: pending
-        sha256: null
-        freeze_required: true
-        hash_source: null
-        pending_reason: >-
-          The panel ships inside the tool's pinned container, so its identity is
-          fixed only when the container digest is pinned.
-        resolution_task: REL-03
-  - id: virtus_native_panel
-    profile: native-published
-    purpose: >-
-      Native published reference for the VIRTUS comparator arm. Running a
-      comparator on its own bundled reference is what makes published-default
-      meaningful; the matched arm reruns the same tool on the shared accession
-      set so that a difference in result can be attributed to the tool rather
-      than to the reference.
-    host_release: null
-    viral_panel: null
-    assets:
-      - id: virtus_native_panel_manifest
-        role: the 763-virus panel distributed with VIRTUS3
         locator: null
         digest_status: pending
         sha256: null
@@ -2867,9 +2885,10 @@ frozen_inputs:
     - DEV-037
     - DEV-038
     - DEV-039
+    - DEV-040
   # DEV-027 (SCI-05 round 12, m2): canonical sha256 of the validation schema. The
   # schema pins the harmonization digests as const and was itself in no digest.
-  schema_sha256: a2c2b75ce12bc7a37f99b3afc6e99fb8e8c3302c04844b8fd4e1a0580e9f8fbd
+  schema_sha256: 7ea52498bb3955bc430d2a4f1c9f0fb154d483fef9a37067524c2dedcc44ba13
   threat_model: >-
     This scheme is tamper-evident against accidental and partial edits: a digest
     left stale, a ledger record edited without re-chaining, a blocker deleted in
@@ -2901,7 +2920,7 @@ frozen_inputs:
     trust, so this detects a changed claim, not a false one. It does not cover
     prose fields elsewhere in the protocol whose sections carry their own
     contract digests.
-  contract_sha256: a3e814986fe1d83d54d957e68fecba0d3d9fdcfde8dadfaf3ac8205c77f148ac
+  contract_sha256: 6b322064409610f97ec1ac45273992aee1193bc429913690cd562d3cd539edd8
 
 exclusions:
   - id: X1_invalid_input
@@ -3154,33 +3173,6 @@ workflow_matrix:
         - hhv6b_srr20710641
         - ebv_srr12682296
         - hsv1_srr8315713
-    - id: W9a_virtus_native
-      tool: virtus
-      mode: published-default-virtus3-scrnaseq
-      role: comparator
-      reference_id: virtus_native_panel
-      reference_resolution: native-published
-      dataset_ids:
-        - synthetic_factorial
-        - synthetic_host_only
-        - synthetic_host_homology
-        - hhv6b_srr20710641
-        - ebv_srr12682296
-        - hsv1_srr8315713
-    - id: W9b_virtus_matched
-      tool: virtus
-      mode: published-default-virtus3-scrnaseq
-      role: comparator
-      reference_id: curated_human_virus
-      reference_resolution: matched-accession-index
-      native_counterpart: W9a_virtus_native
-      dataset_ids:
-        - synthetic_factorial
-        - synthetic_host_only
-        - synthetic_host_homology
-        - hhv6b_srr20710641
-        - ebv_srr12682296
-        - hsv1_srr8315713
   predecessor_comparison_rule: >-
     DEV-034 (user decision Q6, 2026-11-04): ViralScan 2.2.0 is not a comparator in
     v3. The comparators are CMP-01 to CMP-05 (ViralScan arms, STARsolo arms,
@@ -3221,6 +3213,15 @@ workflow_matrix:
       revisit_condition: >-
         Re-enter only by a ledgered amendment before any outcome run, with its own
         workflow rows, native and matched reference arms and environment pins.
+    - id: X_virtus
+      reason: >-
+        DEV-040 (user decision, 2026-11-04): VIRTUS3 (former rows W9a_virtus_native and
+        W9b_virtus_matched, 12 rows, with the virtus_native_panel reference) is dropped
+        from v3. It has no CMP row and it duplicates the subtract-then-quantify
+        architecture of the traditional host-subtraction rows. Possible 3.1.
+      revisit_condition: >-
+        Possible release 3.1, by a ledgered amendment before any outcome run, with its
+        own workflow rows, native and matched reference arms and environment pins.
     - id: X_translated_protein_search
       reason: >-
         DEV-034 (user decision Q7, 2026-11-04): translated (protein) search is out
@@ -3230,18 +3231,16 @@ workflow_matrix:
         Protocol v2 or a later ledgered amendment that registers a dataset, an
         endpoint and a workflow row for it.
   no_silent_algorithm_patch: >-
-    Venus, Viral-Track, and VIRTUS run in isolated, digest-pinned environments at
+    Venus and Viral-Track run in isolated, digest-pinned environments at
     their published defaults. Any change to a comparator's algorithm, parameters,
     or source is a protocol deviation that must be recorded and disclosed, never
     an undocumented local patch.
   comparator_architecture_note: >-
-    The dedicated comparators span three distinct architectures so that a shared
-    failure mode cannot be mistaken for a general result. Venus and Viral-Track
-    detect viral reads after host handling; VIRTUS3 subtracts host with STAR and
-    then quantifies viral transcripts with salmon in a splicing-aware manner
-    rather than by genome copy number. VIRTUS overlaps the traditional
-    subtraction rows in architecture but not in implementation, so both are
-    retained.
+    The dedicated comparators are Venus and Viral-Track, which both detect viral
+    reads after host handling. They share that architecture, so a failure mode they
+    share must not be reported as a general result. VIRTUS was dropped from v3
+    (DEV-040, user decision 2026-11-04); its subtract-then-salmon architecture is
+    covered in v3 only by the traditional host-subtraction rows.
   breadth_disclosure_rule: >-
     Any claim about the number of datasets or conditions a tool was evaluated on
     must state, in the same place as the claim, how many of that tool's rows have
@@ -3255,8 +3254,9 @@ workflow_matrix:
     at six datasets. Registered datasets that have no workflow row
     (influenza_gse336913, DEV-027; the EVID-06 external-evaluation set, DEV-037)
     are in no count. DEV-034 (Q6) removed the ViralScan 2.2.0 rows, so the
-    comparator rows are those of STARsolo, traditional host subtraction, Venus,
-    Viral-Track and VIRTUS.
+    comparator rows are those of STARsolo, traditional host subtraction, Venus and
+    Viral-Track. DEV-040 (user decision, 2026-11-04) removed the VIRTUS rows (W9a,
+    W9b, 12 rows), so the matrix has 74 rows.
   chemistry_confound_disclosure: >-
     Chemistry is confounded with virus in the public positives: EBV appears only
     under 10x v2, HSV-1 only under Drop-seq, and HHV-6B and KSHV only under
@@ -3272,8 +3272,8 @@ workflow_matrix:
     any tier-dependent endpoint, may omit this asymmetry. The cross-tool parity
     endpoint is unaffected, because its layer is counts_unique rather than the
     tuned allocated product.
-  expected_row_count: 86
-  contract_sha256: 29aaf47cd91736128238996c262ccff9140857b14a63bae2a496ef78e1977cf9
+  expected_row_count: 74
+  contract_sha256: 66b2d0c5a0128db9e222c5208ed9100ba6a954bb047420ffa215dbd6ec5ef26c
 
 failure_and_deviation_reporting:
   status: pending
@@ -3362,7 +3362,7 @@ execution_readiness:
       description: >-
         Workflow rows and the failure contract are drafted but not frozen.
         SCI-05 round 1 rejected them: the only exact-truth dataset is absent from
-        Venus, Viral-Track, and VIRTUS, six ViralScan rows have no comparator
+        Venus and Viral-Track (and VIRTUS, since dropped by DEV-040), six ViralScan rows have no comparator
         coverage, comparator reference handling contradicts published-default,
         and the deviation-ledger and environment-pinning rails are unenforced.
         See analysis/v3_validation/sci05_review.yaml.
@@ -3452,8 +3452,8 @@ execution_readiness:
     - id: tool_environments
       description: >-
         Versions and container digests are pending for every comparator tool:
-        starsolo, traditional-host-subtraction, venus, viral-track, virtus.
-        DEV-034 (Q6) removed viralscan-2.2.0, which is no longer a comparator.
+        starsolo, traditional-host-subtraction, venus, viral-track.
+        DEV-034 (Q6) removed viralscan-2.2.0 and DEV-040 removed virtus; neither is a comparator.
       resolution_task: REL-03
   holdout_blockers:
     - id: training_gate

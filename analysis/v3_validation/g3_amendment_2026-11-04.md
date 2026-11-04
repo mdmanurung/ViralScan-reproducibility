@@ -2,7 +2,8 @@
 
 Status: draft for the next independent review round and the user's sign-off. Nothing freezes.
 Protocol 0.3.0 becomes 0.4.0. Top-level `status` stays `draft`. No section status, factor status,
-`freeze.*` or execution flag moves. Ledger records: `DEV-034` to `DEV-037` in `deviations.yaml`.
+`freeze.*` or execution flag moves. Ledger records: `DEV-034` to `DEV-040` in `deviations.yaml`
+(`DEV-034` to `DEV-037` the draft, `DEV-038` review round 13, `DEV-039` a pre-freeze deviation, `DEV-040` the user decisions of 2026-11-04).
 Decision source "Q<n>" means user decision Q<n>, 2026-11-04.
 
 ## Changes
@@ -32,9 +33,12 @@ Decision source "Q<n>" means user decision Q<n>, 2026-11-04.
 Also changed outside the protocol: `scripts/gen_workflow_comparison.py` footer (no 2.2.0 rows),
 three tests that asserted 2.2.0 is a comparator, and new tests for the items above.
 
-## Proposed values for the user to sign
+## Values approved by the user (2026-11-04)
 
-| Field | Proposal | Rationale |
+The user approved `seeds.generation` and every factor level below on 2026-11-04 (`DEV-040`). Status stays `pending` and the value stays
+`null`; the formal G3 sign-off follows the round-14 external review and is not given here.
+
+| Field | Approved value | Rationale |
 |---|---|---|
 | `seeds.generation` | 20260727005 | Next integer in the 20260727 series after `seeds.bootstrap`; distinct from every stage seed; the generator is Python, so the R integer limit of Q154 does not apply |
 | `host_virus_homology` | none, repeat_homology | REF-07 found the homology 98.8 percent low-complexity (F-023); 89 clusters, 70 training and 19 holdout, assigned whole |
@@ -62,15 +66,31 @@ For the user only, not adopted: F8 (hold one virus or chemistry out of tuning), 
 
 ## Open points for the user
 
-- VIRTUS (W9a, W9b) has no CMP row and Q6 named only CMP-01 to CMP-05. It is kept. Say if it goes.
-- The EVID-06 labels are written as presumed labels, because the frozen rule in `failure_and_deviation_reporting.prohibited`
-  bars accuracy, sensitivity and specificity claims from non-exact truth. If the verdict should report those, that is a separate amendment.
-- GSE184257 is also used by the PROG-MIXED-VETO-01 gate, whose run is outcome-generating. DEV-038 orders it after the EVID-06 freeze; sign that ordering, which reverses Q3.
+- `EVID06-OV-1` (blocks freezing the other-virus rule): name the evidence-output field and values that mean "flagged as endogenous or integrated", define
+  "orthogonal support", and confirm the order of steps 2 and 3. Neither test is defined in the protocol or here, so no threshold was invented.
+- The four unopened Set 3 chem outputs (`DEV-039`): open them only after the EVID-06 freeze, or delete them and rerun the check.
+- Decided 2026-11-04 (no longer open): VIRTUS is dropped; the EVID-06 bar on accuracy-type claims stays; the GSE184257 gate ordering is approved.
 - The E1 acceptance text still lists `viralscan-2.2.0` among tools that declare no invariant. It is left alone (endpoints sit under the dependent-fields digest) and stays true.
+
+## Revision after the user's decisions of 2026-11-04 (DEV-039, DEV-040)
+
+The user approved the 20 recommendations of the afternoon grill. G3 is not signed; the formal sign-off follows round 14.
+
+| Item | Change | Record |
+|---|---|---|
+| GSE184257 gate ordering | `proposed_pending_user_signoff` becomes user-approved: the gate runs after G3 clearance and the EVID-06 freeze (replaces Q3 "Set 3 now") | DEV-040 |
+| Pre-freeze rule | Before the EVID-06 freeze only acquisition and content hashing are allowed. Dataset text that placed the chemistry check before the outcome run now places it after the freeze | DEV-040 |
+| Deviation | `check-chemistry` job 25956713 ran on GSM6249889-92 on 2026-11-04, 13:27-13:31, before the rule. It reports barcode geometry only (no call, count, tier, label or verdict). Four 67-byte outputs under `data/runs/round_2026-11-04_veto/chem/` were opened by nobody and stay unopened. Inventory row `PFR-16` | DEV-039 |
+| Other-virus rule | Three classes user-approved. The class assignment is now an ordered text in the five EVID-06 datasets (study report, then endogenous or integrated flag, then orthogonal support, then artefact; only the artefact is a disagreement). The tests for steps 2 and 3 are not defined anywhere, so they are open item `EVID06-OV-1` | DEV-040 |
+| VIRTUS | Dropped from v3, possible 3.1: rows W9a and W9b (12), reference `virtus_native_panel`, the VIRTUS prose, the blocker text and the E1 list. `X_virtus` joins `excluded_workflows`. `expected_row_count` 86 becomes 74 | DEV-040 |
+| `seeds.generation`, factor levels | User-approved (see the table above) | DEV-040 |
+| Strand fallback | Kept. A per-chemistry strand default may only enter by a later ledgered amendment before the freeze | DEV-040 |
+| EVID-06 | The bar on accuracy-type claims stays | DEV-040 |
+| Digests | `workflow_matrix` 29aaf47c to 66b2d0c5. Because `supported_scope` and `endpoints` changed, `harmonization.dependent_fields_sha256` c8c024d6 to 9b294410 and `contract_sha256` 5db74530 to a44536df; the schema consts and `frozen_inputs.schema_sha256` follow | DEV-040 |
 
 ## Merge order
 
-The schema constants changed, so the packaged copy `src/viralscan/schemas/v3/validation_protocol.schema.json` in the package repo
+The schema constants changed (twice: `DEV-037`, then `DEV-040`), so the packaged copy `src/viralscan/schemas/v3/validation_protocol.schema.json` in the package repo
 must become a byte copy of `schemas/v3/validation_protocol.schema.json` here, and `docs/workflow_comparison.md` there must be
 regenerated (`python scripts/gen_workflow_comparison.py` with `VIRALSCAN_PKG` pointing at the package checkout). Then move
 `provenance/PACKAGE_BASE_SHA`. Until then `test_packaged_schema_matches_the_canonical_schema`,

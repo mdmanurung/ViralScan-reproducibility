@@ -863,7 +863,6 @@ def test_every_comparator_named_by_the_plan_has_a_workflow(protocol: dict) -> No
         "traditional-host-subtraction",
         "venus",
         "viral-track",
-        "virtus",
     }
 
 
@@ -878,7 +877,7 @@ def test_kallisto_two_step_is_explicitly_excluded_with_a_revisit_condition(
 def test_dedicated_comparators_cover_the_three_required_positives(protocol: dict) -> None:
     required = {"hhv6b_srr20710641", "ebv_srr12682296", "hsv1_srr8315713"}
     for workflow in protocol["workflow_matrix"]["workflows"]:
-        if workflow["tool"] in {"venus", "viral-track", "virtus"}:
+        if workflow["tool"] in {"venus", "viral-track"}:
             assert required.issubset(set(workflow["dataset_ids"])), workflow["id"]
             # F5: the only exact-truth dataset must reach them too.
             assert "synthetic_factorial" in workflow["dataset_ids"], workflow["id"]
@@ -1307,10 +1306,10 @@ def test_dedicated_comparators_run_both_reference_arms(protocol: dict) -> None:
     """F14: one arm cannot separate 'tool is worse' from 'reference differed'."""
     arms: dict[str, set[str]] = {}
     for workflow in protocol["workflow_matrix"]["workflows"]:
-        if workflow["tool"] in {"venus", "viral-track", "virtus"}:
+        if workflow["tool"] in {"venus", "viral-track"}:
             arms.setdefault(workflow["tool"], set()).add(workflow["reference_resolution"])
 
-    assert set(arms) == {"venus", "viral-track", "virtus"}
+    assert set(arms) == {"venus", "viral-track"}
     for tool, resolutions in arms.items():
         assert resolutions == {"native-published", "matched-accession-index"}, tool
 
@@ -1468,7 +1467,7 @@ def test_a_cross_tool_arm_pairing_is_rejected(protocol: dict, schema: dict) -> N
     tampered = deepcopy(protocol)
     for workflow in tampered["workflow_matrix"]["workflows"]:
         if workflow["id"] == "W7b_venus_matched":
-            workflow["native_counterpart"] = "W9a_virtus_native"
+            workflow["native_counterpart"] = "W8a_viral_track_native"
     tampered["workflow_matrix"]["contract_sha256"] = workflow_matrix_sha256(
         tampered["workflow_matrix"]
     )

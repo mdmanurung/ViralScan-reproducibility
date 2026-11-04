@@ -1694,3 +1694,77 @@ deviations:
     git_sha: aeaeea5
     review_reference: analysis/v3_validation/g3_amendment_2026-11-04.md (git_sha is the base commit the revision was written against)
     record_sha256: 6bc5089e97791bd233342aa789d696dd97cb68bc295d53a1e9218d7de50652ef
+  - deviation_id: DEV-040
+    date: '2026-11-04'
+    affected_workflow_row_ids:
+      - W9a_virtus_native__synthetic_factorial
+      - W9a_virtus_native__synthetic_host_only
+      - W9a_virtus_native__synthetic_host_homology
+      - W9a_virtus_native__hhv6b_srr20710641
+      - W9a_virtus_native__ebv_srr12682296
+      - W9a_virtus_native__hsv1_srr8315713
+      - W9b_virtus_matched__synthetic_factorial
+      - W9b_virtus_matched__synthetic_host_only
+      - W9b_virtus_matched__synthetic_host_homology
+      - W9b_virtus_matched__hhv6b_srr20710641
+      - W9b_virtus_matched__ebv_srr12682296
+      - W9b_virtus_matched__hsv1_srr8315713
+    protocol_section: workflow_matrix, references, datasets, factors, seeds, supported_scope, endpoints, frozen_inputs, harmonization
+    description: >-
+      Application of the user's decisions of 2026-11-04 (afternoon grill, all approved) to the G3 amendment draft. Written as a
+      new record on top of DEV-034 to DEV-039; it edits none of them. Nothing freezes and G3 is not signed: the formal sign-off
+      still follows the round-14 external review. (a) The GSE184257 PROG-MIXED-VETO-01 gate waits for G3 clearance and the
+      EVID-06 verdict code and threshold freeze; the status proposed_pending_user_signoff of DEV-038 becomes user-approved,
+      and it reverses the earlier user decision Q3 "Set 3 now". (b) Pre-freeze rule, user-approved: before the EVID-06 freeze
+      only acquisition and content hashing are allowed, with no chemistry check or run of any kind. The chemistry check that ran
+      earlier the same day is DEV-039 and PFR-16. Dataset text that said chemistry is confirmed "before any outcome run" now says
+      after the EVID-06 freeze. (c) The "other virus" three-class rule is user-approved, with the requirement that the class
+      assignment is written and frozen before unblinding. The rule is now an ordered, deterministic text (study report, then
+      endogenous or integrated flag, then orthogonal support, then artefact) in the five EVID-06 datasets that carried the old
+      sentence. It uses only criteria already in the amendment. Two tests are not defined anywhere (which evidence-output field
+      and values mean "flagged as endogenous or integrated", and what counts as "orthogonal support"), so they are written as
+      open item EVID06-OV-1 for the user and the rule cannot freeze until the user closes it; no threshold was invented.
+      (d) VIRTUS is dropped from v3 (possible 3.1): workflow rows W9a_virtus_native and W9b_virtus_matched (12 rows), the
+      reference virtus_native_panel, the VIRTUS text in the comparator prose, the tool_environments blocker and the E1
+      acceptance text are removed or reworded; excluded_workflows gains X_virtus; expected_row_count goes from 86 to 74. The
+      E1 sentence sits under the harmonization dependent-fields digest, so the harmonization digests and the schema constants
+      move (see the digest changes below); the E1 statement about viralscan-2.2.0 is left as written. (e) seeds.generation
+      20260727005 and the factor levels (homology none and repeat_homology; infected 0.01, 0.04, 0.15; low_complexity 0, 0.01,
+      0.05; PCR 2, 5, 10; collisions 0, 0.005, 0.02; hopping 0, 0.01, 0.05) are user-approved on 2026-11-04. The factor status
+      stays pending and seeds.generation stays pending with value null; both flip in the G3 signing commit. (f) The 5-prime
+      strand fallback in supported_scope.five_prime.strand_handling is kept (--strand when given, otherwise the one-million-read
+      pilot inference); a per-chemistry strand default may only enter by a later ledgered amendment made before the freeze. This
+      sentence sits in supported_scope, hence the harmonization digest change. (g) EVID-06 keeps its bar: no accuracy,
+      sensitivity, specificity, precision, recall or PPV claim; the text is unchanged.
+    reason: >-
+      User decisions of 2026-11-04, applied to the amendment draft so the next review round (round 14) reads the decided state.
+    outcome_triggered: false
+    outcome_triggered_justification: >-
+      Stated under pre_freeze_runs.outcome_definition and its outcome_triggered_rule. The edits follow from user decisions and
+      document review; no viral outcome on any scored dataset prompted them, the Set 3 chemistry outputs were not opened, and no
+      workflow row has executed.
+    user_decisions_recorded:
+      - 'GSE184257 gate ordering (user decision, 2026-11-04): the gate runs only after G3 clearance and the EVID-06 freeze. This approves the ordering that DEV-038 left as proposed_pending_user_signoff and replaces Q3 "Set 3 now".'
+      - 'Pre-freeze rule (user decision, 2026-11-04): before the EVID-06 freeze, acquisition and content hashing only.'
+      - 'Other-virus rule (user decision, 2026-11-04): three classes (unexpected but plausible, endogenous or integrated, technical artefact; only the artefact is a disagreement), with the class-assignment rule written and frozen before unblinding.'
+      - 'VIRTUS (user decision, 2026-11-04): dropped from v3, possible 3.1. This resolves the open question left in DEV-034 and the Biomni F12 item in DEV-038.'
+      - 'seeds.generation and factor levels (user decision, 2026-11-04): 20260727005 and the levels listed in the description are approved; the formal G3 sign-off follows the round-14 external review.'
+      - 'Strand fallback (user decision, 2026-11-04): kept; a per-chemistry default only by a later amendment before the freeze.'
+      - 'EVID-06 (user decision, 2026-11-04): the bar on accuracy-type claims is kept.'
+    user_decision_needed:
+      - 'EVID06-OV-1: define the evidence-output field and values for "flagged as endogenous or integrated", define "orthogonal support", and confirm the order of steps 2 and 3 of the class-assignment rule. The rule cannot be frozen before then.'
+      - 'Whether the four unopened Set 3 chem outputs (DEV-039) may be opened after the EVID-06 freeze or are deleted and the check rerun.'
+      - 'The G3 freeze, sign-off and date stay with the user, after the round-14 external review.'
+    protocol_sha256_before: a3e814986fe1d83d54d957e68fecba0d3d9fdcfde8dadfaf3ac8205c77f148ac
+    protocol_sha256_after: 6b322064409610f97ec1ac45273992aee1193bc429913690cd562d3cd539edd8
+    digest_scope: frozen_inputs.contract_sha256
+    additional_digest_changes:
+      harmonization.contract_sha256:
+        before: 5db74530690817d649508050a5e9eb59cad05173cf676b099aec064497768b60
+        after: a44536dfaf67a2a32686280313fc143ce0b359762dfabc186f40c212c002f8fb
+      workflow_matrix.contract_sha256:
+        before: 29aaf47cd91736128238996c262ccff9140857b14a63bae2a496ef78e1977cf9
+        after: 66b2d0c5a0128db9e222c5208ed9100ba6a954bb047420ffa215dbd6ec5ef26c
+    git_sha: 350327a
+    review_reference: analysis/v3_validation/g3_amendment_2026-11-04.md (git_sha is the base commit the revision was written against)
+    record_sha256: 46732a13c4aeb7c0842a001c818d552125b7d0a86655756634bb2f16c5d1adbd
