@@ -44,12 +44,28 @@ three tests that asserted 2.2.0 is a comparator, and new tests for the items abo
 | `cb_umi_collisions` | 0, 0.005, 0.02 | collision fraction of viral molecules |
 | `ambient_index_hopping` | 0, 0.01, 0.05 | relocated fraction per virus |
 
+## Revision after review round 13 (DEV-038)
+
+Both reviewers returned does-not-pass (`sci05_review_round13.yaml`). Only `frozen_inputs` moves; the schema is unchanged.
+
+| Finding | Change |
+|---|---|
+| R13-F1, F1, F2 | GSE184257 gate (KSHV latent-veto against total KSHV molecules) is viral-state, so outcome-generating. It waits for G3 clearance and the EVID-06 freeze; results cannot change EVID-06 rules, labels or exclusions. `proposed_pending_user_signoff`: it reverses Q3 "Set 3 now" in favour of Q19 |
+| F1 (global rule) | Acquisition and hashing may precede the freeze for any dataset; no run that yields a call, count, tier, label or verdict precedes it. Set 3 (GSM6249889-92) was downloaded 2026-11-04, hashes recorded, no run |
+| F3 | "Other virus" splits into unexpected-but-plausible, endogenous or integrated, and technical artefact |
+| F4 | GSE139324 reserve re-scoped as HPV specificity substrate (CD45-sorted cells hold no tumour-cell HPV; cannot test sensitivity) |
+| F5 | GSE120926 non-malignant libraries: "EBV status unverified", out of the negative tally |
+| F6, F7, F9, F14 | KSHV truth is reporter based (cat42d KSHV accession unconfirmed; catalog lists NC_009333.1, paper used GQ994935.1); per-library reporting, no pooling; per-library chemistry and 5-prime strand calibration; cat42d is production pending G4 hashes |
+| R13-F2 | `seeds.generation` consumer contract: production mode must consume or enforce the signed value; stale wording removed |
+
+For the user only, not adopted: F8 (hold one virus or chemistry out of tuning), F10 (depth, strain divergence, foreign-virus ambient, co-infection), F11 (2.2.0 concordance), F12 (VIRTUS registry), F13 (record base 69abcc6 as the authoritative before-state).
+
 ## Open points for the user
 
 - VIRTUS (W9a, W9b) has no CMP row and Q6 named only CMP-01 to CMP-05. It is kept. Say if it goes.
 - The EVID-06 labels are written as presumed labels, because the frozen rule in `failure_and_deviation_reporting.prohibited`
   bars accuracy, sensitivity and specificity claims from non-exact truth. If the verdict should report those, that is a separate amendment.
-- GSE184257 is also read by the PROG-MIXED-VETO-01 gate. It must not open evidence outputs. Decide at sign-off whether that gate's run may precede the freeze commit.
+- GSE184257 is also used by the PROG-MIXED-VETO-01 gate, whose run is outcome-generating. DEV-038 orders it after the EVID-06 freeze; sign that ordering, which reverses Q3.
 - The E1 acceptance text still lists `viralscan-2.2.0` among tools that declare no invariant. It is left alone (endpoints sit under the dependent-fields digest) and stays true.
 
 ## Merge order

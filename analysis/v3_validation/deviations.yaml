@@ -1608,3 +1608,53 @@ deviations:
     git_sha: 69abcc6
     review_reference: analysis/v3_validation/g3_amendment_2026-11-04.md (git_sha is the base commit the amendment was written against)
     record_sha256: 5c3adb2515af38a7d3a64678d707a40912e3196c6bed1c4ba91d884a746a4fc9
+  - deviation_id: DEV-038
+    date: '2026-11-04'
+    affected_workflow_row_ids: []
+    protocol_section: datasets, references, seeds, execution_readiness, frozen_inputs
+    description: >-
+      Revision of the G3 amendment draft after SCI-05 round 13 (Codex: does-not-pass, 1 Major, 1 Minor; Biomni: does-not-pass,
+      F1 to F14; both reports in analysis/v3_validation/sci05_review_round13.yaml). Written as a new record on top of DEV-034 to
+      DEV-037, which are already pushed on the draft branch; it does not edit them. Nothing freezes. No dependent-fields input
+      changed, so the harmonization digests, the schema and workflow_matrix are unchanged; only frozen_inputs moves.
+      (1) R13-F1, F1, F2 (proposed_pending_user_signoff, because it reverses user decision Q3 "GSE184257 Set 3 now" in favour of
+      Q19): the PROG-MIXED-VETO-01 gate on GSE184257 scores KSHV latent-veto against total KSHV molecules, which are viral
+      programme states, so its run is outcome-generating. It waits for G3 execution clearance and for the EVID-06 verdict code and
+      threshold freeze, and its results may not change any EVID-06 rule, label, threshold or exclusion. (2) One global download
+      rule replaces every "Downloaded only after" text: acquisition and content hashing may precede the freeze for any dataset
+      (a download is not a run); no run that produces a viral call, count, tier, label or verdict precedes the verdict freeze.
+      GSE184257 Set 3 (GSM6249889 to GSM6249892) was downloaded on 2026-11-04; the eight file sha256 values are in the asset
+      pending_reason and in data/runs/work/gse184257_set3/raw/<GSM>/sha256.tsv; no run has touched it. (3) F3: the catch-all "any
+      other virus is a presumed host artefact" splits into unexpected but plausible, endogenous or integrated, and technical
+      artefact. (4) F4: the GSE139324 reserve is re-scoped as an HPV specificity substrate, not an HPV positive control (CD45-sorted
+      immune cells carry no tumour-cell HPV); re-scoped rather than dropped because the immune compartment still tests ambient
+      tumour HPV, and it cannot test sensitivity. (5) F5: GSE120926 non-malignant libraries are labelled "EBV status unverified" and
+      left out of the negative tally. (6) F6, F7, F9, F14, R13-F2: KSHV truth is reporter based (rKSHV.219 GFP and RFP) and the
+      cat42d KSHV accession is unconfirmed from tracked files (the package catalog lists NC_009333.1; the paper used GQ994935.1);
+      one biological unit per arm, per-library reporting, no pooling; per-library chemistry and 5-prime strand calibration;
+      cat42d is production pending G4 hash capture; seeds.generation gets a consumer contract (production mode must consume or
+      enforce the signed value) and the stale "root alone" and "not implemented" wording is removed. The simulator blocker text
+      carries the same requirement.
+    reason: >-
+      SCI-05 round 13 returned does-not-pass from both reviewers. The two blockers (F1, F2) and the Codex Major describe one
+      defect: the draft allowed a viral-state run on a held-out dataset before the freeze.
+    outcome_triggered: false
+    outcome_triggered_justification: >-
+      Stated under pre_freeze_runs.outcome_definition and its outcome_triggered_rule. The revisions follow from a document review;
+      no run touched any evid06 library and no viral outcome prompted them.
+    user_decisions_recorded:
+      - 'Q19 (user decision, 2026-11-04): GSE184257 is in the EVID-06 held-out set. DEV-038 applies it to the shared gate and records the reversal of Q3 as proposed_pending_user_signoff.'
+    user_decision_needed:
+      - 'Sign the GSE184257 gate ordering (gate run after G3 clearance and the EVID-06 freeze), which reverses Q3 "Set 3 now".'
+      - 'Biomni F8: pre-register at least one virus or one chemistry held entirely out of threshold tuning, and record per held-out dataset whether its virus and chemistry appear in tuning. Not adopted.'
+      - 'Biomni F10: add sequencing depth as a factor or justify the 25,000 reads per cell constant, add a viral strain-divergence level, extend ambient to foreign-virus contamination, and decide on a co-infection cell. Not adopted.'
+      - 'Biomni F12: VIRTUS (W9a, W9b) is outside CMP-01 to CMP-05; either add it to the comparator registry with a pinned version or reclassify it as a descriptive reference. Not adopted.'
+      - 'Biomni F13: record base commit 69abcc6 as the authoritative before-state for DEV-034 to DEV-037 instead of the before_digest_uncommitted corrections. Not adopted.'
+      - 'Biomni F11: optionally keep a 2.2.0 to v3 concordance as a non-comparator, non-endpoint descriptive diff. Not adopted.'
+      - 'The G3 freeze, sign-off and date stay with the user.'
+    protocol_sha256_before: e3ad369891785c9d68fc783d41d790073be5d47a404ea2770055251a82af5998
+    protocol_sha256_after: b15578762084cfe36194f07ce75041becc2d79e2c8a8d67e4e7aabebb9da7136
+    digest_scope: frozen_inputs.contract_sha256
+    git_sha: ca3667b
+    review_reference: analysis/v3_validation/sci05_review_round13.yaml (git_sha is the base commit the revision was written against)
+    record_sha256: 302b07fc1efc47a9fd651a0a964a78aae23c45e7a193ebb365f5b5c41c0d01b3

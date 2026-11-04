@@ -3335,6 +3335,10 @@ or protected pending-row datasets (attestation wording, user, 2026-10-13).
     (3) factor levels and `seeds.generation` are marked decided or `proposed_pending_user_signoff` (no status flips); (4) the `EVID-06`
     external-evaluation held-out set (six `evid06_*` dataset rows, no workflow rows). The schema consts move, so the packaged schema copy and
     `docs/workflow_comparison.md` in the package repo need the matching update and a re-pin before the two dependent tests pass in CI.
+  - **2026-11-04 (review of the amendment draft, `DEV-038`):** Codex (full branch) and Biomni (condensed packet) both returned does-not-pass; see
+    `analysis/v3_validation/sci05_review_round13.yaml`. Fixed: the GSE184257 gate ordering (after the EVID-06 freeze; `proposed_pending_user_signoff`, reverses Q3),
+    one global download rule, three-class "other virus" rule, GSE139324 re-scoped, GSE120926 negatives unverified, reporter-based KSHV truth, seed consumer contract.
+    For the user: Biomni F8, F10, F11, F12, F13. Still a draft; awaits the next review round and sign-off.
   - Round 13 (agent: 8 Majors, 12 Minors; Biomni: 6 Majors) returned does-not-pass. This row covers the protocol-side
     findings; M1-M5, BM5 and BM6 and the code Minors are on `codex/sci05-r13-code`.
   - `[x]` **M6/BM2 (Q119):** `calibration.freeze_scope`. G3 freezes the probable tier (cumulative tiers) only. Strong,
