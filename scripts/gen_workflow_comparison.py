@@ -30,7 +30,7 @@ PROTOCOL = ROOT / "analysis" / "v3_validation" / "protocol.yaml"
 DOC = package_path("docs/workflow_comparison.md")  # static page in the package repo; --check flags drift
 
 #: Five workflow families = the protocol's workflow tools grouped by strategy.
-#: The 2.2.0 arms are a predecessor comparison (``predecessor_comparison_layer``), not a strategy.
+#: The 2.2.0 arms (W10a, W10b; DEV-034, Q6) and the VIRTUS arms (W9a, W9b; DEV-040) were dropped, so every workflow is in a family.
 FAMILIES: list[tuple[str, tuple[str, ...]]] = [
     ("ViralScan combined", ("W1_viralscan_combined",)),
     ("ViralScan exact-fragment two-step", ("W2_viralscan_two_step_star_exact_fragment",)),
@@ -43,7 +43,7 @@ FAMILIES: list[tuple[str, tuple[str, ...]]] = [
         "Dedicated viral scRNA-seq tools",
         tuple(
             f"W{n}{arm}_{tool}_{res}"
-            for n, tool in ((7, "venus"), (8, "viral_track"), (9, "virtus"))
+            for n, tool in ((7, "venus"), (8, "viral_track"))
             for arm, res in (("a", "native"), ("b", "matched"))
         ),
     ),
@@ -98,7 +98,7 @@ def _attributes(w: dict[str, Any], n_all: int) -> tuple[list[str], list[str]]:
         cons.append(
             "Native arm uses a different reference; its numbers may not share a table with matched-arm numbers without disclosure."
         )
-    if w["tool"] in {"venus", "viral-track", "virtus"}:
+    if w["tool"] in {"venus", "viral-track"}:
         cons.append(
             "Needs an isolated, digest-pinned third-party environment; failures are reported, not patched."
         )
@@ -148,11 +148,9 @@ def render() -> str:
             f"`{i}` ({by_id[i]['role']}, {len(by_id[i]['dataset_ids'])} datasets)" for i in ids
         )
         lines.append(f"| {name} | {ids_cell} | {pros} | {cons} |")
-    legacy = sorted(i for i in by_id if i.startswith("W10"))
     lines += [
         "",
-        f"ViralScan 2.2.0 ({', '.join(f'`{i}`' for i in legacy)}) is a predecessor comparison, not a",
-        "workflow strategy, and is scored on its UMI-deduplicated unique-mapping layer only.",
+        "ViralScan 2.2.0 is not a comparator in v3 (user decision Q6, 2026-11-04; protocol DEV-034).",
         "",
     ]
     return "\n".join(lines)

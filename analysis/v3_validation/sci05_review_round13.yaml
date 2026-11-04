@@ -1,0 +1,159 @@
+schema_version: "1.0.0"
+protocol_id: viralscan-v3-validation
+review_task: SCI-05
+review_round: 13
+review_scope: G3 amendment draft 0.4.0 (DEV-034 to DEV-037), PR #35
+review_date: "2026-11-04"
+reviewed_git_sha: ca3667b
+verdict: does-not-pass
+outcome_eligible: false
+outcome_eligible_reason: >-
+  No workflow row has executed and no outcome has been inspected.
+note: >-
+  This is the second use of the number 13: sci05_review_round13 in PLAN SCI-05 is the 2026-10-13 review of the
+  signed-draft protocol. This file records the review of the 2026-11-04 amendment draft, which the coordinator
+  numbered round 13 of the amendment series. DEV-038 answers it.
+
+reviewers:
+  - id: codex
+    identity: Codex, read-only
+    saw: the full branch codex/g3-amend-2026-11-04 at ca3667b
+    verdict: does-not-pass
+    method_note: >-
+      Protocol and ledger checks passed. Against package pin a4ca989, 150 tests passed; four tests that need temporary
+      writes were deselected; the three documented schema and page failures reproduced. No files were edited.
+  - id: biomni
+    identity: Biomni max review, task tsk_015VBR6jFjhnqsXvyGu8Unf7
+    saw: >-
+      only the condensed packet uploaded as sci05_round13_g3_amendment_packet.md, not the branch. The packet file is not on
+      disk in this session; the closest on-disk source, the amendment summary it was condensed from, has sha256
+      4481a0a09bb3ce6bf22bc5cecb0bc473c1d2aca7d76f8bafe1fe6c2178c187a9. Its findings are therefore limited to the text of
+      the packet and to the papers it fetched.
+    verdict: does-not-pass
+
+findings:
+  - id: R13-F1
+    reviewer: codex
+    severity: major
+    title: GSE184257 gate misclassified as reading host programme states
+    status: accepted-fixed
+    resolution: >-
+      The gate scores KSHV latent-veto against total KSHV molecules, which are viral programme states, so its run is
+      outcome-generating. It waits for G3 execution clearance and the EVID-06 verdict freeze, and its results may not change
+      any EVID-06 rule, label, threshold or exclusion (evid06_gse184257.no_workflow_rows_reason, DEV-038). Marked
+      proposed_pending_user_signoff because it reverses user decision Q3.
+  - id: R13-F2
+    reviewer: codex
+    severity: minor
+    title: seeds.generation has no consumer contract; stale wording
+    status: accepted-fixed
+    resolution: >-
+      seeds.generation.pending_reason now states that the generator takes generation_seed from its argument, that production
+      mode must consume or enforce the signed value, and that the "root alone" and "not implemented" wording is gone. The
+      simulator blocker carries the same requirement. The code change is not made here.
+  - id: F1
+    reviewer: biomni
+    severity: blocker
+    title: Download timing contradicts the Set 3 download
+    status: accepted-fixed
+    resolution: >-
+      One global rule: acquisition and content hashing may precede the freeze for any dataset; no run that produces a viral
+      call, count, tier, label or verdict precedes the verdict freeze. All "Downloaded only after" texts are replaced. Set 3
+      (GSM6249889 to GSM6249892) was downloaded 2026-11-04, its eight sha256 values are recorded, and no run touched it.
+  - id: F2
+    reviewer: biomni
+    severity: blocker
+    title: Programme gate and EVID-06 firewall timing unresolved
+    status: accepted-fixed
+    resolution: Same as R13-F1. Pending the user's sign-off because it reverses Q3.
+  - id: F3
+    reviewer: biomni
+    severity: major
+    title: "Any other virus = presumed host artefact" conflates distinct classes
+    status: accepted-fixed
+    resolution: >-
+      Split into unexpected but plausible (not counted against agreement), endogenous or integrated (ciHHV-6, HERV, integrated
+      HPV chimeras; flagged and left out of the artefact tally) and technical artefact. Applied to all five listed rows.
+  - id: F4
+    reviewer: biomni
+    severity: major
+    title: GSE139324 (CD45-sorted immune cells) cannot be an HPV positive control
+    status: accepted-fixed
+    resolution: >-
+      Re-scoped as an HPV specificity substrate, not dropped. HPV sits in epithelial tumour cells that CD45 sorting removes, so
+      the library cannot test sensitivity, but the immune compartment still tests ambient tumour HPV. expected_targets is left
+      at [HPV] because it is a dependent-fields digest input; the text says it names the virus whose absence is assessed.
+  - id: F5
+    reviewer: biomni
+    severity: major
+    title: GSE120926 non-malignant biopsies are not established EBV-negative
+    status: accepted-fixed
+    resolution: Labelled "EBV status unverified" and left out of the negative tally unless orthogonal EBV negativity exists.
+  - id: F6
+    reviewer: biomni
+    severity: major
+    title: KSHV truth is reporter based
+    status: accepted-fixed
+    resolution: >-
+      Stated in the row. The cat42d KSHV accession is unconfirmed from tracked files: the package catalog lists RefSeq
+      NC_009333.1; the paper used GQ994935.1 (JSC-1). It must be read from the cat42d GTF at the G4 rebuild.
+  - id: F7
+    reviewer: biomni
+    severity: major
+    title: One biological unit per arm
+    status: accepted-fixed
+    resolution: Per-library descriptive reporting with no pooling, written into the shared label rule and the three single-unit rows.
+  - id: F8
+    reviewer: biomni
+    severity: major
+    title: Virus and chemistry leakage between tuning and held-out data
+    status: proposed-to-user
+    resolution: >-
+      Not adopted. The user decides whether to hold one virus or chemistry entirely out of threshold tuning and whether to record
+      per-dataset overlap. The 5-prime strand caveat part is adopted under F9.
+  - id: F9
+    reviewer: biomni
+    severity: minor
+    title: Mixed 3-prime and 5-prime chemistry in GSE182227
+    status: accepted-fixed
+    resolution: Per-library chemistry capture; strand check calibrated per library (package EVID-03); unknown chemistry is not assessed.
+  - id: F10
+    reviewer: biomni
+    severity: minor
+    title: Factor gaps (depth, strain divergence, foreign-virus ambient, co-infection)
+    status: proposed-to-user
+    resolution: Not adopted. New factors are new design, so they are for the user to decide.
+  - id: F11
+    reviewer: biomni
+    severity: minor
+    title: Optional 2.2.0 concordance
+    status: proposed-to-user
+    resolution: Not adopted. Listed for the user.
+  - id: F12
+    reviewer: biomni
+    severity: minor
+    title: VIRTUS outside CMP-01 to CMP-05
+    status: proposed-to-user
+    resolution: Not adopted; VIRTUS stays until the user decides to register it or reclassify it as descriptive.
+  - id: F13
+    reviewer: biomni
+    severity: minor
+    title: before_digest_uncommitted for DEV-035 to DEV-037
+    status: proposed-to-user
+    resolution: >-
+      Not adopted. Proposal: record base commit 69abcc6 as the authoritative before-state. Changing the DEV-035 to DEV-037
+      handling is a ledger-policy choice.
+  - id: F14
+    reviewer: biomni
+    severity: minor
+    title: Production reference named before its G4 hashes exist
+    status: accepted-fixed
+    resolution: cat42d is production pending G4 hash capture; the G4 hashes are the binding identity, and the D-list sha256 is the provisional one.
+  - id: S1
+    reviewer: biomni
+    severity: note
+    title: GSE182227 tumour OP8 clinically p16-positive, later reclassified after negative HPV testing
+    status: accepted-fixed
+    resolution: >-
+      The row says the label uses the paper's final HPV status, checked against the paper when labels are set. This is the
+      reviewer's reading of the paper and I did not verify it.

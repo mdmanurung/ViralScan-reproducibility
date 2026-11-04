@@ -863,8 +863,6 @@ def test_every_comparator_named_by_the_plan_has_a_workflow(protocol: dict) -> No
         "traditional-host-subtraction",
         "venus",
         "viral-track",
-        "virtus",
-        "viralscan-2.2.0",
     }
 
 
@@ -879,7 +877,7 @@ def test_kallisto_two_step_is_explicitly_excluded_with_a_revisit_condition(
 def test_dedicated_comparators_cover_the_three_required_positives(protocol: dict) -> None:
     required = {"hhv6b_srr20710641", "ebv_srr12682296", "hsv1_srr8315713"}
     for workflow in protocol["workflow_matrix"]["workflows"]:
-        if workflow["tool"] in {"venus", "viral-track", "virtus"}:
+        if workflow["tool"] in {"venus", "viral-track"}:
             assert required.issubset(set(workflow["dataset_ids"])), workflow["id"]
             # F5: the only exact-truth dataset must reach them too.
             assert "synthetic_factorial" in workflow["dataset_ids"], workflow["id"]
@@ -1308,10 +1306,10 @@ def test_dedicated_comparators_run_both_reference_arms(protocol: dict) -> None:
     """F14: one arm cannot separate 'tool is worse' from 'reference differed'."""
     arms: dict[str, set[str]] = {}
     for workflow in protocol["workflow_matrix"]["workflows"]:
-        if workflow["tool"] in {"venus", "viral-track", "virtus"}:
+        if workflow["tool"] in {"venus", "viral-track"}:
             arms.setdefault(workflow["tool"], set()).add(workflow["reference_resolution"])
 
-    assert set(arms) == {"venus", "viral-track", "virtus"}
+    assert set(arms) == {"venus", "viral-track"}
     for tool, resolutions in arms.items():
         assert resolutions == {"native-published", "matched-accession-index"}, tool
 
@@ -1469,7 +1467,7 @@ def test_a_cross_tool_arm_pairing_is_rejected(protocol: dict, schema: dict) -> N
     tampered = deepcopy(protocol)
     for workflow in tampered["workflow_matrix"]["workflows"]:
         if workflow["id"] == "W7b_venus_matched":
-            workflow["native_counterpart"] = "W9a_virtus_native"
+            workflow["native_counterpart"] = "W8a_viral_track_native"
     tampered["workflow_matrix"]["contract_sha256"] = workflow_matrix_sha256(
         tampered["workflow_matrix"]
     )
@@ -1488,25 +1486,69 @@ def test_the_accession_linkage_admits_it_is_not_yet_checkable(protocol: dict) ->
     assert "rel-03" in rule
 
 
-def test_the_predecessor_is_a_scored_comparator(protocol: dict) -> None:
-    """A benchmark justifying a rewrite must include the thing being rewritten."""
-    legacy = [w for w in protocol["workflow_matrix"]["workflows"] if w["tool"] == "viralscan-2.2.0"]
+def test_the_predecessor_is_not_a_comparator(protocol: dict) -> None:
+    """DEV-034 (user decision Q6, 2026-11-04): the 2.2.0 head-to-head (CMP-06) is out of v3 scope."""
+    matrix = protocol["workflow_matrix"]
 
-    assert len(legacy) == 2, "both reference arms, as for every dedicated comparator"
-    for arm in legacy:
-        assert "synthetic_factorial" in arm["dataset_ids"], arm["id"]
-        assert "synthetic_host_only" in arm["dataset_ids"], arm["id"]
-        assert "synthetic_host_homology" in arm["dataset_ids"], arm["id"]
+    assert not [w for w in matrix["workflows"] if w["tool"] == "viralscan-2.2.0"]
+    assert "legacy_v2_native_panel" not in {r["id"] for r in protocol["references"]}
+    assert "X_viralscan_2_2_0_head_to_head" in {w["id"] for w in matrix["excluded_workflows"]}
 
 
-def test_an_improvement_claim_may_not_rest_on_counts(protocol: dict) -> None:
+def test_no_improvement_claim_over_the_predecessor_rests_on_this_protocol(protocol: dict) -> None:
     """The two versions report different units, so magnitude carries no verdict."""
     rule = protocol["workflow_matrix"]["predecessor_comparison_rule"].lower()
 
+    assert "not a comparator" in rule
     assert "different units" in rule
     assert "definitional" in rule
-    assert "precision, recall" in rule
-    assert "general superiority" in rule
+
+
+def test_translated_search_and_private_covid_are_scoped_out(protocol: dict) -> None:
+    """DEV-034 (Q7, Q14): translated search is experimental; x213/x216 never reach public results."""
+    exclusions = {x["id"]: x for x in protocol["exclusions"]}
+
+    assert "never changes detected" in exclusions["X6_translated_search"]["rule"]
+    assert "x213" in exclusions["X3_legacy_or_private"]["rule"]
+    assert "private negative control only" in exclusions["X3_legacy_or_private"]["rule"]
+
+
+def test_cat42d_is_the_production_reference_with_no_hash_before_the_g4_rebuild(
+    protocol: dict,
+) -> None:
+    """DEV-035 (Q9, Q16): cat42d is chosen; its index hash is not invented before the G4 rebuild."""
+    reference = {r["id"]: r for r in protocol["references"]}["curated_human_virus"]
+    index = {a["id"]: a for a in reference["assets"]}["curated_combined_index"]
+
+    assert "v3 production reference" in reference["purpose"]
+    assert index["locator"].endswith("viral_ref_cat42d")
+    assert index["digest_status"] == "pending" and index["sha256"] is None
+    blocker = {b["id"]: b for b in protocol["execution_readiness"]["training_blockers"]}[
+        "production_reference"
+    ]
+    assert "REF-08" in blocker["description"] and "G5" in blocker["description"]
+
+
+def test_the_evid06_external_evaluation_set_has_no_workflow_rows(protocol: dict) -> None:
+    """DEV-037 (Q18 to Q20): five datasets plus one reserve, protected and outside the workflow matrix."""
+    evid = {d["id"]: d for d in protocol["datasets"] if d["id"].startswith("evid06_")}
+    in_rows = {i for w in protocol["workflow_matrix"]["workflows"] for i in w["dataset_ids"]}
+
+    assert set(evid) == {
+        "evid06_gse182227",
+        "evid06_gse166766",
+        "evid06_gse268542",
+        "evid06_gse120926",
+        "evid06_gse184257",
+        "evid06_gse139324_reserve",
+    }
+    for dataset_id, dataset in evid.items():
+        assert dataset["analysis_role"] == "external-evaluation", dataset_id
+        assert dataset["truth_status"] == "contextual", dataset_id
+        assert dataset["required"] is False and dataset["no_workflow_rows_reason"], dataset_id
+        assert dataset_id not in in_rows, dataset_id
+        for asset in dataset["assets"]:
+            assert asset["digest_status"] == "pending" and asset["sha256"] is None, dataset_id
 
 
 def test_the_committed_ledger_chain_is_intact(ledger: dict) -> None:
@@ -1592,18 +1634,19 @@ def test_frozen_inputs_limitation_names_the_trust_boundary(protocol: dict) -> No
     assert "changed claim, not a false one" in limitation
 
 
-def test_no_field_still_claims_the_incomparable_axes_are_comparable(protocol: dict) -> None:
-    """R7-F3: round 5 fixed by addition, leaving the old rule contradicting the new one."""
+def test_no_field_still_describes_a_scored_predecessor_comparison(protocol: dict) -> None:
+    """R7-F3 guarded a rule that contradicted its axes list; DEV-034 (Q6) removed both."""
     matrix = protocol["workflow_matrix"]
 
-    assert matrix["predecessor_comparable_axes"] == [
-        "molecule-precision-recall-f1-on-counts_unique"
-    ]
+    for key in (
+        "predecessor_comparison_layer",
+        "predecessor_comparable_axes",
+        "predecessor_incomparable_axes_rule",
+    ):
+        assert key not in matrix, key
     rule = matrix["predecessor_comparison_rule"].lower()
-    # The rule must defer to the incomparable-axes field rather than re-listing.
-    assert "predecessor_comparable_axes" in rule
-    assert "predecessor_incomparable_axes_rule" in rule
-    assert "exactly one axis" in rule
+    assert "not a comparator" in rule
+    assert "cmp-06" in rule
 
 
 def test_the_lod_promises_only_what_its_estimator_delivers(protocol: dict) -> None:
