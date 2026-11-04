@@ -1,6 +1,6 @@
 path	anchor	reason
 CHANGELOG.md	unbacked quantitative wording is removed or softened	DOC-10 entry quotes the removed numbers
-CHANGELOG.md	derived percentage changes from **4.0% to 0.2%**	test-fixture arithmetic; unverified (50/1000 is 5 %), see DOC-10
+CHANGELOG.md	derived percentage changes from **4.0% to 0.2%**	verified 2026-11-02: 2/50 = 4.0 % legacy denominator, 2/1000 = 0.2 % (tests/test_super_expressors.py fixture, package PR #175)
 CHANGELOG.md	under 5% of the record's	near-copy threshold (parameter)
 README.md	img.shields.io/badge/python	badge
 docs/cli_reference.md	| `--cell-calling METHOD` |	CLI help (parameter)

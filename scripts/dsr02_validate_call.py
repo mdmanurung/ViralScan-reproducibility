@@ -9,7 +9,7 @@ was human telomere repeats). Dataset-specific values are arguments or table rows
 
     # one call
     python scripts/dsr02_validate_call.py --run-dir <sample run dir> --virus "<label or gene id>" \\
-        --panel-fasta <viral fasta of that run's index> --host-fasta <GRCh38 fasta> --out <evidence dir>
+        --panel-fasta <viral fasta of that run's index> --host-fasta <GRCh38 fasta; repro copy: data/references/grch38/refdata-gex-GRCh38-2024-A/genome.fa> --out <evidence dir>
     # row N of calls.tsv (scripts/dsr02_enumerate_calls.py output), e.g. a SLURM array task
     python scripts/dsr02_validate_call.py --calls calls.tsv --row $SLURM_ARRAY_TASK_ID \\
         --panel-fasta <fasta> [--panel-for DATASET=<fasta> ...] --host-fasta <fasta>

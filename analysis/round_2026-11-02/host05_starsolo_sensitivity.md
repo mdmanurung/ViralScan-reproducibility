@@ -1,6 +1,6 @@
 # HOST-05: sensitivity cost of `--host-filter starsolo` (round 2026-11-02)
 
-Status: **Part A measured; Part B submitted (Slurm 25949123 (first submission 25941194 failed in 2 s: package CLI removed -s1/-s2/-gtf, now `viralscan run --r1 --r2 --gtf`; fixed in the script, new dirs `host05/r2/`), array 0-7, partition `all`), still PENDING on Priority when this note was written**. Package pin: `de55424`
+Status 2026-11-04: **Part A measured. Part B: 2 of 6 planned arms COMPLETED (ebv_planted pinned, star-default), the rest PENDING on Priority; no Part B loss number yet (`host05_collect.py` not run).** Package pin: `de55424`
 (`v3.0.0rc1-164-gde55424`, worktree `ViralScan/.claude/worktrees/pin-host05`). Env `viralscan_test_full`.
 Exploratory, n = 2 background libraries (Part A) and n = 1 library (Part B). No pass/fail threshold.
 
@@ -63,7 +63,32 @@ After tasks 0-5 finish, from the repro checkout:
 
 It writes `host05/r2/summary/host_loss.tsv` (D15/D16 with Wilson CIs, `not_in_lineage`) and `host05/r2/score_{none,pinned,star-default}/`
 (SENS-07 capture per family). Endogenous molecules for EBV (unplanted arms) and HHV-6B (tasks 6-7) come from each run's
-`<run>/<sample>/results/viral_summary.tsv`. Part B results are **not yet measured**.
+`<run>/<sample>/results/viral_summary.tsv`. Part B results are **not yet measured** (see "Part B state").
+
+## Part B state (`sacct`/`squeue`, 2026-11-04)
+| Job | Task / arm | State |
+|---|---|---|
+| 25941194_0-7 | first submission, all 8 tasks | FAILED (1-3 s; removed `-s1/-s2/-gtf` CLI) |
+| 25949123_0 | ebv_planted_none | FAILED after 7 min 42 s (`CellCallingError`, virus-only index has no host columns); superseded by 25949506_8 |
+| 25949123_1 | ebv_planted_pinned | COMPLETED (35 min) |
+| 25949123_2 | ebv_planted_star-default | COMPLETED (27 min) |
+| 25949123_3, 4, 5 | ebv_unplanted none / pinned / star-default | PENDING (Priority); 3 will fail like 0 and is superseded by 25949506_9 |
+| 25949123_6, 7 | hhv6b_none / hhv6b_pinned | PENDING (Priority); 6 will fail like 0 and is superseded by 25949506_10 |
+| 25949506_8, 9, 10 | ebv_planted_none_combined, ebv_unplanted_none_combined, hhv6b_none_combined (combined index) | PENDING (Priority) |
+
+`host05_collect.py` needs tasks 1, 2, 4, 5, 8, 9 finished; it has not run and `host05/r2/summary/` does not exist.
+
+### Part B, completed arms: planted-run viral_summary (not scored)
+Source: `data/runs/round_2026-11-02/host05/r2/<arm>/run/SRR12682296/results/viral_summary.tsv`, rows with >= 3 molecules. These are the planted runs only. The unplanted twin (task 4/5, pending) and `host05_collect.py` are needed before any planted-minus-twin or loss number exists, and `viralscan host-loss` has not been run on them.
+
+| Row | ebv_planted_pinned | ebv_planted_star-default |
+|---|---|---|
+| called cells | 2,351 | 2,384 |
+| Epstein-Barr virus molecules (infected called cells) | 378,494 (2,135) | 378,390 (2,159) |
+| Human gammaherpesvirus 4 type 2 | 79,844 (1,065) | 79,825 (1,081) |
+| Human herpesvirus 6b | 1,105.3 (47) | 1,105.3 (47) |
+| HPV84, HPV69, Human polyomavirus 7, JC polyomavirus | 1,110.0 each (48, 47, 48, 49 cells) | 1,110.0 each (48, 47, 48, 49 cells) |
+| Human herpesvirus 6A | 4.7 (2) | 4.7 (2) |
 
 ## Reading so far
 

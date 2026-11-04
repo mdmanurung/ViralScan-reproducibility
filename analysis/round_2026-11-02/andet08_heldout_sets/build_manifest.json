@@ -1,0 +1,51 @@
+{
+  "seed": 20261102,
+  "set_size": 5,
+  "max_identity": 0.95,
+  "email_used_for_ncbi": "viralscan-agent@example.org",
+  "panel_anello_accessions": 2040,
+  "panel_viral_fa_sha256": "c00f9f100db681416d4a998387e746b1e0145bf1a8f2160bb4a5a8645f7855e3",
+  "identity_sha256": "363b11b2b7d2754f7dbe09bac6f19434cdc08d2b3afc6071ffedf8070f1ac2fe",
+  "sets": {
+    "A": {
+      "Alphatorquevirus": 5,
+      "Betatorquevirus": 5,
+      "Gammatorquevirus": 5,
+      "Gyrovirus": 5,
+      "Samektorquevirus": 4,
+      "Hetorquevirus": 0,
+      "Memtorquevirus": 5,
+      "Anelloviridae": 5
+    },
+    "B": {
+      "Alphatorquevirus": 5,
+      "Betatorquevirus": 5,
+      "Gammatorquevirus": 5,
+      "Gyrovirus": 0,
+      "Samektorquevirus": 0,
+      "Hetorquevirus": 0,
+      "Memtorquevirus": 1,
+      "Anelloviridae": 0
+    },
+    "C": {
+      "Alphatorquevirus": 5,
+      "Betatorquevirus": 5,
+      "Gammatorquevirus": 5,
+      "Gyrovirus": 0,
+      "Samektorquevirus": 0,
+      "Hetorquevirus": 0,
+      "Memtorquevirus": 0,
+      "Anelloviridae": 0
+    },
+    "H": {
+      "Alphatorquevirus": 5,
+      "Betatorquevirus": 5,
+      "Gammatorquevirus": 5,
+      "Gyrovirus": 5,
+      "Samektorquevirus": 2,
+      "Hetorquevirus": 5,
+      "Memtorquevirus": 0,
+      "Anelloviridae": 5
+    }
+  }
+}
