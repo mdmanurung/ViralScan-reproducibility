@@ -27,7 +27,7 @@ Scripts: `scripts/slurm_kshv_round_2026-11-02.sh` (ARM=...), `scripts/slurm_kshv
 | 25949108, 25949495, 25950135 | `rerun-programs` (`de55424` catalogue, then 5b419d4 twice) | finished runs | 32-48G | COMPLETED |
 | 25949110 | `_r2` DSR-02 chain | enumerates the 17 calls of the `_r2` arms | 4G | COMPLETED; submitted 25952505 |
 | 25952505 | `_r2` DSR-02 evidence array (rows 0-16 %6) | see DSR-02 section | 24G | _0 and _3 OUT_OF_MEMORY; _1-2 COMPLETED; _4-5 RUNNING; _6-16 PENDING |
-| 25953432 | DSR-02 row 0 resubmit | row 0 | 48G | _0 PENDING (Priority) |
+| 25953432 | DSR-02 row 0 resubmit | row 0 | 48G | _0 OUT_OF_MEMORY at 48G after 57 min (MaxRSS 44.9 GB); not resubmitted, see the note under the DSR-02 table |
 | 25953731 | DSR-02 row 3 resubmit | row 3 | 48G | _3 PENDING |
 | 25953402 | GSE184257 Set 3 download array (0-3) | see held-out data section | 2G | _0 FAILED (broken pipe); _1-3 COMPLETED |
 | 25953433 | retry of 25953402_0 | task 0 | 2G | _0 COMPLETED (34 min) |
@@ -181,7 +181,7 @@ Calls: `data/runs/round_2026-11-02/_kshv/evidence_r2/calls.tsv` (17 rows, run di
 
 | Row | Library | Arm | Call (molecules) | Job | State | virus-best / host-best / tie / unaligned (counted) | Flags | Verdict |
 |---|---|---|---|---|---|---|---|---|
-| 0 | GSM5725696 | combined_artefact_r2 | HHV-8 (23,670,509) | 25952505_0 | OUT_OF_MEMORY at 24G after 48 min; partial output moved to `evidence_r2/_failed/`. Resubmitted as 25953432_0 at 48G, PENDING | pending | | pending |
+| 0 | GSM5725696 | combined_artefact_r2 | HHV-8 (23,670,509) | 25952505_0 | OUT_OF_MEMORY at 24G after 48 min; partial output moved to `evidence_r2/_failed/`. Resubmitted as 25953432_0 at 48G: OUT_OF_MEMORY again (MaxRSS 44.9 GB at 57 min). Not resubmitted | not run | | not run |
 | 1 | GSM5725696 | combined_artefact_r2 | HPV77 (4) | 25952505_1 | COMPLETED (1 h 05) | 2 / 0 / 0 / 4 | host_homology flagged 0.333 | virus-best 2, host-best 0 of 6 counted |
 | 2 | GSM5725697 | combined_artefact_r2 | Cercopithecine herpesvirus (5) | 25952505_2 | COMPLETED (0 h 57) | 0 / 0 / 3 / 2 | none flagged | no virus-best molecule; 3 ties, 2 unaligned |
 | 3 | GSM5725697 | combined_artefact_r2 | HHV-8 (23,544,978) | 25952505_3 | OUT_OF_MEMORY at 24G after 1 h 03; partial output in `evidence_r2/_failed/`. Resubmitted as 25953731_3 at 48G, PENDING | pending | | pending |
@@ -189,6 +189,13 @@ Calls: `data/runs/round_2026-11-02/_kshv/evidence_r2/calls.tsv` (17 rows, run di
 | 5 | GSM5725698 | combined_artefact_r2 | HHV-8 (31,761,926) | 25952505_5 | RUNNING | pending | | pending |
 | 6 | GSM5725698 | combined_artefact_r2 | HPV29 (3) | 25952505_6 | PENDING | pending | | pending |
 | 7-16 | GSM5725696-98 | combined_off_r2 | Cercopithecine herpesvirus, HHV-8, HPV77, HPV29 (see `calls.tsv`) | 25952505_7-16 | PENDING (throttle %6) | pending | | pending |
+
+**HHV-8 target rows (0, 3, 5, 8, 11, 14), 2026-11-04.** These are the target virus at 23-32 M molecules (`calls.tsv` marks
+HHV-8 `expected=false` only because the KSHV manifest has no expected-virus column). Row 0 ran out of memory at 24G and at 48G
+(MaxRSS 44.9 GB at 57 min), so a row needs more than 48G, likely well above 100G. Read-level evidence on the target virus at
+millions of molecules adds nothing the counts do not show, and the user cancelled the matching HHV-6B target check (25950203)
+as redundant. So row 0 is not resubmitted, and the five other 48G reruns (25953731, 25953763, 25954313, 25954489, 25954528)
+are expected to fail the same way; the user may cancel them. Off-target rows (HPV77, HPV29, Cercopithecine herpesvirus) run as planned.
 
 Rows 1-2: `molecule_verdict_summary.tsv` (`counted` rows) and `interpretation_flags.tsv` in the row's evidence dir.
 Risk: rows 5, 8, 11 and 14 are HHV-8 calls with 23.7 to 31.8 M molecules, the same shape as rows 0 and 3, which ran out of memory at 24G. `calls.tsv` marks HHV-8 `expected=false`, so the enumerator lists the target virus as an off-target call. The original arms (GSM5725695 all arms, GSM5725696/-97 twostep) are covered only by chain 25941255, which is blocked behind 25941254_3-4.
