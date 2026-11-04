@@ -6753,7 +6753,9 @@ only the rows that were missing are added below, verbatim and grouped as in the 
   `--scautoqc` on the public HSV-1 library `SRR8315713` (needs the kb/kallisto/bustools env, a reference and user-approved compute). Also untested:
   clusterwise multi-resolution QC (absent in SCTK 0.2.0) and ribo/globin marker sensitivity. Closing this row lets the package flip `SCAUTOQC-01` to `[x]`.
 - [ ] `COVMAP-01-RUN` — (2026-11-02, split from package `COVMAP-01`; the coverage-map code, tests and STAR option A are done there) a pyGenomeTracks run on a real library beyond HHV-6B AF157706.1. Closing this row, with the package items (user layout review, `environment.coverage.yml` CI solve), lets the package flip `COVMAP-01` to `[x]`.
+  - 2026-11-04: submitted `scripts/slurm_covmap_ebv.sh` (job 25956750, highmem): `plot_coverage_maps` from package 13ea776 on the real EBV STARsolo BAM `data/runs/work/star_hostvirus/GSM4796271` (VIRUS|NC_007605.1), fresh output `covmap_ebv_13ea776/`. Result pending; row stays open until the layout is read.
 - [ ] `REVIEW-C-RUN` — (2026-11-02, split from package `REVIEW-C`; the coverage-map code and fixtures pass there) real-directory qualification pending. Closing this row lets the package flip `REVIEW-C` to `[x]`.
+  - 2026-11-04: submitted `scripts/slurm_covmap_ebv.sh` (job 25956750, highmem): `plot_coverage_maps` from package 13ea776 on the real EBV STARsolo BAM `data/runs/work/star_hostvirus/GSM4796271` (VIRUS|NC_007605.1), fresh output `covmap_ebv_13ea776/`. Result pending; row stays open until the layout is read.
 
 `AUD3-REF08-DIVERGED` was checked and not split: it has no run part (the homology threshold is deferred to `REF-08`), so it stays as one row above.
 
