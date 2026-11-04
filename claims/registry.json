@@ -263,7 +263,7 @@
         {
           "artifact_id": "validation-protocol",
           "path": "analysis/v3_validation/protocol.yaml",
-          "sha256": "f8bb9ed62a8eb92b563122718bb65c82a5c2325c509c83e3977c10bf604578bb"
+          "sha256": "7eb3c4b8ee56294e55a8446f45296835b32bd92f8d0f48df2b1c01ebbc19ab60"
         },
         {
           "artifact_id": "validation-protocol-schema",
@@ -281,11 +281,11 @@
           "sha256": "1f9795a13366f27f0b3576c6b695a781a5f97cd16265e05c59c292299bd56e84"
         }
       ],
-      "git_sha": "03c935c72c2a191f7cd68f95285c7b0965e3b982",
+      "git_sha": "5703ea34b7008614da103fc898b5ed521922518d",
       "input_hashes": [
         {
           "id": "validation-protocol",
-          "sha256": "f8bb9ed62a8eb92b563122718bb65c82a5c2325c509c83e3977c10bf604578bb"
+          "sha256": "7eb3c4b8ee56294e55a8446f45296835b32bd92f8d0f48df2b1c01ebbc19ab60"
         }
       ],
       "reference_hashes": [
