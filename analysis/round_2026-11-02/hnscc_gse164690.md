@@ -60,3 +60,14 @@ Rows 4-6: `data/runs/round_2026-11-02/_dsr0607/evidence/hnscc_gse164690__SRR1341
 Reading: HPV29 in HN18 is the same host cross-map seen in the HPV16 rafts (DSR-03 note): more molecules align to human than to HPV29, with a single-locus hotspot. No BLAST read has a viral top hit. The Samektorquevirus call has 2 virus-best molecules; that is too few to call an anellovirus present or absent.
 
 HN01 HPV29 (rows 4-6): host-best molecules outnumber virus-best in every arm, and `host_homology` is flagged in every arm.
+
+
+### Backfill (array 25953813, 2026-11-04): Gammatorquevirus in the twostep arms
+Output `data/runs/round_2026-11-02/_dsr02_backfill_2026-11-04/hnscc_gse164690__<lib>__twostep__Gammatorquevirus/`.
+
+| Library | Arm | Call | virus-best / host-best / tie / unaligned | Flags raised |
+|---|---|---|---|---|
+| HN01 SRR13418973 | twostep | Gammatorquevirus (2) | 1 / 1 / 0 / 0 | host_homology 0.50 |
+| HN18 SRR13419165 | twostep | Gammatorquevirus (1) | 0 / 0 / 0 / 1 | none |
+
+Both are one or two molecules: no verdict either way.
