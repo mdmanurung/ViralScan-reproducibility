@@ -1,6 +1,6 @@
 # KSHV GSE190558 (RUN-04, PROG-16), round 2026-11-02
 
-Status 2026-11-04: 11 of 12 library-arm cells have a summary (the original OOM arms were rerun as `_r2`). GSM5725698 twostep (job 25941254_3) is PENDING on JobArrayTaskLimit with no task of its array running. DSR-02 (`_r2` array 25952505): rows 1-2 COMPLETED, rows 3-5 RUNNING, rows 6-16 PENDING, row 0 ran out of memory and was resubmitted (25953432_0, PENDING). Programme tables at 5b419d4 are missing for the three `combined_artefact_r2` runs. GSE184257 Set 3 download: 3 of 4 libraries done. The round-2 numbers below (pin e7c1b08, 2026-10-13/14) are the baseline and are labelled as such. Exploratory, unscored.
+Status 2026-11-04: 11 of 12 library-arm cells have a summary (the original OOM arms were rerun as `_r2`). GSM5725698 twostep (job 25941254_3) is PENDING on JobArrayTaskLimit with no task of its array running. DSR-02 (`_r2` array 25952505): rows 1-2 COMPLETED, rows 4-5 RUNNING, rows 6-16 PENDING, rows 0 and 3 ran out of memory at 24G and were resubmitted at 48G (25953432_0 and 25953731_3, both PENDING). Programme tables at 5b419d4 are missing for the three `combined_artefact_r2` runs. GSE184257 Set 3 download: 4 of 4 libraries done. The round-2 numbers below (pin e7c1b08, 2026-10-13/14) are the baseline and are labelled as such. Exploratory, unscored.
 
 ## Setup
 
@@ -26,10 +26,11 @@ Scripts: `scripts/slurm_kshv_round_2026-11-02.sh` (ARM=...), `scripts/slurm_kshv
 | 25949105 | combined_artefact_r2 | 1-3 | 128G | _1-3 COMPLETED (9 h 17 to 12 h 47) |
 | 25949108, 25949495, 25950135 | `rerun-programs` (`de55424` catalogue, then 5b419d4 twice) | finished runs | 32-48G | COMPLETED |
 | 25949110 | `_r2` DSR-02 chain | enumerates the 17 calls of the `_r2` arms | 4G | COMPLETED; submitted 25952505 |
-| 25952505 | `_r2` DSR-02 evidence array (rows 0-16 %6) | see DSR-02 section | 24G | _0 OUT_OF_MEMORY; _1-2 COMPLETED; _3-5 RUNNING; _6-16 PENDING |
+| 25952505 | `_r2` DSR-02 evidence array (rows 0-16 %6) | see DSR-02 section | 24G | _0 and _3 OUT_OF_MEMORY; _1-2 COMPLETED; _4-5 RUNNING; _6-16 PENDING |
 | 25953432 | DSR-02 row 0 resubmit | row 0 | 48G | _0 PENDING (Priority) |
+| 25953731 | DSR-02 row 3 resubmit | row 3 | 48G | _3 PENDING |
 | 25953402 | GSE184257 Set 3 download array (0-3) | see held-out data section | 2G | _0 FAILED (broken pipe); _1-3 COMPLETED |
-| 25953433 | retry of 25953402_0 | task 0 | 2G | _0 RUNNING |
+| 25953433 | retry of 25953402_0 | task 0 | 2G | _0 COMPLETED (34 min) |
 
 Smoke tests (500 k pairs of GSM5725695, output under `_kshv/smoke/`, not results): jobs 25941195 (combined, artefact) and 25941226 (twostep). They passed CLI parsing, chemistry check, read filter, STARsolo and kb count; the artefact smoke ended at emptyDrops ("insufficient unique points"), expected on 500 k reads.
 No explore-ledger append this round: de55424 has no `scripts/explore_ledger.py`.
@@ -183,14 +184,14 @@ Calls: `data/runs/round_2026-11-02/_kshv/evidence_r2/calls.tsv` (17 rows, run di
 | 0 | GSM5725696 | combined_artefact_r2 | HHV-8 (23,670,509) | 25952505_0 | OUT_OF_MEMORY at 24G after 48 min; partial output moved to `evidence_r2/_failed/`. Resubmitted as 25953432_0 at 48G, PENDING | pending | | pending |
 | 1 | GSM5725696 | combined_artefact_r2 | HPV77 (4) | 25952505_1 | COMPLETED (1 h 05) | 2 / 0 / 0 / 4 | host_homology flagged 0.333 | virus-best 2, host-best 0 of 6 counted |
 | 2 | GSM5725697 | combined_artefact_r2 | Cercopithecine herpesvirus (5) | 25952505_2 | COMPLETED (0 h 57) | 0 / 0 / 3 / 2 | none flagged | no virus-best molecule; 3 ties, 2 unaligned |
-| 3 | GSM5725697 | combined_artefact_r2 | HHV-8 (23,544,978) | 25952505_3 | RUNNING (1 h 00) | pending | | pending |
-| 4 | GSM5725697 | combined_artefact_r2 | HPV77 (6) | 25952505_4 | RUNNING | pending | | pending |
+| 3 | GSM5725697 | combined_artefact_r2 | HHV-8 (23,544,978) | 25952505_3 | OUT_OF_MEMORY at 24G after 1 h 03; partial output in `evidence_r2/_failed/`. Resubmitted as 25953731_3 at 48G, PENDING | pending | | pending |
+| 4 | GSM5725697 | combined_artefact_r2 | HPV77 (6) | 25952505_4 | RUNNING (43 min) | pending | | pending |
 | 5 | GSM5725698 | combined_artefact_r2 | HHV-8 (31,761,926) | 25952505_5 | RUNNING | pending | | pending |
 | 6 | GSM5725698 | combined_artefact_r2 | HPV29 (3) | 25952505_6 | PENDING | pending | | pending |
 | 7-16 | GSM5725696-98 | combined_off_r2 | Cercopithecine herpesvirus, HHV-8, HPV77, HPV29 (see `calls.tsv`) | 25952505_7-16 | PENDING (throttle %6) | pending | | pending |
 
 Rows 1-2: `molecule_verdict_summary.tsv` (`counted` rows) and `interpretation_flags.tsv` in the row's evidence dir.
-Risk: rows 3, 5, 8, 11 and 14 are HHV-8 calls with 23.5 to 31.8 M molecules, the same shape as row 0, which ran out of memory at 24G. `calls.tsv` marks HHV-8 `expected=false`, so the enumerator lists the target virus as an off-target call. The original arms (GSM5725695 all arms, GSM5725696/-97 twostep) are covered only by chain 25941255, which is blocked behind 25941254_3-4.
+Risk: rows 5, 8, 11 and 14 are HHV-8 calls with 23.7 to 31.8 M molecules, the same shape as rows 0 and 3, which ran out of memory at 24G. `calls.tsv` marks HHV-8 `expected=false`, so the enumerator lists the target virus as an off-target call. The original arms (GSM5725695 all arms, GSM5725696/-97 twostep) are covered only by chain 25941255, which is blocked behind 25941254_3-4.
 
 ## Held-out data for the mixed-veto gate: GSE184257 Set 3 download
 Script `scripts/slurm_gse184257_set3_download.sh` (array 0-3, user decision Q3, 2026-11-04), output `data/runs/work/gse184257_set3/raw/<GSM>/`, MD5-checked against ENA, `DONE` written last.
@@ -198,9 +199,9 @@ Script `scripts/slurm_gse184257_set3_download.sh` (array 0-3, user decision Q3, 
 | Task | GSM | SRR | Condition | Job | State |
 |---|---|---|---|---|---|
 | 0 | GSM6249889 | SRR19685943 | Mock 3dpi Set 3 | 25953402_0 | FAILED (broken pipe after 14 min; a partial `SRR19685943_2.fastq.gz.tmp` was left) |
-| 0 | GSM6249889 | SRR19685943 | Mock 3dpi Set 3 | 25953433_0 (retry) | RUNNING |
+| 0 | GSM6249889 | SRR19685943 | Mock 3dpi Set 3 | 25953433_0 (retry) | COMPLETED (34 min), `DONE` present |
 | 1 | GSM6249890 | SRR19685944 | Mock 6dpi Set 3 | 25953402_1 | COMPLETED, `DONE` present |
 | 2 | GSM6249891 | SRR19685945 | KSHV 3dpi Set 3 | 25953402_2 | COMPLETED, `DONE` present |
 | 3 | GSM6249892 | SRR19685946 | KSHV 6dpi Set 3 | 25953402_3 | COMPLETED, `DONE` present |
 
-3 of 4 libraries are downloaded. The held-out gate runs (chemistry check, arms, `rerun-programs --programme-mixed-veto betabinomial`) are not scripted or submitted yet; the pre-registration is `prog_mixed_veto_prereg.md`.
+4 of 4 libraries are downloaded (`DONE` in each GSM folder). The held-out gate runs (chemistry check, arms, `rerun-programs --programme-mixed-veto betabinomial`) are not scripted or submitted yet; the pre-registration is `prog_mixed_veto_prereg.md`.
