@@ -43,8 +43,29 @@ Package PR #179 (`buildref-hostdup`) keeps exact-duplicate host records instead 
 - The build steps 4/5 and 5/5 (concatenate FASTA and GTF) finished and `reference_manifest.json` was written at 20:16. `kb ref` then started at 20:16:55 and was in its genome-splitting step at 20:17:11 when the limit hit. No index exists.
 - Log: `data/runs/round_2026-11-02/cat08_cat40/logs/cat08_hpv11_25949219.log`. Partial output (not reusable): `data/runs/round_2026-11-02/cat08_cat40/hpv11_native_3d19cca_3d19cca/` (`combined.fa` 1.4 GB, `combined.gtf`, `reference_manifest.json` 544 MB). The doubled `3d19cca_3d19cca` in the name is cosmetic.
 
-## HPV-11 native rerun (job 25952512, PENDING)
-`scripts/cat08_hpv11_native_3d19cca_r2.sbatch`: 8 cpu, 96G, 16 h limit, fresh dir `hpv11_native_3d19cca_3d19cca_r2/`, a timestamp on every build-ref log line. Submitted 2026-11-03 23:08, still PENDING (Priority) on 2026-11-04. The HPV-11 landing result (reads tiled from NC_075235.1 onto the index without it) is pending until it finishes; `hpv11_native_3d19cca_3d19cca_r2/` does not exist yet.
+## HPV-11 native rerun (job 25952512) and landing step (job 25958011)
+`scripts/cat08_hpv11_native_3d19cca_r2.sbatch` (8 cpu, 96G, 16 h, dir `hpv11_native_3d19cca_3d19cca_r2/`) built the index in
+12 h (`build-ref --host human --ensembl-release 116`, every panel HPV except HPV-11 NC_075235.1; `kb ref` split the genome
+13:09-17:02; index 466,532 targets, `ref/index.idx`), then FAILED in the landing step: kallisto 0.52 `quant --pseudobam` wrote
+a truncated `pseudoalignments.bam` (no BGZF EOF, header unreadable). Its `run_info.json` shows the pseudoalignment itself ran
+(262 reads, 37 pseudoaligned). Fix: `scripts/cat08_tile_and_land.py` counts landing targets from `kallisto bus` equivalence
+classes (no BAM); `scripts/cat08_hpv11_land_bus.sbatch` reran only that step on the built index (job 25958011, 22 s).
+
+Result (`hpv11_native_3d19cca_3d19cca_r2/hpv11_reads_bus/summary.json`, `landing_targets.tsv`): 262 reads of 90 bp tiled
+every 30 bp from HPV-11, random strand, seed 20261102; **38 map (14.5 %), 224 do not**. Every landing target is an
+Alphapapillomavirus gene; none is human (0 `ENST` targets). A read compatible with two targets counts for each
+(8 equivalence classes of one target, 2 of two), so hits sum to 47.
+
+| Genome | Type | Genes hit (read hits) |
+|---|---|---|
+| NC_001355.1 | HPV6b | E1 (10), E2 (7), L1 (6), E7 (4), E4 (3), L2 (3) |
+| X62843.1 | HPV13 | E1 (4) |
+| U31788.1 | HPV44 | E1 (4) |
+| AF436130.1 | HPV74 | E1 (2) |
+
+Reading: with HPV-11 absent, most of its reads are not pseudoaligned at all, and those that are land on its nearest
+relative HPV6b (and E1 of three other alpha types), never on host. An HPV-11 infection would therefore surface as a
+low HPV6b call, not a host call. This is one genome, one tiling; no rate is claimed.
 
 ## All jobs in this PR (2026-11-04)
 | Job | What | State |
@@ -53,4 +74,5 @@ Package PR #179 (`buildref-hostdup`) keeps exact-duplicate host records instead 
 | 25941238 | CAT-08 leave-fold-out | COMPLETED (7 min) |
 | 25941241 | HPV-11 native, `de55424` | FAILED (exact-duplicate gate, 1.5 min) |
 | 25949219 | HPV-11 native, `3d19cca` | TIMEOUT (8 h, inside `kb ref`) |
-| 25952512 | HPV-11 native, `3d19cca`, 16 h | PENDING (Priority) |
+| 25952512 | HPV-11 native, `3d19cca`, 16 h | FAILED after the index build (truncated pseudobam); index kept |
+| 25958011 | HPV-11 landing step on that index, `kallisto bus` | COMPLETED (22 s) |

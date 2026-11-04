@@ -4293,6 +4293,9 @@ anelloviruses, so ~99 other species.
   valid `HPV-11` test.
   - 2026-11-02 (round_2026-11-02): jobs 25941238 (leave-fold-out, all families) and 25941241 (native build-ref HPV-11 hold-out) submitted at package pin de55424; leave-fold-out done (31.4 % of 388,740 held-out reads map; no cross-family landing beyond 18 reads), native HPV-11 build failed on the package exact-duplicate gate for Ensembl 116 host cDNA; see `analysis/round_2026-11-02/cat08_confusability.md`. Row stays open.
   - 2026-11-04: second HPV-11 attempt on `3d19cca` (package PR #179 keeps duplicate host records) = job 25949219: TIMEOUT at the 8 h limit (started 14:17, `kb ref` began 20:16:55, was still splitting the genome at 22:17:52); no index. Rerun with a 16 h limit = job 25952512 (96G, dir `hpv11_native_3d19cca_3d19cca_r2/`), PENDING (Priority). Row stays open until it lands; the HPV-11 result is pending.
+  - 2026-11-04 (later): 25952512 built the index (12 h) and failed only in the landing step (kallisto 0.52 truncated
+    pseudobam); the landing step reran from `kallisto bus` (25958011): 38 of 262 HPV-11 reads map, all to alpha-HPV genes
+    (HPV6b E1/E2/L1/E7/E4/L2, E1 of HPV13/44/74), none to host. Details: `analysis/round_2026-11-02/cat08_confusability.md`.
 
 ### WP4H expansion — breadth and measured diversity (new 2026-09-27)
 
