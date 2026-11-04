@@ -28,6 +28,10 @@ F=$M/ViralScan-reproducibility/data/references/panel_builds/viral_ref_cat42d
 O=$F/rebuild_g4_2026-11-04
 PY=/exports/archive/hg-funcgenom-research/evonk/conda/envs/test_viralscan/bin/python
 export PATH=$M/conda/envs/viralscan_test_full/bin:$PATH
+# cache only: a byte-rebuild must read the frozen NCBI/Ensembl caches, never fetch new bytes. The proxy points
+# at a closed port, so any cache miss fails loudly; the address only satisfies the builder's email check.
+export NCBI_EMAIL=cache-only@invalid.example
+export http_proxy=http://127.0.0.1:9 https_proxy=http://127.0.0.1:9 HTTP_PROXY=http://127.0.0.1:9 HTTPS_PROXY=http://127.0.0.1:9
 mkdir "$O"
 
 # record what runs the rebuild
