@@ -232,9 +232,22 @@ def call_row(calls_tsv: Path, row: int) -> dict[str, str]:
 
 
 def evidence_command(
-    run_dir: str, virus: str, out: str, panel_fasta: str, host_fasta: str, cores: int = 8
+    run_dir: str,
+    virus: str,
+    out: str,
+    panel_fasta: str,
+    host_fasta: str,
+    cores: int = 8,
+    *,
+    splice: bool = False,
+    host_gtf: str | None = None,
 ) -> list[str]:
-    """`viralscan evidence` argv for one call (list form, never a shell string)."""
+    """`viralscan evidence` argv for one call (list form, never a shell string).
+
+    ``splice`` adds ``--splice`` (spliced realignment of the counted virus-best molecules) and ``host_gtf`` adds
+    ``--host-gtf`` (calibrates ``strand_qc.tsv``; without it that file is ``not_assessed``). Both default off, so
+    earlier rounds' commands are unchanged.
+    """
     return [
         sys.executable,
         "-m",
@@ -252,6 +265,8 @@ def evidence_command(
         host_fasta,
         "--blast",
         "--cell-tags",
+        *(["--splice"] if splice else []),
+        *(["--host-gtf", host_gtf] if host_gtf else []),
         "--cores",
         str(cores),
     ]
@@ -276,6 +291,8 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--out", type=Path, help="evidence directory (single call, or --postprocess-only)")
     ap.add_argument("--out-root", type=Path, help="with --calls: <root>/<dataset>__<sample>__<arm>__<virus slug>")
     ap.add_argument("--cores", type=int, default=8)
+    ap.add_argument("--splice", action="store_true", help="pass --splice to `viralscan evidence`")
+    ap.add_argument("--host-gtf", help="host GTF for strand_qc.tsv (`viralscan evidence --host-gtf`)")
     ap.add_argument("--force", action="store_true", help="redo a finished evidence directory")
     ap.add_argument("--keep-intermediates", action="store_true", help="keep the ~GB competitive FASTA and BLAST db")
     ap.add_argument("--postprocess-only", action="store_true", help="only (re)write the per-read verdicts of --out")
@@ -302,7 +319,9 @@ def main(argv: list[str] | None = None) -> int:
         ap.error("give --calls (with --row) or --run-dir")
     if not panel or not args.host_fasta:
         ap.error("--host-fasta and a panel FASTA (--panel-fasta, or --panel-for for this dataset) are required")
-    cmd = evidence_command(run_dir, virus, str(out), panel, args.host_fasta, args.cores)
+    cmd = evidence_command(
+        run_dir, virus, str(out), panel, args.host_fasta, args.cores, splice=args.splice, host_gtf=args.host_gtf
+    )
     if args.dry_run:
         print(shlex.join(cmd))
         return 0
