@@ -2,8 +2,8 @@
 
 Status: draft for the next independent review round and the user's sign-off. Nothing freezes.
 Protocol 0.3.0 becomes 0.4.0. Top-level `status` stays `draft`. No section status, factor status,
-`freeze.*` or execution flag moves. Ledger records: `DEV-034` to `DEV-040` in `deviations.yaml`
-(`DEV-034` to `DEV-037` the draft, `DEV-038` review round 13, `DEV-039` a pre-freeze deviation, `DEV-040` the user decisions of 2026-11-04).
+`freeze.*` or execution flag moves. Ledger records: `DEV-034` to `DEV-041` in `deviations.yaml`
+(`DEV-034` to `DEV-037` the draft, `DEV-038` review round 13, `DEV-039` a pre-freeze deviation, `DEV-040` the user decisions of 2026-11-04, `DEV-041` the closing of `EVID06-OV-1` and the deletion of the unopened chem outputs).
 Decision source "Q<n>" means user decision Q<n>, 2026-11-04.
 
 ## Changes
@@ -66,9 +66,11 @@ For the user only, not adopted: F8 (hold one virus or chemistry out of tuning), 
 
 ## Open points for the user
 
-- `EVID06-OV-1` (blocks freezing the other-virus rule): name the evidence-output field and values that mean "flagged as endogenous or integrated", define
-  "orthogonal support", and confirm the order of steps 2 and 3. Neither test is defined in the protocol or here, so no threshold was invented.
-- The four unopened Set 3 chem outputs (`DEV-039`): open them only after the EVID-06 freeze, or delete them and rerun the check.
+- Closed 2026-11-04 (user decision, `DEV-041`): `EVID06-OV-1`. Step 2 "flagged as endogenous or integrated" means the `eve_or_integration_like_hotspot` row of
+  `interpretation_flags.tsv` has `status` `flagged`, or `host_viral_ambig_fraction` in `viral_summary.tsv` (host-virus mixed molecules over unique viral plus
+  mixed molecules) is at least 0.5. Step 3 "orthogonal support" means an independent assay, or the study's own report, naming that virus in that sample;
+  another computational call on the same reads does not count. The step order stays as `DEV-040` proposed. No other threshold was added.
+- Closed 2026-11-04 (user decision, `DEV-041`): the four unopened Set 3 chem outputs (`DEV-039`) were deleted unopened. The check reruns after the EVID-06 freeze.
 - Decided 2026-11-04 (no longer open): VIRTUS is dropped; the EVID-06 bar on accuracy-type claims stays; the GSE184257 gate ordering is approved.
 - The E1 acceptance text still lists `viralscan-2.2.0` among tools that declare no invariant. It is left alone (endpoints sit under the dependent-fields digest) and stays true.
 
@@ -80,8 +82,8 @@ The user approved the 20 recommendations of the afternoon grill. G3 is not signe
 |---|---|---|
 | GSE184257 gate ordering | `proposed_pending_user_signoff` becomes user-approved: the gate runs after G3 clearance and the EVID-06 freeze (replaces Q3 "Set 3 now") | DEV-040 |
 | Pre-freeze rule | Before the EVID-06 freeze only acquisition and content hashing are allowed. Dataset text that placed the chemistry check before the outcome run now places it after the freeze | DEV-040 |
-| Deviation | `check-chemistry` job 25956713 ran on GSM6249889-92 on 2026-11-04, 13:27-13:31, before the rule. It reports barcode geometry only (no call, count, tier, label or verdict). Four 67-byte outputs under `data/runs/round_2026-11-04_veto/chem/` were opened by nobody and stay unopened. Inventory row `PFR-16` | DEV-039 |
-| Other-virus rule | Three classes user-approved. The class assignment is now an ordered text in the five EVID-06 datasets (study report, then endogenous or integrated flag, then orthogonal support, then artefact; only the artefact is a disagreement). The tests for steps 2 and 3 are not defined anywhere, so they are open item `EVID06-OV-1` | DEV-040 |
+| Deviation | `check-chemistry` job 25956713 ran on GSM6249889-92 on 2026-11-04, 13:27-13:31, before the rule. It reports barcode geometry only (no call, count, tier, label or verdict). Four 67-byte outputs under `data/runs/round_2026-11-04_veto/chem/` were opened by nobody and were deleted unopened on 2026-11-04 by user decision (`DEV-041`); the check reruns after the EVID-06 freeze. Inventory row `PFR-16` | DEV-039, DEV-041 |
+| Other-virus rule | Three classes user-approved. The class assignment is now an ordered text in the five EVID-06 datasets (study report, then endogenous or integrated flag, then orthogonal support, then artefact; only the artefact is a disagreement). The tests for steps 2 and 3 were open item `EVID06-OV-1`, closed by `DEV-041` (see the open points above) | DEV-040, DEV-041 |
 | VIRTUS | Dropped from v3, possible 3.1: rows W9a and W9b (12), reference `virtus_native_panel`, the VIRTUS prose, the blocker text and the E1 list. `X_virtus` joins `excluded_workflows`. `expected_row_count` 86 becomes 74 | DEV-040 |
 | `seeds.generation`, factor levels | User-approved (see the table above) | DEV-040 |
 | Strand fallback | Kept. A per-chemistry strand default may only enter by a later ledgered amendment before the freeze | DEV-040 |

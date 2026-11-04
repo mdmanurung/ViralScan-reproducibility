@@ -1768,3 +1768,46 @@ deviations:
     git_sha: 350327a
     review_reference: analysis/v3_validation/g3_amendment_2026-11-04.md (git_sha is the base commit the revision was written against)
     record_sha256: 46732a13c4aeb7c0842a001c818d552125b7d0a86655756634bb2f16c5d1adbd
+  - deviation_id: DEV-041
+    date: '2026-11-04'
+    affected_workflow_row_ids: []
+    protocol_section: datasets, pre_freeze_runs, frozen_inputs
+    description: >-
+      Application of two further user decisions of 2026-11-04 ("approve all"), written as a new record; it edits none of
+      DEV-034 to DEV-040. (a) EVID06-OV-1 is closed. In the ordered other-virus class rule of the five EVID-06 datasets that
+      carry it, "flagged as endogenous or integrated" (step 2, class b) now means that either test holds for the call's own
+      evidence output. Test (i): in interpretation_flags.tsv (written by viralscan evidence) the row whose flag is
+      eve_or_integration_like_hotspot has status flagged (metric at least its threshold, 0.50). Test (ii): in
+      viral_summary.tsv, host_viral_ambig_fraction (host-virus mixed molecules over unique viral plus mixed molecules; the
+      host-homology fraction of the call's counted molecules) is at least 0.5. A status of not_assessed or not_flagged, a
+      missing row, or a blank host_viral_ambig_fraction fails the test. "Orthogonal support" (step 3, class a) means an
+      independent assay, or the study's own report, naming that virus in that sample; another computational call on the same
+      reads is not orthogonal support. The order of steps 2 and 3 stays as DEV-040 proposed. No threshold beyond the two
+      above was added. The field names are those the package writes (src/viralscan/evidence.py, docs/output_reference.md);
+      the host-homology fraction of counted molecules is host_viral_ambig_fraction, not a field called host_homology (the
+      interpretation_flags.tsv host_homology flag measures a fraction of sampled reads, so it is not used). (b) DEV-039
+      option (b): the four unopened check-chemistry outputs of Slurm job 25956713 (data/runs/round_2026-11-04_veto/chem/
+      GSM6249889.txt, GSM6249890.txt, GSM6249891.txt, GSM6249892.txt) were deleted unopened on 2026-11-04 by user decision
+      (rm of those four paths only; not opened, hashed or copied; no other file in that directory and no FASTQ touched). The
+      check reruns after the EVID-06 freeze. The job's Slurm logs stay in place and were not read. PFR-16 text follows
+      (deleted, not "stay unopened"); DEV-039 is left as written. Nothing freezes and G3 is not signed. The schema constants
+      do not change by this record, so the packaged schema copy needs no further refresh.
+    reason: >-
+      The user closed the open item that blocked freezing the other-virus rule, and chose deletion and rerun over opening the
+      Set 3 chemistry outputs after the freeze, which keeps the pre-freeze inventory free of a result that anyone has seen.
+    outcome_triggered: false
+    outcome_triggered_justification: >-
+      Stated under pre_freeze_runs.outcome_definition and its outcome_triggered_rule. The edits follow from user decisions;
+      no viral outcome on any scored dataset prompted them, the deleted chemistry outputs were never opened, and no workflow
+      row has executed.
+    user_decisions_recorded:
+      - 'EVID06-OV-1 (user decision, 2026-11-04): "flagged as endogenous or integrated" is the eve_or_integration_like_hotspot flag at status flagged, or host-homology fraction of counted molecules at least 0.5; "orthogonal support" is an independent assay or the study''s own report naming that virus in that sample; step order unchanged.'
+      - 'DEV-039 option (b) (user decision, 2026-11-04): delete the four unopened chem outputs and rerun the check after the EVID-06 freeze.'
+    user_decision_needed:
+      - 'The G3 freeze, sign-off and date stay with the user, after the round-14 external review.'
+    protocol_sha256_before: 6b322064409610f97ec1ac45273992aee1193bc429913690cd562d3cd539edd8
+    protocol_sha256_after: 2d2dc15f20cdfebec3593e69eb90759751b861b15a004da0d381d0b28112df04
+    digest_scope: frozen_inputs.contract_sha256
+    git_sha: e695c5c
+    review_reference: analysis/v3_validation/g3_amendment_2026-11-04.md (git_sha is the base commit the revision was written against)
+    record_sha256: 5e0ebe59e060ce939efab85b48765e1214a05a64bb56bf62ea2d4e99003963ef

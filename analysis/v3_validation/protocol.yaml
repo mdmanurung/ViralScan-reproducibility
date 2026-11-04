@@ -1841,11 +1841,17 @@ datasets:
       chimera), it is class (b), reported separately and left out of the artefact tally. Step 3: else, if the
       evidence output carries orthogonal support for it, it is class (a), unexpected but biologically plausible,
       reported separately and not counted against agreement. Step 4: else it is class (c), technical artefact,
-      counted as disagreement. Only class (c) is a disagreement. OPEN ITEM EVID06-OV-1 (for the user): the
-      protocol and the amendment do not say which evidence-output field and values mean "flagged as endogenous or
-      integrated" (step 2) or "orthogonal support" (step 3), and the order of steps 2 and 3 is a proposal (it
-      does not change the disagreement tally, only which separate report lists the virus). The rule cannot be
-      frozen, and no class is assigned, until the user fixes both tests. The labels are
+      counted as disagreement. Only class (c) is a disagreement. EVID06-OV-1 is closed (user decision, 2026-11-04, DEV-041). "Flagged as endogenous or integrated" (step 2)
+      means that either test holds for that (library, virus) in the call's own evidence output. Test (i): in
+      interpretation_flags.tsv, written by viralscan evidence, the row whose flag is
+      eve_or_integration_like_hotspot has status flagged (its metric is at least its threshold, 0.50). Test (ii):
+      in viral_summary.tsv, host_viral_ambig_fraction (host-virus mixed molecules over unique viral plus mixed
+      molecules, the host-homology fraction of the call's counted molecules) is at least 0.5. A status of
+      not_assessed or not_flagged, a missing row, or a blank host_viral_ambig_fraction fails that test.
+      "Orthogonal support" (step 3) means an independent assay, or the study's own report, naming that virus in
+      that sample; another computational call on the same reads is not orthogonal support. The order of steps 2
+      and 3 is as written (user-confirmed). The rule is complete, no threshold beyond these two was added, and it
+      freezes with the EVID-06 verdict code and thresholds. The labels are
       presumed, never truth (DEV-028): the verdict is reported as agreement with them, descriptively, per library
       with the number of libraries and molecules, with no pooling across libraries or datasets as if they were
       replicates (most arms are one biological unit, so no claim generalises across donors), and no accuracy, sensitivity, specificity,
@@ -1895,11 +1901,17 @@ datasets:
       chimera), it is class (b), reported separately and left out of the artefact tally. Step 3: else, if the
       evidence output carries orthogonal support for it, it is class (a), unexpected but biologically plausible,
       reported separately and not counted against agreement. Step 4: else it is class (c), technical artefact,
-      counted as disagreement. Only class (c) is a disagreement. OPEN ITEM EVID06-OV-1 (for the user): the
-      protocol and the amendment do not say which evidence-output field and values mean "flagged as endogenous or
-      integrated" (step 2) or "orthogonal support" (step 3), and the order of steps 2 and 3 is a proposal (it
-      does not change the disagreement tally, only which separate report lists the virus). The rule cannot be
-      frozen, and no class is assigned, until the user fixes both tests. The labels are
+      counted as disagreement. Only class (c) is a disagreement. EVID06-OV-1 is closed (user decision, 2026-11-04, DEV-041). "Flagged as endogenous or integrated" (step 2)
+      means that either test holds for that (library, virus) in the call's own evidence output. Test (i): in
+      interpretation_flags.tsv, written by viralscan evidence, the row whose flag is
+      eve_or_integration_like_hotspot has status flagged (its metric is at least its threshold, 0.50). Test (ii):
+      in viral_summary.tsv, host_viral_ambig_fraction (host-virus mixed molecules over unique viral plus mixed
+      molecules, the host-homology fraction of the call's counted molecules) is at least 0.5. A status of
+      not_assessed or not_flagged, a missing row, or a blank host_viral_ambig_fraction fails that test.
+      "Orthogonal support" (step 3) means an independent assay, or the study's own report, naming that virus in
+      that sample; another computational call on the same reads is not orthogonal support. The order of steps 2
+      and 3 is as written (user-confirmed). The rule is complete, no threshold beyond these two was added, and it
+      freezes with the EVID-06 verdict code and thresholds. The labels are
       presumed, never truth (DEV-028): the verdict is reported as agreement with them, descriptively, per library
       with the number of libraries and molecules, with no pooling across libraries or datasets as if they were
       replicates (most arms are one biological unit, so no claim generalises across donors), and no accuracy, sensitivity, specificity,
@@ -1951,11 +1963,17 @@ datasets:
       chimera), it is class (b), reported separately and left out of the artefact tally. Step 3: else, if the
       evidence output carries orthogonal support for it, it is class (a), unexpected but biologically plausible,
       reported separately and not counted against agreement. Step 4: else it is class (c), technical artefact,
-      counted as disagreement. Only class (c) is a disagreement. OPEN ITEM EVID06-OV-1 (for the user): the
-      protocol and the amendment do not say which evidence-output field and values mean "flagged as endogenous or
-      integrated" (step 2) or "orthogonal support" (step 3), and the order of steps 2 and 3 is a proposal (it
-      does not change the disagreement tally, only which separate report lists the virus). The rule cannot be
-      frozen, and no class is assigned, until the user fixes both tests. The labels are
+      counted as disagreement. Only class (c) is a disagreement. EVID06-OV-1 is closed (user decision, 2026-11-04, DEV-041). "Flagged as endogenous or integrated" (step 2)
+      means that either test holds for that (library, virus) in the call's own evidence output. Test (i): in
+      interpretation_flags.tsv, written by viralscan evidence, the row whose flag is
+      eve_or_integration_like_hotspot has status flagged (its metric is at least its threshold, 0.50). Test (ii):
+      in viral_summary.tsv, host_viral_ambig_fraction (host-virus mixed molecules over unique viral plus mixed
+      molecules, the host-homology fraction of the call's counted molecules) is at least 0.5. A status of
+      not_assessed or not_flagged, a missing row, or a blank host_viral_ambig_fraction fails that test.
+      "Orthogonal support" (step 3) means an independent assay, or the study's own report, naming that virus in
+      that sample; another computational call on the same reads is not orthogonal support. The order of steps 2
+      and 3 is as written (user-confirmed). The rule is complete, no threshold beyond these two was added, and it
+      freezes with the EVID-06 verdict code and thresholds. The labels are
       presumed, never truth (DEV-028): the verdict is reported as agreement with them, descriptively, per library
       with the number of libraries and molecules, with no pooling across libraries or datasets as if they were
       replicates (most arms are one biological unit, so no claim generalises across donors), and no accuracy, sensitivity, specificity,
@@ -2010,11 +2028,17 @@ datasets:
       chimera), it is class (b), reported separately and left out of the artefact tally. Step 3: else, if the
       evidence output carries orthogonal support for it, it is class (a), unexpected but biologically plausible,
       reported separately and not counted against agreement. Step 4: else it is class (c), technical artefact,
-      counted as disagreement. Only class (c) is a disagreement. OPEN ITEM EVID06-OV-1 (for the user): the
-      protocol and the amendment do not say which evidence-output field and values mean "flagged as endogenous or
-      integrated" (step 2) or "orthogonal support" (step 3), and the order of steps 2 and 3 is a proposal (it
-      does not change the disagreement tally, only which separate report lists the virus). The rule cannot be
-      frozen, and no class is assigned, until the user fixes both tests. The labels are
+      counted as disagreement. Only class (c) is a disagreement. EVID06-OV-1 is closed (user decision, 2026-11-04, DEV-041). "Flagged as endogenous or integrated" (step 2)
+      means that either test holds for that (library, virus) in the call's own evidence output. Test (i): in
+      interpretation_flags.tsv, written by viralscan evidence, the row whose flag is
+      eve_or_integration_like_hotspot has status flagged (its metric is at least its threshold, 0.50). Test (ii):
+      in viral_summary.tsv, host_viral_ambig_fraction (host-virus mixed molecules over unique viral plus mixed
+      molecules, the host-homology fraction of the call's counted molecules) is at least 0.5. A status of
+      not_assessed or not_flagged, a missing row, or a blank host_viral_ambig_fraction fails that test.
+      "Orthogonal support" (step 3) means an independent assay, or the study's own report, naming that virus in
+      that sample; another computational call on the same reads is not orthogonal support. The order of steps 2
+      and 3 is as written (user-confirmed). The rule is complete, no threshold beyond these two was added, and it
+      freezes with the EVID-06 verdict code and thresholds. The labels are
       presumed, never truth (DEV-028): the verdict is reported as agreement with them, descriptively, per library
       with the number of libraries and molecules, with no pooling across libraries or datasets as if they were
       replicates (most arms are one biological unit, so no claim generalises across donors), and no accuracy, sensitivity, specificity,
@@ -2082,11 +2106,17 @@ datasets:
       chimera), it is class (b), reported separately and left out of the artefact tally. Step 3: else, if the
       evidence output carries orthogonal support for it, it is class (a), unexpected but biologically plausible,
       reported separately and not counted against agreement. Step 4: else it is class (c), technical artefact,
-      counted as disagreement. Only class (c) is a disagreement. OPEN ITEM EVID06-OV-1 (for the user): the
-      protocol and the amendment do not say which evidence-output field and values mean "flagged as endogenous or
-      integrated" (step 2) or "orthogonal support" (step 3), and the order of steps 2 and 3 is a proposal (it
-      does not change the disagreement tally, only which separate report lists the virus). The rule cannot be
-      frozen, and no class is assigned, until the user fixes both tests. The labels are
+      counted as disagreement. Only class (c) is a disagreement. EVID06-OV-1 is closed (user decision, 2026-11-04, DEV-041). "Flagged as endogenous or integrated" (step 2)
+      means that either test holds for that (library, virus) in the call's own evidence output. Test (i): in
+      interpretation_flags.tsv, written by viralscan evidence, the row whose flag is
+      eve_or_integration_like_hotspot has status flagged (its metric is at least its threshold, 0.50). Test (ii):
+      in viral_summary.tsv, host_viral_ambig_fraction (host-virus mixed molecules over unique viral plus mixed
+      molecules, the host-homology fraction of the call's counted molecules) is at least 0.5. A status of
+      not_assessed or not_flagged, a missing row, or a blank host_viral_ambig_fraction fails that test.
+      "Orthogonal support" (step 3) means an independent assay, or the study's own report, naming that virus in
+      that sample; another computational call on the same reads is not orthogonal support. The order of steps 2
+      and 3 is as written (user-confirmed). The rule is complete, no threshold beyond these two was added, and it
+      freezes with the EVID-06 verdict code and thresholds. The labels are
       presumed, never truth (DEV-028): the verdict is reported as agreement with them, descriptively, per library
       with the number of libraries and molecules, with no pooling across libraries or datasets as if they were
       replicates (most arms are one biological unit, so no claim generalises across donors), and no accuracy, sensitivity, specificity,
@@ -2100,7 +2130,7 @@ datasets:
       change any EVID-06 rule, label, threshold or exclusion. Any earlier use needs an amendment that states the
       lost held-out status. Set 3 FASTQs (GSM6249889 to GSM6249892) were downloaded on 2026-11-04 and hashed; no run that yields a
       call, count, tier, label or verdict has touched them, and the one read-structure check that ran before
-      the pre-freeze rule (job 25956713, outputs unopened) is recorded in DEV-039 and PFR-16.
+      the pre-freeze rule (job 25956713, outputs deleted unopened, DEV-041) is recorded in DEV-039 and PFR-16.
     exclusion_rule: >-
       Exclude only on checksum, corruption, mate synchronization, or unresolved chemistry (X1). Never drop a
       library, or change its label, by viral signal or by the verdict.
@@ -2524,7 +2554,7 @@ pre_freeze_runs:
       re-verified because scripts evolve and the exact revision that ran is recorded
       elsewhere (explore-ledger code_sha, PLAN); work-tree is a file outside the
       repository, hashed 2026-10-13, recorded but not re-checkable by the validator.
-  inventory_sha256: 2a5e9123efa4843435d75d389910114adb4280889a791a5f1f140978bea81135
+  inventory_sha256: 8a5f724ff5f51fab5b16ea8c8c14f444ac75d1596a1c05727395bd94ea23fd88
   inventory:
     - id: PFR-01
       kind: outcome-generating
@@ -2811,9 +2841,9 @@ pre_freeze_runs:
         day (acquisition and hashing only; DEV-040) and is therefore a procedural deviation (DEV-039). It reports barcode
         and UMI geometry only and yields no viral call, count, tier, label or verdict, so it is a design measurement under
         pre_freeze_runs.outcome_definition.not_an_outcome. Its four outputs, data/runs/round_2026-11-04_veto/chem/GSM6249889.txt
-        to GSM6249892.txt (67 bytes each, size read from the file system), are untracked, were opened by nobody and are
-        not hashed here; they stay unopened until the EVID-06 verdict code and thresholds are frozen. The evidence below is
-        the tracked job script.
+        to GSM6249892.txt (67 bytes each, size read from the file system), were untracked and opened by nobody. They were
+        deleted unopened on 2026-11-04 by user decision (DEV-041) and the check reruns after the EVID-06 freeze. The
+        evidence below is the tracked job script.
       evidence:
         - location: repo
           path: scripts/slurm_dsr_chem_array.sh
@@ -2886,6 +2916,7 @@ frozen_inputs:
     - DEV-038
     - DEV-039
     - DEV-040
+    - DEV-041
   # DEV-027 (SCI-05 round 12, m2): canonical sha256 of the validation schema. The
   # schema pins the harmonization digests as const and was itself in no digest.
   schema_sha256: 7ea52498bb3955bc430d2a4f1c9f0fb154d483fef9a37067524c2dedcc44ba13
@@ -2920,7 +2951,7 @@ frozen_inputs:
     trust, so this detects a changed claim, not a false one. It does not cover
     prose fields elsewhere in the protocol whose sections carry their own
     contract digests.
-  contract_sha256: 6b322064409610f97ec1ac45273992aee1193bc429913690cd562d3cd539edd8
+  contract_sha256: 2d2dc15f20cdfebec3593e69eb90759751b861b15a004da0d381d0b28112df04
 
 exclusions:
   - id: X1_invalid_input
