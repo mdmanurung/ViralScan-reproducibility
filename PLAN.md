@@ -5657,7 +5657,9 @@ elapsed time: 2-4 weeks, dominated by downloads, queues, and comparator setup.
 - [ ] `RUN-01` — HHV-6B `SRR20710641` under measured 10xv2 geometry (5′, reverse strand, R1 150 nt untrimmed).
   - 2026-11-02: user decision 2026-11-02: measured chemistry wins; R1 stays untrimmed. Measured in `data/runs/work/dsr_round1/chem/SRR20710641.json`: 10xv2 (88.2% on the bundled 10xv2 on-list; 9.7% 10xv3), 5p end, strand pilot `reverse` (45.5% vs 5.8% forward), R1 length 150, UMI 10. The earlier "10x v3" label was wrong.
 - [ ] `RUN-02` — EBV `SRR12682296` under measured 10x v2 geometry.
-- [ ] `RUN-03` — HSV-1 `SRR8315713` under measured Drop-seq geometry.
+- [x] `RUN-03` — HSV-1 `SRR8315713` under measured Drop-seq geometry.
+  - 2026-11-02 (`codex/round-2026-11-02-hsv1`): four arms submitted on package de55424, jobs 25941198-25941201; see `analysis/round_2026-11-02/hsv1_SRR8315713.md`. Results pending; row stays open.
+  - 2026-11-04: arms: the first try (25941198-25941200) FAILED on `--tchem auto` (Drop-seq has no kb technology); rerun with `--tchem off` (25941698-25941700, dirs `_r2`) COMPLETED. Molecule totals equal round 2 (`e7c1b08`) in every arm: HSV-1 32,014 (off), 32,023 (artefact), 34,562 (twostep), in 737 / 773 / 850 called-infected cells; HHV-2 53.8 / 53.8 / 59.3 molecules. SCAUTOQC-01 gate PASS on a4ca989 (25949687; see `SCAUTOQC-01-RUN`). DSR-02 on the 7 off-target calls: array 25949505_0-6 COMPLETED (the first array 25949114 FAILED on a spool path). HHV-2 152 virus-best / 0 host-best / 16 unaligned in all three arms, `sibling_or_host_ambiguity` 0.67 (not separable from the HSV-1 target); Cercopithecine herpesvirus 4 virus-best, hotspot flags; HPV29 (twostep) 1 virus-best / 4 host-best, `host_homology` 0.80. Closed 2026-11-04: all four arms, the SCAUTOQC gate and the DSR-02 verdicts are in `analysis/round_2026-11-02/hsv1_SRR8315713.md`; expected-virus recovery stays contextual evidence.
 - [ ] `RUN-04` — KSHV latent/lytic series `GSE190558`.
 - [ ] `RUN-05` — KSHV plus EBV replicates `GSE154900`.
 
@@ -6749,9 +6751,10 @@ only the rows that were missing are added below, verbatim and grouped as in the 
 
 #### Split from a package row
 
-- [ ] `SCAUTOQC-01-RUN` — (2026-11-02, split from package `SCAUTOQC-01`; the package code, tests and flags are done there) real FASTQ-to-UMAP validation of
+- [x] `SCAUTOQC-01-RUN` — (2026-11-02, split from package `SCAUTOQC-01`; the package code, tests and flags are done there) real FASTQ-to-UMAP validation of
   `--scautoqc` on the public HSV-1 library `SRR8315713` (needs the kb/kallisto/bustools env, a reference and user-approved compute). Also untested:
   clusterwise multi-resolution QC (absent in SCTK 0.2.0) and ribo/globin marker sensitivity. Closing this row lets the package flip `SCAUTOQC-01` to `[x]`.
+  - 2026-11-03 PASS: job 25949687, package a4ca989, `--scautoqc --umap`, HSV-1 SRR8315713, run dir `data/runs/round_2026-11-02/hsv1_SRR8315713/scautoqc_gate_a4ca989/`, 29:52 wall, 4.4 GB RSS. The scautoqc rule ran after detection (detection.done 12:07:59, scautoqc.done 12:09:18, umap.done 12:10:08). `n_cells_scored` = 3767 = called cells (both adata.h5ad and adata_multimap.h5ad, clusterwise complete) of 1,432,678 barcodes; non-called flags all NA; called flags none NA; three scautoqc UMAP HTML plots written (about 5 MB each). `scripts/check_scautoqc_gate.py` GATE_DATA_CHECKS PASS. Caveats: gene annotations were pre-seeded from the 77b1fc8 run's BioMart fetch because www.ensembl.org now 308-redirects and pybiomart fails (so the live BioMart path is not validated); clusterwise multi-resolution QC and ribo/globin sensitivity stay untested. Earlier attempts: 77b1fc8 failed on the obsm bug (fixed #178), aed1a80 twice on the BioMart redirect. Note: `analysis/round_2026-11-02/hsv1_SRR8315713.md`, repro PR #24.
 - [ ] `COVMAP-01-RUN` — (2026-11-02, split from package `COVMAP-01`; the coverage-map code, tests and STAR option A are done there) a pyGenomeTracks run on a real library beyond HHV-6B AF157706.1. Closing this row, with the package items (user layout review, `environment.coverage.yml` CI solve), lets the package flip `COVMAP-01` to `[x]`.
 - [ ] `REVIEW-C-RUN` — (2026-11-02, split from package `REVIEW-C`; the coverage-map code and fixtures pass there) real-directory qualification pending. Closing this row lets the package flip `REVIEW-C` to `[x]`.
 
