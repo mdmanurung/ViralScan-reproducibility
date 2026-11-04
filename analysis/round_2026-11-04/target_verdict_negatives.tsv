@@ -1,0 +1,3 @@
+positive	negative	virus	molecules	called_cells	n_called_cells	detected	clean
+SRR19537341	SRR19537339	Human papillomavirus 16	8	0	10085	False	yes
+SRR13419165	SRR13418973 (HN01)	Human papillomavirus 16	0 (no row)	0		no row	yes

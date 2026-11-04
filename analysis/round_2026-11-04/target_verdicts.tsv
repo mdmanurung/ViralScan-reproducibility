@@ -1,0 +1,9 @@
+dataset	sample	label	expected	state
+ebv_SRR12682296	SRR12682296	EBV (NC_007605.1)	yes	pending
+hsv1_SRR8315713	SRR8315713	HSV-1	yes	pending
+hhv6b_SRR20710641	SRR20710641	HHV-6B RNA detected	yes	pending
+GSE190558	GSM5725695	KSHV latent	yes	pending
+GSE190558	GSM5725696	KSHV induced (subset)	yes	pending
+GSE154900	GSM4682311	KSHV BC-1	yes	pending
+hpv16	SRR19537341	HPV16 raft	yes	pending
+hnscc_gse164690	SRR13419165	HPV16 HN18	yes	pending

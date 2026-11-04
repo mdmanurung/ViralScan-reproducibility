@@ -1,0 +1,9 @@
+row	dataset	sample	run_dir	virus	mem
+0	ebv_SRR12682296	SRR12682296	round_2026-11-02/ebv_SRR12682296/combined_off/SRR12682296	Epstein-Barr virus	64G
+1	hsv1_SRR8315713	SRR8315713	round_2026-11-02/hsv1_SRR8315713/combined_off_r2/out/SRR8315713	Human herpesvirus 1	48G
+2	hhv6b_SRR20710641	SRR20710641	round_2026-11-02/hhv6b_SRR20710641/combined_off/SRR20710641	Human herpesvirus 6b	48G
+3	GSE190558	GSM5725695	round_2026-11-02/GSE190558/GSM5725695/combined_off/GSM5725695	Human herpesvirus 8	64G
+4	GSE190558	GSM5725696	round_2026-11-04_target_verdicts/GSE190558/GSM5725696/subset/subset_run/GSM5725696	Human herpesvirus 8	32G
+5	GSE154900	GSM4682311	round_2026-11-02/GSE154900/GSM4682311/combined_off/GSM4682311	Human herpesvirus 8	64G
+6	hpv16	SRR19537341	round_2026-11-02/hpv16/SRR19537341/combined_off/SRR19537341	Human papillomavirus 16	64G
+7	hnscc_gse164690	SRR13419165	round_2026-11-02/hnscc_gse164690/SRR13419165/combined_off/SRR13419165	Human papillomavirus 16	48G
