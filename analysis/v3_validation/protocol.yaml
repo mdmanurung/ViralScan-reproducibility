@@ -2506,7 +2506,7 @@ pre_freeze_runs:
       re-verified because scripts evolve and the exact revision that ran is recorded
       elsewhere (explore-ledger code_sha, PLAN); work-tree is a file outside the
       repository, hashed 2026-10-13, recorded but not re-checkable by the validator.
-  inventory_sha256: 4b9759e53dcacc25ccbf14be0a25bc69320bad8004df4235747413acaa4fe804
+  inventory_sha256: 2a5e9123efa4843435d75d389910114adb4280889a791a5f1f140978bea81135
   inventory:
     - id: PFR-01
       kind: outcome-generating
@@ -2782,6 +2782,24 @@ pre_freeze_runs:
         - location: repo
           path: analysis/round_2026-11-02/senscal01_capture.md
           sha256: a50c2928f2eb2500bdac686186a58df3f9866982f7a00e4751026a60946bf1ca
+    - id: PFR-16
+      kind: design-measurement
+      period: "2026-11-04"
+      protocol_datasets: [evid06_gse184257]
+      other_datasets: []
+      summary: >-
+        Read-structure check (viralscan check-chemistry, Slurm job 25956713) on the four GSE184257 Set 3 libraries
+        (GSM6249889 to GSM6249892), 13:27 to 13:31 on 2026-11-04. It ran before the user's pre-freeze rule of the same
+        day (acquisition and hashing only; DEV-040) and is therefore a procedural deviation (DEV-039). It reports barcode
+        and UMI geometry only and yields no viral call, count, tier, label or verdict, so it is a design measurement under
+        pre_freeze_runs.outcome_definition.not_an_outcome. Its four outputs, data/runs/round_2026-11-04_veto/chem/GSM6249889.txt
+        to GSM6249892.txt (67 bytes each, size read from the file system), are untracked, were opened by nobody and are
+        not hashed here; they stay unopened until the EVID-06 verdict code and thresholds are frozen. The evidence below is
+        the tracked job script.
+      evidence:
+        - location: repo
+          path: scripts/slurm_dsr_chem_array.sh
+          sha256: 54f3472f1d5e1a8da5c4e6ca30ede4bdc38a9aa0cab84e5215ba89c9b45f45c8
 
 frozen_inputs:
   status: frozen
@@ -2848,6 +2866,7 @@ frozen_inputs:
     - DEV-036
     - DEV-037
     - DEV-038
+    - DEV-039
   # DEV-027 (SCI-05 round 12, m2): canonical sha256 of the validation schema. The
   # schema pins the harmonization digests as const and was itself in no digest.
   schema_sha256: a2c2b75ce12bc7a37f99b3afc6e99fb8e8c3302c04844b8fd4e1a0580e9f8fbd
@@ -2882,7 +2901,7 @@ frozen_inputs:
     trust, so this detects a changed claim, not a false one. It does not cover
     prose fields elsewhere in the protocol whose sections carry their own
     contract digests.
-  contract_sha256: b15578762084cfe36194f07ce75041becc2d79e2c8a8d67e4e7aabebb9da7136
+  contract_sha256: a3e814986fe1d83d54d957e68fecba0d3d9fdcfde8dadfaf3ac8205c77f148ac
 
 exclusions:
   - id: X1_invalid_input

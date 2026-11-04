@@ -3339,6 +3339,9 @@ or protected pending-row datasets (attestation wording, user, 2026-10-13).
     `analysis/v3_validation/sci05_review_round13.yaml`. Fixed: the GSE184257 gate ordering (after the EVID-06 freeze; `proposed_pending_user_signoff`, reverses Q3),
     one global download rule, three-class "other virus" rule, GSE139324 re-scoped, GSE120926 negatives unverified, reporter-based KSHV truth, seed consumer contract.
     For the user: Biomni F8, F10, F11, F12, F13. Still a draft; awaits the next review round and sign-off.
+  - **2026-11-04 (pre-freeze deviation, `DEV-039`, `PFR-16`):** the `check-chemistry` job 25956713 ran on the four GSE184257 Set 3 libraries
+    (GSM6249889-92) at 13:27-13:31, before the same-day rule "acquisition and hashing only until the EVID-06 freeze". It reports barcode geometry
+    only (a design measurement, no outcome). Its four 67-byte outputs under `data/runs/round_2026-11-04_veto/chem/` were opened by nobody and stay unopened.
   - Round 13 (agent: 8 Majors, 12 Minors; Biomni: 6 Majors) returned does-not-pass. This row covers the protocol-side
     findings; M1-M5, BM5 and BM6 and the code Minors are on `codex/sci05-r13-code`.
   - `[x]` **M6/BM2 (Q119):** `calibration.freeze_scope`. G3 freezes the probable tier (cumulative tiers) only. Strong,

@@ -1658,3 +1658,39 @@ deviations:
     git_sha: ca3667b
     review_reference: analysis/v3_validation/sci05_review_round13.yaml (git_sha is the base commit the revision was written against)
     record_sha256: 302b07fc1efc47a9fd651a0a964a78aae23c45e7a193ebb365f5b5c41c0d01b3
+  - deviation_id: DEV-039
+    date: '2026-11-04'
+    affected_workflow_row_ids: []
+    protocol_section: pre_freeze_runs, frozen_inputs
+    description: >-
+      Procedural deviation, recorded by appending inventory row PFR-16. On 2026-11-04 at 13:27 to 13:31 a read-structure check
+      (viralscan check-chemistry, Slurm job 25956713) ran on the four GSE184257 Set 3 libraries (GSM6249889 to GSM6249892,
+      dataset evid06_gse184257). The user's rule that fixes what may happen before the EVID-06 freeze (acquisition and content
+      hashing only, no check or run of any kind; recorded as DEV-040) was decided the same afternoon, after the job ran. The
+      check reports barcode and UMI geometry only. It yields no viral call, count, tier, label or verdict, so under
+      pre_freeze_runs.outcome_definition.not_an_outcome it is a design measurement and not an outcome-generating run. It is
+      recorded because the new rule is stricter than that definition. The four outputs
+      (data/runs/round_2026-11-04_veto/chem/GSM6249889.txt to GSM6249892.txt, 67 bytes each) are untracked. Nobody opened them,
+      this record does not hash them (hashing is not needed, and evidence is the tracked job script), and they stay unopened
+      until the EVID-06 verdict code and thresholds are frozen. Chemistry for these libraries is to be re-established
+      by a check run after that freeze, or taken from the study record if a later amendment says so. No dataset row, label
+      or gate rule changed on the basis of the check.
+    reason: >-
+      Keep the pre-freeze inventory complete and show that the check, which ran before the stricter rule existed, produced
+      no outcome and informed no decision.
+    outcome_triggered: false
+    outcome_triggered_justification: >-
+      Stated under pre_freeze_runs.outcome_definition and its outcome_triggered_rule. A chemistry check reporting no viral
+      count is a design measurement. No output was opened, so no result prompted any amendment, and DEV-040 follows from a
+      user decision, not from the check.
+    user_decisions_recorded:
+      - 'Pre-freeze rule (user decision, 2026-11-04): before the EVID-06 freeze only acquisition and content hashing are allowed (see DEV-040). This record notes the one earlier job that ran before the rule.'
+    user_decision_needed:
+      - 'Whether the four unopened chem outputs may be opened after the EVID-06 freeze or are deleted and rerun. Until then nobody opens them.'
+      - 'The G3 freeze, sign-off and date stay with the user.'
+    protocol_sha256_before: b15578762084cfe36194f07ce75041becc2d79e2c8a8d67e4e7aabebb9da7136
+    protocol_sha256_after: a3e814986fe1d83d54d957e68fecba0d3d9fdcfde8dadfaf3ac8205c77f148ac
+    digest_scope: frozen_inputs.contract_sha256
+    git_sha: aeaeea5
+    review_reference: analysis/v3_validation/g3_amendment_2026-11-04.md (git_sha is the base commit the revision was written against)
+    record_sha256: 6bc5089e97791bd233342aa789d696dd97cb68bc295d53a1e9218d7de50652ef
