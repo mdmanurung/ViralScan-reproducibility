@@ -54,7 +54,7 @@ classes (no BAM); `scripts/cat08_hpv11_land_bus.sbatch` reran only that step on 
 Result (`hpv11_native_3d19cca_3d19cca_r2/hpv11_reads_bus/summary.json`, `landing_targets.tsv`): 262 reads of 90 bp tiled
 every 30 bp from HPV-11, random strand, seed 20261102; **38 map (14.5 %), 224 do not**. Every landing target is an
 Alphapapillomavirus gene; none is human (0 `ENST` targets). A read compatible with two targets counts for each
-(8 equivalence classes of one target, 2 of two), so hits sum to 47.
+(8 equivalence classes of one target, 2 of two), so hits sum to 43: 33 on HPV6b, 10 on the other three.
 
 | Genome | Type | Genes hit (read hits) |
 |---|---|---|
