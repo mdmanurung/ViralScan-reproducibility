@@ -42,7 +42,7 @@ Wording: HHV-6B is "HHV-6B RNA detected" (no ciHHV-6 claim). HIV-1 in SRR2071064
 4. A shadow run directory (`.../subset/subset_run/GSM5725696/`) has the primary `config.yaml` with `kb_r1`, `kb_r2`, `output` changed, and symlinks to the primary `results/` and the `kb-python` files evidence reads.
    `viralscan evidence` replays the subset pair against the same index and runs unchanged.
 
-Fractions from this library are over the sampled molecules (Wilson 95 % interval given); counts are not library totals. GSM5725695 (latent, 59,365 molecules), BC-1 (555,654), EBV (735,872) and the others run in full.
+Result of the draw (job 25957773, COMPLETED in 14 min): 20,000 molecules, 22,186 target reads, from a frame of 26,981,294 reads; 290,744,863 FASTQ records streamed. Fractions from this library are over the sampled molecules (Wilson 95 % interval given); counts are not library totals. GSM5725695 (latent, 59,365 molecules), BC-1 (555,654), EBV (735,872) and the others run in full.
 
 ## Prior evidence: splice realignment of all viral reads (2026-11-03)
 
@@ -58,12 +58,24 @@ EBV splices at annotated introns (30 of 51 junctions seen, 52 % of spliced reads
 
 ## Matched negatives (existing `viral_summary.tsv`, `combined_off`)
 
-NEGATIVES_TABLE
+| Positive | Negative | HPV16 molecules | Called cells | Detected | Clean |
+|---|---|---|---|---|---|
+| SRR19537341 (raft, 7,673 molecules, 1,950 called cells) | SRR19537339 | 8 | 0 of 10,085 | False | yes |
+| SRR13419165 (HN18, 562 molecules, 151 called cells) | SRR13418973 (HN01) | no HPV16 row | 0 | none | yes |
+
+Also in `target_verdict_negatives.tsv`. KSHV, EBV, HSV-1 and HHV-6B libraries have no matched negative in this round.
 
 ## Results
 
-RESULTS_TABLE
+Pending: the evidence jobs had not started when this note was committed. `target_verdicts.tsv` holds the table once they finish.
 
 ## To finish
 
-JOBS_STATE
+Jobs (2026-11-04): subset 25957773 COMPLETED; libraries array 25957774 (rows 0-3,5-7: EBV, HSV-1, HHV-6B, GSM5725695, BC-1, HPV16, HN18) pending; GSM5725696 evidence 25957775 (row 4, on the subset) pending.
+Per-job log: `data/runs/round_2026-11-04_target_verdicts/logs/r1104_tverdict_<array id>_<row>.log`.
+When all rows are COMPLETED (`sacct -j 25957774,25957775`):
+1. `VIRALSCAN_DATA=<repro>/data python scripts/target_verdict_collect.py` rewrites `target_verdicts.tsv` and `target_verdict_negatives.tsv`.
+2. Replace "Results" above with the table (per library: counted and all virus-best / host-best / tie / unaligned counts and fractions, read verdicts, spliced molecules and annotated, strand status and fraction in expected orientation, host-homology flag, CONFIDENT or NOT CONFIDENT).
+   Compare the splice columns with the prior-evidence table; EBV should show annotated splicing, HHV-6B cannot match junctions (CDS-only annotation).
+3. Set the `TARGET-VERDICT-01` row in `PLAN.md` to done and list the verdicts.
+A failed row leaves a partial directory: rerun with a new output name, never overwrite.
