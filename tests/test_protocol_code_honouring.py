@@ -205,6 +205,7 @@ EXEMPT = {
     "check_g3_diff.py": "read-only git diff check for the G3 signing commit; runs nothing",
     "check_ledger_append_only.py": "read-only ledger check",
     "gen_workflow_comparison.py": "renders protocol text into docs; runs nothing",
+    "v3_freeze.py": "hashes versions, frozen seeds and tiny-panel files into a record; produces no outcome data, and frozen_seed already refuses a pending seed",
     "val08_golden.py": "VAL-08 exact golden run; its generator command never passes --production",
     "validate_v3_protocol.py": "defines the guard",
 }
