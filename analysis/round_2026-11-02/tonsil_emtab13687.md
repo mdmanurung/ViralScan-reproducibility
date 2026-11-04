@@ -25,7 +25,7 @@ Earlier runs of the same libraries exist (`dsr_round1`, `dsr_round2` on `e7c1b08
 | ERR13027027 | twostep retry | 25949107 | COMPLETED (4 h 19 min, 96G) | `data/runs/round_2026-11-02/tonsil_atlas/ERR13027027/twostep_retry1/` |
 | ERR13027027 | DSR-02 HSV-1, combined_off | 25949116_7 | COMPLETED (1 h 16 min) | `data/runs/round_2026-11-02/_dsr0607/evidence/tonsil_atlas__ERR13027027__combined_off__Human_herpesvirus_1/` |
 | ERR13027027 | DSR-02 HSV-1, combined_artefact | 25949116_8 | COMPLETED | `_dsr0607/evidence/tonsil_atlas__ERR13027027__combined_artefact__Human_herpesvirus_1/` |
-| ERR13027027 | DSR-02 twostep_retry1 calls (HSV-1, Gammatorquevirus, Samektorquevirus) and the combined Samektorquevirus calls | 25953813_10-14 | PENDING | `round_2026-11-02/_dsr02_backfill_2026-11-04/` |
+| ERR13027027 | DSR-02 twostep_retry1 calls (HSV-1, Gammatorquevirus, Samektorquevirus) and the combined Samektorquevirus calls | 25953813_10-14 | COMPLETED | `round_2026-11-02/_dsr02_backfill_2026-11-04/` |
 
 Inputs under `data/inputs/benchmark_inputs/dsr_2026-10-05/E-MTAB-13687/<ERR>/`. ERR13027010: R1 = `_1`, R2 = `_2`. ERR13027027: R1 = `_2` (7.8 GB, barcode), R2 = `_1` (17 GB, cDNA), the frozen round-1 orientation. `-x 10xv3 --strand forward` for both (on-list 96.2 % and 95.3 %).
 - ERR13027122: **n/a, not run.** Round-1 check-chemistry gives strand pilot 0.1 / 0.0 / 0.2 % (forward / reverse / unstranded): not a GEX library (probably HTO/ADT, 28.2 M reads). Sample choice was made from metadata before any viral output (run plan section 10).
@@ -61,5 +61,21 @@ Resubmitted as job 25949107 with `--exclude=res-hpc-mem02` into a new dir `tonsi
 
 The twostep_retry1 HSV-1 call (29 molecules, 7 cells) is row 13 of the backfill array 25953813 (`_dsr02_backfill_2026-11-04/calls.tsv`, submitted 2026-11-04).
 
+
+### Backfill (array 25953813 rows 10-14, 2026-11-04)
+Output `data/runs/round_2026-11-02/_dsr02_backfill_2026-11-04/tonsil_atlas__ERR13027027__<arm>__<virus>/`; counted molecules
+(virus-best / host-best / tie / unaligned) and flags raised.
+
+| Arm | Call | Molecules | Flags raised |
+|---|---|---|---|
+| twostep_retry1 | HSV-1 (29) | 29 / 0 / 0 / 0 | none |
+| twostep_retry1 | Samektorquevirus (1) | 1 / 0 / 0 / 0 | none |
+| twostep_retry1 | Gammatorquevirus (1) | 0 / 0 / 0 / 1 | none |
+| combined_off | Samektorquevirus (1) | 0 / 1 / 0 / 0 | host_homology 1.00 |
+| combined_artefact | Samektorquevirus (1) | 0 / 1 / 0 / 0 | host_homology 1.00 |
+
+HSV-1 is virus-best in all three arms (29 of 30, 29 of 30, 29 of 29 counted molecules), with no flag raised: the reads are
+HSV-1 sequence, not host, in this negative-control library. The anellovirus calls are single molecules: no verdict.
+
 ## Pending
-- Backfill rows 10-14 (25953813). Rows 7-8 numbers: `.../tonsil_atlas__ERR13027027__combined_off__Human_herpesvirus_1/molecule_verdict_summary.tsv` (`counted` rows) and `interpretation_flags.tsv`.
+- Nothing left to run for this library. Rows 7-8 numbers: `.../tonsil_atlas__ERR13027027__combined_off__Human_herpesvirus_1/molecule_verdict_summary.tsv` (`counted` rows) and `interpretation_flags.tsv`.
