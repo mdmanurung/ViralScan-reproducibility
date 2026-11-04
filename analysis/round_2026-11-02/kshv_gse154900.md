@@ -1,6 +1,6 @@
 # KSHV + EBV GSE154900 (RUN-05, PROG-18), round 2026-11-02
 
-Status 2026-11-02: jobs submitted, not finished. de55424 numbers pending; round-2 numbers (e7c1b08) are the labelled baseline. Exploratory, unscored.
+Status 2026-11-04: combined_off (25941228_4) and combined_artefact (25941231_4, 19 h 56) COMPLETED; twostep (25941254_4) PENDING on JobArrayTaskLimit with no task of its array running. Programme table at 5b419d4 exists for combined_off only. No DSR-02 job exists for this dataset: chain 25941255 would enumerate it and is PENDING behind 25941254_3-4. Round-2 numbers (e7c1b08) are the labelled baseline. Exploratory, unscored.
 
 ## Setup
 
@@ -13,21 +13,28 @@ Status 2026-11-02: jobs submitted, not finished. de55424 numbers pending; round-
 
 ## Jobs
 
-| Job | Arm | Row | Resources |
-|---|---|---|---|
-| 25941228 | combined_off | 4 | 4 cpu, 64G, 24 h |
-| 25941231 | combined_artefact | 4 | 4 cpu, 64G, 96 h |
-| 25941254 | twostep | 4 (array task 4) | 8 cpu, 64G, 24 h |
-| 25941255 | dsr02 chain | after all arrays | 1 cpu |
+| Job | Arm | Row | Resources | State 2026-11-04 |
+|---|---|---|---|---|
+| 25941228 | combined_off | 4 | 4 cpu, 64G, 24 h | _4 COMPLETED (3 h 17) |
+| 25941231 | combined_artefact | 4 | 4 cpu, 64G, 96 h | _4 COMPLETED (19 h 56) |
+| 25941254 | twostep | 4 (array task 4) | 8 cpu, 64G, 24 h | _4 PENDING (JobArrayTaskLimit; no task of the array running) |
+| 25941255 | dsr02 chain | after all arrays | 1 cpu | PENDING (Dependency) |
+| 25949108, 25949495, 25950135 | \`rerun-programs\` | finished runs | 32-48G | COMPLETED; \`programs_5b419d4\` exists for combined_off only |
 
 ## Outcome per arm (de55424)
+Source: \`data/runs/round_2026-11-02/GSE154900/GSM4682311/<arm>/GSM4682311/results/viral_summary.tsv\` (rows detected \`True\`); programmes from \`posthoc/programs_5b419d4/results/gene_program_summary.tsv\`.
 
-| GSM | combined_off | combined_artefact | twostep | DSR-02 |
-|---|---|---|---|---|
-| GSM4682311 | pending (25941228_4) | pending (25941231_4) | pending (25941254_4) | pending |
-| GSM4682312 | n/a: no barcode read | n/a | n/a | n/a |
+| arm | virus | molecules | called cells | infected called (%) | programmes at 5b419d4: scored / productive / latent / mixed / indeterminate |
+|---|---|---|---|---|---|
+| combined_off | KSHV (Human herpesvirus 8) | 555,654 | 3,426 | 3,278 (95.68) | 3,265 / 0 / 2,889 / 288 / 88 |
+| combined_off | EBV | 1,652.25 | 3,426 | 942 (27.50) | 44 / 0 / 1 / 0 / 43 |
+| combined_off | EBV type 2 | 116.75 | 3,426 | 18 (0.53) | 0 scored |
+| combined_artefact | KSHV | 555,806 | 3,421 | 3,277 (95.79) | programmes not run |
+| combined_artefact | EBV | 1,653.25 | 3,421 | 943 (27.57) | programmes not run |
+| combined_artefact | EBV type 2 | 116.75 | 3,421 | 18 (0.53) | programmes not run |
+| twostep | | pending (25941254_4) | | | |
 
-Collect: same two commands as in `kshv_gse190558.md` (add 25941228,25941231 to the `sacct -j` list).
+GSM4682312: n/a, no barcode read. Other calls with >= 3 molecules: Samektorquevirus 4 molecules in combined_off and combined_artefact (Gammatorquevirus 1). None has DSR-02 evidence submitted.
 
 ## Baseline: round 2 (e7c1b08), GSM4682311
 
@@ -51,7 +58,7 @@ Detection part met on round 2: KSHV and EBV are both detected in the BC-1 librar
 
 ## Interim 2026-11-03 (de55424)
 
-`combined_off` GSM4682311 COMPLETED (25941228_4, 3 h 17, 64G). `combined_artefact` (25941231_4) running (13 h 44 at last check). `twostep` row 4 (25941254_4) pending. No OOM here.
+`combined_off` GSM4682311 COMPLETED (25941228_4, 3 h 17, 64G). `combined_artefact` (25941231_4) was running on 2026-11-03 (13 h 44) and COMPLETED on 2026-11-04 (19 h 56); its numbers are in the table above. `twostep` row 4 (25941254_4) is still pending. No OOM here.
 Gene programmes were off in the run; added with `rerun-programs` (job 25949108).
 
 | arm | virus | molecules | called cells | scored | latent | productive | mixed | indeterminate |

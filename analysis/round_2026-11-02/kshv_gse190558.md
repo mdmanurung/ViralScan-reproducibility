@@ -1,7 +1,6 @@
 # KSHV GSE190558 (RUN-04, PROG-16), round 2026-11-02
 
-Status 2026-11-02: jobs submitted, not finished. de55424 numbers are pending; the round-2 numbers
-below (pin e7c1b08, 2026-10-13/14) are the baseline and are labelled as such. Exploratory, unscored.
+Status 2026-11-04: 11 of 12 library-arm cells have a summary (the original OOM arms were rerun as `_r2`). GSM5725698 twostep (job 25941254_3) is PENDING on JobArrayTaskLimit with no task of its array running. DSR-02 (`_r2` array 25952505): rows 1-2 COMPLETED, rows 3-5 RUNNING, rows 6-16 PENDING, row 0 ran out of memory and was resubmitted (25953432_0, PENDING). Programme tables at 5b419d4 are missing for the three `combined_artefact_r2` runs. GSE184257 Set 3 download: 3 of 4 libraries done. The round-2 numbers below (pin e7c1b08, 2026-10-13/14) are the baseline and are labelled as such. Exploratory, unscored.
 
 ## Setup
 
@@ -17,29 +16,53 @@ below (pin e7c1b08, 2026-10-13/14) are the baseline and are labelled as such. Ex
 
 Scripts: `scripts/slurm_kshv_round_2026-11-02.sh` (ARM=...), `scripts/slurm_kshv_dsr02_chain.sh`, `scripts/slurm_kshv_dsr02_row.sh`. Manifest `config/kshv_round_2026-11-02.manifest.tsv` (rows 0-3 are this dataset).
 
-| Job | Arm | Rows | Resources |
-|---|---|---|---|
-| 25941227 | combined_off | 0-3 %3 | 4 cpu, 32G, 12 h |
-| 25941230 | combined_artefact | 0-3 %3 | 4 cpu, 32G, 24 h |
-| 25941254 | twostep | 0-4 %3 (0-3 here) | 8 cpu, 64G, 24 h |
-| 25941255 | dsr02 chain (afterany of all arrays) | enumerates calls, submits the evidence array | 1 cpu |
+| Job | Arm | Rows | Resources | State 2026-11-04 |
+|---|---|---|---|---|
+| 25941227 | combined_off | 0-3 %3 | 4 cpu, 32G, 12 h | _0 COMPLETED; _1-3 OUT_OF_MEMORY (superseded by 25949104) |
+| 25941230 | combined_artefact | 0-3 %3 | 4 cpu, 32G, 24 h | _0 COMPLETED; _1-2 OUT_OF_MEMORY; _3 CANCELLED by the user (superseded by 25949105) |
+| 25941254 | twostep | 0-4 %3 (0-3 here) | 8 cpu, 64G, 24 h | _0-2 COMPLETED; _3-4 PENDING (JobArrayTaskLimit; no task of the array running) |
+| 25941255 | dsr02 chain (afterany of all arrays) | enumerates calls, submits the evidence array | 1 cpu, 4G | PENDING (Dependency on 25941254_*) |
+| 25949104 | combined_off_r2 | 1-3 | 96G | _1-3 COMPLETED (1 h 32 to 2 h 06) |
+| 25949105 | combined_artefact_r2 | 1-3 | 128G | _1-3 COMPLETED (9 h 17 to 12 h 47) |
+| 25949108, 25949495, 25950135 | `rerun-programs` (`de55424` catalogue, then 5b419d4 twice) | finished runs | 32-48G | COMPLETED |
+| 25949110 | `_r2` DSR-02 chain | enumerates the 17 calls of the `_r2` arms | 4G | COMPLETED; submitted 25952505 |
+| 25952505 | `_r2` DSR-02 evidence array (rows 0-16 %6) | see DSR-02 section | 24G | _0 OUT_OF_MEMORY; _1-2 COMPLETED; _3-5 RUNNING; _6-16 PENDING |
+| 25953432 | DSR-02 row 0 resubmit | row 0 | 48G | _0 PENDING (Priority) |
+| 25953402 | GSE184257 Set 3 download array (0-3) | see held-out data section | 2G | _0 FAILED (broken pipe); _1-3 COMPLETED |
+| 25953433 | retry of 25953402_0 | task 0 | 2G | _0 RUNNING |
 
 Smoke tests (500 k pairs of GSM5725695, output under `_kshv/smoke/`, not results): jobs 25941195 (combined, artefact) and 25941226 (twostep). They passed CLI parsing, chemistry check, read filter, STARsolo and kb count; the artefact smoke ended at emptyDrops ("insufficient unique points"), expected on 500 k reads.
 No explore-ledger append this round: de55424 has no `scripts/explore_ledger.py`.
 
 ## Outcome per library and arm (de55424)
+Source: `data/runs/round_2026-11-02/GSE190558/<GSM>/<arm>/<GSM>/results/viral_summary.tsv` (HHV-8 row), programmes from `<run>/posthoc/programs_5b419d4/results/gene_program_summary.tsv`, collected with `PROGRAMS_DIR=programs_5b419d4 python3 -I scripts/kshv_round_collect.py new data/runs/round_2026-11-02` on 2026-11-04. The original OOM rows have no summary; their `_r2` reruns are listed next to them. Table `kshv_summary_5b419d4.tsv` is refreshed from the same command.
 
-| GSM | condition | combined_off | combined_artefact | twostep | DSR-02 |
-|---|---|---|---|---|---|
-| GSM5725695 | latent | pending (25941227_0) | pending (25941230_0) | pending (25941254_0) | pending |
-| GSM5725696 | lytic | pending (_1) | pending (_1) | pending (_1) | pending |
-| GSM5725697 | lytic + casp-i | pending (_2) | pending (_2) | pending (_2) | pending |
-| GSM5725698 | lytic + casp-i + anti-IFN | pending (_3) | pending (_3) | pending (_3) | pending |
+| GSM | condition | arm | job | state | KSHV molecules | called cells | infected called (%) | programmes at 5b419d4: scored / productive / latent / mixed / indeterminate |
+|---|---|---|---|---|---|---|---|---|
+| GSM5725695 | latent | combined_off | 25941227_0 | COMPLETED | 59,365 | 5,690 | 3,086 (54.2) | 2,574 / 1 / 2,522 / 0 / 51 |
+| GSM5725695 | latent | combined_artefact | 25941230_0 | COMPLETED | 59,361 | 5,690 | 3,085 (54.2) | 2,573 / 1 / 2,521 / 0 / 51 |
+| GSM5725695 | latent | twostep | 25941254_0 | COMPLETED | 59,506 | 5,587 | 3,021 (54.1) | 2,527 / 1 / 2,478 / 0 / 48 |
+| GSM5725696 | lytic | combined_off | 25941227_1 | OUT_OF_MEMORY at 32G | no summary | | | |
+| GSM5725696 | lytic | combined_artefact | 25941230_1 | OUT_OF_MEMORY at 32G | no summary | | | |
+| GSM5725696 | lytic | combined_off_r2 | 25949104_1 | COMPLETED (96G) | 23,671,063 | 7,942 | 7,941 (99.99) | 7,939 / 4,842 / 1,152 / 1,661 / 284 |
+| GSM5725696 | lytic | combined_artefact_r2 | 25949105_1 | COMPLETED (128G) | 23,670,509 | 7,940 | 7,939 (99.99) | programmes not run |
+| GSM5725696 | lytic | twostep | 25941254_1 | COMPLETED | 23,717,600 | 7,748 | 7,638 (98.6) | 7,638 / 4,709 / 1,043 / 1,699 / 187 |
+| GSM5725697 | lytic + casp-i | combined_off | 25941227_2 | OUT_OF_MEMORY at 32G | no summary | | | |
+| GSM5725697 | lytic + casp-i | combined_artefact | 25941230_2 | OUT_OF_MEMORY at 32G | no summary | | | |
+| GSM5725697 | lytic + casp-i | combined_off_r2 | 25949104_2 | COMPLETED (96G) | 23,545,060 | 6,839 | 6,836 (99.99) | 6,835 / 3,095 / 1,414 / 1,986 / 340 |
+| GSM5725697 | lytic + casp-i | combined_artefact_r2 | 25949105_2 | COMPLETED (128G) | 23,544,978 | 6,862 | 6,859 (99.99) | programmes not run |
+| GSM5725697 | lytic + casp-i | twostep | 25941254_2 | COMPLETED | 23,600,287 | 6,597 | 6,485 (98.3) | 6,485 / 3,065 / 1,231 / 1,993 / 196 |
+| GSM5725698 | lytic + casp-i + anti-IFN | combined_off | 25941227_3 | OUT_OF_MEMORY at 32G | no summary | | | |
+| GSM5725698 | lytic + casp-i + anti-IFN | combined_artefact | 25941230_3 | CANCELLED by the user after 3 min 47 s | no summary | | | |
+| GSM5725698 | lytic + casp-i + anti-IFN | combined_off_r2 | 25949104_3 | COMPLETED (96G) | 31,763,568 | 9,159 | 9,159 (100) | 9,159 / 5,444 / 1,230 / 2,269 / 216 |
+| GSM5725698 | lytic + casp-i + anti-IFN | combined_artefact_r2 | 25949105_3 | COMPLETED (128G) | 31,761,926 | 9,151 | 9,151 (100) | programmes not run |
+| GSM5725698 | lytic + casp-i + anti-IFN | twostep | 25941254_3 | PENDING (JobArrayTaskLimit) | pending | | | |
 
-Collect (after the jobs end):
+EBV: 1 molecule in GSM5725697 twostep, combined_off_r2 and combined_artefact_r2 (1 infected called cell each).
 
-    sacct -j 25941227,25941230,25941254,25941255 -P -o JobID,JobName,State,Elapsed,MaxRSS,ExitCode
-    python3 -I scripts/kshv_round_collect.py new data/runs/round_2026-11-02 > analysis/round_2026-11-02/kshv_summary.tsv
+Collect (re-run when 25941254_3 and the programme reruns finish):
+
+    PROGRAMS_DIR=programs_5b419d4 python3 -I scripts/kshv_round_collect.py new data/runs/round_2026-11-02
 
 ## Baseline: round 2 (e7c1b08), KSHV rows
 
@@ -97,7 +120,7 @@ Official numbers: `viralscan rerun-programs` from a detached worktree at 5b419d4
 | GSM5725696 lytic | twostep | 7,638 | 4,709 | 1,043 | 1,699 | 187 |
 | GSM5725697 lytic + casp-i | twostep | 6,485 | 3,065 | 1,231 | 1,993 | 196 |
 
-PROG-16: with the new catalogue the induced libraries are mostly productive (62 % and 47 %) or mixed (22 % and 31 %); the latent library is 98 % latent with 1 productive and 0 mixed cell. This is the induced > uninduced contrast the earlier catalogue missed (it gave 0 and 1 productive). Productive cells in the induced libraries are broad: 2-7 markers, median 6-7 molecules; mixed cells there carry 2-8 markers (median 14-19 molecules). Latent genes in both conditions: the latent library is latent-called in 98 % of scored cells, and the induced libraries keep 1,043 and 1,231 latent-called cells. Caveat: ambient is large in the induced libraries (`ambient_viral_fraction` 0.068 and 0.118), and the marker profile of the soup matches the mixed cells (cosine 0.99), so cell-level productive counts there overlap with soup; the 4,709 / 3,065 productive cells are not all independent of it. Still open: the GSM5725698 library and the combined arms of the induced libraries (OOM reruns running).
+PROG-16: with the new catalogue the induced libraries are mostly productive (62 % and 47 %) or mixed (22 % and 31 %); the latent library is 98 % latent with 1 productive and 0 mixed cell. This is the induced > uninduced contrast the earlier catalogue missed (it gave 0 and 1 productive). Productive cells in the induced libraries are broad: 2-7 markers, median 6-7 molecules; mixed cells there carry 2-8 markers (median 14-19 molecules). Latent genes in both conditions: the latent library is latent-called in 98 % of scored cells, and the induced libraries keep 1,043 and 1,231 latent-called cells. Caveat: ambient is large in the induced libraries (`ambient_viral_fraction` 0.068 and 0.118), and the marker profile of the soup matches the mixed cells (cosine 0.99), so cell-level productive counts there overlap with soup; the 4,709 / 3,065 productive cells are not all independent of it. Still open on 2026-11-03 (state on 2026-11-04 in the Outcome table above): combined_off_r2 programmes are done (next update); combined_artefact_r2 programmes are not run; GSM5725698 twostep is pending.
 
 ## Update 2026-11-03: combined_off_r2 programme calls, and states by load including non-called barcodes
 
@@ -151,3 +174,33 @@ Training gate (`scripts/kshv_veto_training_gate.py`, unique-layer bins, `_kshv/v
 Under the beta-binomial veto mixed cells fall from 1,699 to 99 (-96) and 1,993 to 311 (-97); productive + mixed
 and latent calls are unchanged; GSM5725695 is unchanged (1 productive, 2,478 latent). Training data only: the
 held-out gate is pre-registered in `prog_mixed_veto_prereg.md` (committed before any held-out run).
+
+## DSR-02 read validation of the `_r2` arms (chain 25949110, array 25952505, state 2026-11-04)
+Calls: `data/runs/round_2026-11-02/_kshv/evidence_r2/calls.tsv` (17 rows, run dirs under `_kshv/view_r2/`). Output: `_kshv/evidence_r2/<dataset>__<GSM>__<arm>__<virus>/`. The array runs at 24G.
+
+| Row | Library | Arm | Call (molecules) | Job | State | virus-best / host-best / tie / unaligned (counted) | Flags | Verdict |
+|---|---|---|---|---|---|---|---|---|
+| 0 | GSM5725696 | combined_artefact_r2 | HHV-8 (23,670,509) | 25952505_0 | OUT_OF_MEMORY at 24G after 48 min; partial output moved to `evidence_r2/_failed/`. Resubmitted as 25953432_0 at 48G, PENDING | pending | | pending |
+| 1 | GSM5725696 | combined_artefact_r2 | HPV77 (4) | 25952505_1 | COMPLETED (1 h 05) | 2 / 0 / 0 / 4 | host_homology flagged 0.333 | virus-best 2, host-best 0 of 6 counted |
+| 2 | GSM5725697 | combined_artefact_r2 | Cercopithecine herpesvirus (5) | 25952505_2 | COMPLETED (0 h 57) | 0 / 0 / 3 / 2 | none flagged | no virus-best molecule; 3 ties, 2 unaligned |
+| 3 | GSM5725697 | combined_artefact_r2 | HHV-8 (23,544,978) | 25952505_3 | RUNNING (1 h 00) | pending | | pending |
+| 4 | GSM5725697 | combined_artefact_r2 | HPV77 (6) | 25952505_4 | RUNNING | pending | | pending |
+| 5 | GSM5725698 | combined_artefact_r2 | HHV-8 (31,761,926) | 25952505_5 | RUNNING | pending | | pending |
+| 6 | GSM5725698 | combined_artefact_r2 | HPV29 (3) | 25952505_6 | PENDING | pending | | pending |
+| 7-16 | GSM5725696-98 | combined_off_r2 | Cercopithecine herpesvirus, HHV-8, HPV77, HPV29 (see `calls.tsv`) | 25952505_7-16 | PENDING (throttle %6) | pending | | pending |
+
+Rows 1-2: `molecule_verdict_summary.tsv` (`counted` rows) and `interpretation_flags.tsv` in the row's evidence dir.
+Risk: rows 3, 5, 8, 11 and 14 are HHV-8 calls with 23.5 to 31.8 M molecules, the same shape as row 0, which ran out of memory at 24G. `calls.tsv` marks HHV-8 `expected=false`, so the enumerator lists the target virus as an off-target call. The original arms (GSM5725695 all arms, GSM5725696/-97 twostep) are covered only by chain 25941255, which is blocked behind 25941254_3-4.
+
+## Held-out data for the mixed-veto gate: GSE184257 Set 3 download
+Script `scripts/slurm_gse184257_set3_download.sh` (array 0-3, user decision Q3, 2026-11-04), output `data/runs/work/gse184257_set3/raw/<GSM>/`, MD5-checked against ENA, `DONE` written last.
+
+| Task | GSM | SRR | Condition | Job | State |
+|---|---|---|---|---|---|
+| 0 | GSM6249889 | SRR19685943 | Mock 3dpi Set 3 | 25953402_0 | FAILED (broken pipe after 14 min; a partial `SRR19685943_2.fastq.gz.tmp` was left) |
+| 0 | GSM6249889 | SRR19685943 | Mock 3dpi Set 3 | 25953433_0 (retry) | RUNNING |
+| 1 | GSM6249890 | SRR19685944 | Mock 6dpi Set 3 | 25953402_1 | COMPLETED, `DONE` present |
+| 2 | GSM6249891 | SRR19685945 | KSHV 3dpi Set 3 | 25953402_2 | COMPLETED, `DONE` present |
+| 3 | GSM6249892 | SRR19685946 | KSHV 6dpi Set 3 | 25953402_3 | COMPLETED, `DONE` present |
+
+3 of 4 libraries are downloaded. The held-out gate runs (chemistry check, arms, `rerun-programs --programme-mixed-veto betabinomial`) are not scripted or submitted yet; the pre-registration is `prog_mixed_veto_prereg.md`.
