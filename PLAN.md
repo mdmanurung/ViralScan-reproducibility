@@ -5659,6 +5659,7 @@ elapsed time: 2-4 weeks, dominated by downloads, queues, and comparator setup.
 - [ ] `RUN-02` — EBV `SRR12682296` under measured 10x v2 geometry.
 - [ ] `RUN-03` — HSV-1 `SRR8315713` under measured Drop-seq geometry.
   - 2026-11-02 (`codex/round-2026-11-02-hsv1`): four arms submitted on package de55424, jobs 25941198-25941201; see `analysis/round_2026-11-02/hsv1_SRR8315713.md`. Results pending; row stays open.
+  - 2026-11-04: arms: the first try (25941198-25941200) FAILED on `--tchem auto` (Drop-seq has no kb technology); rerun with `--tchem off` (25941698-25941700, dirs `_r2`) COMPLETED. Molecule totals equal round 2 (`e7c1b08`) in every arm: HSV-1 32,014 (off), 32,023 (artefact), 34,562 (twostep), in 737 / 773 / 850 called-infected cells; HHV-2 53.8 / 53.8 / 59.3 molecules. SCAUTOQC-01 gate PASS on a4ca989 (25949687; see `SCAUTOQC-01-RUN`). Open: DSR-02 on 7 off-target calls, array 25949505_0-6 PENDING (Priority); the first array 25949114 FAILED on a spool path. Row stays open until those verdicts are in.
 - [ ] `RUN-04` — KSHV latent/lytic series `GSE190558`.
 - [ ] `RUN-05` — KSHV plus EBV replicates `GSE154900`.
 
