@@ -1,6 +1,6 @@
 # DSR-07 E-MTAB-13687 tonsil atlas negative-control subset, round 2026-11-02
 
-Status 2026-11-04: all arm runs finished, including the ERR13027027 twostep retry (job 25949107). DSR-02 for the combined_off HSV-1 call (25949116_7) COMPLETED; the combined_artefact call (25949116_8) is PENDING; the twostep retry HSV-1 call has no DSR-02 job. Package pin: `de55424` (clean worktree
+Status 2026-11-04: all arm runs finished, including the ERR13027027 twostep retry (job 25949107). DSR-02 for both HSV-1 calls (25949116_7 combined_off, 25949116_8 combined_artefact) COMPLETED; the twostep retry HSV-1 call is in the backfill array 25953813 (row 13). Package pin: `de55424` (clean worktree
 `ViralScan/.claude/worktrees/pin-dsr0607`). Reference: cat42d (`data/references/panel_builds/viral_ref_cat42d/{build,build_virus_only}`),
 STAR host index `data/references/starsolo/ebv_latest_ref_2026-09-27/star_host_2.7.11b`. Env: `conda/envs/viralscan_test_full` + `R4_51`.
 Script: `scripts/slurm_round_2026_11_02_dsr0607.sh` (same conventions as `slurm_round_2026_11_02_dsr0304.sh`).
@@ -24,7 +24,8 @@ Earlier runs of the same libraries exist (`dsr_round1`, `dsr_round2` on `e7c1b08
 | ERR13027027 | twostep | 25941215 | FAILED (node, see Results) | `data/runs/round_2026-11-02/tonsil_atlas/ERR13027027/twostep/` |
 | ERR13027027 | twostep retry | 25949107 | COMPLETED (4 h 19 min, 96G) | `data/runs/round_2026-11-02/tonsil_atlas/ERR13027027/twostep_retry1/` |
 | ERR13027027 | DSR-02 HSV-1, combined_off | 25949116_7 | COMPLETED (1 h 16 min) | `data/runs/round_2026-11-02/_dsr0607/evidence/tonsil_atlas__ERR13027027__combined_off__Human_herpesvirus_1/` |
-| ERR13027027 | DSR-02 HSV-1, combined_artefact | 25949116_8 | PENDING (Priority) | not created |
+| ERR13027027 | DSR-02 HSV-1, combined_artefact | 25949116_8 | COMPLETED | `_dsr0607/evidence/tonsil_atlas__ERR13027027__combined_artefact__Human_herpesvirus_1/` |
+| ERR13027027 | DSR-02 twostep_retry1 calls (HSV-1, Gammatorquevirus, Samektorquevirus) and the combined Samektorquevirus calls | 25953813_10-14 | PENDING | `round_2026-11-02/_dsr02_backfill_2026-11-04/` |
 
 Inputs under `data/inputs/benchmark_inputs/dsr_2026-10-05/E-MTAB-13687/<ERR>/`. ERR13027010: R1 = `_1`, R2 = `_2`. ERR13027027: R1 = `_2` (7.8 GB, barcode), R2 = `_1` (17 GB, cDNA), the frozen round-1 orientation. `-x 10xv3 --strand forward` for both (on-list 96.2 % and 95.3 %).
 - ERR13027122: **n/a, not run.** Round-1 check-chemistry gives strand pilot 0.1 / 0.0 / 0.2 % (forward / reverse / unstranded): not a GEX library (probably HTO/ADT, 28.2 M reads). Sample choice was made from metadata before any viral output (run plan section 10).
@@ -56,10 +57,9 @@ Resubmitted as job 25949107 with `--exclude=res-hpc-mem02` into a new dir `tonsi
 | Row | Library | Arm | Call | Job | State | Molecules virus-best / host-best / tie / unaligned | Verdict |
 |---|---|---|---|---|---|---|---|
 | 7 | ERR13027027 | combined_off | HSV-1 (29 molecules) | 25949116_7 | COMPLETED | 29 / 1 / 0 / 0 | virus-best in 29 of 30 counted molecules; host_homology, low_complexity, sibling_or_host_ambiguity, coverage_hotspot and eve_or_integration_like_hotspot all not flagged |
-| 8 | ERR13027027 | combined_artefact | HSV-1 (29 molecules) | 25949116_8 | PENDING | pending | pending |
+| 8 | ERR13027027 | combined_artefact | HSV-1 (29 molecules) | 25949116_8 | COMPLETED | 29 / 1 / 0 / 0 | same as row 7: virus-best in 29 of 30 counted molecules (5 of the 29 have a TSO-class repeat, `molecule_read_verdict_summary.tsv`); no flag raised |
 
-The twostep_retry1 HSV-1 call (29 molecules, 7 cells) has no row in `dsr0607_offtarget_calls.tsv` and no DSR-02 job.
+The twostep_retry1 HSV-1 call (29 molecules, 7 cells) is row 13 of the backfill array 25953813 (`_dsr02_backfill_2026-11-04/calls.tsv`, submitted 2026-11-04).
 
 ## Pending
-- Row 8 (25949116_8, combined_artefact), then the HSV-1 verdict for both arms. Row 7 numbers: `.../tonsil_atlas__ERR13027027__combined_off__Human_herpesvirus_1/molecule_verdict_summary.tsv` (`counted` rows) and `interpretation_flags.tsv`.
-- A DSR-02 job for the twostep_retry1 HSV-1 call, or a note that rows 7-8 cover it.
+- Backfill rows 10-14 (25953813). Rows 7-8 numbers: `.../tonsil_atlas__ERR13027027__combined_off__Human_herpesvirus_1/molecule_verdict_summary.tsv` (`counted` rows) and `interpretation_flags.tsv`.
