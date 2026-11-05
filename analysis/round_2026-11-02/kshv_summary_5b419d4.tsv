@@ -1,0 +1,21 @@
+dataset	gsm	arm	virus	viral_molecules_total_est	n_called_cells	infected_called	pct_infected_called	total_cells	detected	n_cells_total	n_cells_productive	n_cells_latent	n_cells_mixed	n_cells_indeterminate
+GSE154900	GSM4682311	combined_artefact	Human gammaherpesvirus 4 type 2	116.75	3421	18	0.5262	664666	True					
+GSE154900	GSM4682311	combined_artefact	Epstein-Barr virus	1653.25	3421	943	27.565	664666	True					
+GSE154900	GSM4682311	combined_artefact	Human herpesvirus 8	555806.0	3421	3277	95.7907	664666	True					
+GSE154900	GSM4682311	combined_off	Human gammaherpesvirus 4 type 2	116.75	3426	18	0.5254	664746	True	0	0	0	0	0
+GSE154900	GSM4682311	combined_off	Epstein-Barr virus	1652.25	3426	942	27.4956	664746	True	44	0	1	0	43
+GSE154900	GSM4682311	combined_off	Human herpesvirus 8	555654.0	3426	3278	95.6801	664746	True	3265	0	2889	288	88
+GSE190558	GSM5725695	combined_artefact	Human herpesvirus 8	59361	5690	3085	54.2179	866378	True	2573	1	2521	0	51
+GSE190558	GSM5725695	combined_off	Human herpesvirus 8	59365	5690	3086	54.2355	867837	True	2574	1	2522	0	51
+GSE190558	GSM5725695	twostep	Human herpesvirus 8	59506	5587	3021	54.072	6558	True	2527	1	2478	0	48
+GSE190558	GSM5725696	combined_artefact_r2	Human herpesvirus 8	23670509	7940	7939	99.9874	1264337	True					
+GSE190558	GSM5725696	combined_off_r2	Human herpesvirus 8	23671063	7942	7941	99.9874	1265772	True	7939	4842	1152	1661	284
+GSE190558	GSM5725696	twostep	Human herpesvirus 8	23717600	7748	7638	98.5803	460497	True	7638	4709	1043	1699	187
+GSE190558	GSM5725697	combined_artefact_r2	Epstein-Barr virus	1	6862	1	0.0146	1391414	True					
+GSE190558	GSM5725697	combined_artefact_r2	Human herpesvirus 8	23544978	6862	6859	99.9563	1391414	True					
+GSE190558	GSM5725697	combined_off_r2	Epstein-Barr virus	1	6839	1	0.0146	1392639	True	1	0	1	0	0
+GSE190558	GSM5725697	combined_off_r2	Human herpesvirus 8	23545060	6839	6836	99.9561	1392639	True	6835	3095	1414	1986	340
+GSE190558	GSM5725697	twostep	Epstein-Barr virus	1	6597	1	0.0152	442896	True	1	0	1	0	0
+GSE190558	GSM5725697	twostep	Human herpesvirus 8	23600287	6597	6485	98.3023	442896	True	6485	3065	1231	1993	196
+GSE190558	GSM5725698	combined_artefact_r2	Human herpesvirus 8	31761926	9151	9151	100.0	1460839	True					
+GSE190558	GSM5725698	combined_off_r2	Human herpesvirus 8	31763568	9159	9159	100.0	1461764	True	9159	5444	1230	2269	216
