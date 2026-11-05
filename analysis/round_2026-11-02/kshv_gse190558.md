@@ -181,23 +181,35 @@ Calls: `data/runs/round_2026-11-02/_kshv/evidence_r2/calls.tsv` (17 rows, run di
 
 | Row | Library | Arm | Call (molecules) | Job | State | virus-best / host-best / tie / unaligned (counted) | Flags | Verdict |
 |---|---|---|---|---|---|---|---|---|
-| 0 | GSM5725696 | combined_artefact_r2 | HHV-8 (23,670,509) | 25952505_0 | OUT_OF_MEMORY at 24G after 48 min; partial output moved to `evidence_r2/_failed/`. Resubmitted as 25953432_0 at 48G: OUT_OF_MEMORY again (MaxRSS 44.9 GB at 57 min). Not resubmitted | not run | | not run |
-| 1 | GSM5725696 | combined_artefact_r2 | HPV77 (4) | 25952505_1 | COMPLETED (1 h 05) | 2 / 0 / 0 / 4 | host_homology flagged 0.333 | virus-best 2, host-best 0 of 6 counted |
-| 2 | GSM5725697 | combined_artefact_r2 | Cercopithecine herpesvirus (5) | 25952505_2 | COMPLETED (0 h 57) | 0 / 0 / 3 / 2 | none flagged | no virus-best molecule; 3 ties, 2 unaligned |
-| 3 | GSM5725697 | combined_artefact_r2 | HHV-8 (23,544,978) | 25952505_3 | OUT_OF_MEMORY at 24G after 1 h 03; partial output in `evidence_r2/_failed/`. Resubmitted as 25953731_3 at 48G, PENDING | pending | | pending |
-| 4 | GSM5725697 | combined_artefact_r2 | HPV77 (6) | 25952505_4 | RUNNING (43 min) | pending | | pending |
-| 5 | GSM5725698 | combined_artefact_r2 | HHV-8 (31,761,926) | 25952505_5 | RUNNING | pending | | pending |
-| 6 | GSM5725698 | combined_artefact_r2 | HPV29 (3) | 25952505_6 | PENDING | pending | | pending |
-| 7-16 | GSM5725696-98 | combined_off_r2 | Cercopithecine herpesvirus, HHV-8, HPV77, HPV29 (see `calls.tsv`) | 25952505_7-16 | PENDING (throttle %6) | pending | | pending |
+| 0 | GSM5725696 | combined_artefact_r2 | HHV-8 (23,670,509) | 25952505_0, 25953432_0 | OUT_OF_MEMORY at 24G and 48G (MaxRSS 44.9 GB) | not run | | not run (target virus, see note) |
+| 1 | GSM5725696 | combined_artefact_r2 | HPV77 (4) | 25952505_1 | COMPLETED | 2 / 0 / 0 / 4 | host_homology 0.33 | 2 virus-best of 6 counted; at the floor |
+| 2 | GSM5725697 | combined_artefact_r2 | Cercopithecine herpesvirus (5) | 25952505_2 | COMPLETED | 0 / 0 / 3 / 2 | none | no virus-best molecule |
+| 3 | GSM5725697 | combined_artefact_r2 | HHV-8 (23,544,978) | 25952505_3, 25953731_3 | OUT_OF_MEMORY at 24G and 48G (MaxRSS 46.4 GB) | not run | | not run (target virus) |
+| 4 | GSM5725697 | combined_artefact_r2 | HPV77 (6) | 25952505_4 | COMPLETED | 0 / 0 / 1 / 5 | none | no virus-best molecule |
+| 5 | GSM5725698 | combined_artefact_r2 | HHV-8 (31,761,926) | 25952505_5, 25953763_5 | OUT_OF_MEMORY at 24G and 48G (MaxRSS 46.1 GB) | not run | | not run (target virus) |
+| 6 | GSM5725698 | combined_artefact_r2 | HPV29 (3) | 25952505_6 | COMPLETED | 1 / 2 / 0 / 0 | host_homology 0.67 | mostly host-best |
+| 7 | GSM5725696 | combined_off_r2 | Cercopithecine herpesvirus (8) | 25952505_7 | COMPLETED | 3 / 1 / 1 / 5 | host_homology 0.40, coverage_hotspot 1.00, eve_or_integration_like_hotspot 1.00 | 3 virus-best at one hotspot; not supported |
+| 8 | GSM5725696 | combined_off_r2 | HHV-8 | 25952505_8, 25954313_8 | OUT_OF_MEMORY at 24G and 48G (MaxRSS 44.9 GB) | not run | | not run (target virus) |
+| 9 | GSM5725696 | combined_off_r2 | HPV77 (4) | 25952505_9 | COMPLETED | 2 / 0 / 0 / 4 | host_homology 0.95, sibling_or_host_ambiguity 0.87 | host-like; not supported |
+| 10 | GSM5725697 | combined_off_r2 | Cercopithecine herpesvirus (10) | 25952505_10 | COMPLETED | 1 / 0 / 4 / 6 | host_homology 0.40, sibling_or_host_ambiguity 0.31, coverage_hotspot 1.00, eve_or_integration_like_hotspot 1.00 | ties and one hotspot; not supported |
+| 11 | GSM5725697 | combined_off_r2 | HHV-8 | 25952505_11 (OOM), 25954489_11 (48G, PENDING) | expected to OOM | not run | | not run (target virus) |
+| 12 | GSM5725697 | combined_off_r2 | HPV77 (6) | 25952505_12 | COMPLETED | 0 / 0 / 1 / 5 | host_homology 0.98, sibling_or_host_ambiguity 0.91 | no virus-best molecule |
+| 13 | GSM5725698 | combined_off_r2 | Cercopithecine herpesvirus (9) | 25952505_13 | COMPLETED | 3 / 1 / 0 / 5 | host_homology 0.25, coverage_hotspot 1.00, eve_or_integration_like_hotspot 1.00 | 3 virus-best at one hotspot; not supported |
+| 14 | GSM5725698 | combined_off_r2 | HHV-8 | 25952505_14 (OOM), 25954528_14 (48G, PENDING) | expected to OOM | not run | | not run (target virus) |
+| 15 | GSM5725698 | combined_off_r2 | HPV29 (3) | 25952505_15 | COMPLETED | 1 / 2 / 0 / 0 | host_homology 0.67 | mostly host-best |
+| 16 | GSM5725698 | combined_off_r2 | HPV77 (3) | 25952505_16 | COMPLETED | 0 / 0 / 2 / 1 | host_homology 0.98, sibling_or_host_ambiguity 0.95 | no virus-best molecule |
 
 **HHV-8 target rows (0, 3, 5, 8, 11, 14), 2026-11-04.** These are the target virus at 23-32 M molecules (`calls.tsv` marks
 HHV-8 `expected=false` only because the KSHV manifest has no expected-virus column). Row 0 ran out of memory at 24G and at 48G
 (MaxRSS 44.9 GB at 57 min), so a row needs more than 48G, likely well above 100G. Read-level evidence on the target virus at
 millions of molecules adds nothing the counts do not show, and the user cancelled the matching HHV-6B target check (25950203)
 as redundant. So row 0 is not resubmitted, and the five other 48G reruns (25953731, 25953763, 25954313, 25954489, 25954528)
-are expected to fail the same way; the user may cancel them. Off-target rows (HPV77, HPV29, Cercopithecine herpesvirus) run as planned.
+are expected to fail the same way: 25953731, 25953763 and 25954313 did (MaxRSS 44.9-46.4 GB); 25954489 and 25954528 are still pending and the user may cancel them. Off-target rows (HPV77, HPV29, Cercopithecine herpesvirus) run as planned.
 
-Rows 1-2: `molecule_verdict_summary.tsv` (`counted` rows) and `interpretation_flags.tsv` in the row's evidence dir.
+Numbers: `molecule_verdict_summary.tsv` (`counted` rows) and `interpretation_flags.tsv` (status `flagged`) in each row's evidence dir.
+
+Reading: no off-target call (HPV77, HPV29, Cercopithecine herpesvirus) has more than 3 virus-best molecules, and each is
+flagged host-like, sits on one hotspot, or is mostly ties and unaligned reads. None is supported as a co-infection.
 Risk: rows 5, 8, 11 and 14 are HHV-8 calls with 23.7 to 31.8 M molecules, the same shape as rows 0 and 3, which ran out of memory at 24G. `calls.tsv` marks HHV-8 `expected=false`, so the enumerator lists the target virus as an off-target call. The original arms (GSM5725695 all arms, GSM5725696/-97 twostep) are covered only by chain 25941255, which is blocked behind 25941254_3-4.
 
 ## Held-out data for the mixed-veto gate: GSE184257 Set 3 download
