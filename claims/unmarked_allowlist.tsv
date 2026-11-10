@@ -26,3 +26,5 @@ docs/output_reference.md	| `molecule_support.tsv`, `read_support_summary.tsv` |	
 docs/results.md	over 9,850 called cells (0.38 %)	worked example of one output row
 docs/reference_panel.md	fewer than 5% of its	exclusion threshold (parameter)
 docs/reference_panel.md	| `--cluster` | Run `cd-hit-est` at 95% identity	CLI help (parameter)
+CHANGELOG.md	too few host blocks (< 200) or no clear host orientation (< 80 % agreeing)	strand QC thresholds (parameter), PLAN EVID-03
+docs/output_reference.md	filled when at least 200 host blocks exist and 80 % of them agree	strand QC thresholds (parameter), PLAN EVID-03

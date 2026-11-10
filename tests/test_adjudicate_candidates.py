@@ -327,8 +327,8 @@ def test_cli_contract_metadata_sorting_and_no_l4(tmp_path):
     assert reader.fieldnames[-1] == "package_tier_analogue"
     assert {x["level"]: x["package_tier_analogue"] for x in rows} == {
         "L1": "probable",
-        "L2": "strong",
-        "L3": "strong",
+        "L2": "probable",  # no strong tier in 3.0 (package 9f91076, 2026-11-04 grill)
+        "L3": "probable",
     }
 
 
