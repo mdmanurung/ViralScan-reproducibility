@@ -33,6 +33,8 @@ def _adata(X, genes, cells=None):
 
 
 def _stats(a, called=None, genes=("v1",), **kw):
+    # These fixtures were written for the 1-molecule rule; package 9221904 defaults to 2 (PLAN infected-min 2).
+    kw.setdefault("infected_min_molecules", 1.0)
     stats, per_cell = D.compute_stats(
         a, {}, {"V": list(genes)}, list(genes), called_mask=called, **kw
     )
@@ -157,7 +159,9 @@ class TestCalledCellGate:
 
     def test_candidate_is_kept_in_viral_summary_with_new_columns(self, tmp_path):
         a, called = self._droplet_fixture()
-        stats, per_cell = D.compute_stats(a, {}, {"V": ["v1"]}, ["v1"], called_mask=called)
+        stats, per_cell = D.compute_stats(
+            a, {}, {"V": ["v1"]}, ["v1"], called_mask=called, infected_min_molecules=1.0
+        )
         D.write_tsv_outputs(stats, per_cell, str(tmp_path))
         row = pd.read_csv(tmp_path / "results" / "viral_summary.tsv", sep="\t").iloc[0]
         assert row["virus_name"] == "V"
@@ -204,11 +208,11 @@ class TestOptions:
         from viralscan.cli.parsers import build_parser
 
         args = build_parser().parse_args(["run", "-o", "o", "--r1", "a", "--r2", "b"])
-        assert args.infected_min_molecules is None
+        assert args.infected_min_molecules == DEFAULTS["infected_min_molecules"] == 2.0  # package default since 9221904
         assert args.detection_min_cells is None
         assert args.hostresponse_min_umi is None
         cfg = RunConfig.from_snakemake_config(_cfg_in())
-        assert cfg.infected_min_molecules == DEFAULTS["infected_min_molecules"] == 1.0
+        assert cfg.infected_min_molecules == DEFAULTS["infected_min_molecules"] == 2.0
         assert cfg.detection_min_cells == DEFAULTS["detection_min_cells"] == 1
         assert cfg.hostresponse_min_umi == DEFAULTS["hostresponse_min_umi"] == 10
 

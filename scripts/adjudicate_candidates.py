@@ -20,12 +20,12 @@ Ladder (first failing gate names `level_reason`; the DSR-02 class is shown as `r
   L2  L1 plus unique molecules, positive cells and loci at or above the distributed-route minima. Loci and
       positive cells are LOCK-01 D1/D2 (independent overlap components; union of called barcodes), read from
       `multimap_evidence.tsv`; a run that predates those columns stops at L1 (`missing:...`).
-  L3  L2 plus a gene-programme model for the virus (the nine herpesviruses, matched by taxid map) and >= l3_min_programme_cells cells
+  L3  L2 plus a gene-programme model for the virus (the nine herpesviruses and HPV16, matched by taxid map) and >= l3_min_programme_cells cells
       in a programme state. Any other virus stops at L2 (`cap:no_gene_programme`).
   Anelloviridae (`claim_scope` screening_only) stop at L1 (`cap:anellovirus_screening_only`).
 
 `package_tier_analogue` (last column) is the package evidence tier (`viralscan.evidence_tiers`) this level is the
-analogue of: L0 candidate, L1 probable, L2 strong, L3 strong. The package tiers are calibrated molecule-count rules;
+analogue of: L0 candidate, L1 probable, L2 probable, L3 probable (no strong tier in 3.0). The package tiers are calibrated molecule-count rules;
 the study levels add read-level evidence on top, so it is an analogue, not an equivalence and not the package-assigned
 tier of the row (nothing here runs the package tier rule).
 
@@ -94,6 +94,7 @@ PROGRAMME_NAME_BY_KEY = {
     "taxid:10372": "Human herpesvirus 7",
     "taxid:37296": "Human herpesvirus 8",
     "taxid:10335": "Varicella-zoster virus",
+    "taxid:333760": "Human papillomavirus 16",
 }
 PROGRAMME_STATE_COLS = ("n_cells_productive", "n_cells_latent", "n_cells_mixed", "n_cells_reactivating")
 
