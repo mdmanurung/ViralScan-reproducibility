@@ -1,0 +1,10 @@
+dataset	arm	sample	run_dir	virus	molecules	anellovirus	expected
+hnscc_gse164690	combined_off	SRR13419165	/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/round_2026-11-02/hnscc_gse164690/SRR13419165/combined_off/SRR13419165	Human papillomavirus 29	6.0	false	false
+hnscc_gse164690	combined_artefact	SRR13419165	/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/round_2026-11-02/hnscc_gse164690/SRR13419165/combined_artefact/SRR13419165	Human papillomavirus 29	6.0	false	false
+hnscc_gse164690	twostep	SRR13419165	/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/round_2026-11-02/hnscc_gse164690/SRR13419165/twostep/SRR13419165	Samektorquevirus	3.0	true	false
+hnscc_gse164690	twostep	SRR13419165	/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/round_2026-11-02/hnscc_gse164690/SRR13419165/twostep/SRR13419165	Human papillomavirus 29	9.0	false	false
+hnscc_gse164690	combined_off	SRR13418973	/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/round_2026-11-02/hnscc_gse164690/SRR13418973/combined_off/SRR13418973	Human papillomavirus 29	6.0	false	false
+hnscc_gse164690	combined_artefact	SRR13418973	/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/round_2026-11-02/hnscc_gse164690/SRR13418973/combined_artefact/SRR13418973	Human papillomavirus 29	6.0	false	false
+hnscc_gse164690	twostep	SRR13418973	/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/round_2026-11-02/hnscc_gse164690/SRR13418973/twostep/SRR13418973	Human papillomavirus 29	4.0	false	false
+tonsil_atlas	combined_off	ERR13027027	/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/round_2026-11-02/tonsil_atlas/ERR13027027/combined_off/ERR13027027	Human herpesvirus 1	29.0	false	false
+tonsil_atlas	combined_artefact	ERR13027027	/exports/archive/hg-funcgenom-research/mdmanurung/ViralScan-reproducibility/data/runs/round_2026-11-02/tonsil_atlas/ERR13027027/combined_artefact/ERR13027027	Human herpesvirus 1	29.0	false	false
