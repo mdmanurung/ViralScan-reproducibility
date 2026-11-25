@@ -6,6 +6,13 @@ package repo at that commit. Section classification: package `audit/main-0/triag
 
 ## Next action
 
+- [~] `TARGET-VERDICT-01` (2026-11-04, user decision; branch `codex/round-2026-11-04-target-verdicts`): read-level verdicts on the EXPECTED virus of eight positive libraries
+  (EBV SRR12682296, HSV-1 SRR8315713, HHV-6B SRR20710641, KSHV GSM5725695 / GSM5725696 / BC-1 GSM4682311, HPV16 SRR19537341 and HN18 SRR13419165) with
+  `viralscan evidence --splice --host-gtf`, on the round 2026-11-02 `combined_off` arm (`combined_off_r2` for HSV-1 and GSM5725696). Package `13ea776` worktree
+  (`data/pkg_13ea776`; main is `ed7da79`, evidence/splice/strand code identical by `git diff`). GSM5725696 (23.7 M HHV-8 molecules, OOM at 24G/48G) runs on a seeded
+  20,000-molecule subset (`scripts/target_verdict_subset.py`, seed 20261104); the other seven run in full. Job 25950550 (HPV16 evidence) has no `--splice`; HPV16 gets its own splice run here.
+  CONFIDENT = expected positive by design + predominantly virus-best + clean matched negative where one exists (viral_summary.tsv of SRR19537339 / HN01). Exploratory, not reportable (pre G3/G4 freeze).
+  Note, scripts and calls table: `analysis/round_2026-11-04/target_verdicts.md`. Jobs (2026-11-04): subset 25957773 (GSM5725696), libraries array 25957774 (rows 0-3,5-7), GSM5725696 evidence 25957775 (afterok 25957773). Results pending.
 - [~] `SENS-CAL-01` (package row; result recorded here by user decision 2026-11-02, branch `codex/round-2026-11-02-sens`): iid-substitution arm run on the cat42d index.
   Measured capture matches `fragment_capture_exact` within about 1 point (best effective length L_eff = 88 for 90 nt reads; capture 1.00 at 0 %, 0.71 at 5 %, 0.25 at 10 %, 0.06 at 15 %);
   Luebbert's 55 % at 4.4 % is not reproduced (curve gives about 0.76). Clustered substitutions and the frozen WP5 index are not done. `analysis/round_2026-11-02/senscal01_capture.md`.

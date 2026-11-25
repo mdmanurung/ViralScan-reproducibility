@@ -142,6 +142,13 @@ def test_evidence_command_is_an_argv_list_with_the_virus_intact():
     assert cmd[cmd.index("--cores") + 1] == "4"
 
 
+def test_splice_and_host_gtf_are_opt_in():
+    plain = mod.evidence_command("/r", "v", "/o", "p.fa", "h.fa", 4)
+    assert "--splice" not in plain and "--host-gtf" not in plain
+    full = mod.evidence_command("/r", "v", "/o", "p.fa", "h.fa", 4, splice=True, host_gtf="g.gtf")
+    assert "--splice" in full and full[full.index("--host-gtf") + 1] == "g.gtf"
+
+
 def test_missing_inputs_are_errors(tmp_path):
     calls = _calls(tmp_path)
     with pytest.raises(SystemExit):
