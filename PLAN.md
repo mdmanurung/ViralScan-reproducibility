@@ -4291,6 +4291,11 @@ anelloviruses, so ~99 other species.
 - [ ] `CAT-08` — build with native `viralscan build-ref` and measure leave-one-out
   confusability per family: where reads from non-indexed isolates land. Also the
   valid `HPV-11` test.
+  - 2026-11-02 (round_2026-11-02): jobs 25941238 (leave-fold-out, all families) and 25941241 (native build-ref HPV-11 hold-out) submitted at package pin de55424; leave-fold-out done (31.4 % of 388,740 held-out reads map; no cross-family landing beyond 18 reads), native HPV-11 build failed on the package exact-duplicate gate for Ensembl 116 host cDNA; see `analysis/round_2026-11-02/cat08_confusability.md`. Row stays open.
+  - 2026-11-04: second HPV-11 attempt on `3d19cca` (package PR #179 keeps duplicate host records) = job 25949219: TIMEOUT at the 8 h limit (started 14:17, `kb ref` began 20:16:55, was still splitting the genome at 22:17:52); no index. Rerun with a 16 h limit = job 25952512 (96G, dir `hpv11_native_3d19cca_3d19cca_r2/`), PENDING (Priority). Row stays open until it lands; the HPV-11 result is pending.
+  - 2026-11-04 (later): 25952512 built the index (12 h) and failed only in the landing step (kallisto 0.52 truncated
+    pseudobam); the landing step reran from `kallisto bus` (25958011): 38 of 262 HPV-11 reads map, all to alpha-HPV genes
+    (HPV6b E1/E2/L1/E7/E4/L2, E1 of HPV13/44/74), none to host. Details: `analysis/round_2026-11-02/cat08_confusability.md`.
 
 ### WP4H expansion — breadth and measured diversity (new 2026-09-27)
 
@@ -4766,6 +4771,8 @@ Six failure modes it surfaces are not in any row above and are added here.
   `--distinguish`** (custom workflow, zero-indexed numeric target names) before
   committing to any per-virus genome cap. k is hard-capped at 31, so genomes
   differing by ~30–70 nt share k-mers in conserved regions.
+  - **Re-measured 2026-11-02** (pin de55424, kb kallisto 0.52.0): shipped WP5 index and three earlier ones all give max EC size 9,921, 0 discarded, no regression (`analysis/round_2026-11-02/cat40_index_inspect.md`).
+  - `CAT-40` accepted by user 2026-11-02: max EC 9,921, 0 discarded, unchanged across 4 builds; CAT-08 confusability is the follow-up test. (The repro PLAN has no standalone CAT-40 checkbox row; the package tracker row is the one to flip.)
   - **Software done 2026-10-12:** the build-time record and regression gate are `CAT-40`'s
     (`reference_gates inspect`, `--ec-baseline`). **Ambiguity, most conservative reading:**
     `kb count` has no `--multimapping` (or `--em`) flag; its flag is `--mm`. ViralScan already
@@ -6726,7 +6733,7 @@ only the rows that were missing are added below, verbatim and grouped as in the 
 
 #### WP4K — Catalogue↔index reconciliation and targeted reference adds
 
-- [~] `CAT-40` — **run `kallisto inspect` on the new index** (max EC size,
+- [x] `CAT-40` — **run `kallisto inspect` on the new index** (max EC size,
   discarded EC count) before trusting it. The k-mer-overlap metrics in F-016 are
   computed outside kallisto and cannot see the pseudo-inverse threshold effect,
   which is `CAT-19`'s actual failure mode.
@@ -6748,6 +6755,7 @@ only the rows that were missing are added below, verbatim and grouped as in the 
   - Left: the user's next full build exercises the hook; whether 9,921 is acceptable (EC size
     is driven by the near-identical anellovirus genomes) is a user decision, so no pass/fail
     claim is made. The baseline file is the `viral_ref_final` record.
+  - Accepted by user 2026-11-02: max EC 9,921, 0 discarded, unchanged across 4 builds; CAT-08 confusability is the follow-up test (`analysis/round_2026-11-02/cat08_confusability.md`).
 
 #### Split from a package row
 
