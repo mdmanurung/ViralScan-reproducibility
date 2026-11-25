@@ -5595,6 +5595,14 @@ and ambiguity regimes. Estimated effort: 1-2 engineering weeks plus compute.
     `calibration.threshold_search` result (protocol `pending`, user); (b) D21 per-10k burden needs a frozen common host-plus-viral
     denominator from a real run; (c) M7 two-step loss needs two-step output on identical input (cluster); (d) wiring the LOD
     estimator to a run's per-sample detection calls waits on the tier cutoffs (G3). No acceptance threshold anywhere. Row stays `[~]`.
+  - **2026-11-04 (`codex/lane-p4-truth-panel-repro`, lane P4, code only, no data):** (a) **M8 is closed by removal, not left.** The protocol
+    text under `calibration.freeze_scope` removed the former M8 tier calibration error "because the nominal confidence of a tier is defined
+    nowhere"; tier behaviour is reported by D18 and D19 alone, so no calibration scorer is built (a nominal confidence would be an invented
+    definition). The 2026-10-12 "Left (a)" is superseded. (b) **D21 code done:** new `scripts/v3_burden.py` (`burden_per_10k`: target over the
+    frozen common host-plus-virus gene sum from one layer, per 10,000; empty common set, target outside it, a common gene missing and a zero
+    denominator keep the row with a reason; `burden_concordance`: per-sample signed relative difference over the mean, M9 form, and the median;
+    no threshold). Tests `tests/test_v3_burden_freeze.py`. **Left:** the frozen common gene set itself comes from a real run (`DEF-00`/G3),
+    M7 still needs two-step output on identical input (cluster), and wiring LOD to run calls waits on the tier cutoffs (G3). Row stays `[~]`.
 - [x] `VAL-07` — **closed 2026-10-12 for the scorer surface on `main` (see the audit note below the row); the 2026-10-10 text follows.** **hand-computed fixtures done 2026-10-10** (`tests/test_v3_scorer.py`, 24 cases, incl. truth-manifest rejection: missing
   contract column, planted row without virus/gene, artefact row labelled as truth, bad partition/boolean). **Left:** reject
   denominator, feature, barcode, or count-layer mismatch (needs the layer map and feature universe of a real run). Validate the scorer against hand-computed fixtures and reject
@@ -5639,6 +5647,12 @@ and ambiguity regimes. Estimated effort: 1-2 engineering weeks plus compute.
     and the factor levels are `pending` in the protocol until G3, so nothing can be frozen; the scorer has no version string
     (`v3_score.py` is `M04-SCORE`'s); the cluster golden receipt (`VAL-08`) supplies the real expected outputs. Do not add a freeze file
     before G3: its seed and hashes would be provisional.
+  - **2026-11-04 (`codex/lane-p4-truth-panel-repro`, lane P4, mechanism only):** `scripts/v3_freeze.py` (`build` / `verify`) writes and checks the
+    freeze record: `GENERATOR_VERSION`, the new `v3_score.SCORER_VERSION` (`viralscan-v3-scorer/1`), the protocol sha256, the six `seeds.*`
+    read from the protocol (a `pending` seed raises, so no freeze exists before G3 freezes `seeds.generation`), the holdout-salt sha256 if
+    given, and a sha256 for every file of a tiny-panel output directory, sealed with a self digest; `build` never overwrites. Tests
+    `tests/test_v3_burden_freeze.py`. No freeze file is committed. **Left (user/G3):** freeze `seeds.generation` and the factor levels, supply
+    the holdout salt digest, pick the tiny-panel generator arguments to freeze, then run `build` and commit the file.
 - [ ] `VAL-10` — run the full training and untouched holdout panels, retaining
   failures rather than silently dropping conditions.
 

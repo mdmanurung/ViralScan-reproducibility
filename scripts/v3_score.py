@@ -34,6 +34,8 @@ except ModuleNotFoundError:  # Direct ``python scripts/...`` execution or ``scri
         require_protocol_run_config,
     )
 
+#: Scorer version recorded in a VAL-09 freeze; bump it with any change to a metric or the adapter.
+SCORER_VERSION = "viralscan-v3-scorer/1"
 PROTOCOL = Path(__file__).resolve().parents[1] / "analysis" / "v3_validation" / "protocol.yaml"
 TRUE, FALSE = {"true", "1", "yes"}, {"false", "0", "no", ""}
 
