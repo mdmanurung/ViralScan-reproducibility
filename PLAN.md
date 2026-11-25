@@ -32,6 +32,7 @@ package repo at that commit. Section classification: package `audit/main-0/triag
   1,673,118 EBV-aligning reads as the filtered BAM, and none aligns off the EBV contigs (NH<=20 pool 0; 378 reads NH 21-69, all on EBV).
   EBV host-homologous loss is not estimable with this index (no host-competing EBV reads). Submitted: HH rows 1-15 (HHV-6B only,
   25874010) and the default pool rows 1-30 (25874011, root `disc12_hostloss_default_2026-10-24`).
+  - **2026-11-02 result collected** (`analysis/round_2026-11-02/host05_starsolo_sensitivity.md`): default pool, D03 (SRR29320037) only: 0 of 1,329 fragments/molecules removed per STAR param set (pinned and star-default; exact one-sided 95% upper 0.225%); R01_SOC4 rows in-house, excluded from public results (user 2026-11-02), raw records kept; `outside_truth` HHV-6B 0 of 99 (8 of 15 rows; rows 8, 10-15 n/a, pool 22-31 reads; upper 3.7%); EBV pool empty. Lower bound. `host_filter.py` differs from the run's `720b466` only by an import rename at pin `de55424`.
 - **2026-10-23:** spike-in grid done, flank index retired (F-028). STAR-GATE-01 decided (labels only). DISC-12 frozen (#103) and running.
   rc1: release fixed (#114, #113), tag to be moved to a CI-green main commit (Q23a).
 - [~] `DISC` Kraken2 cell-resolved taxonomic discovery: plan approved 2026-10-21 (all nine §16 decisions).
@@ -3818,6 +3819,8 @@ homology negatives cannot become probable/strong calls.
     >   - [x] `HOST-05d` (2026-10-27): docs state the loss as a lower bound (`output_reference.md`, `cli_reference.md`).
     >   - Still open (needs real-data compute): `hosthomolog.sbatch` on the Track A libraries (DISC-12-HH), phase-6 EBV
     >     acceptance, CMP-01..03. HOST-05 itself stays `[ ]`.
+  - **2026-11-02 (HOST-05, `codex/round-2026-11-02-host05`): Part A (DISC-12-HH, above), D03 only, gives 0 lost of 1,329 default (upper 0.225%) and 0 of 99 host-homologous fragments (upper 2.98%) (lower bound; R01_SOC4 in-house, excluded). Part B end-to-end `none` vs `pinned` vs `star-default` on EBV SRR12682296 (plant reuse) plus HHV-6B unplanted: Slurm 25949123 (25941194 failed on removed CLI flags), pending; collect with `scripts/host05_collect.py`. HOST-05 stays open.**
+  - 2026-11-04 (Part B state, `sacct`): 25941194_0-7 FAILED (removed `-s1/-s2` CLI). 25949123_0 (ebv_planted_none) FAILED after 7 min (emptyDrops needs host columns; a virus-only index cannot call cells); 25949123_1-2 (ebv_planted pinned, star-default) COMPLETED (35 and 27 min); 25949123_3-7 PENDING (Priority; 3 and 6 will fail like 0 and are replaced by the combined-index arms). No-filter arms on the combined index: 25949506_8-10 PENDING (Priority). `scripts/host05_collect.py` not run; no `host05/r2/summary/`, so no Part B D15/D16 number exists. The planted-run `viral_summary.tsv` of tasks 1-2 is recorded in `analysis/round_2026-11-02/host05_starsolo_sensitivity.md` without scoring. HOST-05 stays open.
 
 ## WP4D — Gene-programme inference, layer 2 (new 2026-09-26)
 
