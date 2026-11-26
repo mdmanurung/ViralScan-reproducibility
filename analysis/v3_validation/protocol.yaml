@@ -1142,12 +1142,20 @@ defaults_selection:
     - id: multimap_allocation
       objective: weighted allocation L1 error per index kind
       conservative_direction: host-conservative
-      grid: [host-conservative, unique-weighted, em-global, em-cell]
+      grid: [host-conservative, unique-weighted, em-global, em-cell, em-cell-af]
       note: >-
         DEV-021: equal is left out of the grid and reported as context only.
         The EM modes run at the shipped max-iter (100) and tolerance (1e-6).
         Every mode is run by rerun-multimap on the same kb count output, so the
         grid adds no quantification cost (F-024).
+        DEV-042 adds em-cell-af (PLAN EM-CELL-AF-01, user decision 2026-11-26), a
+        per-cell EM that mirrors alevin-fry. It is an explore-motivated arm: the
+        seen EBV library SRR12682296 showed a spread of EBV-2 share across methods,
+        which motivates the arm and is not evidence for it (R2.2). It is scored
+        only on the training planted strata, never on a seen library. The default
+        stays host-conservative until G5 (Q75), and the objective, tie-breaker,
+        seeds and holdout_evaluations_allowed are unchanged. The method is
+        deterministic and needs no seed.
         A3 (R2.5, F-017): the within-sibling-group variant (unique support or
         group EM) is a D3 candidate here. It may enter the grid only after
         docs/v3_counting_contract.md and its registered molecule-conservation
@@ -2917,6 +2925,7 @@ frozen_inputs:
     - DEV-039
     - DEV-040
     - DEV-041
+    - DEV-042
   # DEV-027 (SCI-05 round 12, m2): canonical sha256 of the validation schema. The
   # schema pins the harmonization digests as const and was itself in no digest.
   schema_sha256: 7ea52498bb3955bc430d2a4f1c9f0fb154d483fef9a37067524c2dedcc44ba13
@@ -2951,7 +2960,7 @@ frozen_inputs:
     trust, so this detects a changed claim, not a false one. It does not cover
     prose fields elsewhere in the protocol whose sections carry their own
     contract digests.
-  contract_sha256: 2d2dc15f20cdfebec3593e69eb90759751b861b15a004da0d381d0b28112df04
+  contract_sha256: 0016e18d9816f047f05daa52227e38f2fd4dd00d313a74f1c0229917d1acfb25
 
 exclusions:
   - id: X1_invalid_input

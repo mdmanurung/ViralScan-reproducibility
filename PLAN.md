@@ -6,6 +6,11 @@ package repo at that commit. Section classification: package `audit/main-0/triag
 
 ## Next action
 
+- [~] `DEV-042` (2026-11-26, DRAFT for the owner, branch `codex/dev-em-cell-af`, stacked on `codex/g3-amend-2026-11-04` / PR #35; package row `EM-CELL-AF-01`): user decision 2026-11-26, `em-cell-af` joins the G5 `multimap_allocation` grid before G3 sign-off.
+  Grid becomes `[host-conservative, unique-weighted, em-global, em-cell, em-cell-af]`. Scored on training planted strata only (D25 `one_member_only`; D13, D24 `co_infected`; D3/D5 recall guard; E1 counting contract). No seed needed.
+  Unchanged: default `host-conservative` until G5 (Q75), objective, tie-breaker, seeds, `holdout_evaluations_allowed: 1`, schema constants. The arm is motivated by seen library EBV SRR12682296 (explore, seen data, not evidence; R2.2).
+  Not signed, not frozen: `proposed_pending_user_signoff`. Open: (1) package `codex/em-cell-af` (contract amendment, tests) merges first (A3/R2.5 needs the contract to cover the arm); (2) alevin-fry citation unchecked; (3) T4/T5/T8 (EBV-1/2 pair, ratio factor, objective weights) and `sibling-weighted` stay open user decisions; (4) the 2026-11-26 runs on seen libraries are not in `pre_freeze_runs.inventory`.
+  Digests moved: `frozen_inputs.contract_sha256` 2d2dc15f to 0016e18d; schema constants unchanged. Package schema copy needs no further refresh from this record.
 - [~] `SENS-CAL-01` (package row; result recorded here by user decision 2026-11-02, branch `codex/round-2026-11-02-sens`): iid-substitution arm run on the cat42d index.
   Measured capture matches `fragment_capture_exact` within about 1 point (best effective length L_eff = 88 for 90 nt reads; capture 1.00 at 0 %, 0.71 at 5 %, 0.25 at 10 %, 0.06 at 15 %);
   Luebbert's 55 % at 4.4 % is not reproduced (curve gives about 0.76). Clustered substitutions and the frozen WP5 index are not done. `analysis/round_2026-11-02/senscal01_capture.md`.
