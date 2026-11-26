@@ -27,12 +27,12 @@ def _adata(X, genes):
 class TestSummaryHeadline:
     STATS = {
         "viral_molecules_total_est": 7,
-        "infected_cells": 2,
-        "total_cells": 3,
-        "pct_infected": 66.67,
+        "infected_barcodes": 2,
+        "n_barcodes": 3,
+        "pct_infected_barcodes": 66.67,
         "viral_molecules_per_10k_est": 1.5,
         "n_called_cells": 2,
-        "infected_called": 2,
+        "infected_called_cells": 2,
         "pct_infected_called": 100.0,
     }
 
@@ -80,20 +80,16 @@ class TestDetectGenesInputs:
 
 
 class TestSuperExpressorInputs:
-    @pytest.fixture(autouse=True)
-    def _cfg(self, monkeypatch):
-        monkeypatch.setattr(D, "config", RunConfig(), raising=False)
-
     def test_zero_cell_adata_is_a_clear_error(self, tmp_path):
         a = _adata(np.zeros((0, 3)), ["v1", "v2", "h"])
         (tmp_path / "plots").mkdir()
         with pytest.raises(ValueError, match="no cells"):
-            D.super_expressor(a, "V", ["v1"], str(tmp_path))
+            D.super_expressor(a, "V", ["v1"], str(tmp_path), RunConfig())
 
     def test_caller_adata_is_not_mutated(self, tmp_path):
         a = _adata([[3, 0, 5], [0, 0, 9], [1, 1, 1]], ["v1", "v2", "h"])
         (tmp_path / "plots").mkdir()
-        D.super_expressor(a, "V", ["v1"], str(tmp_path))
+        D.super_expressor(a, "V", ["v1"], str(tmp_path), RunConfig())
         assert list(a.obs.columns) == []
         assert (tmp_path / "plots" / "SuperExpressor_V.png").exists()
 

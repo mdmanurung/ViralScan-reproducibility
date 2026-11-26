@@ -141,6 +141,10 @@ def _full_run(panel: Path, sid: str, out: Path, reference, *, reorder: bool = Fa
         str(whitelist),
         "-x",
         "10xv3",
+        # Package STRAND-EXPLICIT-01: --strand is required unless tchem confirms 3'.
+        # unstranded is what a flagless run used before, and matches the kallisto bus truth.
+        "--strand",
+        "unstranded",
         "-c",
         "2",
         "--no-visual",

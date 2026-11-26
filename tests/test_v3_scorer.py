@@ -294,6 +294,8 @@ def native_count_run(tmp_path):
                 "ignored_read_multiplicity": 0,
                 "allocated_ambiguous_mass": 1.0,
             },
+            # Package CONTRACT-DIAG-01: multimap_diagnostics is a required uns key.
+            "multimap_diagnostics": {"method": "host-conservative", "model_scope": "deterministic"},
         }
     )
     adata.write_h5ad(counts)
@@ -306,6 +308,8 @@ def native_count_run(tmp_path):
         "cell_calling": {"method": "external"},
         "quantification_unit": "bustools-resolved-cb-umi-molecule",
         "run_fingerprint": "c" * 64,
+        # Package CONTRACT-VERSIONS-01: the run manifest schema requires an options block.
+        "options": {},
     }
     (sample.parent / "run_manifest.json").write_text(json.dumps(manifest))
     (sample / "config.yaml").write_text("output: sample\n")

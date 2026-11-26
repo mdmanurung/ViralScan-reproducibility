@@ -20,12 +20,12 @@
         {
           "artifact_id": "test-multimapping",
           "path": "tests/test_multimapping.py",
-          "sha256": "a1f6202a183c8971baf2dd0a8c13b58844687578f8a3a8cc447da69e500a0ae7"
+          "sha256": "089cb8f371ef122cd1f36ed432b7b93d4a2249addec5fea22198d8d8f35813d9"
         },
         {
           "artifact_id": "test-multimap-boundaries",
           "path": "tests/test_multimap.py",
-          "sha256": "f1914c42418596d649c2ac1066efb508b3a1decdaf1b2fca408365903994ee5a"
+          "sha256": "6caf3cb4a2804cdd3465e8dd51dda7f36eeab0c396c16029ba49670d38648541"
         },
         {
           "artifact_id": "test-multimapping-properties",
@@ -33,15 +33,15 @@
           "sha256": "d936a91b6f0714a6de66319a709ebcd616ac0a5a966c9089b020f11fec01fb7d"
         }
       ],
-      "git_sha": "9e31c65b6688d6ead12649cb7f83fb2ed66ee267",
+      "git_sha": "3728a9699e3f193f88b5ea2e50e85c79dcc4cf23",
       "input_hashes": [
         {
           "id": "test-multimapping",
-          "sha256": "a1f6202a183c8971baf2dd0a8c13b58844687578f8a3a8cc447da69e500a0ae7"
+          "sha256": "089cb8f371ef122cd1f36ed432b7b93d4a2249addec5fea22198d8d8f35813d9"
         },
         {
           "id": "test-multimap-boundaries",
-          "sha256": "f1914c42418596d649c2ac1066efb508b3a1decdaf1b2fca408365903994ee5a"
+          "sha256": "6caf3cb4a2804cdd3465e8dd51dda7f36eeab0c396c16029ba49670d38648541"
         },
         {
           "id": "test-multimapping-properties",
@@ -228,7 +228,7 @@
         {
           "artifact_id": "build-reference-command",
           "path": "src/viralscan/scripts/build_reference.py",
-          "sha256": "b089f460aed6277ed53d0bfb6de545309b70baffb13f8aea64d161966e5e80b1"
+          "sha256": "ddac741875488fb1e740f03a771f788d1c9c9f461d9f42b7faa15250c42e3f7a"
         },
         {
           "artifact_id": "reference-manifest-schema",
@@ -236,7 +236,7 @@
           "sha256": "885ef61b4c2d6c562ac72897c67aff68aac33ac6c78ce3e7aab70ebd077cb055"
         }
       ],
-      "git_sha": "9221904cc1a126bd9f222c782ef627695d8bdd73",
+      "git_sha": "3728a9699e3f193f88b5ea2e50e85c79dcc4cf23",
       "input_hashes": [
         {
           "id": "anellovirus-accessions",
@@ -318,7 +318,7 @@
         {
           "artifact_id": "test-detection-sensitivity-contract",
           "path": "tests/test_detection_sensitivity_contract.py",
-          "sha256": "3e66aa528d091756f22aa6f798ecb00e49eb741a9aba50691f9daa28a40d41cf"
+          "sha256": "9464d45a9efb4f85f030c6733bb10f12e2c351feb6934e12aa49758fcc30b383"
         },
         {
           "artifact_id": "test-sensitivity",
@@ -326,11 +326,11 @@
           "sha256": "ef5c0d66fd228a60558e810db7b0e2d2d6dd3604e287763688cd9ca81e77fb27"
         }
       ],
-      "git_sha": "695f7be2539a928031306110a7d139c52e1f66b5",
+      "git_sha": "3728a9699e3f193f88b5ea2e50e85c79dcc4cf23",
       "input_hashes": [
         {
           "id": "test-detection-sensitivity-contract",
-          "sha256": "3e66aa528d091756f22aa6f798ecb00e49eb741a9aba50691f9daa28a40d41cf"
+          "sha256": "9464d45a9efb4f85f030c6733bb10f12e2c351feb6934e12aa49758fcc30b383"
         },
         {
           "id": "test-sensitivity",
