@@ -90,6 +90,22 @@ The user approved the 20 recommendations of the afternoon grill. G3 is not signe
 | EVID-06 | The bar on accuracy-type claims stays | DEV-040 |
 | Digests | `workflow_matrix` 29aaf47c to 66b2d0c5. Because `supported_scope` and `endpoints` changed, `harmonization.dependent_fields_sha256` c8c024d6 to 9b294410 and `contract_sha256` 5db74530 to a44536df; the schema consts and `frozen_inputs.schema_sha256` follow | DEV-040 |
 
+## Addendum 2026-11-26: em-cell-af joins the allocation grid (DEV-042, DRAFT)
+
+User decision 2026-11-26: `em-cell-af` joins the G5 `multimap_allocation` grid through a deviation row before G3 sign-off. Nothing is signed or frozen.
+
+| Item | Change | Record |
+|---|---|---|
+| Grid | `multimap_allocation` becomes `[host-conservative, unique-weighted, em-global, em-cell, em-cell-af]` | DEV-042 |
+| Scoring | Training planted strata only: D25 on `one_member_only`; D13 and D24 on `co_infected`; D3 and D5 as the recall guard; E1 count invariants and `docs/v3_counting_contract.md` | DEV-042 |
+| Determinism | EM is deterministic; no seed | DEV-042 |
+| Unchanged | Default `host-conservative` until G5 (Q75); objective; tie-breaker; seeds; hard constraint R2.3; `holdout_evaluations_allowed: 1`; schema constants | DEV-042 |
+| Label | Motivated by seen library EBV SRR12682296 (explore, seen data, not evidence; R2.2) | DEV-042 |
+| Digests | `frozen_inputs.contract_sha256` 2d2dc15f to 0016e18d | DEV-042 |
+
+Open for the user: sign DEV-042; the package `codex/em-cell-af` contract amendment must merge first (protocol A3); alevin-fry citation unchecked `[AUTHOR CHECK]`;
+`sibling-weighted`, the EBV-1/EBV-2 pair, an abundance-ratio factor and the objective weights stay undecided; the 2026-11-26 runs on seen libraries are not in `pre_freeze_runs.inventory`.
+
 ## Merge order
 
 The schema constants changed (twice: `DEV-037`, then `DEV-040`), so the packaged copy `src/viralscan/schemas/v3/validation_protocol.schema.json` in the package repo

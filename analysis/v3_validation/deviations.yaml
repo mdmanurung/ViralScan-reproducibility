@@ -1811,3 +1811,116 @@ deviations:
     git_sha: e695c5c
     review_reference: analysis/v3_validation/g3_amendment_2026-11-04.md (git_sha is the base commit the revision was written against)
     record_sha256: 5e0ebe59e060ce939efab85b48765e1214a05a64bb56bf62ea2d4e99003963ef
+  - deviation_id: DEV-042
+    date: '2026-11-26'
+    affected_workflow_row_ids: []
+    protocol_section: defaults_selection, frozen_inputs
+    description: >-
+      DRAFT, proposed_pending_user_signoff. Written as a new record on top of DEV-034 to DEV-041; it edits none of them.
+      Adds em-cell-af to the defaults_selection multimap_allocation grid, which becomes [host-conservative, unique-weighted,
+      em-global, em-cell, em-cell-af]. em-cell-af is the package method added by PLAN EM-CELL-AF-01 (package branch
+      codex/em-cell-af, commit ff817078, no package PR yet at drafting): a per-cell EM over all of a cell's multi-gene
+      classes that mirrors alevin-fry and simpleaf parsimony-em. Unique molecules are fixed mass, there is no sample prior,
+      no pseudocount and no equal-split rule, and abundances below 0.01 molecules are cut to zero. Scoring: it is scored on
+      the training planted strata only, as the other four arms are. The strata that separate it from em-cell are the
+      sibling_virus_similarity levels one_member_only (endpoint D25_absent_sibling_false_calls) and co_infected (D13 and D24,
+      with D3 and D5 as the recall guard for the present sibling). It must keep the E1 count invariants (molecule
+      conservation, determinism, order and chunk invariance) and the docs/v3_counting_contract.md rule that each ambiguous
+      molecule contributes one unit. It needs no seed, because the EM is deterministic. Unchanged: primary_allocation
+      host-conservative, the default until G5 (Q75, defaults.py), the objective (weighted allocation L1 error per index
+      kind), the tie_breaker and its 1-SE band, hard_constraint R2.3, seeds (generation 20260727005, bootstrap), the
+      bootstrap, partitions.sibling_virus_pairs, the sibling_virus_similarity levels, the schema constants and
+      holdout_evaluations_allowed 1. The grid is not widened after any outcome. The record declares itself in
+      frozen_inputs.recorded_deviations, which re-digests that section.
+      Seen-data label: the arm was motivated by a seen library, EBV SRR12682296 (dataset ebv_srr12682296, analysis_role
+      context-only), where the share of EBV molecules going to EBV-2 differs across allocation methods. The 2026-11-26
+      comparison (explore, seen data, not evidence) gave 0.6 % for counts_unique, 10.4 % for a ViralScan em-cell rerun, 14.8 %
+      for unique-weighted and 16.1 % for the host-conservative headline layer. This is a measurement on one seen library
+      whose EBV-2 truth is unknown, so it motivates the arm and does not support any claim that em-cell-af is better. No
+      value in this record was set by looking at an em-cell-af result on a seen library.
+      Preconditions, not yet met at drafting: (1) the package amendment of docs/v3_counting_contract.md for em-cell-af exists
+      only on codex/em-cell-af and is unmerged; protocol A3 (R2.5) lets a new variant enter the grid only after the contract and
+      its registered molecule-conservation claim cover it, so the package change merges before G3 sign-off. (2) The
+      alevin-fry method citation is unchecked. [AUTHOR CHECK]
+      Not decided here: whether EBV-1 and EBV-2 join partitions.sibling_virus_pairs (the declared EBV pair is EBV and KSHV,
+      so the planted one_member_only arm would not measure the observed EBV-1/EBV-2 bleed), whether the panel gets an
+      abundance-ratio factor, and the objective weights. Each stays an open user decision.
+    reason: >-
+      The user decided on 2026-11-26 that em-cell-af joins the G5 multimap_allocation grid through a deviation row before G3
+      sign-off, with no default change before G5. defaults_selection is digested under frozen_inputs, which is frozen, so the
+      change needs this record. While the protocol is still draft, adding the arm before sign-off lets the queued external
+      review and one sign-off cover it, and avoids a post-freeze amendment with a rerun of G5 to G8 and a new candidate build.
+    outcome_triggered: false
+    outcome_triggered_justification: >-
+      Stated under pre_freeze_runs.outcome_definition and its outcome_triggered_rule (Q86, 2026-10-13). The amendment was
+      prompted partly by a seen outcome (EBV-2 share by method on SRR12682296), but that dataset is context-only and the
+      amended grid row will not score it, so the flag stays false and the exposure is disclosed here. The 2026-11-26
+      comparison and functional runs on SRR12682296, HHV-6B and KSHV are outcome-generating runs before the freeze commit
+      and are not yet in pre_freeze_runs.inventory; the owner decides whether a PFR row is appended by a later record.
+      No workflow row has executed and no truth-panel outcome exists.
+    user_decisions_recorded:
+      - 'User (2026-11-26): em-cell-af joins the G5 multimap_allocation grid through a DEV amendment row before G3 sign-off; no default change before G5.'
+    user_decision_needed:
+      - 'Sign this record (DRAFT, proposed_pending_user_signoff). The G3 freeze, sign-off and date stay with the user.'
+      - 'Send the amended protocol for external review (Codex and Biomni, round 14): a grant of yours.'
+      - 'Add sibling-weighted to the grid as well? Not requested, not included. It equals unique-weighted on the seen EBV library, and A3 needs its contract coverage first.'
+      - 'Add EBV-1 and EBV-2 to partitions.sibling_virus_pairs, add an abundance-ratio factor, and write the objective weights (plan rows T4, T5, T8). Not changed here.'
+      - 'Append a pre_freeze_runs row for the 2026-11-26 runs on seen libraries.'
+    protocol_sha256_before: 2d2dc15f20cdfebec3593e69eb90759751b861b15a004da0d381d0b28112df04
+    protocol_sha256_after: 0016e18d9816f047f05daa52227e38f2fd4dd00d313a74f1c0229917d1acfb25
+    digest_scope: frozen_inputs.contract_sha256
+    git_sha: 9a719fb
+    review_reference: PLAN.md DEV-042 row; package PLAN.md EM-CELL-AF-01
+    record_sha256: 89b5785a39074f3264535f75ef2e86123aa3d45ae110223298075a4b89a17595
+  - deviation_id: DEV-043
+    date: '2026-11-26'
+    affected_workflow_row_ids: []
+    protocol_section: frozen_inputs
+    description: >-
+      DRAFT, proposed_pending_user_signoff. Corrects the DEV-042 description (field_corrections below) after review of PR 41.
+      DEV-042 is not edited. Two defects. (1) It named per-stratum scoring endpoints (D25, D13, D24, D3, D5) for em-cell-af.
+      The user decision of 2026-11-26 named none, and the registered multimap_allocation objective is only weighted
+      allocation L1 error per index kind, so the endpoints were an unapproved scoring choice. They are withdrawn: em-cell-af
+      is scored by the same objective as the other four arms, and any per-stratum endpoint stays an open user decision.
+      (2) It gave 14.8 % for unique-weighted as the EBV-2 share on the seen library SRR12682296. No source was found for that
+      value, so it is withdrawn. The sourced values are 0.6 % (counts_unique), 10.4 % (em-cell), 2.6 % (simpleaf
+      parsimony-em) and 16.1 % (host-conservative), all from package .living/decisions.md, entry 2026-11-26. That entry is a
+      text log. Status of these numbers: unsupported: no inspected figure. No protocol value other than this
+      record's own entry in frozen_inputs.recorded_deviations changes.
+    reason: >-
+      Review of PR 41 found an unapproved scoring choice (impactful-choices rule) and an untraceable number in a hash-chained
+      record bound for external review round 14. The ledger is append-only, so the fix is a new record.
+    outcome_triggered: false
+    outcome_triggered_justification: >-
+      No workflow row has executed and no truth-panel outcome exists. The corrected numbers come from a seen, context-only
+      library and set no protocol value.
+    field_corrections:
+      - deviation_id: DEV-042
+        field: description
+        corrected_value: >-
+          DRAFT, proposed_pending_user_signoff. Adds em-cell-af to the defaults_selection multimap_allocation grid, which
+          becomes [host-conservative, unique-weighted, em-global, em-cell, em-cell-af]. em-cell-af is the package method
+          added by PLAN EM-CELL-AF-01 (package branch codex/em-cell-af, commit ff817078): a per-cell EM over all of a cell's
+          multi-gene classes that mirrors alevin-fry and simpleaf parsimony-em. Unique molecules are fixed mass, there is no
+          sample prior, no pseudocount and no equal-split rule, and abundances below 0.01 molecules are cut to zero.
+          Scoring: the training planted strata only, by the registered multimap_allocation objective (weighted allocation L1
+          error per index kind), as for the other four arms. No per-stratum endpoint is registered for it. It must keep the
+          E1 count invariants and the docs/v3_counting_contract.md rule that each ambiguous molecule contributes one unit.
+          It needs no seed. Unchanged: primary_allocation host-conservative, the objective, the tie_breaker, hard_constraint
+          R2.3, seeds, the bootstrap, partitions.sibling_virus_pairs, the sibling_virus_similarity levels, the schema
+          constants and holdout_evaluations_allowed 1. Seen-data label: the arm was motivated by the seen library EBV
+          SRR12682296 (context-only), where the EBV-2 share of EBV molecules was 0.6 % (counts_unique), 10.4 % (em-cell),
+          2.6 % (simpleaf parsimony-em) and 16.1 % (host-conservative); source package .living/decisions.md entry
+          2026-11-26; unsupported: no inspected figure. This motivates the arm and supports no claim that it is better.
+          Preconditions as in the original text.
+        reason: Withdraws the unapproved per-stratum endpoints and the unsourced 14.8 % figure (see DEV-043 description).
+    user_decisions_recorded: []
+    user_decision_needed:
+      - 'Sign this record (DRAFT, proposed_pending_user_signoff).'
+      - 'Choose any per-stratum endpoint (D-series) for scoring em-cell-af. Not requested, not registered.'
+    protocol_sha256_before: 0016e18d9816f047f05daa52227e38f2fd4dd00d313a74f1c0229917d1acfb25
+    protocol_sha256_after: 80c83417afdca0869301b4a1aef28fca07e82e67448e18ee7f834b57f21f85f2
+    digest_scope: frozen_inputs.contract_sha256
+    git_sha: 3a4444a6
+    review_reference: PR 41 review findings; DEV-042
+    record_sha256: ed600ad8a3ac97cdcaa44c6b310ad2e37340edbaf49be6f17cfc79d68a155eae
