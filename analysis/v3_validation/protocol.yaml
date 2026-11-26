@@ -2926,6 +2926,7 @@ frozen_inputs:
     - DEV-040
     - DEV-041
     - DEV-042
+    - DEV-043
   # DEV-027 (SCI-05 round 12, m2): canonical sha256 of the validation schema. The
   # schema pins the harmonization digests as const and was itself in no digest.
   schema_sha256: 7ea52498bb3955bc430d2a4f1c9f0fb154d483fef9a37067524c2dedcc44ba13
@@ -2960,7 +2961,7 @@ frozen_inputs:
     trust, so this detects a changed claim, not a false one. It does not cover
     prose fields elsewhere in the protocol whose sections carry their own
     contract digests.
-  contract_sha256: 0016e18d9816f047f05daa52227e38f2fd4dd00d313a74f1c0229917d1acfb25
+  contract_sha256: 80c83417afdca0869301b4a1aef28fca07e82e67448e18ee7f834b57f21f85f2
 
 exclusions:
   - id: X1_invalid_input
