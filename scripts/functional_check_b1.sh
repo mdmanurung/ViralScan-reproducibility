@@ -11,6 +11,7 @@ REF=$REPRO/data/references/panel_builds/viral_ref_cat42d/build
 HOSTREF=/exports/archive/hg-funcgenom-research/evonk/old/intern/human_reference/refdata-gex-GRCh38-2024-A
 K2=$REPRO/data/references/kraken2_db/k2_viral_20260626
 CORES=${SLURM_CPUS_PER_TASK:-8}
+DISCENV=/exports/archive/hg-funcgenom-research/mdmanurung/conda/envs/viralscan_discovery/bin  # kraken2 lives here
 VS="python -m viralscan"
 D=$OUTROOT/$ID
 mkdir -p "$D"
@@ -30,9 +31,9 @@ step check_env $VS check env --profile full
 step check_chemistry $VS check chemistry --r1 "$R1" --r2 "$R2" -i "$REF/panel.idx" -t "$REF/panel.t2g" --json "$D/chemistry.json"
 
 RUN=$D/run
-if ! step run_auto $VS run -o "$RUN" -i "$REF/panel.idx" -t "$REF/panel.t2g" --r1 "$R1" --r2 "$R2" --kb-params auto -c "$CORES" --yes; then
+if ! step run_auto $VS run -o "$RUN" -i "$REF/panel.idx" -t "$REF/panel.t2g" --gtf "$REF/viral_panel.gtf" --r1 "$R1" --r2 "$R2" --kb-params auto -c "$CORES" --yes; then
   rm -rf "$RUN"
-  step run_inherited $VS run -o "$RUN" -i "$REF/panel.idx" -t "$REF/panel.t2g" --r1 "$R1" --r2 "$R2" -x "$TECH" --strand "$STRAND" -c "$CORES" --yes
+  step run_inherited $VS run -o "$RUN" -i "$REF/panel.idx" -t "$REF/panel.t2g" --gtf "$REF/viral_panel.gtf" --r1 "$R1" --r2 "$R2" -x "$TECH" --strand "$STRAND" -c "$CORES" --yes
 fi
 
 step check_run $VS check run --run-dir "$RUN"
@@ -58,7 +59,7 @@ step rerun_multimap $VS rerun multimap --run-dir "$RUN" -o "$D/posthoc_rerun_mul
 step rerun_programs $VS rerun programs --run-dir "$RUN" -o "$D/posthoc_rerun_programs"
 ADATA=$(ls "$RUN"/*/kb-python/counts_unfiltered/adata.h5ad 2>/dev/null | head -1)
 step rerun_hostresponse $VS rerun hostresponse --run-dir "$RUN" --output "$D/posthoc_hostresponse" --host-h5ad "$ADATA"
-step discover $VS discover run --run-dir "$RUN" -o "$D/posthoc_discover" --kraken2-db "$K2" --cores "$CORES"
+step discover env PATH="$PATH:$DISCENV" $VS discover run --run-dir "$RUN" -o "$D/posthoc_discover" --kraken2-db "$K2" --cores "$CORES"
 
 echo "done $ID" >> "$D/commands.log"
 cat "$STEPS"
