@@ -6,6 +6,14 @@ package repo at that commit. Section classification: package `audit/main-0/triag
 
 ## Next action
 
+- [x] `REPIN-B1-01` (2026-11-26, `codex/repin-b1`): pin moves to package 3.0.0b1 (`3728a969`, PR #256).
+  PACKAGE_BASE_SHA, README, environment.yml follow. Eight inventory rows and three claims re-hashed at the new commit
+  (faq, output_reference, README, build_reference.py, environment.yml, three test files). Repro tests updated for the
+  b1 contract: COLNAMES-01 renames, `super_expressor(..., RunConfig())` (WORKER-SHAPE-01), manifest `options`
+  (CONTRACT-VERSIONS-01), `multimap_diagnostics` uns (CONTRACT-DIAG-01), explicit `--strand unstranded` (STRAND-EXPLICIT-01).
+  Adds `scripts/functional_check_b1.sh`, the per-library driver for `B1-FUNC-01`. The claim-registry row moves in the next commit.
+- [~] `B1-FUNC-01` (2026-11-26): every CLI verb of 3.0.0b1 on EBV SRR12682296, HHV-6B SRR20710641 and KSHV GSM5725695
+  (Slurm 26137394-6), outputs under `data/runs/round_2026-11-26_b1_functional/<ID>/steps.tsv`. Results pending.
 - [~] `SENS-CAL-01` (package row; result recorded here by user decision 2026-11-02, branch `codex/round-2026-11-02-sens`): iid-substitution arm run on the cat42d index.
   Measured capture matches `fragment_capture_exact` within about 1 point (best effective length L_eff = 88 for 90 nt reads; capture 1.00 at 0 %, 0.71 at 5 %, 0.25 at 10 %, 0.06 at 15 %);
   Luebbert's 55 % at 4.4 % is not reproduced (curve gives about 0.76). Clustered substitutions and the frozen WP5 index are not done. `analysis/round_2026-11-02/senscal01_capture.md`.

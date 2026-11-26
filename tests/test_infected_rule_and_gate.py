@@ -49,7 +49,7 @@ class TestInfectedRule:
         """B-03: X=[[1e-9,0,500],[0,0,500]] used to give infected_cells=1."""
         a = _adata([[1e-9, 0, 500], [0, 0, 500]], ["v1", "v2", "h"])
         s, per_cell = _stats(a)
-        assert s["infected_cells"] == 0
+        assert s["infected_barcodes"] == 0
         assert s["infected_subthreshold_cells"] == 1
         assert per_cell.empty
         assert s["detected"] is False
@@ -57,7 +57,7 @@ class TestInfectedRule:
     def test_threshold_is_inclusive_and_sums_over_the_virus_genes(self):
         a = _adata([[0.5, 0.5, 9], [0.5, 0, 9], [1, 0, 9]], ["v1", "v2", "h"])
         s, per_cell = _stats(a, genes=("v1", "v2"))
-        assert s["infected_cells"] == 2  # c0 (0.5+0.5) and c2 (1.0)
+        assert s["infected_barcodes"] == 2  # c0 (0.5+0.5) and c2 (1.0)
         assert s["infected_subthreshold_cells"] == 1  # c1
         assert list(per_cell["barcode"]) == ["c0", "c2"]
 
@@ -73,7 +73,7 @@ class TestInfectedRule:
     def test_custom_cutoff(self):
         a = _adata([[2, 0, 9], [3, 0, 9]], ["v1", "v2", "h"])
         s, _ = _stats(a, infected_min_molecules=3)
-        assert (s["infected_cells"], s["infected_subthreshold_cells"]) == (1, 1)
+        assert (s["infected_barcodes"], s["infected_subthreshold_cells"]) == (1, 1)
 
     def test_enrichment_uses_the_same_rule(self, tmp_path):
         a = _adata([[0.4, 5], [0.4, 5], [2.0, 5], [0, 5]], ["v1", "h"], list("ABCD"))
@@ -128,22 +128,22 @@ class TestCalledCellGate:
         a, called = self._droplet_fixture()
         s, _ = _stats(a, called)
         assert s["detected"] is False
-        assert s["infected_called"] == 0
-        assert s["infected_cells"] == 1  # the all-barcode screen still sees it
-        assert s["background_umis"] == 1
+        assert s["infected_called_cells"] == 0
+        assert s["infected_barcodes"] == 1  # the all-barcode screen still sees it
+        assert s["background_molecules"] == 1
         assert s["viral_molecules_total_est"] == 1
 
     def test_a_called_cell_with_the_umi_passes(self):
         a = _adata([[1, 600], [0, 800], [0, 3]], ["v1", "h"])
         s, _ = _stats(a, np.array([True, True, False]))
-        assert s["detected"] is True and s["background_umis"] == 0
+        assert s["detected"] is True and s["background_molecules"] == 0
 
     def test_cell_calling_none_means_every_barcode_is_called(self):
         """No called_mask: all barcodes are cells, so integer-count behaviour is unchanged."""
         a, _ = self._droplet_fixture()
         s, _ = _stats(a, None)
-        assert s["detected"] is True and s["background_umis"] == 0
-        assert s["infected_called"] == s["infected_cells"] == 1
+        assert s["detected"] is True and s["background_molecules"] == 0
+        assert s["infected_called_cells"] == s["infected_barcodes"] == 1
 
     def test_min_cells(self):
         a = _adata([[1, 600], [0, 800], [4, 3]], ["v1", "h"])
@@ -155,7 +155,7 @@ class TestCalledCellGate:
         a = _adata([[1, 600], [0, 800], [9, 3]], ["v1", "h"])
         s, _ = _stats(a, np.array([True, True, False]), detection_threshold=2)
         assert s["detected"] is False  # 1 molecule in called cells, 9 in the droplet
-        assert s["background_umis"] == 9
+        assert s["background_molecules"] == 9
 
     def test_candidate_is_kept_in_viral_summary_with_new_columns(self, tmp_path):
         a, called = self._droplet_fixture()
@@ -166,9 +166,9 @@ class TestCalledCellGate:
         row = pd.read_csv(tmp_path / "results" / "viral_summary.tsv", sep="\t").iloc[0]
         assert row["virus_name"] == "V"
         assert bool(row["detected"]) is False
-        assert row["background_umis"] == 1
+        assert row["background_molecules"] == 1
         assert row["infected_subthreshold_cells"] == 0
-        assert row["infected_called"] == 0
+        assert row["infected_called_cells"] == 0
 
     def test_summary_line_flags_a_candidate_with_no_infected_called_cell(self):
         a, called = self._droplet_fixture()
